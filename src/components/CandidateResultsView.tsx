@@ -290,12 +290,12 @@ export const CandidateResultsView: React.FC<CandidateResultsViewProps> = ({
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-1.5 flex-wrap mb-1">
                         <span
-                          className="font-mono font-black text-xs px-2 py-0.5 rounded text-white shadow-2xs"
+                          className="font-mono font-black text-xs px-2 py-0.5 rounded text-white shadow-2xs shrink-0"
                           style={{ backgroundColor: cand.color }}
                         >
                           nº {cand.ballotNumber}
                         </span>
-                        <span className="font-bold text-xs text-slate-700 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
+                        <span className="font-bold text-xs text-slate-700 bg-slate-100 px-2 py-0.5 rounded border border-slate-200 shrink-0">
                           {cand.party}
                         </span>
                         {isWinner1st && (

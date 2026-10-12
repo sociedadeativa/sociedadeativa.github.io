@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { User } from "lucide-react";
 
 interface CandidateImageProps {
@@ -15,13 +15,39 @@ interface CandidateImageProps {
 }
 
 /**
+ * Resolve caminhos de imagens locais de forma resiliente tanto para dev server
+ * quanto para GitHub Pages (/ e subcaminhos).
+ */
+function resolvePhotoPath(rawSrc?: string): string[] {
+  if (!rawSrc) return [];
+  if (rawSrc.startsWith("http://") || rawSrc.startsWith("https://") || rawSrc.startsWith("data:")) {
+    return [rawSrc];
+  }
+
+  const clean = rawSrc.replace(/^\.?\//, ""); // remove leading ./ ou /
+  const base = (import.meta.env.BASE_URL || "").replace(/\/$/, "");
+
+  // Gera lista ordenada de tentativas para máxima resiliência
+  const list: string[] = [];
+  // Caminho absoluto raiz: funciona no dev server e no domínio https://sociedadeativa.github.io/
+  list.push(`/${clean}`);
+  if (base && base !== "." && base !== "./") {
+    list.push(`${base}/${clean}`);
+  }
+  list.push(`./${clean}`);
+  list.push(clean);
+
+  // Remove duplicatas mantendo ordem
+  return Array.from(new Set(list));
+}
+
+/**
  * Componente oficial de exibição de fotografia autêntica de candidatos do TSE.
- * Inclui:
- * - Lazy loading nativo
- * - Alt text descritivo e contextualizado
- * - Aspect ratio e enquadramento consistentes
- * - Fallback neutro resiliente com iniciais, número de urna e cores institucionais
- *   caso a imagem não carregue ou esteja indisponível.
+ * Diretrizes estritas:
+ * - O número de urna NUNCA deve cobrir ou sobrepor o rosto do candidato.
+ * - O container da imagem é estritamente dedicado ao retrato e separado da área de dados.
+ * - Mantém dimensões e aspect ratio consistentes (aspect-[4/5] por padrão).
+ * - Fallback neutro resiliente com iniciais institucionais caso a imagem não carregue.
  */
 export const CandidateImage: React.FC<CandidateImageProps> = ({
   src,
@@ -35,8 +61,26 @@ export const CandidateImage: React.FC<CandidateImageProps> = ({
   showAttributionBadge = false,
   attribution,
 }) => {
+  const candidateUrls = resolvePhotoPath(src);
+  const [currentUrlIndex, setCurrentUrlIndex] = useState(0);
   const [imageError, setImageError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setCurrentUrlIndex(0);
+    setImageError(false);
+    setIsLoaded(false);
+  }, [src]);
+
+  const handleImageError = () => {
+    if (currentUrlIndex + 1 < candidateUrls.length) {
+      // Tenta próximo caminho de fallback local
+      setCurrentUrlIndex((prev) => prev + 1);
+    } else {
+      // Todos os caminhos falharam, ativa fallback neutro
+      setImageError(true);
+    }
+  };
 
   // Iniciais do candidato para o fallback neutro
   const initials = candidateName
@@ -53,14 +97,14 @@ export const CandidateImage: React.FC<CandidateImageProps> = ({
   }[aspectRatio];
 
   const sizeClasses = {
-    sm: "w-10 h-10 text-xs",
+    sm: "w-10 h-12 text-xs",
     md: "w-20 h-24 text-sm",
     lg: "w-32 h-40 text-base",
     xl: "w-full h-full text-lg",
   }[size];
 
   // Se houver erro ou não houver src, renderiza o fallback neutro
-  if (!src || imageError) {
+  if (!src || imageError || candidateUrls.length === 0) {
     return (
       <div
         className={`relative flex flex-col items-center justify-center bg-slate-100 border border-slate-200 text-slate-700 overflow-hidden select-none transition-all ${aspectClasses} ${sizeClasses} ${className}`}
@@ -68,16 +112,16 @@ export const CandidateImage: React.FC<CandidateImageProps> = ({
           borderTopColor: partyColor,
           borderTopWidth: "3px",
         }}
-        title={`Fotografia não disponível para ${candidateName} — Exibindo identificador oficial`}
+        title={`Fotografia oficial de ${candidateName}`}
         aria-label={`Identificador neutro de ${candidateName}`}
       >
         <div
-          className="w-8 h-8 rounded-full flex items-center justify-center text-white font-mono font-black text-xs shadow-2xs mb-1"
+          className="w-7 h-7 rounded-full flex items-center justify-center text-white font-mono font-black text-xs shadow-2xs mb-1"
           style={{ backgroundColor: partyColor }}
         >
-          {ballotNumber || <User className="w-4 h-4" />}
+          {initials || <User className="w-3.5 h-3.5" />}
         </div>
-        <span className="font-heading font-black text-xs tracking-wider text-slate-800">
+        <span className="font-heading font-black text-[11px] tracking-wider text-slate-800">
           {initials || "CAND"}
         </span>
         <span className="text-[9px] text-slate-500 font-mono mt-0.5">
@@ -87,50 +131,40 @@ export const CandidateImage: React.FC<CandidateImageProps> = ({
     );
   }
 
+  const activeSrc = candidateUrls[currentUrlIndex];
+
   return (
     <div
       className={`relative overflow-hidden bg-slate-100 border border-slate-200/90 shadow-2xs group ${aspectClasses} ${className}`}
     >
-      {/* Skeleton enquanto carrega */}
+      {/* Skeleton suave enquanto carrega */}
       {!isLoaded && (
         <div className="absolute inset-0 bg-slate-200 animate-pulse flex items-center justify-center text-slate-400">
-          <User className="w-6 h-6 opacity-40" />
+          <User className="w-5 h-5 opacity-40" />
         </div>
       )}
 
+      {/* Retrato autêntico do candidato (sem qualquer sobreposição de número sobre o rosto) */}
       <img
-        src={src}
+        src={activeSrc}
         alt={alt}
         loading="lazy"
         decoding="async"
         referrerPolicy="no-referrer"
         onLoad={() => setIsLoaded(true)}
-        onError={() => setImageError(true)}
-        className={`w-full h-full object-cover object-top transition-opacity duration-300 ${
+        onError={handleImageError}
+        className={`w-full h-full object-cover object-top transition-opacity duration-200 ${
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
       />
 
-      {/* Faixa sutil na base para contraste editorial */}
-      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-slate-950/60 to-transparent pointer-events-none" />
-
-      {/* Badge do número de urna fixado no canto */}
-      {ballotNumber && (
+      {/* Indicador de atribuição de imagem oficial no hover (discreto no rodapé da imagem) */}
+      {showAttributionBadge && attribution && isLoaded && (
         <div
-          className="absolute top-2 left-2 px-1.5 py-0.5 rounded text-[10px] font-mono font-black text-white shadow-xs z-10"
-          style={{ backgroundColor: partyColor }}
-        >
-          {ballotNumber}
-        </div>
-      )}
-
-      {/* Indicador de atribuição de imagem oficial */}
-      {showAttributionBadge && attribution && (
-        <div
-          className="absolute bottom-1 right-1.5 text-[9px] text-white/80 font-mono tracking-tight opacity-0 group-hover:opacity-100 transition-opacity bg-black/60 px-1 py-0.5 rounded pointer-events-none"
+          className="absolute bottom-1 right-1 text-[8px] text-white/90 font-mono tracking-tight opacity-0 group-hover:opacity-100 transition-opacity bg-slate-950/80 px-1 py-0.5 rounded pointer-events-none"
           title={attribution}
         >
-          © TSE / Foto Oficial
+          Foto Oficial
         </div>
       )}
     </div>

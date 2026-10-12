@@ -154,7 +154,12 @@ export const Footer: React.FC<FooterProps> = ({
             <ul className="space-y-2 text-slate-400 text-xs">
               <li>
                 <span className="block text-slate-300 font-semibold">Contato Editorial:</span>
-                <span className="text-slate-400 font-mono text-[11px]">redacao@sociedadeativa.org</span>
+                <a
+                  href="mailto:redacao.sociedadeativa@gmail.com"
+                  className="text-slate-400 hover:text-white font-mono text-[11px] transition-colors"
+                >
+                  redacao.sociedadeativa@gmail.com
+                </a>
               </li>
               <li className="pt-2">
                 <span className="block text-slate-300 font-semibold">Auditoria Pública:</span>

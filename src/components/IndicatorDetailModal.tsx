@@ -306,15 +306,29 @@ export const IndicatorDetailModal: React.FC<IndicatorDetailModalProps> = ({
 
         {/* Rodapé do Modal */}
         <div className="p-5 sm:p-6 border-t border-slate-100 bg-slate-50/90 flex flex-wrap items-center justify-between gap-3 sticky bottom-0">
-          <a
-            href={indicator.sourceUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 hover:text-blue-900 bg-white px-3.5 py-2 rounded-xl border border-blue-200/80 shadow-2xs transition-colors"
-          >
-            <span>Acessar {indicator.source} Oficial</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
+          <div className="flex flex-wrap items-center gap-2">
+            <a
+              href={indicator.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 hover:text-blue-900 bg-white px-3.5 py-2 rounded-xl border border-blue-200/80 shadow-2xs transition-colors"
+            >
+              <span>Acessar {indicator.source} Oficial</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+
+            {indicator.quotationUrl && (
+              <a
+                href={indicator.quotationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 hover:text-emerald-950 bg-emerald-50 px-3.5 py-2 rounded-xl border border-emerald-200 shadow-2xs transition-colors"
+              >
+                <span>Cotações B3 (15 min defasagem)</span>
+                <ExternalLink className="w-3.5 h-3.5 text-emerald-600" />
+              </a>
+            )}
+          </div>
 
           <div className="flex items-center gap-2">
             <button

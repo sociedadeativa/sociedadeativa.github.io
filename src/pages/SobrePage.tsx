@@ -121,9 +121,12 @@ export const SobrePage: React.FC<SobrePageProps> = ({
               <p className="text-xs text-slate-600 leading-relaxed mb-3">
                 Para correções factuais, dúvidas sobre metodologias ou sugestões de novas fontes abertas:
               </p>
-              <span className="font-mono text-xs font-bold text-blue-900">
-                redacao@sociedadeativa.org
-              </span>
+              <a
+                href="mailto:redacao.sociedadeativa@gmail.com"
+                className="font-mono text-xs font-bold text-blue-900 hover:underline"
+              >
+                redacao.sociedadeativa@gmail.com
+              </a>
             </div>
           </div>
         </div>

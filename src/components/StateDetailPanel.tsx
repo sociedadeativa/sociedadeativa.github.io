@@ -159,10 +159,18 @@ export const StateDetailPanel: React.FC<StateDetailPanelProps> = ({
                     <h3 className="font-heading text-xl font-black text-slate-900">
                       {winner.popularName}
                     </h3>
-                    <span className="text-xs font-bold text-slate-600 block mt-0.5">
-                      {winner.party} · nº {winner.ballotNumber}
-                    </span>
-                    <span className="text-[11px] text-slate-500 line-clamp-1 mt-0.5">
+                    <div className="flex items-center gap-2 flex-wrap mt-1">
+                      <span
+                        className="px-2 py-0.5 rounded text-white font-mono text-xs font-bold shadow-2xs shrink-0"
+                        style={{ backgroundColor: winner.color }}
+                      >
+                        nº {winner.ballotNumber}
+                      </span>
+                      <span className="text-xs font-bold text-slate-700 bg-white/80 px-2 py-0.5 rounded border border-slate-200 shrink-0">
+                        {winner.party}
+                      </span>
+                    </div>
+                    <span className="text-[11px] text-slate-500 line-clamp-1 mt-1 block">
                       {winner.coalition}
                     </span>
                   </div>
@@ -289,15 +297,15 @@ export const StateDetailPanel: React.FC<StateDetailPanelProps> = ({
                           />
                         </div>
 
-                        <div>
-                          <div className="flex items-center gap-1.5">
+                        <div className="min-w-0 flex-1">
+                          <div className="flex items-center gap-1.5 flex-wrap">
                             <span
-                              className="px-1.5 py-0.2 rounded text-white text-[10px] font-mono font-bold"
+                              className="px-1.5 py-0.5 rounded text-white text-[10px] font-mono font-bold shrink-0 shadow-2xs"
                               style={{ backgroundColor: cand.color }}
                             >
-                              {cand.ballotNumber}
+                              nº {cand.ballotNumber}
                             </span>
-                            <span className="font-bold text-slate-900 text-xs block leading-tight">
+                            <span className="font-bold text-slate-900 text-xs block leading-tight truncate">
                               {cand.popularName}
                             </span>
                           </div>
@@ -364,12 +372,12 @@ export const StateDetailPanel: React.FC<StateDetailPanelProps> = ({
                       />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-1">
+                      <div className="flex items-center gap-1.5 flex-wrap">
                         <span
-                          className="px-1 py-0.2 rounded text-white text-[9px] font-mono font-bold"
+                          className="px-1.5 py-0.5 rounded text-white text-[9px] font-mono font-bold shrink-0 shadow-2xs"
                           style={{ backgroundColor: oc.color }}
                         >
-                          {oc.ballotNumber}
+                          nº {oc.ballotNumber}
                         </span>
                         <span className="font-bold text-slate-900 text-xs block truncate">
                           {oc.popularName}

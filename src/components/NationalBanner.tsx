@@ -439,12 +439,12 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
                   </div>
 
                   <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-1.5 flex-wrap">
                       <span
-                        className="px-1 py-0.2 rounded text-white text-[9px] font-mono font-bold"
+                        className="px-1.5 py-0.5 rounded text-white text-[9px] font-mono font-bold shrink-0 shadow-2xs"
                         style={{ backgroundColor: cand.color }}
                       >
-                        {cand.ballotNumber}
+                        nº {cand.ballotNumber}
                       </span>
                       <span className="font-bold text-slate-900 text-xs truncate block">
                         {cand.popularName}

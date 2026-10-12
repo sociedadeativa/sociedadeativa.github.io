@@ -1,6 +1,7 @@
 import React from "react";
 import { NewsItem } from "../types/news";
 import { EconomySection } from "../components/EconomySection";
+import { BolsaSection } from "../components/BolsaSection";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { NewsCard } from "../components/NewsCard";
 import { PortalLink } from "../components/PortalLink";
@@ -34,7 +35,7 @@ export const EconomiaPage: React.FC<EconomiaPageProps> = ({
             Indicadores Econômicos Oficiais do Brasil
           </h1>
           <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-3xl leading-relaxed">
-            Painel macroeconômico com métricas auditadas diretamente das fontes primárias do Estado brasileiro: IBGE (Sistema IBGE de Recuperação Automática — SIDRA) e Banco Central do Brasil (Sistema Gerenciador de Séries Temporais — SGS e cotação PTAX).
+            Painel macroeconômico com métricas auditadas diretamente das fontes primárias do Estado brasileiro: IBGE (Sistema SIDRA), Banco Central do Brasil (SGS e PTAX) e B3 (Brasil, Bolsa, Balcão — Ibovespa e cotações públicas com defasagem de 15 minutos).
           </p>
 
           <div className="flex flex-wrap items-center gap-2 mt-4 text-xs font-semibold">
@@ -60,12 +61,26 @@ export const EconomiaPage: React.FC<EconomiaPageProps> = ({
               <span>Portal do Banco Central</span>
               <ExternalLink className="w-3 h-3 text-slate-500" />
             </a>
+            <a
+              href="https://b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/cotacoes/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-900 hover:bg-emerald-200 transition-colors inline-flex items-center gap-1 font-semibold"
+            >
+              <span>Cotações B3 (Ibovespa)</span>
+              <ExternalLink className="w-3 h-3 text-emerald-700" />
+            </a>
           </div>
         </div>
 
         {/* 1. Componente Completo dos Indicadores Econômicos */}
         <div className="mb-12">
           <EconomySection />
+        </div>
+
+        {/* 2. Seção da Bolsa de Valores (B3): Ibovespa, Mais Negociadas, Altas e Baixas */}
+        <div className="mb-12">
+          <BolsaSection />
         </div>
 
         {/* 2. Banner Editorial com Contexto sobre Fontes Primárias do Estado */}

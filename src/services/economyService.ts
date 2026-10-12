@@ -2,6 +2,7 @@ import {
   EconomicIndicator,
   EconomyCategory,
   EconomyFilterOptions,
+  OfficialAgency,
 } from "../types/economy";
 import { OFFICIAL_ECONOMIC_INDICATORS } from "../data/economyData";
 import { getB3MarketStatus } from "../utils/marketHours";
