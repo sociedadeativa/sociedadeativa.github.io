@@ -1,38 +1,281 @@
 [
   {
-    "id": "ebc-1705113",
-    "title": "Mega-Sena sorteia prêmio acumulado de R$ 150 milhões nesta quarta",
-    "summary": "A Mega-Sena sorteia nesta quarta-feira (14) prêmio estimado em R$ 150 milhões . As seis dezenas do concurso 3.070 serão sorteadas a partir das 21h (horário de Brasília) no Espaço da Sorte, em São Paulo. As apostas podem ser feitas até às 20h (horário de Brasília) de quarta em...",
+    "id": "ebc-1705185",
+    "title": "Nunes Marques volta a suspender Exército de Lula por falta de registro",
+    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kássio Nunes Marques, derrubou nesta terça-feira (13) a decisão do ministro Ricardo Villas Bôas Cueva, corregedor-nacional da Justiça Eleitoral, que havia recolocado no ar o canal Exército do Lula, no aplicativo de...",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/mega-sena-sorteia-premio-acumulado-de-r-150-milhoes-nesta-quarta",
-    "publishedAt": "13/10/2026 às 07:02",
-    "category": "Política",
-    "author": "Agência Brasil",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/nunes-marques-volta-suspender-exercito-de-lula-por-falta-de-registro",
+    "publishedAt": "13/10/2026 às 11:58",
+    "category": "Justiça",
+    "author": "Felipe Pontes – repórter da Agência Brasil",
     "tags": [
-      "Geral",
-      "Mega-Sena",
-      "Loterias",
-      "Caixa",
-      "Política"
+      "Justiça",
+      "TSE",
+      "eleições 2026",
+      "Exército do Lula",
+      "Nunes Marques"
     ]
   },
   {
-    "id": "ebc-1705146",
-    "title": "Copa do Brasil: Bragantino abre vantagem sobre Ferroviária nas quartas",
-    "summary": "O Red Bull Bragantino conquistou uma vitória importante fora de casa pela Copa do Brasil Feminina. Na noite desta segunda-feira (12), o Massa Bruta venceu a Ferroviária por 2 a 0 na Arena da Fonte Luminosa, em Araraquara (SP), no jogo de ida do confronto que abriu as quartas...",
+    "id": "camara-1307686-projeto-estabelece-regras-de-p",
+    "title": "Projeto estabelece regras de privacidade para verificação de idade na internet",
+    "summary": "A proposta está em análise na Câmara dos Deputados",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1307686-projeto-estabelece-regras-de-privacidade-para-verificacao-de-idade-na-internet",
+    "publishedAt": "13/10/2026 às 11:45",
+    "category": "Congresso",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "ebc-1705182",
+    "title": "Mercado eleva previsão da inflação para 5,22% em 2026",
+    "summary": "A projeção do mercado financeiro para a inflação oficial em 2026 subiu de 5,01% para 5,22%, segundo o Boletim Focus divulgado nesta terça-feira (13) pelo Banco Central . Essa foi a quarta alta consecutiva da estimativa para o Índice Nacional de Preços ao Consumidor Amplo...",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/copa-do-brasil-bragantino-abre-vantagem-sobre-ferroviaria-nas-quartas",
-    "publishedAt": "12/10/2026 às 20:36",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/mercado-eleva-previsao-da-inflacao-para-522-em-2026",
+    "publishedAt": "13/10/2026 às 11:28",
+    "category": "Economia",
+    "author": "Pedro Peduzzi – Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "banco central",
+      "IPCA",
+      "boletim Focus",
+      "Inflação"
+    ]
+  },
+  {
+    "id": "ebc-1705181",
+    "title": "Nunes Marques suspende novos posts e seguidores no Exército do Lula",
+    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, decidiu nesta terça-feira (13) suspender as atualizações e o ingresso de novos seguidores no canal Exército do Lula, que possui 3,7 milhões de usuários no aplicativo de mensagens WhatsApp. De...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/nunes-marques-suspende-novos-posts-e-seguidores-no-exercito-do-lula",
+    "publishedAt": "13/10/2026 às 11:15",
+    "category": "Eleições",
+    "author": "Felipe Pontes – repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Exército do Lula",
+      "TSE",
+      "Nunes Marques"
+    ]
+  },
+  {
+    "id": "ebc-1705180",
+    "title": "Polícia de SP prende três suspeitos de explorar bets",
+    "summary": "A Polícia Civil de São Paulo faz na manhã desta segunda-feira (13) a Operação Disque 151 contra organização criminosa suspeita de explorar apostas e jogos ilegais clandestinos, as bets. Três suspeitos foram presos na capital paulista e na cidade de Mogi das Cruzes, região...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/policia-de-sp-prende-tres-suspeitos-de-explorar-bets",
+    "publishedAt": "13/10/2026 às 11:02",
+    "category": "Justiça",
+    "author": "Agência Brasil",
+    "tags": [
+      "Justiça",
+      "São Paulo",
+      "bets"
+    ]
+  },
+  {
+    "id": "ibge-48271",
+    "title": "IBGE e Malásia avançam em cooperação para desenvolver estatísticas da era digital",
+    "summary": "O IBGE e o Departamento de Estatística da Malásia avançam em uma cooperação voltada à produção de estatísticas da era digital. A parceria busca desenvolver novos indicadores para a economia digital e fortalecer a colaboração entre países do Sul Global,...",
+    "source": "IBGE",
+    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
+    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48271-ibge-e-malasia-avancam-em-cooperacao-para-desenvolver-estatisticas-da-era-digital.html",
+    "publishedAt": "13/10/2026 às 10:48",
+    "category": "Brasil",
+    "author": "Agência IBGE Notícias",
+    "tags": [
+      "ibge",
+      "Notícia",
+      "Brasil",
+      "Estatísticas"
+    ]
+  },
+  {
+    "id": "ebc-1705179",
+    "title": "Redução de desastres: especialistas defendem \"cultura da prevenção\"",
+    "summary": "Abandonar a cultura da tragédia e investir em prevenção. Essa é a recomendação de especialistas em conservação da natureza e adaptação climática diante do aumento dos riscos associados a eventos extremos no Brasil. O caminho inclui mapear áreas vulneráveis, preparar serviços...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/reducao-de-desastres-especialistas-defendem-cultura-da-prevencao",
+    "publishedAt": "13/10/2026 às 10:47",
     "category": "Política",
-    "author": "Lincoln Chaves - Repórter da EBC",
+    "author": "Rafael Cardoso – Repórter da Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "eventos extremos",
+      "prevenção de desastres",
+      "El Niño",
+      "ONU"
+    ]
+  },
+  {
+    "id": "ebc-1705177",
+    "title": "Nunes Marques convoca campanhas de Lula e Flávio para reunião no TSE",
+    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kássio Nunes Marques, marcou para a tarde desta terça-feira (13) uma reunião com representantes das campanhas do presidente Luiz Inácio Lula da Silva, candidato à reeleição, e do senador Flávio Bolsonaro (PL-RJ), que...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/nunes-marques-convoca-campanhas-presidencia-para-reuniao-no-tse",
+    "publishedAt": "13/10/2026 às 10:41",
+    "category": "Justiça",
+    "author": "Felipe Pontes - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "TSE",
+      "reunião",
+      "Campanhas",
+      "Presidência"
+    ]
+  },
+  {
+    "id": "ebc-1705174",
+    "title": "Governo cria programa nacional para bloquear celulares em presídios",
+    "summary": "O Brasil tem, a partir desta terça-feira (13), plano voltado a impedir o uso irregular de celulares e outros equipamentos de telecomunicações dentro de presídios. O Programa Nacional de Neutralização de Comunicações Ilícitas em Estabelecimentos Penais prevê a atuação conjunta...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/governo-cria-programa-nacional-para-bloquear-celulares-em-presidios",
+    "publishedAt": "13/10/2026 às 10:33",
+    "category": "Justiça",
+    "author": "Agência Brasil",
+    "tags": [
+      "Justiça",
+      "brasil",
+      "Presídios",
+      "Celulares",
+      "Diário Oficial da União"
+    ]
+  },
+  {
+    "id": "ebc-1705173",
+    "title": "TSE ordena remoção de post falso sobre uso de droga em ato pró-Lula",
+    "summary": "O ministro Marco Aurélio Bellizze, do Tribunal Superior Eleitoral (TSE), ordenou na segunda-feira (12) a remoção das redes sociais de publicações que associam um vídeo falso ao ato em apoio ao presidente Luiz Inácio Lula da Silva, candidato à reeleição, na Avenida Paulista...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tse-ordena-remocao-de-post-falso-sobre-uso-de-droga-em-ato-pro-lula",
+    "publishedAt": "13/10/2026 às 10:29",
+    "category": "Eleições",
+    "author": "Felipe Pontes – repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Lula",
+      "TSE",
+      "remoção de conteúdo"
+    ]
+  },
+  {
+    "id": "ebc-1705171",
+    "title": "Adolescentes franceses fazem mais um dia de protestos sobre escolas",
+    "summary": "A ativista sueca Greta Thunberg participou de manifestação em frente a uma escola de ensino médio em um bairro popular de Paris nesta terça-feira (13), enquanto alunos franceses saíam às ruas para mais um dia de protestos contra as más condições dos prédios escolares.. Em sua...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/adolescentes-franceses-fazem-mais-um-dia-de-protestos-sobre-escolas",
+    "publishedAt": "13/10/2026 às 10:28",
+    "category": "Política",
+    "author": "Janis Laizans e Clotaire Achi - Repórteres da Reuters*",
+    "tags": [
+      "Internacional",
+      "França",
+      "Estudantes",
+      "Protesto",
+      "Escolas"
+    ]
+  },
+  {
+    "id": "ebc-1705170",
+    "title": "Fim da escala 6x1: confira próximos passos da tramitação no Senado",
+    "summary": "A Proposta de Emenda à Constituição (PEC) 221/2019, que acaba com a escala de seis dias de trabalho para um de descanso (escala 6x1), entrou na reta final de tramitação no Senado Federal. Após ser aprovada pela Câmara dos Deputados e pela Comissão de Constituição e Justiça...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/fim-da-escala-6x1-confira-proximos-passos-da-tramitacao-no-senado",
+    "publishedAt": "13/10/2026 às 10:13",
+    "category": "Justiça",
+    "author": "Pedro Peduzzi – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "fim da escala 6x1",
+      "Senado",
+      "PEC 2212019",
+      "Justiça"
+    ]
+  },
+  {
+    "id": "ebc-1705168",
+    "title": "Vitória do Bragantino sobre o Cruzeiro fecha a rodada do Brasileiro",
+    "summary": "No fim da noite dessa segunda-feira (12), o Bragantino concluiu a 30ª rodada do Campeonato Brasileiro com uma vitória por 4 a 2 sobre o Cruzeiro, em Bragança Paulista, encerrando um jejum de seis jogos sem vitória na temporada. Com o resultado, o Massa Bruta foi a 40 pontos...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/vitoria-do-bragantino-sobre-o-cruzeiro-fecha-rodada-do-brasileiro",
+    "publishedAt": "13/10/2026 às 09:58",
+    "category": "Política",
+    "author": "Igor Santos - Repórter da EBC",
     "tags": [
       "Esportes",
-      "Copa do Brasil Feminina",
-      "Red Bull Bragantino",
-      "Duda Rodrigues",
-      "Bragantnas"
+      "campeonato brasileiro",
+      "30 rodada",
+      "Bragantino",
+      "Cruzeiro"
+    ]
+  },
+  {
+    "id": "ebc-1705165",
+    "title": "Medida provisória quer coibir excesso de chamadas e golpes telefônicos",
+    "summary": "A área de telecomunicação brasileira deverá seguir novas regras para identificar e bloquear chamadas e mensagens telefônicas com o objetivo de combater fraudes e reduzir o número de ligações abusivas. Medida provisória publicada nesta terça-feira (13) determina que as...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/medida-provisoria-quer-coibir-excesso-de-chamadas-e-golpes-telefonicos",
+    "publishedAt": "13/10/2026 às 09:30",
+    "category": "Economia",
+    "author": "Agência Brasil",
+    "tags": [
+      "Economia",
+      "telecomunicação",
+      "Anatel",
+      "chamadas telefônicas"
+    ]
+  },
+  {
+    "id": "ebc-1705158",
+    "title": "Norma amplia exigências para atendimento ao consumidor; saiba quais",
+    "summary": "Serviços de atendimento ao consumidor (SAC) passam a ter novas regras em todo o país. As mudanças entram em vigor em 20 dias e valem para empresas de setores regulados pelo governo federal e por instituições que prestam serviços financeiros digitais supervisionados pelo Banco...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/norma-amplia-exigencias-para-atendimento-ao-consumidor-saiba-quais",
+    "publishedAt": "13/10/2026 às 08:51",
+    "category": "Economia",
+    "author": "Agência Brasil",
+    "tags": [
+      "Economia",
+      "defesa do consumidor",
+      "Procon",
+      "Diário Oficial da União"
+    ]
+  },
+  {
+    "id": "ebc-1705155",
+    "title": "Confira a agenda dos presidenciáveis nesta segunda-feira (13)",
+    "summary": "Os candidatos à presidência da República que disputam o segundo turno das eleições gerais cumprem agenda em Brasília e São Paulo, nesta segunda-feira (13). Flávio Bolsonaro (PL) Se reúne à tarde com integrantes do MDB e em seguida participa de encontro do Associativismo, no...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/confira-agenda-dos-presidenciaveis-nesta-segunda-feira-13",
+    "publishedAt": "13/10/2026 às 08:31",
+    "category": "Eleições",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Eleições"
     ]
   },
   {
@@ -51,24 +294,6 @@
       "Copacabana",
       "Lula",
       "Manifestações"
-    ]
-  },
-  {
-    "id": "ebc-1705141",
-    "title": "Coritiba e Botafogo empatam e mantêm jejum de vitórias no Brasileirão",
-    "summary": "A má fase de Coritiba e Botafogo no Campeonato Brasileiro continua. Na tarde desta segunda-feira (12), os times empataram por 1 a 1 no Estádio Couto Pereira, na capital paranaense, pela 30ª rodada. Aniversariante do dia, o Coxa acumula cinco jogos sem vitórias e segue no meio...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/coritiba-e-botafogo-empatam-e-mantem-jejum-de-vitorias-no-brasileirao",
-    "publishedAt": "12/10/2026 às 18:26",
-    "category": "Política",
-    "author": "Lincoln Chaves - Repórter da EBC",
-    "tags": [
-      "Esportes",
-      "Coritiba",
-      "Brasileirão",
-      "Botafogo",
-      "Couto Pereira"
     ]
   },
   {
@@ -104,25 +329,7 @@
       "Flávio Bolsonaro",
       "Nossa Senhora Aparecida",
       "Jair Bolsonaro",
-      "Eleições"
-    ]
-  },
-  {
-    "id": "ebc-1705138",
-    "title": "Polícia do Rio apreende armas após morte de suboficial do Bope",
-    "summary": "A Delegacia de Homicídios da Capital (DHC) está investigando a morte do subtenente do Batalhão de Operações Policiais Especiais (Bope), Glaucio Marcelo Fonseca da Silva, de 54 anos, em troca de tiros com militares do batalhão de Jacarepaguá, zona sudoeste do Rio de Janeiro...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/policia-do-rio-apreende-armas-apos-morte-de-suboficial-do-bope",
-    "publishedAt": "12/10/2026 às 17:49",
-    "category": "Política",
-    "author": "Douglas Corrêa - Repórter da Agência Brasil",
-    "tags": [
-      "Geral",
-      "Bope",
-      "Morte",
-      "Violência do RJ",
-      "Política"
+      "Multimídia"
     ]
   },
   {
@@ -141,24 +348,6 @@
       "Propaganda Eleitoral",
       "eleições 2026",
       "Eleições"
-    ]
-  },
-  {
-    "id": "ebc-1705135",
-    "title": "Jornalista brasileiro crítico a Milei é deportado da Argentina",
-    "summary": "O jornalista brasileiro Rogério Tomaz Jr., conhecido por suas críticas ao governo do presidente argentino Javier Milei, foi impedido de entrar na Argentina nesta segunda-feira (12), ao desembarcar no aeroporto Aeroparque, em Buenos Aires. As autoridades migratórias...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/jornalista-brasileiro-critico-milei-e-deportado-da-argentina",
-    "publishedAt": "12/10/2026 às 17:01",
-    "category": "Governo",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
-    "tags": [
-      "Internacional",
-      "Argentina",
-      "javier milei",
-      "jornalismo",
-      "Rogério Tomaz Jr"
     ]
   },
   {
@@ -194,7 +383,7 @@
       "Nossa Senhora Aparecida",
       "Geraldo Alckmin",
       "TSE",
-      "Eleições"
+      "Multimídia"
     ]
   },
   {
@@ -209,10 +398,10 @@
     "author": "Daniella Almeida - Repórter da Agência Brasil",
     "tags": [
       "Política",
+      "Multimídia",
       "eleições 2026",
-      "eleições",
-      "Lula",
-      "Dia das Crianças"
+      "Eleições",
+      "Lula"
     ]
   },
   {
@@ -231,24 +420,6 @@
       "Cultura",
       "plano de governo",
       "Flávio Bolsonaro"
-    ]
-  },
-  {
-    "id": "ebc-1705108",
-    "title": "Técnicos do TSE não encontram conteúdo falso no canal Exército do Lula",
-    "summary": "Um relatório produzido pela equipe técnica do Tribunal Superior Eleitoral (TSE) não encontrou publicações falsas no canal “Exército do Lula” , criado no WhatsApp para postagens de apoio ao candidato à reeleição Luiz Inácio Lula da Silva (PT). No domingo (11), o...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tecnicos-do-tse-nao-encontram-conteudo-falso-no-canal-exercito-do-lula",
-    "publishedAt": "12/10/2026 às 13:57",
-    "category": "Eleições",
-    "author": "André Richter - repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "TSE",
-      "Justiça Eleitoral",
-      "Exército do Lula"
     ]
   },
   {
@@ -322,24 +493,6 @@
     ]
   },
   {
-    "id": "ebc-1705061",
-    "title": "Flávio passa domingo reunido com prefeitos e vereadores de São Paulo",
-    "summary": "O senador e candidato à presidência da República pelo PL, Flávio Bolsonaro, cumpriu agenda neste domingo (11) na capital paulista. Flávio reuniu-se com prefeitos e vereadores da região da Grande São Paulo; o encontro ocorreu em um prédio na região do Vale do Anhangabaú, no...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/flavio-passa-domingo-reunido-com-prefeitos-e-vereadores-de-sao-paulo",
-    "publishedAt": "11/10/2026 às 19:46",
-    "category": "Eleições",
-    "author": "Bruno Bocchini* - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Flávio Bolsonaro",
-      "São Paulo",
-      "Eleições"
-    ]
-  },
-  {
     "id": "ebc-1705057",
     "title": "Derrubar canal com eleitores limita mobilização, dizem especialistas",
     "summary": "A decisão de derrubar o canal Exército do Lula no WhatsApp com 3,3 milhões de pessoas, que acabou revertida horas depois, limita a mobilização de eleitores no segundo turno e extrapola o combate à desinformação, avaliam especialistas em direito no ambiente digital. A gerente...",
@@ -351,10 +504,10 @@
     "author": "Lucas Pordeus León - Repórter da Agência Brasil",
     "tags": [
       "Justiça",
+      "multimídia",
       "eleições 2026",
       "TSE",
-      "Exército do Lula",
-      "Lula"
+      "Exército do Lula"
     ]
   },
   {
@@ -373,114 +526,6 @@
       "eleições 2026",
       "Lula",
       "Flávio Bolsonaro"
-    ]
-  },
-  {
-    "id": "ebc-1705049",
-    "title": "Ato pela reeleição de Lula leva milhares à Avenida Paulista",
-    "summary": "Uma manifestação pela reeleição do presidente Luiz Inácio Lula da Silva (PT) ocupou neste domingo (11) a maior parte da Avenida Paulista, em São Paulo, e contou com a participação do candidato. O ato, chamado de Marcha Pela Democracia, foi organizado independentemente por...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/ato-pela-reeleicao-de-lula-leva-milhares-a-avenida-paulista",
-    "publishedAt": "11/10/2026 às 16:49",
-    "category": "Eleições",
-    "author": "Bruno Bocchini* - repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Lula",
-      "São Paulo",
-      "Avenida Paulista"
-    ]
-  },
-  {
-    "id": "ebc-1705048",
-    "title": "Corregedor derruba decisão que suspendeu canal Exército do Lula",
-    "summary": "O corregedor-geral eleitoral, ministro Ricardo Vilas Bôas Cuêva, derrubou neste domingo (11) a decisão do presidente da Corte, Kassio Nunes Marques, que suspendeu o canal “Exército do Lula”, criado no WhatsApp para postagens de apoios ao candidato à reeleição Luiz Inácio Lula...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/corregedor-derruba-decisao-que-suspendeu-canal-exercito-do-lula",
-    "publishedAt": "11/10/2026 às 16:27",
-    "category": "Eleições",
-    "author": "André Richter - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "TSE",
-      "Exército do Lula",
-      "WhatsApp"
-    ]
-  },
-  {
-    "id": "ebc-1705040",
-    "title": "Lula afirma que PT entrará na Justiça contra suspensão de canal",
-    "summary": "O candidato à reeleição Luiz Inácio Lula da Silva (PT) disse neste domingo (11) que seu partido vai acionar a Justiça contra a suspensão do canal “Exército do Lula”, determinada por decisão do presidente do Tribunal Superior Eleitoral (TSE), Kassio Nunes Marques . “Vamos hoje...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/lula-afirma-que-pt-entrara-na-justica-contra-suspensao-de-canal",
-    "publishedAt": "11/10/2026 às 14:06",
-    "category": "Justiça",
-    "author": "Marcelo Brandão* - repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Exército do Lula",
-      "André Janones",
-      "Lula",
-      "TSE"
-    ]
-  },
-  {
-    "id": "ebc-1705037",
-    "title": "Janones denuncia censura em decisão do TSE contra Exército do Lula",
-    "summary": "O deputado federal reeleito André Janones (Rede-MG) criticou a decisão do Tribunal Superior Eleitoral (TSE) que ordenou, neste domingo (11), a suspensão do canal de WhatsApp “Exército do Lula”, a pedido da campanha do candidato à Presidência da República Flávio Bolsonaro...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/janones-denuncia-censura-em-decisao-do-tse-contra-exercito-do-lula",
-    "publishedAt": "11/10/2026 às 13:21",
-    "category": "Justiça",
-    "author": "Bruno de Freitas Moura - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "TSE",
-      "André Janones",
-      "Lula"
-    ]
-  },
-  {
-    "id": "ebc-1705036",
-    "title": "TSE atende Flávio e manda suspender canal do whatsapp Exército do Lula",
-    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, determinou neste domingo (11) a suspensão do canal “Exército do Lula”, criado no WhatsApp para postagens de apoio ao candidato à reeleição Luiz Inácio Lula da Silva (PT), que conta com cerca de...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-atende-flavio-e-manda-suspender-canal-do-whatsapp-exercito-do-lula",
-    "publishedAt": "11/10/2026 às 12:53",
-    "category": "Justiça",
-    "author": "André Richter - Repórter da Agência Brasil*",
-    "tags": [
-      "Justiça",
-      "TSE",
-      "WhatsApp",
-      "André Janones",
-      "Lula"
-    ]
-  },
-  {
-    "id": "ebc-1705032",
-    "title": "Kassio atende Flávio e suspende propaganda do PT que cita caso Master",
-    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, determinou a suspensão de um vídeo exibido pela campanha do candidato à reeleição Luiz Inácio Lula da Silva (PT) contra o candidato Flávio Bolsonaro (PL) no horário eleitoral na TV. Na decisão...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/kassio-atende-flavio-e-suspende-propaganda-do-pt-que-cita-caso-master",
-    "publishedAt": "11/10/2026 às 12:00",
-    "category": "Justiça",
-    "author": "André Richter - Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Flávio Bolsonaro",
-      "Caso Master",
-      "Kassio Nunes Marques"
     ]
   },
   {
@@ -782,42 +827,6 @@
     ]
   },
   {
-    "id": "ebc-1704900",
-    "title": "Inflação oficial de setembro fica em 0,82%, mostra IBGE",
-    "summary": "A inflação oficial de setembro, apurada pelo Índice Nacional de Preços ao Consumidor Amplo (IPCA), fechou o mês de setembro em 0,82%. É o maior patamar desde março de 2026 (0,88%). O resultado no mês passado foi pressionado pelo fim do Bônus de Itaipu, um desconto que os...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/inflacao-oficial-de-setembro-fica-em-082-mostra-ibge",
-    "publishedAt": "09/10/2026 às 10:06",
-    "category": "Economia",
-    "author": "Bruno de Freitas Moura - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "Inflação",
-      "IBGE",
-      "IPCA",
-      "Habitação"
-    ]
-  },
-  {
-    "id": "ebc-1704898",
-    "title": "Crédito extraordinário de R$ 7,5 bi reforça subsídios a combustíveis",
-    "summary": "O governo federal abriu crédito extraordinário de R$ 7,52 bilhões em favor do Ministério de Minas e Energia para financiar programas de subsídio à produção e à importação de combustíveis. De acordo com a Medida Provisória nº 1.395 , publicada nesta sexta-feira (9), do total...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/credito-extraordinario-de-r-75-bi-reforca-subsidios-combustiveis",
-    "publishedAt": "09/10/2026 às 09:53",
-    "category": "Economia",
-    "author": "Agência Brasil",
-    "tags": [
-      "Economia",
-      "crédito extraordinário",
-      "Diário Oficial da União",
-      "petróleo",
-      "diesel"
-    ]
-  },
-  {
     "id": "camara-1310254-propaganda-eleitoral-gratuita-",
     "title": "Propaganda eleitoral gratuita no rádio e na TV recomeça nesta sexta-feira",
     "summary": "As campanhas de segundo turno para presidente da República e governador já estão nas ruas e nas redes sociais desde segunda-feira (5)",
@@ -847,24 +856,6 @@
       "Congresso",
       "Brasil",
       "Notícias"
-    ]
-  },
-  {
-    "id": "ibge-48246",
-    "title": "IPCA fica em 0,82% em setembro",
-    "summary": "O Índice Nacional de Preços ao Consumidor Amplo (IPCA) de setembro foi de 0,82%, 1,14 ponto percentual (p.p.) acima do -0,32% registrado em agosto. No ano, o IPCA acumula alta de 3,95% e, nos últimos 12 meses, o índice ficou em 4,58%, acima dos 4,22% dos...",
-    "source": "IBGE",
-    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
-    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/48246-ipca-fica-em-0-82-em-setembro.html",
-    "publishedAt": "09/10/2026 às 09:00",
-    "category": "Economia",
-    "author": "Agência IBGE Notícias",
-    "tags": [
-      "economicas",
-      "Release",
-      "Economia",
-      "Estatísticas",
-      "Inflação"
     ]
   },
   {

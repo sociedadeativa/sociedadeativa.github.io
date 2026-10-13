@@ -57,6 +57,7 @@ const requiredDataFiles = [
   'dist/data/marketData.json',
   'dist/data/economyData.json',
   'dist/data/electionData.json',
+  'dist/data/newsData.json',
 ];
 
 for (const dataFile of requiredDataFiles) {
@@ -66,7 +67,25 @@ for (const dataFile of requiredDataFiles) {
   }
   try {
     const raw = fs.readFileSync(dataFile, 'utf8');
-    JSON.parse(raw);
+    const parsed = JSON.parse(raw);
+
+    // Validação específica para o arquivo de notícias
+    if (dataFile === 'dist/data/newsData.json') {
+      if (!Array.isArray(parsed) || parsed.length < 10) {
+        console.error(`ERROR: dist/data/newsData.json possui menos de 10 artigos (${parsed?.length || 0})!`);
+        process.exit(1);
+      }
+      for (const item of parsed) {
+        if (!item.id || !item.title || !item.summary || !item.source || !item.articleUrl || !item.publishedAt || !item.category) {
+          console.error('ERROR: Artigo com campos obrigatórios ausentes em dist/data/newsData.json:', item);
+          process.exit(1);
+        }
+        if (!item.articleUrl.startsWith('https://')) {
+          console.error('ERROR: URL de notícia não é HTTPS em dist/data/newsData.json:', item.articleUrl);
+          process.exit(1);
+        }
+      }
+    }
   } catch (err) {
     console.error(`ERROR: Arquivo de dados ${dataFile} contém JSON inválido:`, err.message);
     process.exit(1);

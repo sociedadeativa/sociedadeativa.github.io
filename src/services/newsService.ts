@@ -172,7 +172,7 @@ export async function fetchNewsItems(): Promise<NewsItem[]> {
     // Tenta carregar do arquivo estático público
     const baseUrl = import.meta.env.BASE_URL || "/";
     const dataUrl = `${baseUrl.endsWith("/") ? baseUrl : baseUrl + "/"}data/newsData.json`;
-    const response = await fetch(dataUrl);
+    const response = await fetch(dataUrl, { cache: "no-cache" });
 
     if (response.ok) {
       const data = await response.json();

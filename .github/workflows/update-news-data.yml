@@ -12,14 +12,18 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: "news-data-update"
+  group: "pages"
   cancel-in-progress: false
 
 jobs:
   update-news-data:
     runs-on: ubuntu-latest
+    outputs:
+      has_changes: ${{ steps.commit_step.outputs.has_changes }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -71,6 +75,7 @@ jobs:
         run: npm run build
 
       - name: Commit and Push if Changes Exist
+        id: commit_step
         run: |
           git config user.name "Sociedade Ativa DataBot"
           git config user.email "bot@sociedadeativa.org"
@@ -78,9 +83,21 @@ jobs:
           git add public/data/newsData.json
 
           if git diff --staged --quiet; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
             echo "Nenhuma alteração nas notícias oficiais. Nenhuma ação necessária."
           else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
             echo "Alterações detectadas nas notícias oficiais. Efetuando commit..."
             git commit -m "data(noticias): atualização automática das notícias oficiais [skip ci]"
             git push
           fi
+
+  deploy-pages:
+    name: Deploy Updated News to GitHub Pages
+    needs: update-news-data
+    if: needs.update-news-data.outputs.has_changes == 'true' || github.event_name == 'workflow_dispatch'
+    uses: ./.github/workflows/deploy.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

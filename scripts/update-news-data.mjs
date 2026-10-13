@@ -766,12 +766,39 @@ async function main() {
     }
   }
 
+  // 1b. Extrai e mapeia artigos oficiais previamente publicados e válidos
+  let existingOfficialItems = [];
+  if (Array.isArray(existingItems)) {
+    existingOfficialItems = existingItems.filter(
+      (item) =>
+        !isProtectedSocietyAtivaArticle(item) &&
+        item.id &&
+        item.title &&
+        item.summary &&
+        item.articleUrl &&
+        item.publishedAt &&
+        OFFICIAL_CATEGORIES.includes(item.category) &&
+        item.articleUrl.startsWith('https://')
+    );
+  }
+
+  // Mapeia histórico de artigos por URL canônica para preservação de datas de publicação e atribuições originais
+  const existingByUrl = new Map();
+  for (const item of existingOfficialItems) {
+    const normUrl = item.articleUrl.toLowerCase();
+    existingByUrl.set(normUrl, item);
+  }
+  console.log(`Artigos oficiais previamente publicados disponíveis no histórico: ${existingOfficialItems.length}`);
+
   // 4. Consolidação e Deduplicação por URL Canônica Normalizada
+  // Preserva artigos previamente publicados se fontes falharem ou para manter histórico recente
   const allRawItems = [...ebcItems, ...camaraItems, ...ibgeItems, ...bcbItems];
-  const deduplicatedMap = new Map();
+  const newlyCollectedUrls = new Set();
+  const allCandidateItems = [];
   let duplicatesCount = 0;
   let rejectedCount = 0;
 
+  // Processa novos itens coletados das fontes ativas
   for (const item of allRawItems) {
     // Validação estrita dos campos essenciais
     if (
@@ -788,11 +815,46 @@ async function main() {
     }
 
     const normUrl = item.articleUrl.toLowerCase();
+
+    // Se o artigo já foi publicado anteriormente, preservamos a data de publicação original e atribuições
+    if (existingByUrl.has(normUrl)) {
+      const prev = existingByUrl.get(normUrl);
+      item.publishedAt = prev.publishedAt;
+      if (prev._timestamp) {
+        item._timestamp = prev._timestamp;
+      }
+      if (prev.source) item.source = prev.source;
+      if (prev.sourceUrl) item.sourceUrl = prev.sourceUrl;
+    }
+
+    newlyCollectedUrls.add(normUrl);
+    allCandidateItems.push(item);
+  }
+
+  // Inclui artigos previamente publicados cujas URLs não apareceram nesta rodada
+  // (garante resiliência: se um feed falhar temporariamente ou retornar menos notícias, o acervo anterior é preservado)
+  for (const prevItem of existingOfficialItems) {
+    const normUrl = prevItem.articleUrl.toLowerCase();
+    if (!newlyCollectedUrls.has(normUrl)) {
+      if (!prevItem._timestamp) {
+        const { timestamp } = parseDateToBrasilia(prevItem.publishedAt);
+        prevItem._timestamp = timestamp;
+      }
+      allCandidateItems.push(prevItem);
+    }
+  }
+
+  // Deduplicação estrita por URL canônica normalizada
+  const deduplicatedMap = new Map();
+  for (const item of allCandidateItems) {
+    const normUrl = item.articleUrl.toLowerCase();
     if (deduplicatedMap.has(normUrl)) {
       duplicatesCount++;
-      // Mantém a versão com maior volume de tags ou texto mais rico
       const existing = deduplicatedMap.get(normUrl);
+      // Mantém versão mais detalhada, sempre respeitando a data de publicação original
       if ((item.tags?.length || 0) > (existing.tags?.length || 0)) {
+        item.publishedAt = existing.publishedAt;
+        if (existing._timestamp) item._timestamp = existing._timestamp;
         deduplicatedMap.set(normUrl, item);
       }
     } else {
@@ -801,10 +863,10 @@ async function main() {
   }
 
   const uniqueOfficialItems = Array.from(deduplicatedMap.values());
-  console.log(`\nArtigos brutos coletados: ${totalCollectedRaw}`);
+  console.log(`\nArtigos brutos coletados nesta rodada: ${totalCollectedRaw}`);
   console.log(`Artigos inválidos rejeitados: ${rejectedCount}`);
-  console.log(`Duplicatas removidas: ${duplicatesCount}`);
-  console.log(`Artigos oficiais únicos e válidos: ${uniqueOfficialItems.length}`);
+  console.log(`Duplicatas consolidadas: ${duplicatesCount}`);
+  console.log(`Artigos oficiais únicos e válidos disponíveis: ${uniqueOfficialItems.length}`);
 
   // 5. Integração com Artigos Protegidos do Sociedade Ativa
   // Mapeia timestamps para ordenação cronológica decrescente
