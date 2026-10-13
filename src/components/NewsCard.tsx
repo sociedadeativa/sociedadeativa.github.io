@@ -1,5 +1,6 @@
 import React from "react";
 import { NewsItem, NewsCategory } from "../types/news";
+import { getArticleUrl } from "../utils/router";
 import { Calendar, ExternalLink, Sparkles } from "lucide-react";
 
 interface NewsCardProps {
@@ -67,7 +68,16 @@ export const NewsCard: React.FC<NewsCardProps> = ({
             isFeatured ? "text-xl sm:text-2xl mb-3" : "text-base sm:text-lg mb-2"
           }`}
         >
-          {article.title}
+          <a
+            href={getArticleUrl(article.id)}
+            onClick={(e) => {
+              e.preventDefault();
+              onOpenDetails(article);
+            }}
+            className="hover:underline"
+          >
+            {article.title}
+          </a>
         </h3>
 
         {/* Resumo da Notícia */}

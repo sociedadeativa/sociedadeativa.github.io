@@ -168,20 +168,40 @@ export function filterNewsItems(items: NewsItem[], options: NewsFilterOptions): 
  * Busca de notícias com fallback automático para os dados embutidos
  */
 export async function fetchNewsItems(): Promise<NewsItem[]> {
-  try {
-    // Tenta carregar do arquivo estático público
-    const baseUrl = import.meta.env.BASE_URL || "/";
-    const dataUrl = `${baseUrl.endsWith("/") ? baseUrl : baseUrl + "/"}data/newsData.json`;
-    const response = await fetch(dataUrl, { cache: "no-cache" });
+  const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
+  const candidateUrls = [
+    ...(origin ? [`${origin}/data/newsData.json`] : []),
+    "/data/newsData.json",
+    "../../data/newsData.json",
+    "../data/newsData.json",
+    "./data/newsData.json",
+    "data/newsData.json",
+    "https://sociedadeativa.github.io/data/newsData.json",
+  ];
 
-    if (response.ok) {
-      const data = await response.json();
-      if (Array.isArray(data) && data.length > 0) {
-        return data.map((item, idx) => normalizeNewsItem(item, idx));
+  for (const url of candidateUrls) {
+    try {
+      const response = await fetch(url, { cache: "no-cache" });
+      if (response.ok) {
+        const contentType = response.headers.get("content-type") || "";
+        if (contentType.includes("application/json") || contentType.includes("text/json")) {
+          const data = await response.json();
+          if (Array.isArray(data) && data.length > 0) {
+            return data.map((item, idx) => normalizeNewsItem(item, idx));
+          }
+        } else {
+          const text = await response.text();
+          if (text.trim().startsWith("[")) {
+            const data = JSON.parse(text);
+            if (Array.isArray(data) && data.length > 0) {
+              return data.map((item, idx) => normalizeNewsItem(item, idx));
+            }
+          }
+        }
       }
+    } catch {
+      // Tenta a próxima URL candidata
     }
-  } catch {
-    // Falha silenciosa de rede; o fallback embutido garante disponibilidade contínua
   }
 
   // Fallback garantido para dados estáticos compilados

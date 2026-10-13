@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build && node scripts/validate-build.mjs",
+    "build": "vite build && node scripts/generate-article-pages.mjs && node scripts/validate-build.mjs",
+    "generate-articles": "node scripts/generate-article-pages.mjs",
     "update-economy": "node scripts/update-economic-data.mjs",
     "update-news": "node scripts/update-news-data.mjs",
     "preview": "vite preview",

@@ -6,7 +6,8 @@ export type PortalRoute =
   | "estados"
   | "dados-publicos"
   | "noticias"
-  | "sobre";
+  | "sobre"
+  | "artigo";
 
 export interface RouteConfig {
   route: PortalRoute;
@@ -124,19 +125,89 @@ export const ROUTE_CONFIGS: Record<PortalRoute, RouteConfig> = {
     badgeText: "text-slate-800",
     badgeBorder: "border-slate-200",
   },
+  artigo: {
+    route: "artigo",
+    path: "/noticias/",
+    label: "Notícia Oficial",
+    title: "Notícia Oficial — Sociedade Ativa | Jornalismo de Dados",
+    description:
+      "Leitura de despacho e matéria oficial no portal Sociedade Ativa, com checagem de fontes públicas e dados oficiais.",
+    categoryTag: "Notícias",
+    accentColor: "blue",
+    badgeBg: "bg-blue-50",
+    badgeText: "text-blue-800",
+    badgeBorder: "border-blue-200",
+  },
 };
+
+/**
+ * Retorna o caminho canônico estável de uma notícia no GitHub Pages
+ */
+export function getArticleUrl(articleId: string): string {
+  const cleanId = String(articleId || "").trim();
+  return `/noticias/${encodeURIComponent(cleanId)}/`;
+}
+
+/**
+ * Extrai o ID da notícia a partir do pathname atual ou parâmetros de busca
+ */
+export function getArticleIdFromPath(pathname: string, searchStr?: string): string | null {
+  const search = searchStr !== undefined ? searchStr : (typeof window !== "undefined" ? window.location.search : "");
+
+  // 1. Trata query parameter explícito ?id=xxx ou ?artigo=xxx
+  if (search) {
+    const params = new URLSearchParams(search);
+    const idParam = params.get("id") || params.get("artigo");
+    if (idParam && idParam.trim()) {
+      return idParam.trim();
+    }
+
+    // Trata fallback do 404.html: ?p=/noticias/id/
+    const pParam = params.get("p");
+    if (pParam) {
+      const decodedP = decodeURIComponent(pParam).replace(/^\/+|\/+$/g, "");
+      const pSegments = decodedP.split("/");
+      if (pSegments[0] === "noticias" && pSegments.length >= 2) {
+        const candidateId = pSegments[1];
+        if (candidateId && candidateId !== "index.html") {
+          return candidateId;
+        }
+      }
+    }
+  }
+
+  // 2. Trata pathname direto: /noticias/:id/ ou /noticias/:id
+  const clean = pathname.replace(/^\/+|\/+$/g, "");
+  const segments = clean.split("/");
+  if (segments[0] === "noticias" && segments.length >= 2) {
+    const candidate = segments[1];
+    if (candidate && candidate !== "index.html" && candidate !== "index") {
+      return candidate;
+    }
+  }
+
+  return null;
+}
 
 /**
  * Converte o pathname atual do browser em uma rota válida do portal
  */
-export function getRouteFromPath(pathname: string): PortalRoute {
+export function getRouteFromPath(pathname: string, searchStr?: string): PortalRoute {
+  // Primeiro verifica se é uma página individual de artigo
+  const detectedArticleId = getArticleIdFromPath(pathname, searchStr);
+  if (detectedArticleId) {
+    return "artigo";
+  }
+
   // Trata parâmetros de fallback como ?p=/politica/ caso venha de 404.html
-  if (typeof window !== "undefined" && window.location.search) {
-    const params = new URLSearchParams(window.location.search);
+  const search = searchStr !== undefined ? searchStr : (typeof window !== "undefined" ? window.location.search : "");
+  if (search) {
+    const params = new URLSearchParams(search);
     const p = params.get("p");
     if (p) {
       const cleanParam = p.replace(/^\/+|\/+$/g, "").toLowerCase();
       for (const [key, config] of Object.entries(ROUTE_CONFIGS)) {
+        if (key === "artigo") continue;
         const cleanConfig = config.path.replace(/^\/+|\/+$/g, "").toLowerCase();
         if (cleanConfig && cleanParam.startsWith(cleanConfig)) {
           return key as PortalRoute;
@@ -195,5 +266,18 @@ export function navigateTo(route: PortalRoute, hash?: string) {
         el.scrollIntoView({ behavior: "smooth" });
       }
     }
+  }
+}
+
+/**
+ * Navegação suave para um artigo específico
+ */
+export function navigateToArticle(articleId: string) {
+  const targetPath = getArticleUrl(articleId);
+
+  if (typeof window !== "undefined") {
+    window.history.pushState({ route: "artigo", articleId }, "", targetPath);
+    window.dispatchEvent(new PopStateEvent("popstate"));
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }

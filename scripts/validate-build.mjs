@@ -223,4 +223,51 @@ for (const filePath of requiredHtmlFiles) {
   }
 }
 
-console.log(`Build validation passed: All ${requiredHtmlFiles.length} pages, SEO metadata, 6 candidate photos, market/economy datasets, sitemap.xml and robots.txt are clean and production-ready.`);
+// Validação e auditoria das páginas estáticas individuais de notícias geradas
+if (fs.existsSync('dist/noticias')) {
+  const articleDirs = fs.readdirSync('dist/noticias').filter((item) => {
+    return (
+      item !== 'index.html' &&
+      item !== 'data' &&
+      item !== 'assets' &&
+      fs.statSync(`dist/noticias/${item}`).isDirectory()
+    );
+  });
+
+  if (articleDirs.length < 10) {
+    console.error(`ERROR: Esperado pelo menos 10 páginas de notícias geradas em dist/noticias/, encontrado: ${articleDirs.length}`);
+    process.exit(1);
+  }
+
+  for (const slug of articleDirs) {
+    const articleHtmlPath = `dist/noticias/${slug}/index.html`;
+    if (!fs.existsSync(articleHtmlPath)) {
+      console.error(`ERROR: Página individual do artigo ausente: ${articleHtmlPath}`);
+      process.exit(1);
+    }
+    const html = fs.readFileSync(articleHtmlPath, 'utf8');
+    if (html.includes('/src/') || html.includes('main.tsx')) {
+      console.error(`ERROR: ${articleHtmlPath} contém referências de desenvolvimento não compiladas!`);
+      process.exit(1);
+    }
+    if (!html.includes('<title>') || !html.includes('Sociedade Ativa')) {
+      console.error(`ERROR: ${articleHtmlPath} não possui tag <title> válida!`);
+      process.exit(1);
+    }
+    if (!html.includes('rel="canonical"') || !html.includes(`https://sociedadeativa.github.io/noticias/${slug}/`)) {
+      console.error(`ERROR: ${articleHtmlPath} não possui link canônico correto!`);
+      process.exit(1);
+    }
+    if (!html.includes('application/ld+json') || !html.includes('NewsArticle')) {
+      console.error(`ERROR: ${articleHtmlPath} não possui dados estruturados NewsArticle (Schema.org)!`);
+      process.exit(1);
+    }
+    if (!html.includes('oZPS6sfWTE5EJAuLOsZCtq9UoF1lh4wMhD9Jz13OTSs')) {
+      console.error(`ERROR: ${articleHtmlPath} ausente da tag google-site-verification!`);
+      process.exit(1);
+    }
+  }
+  console.log(`Auditoria de páginas de notícias: ${articleDirs.length} páginas individuais validadas com sucesso.`);
+}
+
+console.log(`Build validation passed: All ${requiredHtmlFiles.length} pages, individual news pages, SEO metadata, 6 candidate photos, market/economy datasets, sitemap.xml and robots.txt are clean and production-ready.`);

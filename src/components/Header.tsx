@@ -247,7 +247,9 @@ export const Header: React.FC<HeaderProps> = ({
             className="hidden xl:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-slate-600"
           >
             {navLinks.map((link) => {
-              const isActive = currentRoute === link.route;
+              const isActive =
+                currentRoute === link.route ||
+                (link.route === "noticias" && currentRoute === "artigo");
               return (
                 <PortalLink
                   key={link.route}
@@ -268,7 +270,9 @@ export const Header: React.FC<HeaderProps> = ({
             className="hidden lg:flex xl:hidden items-center gap-4 text-xs font-bold uppercase tracking-wider text-slate-600"
           >
             {navLinks.slice(0, 5).map((link) => {
-              const isActive = currentRoute === link.route;
+              const isActive =
+                currentRoute === link.route ||
+                (link.route === "noticias" && currentRoute === "artigo");
               return (
                 <PortalLink
                   key={link.route}
@@ -324,7 +328,9 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="lg:hidden border-t border-slate-200 bg-white px-4 py-5 shadow-xl transition-all">
           <nav className="flex flex-col gap-1 text-sm font-bold text-slate-800">
             {navLinks.map((link) => {
-              const isActive = currentRoute === link.route;
+              const isActive =
+                currentRoute === link.route ||
+                (link.route === "noticias" && currentRoute === "artigo");
               return (
                 <PortalLink
                   key={link.route}

@@ -19,6 +19,7 @@ import { EstadosPage } from "./pages/EstadosPage";
 import { DadosPublicosPage } from "./pages/DadosPublicosPage";
 import { NoticiasPage } from "./pages/NoticiasPage";
 import { SobrePage } from "./pages/SobrePage";
+import { ArticlePage } from "./pages/ArticlePage";
 
 // Modais e Painéis
 import { StateDetailPanel } from "./components/StateDetailPanel";
@@ -36,8 +37,8 @@ export default function App() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [activeArticle, setActiveArticle] = useState<NewsItem | null>(null);
 
-  // Hook de Rota do Portal (Início, Política, Eleições, Economia, Estados, Dados Públicos, Notícias, Sobre)
-  const { currentRoute, goTo } = usePortalRoute();
+  // Hook de Rota do Portal (Início, Política, Eleições, Economia, Estados, Dados Públicos, Notícias, Sobre, Artigo)
+  const { currentRoute, articleId, goTo, goToArticle } = usePortalRoute();
 
   // Hooks de Dados (Notícias e Indicadores Econômicos Oficiais)
   const { articles } = useNews({ initialArticles: OFFICIAL_NEWS_ARTICLES });
@@ -78,14 +79,14 @@ export default function App() {
             onSelectState={(uf) => setSelectedStateUf(uf)}
             onSelectCandidateFilter={(id) => setCandidateFilter(id)}
             onOpenMethodology={() => setIsMethodologyOpen(true)}
-            onOpenArticleDetails={(art) => setActiveArticle(art)}
+            onOpenArticleDetails={(art) => goToArticle(art.id)}
           />
         )}
 
         {currentRoute === "politica" && (
           <PoliticaPage
             articles={articles}
-            onOpenArticleDetails={(art) => setActiveArticle(art)}
+            onOpenArticleDetails={(art) => goToArticle(art.id)}
           />
         )}
 
@@ -96,14 +97,14 @@ export default function App() {
             selectedCandidateFilter={candidateFilter}
             onSelectCandidateFilter={(id) => setCandidateFilter(id)}
             onOpenMethodology={() => setIsMethodologyOpen(true)}
-            onOpenArticleDetails={(art) => setActiveArticle(art)}
+            onOpenArticleDetails={(art) => goToArticle(art.id)}
           />
         )}
 
         {currentRoute === "economia" && (
           <EconomiaPage
             articles={articles}
-            onOpenArticleDetails={(art) => setActiveArticle(art)}
+            onOpenArticleDetails={(art) => goToArticle(art.id)}
           />
         )}
 
@@ -128,7 +129,28 @@ export default function App() {
         {currentRoute === "noticias" && (
           <NoticiasPage
             initialArticles={articles}
-            onOpenArticleDetails={(art) => setActiveArticle(art)}
+            onOpenArticleDetails={(art) => goToArticle(art.id)}
+          />
+        )}
+
+        {currentRoute === "artigo" && (
+          <ArticlePage
+            article={
+              articles.find((a) => a.id === articleId) ||
+              OFFICIAL_NEWS_ARTICLES.find((a) => a.id === articleId) || {
+                id: articleId || "noticia",
+                title: "Notícia Oficial",
+                summary: "Acompanhe as apurações e dados oficiais no portal Sociedade Ativa.",
+                source: "Sociedade Ativa",
+                sourceUrl: "https://sociedadeativa.github.io/noticias/",
+                articleUrl: "https://sociedadeativa.github.io/noticias/",
+                publishedAt: "13/10/2026",
+                category: "Brasil" as const,
+              }
+            }
+            allArticles={articles}
+            onNavigateBack={() => goTo("noticias")}
+            onSelectArticle={(art) => goToArticle(art.id)}
           />
         )}
 
@@ -171,7 +193,7 @@ export default function App() {
         news={articles}
         dataset={currentDataset}
         indicators={indicators}
-        onSelectArticle={(art) => setActiveArticle(art)}
+        onSelectArticle={(art) => goToArticle(art.id)}
         onSelectState={(uf) => setSelectedStateUf(uf)}
       />
 
