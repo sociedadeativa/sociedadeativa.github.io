@@ -32,11 +32,9 @@ export function useNews(options?: UseNewsOptions) {
   }, []);
 
   useEffect(() => {
-    // Se não recebeu artigos iniciais, busca automaticamente
-    if (!options?.initialArticles || options.initialArticles.length === 0) {
-      loadData();
-    }
-  }, [options?.initialArticles, loadData]);
+    // Sincroniza sempre o acervo completo de artigos a partir de data/newsData.json
+    loadData();
+  }, [loadData]);
 
   // Lista única de fontes disponíveis
   const sources = useMemo(() => {

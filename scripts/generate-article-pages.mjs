@@ -107,47 +107,47 @@ function main() {
     // Substitui <title>
     pageHtml = pageHtml.replace(
       /<title>[\s\S]*?<\/title>/i,
-      `<title>${escapeHtml(pageTitle)}</title>`
+      () => `<title>${escapeHtml(pageTitle)}</title>`
     );
 
     // Substitui <meta name="description">
     pageHtml = pageHtml.replace(
       /<meta\s+name=["']description["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-      `<meta name="description" content="${escapeHtml(metaDescription)}" />`
+      () => `<meta name="description" content="${escapeHtml(metaDescription)}" />`
     );
 
     // Substitui link canônico
     pageHtml = pageHtml.replace(
       /<link\s+rel=["']canonical["']\s+href=["'][\s\S]*?["']\s*\/?>/i,
-      `<link rel="canonical" href="${canonicalUrl}" />`
+      () => `<link rel="canonical" href="${canonicalUrl}" />`
     );
 
     // Substitui Open Graph
     pageHtml = pageHtml.replace(
       /<meta\s+property=["']og:title["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-      `<meta property="og:title" content="${escapeHtml(pageTitle)}" />`
+      () => `<meta property="og:title" content="${escapeHtml(pageTitle)}" />`
     );
     pageHtml = pageHtml.replace(
       /<meta\s+property=["']og:description["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-      `<meta property="og:description" content="${escapeHtml(metaDescription)}" />`
+      () => `<meta property="og:description" content="${escapeHtml(metaDescription)}" />`
     );
     pageHtml = pageHtml.replace(
       /<meta\s+property=["']og:url["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-      `<meta property="og:url" content="${canonicalUrl}" />`
+      () => `<meta property="og:url" content="${canonicalUrl}" />`
     );
     pageHtml = pageHtml.replace(
       /<meta\s+property=["']og:type["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-      `<meta property="og:type" content="article" />\n    <meta property="article:published_time" content="${isoDate}" />\n    <meta property="article:section" content="${escapeHtml(article.category)}" />`
+      () => `<meta property="og:type" content="article" />\n    <meta property="article:published_time" content="${isoDate}" />\n    <meta property="article:section" content="${escapeHtml(article.category)}" />`
     );
 
     // Substitui Twitter Cards
     pageHtml = pageHtml.replace(
       /<meta\s+name=["']twitter:title["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-      `<meta name="twitter:title" content="${escapeHtml(pageTitle)}" />`
+      () => `<meta name="twitter:title" content="${escapeHtml(pageTitle)}" />`
     );
     pageHtml = pageHtml.replace(
       /<meta\s+name=["']twitter:description["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-      `<meta name="twitter:description" content="${escapeHtml(metaDescription)}" />`
+      () => `<meta name="twitter:description" content="${escapeHtml(metaDescription)}" />`
     );
 
     // Substitui dados estruturados Schema.org
@@ -184,7 +184,7 @@ function main() {
 
     pageHtml = pageHtml.replace(
       /<script\s+type=["']application\/ld\+json["']>[\s\S]*?<\/script>/i,
-      `<script type="application/ld+json">\n${JSON.stringify(structuredData, null, 2)}\n    </script>`
+      () => `<script type="application/ld+json">\n${JSON.stringify(structuredData, null, 2)}\n    </script>`
     );
 
     // Pre-rendered HTML dentro de <div id="root"> para robôs de indexação e usuários sem JS
@@ -218,7 +218,7 @@ function main() {
       </div>
     `.trim();
 
-    pageHtml = pageHtml.replace('<div id="root"></div>', fallbackArticleHtml);
+    pageHtml = pageHtml.replace('<div id="root"></div>', () => fallbackArticleHtml);
 
     const outPath = path.join(articleDir, 'index.html');
     fs.writeFileSync(outPath, pageHtml, 'utf8');

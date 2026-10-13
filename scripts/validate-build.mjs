@@ -223,26 +223,16 @@ for (const filePath of requiredHtmlFiles) {
   }
 }
 
-// Validação e auditoria das páginas estáticas individuais de notícias geradas
+// Validação e auditoria estrita de prontidão de produção para todas as páginas de notícias
 if (fs.existsSync('dist/noticias')) {
-  const articleDirs = fs.readdirSync('dist/noticias').filter((item) => {
-    return (
-      item !== 'index.html' &&
-      item !== 'data' &&
-      item !== 'assets' &&
-      fs.statSync(`dist/noticias/${item}`).isDirectory()
-    );
-  });
+  const newsData = JSON.parse(fs.readFileSync('dist/data/newsData.json', 'utf8'));
+  const seenCanonical = new Set();
+  const seenTitles = new Set();
 
-  if (articleDirs.length < 10) {
-    console.error(`ERROR: Esperado pelo menos 10 páginas de notícias geradas em dist/noticias/, encontrado: ${articleDirs.length}`);
-    process.exit(1);
-  }
-
-  for (const slug of articleDirs) {
-    const articleHtmlPath = `dist/noticias/${slug}/index.html`;
+  for (const article of newsData) {
+    const articleHtmlPath = `dist/noticias/${article.id}/index.html`;
     if (!fs.existsSync(articleHtmlPath)) {
-      console.error(`ERROR: Página individual do artigo ausente: ${articleHtmlPath}`);
+      console.error(`ERROR: Página individual do artigo ausente no build: ${articleHtmlPath}`);
       process.exit(1);
     }
     const html = fs.readFileSync(articleHtmlPath, 'utf8');
@@ -250,24 +240,94 @@ if (fs.existsSync('dist/noticias')) {
       console.error(`ERROR: ${articleHtmlPath} contém referências de desenvolvimento não compiladas!`);
       process.exit(1);
     }
-    if (!html.includes('<title>') || !html.includes('Sociedade Ativa')) {
+
+    // Validação de título único
+    const titleMatch = html.match(/<title>([^<]+)<\/title>/);
+    if (!titleMatch || !titleMatch[1].trim()) {
       console.error(`ERROR: ${articleHtmlPath} não possui tag <title> válida!`);
       process.exit(1);
     }
-    if (!html.includes('rel="canonical"') || !html.includes(`https://sociedadeativa.github.io/noticias/${slug}/`)) {
-      console.error(`ERROR: ${articleHtmlPath} não possui link canônico correto!`);
+    const title = titleMatch[1].trim();
+    if (seenTitles.has(title)) {
+      console.error(`ERROR: Título duplicado detectado: ${title}`);
       process.exit(1);
     }
-    if (!html.includes('application/ld+json') || !html.includes('NewsArticle')) {
-      console.error(`ERROR: ${articleHtmlPath} não possui dados estruturados NewsArticle (Schema.org)!`);
+    seenTitles.add(title);
+
+    // Validação de meta description
+    const descMatch = html.match(/<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i);
+    if (!descMatch || !descMatch[1].trim()) {
+      console.error(`ERROR: ${articleHtmlPath} não possui <meta name="description"> preenchida!`);
       process.exit(1);
     }
+
+    // Validação de URL canônica única
+    const expectedCanonical = `https://sociedadeativa.github.io/noticias/${article.id}/`;
+    if (!html.includes(`rel="canonical"`) || !html.includes(expectedCanonical)) {
+      console.error(`ERROR: ${articleHtmlPath} não possui link canônico exato (${expectedCanonical})!`);
+      process.exit(1);
+    }
+    if (seenCanonical.has(expectedCanonical)) {
+      console.error(`ERROR: URL canônica duplicada: ${expectedCanonical}`);
+      process.exit(1);
+    }
+    seenCanonical.add(expectedCanonical);
+
+    // Validação de Schema.org NewsArticle JSON-LD
+    const jsonLdMatch = html.match(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/i);
+    if (!jsonLdMatch) {
+      console.error(`ERROR: ${articleHtmlPath} não possui bloco JSON-LD!`);
+      process.exit(1);
+    }
+    try {
+      const ld = JSON.parse(jsonLdMatch[1]);
+      if (ld['@type'] !== 'NewsArticle') {
+        console.error(`ERROR: ${articleHtmlPath} JSON-LD @type não é NewsArticle!`);
+        process.exit(1);
+      }
+      if (ld.headline !== article.title) {
+        console.error(`ERROR: ${articleHtmlPath} JSON-LD headline diverge do dataset!`);
+        process.exit(1);
+      }
+      if (ld.author?.name !== article.source) {
+        console.error(`ERROR: ${articleHtmlPath} JSON-LD author diverge da fonte oficial!`);
+        process.exit(1);
+      }
+    } catch (e) {
+      console.error(`ERROR: ${articleHtmlPath} JSON-LD inválido:`, e.message);
+      process.exit(1);
+    }
+
+    // Validação de verificação do Google
     if (!html.includes('oZPS6sfWTE5EJAuLOsZCtq9UoF1lh4wMhD9Jz13OTSs')) {
       console.error(`ERROR: ${articleHtmlPath} ausente da tag google-site-verification!`);
       process.exit(1);
     }
+
+    // Validação de fidelidade de conteúdo e fontes
+    if (!html.includes(article.source)) {
+      console.error(`ERROR: ${articleHtmlPath} não contém o nome da fonte ${article.source}!`);
+      process.exit(1);
+    }
+    if (!html.includes(article.publishedAt)) {
+      console.error(`ERROR: ${articleHtmlPath} não contém a data original ${article.publishedAt}!`);
+      process.exit(1);
+    }
+
+    // Validação de integridade dos links para assets CSS e JS
+    const scriptMatches = [...html.matchAll(/<script[^>]+src=["']([^"']+)["']/g)].map(m => m[1]);
+    const linkMatches = [...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g)].map(m => m[1]);
+    for (const ref of [...scriptMatches, ...linkMatches]) {
+      if (ref.startsWith('../../')) {
+        const resolved = ref.replace('../../', 'dist/');
+        if (!fs.existsSync(resolved)) {
+          console.error(`ERROR: Asset não encontrado no build: ${ref} (esperado em ${resolved})`);
+          process.exit(1);
+        }
+      }
+    }
   }
-  console.log(`Auditoria de páginas de notícias: ${articleDirs.length} páginas individuais validadas com sucesso.`);
+  console.log(`Auditoria estrita de páginas de notícias: Todas as ${newsData.length} páginas individuais validadas com sucesso (conteúdo, metadados, JSON-LD e assets).`);
 }
 
 console.log(`Build validation passed: All ${requiredHtmlFiles.length} pages, individual news pages, SEO metadata, 6 candidate photos, market/economy datasets, sitemap.xml and robots.txt are clean and production-ready.`);
