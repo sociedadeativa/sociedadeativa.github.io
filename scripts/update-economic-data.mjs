@@ -560,6 +560,39 @@ async function main() {
   fs.writeFileSync(PRIMARY_DATA_PATH, serialized, 'utf8');
   fs.writeFileSync(COMPAT_DATA_PATH, serialized, 'utf8');
 
+  // 4. Sincroniza public/data/marketData.json com os dados de Ibovespa
+  const MARKET_DATA_PATH = path.join(rootDir, 'public', 'data', 'marketData.json');
+  let marketSynced = false;
+  if (fs.existsSync(MARKET_DATA_PATH)) {
+    try {
+      const rawMarket = fs.readFileSync(MARKET_DATA_PATH, 'utf8');
+      const marketObj = JSON.parse(rawMarket);
+      const ibovInd = updatedIndicators.find((i) => i.id === 'ibovespa');
+      if (ibovInd && marketObj && marketObj.ibov) {
+        marketObj.ibov.points = ibovInd.value;
+        marketObj.ibov.formattedPoints = ibovInd.formattedValue;
+        marketObj.ibov.changePercent = ibovInd.variation;
+        marketObj.ibov.formattedChangePercent = `${ibovInd.variation >= 0 ? '+' : ''}${ibovInd.variation.toFixed(2).replace('.', ',')}%`;
+        if (ibovInd.previousValue) {
+          marketObj.ibov.previousClosePoints = ibovInd.previousValue;
+          marketObj.ibov.formattedPreviousClose = ibovInd.formattedPreviousValue || `${ibovInd.previousValue.toLocaleString('pt-BR')} pts`;
+        }
+        if (ibovInd.quoteTimestamp) {
+          marketObj.ibov.timestamp = ibovInd.quoteTimestamp;
+          marketObj.timestamp = ibovInd.quoteTimestamp;
+        }
+        if (ibovInd.referencePeriod) {
+          marketObj.ibov.tradingSession = ibovInd.referencePeriod.split(' ')[0] || marketObj.ibov.tradingSession;
+          marketObj.tradingSession = marketObj.ibov.tradingSession;
+        }
+        fs.writeFileSync(MARKET_DATA_PATH, JSON.stringify(marketObj, null, 2) + '\n', 'utf8');
+        marketSynced = true;
+      }
+    } catch (e) {
+      console.warn('Aviso: Não foi possível sincronizar marketData.json:', e.message);
+    }
+  }
+
   console.log('\n' + '='.repeat(70));
   console.log('RELATÓRIO CONSOLIDADO DE EXECUÇÃO');
   console.log('='.repeat(70));
@@ -578,6 +611,9 @@ async function main() {
   console.log('\nArquivos sincronizados com sucesso:');
   console.log(`  1. ${path.relative(rootDir, PRIMARY_DATA_PATH)}`);
   console.log(`  2. ${path.relative(rootDir, COMPAT_DATA_PATH)}`);
+  if (marketSynced) {
+    console.log(`  3. ${path.relative(rootDir, MARKET_DATA_PATH)} (Sincronizado com IBOV)`);
+  }
   console.log('='.repeat(70));
 }
 

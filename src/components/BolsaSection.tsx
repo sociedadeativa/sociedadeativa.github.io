@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { B3MarketRankings, StockQuote } from "../types/market";
-import { fetchMarketRankings } from "../services/marketService";
+import { OFFICIAL_B3_MARKET_DATA } from "../data/marketData";
+import { fetchMarketRankings, normalizeMarketRankings } from "../services/marketService";
 import {
   TrendingUp,
   TrendingDown,
@@ -18,8 +19,11 @@ import {
 } from "lucide-react";
 
 export const BolsaSection: React.FC = () => {
-  const [marketData, setMarketData] = useState<B3MarketRankings | null>(null);
-  const [loading, setLoading] = useState(true);
+  // Inicialização instantânea com dados oficiais compilados para evitar qualquer tela em branco
+  const [marketData, setMarketData] = useState<B3MarketRankings>(() =>
+    normalizeMarketRankings(OFFICIAL_B3_MARKET_DATA)
+  );
+  const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<"mostTraded" | "gainers" | "decliners">(
     "mostTraded"
   );
@@ -28,9 +32,8 @@ export const BolsaSection: React.FC = () => {
   useEffect(() => {
     let isMounted = true;
     fetchMarketRankings().then((data) => {
-      if (isMounted) {
+      if (isMounted && data) {
         setMarketData(data);
-        setLoading(false);
       }
     });
     return () => {

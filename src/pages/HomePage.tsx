@@ -7,6 +7,7 @@ import { BrazilMap } from "../components/BrazilMap";
 import { RegionalCharts } from "../components/RegionalCharts";
 import { NewsSection } from "../components/NewsSection";
 import { EconomySection } from "../components/EconomySection";
+import { BolsaSection } from "../components/BolsaSection";
 import { StateTable } from "../components/StateTable";
 import { AdBanner } from "../components/AdBanner";
 import { PortalLink } from "../components/PortalLink";
@@ -116,9 +117,12 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* 5. Gráficos Comparativos Regionais e Estados Decisivos */}
       <RegionalCharts dataset={dataset} />
 
-      {/* 6. Seção de Economia: Indicadores Oficiais IBGE e Banco Central */}
+      {/* 6. Seção de Economia: Indicadores Oficiais IBGE e Banco Central + Bolsa de Valores (B3) */}
       <div id="indicadores-economia">
         <EconomySection />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 mb-12">
+          <BolsaSection />
+        </div>
       </div>
 
       {/* 7. Espaço Publicitário In-Feed */}

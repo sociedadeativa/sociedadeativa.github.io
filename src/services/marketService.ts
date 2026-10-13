@@ -105,26 +105,49 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
 }
 
 /**
- * Carrega rankings de mercado com fallback resiliente.
+ * Carrega rankings de mercado com fallback resiliente e verificação de JSON válido.
  */
 export async function fetchMarketRankings(): Promise<B3MarketRankings> {
-  try {
-    const base = import.meta.env.BASE_URL || "/";
-    const cleanBase = base.endsWith("/") ? base : `${base}/`;
-    const targetUrl = `${cleanBase}data/marketData.json`;
+  const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
+  const candidateUrls = [
+    ...(origin ? [`${origin}/data/marketData.json`] : []),
+    "/data/marketData.json",
+    "../data/marketData.json",
+    "./data/marketData.json",
+    "data/marketData.json",
+    "https://sociedadeativa.github.io/data/marketData.json",
+  ];
 
-    const res = await fetch(targetUrl, {
-      headers: { Accept: "application/json" },
-      cache: "default",
-    });
+  for (const url of candidateUrls) {
+    try {
+      const res = await fetch(url, {
+        headers: { Accept: "application/json" },
+        cache: "default",
+      });
 
-    if (res.ok) {
-      const json = await res.json();
-      return normalizeMarketRankings(json);
+      if (res.ok) {
+        const contentType = res.headers.get("content-type") || "";
+        if (contentType.includes("application/json") || contentType.includes("text/json")) {
+          const json = await res.json();
+          if (json && typeof json === "object" && json.ibov) {
+            return normalizeMarketRankings(json);
+          }
+        } else {
+          // Trata caso de resposta com Content-Type omitido mas corpo JSON válido
+          const text = await res.text();
+          if (text.trim().startsWith("{")) {
+            const json = JSON.parse(text);
+            if (json && typeof json === "object" && json.ibov) {
+              return normalizeMarketRankings(json);
+            }
+          }
+        }
+      }
+    } catch {
+      // Continua para o próximo caminho na lista de tentativas
     }
-  } catch {
-    // Fallback silencioso para o catálogo compilado
   }
 
+  // Fallback imediato, auditado e consistente para a base oficial compilada
   return normalizeMarketRankings(OFFICIAL_B3_MARKET_DATA);
 }

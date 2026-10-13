@@ -165,34 +165,47 @@ export function normalizeEconomicIndicator(raw: any): EconomicIndicator {
  * Carrega a lista de indicadores econômicos com fallback resiliente.
  */
 export async function fetchEconomicIndicators(): Promise<EconomicIndicator[]> {
-  try {
-    const base = import.meta.env.BASE_URL || "/";
-    const cleanBase = base.endsWith("/") ? base : `${base}/`;
-    const targetUrl = `${cleanBase}data/economyData.json`;
-    const fallbackTargetUrl = `${cleanBase}data/economicData.json`;
+  const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
+  const candidateUrls = [
+    ...(origin ? [`${origin}/data/economyData.json`, `${origin}/data/economicData.json`] : []),
+    "/data/economyData.json",
+    "../data/economyData.json",
+    "./data/economyData.json",
+    "data/economyData.json",
+    "/data/economicData.json",
+    "../data/economicData.json",
+    "./data/economicData.json",
+    "data/economicData.json",
+    "https://sociedadeativa.github.io/data/economyData.json",
+  ];
 
-    let res = await fetch(targetUrl, {
-      headers: { Accept: "application/json" },
-      cache: "default",
-    });
-
-    if (!res.ok) {
-      res = await fetch(fallbackTargetUrl, {
+  for (const url of candidateUrls) {
+    try {
+      const res = await fetch(url, {
         headers: { Accept: "application/json" },
         cache: "default",
       });
-    }
 
-    if (!res.ok) {
-      throw new Error(`Falha HTTP ao carregar indicadores: status ${res.status}`);
+      if (res.ok) {
+        const contentType = res.headers.get("content-type") || "";
+        if (contentType.includes("application/json") || contentType.includes("text/json")) {
+          const json = await res.json();
+          if (Array.isArray(json) && json.length > 0) {
+            return json.map(normalizeEconomicIndicator);
+          }
+        } else {
+          const text = await res.text();
+          if (text.trim().startsWith("[")) {
+            const json = JSON.parse(text);
+            if (Array.isArray(json) && json.length > 0) {
+              return json.map(normalizeEconomicIndicator);
+            }
+          }
+        }
+      }
+    } catch {
+      // Tenta próximo caminho
     }
-
-    const json = await res.json();
-    if (Array.isArray(json) && json.length > 0) {
-      return json.map(normalizeEconomicIndicator);
-    }
-  } catch {
-    // Fallback silencioso e seguro para o catálogo compilado
   }
 
   return OFFICIAL_ECONOMIC_INDICATORS.map(normalizeEconomicIndicator);

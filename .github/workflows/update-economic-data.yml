@@ -46,14 +46,18 @@ jobs:
             echo "ERRO CRÍTICO: public/data/economicData.json está ausente ou vazio!"
             exit 1
           fi
-          echo "Validação dos arquivos JSON de economia concluída com sucesso."
+          if [ ! -s "public/data/marketData.json" ]; then
+            echo "ERRO CRÍTICO: public/data/marketData.json está ausente ou vazio!"
+            exit 1
+          fi
+          echo "Validação dos arquivos JSON de economia e mercado concluída com sucesso."
 
       - name: Commit and Push if Changes Exist
         run: |
           git config user.name "Sociedade Ativa DataBot"
           git config user.email "bot@sociedadeativa.org"
 
-          git add public/data/economyData.json public/data/economicData.json
+          git add public/data/economyData.json public/data/economicData.json public/data/marketData.json
 
           if git diff --staged --quiet; then
             echo "Nenhuma alteração nos indicadores econômicos oficiais. Nenhuma ação necessária."

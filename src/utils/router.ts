@@ -28,7 +28,7 @@ export const ROUTE_CONFIGS: Record<PortalRoute, RouteConfig> = {
     label: "Início",
     title: "Sociedade Ativa — Política, Eleições, Notícias e Dados do Brasil",
     description:
-      "Portal independente de informações públicas, política, eleições, notícias e jornalismo de dados no Brasil. Acompanhe apuração oficial, mapas interativos e indicadores econômicos.",
+      "Portal de dados públicos, política, eleições e notícias do Brasil. Acompanhe a apuração das Eleições 2026, mapas por estado e indicadores econômicos oficiais.",
     accentColor: "blue",
     badgeBg: "bg-slate-100",
     badgeText: "text-slate-800",
@@ -40,7 +40,7 @@ export const ROUTE_CONFIGS: Record<PortalRoute, RouteConfig> = {
     label: "Política",
     title: "Política — Sociedade Ativa | Poderes, Congresso e Atos Oficiais",
     description:
-      "Cobertura institucional e jornalismo de dados sobre os Três Poderes, decisões do Executivo, tramitação no Congresso Nacional e jurisprudência do STF.",
+      "Cobertura de política nacional, atos dos Três Poderes, decisões do Executivo e tramitação legislativa no Congresso Nacional no Sociedade Ativa.",
     categoryTag: "Política",
     accentColor: "red",
     badgeBg: "bg-red-50",
@@ -53,7 +53,7 @@ export const ROUTE_CONFIGS: Record<PortalRoute, RouteConfig> = {
     label: "Eleições",
     title: "Eleições 2026 — Sociedade Ativa | Apuração Oficial e 2º Turno",
     description:
-      "Apuração oficial e totalização do 1º Turno das Eleições Presidenciais 2026 pelo TSE. Mapas eleitorais por estado, comparativo de candidatos e regras do 2º turno.",
+      "Apuração oficial do 1º Turno das Eleições 2026 pelo TSE. Mapas eleitorais por estado, comparativo de candidatos e regras do segundo turno presidencial.",
     categoryTag: "Eleições",
     accentColor: "blue",
     badgeBg: "bg-blue-50",
@@ -64,9 +64,9 @@ export const ROUTE_CONFIGS: Record<PortalRoute, RouteConfig> = {
     route: "economia",
     path: "/economia/",
     label: "Economia",
-    title: "Economia — Sociedade Ativa | Indicadores Oficiais IBGE e Banco Central",
+    title: "Economia — Sociedade Ativa | Indicadores Oficiais e Bolsa B3",
     description:
-      "Indicadores macroeconômicos do Brasil com fontes oficiais do IBGE e Banco Central (BCB): inflação (IPCA), taxa Selic, câmbio PTAX, PIB e desemprego PNAD Contínua.",
+      "Indicadores econômicos oficiais do Brasil: inflação IPCA, Selic, Dólar PTAX, PIB e cotações da Bolsa B3 (Ibovespa) com dados do IBGE e Banco Central.",
     categoryTag: "Economia",
     accentColor: "emerald",
     badgeBg: "bg-emerald-50",
@@ -77,9 +77,9 @@ export const ROUTE_CONFIGS: Record<PortalRoute, RouteConfig> = {
     route: "estados",
     path: "/estados/",
     label: "Estados",
-    title: "Estados do Brasil — Sociedade Ativa | Mapa Eleitoral e Dados por UF",
+    title: "Estados do Brasil — Sociedade Ativa | Mapa e Dados por UF",
     description:
-      "Radiografia eleitoral e dados públicos dos 26 estados e Distrito Federal. Mapa interativo, comparecimento eleitoral, abstenções e placar por unidade da federação.",
+      "Dados públicos e mapa eleitoral dos 26 estados e DF: votação nominal por candidato, comparecimento das urnas e histórico dos colégios eleitorais.",
     categoryTag: "Estados",
     accentColor: "amber",
     badgeBg: "bg-amber-50",
@@ -90,9 +90,9 @@ export const ROUTE_CONFIGS: Record<PortalRoute, RouteConfig> = {
     route: "dados-publicos",
     path: "/dados-publicos/",
     label: "Dados Públicos",
-    title: "Dados Públicos — Sociedade Ativa | Estatísticas, Gráficos e Transparência",
+    title: "Dados Públicos — Sociedade Ativa | Estatísticas e Transparência",
     description:
-      "Transparência governamental, microdados eleitorais do TSE, séries históricas do IBGE e auditoria pública de dados abertos brasileiros.",
+      "Transparência e dados abertos do Brasil: microdados do TSE, séries do IBGE e Banco Central com metodologia aberta e auditoria pública de estatísticas.",
     categoryTag: "Dados Públicos",
     accentColor: "purple",
     badgeBg: "bg-purple-50",
@@ -103,9 +103,9 @@ export const ROUTE_CONFIGS: Record<PortalRoute, RouteConfig> = {
     route: "noticias",
     path: "/noticias/",
     label: "Notícias",
-    title: "Notícias — Sociedade Ativa | Cobertura Editorial e Fontes Oficiais",
+    title: "Notícias — Sociedade Ativa | Política, Eleições e Economia",
     description:
-      "Últimas notícias e apurações sobre o Brasil com apuração direta de agências públicas de comunicação (Agência Brasil, Agência Câmara, Agência Senado, TSE e STF).",
+      "Acompanhe as últimas notícias e despachos sobre política, eleições, economia, atos do Executivo, Congresso Nacional, STF e dados do Brasil.",
     categoryTag: "Notícias",
     accentColor: "slate",
     badgeBg: "bg-slate-100",
@@ -116,9 +116,9 @@ export const ROUTE_CONFIGS: Record<PortalRoute, RouteConfig> = {
     route: "sobre",
     path: "/sobre/",
     label: "Sobre & Metodologia",
-    title: "Sobre & Metodologia — Sociedade Ativa | Transparência e Fontes Oficiais",
+    title: "Sobre e Metodologia — Sociedade Ativa | Fontes Oficiais",
     description:
-      "Conheça a missão do Sociedade Ativa, metodologia de totalização eleitoral (Art. 77 da CF/88), fontes de dados abertos do Estado brasileiro e governança editorial.",
+      "Conheça a missão do Sociedade Ativa, a metodologia de totalização eleitoral (Art. 77 da CF), o catálogo de dados abertos e os princípios de neutralidade.",
     accentColor: "slate",
     badgeBg: "bg-slate-100",
     badgeText: "text-slate-800",
@@ -179,6 +179,12 @@ export function navigateTo(route: PortalRoute, hash?: string) {
 
     // Atualiza título do documento dinamicamente no cliente
     document.title = config.title;
+
+    // Atualiza meta description dinamicamente no cliente
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && config.description) {
+      metaDesc.setAttribute("content", config.description);
+    }
 
     // Rola para o topo caso não haja hash específico
     if (!hash) {

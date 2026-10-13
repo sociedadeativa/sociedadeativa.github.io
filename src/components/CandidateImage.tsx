@@ -26,16 +26,26 @@ function resolvePhotoPath(rawSrc?: string): string[] {
 
   const clean = rawSrc.replace(/^\.?\//, ""); // remove leading ./ ou /
   const base = (import.meta.env.BASE_URL || "").replace(/\/$/, "");
+  const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
 
   // Gera lista ordenada de tentativas para máxima resiliência
   const list: string[] = [];
-  // Caminho absoluto raiz: funciona no dev server e no domínio https://sociedadeativa.github.io/
+  if (origin) {
+    list.push(`${origin}/${clean}`);
+  }
+  // 1. Caminho absoluto raiz (funciona na raiz e no dev server)
   list.push(`/${clean}`);
+  // 2. Caminho relativo com ../ para subdiretórios (/eleicoes/, /economia/, etc.)
+  list.push(`../${clean}`);
+  // 3. Caminho com BASE_URL se configurado
   if (base && base !== "." && base !== "./") {
     list.push(`${base}/${clean}`);
   }
+  // 4. Caminho relativo local
   list.push(`./${clean}`);
   list.push(clean);
+  // 5. Fallback canônico oficial para produção GitHub Pages
+  list.push(`https://sociedadeativa.github.io/${clean}`);
 
   // Remove duplicatas mantendo ordem
   return Array.from(new Set(list));
@@ -146,15 +156,18 @@ export const CandidateImage: React.FC<CandidateImageProps> = ({
 
       {/* Retrato autêntico do candidato (sem qualquer sobreposição de número sobre o rosto) */}
       <img
+        ref={(el) => {
+          if (el && el.complete && el.naturalWidth > 0 && !isLoaded) {
+            setIsLoaded(true);
+          }
+        }}
         src={activeSrc}
         alt={alt}
-        loading="lazy"
         decoding="async"
-        referrerPolicy="no-referrer"
         onLoad={() => setIsLoaded(true)}
         onError={handleImageError}
         className={`w-full h-full object-cover object-top transition-opacity duration-200 ${
-          isLoaded ? "opacity-100" : "opacity-0"
+          isLoaded ? "opacity-100" : "opacity-90"
         }`}
       />
 

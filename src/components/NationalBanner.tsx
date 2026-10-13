@@ -140,8 +140,20 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
             {/* Linha Flávio Bolsonaro */}
             <div>
               <div className="flex items-center justify-between text-xs sm:text-sm mb-1.5">
-                <div className="flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-md bg-blue-700 text-white text-[11px] font-black flex items-center justify-center font-mono">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-10 shrink-0 rounded-lg overflow-hidden border border-slate-200 shadow-2xs">
+                    <CandidateImage
+                      src={flavio?.photoUrl || "/assets/candidates/flavio.jpg"}
+                      alt="Retrato oficial de Flávio Bolsonaro"
+                      candidateName="Flávio Bolsonaro"
+                      ballotNumber={22}
+                      partyColor="#1D4ED8"
+                      aspectRatio="portrait"
+                      size="sm"
+                      className="rounded-lg"
+                    />
+                  </div>
+                  <span className="w-5 h-5 rounded-md bg-blue-700 text-white text-[11px] font-black flex items-center justify-center font-mono shrink-0">
                     22
                   </span>
                   <span className="font-bold text-slate-900">
@@ -171,8 +183,20 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
             {/* Linha Lula */}
             <div>
               <div className="flex items-center justify-between text-xs sm:text-sm mb-1.5">
-                <div className="flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-md bg-red-600 text-white text-[11px] font-black flex items-center justify-center font-mono">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-10 shrink-0 rounded-lg overflow-hidden border border-slate-200 shadow-2xs">
+                    <CandidateImage
+                      src={lula?.photoUrl || "/assets/candidates/lula.jpg"}
+                      alt="Retrato oficial de Lula"
+                      candidateName="Lula"
+                      ballotNumber={13}
+                      partyColor="#DC2626"
+                      aspectRatio="portrait"
+                      size="sm"
+                      className="rounded-lg"
+                    />
+                  </div>
+                  <span className="w-5 h-5 rounded-md bg-red-600 text-white text-[11px] font-black flex items-center justify-center font-mono shrink-0">
                     13
                   </span>
                   <span className="font-bold text-slate-900">
@@ -279,29 +303,45 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
             }`}
           >
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-blue-700" />
-            <div className="flex items-center justify-between mb-1">
-              <span className="text-xs font-bold uppercase tracking-wider text-blue-900 block">
-                Flávio Bolsonaro (PL)
-              </span>
-              <span className="text-[10px] font-bold font-mono text-white bg-blue-700 px-1.5 py-0.5 rounded">
-                nº 22
-              </span>
-            </div>
-            <div className="flex items-baseline justify-between">
-              <span className="font-mono text-3xl font-black text-blue-950 block tracking-tight">
-                {formatPercentBR(flavioTotal?.percentage || 47.03)}
-              </span>
-              <span className="font-mono text-xs font-bold text-slate-600">
-                {formatVotesBR(flavioTotal?.votes || 56104268)} votos
-              </span>
+            <div className="flex items-start gap-3.5 mb-2">
+              <div className="w-14 h-16 shrink-0 rounded-xl overflow-hidden shadow-2xs border border-slate-200/80">
+                <CandidateImage
+                  src={flavio?.photoUrl || "/assets/candidates/flavio.jpg"}
+                  alt="Fotografia oficial de Flávio Bolsonaro"
+                  candidateName="Flávio Bolsonaro"
+                  ballotNumber={22}
+                  partyColor="#1D4ED8"
+                  aspectRatio="portrait"
+                  size="sm"
+                  className="rounded-xl"
+                />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center justify-between gap-1 mb-1">
+                  <span className="text-xs font-bold uppercase tracking-wider text-blue-900 block truncate">
+                    Flávio Bolsonaro (PL)
+                  </span>
+                  <span className="text-[10px] font-bold font-mono text-white bg-blue-700 px-1.5 py-0.5 rounded shrink-0">
+                    nº 22
+                  </span>
+                </div>
+                <div className="flex items-baseline justify-between">
+                  <span className="font-mono text-2xl sm:text-3xl font-black text-blue-950 block tracking-tight">
+                    {formatPercentBR(flavioTotal?.percentage || 47.03)}
+                  </span>
+                  <span className="font-mono text-xs font-bold text-slate-600">
+                    {formatVotesBR(flavioTotal?.votes || 56104268)} votos
+                  </span>
+                </div>
+              </div>
             </div>
             <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
               <span className="flex items-center gap-1 font-bold text-blue-900">
-                <Award className="w-3.5 h-3.5 text-blue-700" />
-                Venceu em 15 unidades da Federação (14 estados + DF)
+                <Award className="w-3.5 h-3.5 text-blue-700 shrink-0" />
+                <span className="truncate">Venceu em 15 UFs (14 estados + DF)</span>
               </span>
-              <span className="text-[11px] text-blue-700 font-semibold group-hover:underline">
-                {selectedCandidateFilter === "flavio" ? "Limpar" : "Filtrar mapa →"}
+              <span className="text-[11px] text-blue-700 font-semibold group-hover:underline shrink-0 ml-1">
+                {selectedCandidateFilter === "flavio" ? "Limpar" : "Filtrar →"}
               </span>
             </div>
           </div>
@@ -320,29 +360,45 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
             }`}
           >
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-red-600" />
-            <div className="flex items-center justify-between mb-1">
-              <span className="text-xs font-bold uppercase tracking-wider text-red-900 block">
-                Lula (PT)
-              </span>
-              <span className="text-[10px] font-bold font-mono text-white bg-red-600 px-1.5 py-0.5 rounded">
-                nº 13
-              </span>
-            </div>
-            <div className="flex items-baseline justify-between">
-              <span className="font-mono text-3xl font-black text-red-950 block tracking-tight">
-                {formatPercentBR(lulaTotal?.percentage || 45.16)}
-              </span>
-              <span className="font-mono text-xs font-bold text-slate-600">
-                {formatVotesBR(lulaTotal?.votes || 53876617)} votos
-              </span>
+            <div className="flex items-start gap-3.5 mb-2">
+              <div className="w-14 h-16 shrink-0 rounded-xl overflow-hidden shadow-2xs border border-slate-200/80">
+                <CandidateImage
+                  src={lula?.photoUrl || "/assets/candidates/lula.jpg"}
+                  alt="Fotografia oficial de Lula"
+                  candidateName="Lula"
+                  ballotNumber={13}
+                  partyColor="#DC2626"
+                  aspectRatio="portrait"
+                  size="sm"
+                  className="rounded-xl"
+                />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center justify-between gap-1 mb-1">
+                  <span className="text-xs font-bold uppercase tracking-wider text-red-900 block truncate">
+                    Lula (PT)
+                  </span>
+                  <span className="text-[10px] font-bold font-mono text-white bg-red-600 px-1.5 py-0.5 rounded shrink-0">
+                    nº 13
+                  </span>
+                </div>
+                <div className="flex items-baseline justify-between">
+                  <span className="font-mono text-2xl sm:text-3xl font-black text-red-950 block tracking-tight">
+                    {formatPercentBR(lulaTotal?.percentage || 45.16)}
+                  </span>
+                  <span className="font-mono text-xs font-bold text-slate-600">
+                    {formatVotesBR(lulaTotal?.votes || 53876617)} votos
+                  </span>
+                </div>
+              </div>
             </div>
             <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
               <span className="flex items-center gap-1 font-bold text-red-900">
-                <Award className="w-3.5 h-3.5 text-red-700" />
-                Venceu em {lulaTotal?.statesWon || 12} estados
+                <Award className="w-3.5 h-3.5 text-red-700 shrink-0" />
+                <span className="truncate">Venceu em {lulaTotal?.statesWon || 12} estados</span>
               </span>
-              <span className="text-[11px] text-red-700 font-semibold group-hover:underline">
-                {selectedCandidateFilter === "lula" ? "Limpar" : "Filtrar mapa →"}
+              <span className="text-[11px] text-red-700 font-semibold group-hover:underline shrink-0 ml-1">
+                {selectedCandidateFilter === "lula" ? "Limpar" : "Filtrar →"}
               </span>
             </div>
           </div>
