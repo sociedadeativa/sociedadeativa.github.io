@@ -108,6 +108,22 @@ if (!fs.existsSync('dist/robots.txt')) {
 }
 
 const sitemapContent = fs.readFileSync('dist/sitemap.xml', 'utf8');
+
+if (!sitemapContent.startsWith('<?xml version="1.0" encoding="UTF-8"?>')) {
+  console.error('ERROR: dist/sitemap.xml deve iniciar com a declaração UTF-8 padrão!');
+  process.exit(1);
+}
+
+if (!sitemapContent.includes('xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"')) {
+  console.error('ERROR: dist/sitemap.xml deve utilizar o namespace oficial do sitemap.org!');
+  process.exit(1);
+}
+
+if (sitemapContent.includes('<changefreq>') || sitemapContent.includes('<priority>')) {
+  console.error('ERROR: dist/sitemap.xml não deve conter <changefreq> ou <priority>!');
+  process.exit(1);
+}
+
 const canonicalPages = [
   'https://sociedadeativa.github.io/',
   'https://sociedadeativa.github.io/politica/',
@@ -122,6 +138,29 @@ const canonicalPages = [
 for (const pageUrl of canonicalPages) {
   if (!sitemapContent.includes(`<loc>${pageUrl}</loc>`)) {
     console.error(`ERROR: sitemap.xml ausente da URL canônica: ${pageUrl}`);
+    process.exit(1);
+  }
+}
+
+// Verifica que todas as tags <url> possuem apenas <loc> e <lastmod>
+const urlBlocks = sitemapContent.match(/<url>[\s\S]*?<\/url>/g) || [];
+if (urlBlocks.length !== canonicalPages.length) {
+  console.error(`ERROR: sitemap.xml possui ${urlBlocks.length} URLs, esperado ${canonicalPages.length}!`);
+  process.exit(1);
+}
+
+for (const block of urlBlocks) {
+  if (!block.includes('<loc>') || !block.includes('</loc>')) {
+    console.error('ERROR: Bloco <url> sem tag <loc> válida!');
+    process.exit(1);
+  }
+  if (!block.includes('<lastmod>') || !block.includes('</lastmod>')) {
+    console.error('ERROR: Bloco <url> sem tag <lastmod> válida!');
+    process.exit(1);
+  }
+  const dateMatch = block.match(/<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/);
+  if (!dateMatch) {
+    console.error('ERROR: <lastmod> não está no formato YYYY-MM-DD!');
     process.exit(1);
   }
 }
