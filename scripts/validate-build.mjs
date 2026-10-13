@@ -97,7 +97,14 @@ for (const sub of subdirs) {
   }
 }
 
-// Verifica integridade do sitemap e robots.txt
+// Verifica integridade do .nojekyll, sitemap e robots.txt
+if (!fs.existsSync('dist/.nojekyll')) {
+  if (fs.existsSync('.nojekyll')) {
+    fs.copyFileSync('.nojekyll', 'dist/.nojekyll');
+  } else {
+    fs.writeFileSync('dist/.nojekyll', '');
+  }
+}
 if (!fs.existsSync('dist/sitemap.xml')) {
   console.error('ERROR: dist/sitemap.xml does not exist!');
   process.exit(1);
