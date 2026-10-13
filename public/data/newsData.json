@@ -1,5 +1,41 @@
 [
   {
+    "id": "ebc-1705195",
+    "title": "Cantor de axé Netinho morre em Salvador aos 60 anos",
+    "summary": "O cantor de axé Netinho morreu, aos 60 anos, nesta terça-feira (13), no Hospital Aliança Star, em Salvador, Bahia. A notícia foi confirmada pela assessoria do artista. Um dos maiores destaques do axé music, com sucessos como Milla , Fim de Semana , Menina e Beijo na Boca...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/cantor-de-axe-netinho-morre-em-salvador-aos-60-anos",
+    "publishedAt": "13/10/2026 às 13:02",
+    "category": "Política",
+    "author": "Cristina Índio do Brasil – Repórter da Agência Brasil",
+    "tags": [
+      "Geral",
+      "Bahia",
+      "axé music",
+      "Netinho",
+      "obituário"
+    ]
+  },
+  {
+    "id": "ebc-1705192",
+    "title": "Governo anuncia perdão de dívidas e pacote de estímulo para MEIs",
+    "summary": "O governo federal anunciou nesta terça-feira (13) um pacote de cinco medidas voltadas aos microempreendedores individuais (MEIs), com foco na redução do endividamento, ampliação do acesso a recursos para investimento, aumento do teto de faturamento e simplificação de regras...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-anuncia-perdao-de-dividas-e-pacote-de-estimulo-para-meis",
+    "publishedAt": "13/10/2026 às 12:46",
+    "category": "Economia",
+    "author": "Pedro Peduzzi - Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "Lula",
+      "MEI",
+      "endividamento",
+      "governo"
+    ]
+  },
+  {
     "id": "ebc-1705185",
     "title": "Nunes Marques volta a suspender Exército do Lula por falta de registro",
     "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kássio Nunes Marques, derrubou nesta terça-feira (13) a decisão do ministro Ricardo Villas Bôas Cueva, corregedor-nacional da Justiça Eleitoral, que havia recolocado no ar o canal Exército do Lula, no aplicativo de...",
@@ -200,14 +236,13 @@
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/fim-da-escala-6x1-confira-proximos-passos-da-tramitacao-no-senado",
     "publishedAt": "13/10/2026 às 10:13",
-    "category": "Justiça",
+    "category": "Política",
     "author": "Pedro Peduzzi – Repórter da Agência Brasil",
     "tags": [
       "Política",
       "fim da escala 6x1",
       "Senado",
-      "PEC 2212019",
-      "Justiça"
+      "PEC 2212019"
     ]
   },
   {
@@ -818,38 +853,6 @@
     "sourceUrl": "https://www.camara.leg.br",
     "articleUrl": "https://www.camara.leg.br/noticias/1310054-projeto-cria-classificacao-etaria-detalhada-para-desenhos-animados",
     "publishedAt": "09/10/2026 às 10:45",
-    "category": "Congresso",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "camara-1310254-propaganda-eleitoral-gratuita-",
-    "title": "Propaganda eleitoral gratuita no rádio e na TV recomeça nesta sexta-feira",
-    "summary": "As campanhas de segundo turno para presidente da República e governador já estão nas ruas e nas redes sociais desde segunda-feira (5)",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310254-propaganda-eleitoral-gratuita-no-radio-e-na-tv-recomeca-nesta-sexta-feira",
-    "publishedAt": "09/10/2026 às 09:53",
-    "category": "Congresso",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "camara-1305309-projeto-inclui-a-motivacao-pol",
-    "title": "Projeto inclui a motivação política como causa de aumento de pena",
-    "summary": "A Câmara dos Deputados analisa a proposta",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1305309-projeto-inclui-a-motivacao-politica-como-causa-de-aumento-de-pena",
-    "publishedAt": "09/10/2026 às 09:46",
     "category": "Congresso",
     "author": "Agência Câmara de Notícias",
     "tags": [
