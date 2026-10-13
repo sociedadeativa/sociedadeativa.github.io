@@ -1,5 +1,41 @@
 [
   {
+    "id": "ebc-1705113",
+    "title": "Mega-Sena sorteia prêmio acumulado de R$ 150 milhões nesta quarta",
+    "summary": "A Mega-Sena sorteia nesta quarta-feira (14) prêmio estimado em R$ 150 milhões . As seis dezenas do concurso 3.070 serão sorteadas a partir das 21h (horário de Brasília) no Espaço da Sorte, em São Paulo. As apostas podem ser feitas até às 20h (horário de Brasília) de quarta em...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/mega-sena-sorteia-premio-acumulado-de-r-150-milhoes-nesta-quarta",
+    "publishedAt": "13/10/2026 às 07:02",
+    "category": "Política",
+    "author": "Agência Brasil",
+    "tags": [
+      "Geral",
+      "Mega-Sena",
+      "Loterias",
+      "Caixa",
+      "Política"
+    ]
+  },
+  {
+    "id": "ebc-1705146",
+    "title": "Copa do Brasil: Bragantino abre vantagem sobre Ferroviária nas quartas",
+    "summary": "O Red Bull Bragantino conquistou uma vitória importante fora de casa pela Copa do Brasil Feminina. Na noite desta segunda-feira (12), o Massa Bruta venceu a Ferroviária por 2 a 0 na Arena da Fonte Luminosa, em Araraquara (SP), no jogo de ida do confronto que abriu as quartas...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/copa-do-brasil-bragantino-abre-vantagem-sobre-ferroviaria-nas-quartas",
+    "publishedAt": "12/10/2026 às 20:36",
+    "category": "Política",
+    "author": "Lincoln Chaves - Repórter da EBC",
+    "tags": [
+      "Esportes",
+      "Copa do Brasil Feminina",
+      "Red Bull Bragantino",
+      "Duda Rodrigues",
+      "Bragantnas"
+    ]
+  },
+  {
     "id": "ebc-1705140",
     "title": "Milhares ocupam Copacabana em ato pela democracia e em apoio a Lula",
     "summary": "Milhares de apoiadores lotaram as duas faixas da orla de Copacabana, na zona sul do Rio de Janeiro, em apoio à democracia e à reeleição do presidente Luiz Inácio Lula da Silva (PT) , na tarde desta segunda-feira (12), feriado de Nossa Senhora Aparecida . A professora...",
@@ -138,7 +174,7 @@
     "tags": [
       "Justiça",
       "eleições 2026",
-      "eleições",
+      "Eleições",
       "Lula",
       "TSE"
     ]
@@ -159,24 +195,6 @@
       "Geraldo Alckmin",
       "TSE",
       "Eleições"
-    ]
-  },
-  {
-    "id": "ebc-1705126",
-    "title": "Aviões militares iniciam combate a focos de incêndio no Amazonas",
-    "summary": "Duas aeronaves militares avançadas KC-390 Millennium, da Força Aérea Brasileira (FAB), reforçaram nesta segunda-feira (12) as ações de combate aos incêndios florestais no estado do Amazonas . O KC-390 Millennium é o mais avançado avião militar projetado na América Latina...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/avioes-militares-iniciam-combate-focos-de-incendio-no-amazonas",
-    "publishedAt": "12/10/2026 às 16:04",
-    "category": "Política",
-    "author": "Fabíola Sinimbú - repórter da Agência Brasil",
-    "tags": [
-      "Meio Ambiente",
-      "Amazonas",
-      "Manaus",
-      "incêndios florestais",
-      "queimadas"
     ]
   },
   {
@@ -847,23 +865,6 @@
       "Economia",
       "Estatísticas",
       "Inflação"
-    ]
-  },
-  {
-    "id": "ibge-48251",
-    "title": "Índice Nacional da Construção Civil apresenta variação de 0,30% em setembro",
-    "summary": "O Índice Nacional da Construção Civil (Sinapi) apresentou variação de 0,30% em setembro, percentagem que representou a segunda menor no ano. A taxa ficou 0,14 ponto percentual abaixo daquela apresentada em agosto (0,44%). O acumulado dos últimos doze...",
-    "source": "IBGE",
-    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
-    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/48251-indice-nacional-da-construcao-civil-apresenta-variacao-de-0-30-em-setembro.html",
-    "publishedAt": "09/10/2026 às 09:00",
-    "category": "Economia",
-    "author": "Agência IBGE Notícias",
-    "tags": [
-      "economicas",
-      "Release",
-      "Economia",
-      "Estatísticas"
     ]
   },
   {
