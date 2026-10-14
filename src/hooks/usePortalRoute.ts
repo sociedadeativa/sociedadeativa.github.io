@@ -7,6 +7,7 @@ import {
   navigateTo,
   navigateToArticle,
 } from "../utils/router";
+import { trackPageView } from "../utils/analytics";
 
 export function usePortalRoute() {
   const [currentRoute, setCurrentRoute] = useState<PortalRoute>(() => {
@@ -44,6 +45,16 @@ export function usePortalRoute() {
       window.removeEventListener("popstate", syncRoute);
     };
   }, [syncRoute]);
+
+  // Rastreia visualizações de página subsequentes em mudanças de rota no cliente
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (typeof window !== "undefined") {
+        trackPageView(window.location.pathname + window.location.search, document.title);
+      }
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [currentRoute, articleId]);
 
   const goTo = useCallback((route: PortalRoute, hash?: string) => {
     navigateTo(route, hash);

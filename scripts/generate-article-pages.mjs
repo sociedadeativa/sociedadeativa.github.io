@@ -225,6 +225,12 @@ function main() {
       .replace(/\.\.\/assets\//g, '../../assets/')
       .replace(/\.\.\/favicon\.svg/g, '../../favicon.svg');
 
+    // Garante a presença da Google tag oficial (GA4: G-FVHPGPZTSL) sem duplicação
+    if (!pageHtml.includes('G-FVHPGPZTSL')) {
+      const gaTagSnippet = `    <!-- Google tag (gtag.js) -->\n    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVHPGPZTSL"></script>\n    <script>\n      window.dataLayer = window.dataLayer || [];\n      function gtag(){dataLayer.push(arguments);}\n      gtag('js', new Date());\n\n      gtag('config', 'G-FVHPGPZTSL');\n    </script>`;
+      pageHtml = pageHtml.replace(/<head>/i, `<head>\n${gaTagSnippet}`);
+    }
+
     // Substitui <title>
     pageHtml = pageHtml.replace(
       /<title>[\s\S]*?<\/title>/i,

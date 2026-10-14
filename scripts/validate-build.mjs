@@ -262,6 +262,17 @@ for (const filePath of requiredHtmlFiles) {
       process.exit(1);
     }
   }
+
+  // 4. Verificação da Google Tag (GA4: G-FVHPGPZTSL) e prevenção de duplicações
+  if (!html.includes('https://www.googletagmanager.com/gtag/js?id=G-FVHPGPZTSL') || !html.includes("gtag('config', 'G-FVHPGPZTSL')")) {
+    console.error(`ERROR: ${filePath} ausente da Google tag oficial (G-FVHPGPZTSL)!`);
+    process.exit(1);
+  }
+  const gaTagMatches = html.match(/googletagmanager\.com\/gtag\/js\?id=G-FVHPGPZTSL/g) || [];
+  if (gaTagMatches.length !== 1) {
+    console.error(`ERROR: ${filePath} possui Google tag GA4 duplicada (${gaTagMatches.length} ocorrências)!`);
+    process.exit(1);
+  }
 }
 
 // Validação e auditoria estrita de prontidão de produção para todas as páginas de notícias
@@ -367,8 +378,19 @@ if (fs.existsSync('dist/noticias')) {
         }
       }
     }
+
+    // Validação de presença da Google tag oficial (GA4: G-FVHPGPZTSL) e prevenção de duplicações
+    if (!html.includes('https://www.googletagmanager.com/gtag/js?id=G-FVHPGPZTSL') || !html.includes("gtag('config', 'G-FVHPGPZTSL')")) {
+      console.error(`ERROR: ${articleHtmlPath} ausente da Google tag oficial (G-FVHPGPZTSL)!`);
+      process.exit(1);
+    }
+    const articleGaMatches = html.match(/googletagmanager\.com\/gtag\/js\?id=G-FVHPGPZTSL/g) || [];
+    if (articleGaMatches.length !== 1) {
+      console.error(`ERROR: ${articleHtmlPath} possui Google tag GA4 duplicada (${articleGaMatches.length} ocorrências)!`);
+      process.exit(1);
+    }
   }
-  console.log(`Auditoria estrita de páginas de notícias: Todas as ${newsData.length} páginas individuais validadas com sucesso (conteúdo, metadados, JSON-LD e assets).`);
+  console.log(`Auditoria estrita de páginas de notícias: Todas as ${newsData.length} páginas individuais validadas com sucesso (conteúdo, metadados, GA4 G-FVHPGPZTSL, JSON-LD e assets).`);
 }
 
-console.log(`Build validation passed: All ${requiredHtmlFiles.length} pages, individual news pages, SEO metadata, 6 candidate photos, market/economy datasets, sitemap.xml and robots.txt are clean and production-ready.`);
+console.log(`Build validation passed: All ${requiredHtmlFiles.length} pages, individual news pages, SEO metadata, Google Analytics 4 (G-FVHPGPZTSL), 6 candidate photos, market/economy datasets, sitemap.xml and robots.txt are clean and production-ready.`);
