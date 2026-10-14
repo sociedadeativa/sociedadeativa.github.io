@@ -18,6 +18,7 @@ import { EconomiaPage } from "./pages/EconomiaPage";
 import { EstadosPage } from "./pages/EstadosPage";
 import { DadosPublicosPage } from "./pages/DadosPublicosPage";
 import { NoticiasPage } from "./pages/NoticiasPage";
+import { EsportesPage } from "./pages/EsportesPage";
 import { SobrePage } from "./pages/SobrePage";
 import { ArticlePage } from "./pages/ArticlePage";
 
@@ -129,6 +130,13 @@ export default function App() {
         {currentRoute === "noticias" && (
           <NoticiasPage
             initialArticles={articles}
+            onOpenArticleDetails={(art) => goToArticle(art.id)}
+          />
+        )}
+
+        {currentRoute === "esportes" && (
+          <EsportesPage
+            articles={articles}
             onOpenArticleDetails={(art) => goToArticle(art.id)}
           />
         )}

@@ -80,6 +80,11 @@ export const Footer: React.FC<FooterProps> = ({
                   Últimas Notícias
                 </PortalLink>
               </li>
+              <li>
+                <PortalLink route="esportes" className="hover:text-white transition-colors">
+                  Esportes &amp; Futebol
+                </PortalLink>
+              </li>
             </ul>
           </div>
 

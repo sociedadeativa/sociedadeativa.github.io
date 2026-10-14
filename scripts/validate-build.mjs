@@ -8,6 +8,7 @@ const requiredHtmlFiles = [
   'dist/estados/index.html',
   'dist/dados-publicos/index.html',
   'dist/noticias/index.html',
+  'dist/esportes/index.html',
   'dist/sobre/index.html',
   'dist/404.html',
 ];
@@ -93,7 +94,7 @@ for (const dataFile of requiredDataFiles) {
 }
 
 // Replica pastas data/ e assets/candidates/ nos subdiretórios para garantir 200 OK em qualquer tipo de requisição relativa
-const subdirs = ['politica', 'eleicoes', 'economia', 'estados', 'dados-publicos', 'noticias', 'sobre'];
+const subdirs = ['politica', 'eleicoes', 'economia', 'estados', 'dados-publicos', 'noticias', 'esportes', 'sobre'];
 for (const sub of subdirs) {
   // Replicar data/
   const subDataDir = `dist/${sub}/data`;
@@ -158,6 +159,7 @@ const canonicalPages = [
   'https://sociedadeativa.github.io/estados/',
   'https://sociedadeativa.github.io/dados-publicos/',
   'https://sociedadeativa.github.io/noticias/',
+  'https://sociedadeativa.github.io/esportes/',
   'https://sociedadeativa.github.io/sobre/',
 ];
 

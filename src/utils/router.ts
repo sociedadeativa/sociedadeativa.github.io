@@ -6,6 +6,7 @@ export type PortalRoute =
   | "estados"
   | "dados-publicos"
   | "noticias"
+  | "esportes"
   | "sobre"
   | "artigo";
 
@@ -112,6 +113,19 @@ export const ROUTE_CONFIGS: Record<PortalRoute, RouteConfig> = {
     badgeBg: "bg-slate-100",
     badgeText: "text-slate-800",
     badgeBorder: "border-slate-200",
+  },
+  esportes: {
+    route: "esportes",
+    path: "/esportes/",
+    label: "Esportes",
+    title: "Esportes — Sociedade Ativa | Futebol, Tabelas, Placares e Campeonatos",
+    description:
+      "Cobertura esportiva com foco no futebol brasileiro e internacional: notícias, placares, jogos de hoje, próximas rodadas e tabelas do Brasileirão Série A e B, Libertadores e mais.",
+    categoryTag: "Esportes",
+    accentColor: "emerald",
+    badgeBg: "bg-emerald-50",
+    badgeText: "text-emerald-800",
+    badgeBorder: "border-emerald-200",
   },
   sobre: {
     route: "sobre",
@@ -225,6 +239,7 @@ export function getRouteFromPath(pathname: string, searchStr?: string): PortalRo
   if (clean.startsWith("estados")) return "estados";
   if (clean.startsWith("dados-publicos")) return "dados-publicos";
   if (clean.startsWith("noticias")) return "noticias";
+  if (clean.startsWith("esportes")) return "esportes";
   if (clean.startsWith("sobre")) return "sobre";
 
   return "home";

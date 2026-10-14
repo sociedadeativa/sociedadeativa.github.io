@@ -91,6 +91,12 @@ export const Header: React.FC<HeaderProps> = ({
       colorClass: "hover:text-slate-950",
       activeClass: "text-slate-950 font-black border-b-2 border-slate-700",
     },
+    {
+      route: "esportes",
+      label: "Esportes",
+      colorClass: "hover:text-emerald-700",
+      activeClass: "text-emerald-700 font-black border-b-2 border-emerald-600",
+    },
   ];
 
   return (

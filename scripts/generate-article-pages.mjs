@@ -109,6 +109,7 @@ function generateSitemap(generatedArticles) {
     { loc: 'https://sociedadeativa.github.io/estados/', defaultDate: '2026-10-13' },
     { loc: 'https://sociedadeativa.github.io/dados-publicos/', defaultDate: '2026-10-13' },
     { loc: 'https://sociedadeativa.github.io/noticias/', defaultDate: '2026-10-13' },
+    { loc: 'https://sociedadeativa.github.io/esportes/', defaultDate: '2026-10-14' },
     { loc: 'https://sociedadeativa.github.io/sobre/', defaultDate: '2026-10-13' },
   ];
 
