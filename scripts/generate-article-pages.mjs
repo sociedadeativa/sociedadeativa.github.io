@@ -41,6 +41,45 @@ function parseDateToIso(dateStr) {
   return '2026-10-13T12:00:00-03:00';
 }
 
+// Extrai data confiável no formato YYYY-MM-DD para lastmod do sitemap
+function extractReliableDateYmd(dateStr) {
+  if (!dateStr || typeof dateStr !== 'string') return null;
+
+  // Formato brasileiro: 13/10/2026 ou 13/10/2026 às 13:02
+  const brMatch = dateStr.match(/^(\d{2})\/(\d{2})\/(\d{4})/);
+  if (brMatch) {
+    const [, day, month, year] = brMatch;
+    const y = parseInt(year, 10);
+    const m = parseInt(month, 10);
+    const d = parseInt(day, 10);
+    if (y >= 2020 && y <= 2030 && m >= 1 && m <= 12 && d >= 1 && d <= 31) {
+      return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+    }
+  }
+
+  // Formato ISO: YYYY-MM-DD
+  const isoMatch = dateStr.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (isoMatch) {
+    const [, year, month, day] = isoMatch;
+    const y = parseInt(year, 10);
+    const m = parseInt(month, 10);
+    const d = parseInt(day, 10);
+    if (y >= 2020 && y <= 2030 && m >= 1 && m <= 12 && d >= 1 && d <= 31) {
+      return `${year}-${month}-${day}`;
+    }
+  }
+
+  const parsed = new Date(dateStr);
+  if (!isNaN(parsed.getTime())) {
+    const y = parsed.getUTCFullYear();
+    if (y >= 2020 && y <= 2030) {
+      return parsed.toISOString().slice(0, 10);
+    }
+  }
+
+  return null;
+}
+
 function escapeHtml(str) {
   if (!str) return '';
   return str
@@ -54,6 +93,87 @@ function escapeHtml(str) {
 function escapeJson(str) {
   if (!str) return '';
   return JSON.stringify(str).slice(1, -1);
+}
+
+// Gera o sitemap.xml final com as 8 seções canônicas e todos os artigos gerados
+function generateSitemap(generatedArticles) {
+  const DIST_SITEMAP = path.join(DIST_DIR, 'sitemap.xml');
+  const BASE_SITEMAP = path.join(rootDir, 'public', 'sitemap.xml');
+
+  // As 8 seções canônicas principais do portal Sociedade Ativa
+  const canonicalSections = [
+    { loc: 'https://sociedadeativa.github.io/', defaultDate: '2026-10-13' },
+    { loc: 'https://sociedadeativa.github.io/politica/', defaultDate: '2026-10-13' },
+    { loc: 'https://sociedadeativa.github.io/eleicoes/', defaultDate: '2026-10-13' },
+    { loc: 'https://sociedadeativa.github.io/economia/', defaultDate: '2026-10-13' },
+    { loc: 'https://sociedadeativa.github.io/estados/', defaultDate: '2026-10-13' },
+    { loc: 'https://sociedadeativa.github.io/dados-publicos/', defaultDate: '2026-10-13' },
+    { loc: 'https://sociedadeativa.github.io/noticias/', defaultDate: '2026-10-13' },
+    { loc: 'https://sociedadeativa.github.io/sobre/', defaultDate: '2026-10-13' },
+  ];
+
+  // Preserva os valores de lastmod definidos nas seções principais a partir de public/sitemap.xml
+  const existingSectionDates = new Map();
+  if (fs.existsSync(BASE_SITEMAP)) {
+    const raw = fs.readFileSync(BASE_SITEMAP, 'utf8');
+    const matches = raw.matchAll(/<url>[\s\S]*?<loc>(https:\/\/sociedadeativa\.github\.io\/[^<]*)<\/loc>(?:[\s\S]*?<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>)?[\s\S]*?<\/url>/g);
+    for (const match of matches) {
+      if (match[1] && match[2]) {
+        existingSectionDates.set(match[1], match[2]);
+      }
+    }
+  }
+
+  const sitemapEntries = [];
+  const seenLocs = new Set();
+
+  // 1. Inclui as 8 seções canônicas principais
+  for (const section of canonicalSections) {
+    if (!seenLocs.has(section.loc)) {
+      seenLocs.add(section.loc);
+      const lastmod = existingSectionDates.get(section.loc) || section.defaultDate;
+      sitemapEntries.push({
+        loc: section.loc,
+        lastmod,
+      });
+    }
+  }
+
+  // 2. Inclui cada matéria individual gerada que efetivamente exista em dist/
+  for (const article of generatedArticles) {
+    const articleUrl = `https://sociedadeativa.github.io/noticias/${article.id}/`;
+    const articleHtmlPath = path.join(NOTICIAS_DIR, article.id, 'index.html');
+
+    if (fs.existsSync(articleHtmlPath) && !seenLocs.has(articleUrl)) {
+      seenLocs.add(articleUrl);
+      const reliableDate = extractReliableDateYmd(article.updatedAt || article.publishedAt);
+      sitemapEntries.push({
+        loc: articleUrl,
+        lastmod: reliableDate,
+      });
+    }
+  }
+
+  // 3. Monta o sitemap.xml seguindo o padrão oficial sitemaps.org 0.9
+  const xmlLines = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  ];
+
+  for (const entry of sitemapEntries) {
+    xmlLines.push('  <url>');
+    xmlLines.push(`    <loc>${entry.loc}</loc>`);
+    if (entry.lastmod) {
+      xmlLines.push(`    <lastmod>${entry.lastmod}</lastmod>`);
+    }
+    xmlLines.push('  </url>');
+  }
+
+  xmlLines.push('</urlset>\n');
+
+  const sitemapXml = xmlLines.join('\n');
+  fs.writeFileSync(DIST_SITEMAP, sitemapXml, 'utf8');
+  console.log(`Sucesso: dist/sitemap.xml gerado com ${sitemapEntries.length} URLs (${canonicalSections.length} seções canônicas + ${sitemapEntries.length - canonicalSections.length} matérias individuais).`);
 }
 
 function main() {
@@ -79,6 +199,7 @@ function main() {
   }
 
   let generatedCount = 0;
+  const generatedArticles = [];
 
   for (const article of articles) {
     if (!article.id || !article.title || !article.summary) {
@@ -236,10 +357,14 @@ function main() {
       }
     }
 
+    generatedArticles.push(article);
     generatedCount++;
   }
 
   console.log(`Sucesso: ${generatedCount} páginas individuais de notícias geradas em dist/noticias/[id]/index.html`);
+
+  // Gera o sitemap.xml atualizado incluindo seções canônicas e todos os artigos
+  generateSitemap(generatedArticles);
 }
 
 main();

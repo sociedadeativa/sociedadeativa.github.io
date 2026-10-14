@@ -168,28 +168,69 @@ for (const pageUrl of canonicalPages) {
   }
 }
 
-// Verifica que todas as tags <url> possuem apenas <loc> e <lastmod>
+// Descobre todas as páginas de notícias geradas em dist/noticias/[id]/index.html
+const generatedArticleDirs = fs.existsSync('dist/noticias')
+  ? fs.readdirSync('dist/noticias').filter((item) => {
+      return (
+        item !== 'index.html' &&
+        fs.statSync(`dist/noticias/${item}`).isDirectory() &&
+        fs.existsSync(`dist/noticias/${item}/index.html`)
+      );
+    })
+  : [];
+
+// Verifica que todas as páginas de artigos geradas constam no sitemap.xml
+for (const articleId of generatedArticleDirs) {
+  const articleUrl = `https://sociedadeativa.github.io/noticias/${articleId}/`;
+  if (!sitemapContent.includes(`<loc>${articleUrl}</loc>`)) {
+    console.error(`ERROR: sitemap.xml ausente da URL de notícia gerada: ${articleUrl}`);
+    process.exit(1);
+  }
+}
+
+// Valida a contagem total de URLs no sitemap contra as seções canônicas e artigos gerados
+const expectedTotalUrls = canonicalPages.length + generatedArticleDirs.length;
 const urlBlocks = sitemapContent.match(/<url>[\s\S]*?<\/url>/g) || [];
-if (urlBlocks.length !== canonicalPages.length) {
-  console.error(`ERROR: sitemap.xml possui ${urlBlocks.length} URLs, esperado ${canonicalPages.length}!`);
+
+if (urlBlocks.length !== expectedTotalUrls) {
+  console.error(`ERROR: dist/sitemap.xml possui ${urlBlocks.length} URLs, esperado ${expectedTotalUrls} (${canonicalPages.length} seções canônicas + ${generatedArticleDirs.length} artigos gerados)!`);
   process.exit(1);
 }
 
+// Verifica unicidade, integridade de protocolo/domínio, existência do arquivo físico e formato de lastmod
+const sitemapLocs = new Set();
 for (const block of urlBlocks) {
-  if (!block.includes('<loc>') || !block.includes('</loc>')) {
-    console.error('ERROR: Bloco <url> sem tag <loc> válida!');
+  const locMatch = block.match(/<loc>(https:\/\/sociedadeativa\.github\.io\/[^<]*)<\/loc>/);
+  if (!locMatch) {
+    console.error(`ERROR: Bloco <url> no sitemap sem tag <loc> válida ou fora do domínio HTTPS esperado: ${block}`);
     process.exit(1);
   }
-  if (!block.includes('<lastmod>') || !block.includes('</lastmod>')) {
-    console.error('ERROR: Bloco <url> sem tag <lastmod> válida!');
+  const loc = locMatch[1];
+  if (sitemapLocs.has(loc)) {
+    console.error(`ERROR: URL duplicada encontrada no sitemap: ${loc}`);
     process.exit(1);
   }
-  const dateMatch = block.match(/<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/);
-  if (!dateMatch) {
-    console.error('ERROR: <lastmod> não está no formato YYYY-MM-DD!');
+  sitemapLocs.add(loc);
+
+  // Garante que a URL corresponde a uma página efetivamente gerada em dist/
+  const sub = loc.replace('https://sociedadeativa.github.io/', '').replace(/\/$/, '');
+  const targetFile = sub ? `dist/${sub}/index.html` : 'dist/index.html';
+  if (!fs.existsSync(targetFile)) {
+    console.error(`ERROR: URL no sitemap (${loc}) não corresponde a um arquivo gerado no build (${targetFile})!`);
     process.exit(1);
+  }
+
+  // Validação de lastmod quando presente
+  const lastmodMatch = block.match(/<lastmod>([^<]+)<\/lastmod>/);
+  if (lastmodMatch) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(lastmodMatch[1])) {
+      console.error(`ERROR: <lastmod> "${lastmodMatch[1]}" para ${loc} não está no formato YYYY-MM-DD!`);
+      process.exit(1);
+    }
   }
 }
+
+console.log(`Validação do sitemap.xml aprovada: ${urlBlocks.length} URLs conferidas (${canonicalPages.length} seções canônicas + ${generatedArticleDirs.length} páginas de notícias geradas).`);
 
 // Auditoria de SEO nos 9 arquivos HTML gerados
 for (const filePath of requiredHtmlFiles) {
