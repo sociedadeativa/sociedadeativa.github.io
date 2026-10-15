@@ -23,13 +23,22 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
   const marketStatus = b3MarketInfo.status;
   const marketStatusText = b3MarketInfo.statusDetailedText;
 
+  const isStale = Boolean(raw.isStale);
+  const staleNotice =
+    raw.staleNotice ||
+    (isStale
+      ? "Aviso de dados preservados: Exibindo último fechamento oficial consolidado. O serviço em tempo real da B3 está temporariamente indisponível."
+      : undefined);
+  const lastSuccessfulUpdate =
+    raw.lastSuccessfulUpdate || raw.timestamp || raw.ibov?.timestamp || "14/10/2026 18:00";
+
   const rawIbov = raw.ibov || {};
   const ibovPoints =
-    typeof rawIbov.points === "number" && !isNaN(rawIbov.points) ? rawIbov.points : 209067;
+    typeof rawIbov.points === "number" && !isNaN(rawIbov.points) ? rawIbov.points : 206506;
   const ibovChange =
     typeof rawIbov.changePercent === "number" && !isNaN(rawIbov.changePercent)
       ? rawIbov.changePercent
-      : 1.38;
+      : -0.18;
 
   const ibov = {
     indexName: String(rawIbov.indexName || "Ibovespa (IBOV)"),
@@ -38,14 +47,16 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
     formattedPoints: `${Math.round(ibovPoints).toLocaleString("pt-BR")} pts`,
     changePercent: ibovChange,
     formattedChangePercent: `${ibovChange >= 0 ? "+" : ""}${ibovChange.toFixed(2).replace(".", ",")}%`,
-    previousClosePoints: rawIbov.previousClosePoints || 206220,
-    formattedPreviousClose: rawIbov.formattedPreviousClose || "206.220 pts",
-    tradingSession: String(rawIbov.tradingSession || raw.tradingSession || "09/10/2026"),
-    timestamp: String(rawIbov.timestamp || raw.timestamp || "09/10/2026 18:00"),
+    previousClosePoints: rawIbov.previousClosePoints || 206888,
+    formattedPreviousClose: rawIbov.formattedPreviousClose || "206.888 pts",
+    tradingSession: String(rawIbov.tradingSession || raw.tradingSession || "14/10/2026"),
+    timestamp: String(rawIbov.timestamp || raw.timestamp || "14/10/2026 18:00"),
     marketStatus,
     marketStatusText,
     isDelayed,
     delayNotice,
+    isStale,
+    staleNotice,
     source: "B3 - Brasil, Bolsa, Balcão",
     sourceUrl:
       "https://b3.com.br/pt_br/market-data-e-indices/indices/indices-amplos/ibovespa-b3.htm",
@@ -71,19 +82,22 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
           ? `R$ ${(item.financialVolume / 1_000_000_000).toFixed(2).replace(".", ",")} bi`
           : `R$ ${(item.financialVolume / 1_000_000).toFixed(1).replace(".", ",")} mi`),
       shareVolume: typeof item.shareVolume === "number" ? item.shareVolume : undefined,
-      tradingSession: String(item.tradingSession || raw.tradingSession || "09/10/2026"),
-      timestamp: String(item.timestamp || raw.timestamp || "09/10/2026 18:00"),
+      tradingSession: String(item.tradingSession || raw.tradingSession || "14/10/2026"),
+      timestamp: String(item.timestamp || raw.timestamp || "14/10/2026 18:00"),
       source: "B3",
     }));
   };
 
   return {
-    tradingSession: String(raw.tradingSession || "09/10/2026"),
-    timestamp: String(raw.timestamp || "09/10/2026 18:00"),
+    tradingSession: String(raw.tradingSession || "14/10/2026"),
+    timestamp: String(raw.timestamp || "14/10/2026 18:00"),
+    lastSuccessfulUpdate,
     marketStatus,
     marketStatusText,
     isDelayed,
     delayNotice,
+    isStale,
+    staleNotice,
     rankingMethodology: {
       mostTradedMetric:
         "Volume financeiro total negociado em moeda corrente (R$), calculado pelo produto do preço unitário de fechamento pela quantidade de títulos transacionados no pregão. Não se confunde com quantidade de papéis.",

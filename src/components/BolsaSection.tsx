@@ -236,18 +236,39 @@ export const BolsaSection: React.FC = () => {
             </span>
           </div>
 
+          {marketData.isStale && (
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-50 text-amber-800 border border-amber-200 text-xs font-bold">
+              <ShieldAlert className="w-3.5 h-3.5 text-amber-600" />
+              <span>Base Preservada</span>
+            </div>
+          )}
+
           <a
             href={marketData.quotationUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold transition-colors cursor-pointer"
-            title="Acessar cotações públicas na B3 com defasagem de 15 min"
+            title="Acessar cotações públicas na B3 com defasagem regulatória mínima de 15 min"
           >
             <span>Portal B3</span>
             <ExternalLink className="w-3 h-3 text-slate-400" />
           </a>
         </div>
       </div>
+
+      {/* Alerta de Dados Preservados (quando o feed externo falhar) */}
+      {marketData.isStale && (
+        <div className="mb-6 p-4 bg-amber-50/90 rounded-2xl border border-amber-200 text-amber-900 flex items-start gap-3">
+          <ShieldAlert className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+          <div className="text-xs">
+            <h4 className="font-bold text-amber-950 mb-0.5">Aviso de Dados Preservados (Conexão Indisponível)</h4>
+            <p className="text-amber-800 leading-relaxed">
+              {marketData.staleNotice ||
+                `Exibindo último fechamento oficial consolidado do pregão de ${marketData.tradingSession}. A comunicação em tempo real com a B3 está temporariamente indisponível. Nenhum valor de cotação ou variação foi fabricado.`}
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* PAINEL A: Ibovespa (IBOV) */}
       <div className="mb-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-950 to-blue-950 text-white shadow-md border border-slate-800">
@@ -432,12 +453,22 @@ export const BolsaSection: React.FC = () => {
 
       {/* Nota de Governança, Regulação e Termos de Uso da B3 */}
       <div className="mt-8 pt-4 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <Calendar className="w-3.5 h-3.5 text-slate-400" />
-          <span>
-            Pregão de referência: <strong>{marketData.tradingSession}</strong> · Fechamento auditado às{" "}
-            <strong>{marketData.timestamp.split(" ")[1] || "18:00"}</strong>
-          </span>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-1.5">
+            <Calendar className="w-3.5 h-3.5 text-slate-400" />
+            <span>
+              Pregão de referência: <strong>{marketData.tradingSession}</strong> · Fechamento oficial às{" "}
+              <strong>{marketData.timestamp.split(" ")[1] || "18:00"}</strong>
+            </span>
+          </div>
+          <span className="hidden sm:inline text-slate-300">•</span>
+          <div className="flex items-center gap-1.5">
+            <Clock className="w-3.5 h-3.5 text-slate-400" />
+            <span>
+              Última atualização com sucesso:{" "}
+              <strong>{marketData.lastSuccessfulUpdate || marketData.timestamp}</strong>
+            </span>
+          </div>
         </div>
 
         <div className="flex items-center gap-3">

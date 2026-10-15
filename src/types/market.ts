@@ -35,18 +35,23 @@ export interface IbovespaMarketData {
   marketStatusText: string;
   isDelayed: boolean;
   delayNotice: string;
+  isStale?: boolean;
+  staleNotice?: string;
   source: string;
   sourceUrl: string;
   quotationUrl: string;
 }
 
 export interface B3MarketRankings {
-  tradingSession: string; // Ex: "09/10/2026"
+  tradingSession: string; // Ex: "14/10/2026"
   timestamp: string;
   marketStatus: "aberto" | "fechado";
   marketStatusText: string;
   isDelayed: boolean;
   delayNotice: string;
+  isStale?: boolean;
+  staleNotice?: string;
+  lastSuccessfulUpdate?: string;
   rankingMethodology: {
     mostTradedMetric: string;
     gainersMetric: string;

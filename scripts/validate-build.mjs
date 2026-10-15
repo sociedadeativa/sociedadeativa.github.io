@@ -284,8 +284,15 @@ if (fs.existsSync('dist/noticias')) {
   const newsData = JSON.parse(fs.readFileSync('dist/data/newsData.json', 'utf8'));
   const seenCanonical = new Set();
   const seenTitles = new Set();
+  const seenArticleIds = new Set();
 
   for (const article of newsData) {
+    if (seenArticleIds.has(article.id)) {
+      console.error(`ERROR: ID duplicado detectado em newsData.json: ${article.id}`);
+      process.exit(1);
+    }
+    seenArticleIds.add(article.id);
+
     const articleHtmlPath = `dist/noticias/${article.id}/index.html`;
     if (!fs.existsSync(articleHtmlPath)) {
       console.error(`ERROR: Página individual do artigo ausente no build: ${articleHtmlPath}`);

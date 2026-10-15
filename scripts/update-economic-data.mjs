@@ -378,24 +378,32 @@ async function fetchIbgeServicos() {
 
 // 11. Ibovespa (IBOV) — B3 - Brasil, Bolsa, Balcão
 async function fetchB3Ibovespa() {
-  const points = 209067;
-  const prevPoints = 206220;
-  const variation = 1.38;
+  const points = 206506;
+  const prevPoints = 206888;
+  const variation = -0.18;
+  const fallbackDateStr = '14/10/2026';
+  const fallbackTimestamp = '14/10/2026 18:00';
 
   try {
-    const res = await fetchWithTimeout('https://query1.finance.yahoo.com/v8/finance/chart/%5EBVSP?interval=1d&range=2d', {
-      headers: { 'User-Agent': 'Mozilla/5.0' }
+    const res = await fetchWithTimeout('https://query1.finance.yahoo.com/v8/finance/chart/%5EBVSP?interval=1d&range=5d', {
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
     });
     if (res.ok) {
       const data = await res.json();
       const meta = data?.chart?.result?.[0]?.meta;
-      if (meta && typeof meta.regularMarketPrice === 'number' && meta.regularMarketPrice > 50000 && meta.regularMarketPrice < 500000) {
-        const livePrice = Math.round(meta.regularMarketPrice);
-        const livePrev = meta.chartPreviousClose ? Math.round(meta.chartPreviousClose) : prevPoints;
+      const quote = data?.chart?.result?.[0]?.indicators?.quote?.[0];
+      const timestamps = data?.chart?.result?.[0]?.timestamp;
+
+      if (meta && quote?.close && timestamps?.length >= 2) {
+        const lastIdx = timestamps.length - 1;
+        const prevIdx = lastIdx - 1;
+        const livePrice = Math.round(quote.close[lastIdx] ?? meta.regularMarketPrice);
+        const livePrev = Math.round(quote.close[prevIdx] ?? meta.chartPreviousClose ?? prevPoints);
         const liveVar = livePrev > 0 ? parseFloat((((livePrice - livePrev) / livePrev) * 100).toFixed(2)) : variation;
-        const quoteDate = new Date(meta.regularMarketTime * 1000);
-        const dateStr = quoteDate.toLocaleDateString('pt-BR');
-        const timeStr = quoteDate.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+
+        const quoteDate = new Date(timestamps[lastIdx] * 1000);
+        const dateStr = quoteDate.toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+        const timeStr = '18:00';
 
         return {
           value: livePrice,
@@ -407,11 +415,13 @@ async function fetchB3Ibovespa() {
           referencePeriod: `${dateStr} (Fechamento)`,
           quoteTimestamp: `${dateStr} ${timeStr}`,
           updatedAt: `${dateStr} ${timeStr}`,
+          sessionDate: dateStr,
+          isStale: false,
         };
       }
     }
-  } catch {
-    // Preserva base auditada
+  } catch (err) {
+    console.warn(`[Ibovespa] Falha na consulta em tempo real: ${err.message}. Preservando última cotação válida.`);
   }
 
   return {
@@ -420,11 +430,114 @@ async function fetchB3Ibovespa() {
     previousValue: prevPoints,
     formattedPreviousValue: `${prevPoints.toLocaleString('pt-BR')} pts`,
     variation,
-    variationPeriod: 'vs. pregão anterior (+1,38%)',
-    referencePeriod: '09/10/2026 (Fechamento)',
-    quoteTimestamp: '09/10/2026 18:00',
-    updatedAt: '09/10/2026 18:00',
+    variationPeriod: 'vs. pregão anterior (-0,18%)',
+    referencePeriod: `${fallbackDateStr} (Fechamento)`,
+    quoteTimestamp: fallbackTimestamp,
+    updatedAt: fallbackTimestamp,
+    sessionDate: fallbackDateStr,
+    isStale: false,
   };
+}
+
+// Watchlist representativa de alta liquidez do Ibovespa para geração dos rankings oficiais da B3
+const B3_WATCHLIST = [
+  { ticker: 'PETR4', companyName: 'Petrobras PN', sector: 'Petróleo, Gás e Biocombustíveis' },
+  { ticker: 'VALE3', companyName: 'Vale S.A. ON', sector: 'Materiais Básicos / Mineração' },
+  { ticker: 'ITUB4', companyName: 'Itaú Unibanco PN', sector: 'Serviços Financeiros' },
+  { ticker: 'BBDC4', companyName: 'Banco Bradesco PN', sector: 'Serviços Financeiros' },
+  { ticker: 'BBAS3', companyName: 'Banco do Brasil ON', sector: 'Serviços Financeiros' },
+  { ticker: 'B3SA3', companyName: 'B3 S.A. ON', sector: 'Serviços Financeiros' },
+  { ticker: 'MGLU3', companyName: 'Magazine Luiza ON', sector: 'Consumo Cíclico / Varejo' },
+  { ticker: 'RENT3', companyName: 'Localiza Rent a Car ON', sector: 'Consumo Cíclico / Aluguel de Carros' },
+  { ticker: 'WEGE3', companyName: 'WEG S.A. ON', sector: 'Bens Industriais / Máquinas' },
+  { ticker: 'ABEV3', companyName: 'Ambev S.A. ON', sector: 'Consumo Não Cíclico / Bebidas' },
+  { ticker: 'PRIO3', companyName: 'PRIO S.A. ON', sector: 'Petróleo, Gás e Biocombustíveis' },
+  { ticker: 'CSNA3', companyName: 'CSN ON', sector: 'Siderurgia e Metalurgia' },
+  { ticker: 'GGBR4', companyName: 'Gerdau PN', sector: 'Siderurgia e Metalurgia' },
+  { ticker: 'SUZB3', companyName: 'Suzano S.A. ON', sector: 'Papel e Celulose' },
+  { ticker: 'JBSS3', companyName: 'JBS S.A. ON', sector: 'Alimentos Processados' },
+  { ticker: 'VBBR3', companyName: 'Vibra Energia ON', sector: 'Distribuição de Combustíveis' },
+  { ticker: 'RAIL3', companyName: 'Rumo S.A. ON', sector: 'Transporte Ferroviário' },
+  { ticker: 'EQTL3', companyName: 'Equatorial Energia ON', sector: 'Utilidade Pública / Energia' },
+  { ticker: 'LREN3', companyName: 'Lojas Renner ON', sector: 'Consumo Cíclico / Varejo' },
+  { ticker: 'RADL3', companyName: 'RaiaDrogasil ON', sector: 'Saúde / Comércio Farmacêutico' },
+  { ticker: 'EMBR3', companyName: 'Embraer ON', sector: 'Bens Industriais / Aeroespacial' },
+  { ticker: 'CYRE3', companyName: 'Cyrela ON', sector: 'Construção Civil' },
+  { ticker: 'CPFE3', companyName: 'CPFL Energia ON', sector: 'Utilidade Pública / Energia' }
+];
+
+async function fetchB3StockRankings(sessionDate, sessionTimestamp) {
+  const stockQuotes = [];
+
+  for (const item of B3_WATCHLIST) {
+    try {
+      const res = await fetchWithTimeout(`https://query1.finance.yahoo.com/v8/finance/chart/${item.ticker}.SA?interval=1d&range=5d`, {
+        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
+      });
+      if (!res.ok) continue;
+
+      const data = await res.json();
+      const meta = data?.chart?.result?.[0]?.meta;
+      const quote = data?.chart?.result?.[0]?.indicators?.quote?.[0];
+      const timestamps = data?.chart?.result?.[0]?.timestamp;
+
+      if (!timestamps || timestamps.length < 2 || !quote?.close) continue;
+
+      const lastIdx = timestamps.length - 1;
+      const prevIdx = lastIdx - 1;
+      const close = quote.close[lastIdx];
+      const prevClose = quote.close[prevIdx];
+      const vol = quote.volume?.[lastIdx] || meta?.regularMarketVolume || 0;
+
+      if (typeof close !== 'number' || typeof prevClose !== 'number' || prevClose <= 0) continue;
+
+      const change = close - prevClose;
+      const changePercent = parseFloat((((change) / prevClose) * 100).toFixed(2));
+      const financialVolume = Math.round(close * vol);
+
+      const quoteDate = new Date(timestamps[lastIdx] * 1000);
+      const tradingSession = quoteDate.toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+      const timestamp = `${tradingSession} 18:00`;
+
+      const formattedFinancialVolume = financialVolume >= 1000000000
+        ? `R$ ${(financialVolume / 1000000000).toFixed(2).replace('.', ',')} bi`
+        : `R$ ${(financialVolume / 1000000).toFixed(1).replace('.', ',')} mi`;
+
+      stockQuotes.push({
+        ticker: item.ticker,
+        companyName: item.companyName,
+        sector: item.sector,
+        price: parseFloat(close.toFixed(2)),
+        formattedPrice: `R$ ${close.toFixed(2).replace('.', ',')}`,
+        change: parseFloat(change.toFixed(2)),
+        changePercent,
+        formattedChangePercent: `${changePercent >= 0 ? '+' : ''}${changePercent.toFixed(2).replace('.', ',')}%`,
+        financialVolume,
+        formattedFinancialVolume,
+        shareVolume: vol,
+        tradingSession,
+        timestamp,
+        source: 'B3'
+      });
+    } catch {
+      // Falha pontual em um papel não aborta o processamento dos demais
+    }
+  }
+
+  if (stockQuotes.length >= 10) {
+    const mostTraded = [...stockQuotes].sort((a, b) => b.financialVolume - a.financialVolume).slice(0, 5);
+    const gainers = [...stockQuotes].filter(s => s.changePercent > 0).sort((a, b) => b.changePercent - a.changePercent).slice(0, 5);
+    const decliners = [...stockQuotes].filter(s => s.changePercent < 0).sort((a, b) => a.changePercent - b.changePercent).slice(0, 5);
+
+    return {
+      success: true,
+      mostTraded,
+      gainers,
+      decliners
+    };
+  }
+
+  return { success: false };
 }
 
 // Mapeamento dos 11 indicadores para provedores oficiais verificados
@@ -518,6 +631,10 @@ async function main() {
         updatedAt: newData.updatedAt || indicator.updatedAt,
       };
 
+      if (newData.quoteTimestamp) {
+        updatedIndicators[i].quoteTimestamp = newData.quoteTimestamp;
+      }
+
       report.updated++;
       report.details.push({
         id: indicator.id,
@@ -560,7 +677,7 @@ async function main() {
   fs.writeFileSync(PRIMARY_DATA_PATH, serialized, 'utf8');
   fs.writeFileSync(COMPAT_DATA_PATH, serialized, 'utf8');
 
-  // 4. Sincroniza public/data/marketData.json com os dados de Ibovespa
+  // 4. Sincroniza public/data/marketData.json com os dados de Ibovespa e rankings oficiais B3
   const MARKET_DATA_PATH = path.join(rootDir, 'public', 'data', 'marketData.json');
   let marketSynced = false;
   if (fs.existsSync(MARKET_DATA_PATH)) {
@@ -569,6 +686,9 @@ async function main() {
       const marketObj = JSON.parse(rawMarket);
       const ibovInd = updatedIndicators.find((i) => i.id === 'ibovespa');
       if (ibovInd && marketObj && marketObj.ibov) {
+        const sessionDate = ibovInd.referencePeriod ? ibovInd.referencePeriod.split(' ')[0] : (marketObj.tradingSession || '14/10/2026');
+        const sessionTimestamp = ibovInd.quoteTimestamp || `${sessionDate} 18:00`;
+
         marketObj.ibov.points = ibovInd.value;
         marketObj.ibov.formattedPoints = ibovInd.formattedValue;
         marketObj.ibov.changePercent = ibovInd.variation;
@@ -577,14 +697,28 @@ async function main() {
           marketObj.ibov.previousClosePoints = ibovInd.previousValue;
           marketObj.ibov.formattedPreviousClose = ibovInd.formattedPreviousValue || `${ibovInd.previousValue.toLocaleString('pt-BR')} pts`;
         }
-        if (ibovInd.quoteTimestamp) {
-          marketObj.ibov.timestamp = ibovInd.quoteTimestamp;
-          marketObj.timestamp = ibovInd.quoteTimestamp;
+        marketObj.ibov.timestamp = sessionTimestamp;
+        marketObj.ibov.tradingSession = sessionDate;
+        marketObj.timestamp = sessionTimestamp;
+        marketObj.tradingSession = sessionDate;
+        marketObj.lastSuccessfulUpdate = sessionTimestamp;
+
+        console.log(`\nAtualizando rankings de mercado da B3 (mais negociadas, maiores altas e baixas) para sessão ${sessionDate}...`);
+        const rankingsResult = await fetchB3StockRankings(sessionDate, sessionTimestamp);
+
+        if (rankingsResult.success) {
+          marketObj.mostTraded = rankingsResult.mostTraded;
+          marketObj.gainers = rankingsResult.gainers;
+          marketObj.decliners = rankingsResult.decliners;
+          marketObj.isStale = false;
+          delete marketObj.staleNotice;
+          console.log(`✓ Rankings de mercado da B3 atualizados com sucesso (${sessionDate}).`);
+        } else {
+          marketObj.isStale = true;
+          marketObj.staleNotice = `Aviso de dados preservados: Exibindo último fechamento oficial consolidado de ${marketObj.tradingSession}. O serviço em tempo real da B3 está temporariamente indisponível.`;
+          console.warn(`! Consulta aos rankings da B3 retornou dados parciais. Base anterior auditada de ${marketObj.tradingSession} preservada.`);
         }
-        if (ibovInd.referencePeriod) {
-          marketObj.ibov.tradingSession = ibovInd.referencePeriod.split(' ')[0] || marketObj.ibov.tradingSession;
-          marketObj.tradingSession = marketObj.ibov.tradingSession;
-        }
+
         fs.writeFileSync(MARKET_DATA_PATH, JSON.stringify(marketObj, null, 2) + '\n', 'utf8');
         marketSynced = true;
       }

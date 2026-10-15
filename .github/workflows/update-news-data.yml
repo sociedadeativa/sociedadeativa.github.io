@@ -16,7 +16,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: "news-data-update"
   cancel-in-progress: false
 
 jobs:
@@ -55,6 +55,7 @@ jobs:
               console.error("Validação falhou: dataset insuficiente (< 10 artigos)");
               process.exit(1);
             }
+            const seenIds = new Set();
             for (const item of data) {
               if (!item.id || !item.title || !item.summary || !item.source || !item.articleUrl || !item.publishedAt || !item.category) {
                 console.error("Validação falhou: campos obrigatórios ausentes:", item);
@@ -64,6 +65,11 @@ jobs:
                 console.error("Validação falhou: URL não é HTTPS:", item.articleUrl);
                 process.exit(1);
               }
+              if (seenIds.has(item.id)) {
+                console.error("Validação falhou: ID duplicado detectado:", item.id);
+                process.exit(1);
+              }
+              seenIds.add(item.id);
             }
             console.log("Validação de integridade do newsData.json aprovada com " + data.length + " artigos.");
           '
@@ -89,6 +95,7 @@ jobs:
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
             echo "Alterações detectadas nas notícias oficiais. Efetuando commit..."
             git commit -m "data(noticias): atualização automática das notícias oficiais [skip ci]"
+            git pull --rebase origin main || true
             git push
           fi
 

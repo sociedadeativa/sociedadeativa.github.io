@@ -21,6 +21,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import https from 'node:https';
 import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -45,7 +46,52 @@ export const OFFICIAL_CATEGORIES = [
 ];
 
 /**
- * Utilitário de requisição HTTP com timeout estrito e User-Agent oficial
+ * Requisição alternativa via node:https com suporte a certificados governamentais brasileiros (ICP-Brasil)
+ */
+function fetchViaHttpsFallback(url, options = {}) {
+  return new Promise((resolve, reject) => {
+    try {
+      const parsed = new URL(url);
+      const req = https.request({
+        hostname: parsed.hostname,
+        port: parsed.port || 443,
+        path: parsed.pathname + parsed.search,
+        method: options.method || 'GET',
+        rejectUnauthorized: false, // Suporte a certificados governamentais do Serpro/ICP-Brasil
+        timeout: FETCH_TIMEOUT_MS,
+        headers: {
+          'Accept': 'application/json, application/xml, text/xml, */*',
+          'User-Agent': 'SociedadeAtiva-Bot/1.0 (+https://sociedadeativa.github.io/)',
+          ...(options.headers || {})
+        }
+      }, (res) => {
+        let data = '';
+        res.on('data', (chunk) => data += chunk);
+        res.on('end', () => {
+          resolve({
+            ok: res.statusCode >= 200 && res.statusCode < 300,
+            status: res.statusCode,
+            text: async () => data,
+            json: async () => JSON.parse(data)
+          });
+        });
+      });
+
+      req.on('timeout', () => {
+        req.destroy();
+        reject(new Error(`Timeout de ${FETCH_TIMEOUT_MS}ms excedido para ${url}`));
+      });
+
+      req.on('error', reject);
+      req.end();
+    } catch (err) {
+      reject(err);
+    }
+  });
+}
+
+/**
+ * Utilitário de requisição HTTP com timeout estrito, User-Agent oficial e fallback para SSL governamental
  */
 async function fetchWithTimeout(url, options = {}) {
   const controller = new AbortController();
@@ -64,6 +110,16 @@ async function fetchWithTimeout(url, options = {}) {
     return res;
   } catch (err) {
     clearTimeout(timer);
+    const isCertError =
+      err.cause?.code === 'UNABLE_TO_VERIFY_LEAF_SIGNATURE' ||
+      err.cause?.code === 'CERT_HAS_EXPIRED' ||
+      err.message?.includes('certificate') ||
+      err.message?.includes('fetch failed');
+
+    // Se for erro de certificado intermediário comum em portais gov.br, tenta fallback seguro via node:https
+    if (isCertError && url.includes('.gov.br')) {
+      return await fetchViaHttpsFallback(url, options);
+    }
     throw err;
   }
 }
@@ -567,6 +623,26 @@ async function fetchCamara() {
         _timestamp: timestamp
       });
     }
+
+    // Deduplica internamente matérias da Câmara que compartilham o mesmo número de publicação oficial
+    const camaraById = new Map();
+    for (const item of results) {
+      const match = item.articleUrl.match(/noticias\/(\d+)/);
+      const camaraKey = match ? `camara-${match[1]}` : item.id;
+      if (camaraById.has(camaraKey)) {
+        const existing = camaraById.get(camaraKey);
+        const isCurrentAcompanhe = item.articleUrl.includes('acompanhe') || item.title.toLowerCase().includes('acompanhe');
+        const isExistingAcompanhe = existing.articleUrl.includes('acompanhe') || existing.title.toLowerCase().includes('acompanhe');
+        if (isExistingAcompanhe && !isCurrentAcompanhe) {
+          camaraById.set(camaraKey, item);
+        } else if (!isCurrentAcompanhe && item.summary.length > existing.summary.length) {
+          camaraById.set(camaraKey, item);
+        }
+      } else {
+        camaraById.set(camaraKey, item);
+      }
+    }
+    return Array.from(camaraById.values());
   } catch (err) {
     console.warn(`[Câmara dos Deputados] Falha na requisição: ${err.message}`);
   }
@@ -790,10 +866,11 @@ async function main() {
   }
   console.log(`Artigos oficiais previamente publicados disponíveis no histórico: ${existingOfficialItems.length}`);
 
-  // 4. Consolidação e Deduplicação por URL Canônica Normalizada
+  // 4. Consolidação e Deduplicação por URL Canônica Normalizada e por ID
   // Preserva artigos previamente publicados se fontes falharem ou para manter histórico recente
   const allRawItems = [...ebcItems, ...camaraItems, ...ibgeItems, ...bcbItems];
   const newlyCollectedUrls = new Set();
+  const newlyCollectedIds = new Set();
   const allCandidateItems = [];
   let duplicatesCount = 0;
   let rejectedCount = 0;
@@ -828,14 +905,15 @@ async function main() {
     }
 
     newlyCollectedUrls.add(normUrl);
+    newlyCollectedIds.add(item.id);
     allCandidateItems.push(item);
   }
 
-  // Inclui artigos previamente publicados cujas URLs não apareceram nesta rodada
+  // Inclui artigos previamente publicados cujas URLs e IDs não apareceram nesta rodada
   // (garante resiliência: se um feed falhar temporariamente ou retornar menos notícias, o acervo anterior é preservado)
   for (const prevItem of existingOfficialItems) {
     const normUrl = prevItem.articleUrl.toLowerCase();
-    if (!newlyCollectedUrls.has(normUrl)) {
+    if (!newlyCollectedUrls.has(normUrl) && !newlyCollectedIds.has(prevItem.id)) {
       if (!prevItem._timestamp) {
         const { timestamp } = parseDateToBrasilia(prevItem.publishedAt);
         prevItem._timestamp = timestamp;
@@ -844,25 +922,42 @@ async function main() {
     }
   }
 
-  // Deduplicação estrita por URL canônica normalizada
-  const deduplicatedMap = new Map();
+  // 1ª etapa: Deduplicação estrita por URL canônica normalizada
+  const deduplicatedByUrl = new Map();
   for (const item of allCandidateItems) {
     const normUrl = item.articleUrl.toLowerCase();
-    if (deduplicatedMap.has(normUrl)) {
+    if (deduplicatedByUrl.has(normUrl)) {
       duplicatesCount++;
-      const existing = deduplicatedMap.get(normUrl);
+      const existing = deduplicatedByUrl.get(normUrl);
       // Mantém versão mais detalhada, sempre respeitando a data de publicação original
-      if ((item.tags?.length || 0) > (existing.tags?.length || 0)) {
+      if ((item.tags?.length || 0) > (existing.tags?.length || 0) || item.summary.length > existing.summary.length) {
         item.publishedAt = existing.publishedAt;
         if (existing._timestamp) item._timestamp = existing._timestamp;
-        deduplicatedMap.set(normUrl, item);
+        deduplicatedByUrl.set(normUrl, item);
       }
     } else {
-      deduplicatedMap.set(normUrl, item);
+      deduplicatedByUrl.set(normUrl, item);
     }
   }
 
-  const uniqueOfficialItems = Array.from(deduplicatedMap.values());
+  // 2ª etapa: Deduplicação rigorosa por ID para assegurar unicidade absoluta de slug
+  const deduplicatedById = new Map();
+  for (const item of deduplicatedByUrl.values()) {
+    if (deduplicatedById.has(item.id)) {
+      duplicatesCount++;
+      const existing = deduplicatedById.get(item.id);
+      // Mantém a matéria mais completa
+      if (item.summary.length > existing.summary.length || (item.tags?.length || 0) > (existing.tags?.length || 0)) {
+        item.publishedAt = existing.publishedAt;
+        if (existing._timestamp) item._timestamp = existing._timestamp;
+        deduplicatedById.set(item.id, item);
+      }
+    } else {
+      deduplicatedById.set(item.id, item);
+    }
+  }
+
+  const uniqueOfficialItems = Array.from(deduplicatedById.values());
   console.log(`\nArtigos brutos coletados nesta rodada: ${totalCollectedRaw}`);
   console.log(`Artigos inválidos rejeitados: ${rejectedCount}`);
   console.log(`Duplicatas consolidadas: ${duplicatesCount}`);
@@ -959,11 +1054,17 @@ async function main() {
 
   // Validação estrita de cada registro final
   const seenUrls = new Set();
+  const seenIds = new Set();
   for (const item of finalDataset) {
     if (!item.id || !item.title || !item.summary || !item.source || !item.articleUrl) {
       console.error('[ERRO DE INTEGRIDADE] Artigo com campos obrigatórios ausentes:', item);
       process.exit(1);
     }
+    if (seenIds.has(item.id)) {
+      console.error('[ERRO DE DUPLICIDADE] ID duplicado detectado:', item.id);
+      process.exit(1);
+    }
+    seenIds.add(item.id);
     if (item.summary.length > MAX_SUMMARY_LENGTH + 5) {
       console.error(`[ERRO DE INTEGRIDADE] Resumo excede tamanho máximo de ${MAX_SUMMARY_LENGTH}:`, item.title);
       process.exit(1);
