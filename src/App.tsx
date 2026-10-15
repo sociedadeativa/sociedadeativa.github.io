@@ -19,6 +19,7 @@ import { EstadosPage } from "./pages/EstadosPage";
 import { DadosPublicosPage } from "./pages/DadosPublicosPage";
 import { NoticiasPage } from "./pages/NoticiasPage";
 import { EsportesPage } from "./pages/EsportesPage";
+import { ClimaPage } from "./pages/ClimaPage";
 import { SobrePage } from "./pages/SobrePage";
 import { ArticlePage } from "./pages/ArticlePage";
 
@@ -136,6 +137,13 @@ export default function App() {
 
         {currentRoute === "esportes" && (
           <EsportesPage
+            articles={articles}
+            onOpenArticleDetails={(art) => goToArticle(art.id)}
+          />
+        )}
+
+        {currentRoute === "clima" && (
+          <ClimaPage
             articles={articles}
             onOpenArticleDetails={(art) => goToArticle(art.id)}
           />

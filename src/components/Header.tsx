@@ -97,6 +97,12 @@ export const Header: React.FC<HeaderProps> = ({
       colorClass: "hover:text-emerald-700",
       activeClass: "text-emerald-700 font-black border-b-2 border-emerald-600",
     },
+    {
+      route: "clima",
+      label: "Clima",
+      colorClass: "hover:text-sky-700",
+      activeClass: "text-sky-700 font-black border-b-2 border-sky-600",
+    },
   ];
 
   return (

@@ -100,7 +100,7 @@ function generateSitemap(generatedArticles) {
   const DIST_SITEMAP = path.join(DIST_DIR, 'sitemap.xml');
   const BASE_SITEMAP = path.join(rootDir, 'public', 'sitemap.xml');
 
-  // As 8 seções canônicas principais do portal Sociedade Ativa
+  // As seções canônicas principais do portal Sociedade Ativa
   const canonicalSections = [
     { loc: 'https://sociedadeativa.github.io/', defaultDate: '2026-10-13' },
     { loc: 'https://sociedadeativa.github.io/politica/', defaultDate: '2026-10-13' },
@@ -110,6 +110,7 @@ function generateSitemap(generatedArticles) {
     { loc: 'https://sociedadeativa.github.io/dados-publicos/', defaultDate: '2026-10-13' },
     { loc: 'https://sociedadeativa.github.io/noticias/', defaultDate: '2026-10-13' },
     { loc: 'https://sociedadeativa.github.io/esportes/', defaultDate: '2026-10-14' },
+    { loc: 'https://sociedadeativa.github.io/clima/', defaultDate: '2026-10-15' },
     { loc: 'https://sociedadeativa.github.io/sobre/', defaultDate: '2026-10-13' },
   ];
 

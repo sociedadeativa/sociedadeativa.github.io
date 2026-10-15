@@ -7,6 +7,7 @@ export type PortalRoute =
   | "dados-publicos"
   | "noticias"
   | "esportes"
+  | "clima"
   | "sobre"
   | "artigo";
 
@@ -127,6 +128,19 @@ export const ROUTE_CONFIGS: Record<PortalRoute, RouteConfig> = {
     badgeText: "text-emerald-800",
     badgeBorder: "border-emerald-200",
   },
+  clima: {
+    route: "clima",
+    path: "/clima/",
+    label: "Clima",
+    title: "Clima — Sociedade Ativa | Previsão do Tempo, Temperatura e Alertas",
+    description:
+      "Previsão do tempo, temperatura atual, sensação térmica, umidade, vento, previsão para 7 dias e alertas meteorológicos no Brasil e no mundo com desambiguação geográfica. Demonstração de dados fictícios.",
+    categoryTag: "Clima",
+    accentColor: "sky",
+    badgeBg: "bg-sky-50",
+    badgeText: "text-sky-800",
+    badgeBorder: "border-sky-200",
+  },
   sobre: {
     route: "sobre",
     path: "/sobre/",
@@ -240,6 +254,7 @@ export function getRouteFromPath(pathname: string, searchStr?: string): PortalRo
   if (clean.startsWith("dados-publicos")) return "dados-publicos";
   if (clean.startsWith("noticias")) return "noticias";
   if (clean.startsWith("esportes")) return "esportes";
+  if (clean.startsWith("clima")) return "clima";
   if (clean.startsWith("sobre")) return "sobre";
 
   return "home";

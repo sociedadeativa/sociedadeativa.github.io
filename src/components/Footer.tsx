@@ -85,6 +85,11 @@ export const Footer: React.FC<FooterProps> = ({
                   Esportes &amp; Futebol
                 </PortalLink>
               </li>
+              <li>
+                <PortalLink route="clima" className="hover:text-white transition-colors">
+                  Clima &amp; Meteorologia
+                </PortalLink>
+              </li>
             </ul>
           </div>
 
