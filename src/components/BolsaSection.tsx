@@ -90,7 +90,9 @@ export const BolsaSection: React.FC = () => {
               <th className="py-2.5 px-3 text-right">Cotação</th>
               <th className="py-2.5 px-3 text-right">Var. Diária</th>
               <th className="py-2.5 px-3 text-right">Vol. Financeiro (R$)</th>
-              <th className="py-2.5 px-3 text-right hidden sm:table-cell">Sessão / Horário</th>
+              <th className="py-2.5 px-3 text-right hidden sm:table-cell">
+                {isMarketOpen ? "Horário (15m)" : "Fechamento"}
+              </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-100">
@@ -124,7 +126,7 @@ export const BolsaSection: React.FC = () => {
                   {item.formattedFinancialVolume}
                 </td>
                 <td className="py-2.5 px-3 text-right text-[11px] text-slate-500 font-mono hidden sm:table-cell">
-                  {item.timestamp}
+                  {isMarketOpen ? item.timestamp.split(" ")[1] || item.timestamp : `${item.tradingSession} (Fech.)`}
                 </td>
               </tr>
             ))}
@@ -232,7 +234,7 @@ export const BolsaSection: React.FC = () => {
               aria-hidden="true"
             />
             <span>
-              {isMarketOpen ? "Pregão Aberto (15 min defasagem)" : "Mercado Fechado"}
+              {isMarketOpen ? "Pregão Aberto (15 min defasagem)" : "Mercado Fechado (Fechamento Oficial)"}
             </span>
           </div>
 
