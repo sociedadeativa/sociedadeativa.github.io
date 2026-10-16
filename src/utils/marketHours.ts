@@ -102,23 +102,33 @@ export function getB3MarketStatus(
     const isTradingHours = timeInMinutes >= 600 && timeInMinutes <= 1075;
     const isCalendarOpen = !isWeekend && !isHoliday && isTradingHours;
 
-    // Avaliação da natureza dos dados:
-    // Cotações marcadas com 18:00 (ou horário de fechamento), com status fechado ou cuja sessão seja de dia anterior
-    // representam exclusivamente o fechamento consolidado e NUNCA devem ser rotuladas como pregão ao vivo.
-    const is1800Closing = Boolean(
-      dataContext?.timestamp &&
-        (/(?:18:\d\d|18h\d\d|19:\d\d|19h\d\d)/i.test(dataContext.timestamp) ||
-          /fechamento/i.test(dataContext.timestamp))
-    );
-    const isExplicitFechado = dataContext?.marketStatus === "fechado";
-    const isPreviousSession = Boolean(
-      dataContext?.tradingSession && dataContext.tradingSession !== todayBrtDate
-    );
-    const isClosingData = is1800Closing || isExplicitFechado || isPreviousSession;
+    // Avaliação da natureza e consistência dos dados da fonte:
+    const rawTimestamp = String(dataContext?.timestamp || "").trim();
+    const rawSession = String(dataContext?.tradingSession || "").trim();
+    const rawStatus = String(dataContext?.marketStatus || "").trim().toLowerCase();
 
-    // O status do pregão exibido só é "aberto" se o horário do calendário estiver ativo
-    // E os dados fornecidos forem comprovadamente intradiários do pregão de hoje.
-    const isOpen = isCalendarOpen && !isClosingData;
+    // 1. Dados marcados com horário de fechamento oficial (18:00 ou posterior) ou palavra-chave fechamento
+    // NUNCA devem ser rotulados como pregão ao vivo ou sessão ativa.
+    const is1800OrAfterClosing =
+      /(?:18:\d\d|18h\d\d|19:\d\d|19h\d\d|20:\d\d|20h\d\d)/i.test(rawTimestamp) ||
+      /fechamento/i.test(rawTimestamp) ||
+      /fechamento/i.test(rawSession);
+
+    // 2. Status explícito de mercado fechado informado pela fonte de dados
+    const isExplicitFechado = rawStatus === "fechado";
+
+    // 3. Se a sessão de dados pertence a uma data anterior à data corrente em Brasília (ex: dados de 15/10 quando hoje é 16/10)
+    const sessionDateClean = rawSession.split(" ")[0].replace(/[^0-9/]/g, "");
+    const isPreviousDateSession = Boolean(sessionDateClean && sessionDateClean !== todayBrtDate);
+
+    // Consolidação: se qualquer um dos critérios indicar fechamento, os dados representam o último fechamento oficial
+    const isClosingData = is1800OrAfterClosing || isExplicitFechado || isPreviousDateSession;
+
+    // O status do pregão só é "aberto" se:
+    // a) O calendário estiver em horário regular (seg-sex, 10h00 às 17h55 BRT, sem feriados);
+    // b) Os dados da fonte NÃO forem de fechamento (não sejam 18:00, não tenham status fechado, não sejam de sessão anterior);
+    // c) Houver carimbo de data/hora válido confirmando cotação intradiária de hoje.
+    const isOpen = isCalendarOpen && !isClosingData && Boolean(rawTimestamp);
 
     if (isOpen) {
       return {
@@ -135,10 +145,13 @@ export function getB3MarketStatus(
     }
 
     let statusDetailedText = "Mercado Fechado (Último Fechamento Consolidado)";
-    if (isClosingData && isCalendarOpen) {
-      statusDetailedText = dataContext?.tradingSession
-        ? `Último Fechamento Consolidado (${dataContext.tradingSession})`
-        : "Último Fechamento Consolidado";
+    let statusShortLabel = "Mercado Fechado";
+
+    if (isClosingData) {
+      const displayDate = sessionDateClean || todayBrtDate;
+      const displayTime = rawTimestamp.split(" ")[1] || (rawTimestamp.includes(":") ? rawTimestamp : "18:00");
+      statusDetailedText = `Último Fechamento Oficial (${displayDate} às ${displayTime})`;
+      statusShortLabel = isCalendarOpen ? "Fechamento Oficial" : "Mercado Fechado";
     } else if (isWeekend) {
       statusDetailedText = "Mercado Fechado (Fim de semana)";
     } else if (isHoliday) {
@@ -146,13 +159,13 @@ export function getB3MarketStatus(
     } else if (timeInMinutes < 600) {
       statusDetailedText = "Mercado Fechado (Abertura às 10h00 BRT)";
     } else {
-      statusDetailedText = "Mercado Fechado (Pregão Encerrado)";
+      statusDetailedText = "Mercado Fechado (Pregão Encerrado às 17h55 BRT)";
     }
 
     return {
       isOpen: false,
       status: "fechado",
-      statusShortLabel: "Mercado Fechado",
+      statusShortLabel,
       statusDetailedText,
       delayNotice,
       isDelayed: true,
@@ -165,7 +178,7 @@ export function getB3MarketStatus(
       isOpen: false,
       status: "fechado",
       statusShortLabel: "Mercado Fechado",
-      statusDetailedText: "Mercado Fechado (Último Fechamento Consolidado)",
+      statusDetailedText: "Mercado Fechado (Último Fechamento Oficial)",
       delayNotice,
       isDelayed: true,
       sourceUrl,

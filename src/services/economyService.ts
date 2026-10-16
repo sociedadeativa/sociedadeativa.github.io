@@ -106,20 +106,28 @@ export function normalizeEconomicIndicator(raw: any): EconomicIndicator {
     raw.methodologySummary || "Metodologia oficial apurada pelos órgãos estatísticos e bolsas do Brasil."
   ).trim();
 
-  const b3MarketInfo = source === "B3" ? getB3MarketStatus() : null;
-  const marketStatus = raw.marketStatus === "aberto" || raw.marketStatus === "fechado"
+  const quoteTimestamp = raw.quoteTimestamp ? String(raw.quoteTimestamp).trim() : undefined;
+  const b3MarketInfo = source === "B3" ? getB3MarketStatus(new Date(), {
+    timestamp: quoteTimestamp || raw.updatedAt,
+    tradingSession: raw.referencePeriod,
+    marketStatus: raw.marketStatus,
+  }) : null;
+  const marketStatus = b3MarketInfo
+    ? b3MarketInfo.status
+    : raw.marketStatus === "aberto" || raw.marketStatus === "fechado"
     ? raw.marketStatus
-    : b3MarketInfo?.status;
-  const marketStatusText = raw.marketStatusText
+    : undefined;
+  const marketStatusText = b3MarketInfo
+    ? b3MarketInfo.statusDetailedText
+    : raw.marketStatusText
     ? String(raw.marketStatusText).trim()
-    : b3MarketInfo?.statusDetailedText;
+    : undefined;
   const isDelayed = typeof raw.isDelayed === "boolean" ? raw.isDelayed : source === "B3";
   const delayNotice = raw.delayNotice
     ? String(raw.delayNotice).trim()
     : b3MarketInfo?.delayNotice || (source === "B3"
         ? "Cotações públicas com defasagem regulatória mínima de 15 minutos (B3). Valores de fechamento não constituem cotação em tempo real."
         : undefined);
-  const quoteTimestamp = raw.quoteTimestamp ? String(raw.quoteTimestamp).trim() : undefined;
 
   const historicalData = Array.isArray(raw.historicalData)
     ? raw.historicalData.map((pt: any) => ({

@@ -91,7 +91,7 @@ export const BolsaSection: React.FC = () => {
               <th className="py-2.5 px-3 text-right">Var. Diária</th>
               <th className="py-2.5 px-3 text-right">Vol. Financeiro (R$)</th>
               <th className="py-2.5 px-3 text-right hidden sm:table-cell">
-                {isMarketOpen ? "Horário (15m)" : "Fechamento"}
+                {isMarketOpen ? "Horário (15m defasagem)" : "Sessão / Fechamento"}
               </th>
             </tr>
           </thead>
@@ -126,7 +126,9 @@ export const BolsaSection: React.FC = () => {
                   {item.formattedFinancialVolume}
                 </td>
                 <td className="py-2.5 px-3 text-right text-[11px] text-slate-500 font-mono hidden sm:table-cell">
-                  {isMarketOpen ? item.timestamp.split(" ")[1] || item.timestamp : `${item.tradingSession} (Fech.)`}
+                  {isMarketOpen
+                    ? `${item.timestamp.split(" ")[1] || item.timestamp} (15m)`
+                    : `${item.tradingSession} ${item.timestamp.split(" ")[1] || "18:00"}`}
                 </td>
               </tr>
             ))}
@@ -234,7 +236,9 @@ export const BolsaSection: React.FC = () => {
               aria-hidden="true"
             />
             <span>
-              {isMarketOpen ? "Pregão Aberto (15 min defasagem)" : "Mercado Fechado (Fechamento Oficial)"}
+              {isMarketOpen
+                ? "Pregão Aberto (15 min defasagem)"
+                : `Mercado Fechado (Último Fechamento Oficial · ${marketData.tradingSession})`}
             </span>
           </div>
 
@@ -285,7 +289,7 @@ export const BolsaSection: React.FC = () => {
                 {ibov.indexName}
               </span>
               <span className="text-[10px] text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded">
-                {isMarketOpen ? "Pregão em Andamento" : "Último Fechamento Consolidado"}
+                {isMarketOpen ? "Pregão em Andamento (15m defasagem)" : "Último Fechamento Oficial"}
               </span>
             </div>
 
@@ -327,7 +331,9 @@ export const BolsaSection: React.FC = () => {
               </span>
             </div>
             <div className="flex justify-between items-center gap-4">
-              <span className="text-slate-400">Data e Hora da Cotação:</span>
+              <span className="text-slate-400">
+                {isMarketOpen ? "Horário da Cotação:" : "Data e Hora do Fechamento:"}
+              </span>
               <span className="font-mono text-slate-200">
                 {ibov.timestamp}
               </span>
@@ -336,8 +342,8 @@ export const BolsaSection: React.FC = () => {
               <span className="text-slate-400">Regime de Cotação:</span>
               <span className="text-slate-300">
                 {isMarketOpen
-                  ? "Cotação pública com defasagem de 15 min"
-                  : `Fechamento de ${ibov.tradingSession}`}
+                  ? "Cotação pública com defasagem de 15 min (B3)"
+                  : `Fechamento oficial da sessão de ${ibov.tradingSession}`}
               </span>
             </div>
             <div className="pt-2 border-t border-white/10 flex items-center justify-between gap-3 text-[11px]">
@@ -360,8 +366,8 @@ export const BolsaSection: React.FC = () => {
           <Info className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
           <p className="leading-relaxed">
             {isMarketOpen
-              ? "Cotações públicas possuem defasagem mínima de 15 minutos em cumprimento à regulação da B3."
-              : `O mercado está fechado neste momento. O valor exibido corresponde ao fechamento oficial da sessão de ${ibov.tradingSession}. Não tratamos o fechamento anterior como cotação ao vivo.`}
+              ? "Cotações públicas possuem defasagem regulatória mínima de 15 minutos em cumprimento às normas da B3."
+              : `O mercado está fechado neste momento ou exibindo dados consolidados de encerramento. O valor exibido corresponde ao último fechamento oficial da sessão de ${ibov.tradingSession} às ${ibov.timestamp.split(" ")[1] || "18:00"}. Valores de fechamento não constituem cotação em tempo real.`}
           </p>
         </div>
       </div>
@@ -409,7 +415,9 @@ export const BolsaSection: React.FC = () => {
           </div>
 
           <span className="text-[11px] text-slate-500 font-mono">
-            Sessão: {marketData.tradingSession}
+            {isMarketOpen
+              ? `Sessão ativa: ${marketData.tradingSession}`
+              : `Sessão de fechamento: ${marketData.tradingSession}`}
           </span>
         </div>
 
@@ -459,16 +467,34 @@ export const BolsaSection: React.FC = () => {
           <div className="flex items-center gap-1.5">
             <Calendar className="w-3.5 h-3.5 text-slate-400" />
             <span>
-              Pregão de referência: <strong>{marketData.tradingSession}</strong> · Fechamento oficial às{" "}
-              <strong>{marketData.timestamp.split(" ")[1] || "18:00"}</strong>
+              {isMarketOpen ? (
+                <>
+                  Pregão ativo: <strong>{marketData.tradingSession}</strong> · Cotações com{" "}
+                  <strong>15 min de defasagem</strong>
+                </>
+              ) : (
+                <>
+                  Último fechamento oficial: <strong>{marketData.tradingSession}</strong> às{" "}
+                  <strong>{marketData.timestamp.split(" ")[1] || "18:00"}</strong>
+                </>
+              )}
             </span>
           </div>
           <span className="hidden sm:inline text-slate-300">•</span>
           <div className="flex items-center gap-1.5">
             <Clock className="w-3.5 h-3.5 text-slate-400" />
             <span>
-              Última atualização com sucesso:{" "}
-              <strong>{marketData.lastSuccessfulUpdate || marketData.timestamp}</strong>
+              {isMarketOpen ? (
+                <>
+                  Horário da cotação:{" "}
+                  <strong>{marketData.timestamp}</strong>
+                </>
+              ) : (
+                <>
+                  Fechamento registrado em:{" "}
+                  <strong>{marketData.lastSuccessfulUpdate || marketData.timestamp}</strong>
+                </>
+              )}
             </span>
           </div>
         </div>

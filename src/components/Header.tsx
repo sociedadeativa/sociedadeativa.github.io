@@ -38,15 +38,18 @@ export const Header: React.FC<HeaderProps> = ({
   const dolarVal = dolarIndicator?.formattedValue || "R$ 4,99";
   const dolarRef = dolarIndicator?.referencePeriod || "PTAX 09/10/2026";
 
-  const b3MarketInfo = getB3MarketStatus();
+  const ibovTimestamp = ibovIndicator?.quoteTimestamp || ibovIndicator?.updatedAt || "15/10/2026 18:00";
+  const b3MarketInfo = getB3MarketStatus(new Date(), {
+    timestamp: ibovTimestamp,
+    tradingSession: ibovIndicator?.referencePeriod,
+    marketStatus: ibovIndicator?.marketStatus,
+  });
   const hasIbovValue = ibovIndicator?.value !== null && ibovIndicator?.value !== undefined;
   const ibovVal = hasIbovValue
     ? ibovIndicator.formattedValue
     : "Dados indisponíveis no momento.";
   const ibovVariationInfo = formatDailyVariation(ibovIndicator?.variation ?? null);
-  const ibovTimestamp = ibovIndicator?.quoteTimestamp || "09/10/2026 18:00";
-  const ibovStatus = ibovIndicator?.marketStatus || b3MarketInfo.status;
-  const isIbovOpen = ibovStatus === "aberto";
+  const isIbovOpen = b3MarketInfo.isOpen;
 
   const mainNavLinks: { route: PortalRoute; label: string; colorClass: string; activeClass: string }[] = [
     {
@@ -164,8 +167,8 @@ export const Header: React.FC<HeaderProps> = ({
                   title={`Ibovespa (IBOV): ${ibovVal} (${ibovVariationInfo.formatted}). ${
                     isIbovOpen
                       ? "Pregão Aberto (cotações públicas com defasagem regulatória mínima de 15 min)."
-                      : "Mercado Fechado (último fechamento consolidado)."
-                  } Cotação: ${ibovTimestamp}. Fonte oficial: B3.`}
+                      : "Mercado Fechado (último fechamento oficial consolidado)."
+                  } ${isIbovOpen ? "Cotação:" : "Fechamento:"} ${ibovTimestamp}. Fonte oficial: B3.`}
                 >
                   <strong className="text-emerald-400 font-sans font-bold text-[11px]">Ibovespa (IBOV):</strong>
                   <span>{ibovVal}</span>
