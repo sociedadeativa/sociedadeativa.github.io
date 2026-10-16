@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name || 'main' }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

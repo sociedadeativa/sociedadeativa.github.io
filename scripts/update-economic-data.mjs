@@ -386,111 +386,155 @@ async function fetchB3Ibovespa(existingIndicator) {
   const fallbackQuoteTimestamp = existingIndicator?.quoteTimestamp || existingIndicator?.updatedAt || `${fallbackSessionDate} 18:00`;
   const fetchTimestamp = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', hour12: false });
 
-  try {
-    const res = await fetchWithTimeout('https://query1.finance.yahoo.com/v8/finance/chart/%5EBVSP?interval=1d&range=5d', {
-      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
-    });
-    if (res.ok) {
-      const data = await res.json();
-      const meta = data?.chart?.result?.[0]?.meta;
-      const quote = data?.chart?.result?.[0]?.indicators?.quote?.[0];
-      const timestamps = data?.chart?.result?.[0]?.timestamp;
+  const IBOV_ENDPOINTS = [
+    'https://query1.finance.yahoo.com/v8/finance/chart/%5EBVSP?interval=1d&range=5d',
+    'https://query2.finance.yahoo.com/v8/finance/chart/%5EBVSP?interval=1d&range=5d'
+  ];
 
-      if (meta && quote && timestamps?.length >= 2) {
-        const lastIdx = timestamps.length - 1;
-        const prevIdx = lastIdx - 1;
+  let rawData = null;
+  let lastError = null;
 
-        const livePrice = Math.round(
-          (typeof meta.regularMarketPrice === 'number' && !isNaN(meta.regularMarketPrice))
-            ? meta.regularMarketPrice
-            : (typeof quote.close?.[lastIdx] === 'number' && !isNaN(quote.close[lastIdx]) ? quote.close[lastIdx] : fallbackPoints)
-        );
-
-        const livePrev = Math.round(
-          (typeof quote.close?.[prevIdx] === 'number' && !isNaN(quote.close[prevIdx]))
-            ? quote.close[prevIdx]
-            : (typeof meta.chartPreviousClose === 'number' ? meta.chartPreviousClose : fallbackPrevPoints)
-        );
-
-        const liveVar = livePrev > 0 ? parseFloat((((livePrice - livePrev) / livePrev) * 100).toFixed(2)) : fallbackVariation;
-
-        const quoteTimeSec = meta.regularMarketTime || timestamps[lastIdx];
-        const quoteDate = new Date(quoteTimeSec * 1000);
-        const dateStr = quoteDate.toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' });
-        const timeStr = quoteDate.toLocaleTimeString('pt-BR', {
-          timeZone: 'America/Sao_Paulo',
-          hour: '2-digit',
-          minute: '2-digit',
-          hour12: false
-        });
-        const quoteTimestamp = `${dateStr} ${timeStr}`;
-
-        // Determinação do status da sessão em horário de Brasília
-        const formatter = new Intl.DateTimeFormat('en-US', {
-          timeZone: 'America/Sao_Paulo',
-          hour12: false,
-          year: 'numeric',
-          month: 'numeric',
-          day: 'numeric',
-          hour: 'numeric',
-          minute: 'numeric',
-          weekday: 'short',
-        });
-        const parts = formatter.formatToParts(quoteDate);
-        const getPart = (type) => parts.find((p) => p.type === type)?.value || '';
-        const day = parseInt(getPart('day'), 10);
-        const month = parseInt(getPart('month'), 10);
-        const hour = parseInt(getPart('hour'), 10);
-        const minute = parseInt(getPart('minute'), 10);
-        const weekday = getPart('weekday');
-
-        const isWeekend = weekday === 'Sat' || weekday === 'Sun';
-        const isHoliday =
-          (month === 1 && day === 1) ||
-          (month === 4 && day === 21) ||
-          (month === 5 && day === 1) ||
-          (month === 9 && day === 7) ||
-          (month === 10 && day === 12) ||
-          (month === 11 && day === 2) ||
-          (month === 11 && day === 15) ||
-          (month === 11 && day === 20) ||
-          (month === 12 && day === 25);
-
-        const timeInMinutes = hour * 60 + minute;
-        // Horário de negociação B3: das 10h00 (600 min) às 17h55 (1075 min)
-        const isDuringTradingHours = !isWeekend && !isHoliday && timeInMinutes >= 600 && timeInMinutes <= 1075;
-        const marketStatus = isDuringTradingHours ? 'aberto' : 'fechado';
-        const marketStatusText = isDuringTradingHours
-          ? 'Pregão Aberto (15 min defasagem)'
-          : `Mercado Fechado (Último Fechamento Oficial · ${dateStr})`;
-        const referencePeriod = isDuringTradingHours
-          ? `${dateStr} (Pregão em andamento)`
-          : `${dateStr} (Fechamento)`;
-
-        return {
-          value: livePrice,
-          formattedValue: `${livePrice.toLocaleString('pt-BR')} pts`,
-          previousValue: livePrev,
-          formattedPreviousValue: `${livePrev.toLocaleString('pt-BR')} pts`,
-          variation: liveVar,
-          variationPeriod: `vs. pregão anterior (${liveVar >= 0 ? '+' : ''}${liveVar.toFixed(2).replace('.', ',')}%)`,
-          referencePeriod,
-          quoteTimestamp,
-          updatedAt: quoteTimestamp,
-          lastSuccessfulUpdate: fetchTimestamp,
-          sessionDate: dateStr,
-          marketStatus,
-          marketStatusText,
-          isDelayed: true,
-          isStale: false,
-        };
+  for (const endpoint of IBOV_ENDPOINTS) {
+    try {
+      const res = await fetchWithTimeout(endpoint, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'Accept': 'application/json'
+        }
+      });
+      if (res.ok) {
+        rawData = await res.json();
+        break;
+      } else {
+        const msg = `HTTP ${res.status} (${res.statusText})`;
+        console.warn(`[Ibovespa] Provedor ${endpoint} respondeu com ${msg}`);
+        lastError = new Error(msg);
       }
+    } catch (err) {
+      console.warn(`[Ibovespa] Falha ao consultar ${endpoint}: ${err.message}`);
+      lastError = err;
     }
-  } catch (err) {
-    console.warn(`[Ibovespa] Falha na consulta em tempo real: ${err.message}. Preservando última cotação válida auditada.`);
+  }
+
+  if (rawData) {
+    const meta = rawData?.chart?.result?.[0]?.meta;
+    const quote = rawData?.chart?.result?.[0]?.indicators?.quote?.[0];
+    const timestamps = rawData?.chart?.result?.[0]?.timestamp;
+
+    if (meta && quote && timestamps?.length >= 2) {
+      const lastIdx = timestamps.length - 1;
+      const prevIdx = lastIdx - 1;
+
+      const livePrice = Math.round(
+        (typeof meta.regularMarketPrice === 'number' && !isNaN(meta.regularMarketPrice))
+          ? meta.regularMarketPrice
+          : (typeof quote.close?.[lastIdx] === 'number' && !isNaN(quote.close[lastIdx]) ? quote.close[lastIdx] : fallbackPoints)
+      );
+
+      const livePrev = Math.round(
+        (typeof quote.close?.[prevIdx] === 'number' && !isNaN(quote.close[prevIdx]))
+          ? quote.close[prevIdx]
+          : (typeof meta.chartPreviousClose === 'number' ? meta.chartPreviousClose : fallbackPrevPoints)
+      );
+
+      const liveVar = (typeof meta.regularMarketChangePercent === 'number' && !isNaN(meta.regularMarketChangePercent))
+        ? parseFloat(meta.regularMarketChangePercent.toFixed(2))
+        : (livePrev > 0 ? parseFloat((((livePrice - livePrev) / livePrev) * 100).toFixed(2)) : fallbackVariation);
+
+      const quoteTimeSec = meta.regularMarketTime || timestamps[lastIdx];
+      const quoteDate = new Date(quoteTimeSec * 1000);
+      const dateStr = quoteDate.toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+      const timeStr = quoteDate.toLocaleTimeString('pt-BR', {
+        timeZone: 'America/Sao_Paulo',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      });
+      const quoteTimestamp = `${dateStr} ${timeStr}`;
+
+      // Determinação precisa do status do pregão baseada no horário ATUAL de Brasília (now)
+      const now = new Date();
+      const brtFormatter = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Sao_Paulo',
+        hour12: false,
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        weekday: 'short',
+      });
+      const parts = brtFormatter.formatToParts(now);
+      const getPart = (type) => parts.find((p) => p.type === type)?.value || '';
+      const nowDay = parseInt(getPart('day'), 10);
+      const nowMonth = parseInt(getPart('month'), 10);
+      const nowYear = parseInt(getPart('year'), 10);
+      const nowHour = parseInt(getPart('hour'), 10);
+      const nowMinute = parseInt(getPart('minute'), 10);
+      const nowWeekday = getPart('weekday');
+
+      const todayBrtDate = `${String(nowDay).padStart(2, '0')}/${String(nowMonth).padStart(2, '0')}/${nowYear}`;
+      const isWeekend = nowWeekday === 'Sat' || nowWeekday === 'Sun';
+      const isHoliday =
+        (nowMonth === 1 && nowDay === 1) ||
+        (nowMonth === 4 && nowDay === 21) ||
+        (nowMonth === 5 && nowDay === 1) ||
+        (nowMonth === 9 && nowDay === 7) ||
+        (nowMonth === 10 && nowDay === 12) ||
+        (nowMonth === 11 && nowDay === 2) ||
+        (nowMonth === 11 && nowDay === 15) ||
+        (nowMonth === 11 && nowDay === 20) ||
+        (nowMonth === 12 && nowDay === 25);
+
+      const nowMinutes = nowHour * 60 + nowMinute;
+      // Horário de negociação B3: das 10h00 (600 min) às 17h55 (1075 min)
+      const isCalendarOpen = !isWeekend && !isHoliday && nowMinutes >= 600 && nowMinutes <= 1075;
+      const isQuoteFromToday = dateStr === todayBrtDate;
+
+      const isMarketOpen = isCalendarOpen && isQuoteFromToday;
+      const marketStatus = isMarketOpen ? 'aberto' : 'fechado';
+      const isStale = isCalendarOpen && !isQuoteFromToday;
+
+      let marketStatusText = '';
+      let referencePeriod = '';
+
+      if (isMarketOpen) {
+        marketStatusText = 'Pregão Aberto (15 min defasagem)';
+        referencePeriod = `${dateStr} (Pregão em andamento)`;
+      } else if (isCalendarOpen && !isQuoteFromToday) {
+        marketStatusText = `Mercado Aberto (Aguardando cotações de hoje · Último Fechamento: ${dateStr})`;
+        referencePeriod = `${dateStr} (Fechamento)`;
+      } else {
+        marketStatusText = `Mercado Fechado (Último Fechamento Oficial · ${dateStr})`;
+        referencePeriod = `${dateStr} (Fechamento)`;
+      }
+
+      return {
+        value: livePrice,
+        formattedValue: `${livePrice.toLocaleString('pt-BR')} pts`,
+        previousValue: livePrev,
+        formattedPreviousValue: `${livePrev.toLocaleString('pt-BR')} pts`,
+        variation: liveVar,
+        variationPeriod: `vs. pregão anterior (${liveVar >= 0 ? '+' : ''}${liveVar.toFixed(2).replace('.', ',')}%)`,
+        referencePeriod,
+        quoteTimestamp,
+        updatedAt: quoteTimestamp,
+        lastSuccessfulUpdate: fetchTimestamp,
+        lastFetchAttempt: fetchTimestamp,
+        sessionDate: dateStr,
+        marketStatus,
+        marketStatusText,
+        isDelayed: true,
+        isStale,
+        staleNotice: isStale
+          ? `Aviso de cotações em espera: O pregão de hoje está aberto, mas a B3 ainda não disponibilizou os primeiros dados consolidados. Exibindo fechamento de ${dateStr}.`
+          : undefined,
+      };
+    }
   }
 
   // Fallback auditado quando dados em tempo real não estão acessíveis
+  console.warn(`[Ibovespa] Falha na consulta em tempo real: ${lastError?.message || 'Provedor indisponível'}. Preservando última cotação válida auditada.`);
   return {
     value: fallbackPoints,
     formattedValue: `${fallbackPoints.toLocaleString('pt-BR')} pts`,
@@ -501,17 +545,19 @@ async function fetchB3Ibovespa(existingIndicator) {
     referencePeriod: `${fallbackSessionDate} (Fechamento)`,
     quoteTimestamp: fallbackQuoteTimestamp,
     updatedAt: fallbackQuoteTimestamp,
-    lastSuccessfulUpdate: fetchTimestamp,
+    lastSuccessfulUpdate: existingIndicator?.lastSuccessfulUpdate || fallbackQuoteTimestamp,
+    lastFetchAttempt: fetchTimestamp,
     sessionDate: fallbackSessionDate,
     marketStatus: 'fechado',
     marketStatusText: `Mercado Fechado (Base Preservada · ${fallbackSessionDate})`,
     isDelayed: true,
     isStale: true,
-    staleNotice: `Aviso de dados preservados: Exibindo cotações da sessão de ${fallbackSessionDate}. A comunicação em tempo real com a B3 está temporariamente indisponível. Nenhum valor de cotação ou variação foi fabricado.`,
+    staleReason: `Provedor de cotações temporariamente inacessível (${lastError?.message || 'Erro de rede'})`,
+    staleNotice: `Aviso de dados preservados: Exibindo cotações da sessão de ${fallbackSessionDate}. A comunicação em tempo real com a B3 está temporariamente indisponível (${lastError?.message || 'Erro transitório'}). Nenhum valor de cotação ou variação foi fabricado.`,
   };
 }
 
-// Watchlist representativa de alta liquidez do Ibovespa para geração dos rankings oficiais da B3
+// Watchlist representativa de alta liquidez do Ibovespa (todas verificadas e ativas na B3)
 const B3_WATCHLIST = [
   { ticker: 'PETR4', companyName: 'Petrobras PN', sector: 'Petróleo, Gás e Biocombustíveis' },
   { ticker: 'VALE3', companyName: 'Vale S.A. ON', sector: 'Materiais Básicos / Mineração' },
@@ -527,33 +573,45 @@ const B3_WATCHLIST = [
   { ticker: 'CSNA3', companyName: 'CSN ON', sector: 'Siderurgia e Metalurgia' },
   { ticker: 'GGBR4', companyName: 'Gerdau PN', sector: 'Siderurgia e Metalurgia' },
   { ticker: 'SUZB3', companyName: 'Suzano S.A. ON', sector: 'Papel e Celulose' },
-  { ticker: 'JBSS3', companyName: 'JBS S.A. ON', sector: 'Alimentos Processados' },
   { ticker: 'VBBR3', companyName: 'Vibra Energia ON', sector: 'Distribuição de Combustíveis' },
   { ticker: 'RAIL3', companyName: 'Rumo S.A. ON', sector: 'Transporte Ferroviário' },
   { ticker: 'EQTL3', companyName: 'Equatorial Energia ON', sector: 'Utilidade Pública / Energia' },
   { ticker: 'LREN3', companyName: 'Lojas Renner ON', sector: 'Consumo Cíclico / Varejo' },
   { ticker: 'RADL3', companyName: 'RaiaDrogasil ON', sector: 'Saúde / Comércio Farmacêutico' },
-  { ticker: 'EMBR3', companyName: 'Embraer ON', sector: 'Bens Industriais / Aeroespacial' },
   { ticker: 'CYRE3', companyName: 'Cyrela ON', sector: 'Construção Civil' },
-  { ticker: 'CPFE3', companyName: 'CPFL Energia ON', sector: 'Utilidade Pública / Energia' }
+  { ticker: 'CPFE3', companyName: 'CPFL Energia ON', sector: 'Utilidade Pública / Energia' },
+  { ticker: 'BBSE3', companyName: 'BB Seguridade ON', sector: 'Serviços Financeiros' },
+  { ticker: 'BPAC11', companyName: 'BTG Pactual UNT', sector: 'Serviços Financeiros' },
+  { ticker: 'KLBN11', companyName: 'Klabin UNT', sector: 'Papel e Celulose' },
+  { ticker: 'TIMS3', companyName: 'TIM Brasil ON', sector: 'Telecomunicações' },
+  { ticker: 'VIVT3', companyName: 'Telefônica Brasil ON', sector: 'Telecomunicações' },
+  { ticker: 'HAPV3', companyName: 'Hapvida ON', sector: 'Saúde' },
+  { ticker: 'RDOR3', companyName: 'Rede D\'Or ON', sector: 'Saúde' },
+  { ticker: 'CMIG4', companyName: 'Cemig PN', sector: 'Utilidade Pública / Energia' }
 ];
 
-async function fetchB3StockRankings(sessionDate, sessionTimestamp, existingRankings) {
-  const stockQuotes = [];
+async function fetchSingleStockQuote(item, sessionDate, sessionTimestamp) {
+  const hosts = [
+    'https://query1.finance.yahoo.com/v8/finance/chart/',
+    'https://query2.finance.yahoo.com/v8/finance/chart/'
+  ];
 
-  const results = await Promise.allSettled(
-    B3_WATCHLIST.map(async (item) => {
-      const res = await fetchWithTimeout(`https://query1.finance.yahoo.com/v8/finance/chart/${item.ticker}.SA?interval=1d&range=5d`, {
-        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
+  for (const host of hosts) {
+    try {
+      const res = await fetchWithTimeout(`${host}${item.ticker}.SA?interval=1d&range=5d`, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'Accept': 'application/json'
+        }
       });
-      if (!res.ok) return null;
+      if (!res.ok) continue;
 
       const data = await res.json();
       const meta = data?.chart?.result?.[0]?.meta;
       const quote = data?.chart?.result?.[0]?.indicators?.quote?.[0];
       const timestamps = data?.chart?.result?.[0]?.timestamp;
 
-      if (!timestamps || timestamps.length < 2) return null;
+      if (!timestamps || timestamps.length < 2) continue;
 
       const lastIdx = timestamps.length - 1;
       const prevIdx = lastIdx - 1;
@@ -571,7 +629,7 @@ async function fetchB3StockRankings(sessionDate, sessionTimestamp, existingRanki
         : (typeof meta?.regularMarketVolume === 'number' ? meta.regularMarketVolume : 0);
 
       if (typeof close !== 'number' || isNaN(close) || typeof prevClose !== 'number' || isNaN(prevClose) || prevClose <= 0) {
-        return null;
+        continue;
       }
 
       const change = close - prevClose;
@@ -609,14 +667,34 @@ async function fetchB3StockRankings(sessionDate, sessionTimestamp, existingRanki
         timestamp: stockTimestamp || sessionTimestamp,
         source: 'B3'
       };
-    })
-  );
-
-  for (const r of results) {
-    if (r.status === 'fulfilled' && r.value) {
-      stockQuotes.push(r.value);
+    } catch {
+      // Tenta próximo host se houver erro transitório
     }
   }
+
+  return null;
+}
+
+async function fetchB3StockRankings(sessionDate, sessionTimestamp, existingRankings) {
+  const stockQuotes = [];
+  const BATCH_SIZE = 5;
+
+  // Consulta em lotes controlados com pequeno intervalo para evitar rate limit (HTTP 429) no provedor
+  for (let i = 0; i < B3_WATCHLIST.length; i += BATCH_SIZE) {
+    const chunk = B3_WATCHLIST.slice(i, i + BATCH_SIZE);
+    const chunkPromises = chunk.map((item) => fetchSingleStockQuote(item, sessionDate, sessionTimestamp));
+    const chunkResults = await Promise.all(chunkPromises);
+
+    for (const r of chunkResults) {
+      if (r) stockQuotes.push(r);
+    }
+
+    if (i + BATCH_SIZE < B3_WATCHLIST.length) {
+      await new Promise((resolve) => setTimeout(resolve, 120));
+    }
+  }
+
+  console.log(`[Rankings B3] Cotações obtidas com sucesso para ${stockQuotes.length} de ${B3_WATCHLIST.length} papéis acompanhados.`);
 
   if (stockQuotes.length >= 10) {
     const mostTraded = [...stockQuotes].sort((a, b) => b.financialVolume - a.financialVolume).slice(0, 5);
@@ -631,6 +709,7 @@ async function fetchB3StockRankings(sessionDate, sessionTimestamp, existingRanki
     };
   }
 
+  console.warn(`[Rankings B3] Retorno de ações abaixo do limiar mínimo (${stockQuotes.length} < 10). Preservando rankings consolidados prévios.`);
   return {
     success: false,
     mostTraded: existingRankings?.mostTraded || [],
@@ -638,6 +717,7 @@ async function fetchB3StockRankings(sessionDate, sessionTimestamp, existingRanki
     decliners: existingRankings?.decliners || []
   };
 }
+
 
 // Mapeamento dos 11 indicadores para provedores oficiais verificados
 const OFFICIAL_PROVIDERS = {
@@ -866,12 +946,27 @@ async function main() {
         const tsContent = `import { B3MarketRankings } from "../types/market";\n\n/**\n * Catálogo compilado de cotações e rankings da Bolsa de Valores (B3 - Brasil, Bolsa, Balcão).\n * Atualizado automaticamente pelo pipeline oficial de dados de mercado.\n */\nexport const OFFICIAL_B3_MARKET_DATA: B3MarketRankings = ${JSON.stringify(marketObj, null, 2)};\n`;
         fs.writeFileSync(TS_MARKET_PATH, tsContent, 'utf8');
 
-        // Sincroniza dist/data se o diretório de build existir
+        // Sincroniza src/data/economyData.ts para manter estado inicial do app sempre consistente
+        const TS_ECONOMY_PATH = path.join(rootDir, 'src', 'data', 'economyData.ts');
+        const tsEconomyContent = `import { EconomicIndicator } from "../types/economy";\n\n/**\n * Catálogo consolidado de indicadores econômicos oficiais do Brasil.\n * Atualizado automaticamente pelo pipeline oficial de dados econômicos.\n */\nexport const OFFICIAL_ECONOMIC_INDICATORS: EconomicIndicator[] = ${JSON.stringify(updatedIndicators, null, 2)};\n`;
+        fs.writeFileSync(TS_ECONOMY_PATH, tsEconomyContent, 'utf8');
+
+        // Sincroniza dist/data e subdiretórios estáticos se o diretório de build existir
         const DIST_MARKET_PATH = path.join(rootDir, 'dist', 'data', 'marketData.json');
         if (fs.existsSync(path.dirname(DIST_MARKET_PATH))) {
           fs.writeFileSync(DIST_MARKET_PATH, JSON.stringify(marketObj, null, 2) + '\n', 'utf8');
           fs.writeFileSync(path.join(rootDir, 'dist', 'data', 'economyData.json'), serialized, 'utf8');
           fs.writeFileSync(path.join(rootDir, 'dist', 'data', 'economicData.json'), serialized, 'utf8');
+
+          const subdirs = ['politica', 'eleicoes', 'economia', 'estados', 'dados-publicos', 'noticias', 'esportes', 'clima', 'sobre'];
+          for (const sub of subdirs) {
+            const subDataDir = path.join(rootDir, 'dist', sub, 'data');
+            if (fs.existsSync(subDataDir)) {
+              fs.writeFileSync(path.join(subDataDir, 'marketData.json'), JSON.stringify(marketObj, null, 2) + '\n', 'utf8');
+              fs.writeFileSync(path.join(subDataDir, 'economyData.json'), serialized, 'utf8');
+              fs.writeFileSync(path.join(subDataDir, 'economicData.json'), serialized, 'utf8');
+            }
+          }
         }
 
         marketSynced = true;

@@ -30,6 +30,7 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
   const marketStatusText = b3MarketInfo.statusDetailedText;
 
   const isStale = Boolean(raw.isStale);
+  const staleReason = raw.staleReason ? String(raw.staleReason).trim() : undefined;
   const staleNotice =
     raw.staleNotice ||
     (isStale
@@ -37,6 +38,10 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
       : undefined);
   const lastSuccessfulUpdate =
     raw.lastSuccessfulUpdate || defaultTimestamp;
+  const lastFetchAttempt =
+    raw.lastFetchAttempt || lastSuccessfulUpdate;
+  const quoteTimestamp =
+    raw.quoteTimestamp || raw.ibov?.quoteTimestamp || defaultTimestamp;
 
   const rawIbov = raw.ibov || {};
   const ibovPoints =
@@ -57,11 +62,14 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
     formattedPreviousClose: rawIbov.formattedPreviousClose || OFFICIAL_B3_MARKET_DATA.ibov.formattedPreviousClose,
     tradingSession: String(rawIbov.tradingSession || defaultSession),
     timestamp: String(rawIbov.timestamp || defaultTimestamp),
+    quoteTimestamp: String(rawIbov.quoteTimestamp || quoteTimestamp),
+    lastSuccessfulUpdate: String(rawIbov.lastSuccessfulUpdate || lastSuccessfulUpdate),
     marketStatus,
     marketStatusText,
     isDelayed,
     delayNotice,
     isStale,
+    staleReason,
     staleNotice,
     source: "B3 - Brasil, Bolsa, Balcão",
     sourceUrl:
@@ -97,12 +105,15 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
   return {
     tradingSession: String(defaultSession),
     timestamp: String(defaultTimestamp),
-    lastSuccessfulUpdate,
+    quoteTimestamp: String(quoteTimestamp),
+    lastSuccessfulUpdate: String(lastSuccessfulUpdate),
+    lastFetchAttempt: String(lastFetchAttempt),
     marketStatus,
     marketStatusText,
     isDelayed,
     delayNotice,
     isStale,
+    staleReason,
     staleNotice,
     rankingMethodology: {
       mostTradedMetric:
@@ -129,9 +140,14 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
  */
 export async function fetchMarketRankings(): Promise<B3MarketRankings> {
   const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
+  const baseUrl = (typeof import.meta !== "undefined" && import.meta.env?.BASE_URL)
+    ? String(import.meta.env.BASE_URL).replace(/\/$/, "")
+    : "";
   const cacheBuster = `_t=${Date.now()}`;
+
   const candidateUrls = [
     ...(origin ? [`${origin}/data/marketData.json?${cacheBuster}`] : []),
+    ...(baseUrl ? [`${baseUrl}/data/marketData.json?${cacheBuster}`] : []),
     `/data/marketData.json?${cacheBuster}`,
     `../data/marketData.json?${cacheBuster}`,
     `./data/marketData.json?${cacheBuster}`,
@@ -142,7 +158,11 @@ export async function fetchMarketRankings(): Promise<B3MarketRankings> {
   for (const url of candidateUrls) {
     try {
       const res = await fetch(url, {
-        headers: { Accept: "application/json" },
+        headers: {
+          Accept: "application/json",
+          "Cache-Control": "no-cache, no-store, must-revalidate",
+          Pragma: "no-cache",
+        },
         cache: "no-cache",
       });
 
@@ -172,3 +192,4 @@ export async function fetchMarketRankings(): Promise<B3MarketRankings> {
   // Fallback imediato, auditado e consistente para a base oficial compilada
   return normalizeMarketRankings(OFFICIAL_B3_MARKET_DATA);
 }
+

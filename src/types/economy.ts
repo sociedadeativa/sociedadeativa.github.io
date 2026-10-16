@@ -47,6 +47,10 @@ export interface EconomicIndicator {
   isDelayed?: boolean;
   delayNotice?: string;
   quoteTimestamp?: string;
+  sessionDate?: string;
+  isStale?: boolean;
+  staleNotice?: string;
+  staleReason?: string;
   historicalData: HistoricalDataPoint[];
 }
 

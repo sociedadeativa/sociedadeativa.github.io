@@ -31,11 +31,14 @@ export interface IbovespaMarketData {
   formattedPreviousClose: string;
   tradingSession: string;
   timestamp: string;
+  quoteTimestamp?: string;
+  lastSuccessfulUpdate?: string;
   marketStatus: "aberto" | "fechado";
   marketStatusText: string;
   isDelayed: boolean;
   delayNotice: string;
   isStale?: boolean;
+  staleReason?: string;
   staleNotice?: string;
   source: string;
   sourceUrl: string;
@@ -45,13 +48,16 @@ export interface IbovespaMarketData {
 export interface B3MarketRankings {
   tradingSession: string; // Ex: "14/10/2026"
   timestamp: string;
+  quoteTimestamp?: string;
+  lastSuccessfulUpdate?: string;
+  lastFetchAttempt?: string;
   marketStatus: "aberto" | "fechado";
   marketStatusText: string;
   isDelayed: boolean;
   delayNotice: string;
   isStale?: boolean;
+  staleReason?: string;
   staleNotice?: string;
-  lastSuccessfulUpdate?: string;
   rankingMethodology: {
     mostTradedMetric: string;
     gainersMetric: string;
@@ -65,3 +71,4 @@ export interface B3MarketRankings {
   gainers: StockQuote[];
   decliners: StockQuote[];
 }
+

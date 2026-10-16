@@ -1,5 +1,9 @@
 import { EconomicIndicator } from "../types/economy";
 
+/**
+ * Catálogo consolidado de indicadores econômicos oficiais do Brasil.
+ * Atualizado automaticamente pelo pipeline oficial de dados econômicos.
+ */
 export const OFFICIAL_ECONOMIC_INDICATORS: EconomicIndicator[] = [
   {
     "id": "ipca",
@@ -354,14 +358,14 @@ export const OFFICIAL_ECONOMIC_INDICATORS: EconomicIndicator[] = [
     "id": "dolar",
     "name": "Taxa de Câmbio Comercial dos EUA (PTAX Fechamento)",
     "shortName": "Dólar Comercial",
-    "value": 5.0521,
-    "formattedValue": "R$ 5,05",
+    "value": 5.0826,
+    "formattedValue": "R$ 5,08",
     "unit": "R$ / USD",
-    "variation": 0.008,
-    "variationPeriod": "vs. cotação anterior (R$ 5,04)",
-    "previousValue": 5.0441,
-    "formattedPreviousValue": "R$ 5,04",
-    "referencePeriod": "Fechamento PTAX 15/10/2026",
+    "variation": 0.0305,
+    "variationPeriod": "vs. cotação anterior (R$ 5,05)",
+    "previousValue": 5.0521,
+    "formattedPreviousValue": "R$ 5,05",
+    "referencePeriod": "Fechamento PTAX 16/10/2026",
     "source": "Banco Central do Brasil",
     "sourceAgency": "Banco Central do Brasil - Departamento de Operações das Reservas Internacionais",
     "sourceUrl": "https://www.bcb.gov.br/estabilidadefinanceira/historicocotacoes",
@@ -585,29 +589,29 @@ export const OFFICIAL_ECONOMIC_INDICATORS: EconomicIndicator[] = [
     "id": "ibovespa",
     "name": "Índice Bovespa (Principal indicador de ações da B3)",
     "shortName": "Ibovespa (IBOV)",
-    "value": 204324,
-    "formattedValue": "204.324 pts",
+    "value": 204446,
+    "formattedValue": "204.446 pts",
     "unit": "pontos",
-    "variation": -1.06,
-    "variationPeriod": "vs. pregão anterior (-1,06%)",
-    "previousValue": 206506,
-    "formattedPreviousValue": "206.506 pts",
-    "referencePeriod": "15/10/2026 (Fechamento)",
+    "variation": 0.06,
+    "variationPeriod": "vs. pregão anterior (+0,06%)",
+    "previousValue": 204324,
+    "formattedPreviousValue": "204.324 pts",
+    "referencePeriod": "16/10/2026 (Pregão em andamento)",
     "source": "B3",
     "sourceAgency": "B3 - Brasil, Bolsa, Balcão",
     "sourceUrl": "https://b3.com.br/pt_br/market-data-e-indices/indices/indices-amplos/ibovespa-b3.htm",
     "quotationUrl": "https://b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/cotacoes/",
     "officialSeriesCode": "IBOV (Código B3)",
-    "updatedAt": "15/10/2026 18:00",
+    "updatedAt": "16/10/2026 13:45",
     "frequency": "Pregão Diário",
     "category": "Juros & Câmbio",
     "description": "Principal índice acionário da América Latina e termômetro do mercado de capitais brasileiro. Composto pelas ações e units das empresas de maior negociabilidade e representatividade na B3.",
     "methodologySummary": "Índice de retorno total ponderado pelo valor de mercado das ações em circulação (free float). Rebalanceado a cada quatro meses pela B3. Cotações públicas possuem defasagem regulatória mínima de 15 minutos durante o pregão.",
-    "marketStatus": "fechado",
-    "marketStatusText": "Mercado Fechado (Último Fechamento)",
+    "marketStatus": "aberto",
+    "marketStatusText": "Pregão Aberto (15 min defasagem)",
     "isDelayed": true,
     "delayNotice": "Cotações públicas com defasagem regulatória mínima de 15 minutos (B3). Fora do horário de negociação, exibe o último fechamento oficial verificado.",
-    "quoteTimestamp": "15/10/2026 18:00",
+    "quoteTimestamp": "16/10/2026 13:45",
     "historicalData": [
       {
         "period": "30/09/2026",
@@ -657,6 +661,8 @@ export const OFFICIAL_ECONOMIC_INDICATORS: EconomicIndicator[] = [
         "formattedValue": "209.067 pts",
         "variation": 1.38
       }
-    ]
+    ],
+    "sessionDate": "16/10/2026",
+    "isStale": false
   }
 ];

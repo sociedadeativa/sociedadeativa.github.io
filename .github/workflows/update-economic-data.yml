@@ -2,12 +2,11 @@ name: Update Official Economic Data
 
 on:
   schedule:
-    # 07:00 BRT (10:00 UTC) - Abertura matinal dos dados
+    # 07:00 BRT (10:00 UTC) - Abertura matinal e indicadores oficiais IBGE/BCB
     - cron: '0 10 * * *'
-    # 10:00 BRT (13:00 UTC) - Início do pregão B3
-    - cron: '0 13 * * *'
-    # 14:00 BRT (17:00 UTC) - Cotações intradiárias
-    - cron: '0 17 * * 1-5'
+    # Pregão B3 (10h00 às 17h55 BRT = 13h00 às 20h55 UTC, seg a sex):
+    # Executa a cada 30 minutos durante o pregão oficial para atualizar cotações com defasagem de 15 min
+    - cron: '*/30 13-20 * * 1-5'
     # 18:30 BRT (21:30 UTC) - Fechamento oficial consolidado da sessão B3
     - cron: '30 21 * * 1-5'
   workflow_dispatch:
@@ -66,7 +65,8 @@ jobs:
           git config user.name "Sociedade Ativa DataBot"
           git config user.email "bot@sociedadeativa.org"
 
-          git add public/data/economyData.json public/data/economicData.json public/data/marketData.json src/data/marketData.ts
+          git add public/data/economyData.json public/data/economicData.json public/data/marketData.json src/data/marketData.ts src/data/economyData.ts
+
 
           if git diff --staged --quiet; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { B3MarketRankings, StockQuote } from "../types/market";
 import { OFFICIAL_B3_MARKET_DATA } from "../data/marketData";
 import { fetchMarketRankings, normalizeMarketRankings } from "../services/marketService";
@@ -29,6 +29,20 @@ export const BolsaSection: React.FC = () => {
   );
   const [forceUnavailable, setForceUnavailable] = useState(false);
 
+  const refreshMarketData = useCallback(async (isManual = false) => {
+    if (isManual) setLoading(true);
+    try {
+      const data = await fetchMarketRankings();
+      if (data) {
+        setMarketData(data);
+      }
+    } catch (err) {
+      console.warn("Falha ao atualizar dados de mercado:", err);
+    } finally {
+      if (isManual) setLoading(false);
+    }
+  }, []);
+
   useEffect(() => {
     let isMounted = true;
     fetchMarketRankings().then((data) => {
@@ -36,10 +50,24 @@ export const BolsaSection: React.FC = () => {
         setMarketData(data);
       }
     });
+
+    // Auto-refresh a cada 60 segundos para acompanhar atualizações de mercado em segundo plano
+    const timer = setInterval(() => {
+      if (isMounted) {
+        fetchMarketRankings().then((data) => {
+          if (isMounted && data) {
+            setMarketData(data);
+          }
+        });
+      }
+    }, 60000);
+
     return () => {
       isMounted = false;
+      clearInterval(timer);
     };
   }, []);
+
 
   const renderChangeBadge = (pct: number) => {
     const isPos = pct > 0;
@@ -249,6 +277,16 @@ export const BolsaSection: React.FC = () => {
             </div>
           )}
 
+          <button
+            onClick={() => refreshMarketData(true)}
+            disabled={loading}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 disabled:opacity-60 text-white text-xs font-bold transition-all shadow-2xs cursor-pointer"
+            title="Atualizar cotações e rankings da B3 agora"
+          >
+            <RefreshCw className={`w-3.5 h-3.5 ${loading ? "animate-spin text-emerald-400" : "text-slate-300"}`} />
+            <span>{loading ? "Atualizando..." : "Atualizar Cotações"}</span>
+          </button>
+
           <a
             href={marketData.quotationUrl}
             target="_blank"
@@ -272,6 +310,11 @@ export const BolsaSection: React.FC = () => {
               {marketData.staleNotice ||
                 `Exibindo último fechamento oficial consolidado do pregão de ${marketData.tradingSession}. A comunicação em tempo real com a B3 está temporariamente indisponível. Nenhum valor de cotação ou variação foi fabricado.`}
             </p>
+            {marketData.staleReason && (
+              <p className="text-amber-700 font-mono text-[11px] mt-1 font-medium">
+                Diagnóstico técnico: {marketData.staleReason}
+              </p>
+            )}
           </div>
         </div>
       )}
@@ -474,8 +517,7 @@ export const BolsaSection: React.FC = () => {
                 </>
               ) : (
                 <>
-                  Último fechamento oficial: <strong>{marketData.tradingSession}</strong> às{" "}
-                  <strong>{marketData.timestamp.split(" ")[1] || "18:00"}</strong>
+                  Sessão B3: <strong>{marketData.tradingSession}</strong> (Fechamento)
                 </>
               )}
             </span>
@@ -484,19 +526,17 @@ export const BolsaSection: React.FC = () => {
           <div className="flex items-center gap-1.5">
             <Clock className="w-3.5 h-3.5 text-slate-400" />
             <span>
-              {isMarketOpen ? (
-                <>
-                  Horário da cotação:{" "}
-                  <strong>{marketData.timestamp}</strong>
-                </>
-              ) : (
-                <>
-                  Fechamento registrado em:{" "}
-                  <strong>{marketData.lastSuccessfulUpdate || marketData.timestamp}</strong>
-                </>
-              )}
+              Horário da cotação B3: <strong>{marketData.timestamp}</strong>
             </span>
           </div>
+          {marketData.lastSuccessfulUpdate && (
+            <>
+              <span className="hidden sm:inline text-slate-300">•</span>
+              <div className="flex items-center gap-1.5 text-slate-400 text-[11px]">
+                <span>Sincronizado: {marketData.lastSuccessfulUpdate}</span>
+              </div>
+            </>
+          )}
         </div>
 
         <div className="flex items-center gap-3">
