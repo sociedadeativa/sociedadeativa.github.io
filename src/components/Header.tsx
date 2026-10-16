@@ -48,13 +48,7 @@ export const Header: React.FC<HeaderProps> = ({
   const ibovStatus = ibovIndicator?.marketStatus || b3MarketInfo.status;
   const isIbovOpen = ibovStatus === "aberto";
 
-  const navLinks: { route: PortalRoute; label: string; colorClass: string; activeClass: string }[] = [
-    {
-      route: "home",
-      label: "Início",
-      colorClass: "hover:text-slate-950",
-      activeClass: "text-slate-950 font-black border-b-2 border-slate-900",
-    },
+  const mainNavLinks: { route: PortalRoute; label: string; colorClass: string; activeClass: string }[] = [
     {
       route: "politica",
       label: "Política",
@@ -103,6 +97,16 @@ export const Header: React.FC<HeaderProps> = ({
       colorClass: "hover:text-sky-700",
       activeClass: "text-sky-700 font-black border-b-2 border-sky-600",
     },
+  ];
+
+  const drawerLinks: { route: PortalRoute; label: string; colorClass: string; activeClass: string }[] = [
+    {
+      route: "home",
+      label: "Início",
+      colorClass: "hover:text-slate-950",
+      activeClass: "text-slate-950 font-black border-b-2 border-slate-900",
+    },
+    ...mainNavLinks,
   ];
 
   return (
@@ -226,85 +230,37 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* 2. Barra Principal do Portal (Wordmark, Menu Editorial e Ações) */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 gap-4">
-          {/* Marca / Identidade Editorial Sociedade Ativa */}
-          <div className="flex items-center gap-3 min-w-0">
-            <PortalLink
-              route="home"
-              className="flex items-center gap-2.5 sm:gap-3 group focus-visible:outline-2 focus-visible:outline-blue-700 rounded-lg p-0.5"
-              title="Sociedade Ativa — Página Inicial"
-            >
+      {/* 2. Bloco Central da Marca (Logotipo, Wordmark e Subtítulo) e Ações Laterais */}
+      <div className="border-b border-slate-100">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 sm:py-4 flex items-center justify-center">
+          {/* Marca / Identidade Editorial Sociedade Ativa Centralizada */}
+          <PortalLink
+            route="home"
+            className="flex flex-col items-center justify-center text-center group focus-visible:outline-2 focus-visible:outline-blue-700 rounded-lg p-1 max-w-[calc(100%-110px)] sm:max-w-none"
+            title="Sociedade Ativa — Página Inicial"
+          >
+            <div className="flex items-center justify-center gap-2.5 sm:gap-3">
               <div
-                className="w-9 h-9 rounded-xl bg-blue-900 text-white flex items-center justify-center font-heading font-black text-xs sm:text-sm tracking-widest shadow-xs shrink-0 select-none border border-blue-950 group-hover:bg-blue-800 transition-colors"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-blue-900 text-white flex items-center justify-center font-heading font-black text-xs sm:text-sm tracking-widest shadow-xs shrink-0 select-none border border-blue-950 group-hover:bg-blue-800 transition-colors"
                 aria-label="Sociedade Ativa Logotipo"
               >
                 SA
               </div>
-              <div className="min-w-0">
-                <span className="font-heading text-base sm:text-xl font-black tracking-tight text-slate-950 uppercase leading-none block truncate">
-                  Sociedade Ativa
-                </span>
-                <span className="text-[10px] sm:text-xs text-slate-500 font-medium leading-tight block truncate mt-0.5">
-                  Política, eleições, notícias e dados do Brasil
-                </span>
-              </div>
-            </PortalLink>
-          </div>
+              <span className="font-heading text-xl sm:text-2xl md:text-3xl font-black tracking-tight text-slate-950 uppercase leading-none">
+                Sociedade Ativa
+              </span>
+            </div>
+            <p className="text-[10px] sm:text-xs text-slate-500 font-medium leading-tight mt-1 text-center">
+              Política, eleições, notícias e dados do Brasil
+            </p>
+          </PortalLink>
 
-          {/* Navegação Temática Principal (Desktop) */}
-          <nav
-            aria-label="Navegação editorial principal"
-            className="hidden xl:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-slate-600"
-          >
-            {navLinks.map((link) => {
-              const isActive =
-                currentRoute === link.route ||
-                (link.route === "noticias" && currentRoute === "artigo");
-              return (
-                <PortalLink
-                  key={link.route}
-                  route={link.route}
-                  className={`py-5 transition-colors whitespace-nowrap shrink-0 ${
-                    isActive ? link.activeClass : link.colorClass
-                  }`}
-                >
-                  {link.label}
-                </PortalLink>
-              );
-            })}
-          </nav>
-
-          {/* Navegação Compacta para Telas Médias (Tablet/Laptop) */}
-          <nav
-            aria-label="Navegação secundária"
-            className="hidden lg:flex xl:hidden items-center gap-4 text-xs font-bold uppercase tracking-wider text-slate-600"
-          >
-            {navLinks.slice(0, 5).map((link) => {
-              const isActive =
-                currentRoute === link.route ||
-                (link.route === "noticias" && currentRoute === "artigo");
-              return (
-                <PortalLink
-                  key={link.route}
-                  route={link.route}
-                  className={`py-5 transition-colors whitespace-nowrap shrink-0 ${
-                    isActive ? link.activeClass : link.colorClass
-                  }`}
-                >
-                  {link.label}
-                </PortalLink>
-              );
-            })}
-          </nav>
-
-          {/* Ações Rápidas do Cabeçalho */}
-          <div className="flex items-center gap-2 shrink-0">
+          {/* Ações Rápidas (Busca e JSON TSE) mantidas acessíveis sem deslocar a marca ou navegação */}
+          <div className="absolute right-4 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 flex items-center gap-1.5 sm:gap-2">
             {onOpenSearch && (
               <button
                 onClick={onOpenSearch}
-                className="min-h-[38px] px-2.5 sm:px-3 py-1.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 transition-colors flex items-center gap-1.5 text-xs font-semibold cursor-pointer active:bg-slate-200 focus-visible:ring-2 focus-visible:ring-blue-700"
+                className="min-h-[36px] sm:min-h-[38px] px-2.5 sm:px-3 py-1.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 transition-colors flex items-center gap-1.5 text-xs font-semibold cursor-pointer active:bg-slate-200 focus-visible:ring-2 focus-visible:ring-blue-700"
                 title="Pesquisar notícias, indicadores ou estados"
                 aria-label="Pesquisar no portal"
               >
@@ -315,7 +271,7 @@ export const Header: React.FC<HeaderProps> = ({
 
             <button
               onClick={onOpenDataInspector}
-              className="hidden md:flex min-h-[38px] px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 hover:text-slate-950 transition-colors items-center gap-1.5 text-xs font-bold shadow-2xs cursor-pointer whitespace-nowrap active:bg-slate-100 focus-visible:ring-2 focus-visible:ring-blue-700"
+              className="hidden md:flex min-h-[36px] sm:min-h-[38px] px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 hover:text-slate-950 transition-colors items-center gap-1.5 text-xs font-bold shadow-2xs cursor-pointer whitespace-nowrap active:bg-slate-100 focus-visible:ring-2 focus-visible:ring-blue-700"
               title="Inspecionar dados oficiais em formato JSON"
             >
               <Database className="w-3.5 h-3.5 text-slate-500" />
@@ -325,7 +281,7 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Botão de Menu Mobile */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden min-h-[40px] min-w-[40px] p-2 rounded-xl border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 transition-colors flex items-center justify-center cursor-pointer active:bg-slate-100 focus-visible:ring-2 focus-visible:ring-blue-700"
+              className="md:hidden min-h-[36px] min-w-[36px] p-2 rounded-xl border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 transition-colors flex items-center justify-center cursor-pointer active:bg-slate-100 focus-visible:ring-2 focus-visible:ring-blue-700"
               aria-label={mobileMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
               aria-expanded={mobileMenuOpen}
             >
@@ -335,11 +291,40 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* 3. Gaveta Mobile de Navegação */}
+      {/* 3. Linha Exclusiva de Navegação Temática (Abaixo do bloco da marca, centralizada horizontalmente) */}
+      <div className="border-b border-slate-200 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav
+            aria-label="Navegação editorial principal"
+            className="flex items-center justify-start md:justify-center gap-3 sm:gap-6 lg:gap-8 overflow-x-auto scrollbar-none py-2 text-xs font-bold uppercase tracking-wider text-slate-600"
+          >
+            {mainNavLinks.map((link) => {
+              const isActive =
+                currentRoute === link.route ||
+                (link.route === "noticias" && currentRoute === "artigo");
+              return (
+                <PortalLink
+                  key={link.route}
+                  route={link.route}
+                  className={`py-1.5 transition-colors whitespace-nowrap shrink-0 border-b-2 ${
+                    isActive
+                      ? link.activeClass
+                      : `border-transparent ${link.colorClass}`
+                  }`}
+                >
+                  {link.label}
+                </PortalLink>
+              );
+            })}
+          </nav>
+        </div>
+      </div>
+
+      {/* 4. Gaveta Mobile de Navegação */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-200 bg-white px-4 py-5 shadow-xl transition-all">
+        <div className="md:hidden border-t border-slate-200 bg-white px-4 py-5 shadow-xl transition-all">
           <nav className="flex flex-col gap-1 text-sm font-bold text-slate-800">
-            {navLinks.map((link) => {
+            {drawerLinks.map((link) => {
               const isActive =
                 currentRoute === link.route ||
                 (link.route === "noticias" && currentRoute === "artigo");
