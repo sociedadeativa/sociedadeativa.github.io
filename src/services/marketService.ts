@@ -11,7 +11,14 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
     throw new Error("Dados de mercado inválidos para normalização");
   }
 
-  const b3MarketInfo = getB3MarketStatus();
+  const defaultSession = raw.tradingSession || raw.ibov?.tradingSession || OFFICIAL_B3_MARKET_DATA.tradingSession;
+  const defaultTimestamp = raw.timestamp || raw.ibov?.timestamp || OFFICIAL_B3_MARKET_DATA.timestamp;
+
+  const b3MarketInfo = getB3MarketStatus(new Date(), {
+    tradingSession: String(defaultSession),
+    timestamp: String(defaultTimestamp),
+    marketStatus: raw.marketStatus || raw.ibov?.marketStatus,
+  });
 
   const isDelayed = typeof raw.isDelayed === "boolean" ? raw.isDelayed : true;
   const delayNotice =
@@ -19,12 +26,8 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
     b3MarketInfo.delayNotice ||
     "Cotações públicas com defasagem mínima de 15 minutos (B3). Fora do horário de negociação, exibe o último fechamento consolidado.";
 
-  // O status é dinâmico: se o pregão estiver aberto agora, exibe como aberto; caso contrário, fechado.
   const marketStatus = b3MarketInfo.status;
   const marketStatusText = b3MarketInfo.statusDetailedText;
-
-  const defaultSession = raw.tradingSession || raw.ibov?.tradingSession || OFFICIAL_B3_MARKET_DATA.tradingSession;
-  const defaultTimestamp = raw.timestamp || raw.ibov?.timestamp || OFFICIAL_B3_MARKET_DATA.timestamp;
 
   const isStale = Boolean(raw.isStale);
   const staleNotice =

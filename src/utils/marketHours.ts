@@ -27,10 +27,20 @@ export interface B3MarketStatusInfo {
   currentBrtTime: string;
 }
 
+export interface DataSourceContext {
+  tradingSession?: string;
+  timestamp?: string;
+  marketStatus?: string;
+}
+
 /**
- * Calcula dinamicamente o status do pregão da B3 no horário oficial de Brasília.
+ * Calcula dinamicamente o status do pregão da B3 no horário oficial de Brasília,
+ * cruzando o calendário de negociação com a sessão e carimbo de data/hora da fonte de dados.
  */
-export function getB3MarketStatus(referenceDate: Date = new Date()): B3MarketStatusInfo {
+export function getB3MarketStatus(
+  referenceDate: Date = new Date(),
+  dataContext?: DataSourceContext
+): B3MarketStatusInfo {
   const sourceUrl =
     "https://b3.com.br/pt_br/market-data-e-indices/indices/indices-amplos/ibovespa-b3.htm";
   const quotationUrl =
@@ -57,9 +67,15 @@ export function getB3MarketStatus(referenceDate: Date = new Date()): B3MarketSta
 
     const day = parseInt(getPart("day"), 10);
     const month = parseInt(getPart("month"), 10);
+    const year = parseInt(getPart("year"), 10);
     const hour = parseInt(getPart("hour"), 10);
     const minute = parseInt(getPart("minute"), 10);
     const weekday = getPart("weekday"); // Mon, Tue, Wed, Thu, Fri, Sat, Sun
+
+    const todayBrtDate = `${String(day).padStart(2, "0")}/${String(month).padStart(
+      2,
+      "0"
+    )}/${year}`;
 
     const currentBrtTime = `${String(day).padStart(2, "0")}/${String(month).padStart(
       2,
@@ -82,10 +98,27 @@ export function getB3MarketStatus(referenceDate: Date = new Date()): B3MarketSta
       (month === 12 && day === 25); // Natal
 
     const timeInMinutes = hour * 60 + minute;
-    // Pregão B3: das 10h00 (600 min) às 17h55 (1075 min)
+    // Horário oficial do pregão B3: das 10h00 (600 min) às 17h55 (1075 min)
     const isTradingHours = timeInMinutes >= 600 && timeInMinutes <= 1075;
+    const isCalendarOpen = !isWeekend && !isHoliday && isTradingHours;
 
-    const isOpen = !isWeekend && !isHoliday && isTradingHours;
+    // Avaliação da natureza dos dados:
+    // Cotações marcadas com 18:00 (ou horário de fechamento), com status fechado ou cuja sessão seja de dia anterior
+    // representam exclusivamente o fechamento consolidado e NUNCA devem ser rotuladas como pregão ao vivo.
+    const is1800Closing = Boolean(
+      dataContext?.timestamp &&
+        (/(?:18:\d\d|18h\d\d|19:\d\d|19h\d\d)/i.test(dataContext.timestamp) ||
+          /fechamento/i.test(dataContext.timestamp))
+    );
+    const isExplicitFechado = dataContext?.marketStatus === "fechado";
+    const isPreviousSession = Boolean(
+      dataContext?.tradingSession && dataContext.tradingSession !== todayBrtDate
+    );
+    const isClosingData = is1800Closing || isExplicitFechado || isPreviousSession;
+
+    // O status do pregão exibido só é "aberto" se o horário do calendário estiver ativo
+    // E os dados fornecidos forem comprovadamente intradiários do pregão de hoje.
+    const isOpen = isCalendarOpen && !isClosingData;
 
     if (isOpen) {
       return {
@@ -101,8 +134,12 @@ export function getB3MarketStatus(referenceDate: Date = new Date()): B3MarketSta
       };
     }
 
-    let statusDetailedText = "Mercado Fechado (Último Fechamento)";
-    if (isWeekend) {
+    let statusDetailedText = "Mercado Fechado (Último Fechamento Consolidado)";
+    if (isClosingData && isCalendarOpen) {
+      statusDetailedText = dataContext?.tradingSession
+        ? `Último Fechamento Consolidado (${dataContext.tradingSession})`
+        : "Último Fechamento Consolidado";
+    } else if (isWeekend) {
       statusDetailedText = "Mercado Fechado (Fim de semana)";
     } else if (isHoliday) {
       statusDetailedText = "Mercado Fechado (Feriado)";
@@ -128,7 +165,7 @@ export function getB3MarketStatus(referenceDate: Date = new Date()): B3MarketSta
       isOpen: false,
       status: "fechado",
       statusShortLabel: "Mercado Fechado",
-      statusDetailedText: "Mercado Fechado (Último Fechamento)",
+      statusDetailedText: "Mercado Fechado (Último Fechamento Consolidado)",
       delayNotice,
       isDelayed: true,
       sourceUrl,
