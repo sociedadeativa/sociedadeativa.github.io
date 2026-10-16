@@ -33,6 +33,7 @@ export interface IbovespaMarketData {
   timestamp: string;
   quoteTimestamp?: string;
   lastSuccessfulUpdate?: string;
+  serverDatasetTimestamp?: string;
   marketStatus: "aberto" | "fechado";
   marketStatusText: string;
   isDelayed: boolean;
@@ -50,6 +51,7 @@ export interface B3MarketRankings {
   timestamp: string;
   quoteTimestamp?: string;
   lastSuccessfulUpdate?: string;
+  serverDatasetTimestamp?: string;
   lastFetchAttempt?: string;
   marketStatus: "aberto" | "fechado";
   marketStatusText: string;

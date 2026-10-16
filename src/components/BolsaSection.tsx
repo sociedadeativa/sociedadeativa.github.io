@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { B3MarketRankings, StockQuote } from "../types/market";
 import { OFFICIAL_B3_MARKET_DATA } from "../data/marketData";
 import { fetchMarketRankings, normalizeMarketRankings } from "../services/marketService";
@@ -16,6 +16,7 @@ import {
   Calendar,
   Layers,
   RefreshCw,
+  AlertTriangle,
 } from "lucide-react";
 
 export const BolsaSection: React.FC = () => {
@@ -24,49 +25,133 @@ export const BolsaSection: React.FC = () => {
     normalizeMarketRankings(OFFICIAL_B3_MARKET_DATA)
   );
   const [loading, setLoading] = useState(false);
+  const [isRefreshing, setIsRefreshing] = useState(false);
   const [activeTab, setActiveTab] = useState<"mostTraded" | "gainers" | "decliners">(
     "mostTraded"
   );
   const [forceUnavailable, setForceUnavailable] = useState(false);
+  const [lastSyncTime, setLastSyncTime] = useState<string>(
+    () => OFFICIAL_B3_MARKET_DATA.lastSuccessfulUpdate || OFFICIAL_B3_MARKET_DATA.timestamp
+  );
+  const [syncStatus, setSyncStatus] = useState<"idle" | "syncing" | "success" | "error">("idle");
+  const [syncError, setSyncError] = useState<{ time: string; message: string } | null>(null);
 
-  const refreshMarketData = useCallback(async (isManual = false) => {
-    if (isManual) setLoading(true);
+  // Refs para controle de concorrência e desmontagem segura
+  const isFetchingRef = useRef(false);
+  const isMountedRef = useRef(true);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const lastSyncTimeRef = useRef(lastSyncTime);
+  lastSyncTimeRef.current = lastSyncTime;
+
+  const performRefresh = useCallback(async (isManual = false) => {
+    // Evita requisições sobrepostas se uma busca já estiver em execução
+    if (isFetchingRef.current) {
+      console.log("[B3 Market] Sincronização anterior em andamento. Ignorando solicitação concorrente.");
+      return;
+    }
+
+    isFetchingRef.current = true;
+    if (isManual) {
+      setLoading(true);
+    } else {
+      setIsRefreshing(true);
+    }
+    setSyncStatus("syncing");
+
     try {
-      const data = await fetchMarketRankings();
-      if (data) {
-        setMarketData(data);
-      }
-    } catch (err) {
-      console.warn("Falha ao atualizar dados de mercado:", err);
+      // Exige sucesso real com throwOnError: true
+      const freshData = await fetchMarketRankings({ throwOnError: true });
+      if (!isMountedRef.current) return;
+
+      const newSyncTimestamp =
+        freshData.lastSuccessfulUpdate ||
+        new Date().toLocaleString("pt-BR", {
+          timeZone: "America/Sao_Paulo",
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false,
+        });
+
+      setMarketData(freshData);
+      setLastSyncTime(newSyncTimestamp);
+      setSyncError(null);
+      setSyncStatus("success");
+      console.log(
+        `[B3 Market] Cotações B3 sincronizadas com sucesso às ${newSyncTimestamp}. Horário do pregão: ${freshData.timestamp}`
+      );
+    } catch (err: any) {
+      if (!isMountedRef.current) return;
+
+      const failedTime = new Date().toLocaleString("pt-BR", {
+        timeZone: "America/Sao_Paulo",
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+      });
+      const errorMsg = err?.message || "Falha na conexão com o feed de dados de mercado da B3";
+
+      console.error(`[B3 Market] Falha na tentativa de atualização às ${failedTime}:`, err);
+
+      setSyncStatus("error");
+      setSyncError({
+        time: failedTime,
+        message: errorMsg,
+      });
+
+      // Conforme Requisito 5: NUNCA avança o carimbo de sincronização quando a tentativa falha.
+      // Preserva a última sincronização bem-sucedida e marca aviso visível de dados preservados.
+      setMarketData((prev) => ({
+        ...prev,
+        isStale: true,
+        staleReason: `A tentativa de sincronização automática às ${failedTime} não obteve resposta do servidor (${errorMsg}).`,
+        staleNotice: `Exibindo cotações da última sincronização bem-sucedida (${lastSyncTimeRef.current}). A tentativa mais recente às ${failedTime} falhou.`,
+      }));
     } finally {
-      if (isManual) setLoading(false);
+      isFetchingRef.current = false;
+      if (isMountedRef.current) {
+        if (isManual) setLoading(false);
+        setIsRefreshing(false);
+      }
     }
   }, []);
 
-  useEffect(() => {
-    let isMounted = true;
-    fetchMarketRankings().then((data) => {
-      if (isMounted && data) {
-        setMarketData(data);
-      }
-    });
+  const handleManualRefresh = useCallback(() => {
+    // Reinicia o intervalo para evitar disparo automático duplicado logo após o clique manual
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = setInterval(() => {
+        performRefresh(false);
+      }, 60000);
+    }
+    performRefresh(true);
+  }, [performRefresh]);
 
-    // Auto-refresh a cada 60 segundos para acompanhar atualizações de mercado em segundo plano
-    const timer = setInterval(() => {
-      if (isMounted) {
-        fetchMarketRankings().then((data) => {
-          if (isMounted && data) {
-            setMarketData(data);
-          }
-        });
-      }
+  useEffect(() => {
+    isMountedRef.current = true;
+
+    // 1. Primeira sincronização imediata na montagem da tela
+    performRefresh(false);
+
+    // 2. Temporizador estrito de auto-refresh a cada 60 segundos
+    timerRef.current = setInterval(() => {
+      performRefresh(false);
     }, 60000);
 
     return () => {
-      isMounted = false;
-      clearInterval(timer);
+      isMountedRef.current = false;
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
     };
-  }, []);
+  }, [performRefresh]);
 
 
   const renderChangeBadge = (pct: number) => {
@@ -277,14 +362,24 @@ export const BolsaSection: React.FC = () => {
             </div>
           )}
 
+          {syncStatus === "error" && (
+            <div
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-rose-50 text-rose-800 border border-rose-200 text-xs font-bold"
+              title={syncError ? `Erro na tentativa das ${syncError.time}: ${syncError.message}` : "Erro na atualização"}
+            >
+              <AlertTriangle className="w-3.5 h-3.5 text-rose-600" />
+              <span>Falha no Feed</span>
+            </div>
+          )}
+
           <button
-            onClick={() => refreshMarketData(true)}
-            disabled={loading}
+            onClick={handleManualRefresh}
+            disabled={loading || isRefreshing}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 disabled:opacity-60 text-white text-xs font-bold transition-all shadow-2xs cursor-pointer"
             title="Atualizar cotações e rankings da B3 agora"
           >
-            <RefreshCw className={`w-3.5 h-3.5 ${loading ? "animate-spin text-emerald-400" : "text-slate-300"}`} />
-            <span>{loading ? "Atualizando..." : "Atualizar Cotações"}</span>
+            <RefreshCw className={`w-3.5 h-3.5 ${loading || isRefreshing ? "animate-spin text-emerald-400" : "text-slate-300"}`} />
+            <span>{loading ? "Atualizando..." : isRefreshing ? "Sincronizando..." : "Atualizar Cotações"}</span>
           </button>
 
           <a
@@ -300,8 +395,35 @@ export const BolsaSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Alerta de Dados Preservados (quando o feed externo falhar) */}
-      {marketData.isStale && (
+      {/* Alerta Visível de Falha na Sincronização em Tempo Real (Requisito 6) */}
+      {syncError && (
+        <div className="mb-6 p-4 bg-amber-50/90 rounded-2xl border border-amber-200 text-amber-900 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+            <div className="text-xs">
+              <h4 className="font-bold text-amber-950 mb-0.5">
+                Falha na Sincronização Automática ({syncError.time})
+              </h4>
+              <p className="text-amber-800 leading-relaxed">
+                Não foi possível obter dados frescos do servidor nesta verificação. As cotações da última sincronização bem-sucedida (<strong className="font-mono text-amber-950">{lastSyncTime}</strong>) foram preservadas com segurança.
+              </p>
+              <p className="text-amber-700 font-mono text-[11px] mt-1">
+                Diagnóstico: {syncError.message}
+              </p>
+            </div>
+          </div>
+          <button
+            onClick={handleManualRefresh}
+            disabled={loading || isRefreshing}
+            className="self-start sm:self-auto px-3 py-1.5 rounded-lg bg-amber-200/80 hover:bg-amber-200 text-amber-950 text-xs font-bold shrink-0 transition-colors cursor-pointer"
+          >
+            Tentar novamente
+          </button>
+        </div>
+      )}
+
+      {/* Alerta de Dados Preservados (quando a base de dados indicar dados stale da B3) */}
+      {!syncError && marketData.isStale && (
         <div className="mb-6 p-4 bg-amber-50/90 rounded-2xl border border-amber-200 text-amber-900 flex items-start gap-3">
           <ShieldAlert className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
           <div className="text-xs">
@@ -387,6 +509,13 @@ export const BolsaSection: React.FC = () => {
                 {isMarketOpen
                   ? "Cotação pública com defasagem de 15 min (B3)"
                   : `Fechamento oficial da sessão de ${ibov.tradingSession}`}
+              </span>
+            </div>
+            <div className="flex justify-between items-center gap-4">
+              <span className="text-slate-400">Última Sincronização:</span>
+              <span className="font-mono text-emerald-400 font-semibold flex items-center gap-1.5">
+                <span className={`w-1.5 h-1.5 rounded-full ${syncStatus === 'error' ? 'bg-amber-400' : 'bg-emerald-400 animate-pulse'}`} />
+                <span>{lastSyncTime}</span>
               </span>
             </div>
             <div className="pt-2 border-t border-white/10 flex items-center justify-between gap-3 text-[11px]">
@@ -529,12 +658,23 @@ export const BolsaSection: React.FC = () => {
               Horário da cotação B3: <strong>{marketData.timestamp}</strong>
             </span>
           </div>
-          {marketData.lastSuccessfulUpdate && (
+          {lastSyncTime && (
             <>
               <span className="hidden sm:inline text-slate-300">•</span>
-              <div className="flex items-center gap-1.5 text-slate-400 text-[11px]">
-                <span>Sincronizado: {marketData.lastSuccessfulUpdate}</span>
+              <div className="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                <RefreshCw className={`w-3 h-3 text-slate-400 ${isRefreshing ? "animate-spin text-emerald-600" : ""}`} />
+                <span>
+                  Sincronizado: <strong className="font-mono text-slate-700">{lastSyncTime}</strong> (auto-refresh 60s)
+                </span>
               </div>
+            </>
+          )}
+          {syncError && (
+            <>
+              <span className="hidden sm:inline text-slate-300">•</span>
+              <span className="text-rose-700 text-[11px] font-semibold">
+                Última tentativa falhou às {syncError.time.split(" ")[1] || syncError.time}
+              </span>
             </>
           )}
         </div>

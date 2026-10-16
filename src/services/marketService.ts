@@ -2,11 +2,19 @@ import { B3MarketRankings } from "../types/market";
 import { OFFICIAL_B3_MARKET_DATA } from "../data/marketData";
 import { getB3MarketStatus } from "../utils/marketHours";
 
+export interface NormalizeMarketOptions {
+  clientSyncTimestamp?: string;
+  isNetworkFresh?: boolean;
+}
+
 /**
  * Normaliza e enriquece os rankings do mercado financeiro da B3,
  * recalculando o status do pregão e defasagem em tempo real de Brasília.
  */
-export function normalizeMarketRankings(raw: any): B3MarketRankings {
+export function normalizeMarketRankings(
+  raw: any,
+  options?: NormalizeMarketOptions
+): B3MarketRankings {
   if (!raw || typeof raw !== "object") {
     throw new Error("Dados de mercado inválidos para normalização");
   }
@@ -36,10 +44,11 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
     (isStale
       ? "Aviso de dados preservados: Exibindo último fechamento oficial consolidado. O serviço em tempo real da B3 está temporariamente indisponível."
       : undefined);
-  const lastSuccessfulUpdate =
-    raw.lastSuccessfulUpdate || defaultTimestamp;
-  const lastFetchAttempt =
-    raw.lastFetchAttempt || lastSuccessfulUpdate;
+
+  // Distinção segura entre carimbo do dataset no servidor e sincronização real do cliente
+  const serverDatasetTimestamp = String(raw.lastSuccessfulUpdate || defaultTimestamp);
+  const lastSuccessfulUpdate = options?.clientSyncTimestamp || serverDatasetTimestamp;
+  const lastFetchAttempt = options?.clientSyncTimestamp || String(raw.lastFetchAttempt || lastSuccessfulUpdate);
   const quoteTimestamp =
     raw.quoteTimestamp || raw.ibov?.quoteTimestamp || defaultTimestamp;
 
@@ -64,6 +73,7 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
     timestamp: String(rawIbov.timestamp || defaultTimestamp),
     quoteTimestamp: String(rawIbov.quoteTimestamp || quoteTimestamp),
     lastSuccessfulUpdate: String(rawIbov.lastSuccessfulUpdate || lastSuccessfulUpdate),
+    serverDatasetTimestamp,
     marketStatus,
     marketStatusText,
     isDelayed,
@@ -107,6 +117,7 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
     timestamp: String(defaultTimestamp),
     quoteTimestamp: String(quoteTimestamp),
     lastSuccessfulUpdate: String(lastSuccessfulUpdate),
+    serverDatasetTimestamp,
     lastFetchAttempt: String(lastFetchAttempt),
     marketStatus,
     marketStatusText,
@@ -135,61 +146,133 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
   };
 }
 
+export interface FetchMarketOptions {
+  throwOnError?: boolean;
+}
+
 /**
- * Carrega rankings de mercado com fallback resiliente e verificação de JSON válido.
+ * Carrega rankings de mercado com cache-busting rigoroso, verificação de integridade
+ * e tratamento transparente de erros e defasagem regulatória da B3.
  */
-export async function fetchMarketRankings(): Promise<B3MarketRankings> {
+export async function fetchMarketRankings(
+  options: FetchMarketOptions = {}
+): Promise<B3MarketRankings> {
   const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
-  const baseUrl = (typeof import.meta !== "undefined" && import.meta.env?.BASE_URL)
-    ? String(import.meta.env.BASE_URL).replace(/\/$/, "")
-    : "";
-  const cacheBuster = `_t=${Date.now()}`;
+  const pathname = typeof window !== "undefined" ? window.location.pathname : "";
+  // Cache buster com timestamp e nonce aleatório para invalidar caches de CDN e navegadores
+  const cacheBuster = `_t=${Date.now()}&_r=${Math.random().toString(36).substring(2, 7)}`;
 
-  const candidateUrls = [
-    ...(origin ? [`${origin}/data/marketData.json?${cacheBuster}`] : []),
-    ...(baseUrl ? [`${baseUrl}/data/marketData.json?${cacheBuster}`] : []),
-    `/data/marketData.json?${cacheBuster}`,
-    `../data/marketData.json?${cacheBuster}`,
-    `./data/marketData.json?${cacheBuster}`,
-    `data/marketData.json?${cacheBuster}`,
-    `https://sociedadeativa.github.io/data/marketData.json?${cacheBuster}`,
-  ];
+  const candidateUrls: string[] = [];
 
-  for (const url of candidateUrls) {
-    try {
-      const res = await fetch(url, {
-        headers: {
-          Accept: "application/json",
-          "Cache-Control": "no-cache, no-store, must-revalidate",
-          Pragma: "no-cache",
-        },
-        cache: "no-cache",
-      });
+  if (origin) {
+    // 1. Caminho absoluto pela origem atual
+    candidateUrls.push(`${origin}/data/marketData.json?${cacheBuster}`);
+  }
 
-      if (res.ok) {
-        const contentType = res.headers.get("content-type") || "";
-        if (contentType.includes("application/json") || contentType.includes("text/json")) {
-          const json = await res.json();
-          if (json && typeof json === "object" && json.ibov) {
-            return normalizeMarketRankings(json);
-          }
-        } else {
-          // Trata caso de resposta com Content-Type omitido mas corpo JSON válido
-          const text = await res.text();
-          if (text.trim().startsWith("{")) {
-            const json = JSON.parse(text);
-            if (json && typeof json === "object" && json.ibov) {
-              return normalizeMarketRankings(json);
-            }
-          }
-        }
-      }
-    } catch {
-      // Continua para o próximo caminho na lista de tentativas
+  // 2. Se houver subcaminho (ex: GitHub Pages em repositório de usuário)
+  if (origin && pathname && pathname !== "/" && pathname !== "") {
+    const segments = pathname.split("/").filter(Boolean);
+    const knownSections = [
+      "economia",
+      "politica",
+      "eleicoes",
+      "estados",
+      "dados-publicos",
+      "noticias",
+      "esportes",
+      "clima",
+      "sobre",
+    ];
+    if (segments.length > 0 && knownSections.includes(segments[segments.length - 1])) {
+      segments.pop();
+    }
+    if (segments.length > 0) {
+      const subpath = "/" + segments.join("/");
+      candidateUrls.push(`${origin}${subpath}/data/marketData.json?${cacheBuster}`);
     }
   }
 
-  // Fallback imediato, auditado e consistente para a base oficial compilada
-  return normalizeMarketRankings(OFFICIAL_B3_MARKET_DATA);
+  // 3. Caminho absoluto padrão relativo à raiz
+  candidateUrls.push(`/data/marketData.json?${cacheBuster}`);
+
+  // 4. URL canônica em produção como salvaguarda
+  candidateUrls.push(`https://sociedadeativa.github.io/data/marketData.json?${cacheBuster}`);
+
+  const uniqueUrls = Array.from(new Set(candidateUrls));
+  const errors: string[] = [];
+
+  for (const url of uniqueUrls) {
+    try {
+      const res = await fetch(url, {
+        method: "GET",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Cache-Control": "no-cache, no-store, must-revalidate",
+          Pragma: "no-cache",
+          Expires: "0",
+        },
+        cache: "no-store",
+      });
+
+      if (!res.ok) {
+        errors.push(`${url} (HTTP ${res.status} ${res.statusText})`);
+        continue;
+      }
+
+      const contentType = res.headers.get("content-type") || "";
+      // Descarta páginas HTML de 404 / SPA index
+      if (contentType.includes("text/html")) {
+        errors.push(`${url} (Retornou HTML em vez de JSON)`);
+        continue;
+      }
+
+      const text = await res.text();
+      const trimmed = text.trim();
+      if (!trimmed.startsWith("{")) {
+        errors.push(`${url} (Resposta não contém JSON válido)`);
+        continue;
+      }
+
+      const json = JSON.parse(trimmed);
+      if (!json || typeof json !== "object" || !json.ibov) {
+        errors.push(`${url} (JSON sem nó 'ibov' requerido)`);
+        continue;
+      }
+
+      // Sincronização real confirmada: grava o carimbo no horário oficial de Brasília
+      const clientSyncTimestamp = new Date().toLocaleString("pt-BR", {
+        timeZone: "America/Sao_Paulo",
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+      });
+
+      return normalizeMarketRankings(json, {
+        clientSyncTimestamp,
+        isNetworkFresh: true,
+      });
+    } catch (err: any) {
+      errors.push(`${url} (${err?.message || String(err)})`);
+    }
+  }
+
+  const errorSummary = errors.join("; ");
+  console.error(`[marketService] Falha ao sincronizar cotações B3 de todos os endpoints: ${errorSummary}`);
+
+  if (options.throwOnError) {
+    throw new Error(`Não foi possível sincronizar com o feed de dados da B3: ${errorSummary}`);
+  }
+
+  // Fallback seguro auditado marcado como não atualizado
+  const fallback = normalizeMarketRankings(OFFICIAL_B3_MARKET_DATA);
+  fallback.isStale = true;
+  fallback.staleReason = `Falha na requisição de rede: ${errorSummary}`;
+  fallback.staleNotice =
+    "Aviso de dados preservados: Exibindo cotações da base compilada local. O feed de atualização automática da B3 não respondeu.";
+  return fallback;
 }
 
