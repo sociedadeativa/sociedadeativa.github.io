@@ -20,7 +20,18 @@ const rootDir = path.resolve(__dirname, '..');
 const DIST_DIR = path.join(rootDir, 'dist');
 const NOTICIAS_DIR = path.join(DIST_DIR, 'noticias');
 const TEMPLATE_PATH = path.join(NOTICIAS_DIR, 'index.html');
-const DATA_FILE = path.join(rootDir, 'public', 'data', 'newsData.json');
+const PUBLIC_DATA_FILE = path.join(rootDir, 'public', 'data', 'newsData.json');
+const DIST_DATA_FILE = path.join(DIST_DIR, 'data', 'newsData.json');
+
+// Sincroniza e garante leitura do dataset oficial autoritativo
+if (fs.existsSync(PUBLIC_DATA_FILE) && fs.existsSync(DIST_DATA_FILE)) {
+  const pubStat = fs.statSync(PUBLIC_DATA_FILE);
+  const distStat = fs.statSync(DIST_DATA_FILE);
+  if (pubStat.mtimeMs > distStat.mtimeMs) {
+    fs.copyFileSync(PUBLIC_DATA_FILE, DIST_DATA_FILE);
+  }
+}
+const DATA_FILE = fs.existsSync(DIST_DATA_FILE) ? DIST_DATA_FILE : PUBLIC_DATA_FILE;
 
 // Converte strings de data brasileiras para ISO 8601 UTC-3
 function parseDateToIso(dateStr) {
@@ -202,11 +213,18 @@ function main() {
 
   let generatedCount = 0;
   const generatedArticles = [];
+  const seenArticleIds = new Set();
 
   for (const article of articles) {
     if (!article.id || !article.title || !article.summary) {
       continue;
     }
+
+    if (seenArticleIds.has(article.id)) {
+      console.warn(`[Aviso] ID duplicado detectado durante geração: "${article.id}". Ignorando ocorrência subsequente para evitar sobrescrita de metadados.`);
+      continue;
+    }
+    seenArticleIds.add(article.id);
 
     const articleDir = path.join(NOTICIAS_DIR, article.id);
     if (!fs.existsSync(articleDir)) {
@@ -367,6 +385,18 @@ function main() {
 
     generatedArticles.push(article);
     generatedCount++;
+  }
+
+  // Limpa diretórios obsoletos de notícias que não constam mais no dataset atual
+  if (fs.existsSync(NOTICIAS_DIR)) {
+    const existingEntries = fs.readdirSync(NOTICIAS_DIR, { withFileTypes: true });
+    for (const ent of existingEntries) {
+      if (ent.isDirectory() && ent.name !== 'assets' && ent.name !== 'data') {
+        if (!seenArticleIds.has(ent.name)) {
+          fs.rmSync(path.join(NOTICIAS_DIR, ent.name), { recursive: true, force: true });
+        }
+      }
+    }
   }
 
   console.log(`Sucesso: ${generatedCount} páginas individuais de notícias geradas em dist/noticias/[id]/index.html`);
