@@ -174,24 +174,25 @@ export function normalizeEconomicIndicator(raw: any): EconomicIndicator {
  */
 export async function fetchEconomicIndicators(): Promise<EconomicIndicator[]> {
   const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
+  const cacheBuster = `_t=${Date.now()}`;
   const candidateUrls = [
-    ...(origin ? [`${origin}/data/economyData.json`, `${origin}/data/economicData.json`] : []),
-    "/data/economyData.json",
-    "../data/economyData.json",
-    "./data/economyData.json",
-    "data/economyData.json",
-    "/data/economicData.json",
-    "../data/economicData.json",
-    "./data/economicData.json",
-    "data/economicData.json",
-    "https://sociedadeativa.github.io/data/economyData.json",
+    ...(origin ? [`${origin}/data/economyData.json?${cacheBuster}`, `${origin}/data/economicData.json?${cacheBuster}`] : []),
+    `/data/economyData.json?${cacheBuster}`,
+    `../data/economyData.json?${cacheBuster}`,
+    `./data/economyData.json?${cacheBuster}`,
+    `data/economyData.json?${cacheBuster}`,
+    `/data/economicData.json?${cacheBuster}`,
+    `../data/economicData.json?${cacheBuster}`,
+    `./data/economicData.json?${cacheBuster}`,
+    `data/economicData.json?${cacheBuster}`,
+    `https://sociedadeativa.github.io/data/economyData.json?${cacheBuster}`,
   ];
 
   for (const url of candidateUrls) {
     try {
       const res = await fetch(url, {
         headers: { Accept: "application/json" },
-        cache: "default",
+        cache: "no-cache",
       });
 
       if (res.ok) {

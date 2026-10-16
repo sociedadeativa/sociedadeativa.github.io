@@ -377,12 +377,14 @@ async function fetchIbgeServicos() {
 }
 
 // 11. Ibovespa (IBOV) — B3 - Brasil, Bolsa, Balcão
-async function fetchB3Ibovespa() {
-  const points = 204324;
-  const prevPoints = 206506;
-  const variation = -1.06;
-  const fallbackDateStr = '15/10/2026';
-  const fallbackTimestamp = '15/10/2026 18:00';
+// 11. Ibovespa (IBOV) — B3 - Brasil, Bolsa, Balcão
+async function fetchB3Ibovespa(existingIndicator) {
+  const fallbackPoints = existingIndicator?.value || 204324;
+  const fallbackPrevPoints = existingIndicator?.previousValue || 204324;
+  const fallbackVariation = existingIndicator?.variation || 0;
+  const fallbackSessionDate = existingIndicator?.sessionDate || (existingIndicator?.referencePeriod ? existingIndicator.referencePeriod.split(' ')[0] : '16/10/2026');
+  const fallbackQuoteTimestamp = existingIndicator?.quoteTimestamp || existingIndicator?.updatedAt || `${fallbackSessionDate} 18:00`;
+  const fetchTimestamp = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', hour12: false });
 
   try {
     const res = await fetchWithTimeout('https://query1.finance.yahoo.com/v8/finance/chart/%5EBVSP?interval=1d&range=5d', {
@@ -399,23 +401,71 @@ async function fetchB3Ibovespa() {
         const prevIdx = lastIdx - 1;
 
         const livePrice = Math.round(
-          (typeof quote.close?.[lastIdx] === 'number' && !isNaN(quote.close[lastIdx]))
-            ? quote.close[lastIdx]
-            : (typeof meta.regularMarketPrice === 'number' ? meta.regularMarketPrice : points)
+          (typeof meta.regularMarketPrice === 'number' && !isNaN(meta.regularMarketPrice))
+            ? meta.regularMarketPrice
+            : (typeof quote.close?.[lastIdx] === 'number' && !isNaN(quote.close[lastIdx]) ? quote.close[lastIdx] : fallbackPoints)
         );
 
         const livePrev = Math.round(
           (typeof quote.close?.[prevIdx] === 'number' && !isNaN(quote.close[prevIdx]))
             ? quote.close[prevIdx]
-            : (typeof meta.chartPreviousClose === 'number' ? meta.chartPreviousClose : prevPoints)
+            : (typeof meta.chartPreviousClose === 'number' ? meta.chartPreviousClose : fallbackPrevPoints)
         );
 
-        const liveVar = livePrev > 0 ? parseFloat((((livePrice - livePrev) / livePrev) * 100).toFixed(2)) : variation;
+        const liveVar = livePrev > 0 ? parseFloat((((livePrice - livePrev) / livePrev) * 100).toFixed(2)) : fallbackVariation;
 
         const quoteTimeSec = meta.regularMarketTime || timestamps[lastIdx];
         const quoteDate = new Date(quoteTimeSec * 1000);
         const dateStr = quoteDate.toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' });
-        const timeStr = '18:00';
+        const timeStr = quoteDate.toLocaleTimeString('pt-BR', {
+          timeZone: 'America/Sao_Paulo',
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: false
+        });
+        const quoteTimestamp = `${dateStr} ${timeStr}`;
+
+        // Determinação do status da sessão em horário de Brasília
+        const formatter = new Intl.DateTimeFormat('en-US', {
+          timeZone: 'America/Sao_Paulo',
+          hour12: false,
+          year: 'numeric',
+          month: 'numeric',
+          day: 'numeric',
+          hour: 'numeric',
+          minute: 'numeric',
+          weekday: 'short',
+        });
+        const parts = formatter.formatToParts(quoteDate);
+        const getPart = (type) => parts.find((p) => p.type === type)?.value || '';
+        const day = parseInt(getPart('day'), 10);
+        const month = parseInt(getPart('month'), 10);
+        const hour = parseInt(getPart('hour'), 10);
+        const minute = parseInt(getPart('minute'), 10);
+        const weekday = getPart('weekday');
+
+        const isWeekend = weekday === 'Sat' || weekday === 'Sun';
+        const isHoliday =
+          (month === 1 && day === 1) ||
+          (month === 4 && day === 21) ||
+          (month === 5 && day === 1) ||
+          (month === 9 && day === 7) ||
+          (month === 10 && day === 12) ||
+          (month === 11 && day === 2) ||
+          (month === 11 && day === 15) ||
+          (month === 11 && day === 20) ||
+          (month === 12 && day === 25);
+
+        const timeInMinutes = hour * 60 + minute;
+        // Horário de negociação B3: das 10h00 (600 min) às 17h55 (1075 min)
+        const isDuringTradingHours = !isWeekend && !isHoliday && timeInMinutes >= 600 && timeInMinutes <= 1075;
+        const marketStatus = isDuringTradingHours ? 'aberto' : 'fechado';
+        const marketStatusText = isDuringTradingHours
+          ? 'Pregão Aberto (15 min defasagem)'
+          : `Mercado Fechado (Último Fechamento Oficial · ${dateStr})`;
+        const referencePeriod = isDuringTradingHours
+          ? `${dateStr} (Pregão em andamento)`
+          : `${dateStr} (Fechamento)`;
 
         return {
           value: livePrice,
@@ -424,30 +474,40 @@ async function fetchB3Ibovespa() {
           formattedPreviousValue: `${livePrev.toLocaleString('pt-BR')} pts`,
           variation: liveVar,
           variationPeriod: `vs. pregão anterior (${liveVar >= 0 ? '+' : ''}${liveVar.toFixed(2).replace('.', ',')}%)`,
-          referencePeriod: `${dateStr} (Fechamento)`,
-          quoteTimestamp: `${dateStr} ${timeStr}`,
-          updatedAt: `${dateStr} ${timeStr}`,
+          referencePeriod,
+          quoteTimestamp,
+          updatedAt: quoteTimestamp,
+          lastSuccessfulUpdate: fetchTimestamp,
           sessionDate: dateStr,
+          marketStatus,
+          marketStatusText,
+          isDelayed: true,
           isStale: false,
         };
       }
     }
   } catch (err) {
-    console.warn(`[Ibovespa] Falha na consulta em tempo real: ${err.message}. Preservando última cotação válida.`);
+    console.warn(`[Ibovespa] Falha na consulta em tempo real: ${err.message}. Preservando última cotação válida auditada.`);
   }
 
+  // Fallback auditado quando dados em tempo real não estão acessíveis
   return {
-    value: points,
-    formattedValue: `${points.toLocaleString('pt-BR')} pts`,
-    previousValue: prevPoints,
-    formattedPreviousValue: `${prevPoints.toLocaleString('pt-BR')} pts`,
-    variation,
-    variationPeriod: 'vs. pregão anterior (-1,06%)',
-    referencePeriod: `${fallbackDateStr} (Fechamento)`,
-    quoteTimestamp: fallbackTimestamp,
-    updatedAt: fallbackTimestamp,
-    sessionDate: fallbackDateStr,
-    isStale: false,
+    value: fallbackPoints,
+    formattedValue: `${fallbackPoints.toLocaleString('pt-BR')} pts`,
+    previousValue: fallbackPrevPoints,
+    formattedPreviousValue: `${fallbackPrevPoints.toLocaleString('pt-BR')} pts`,
+    variation: fallbackVariation,
+    variationPeriod: `vs. pregão anterior (${fallbackVariation >= 0 ? '+' : ''}${fallbackVariation.toFixed(2).replace('.', ',')}%)`,
+    referencePeriod: `${fallbackSessionDate} (Fechamento)`,
+    quoteTimestamp: fallbackQuoteTimestamp,
+    updatedAt: fallbackQuoteTimestamp,
+    lastSuccessfulUpdate: fetchTimestamp,
+    sessionDate: fallbackSessionDate,
+    marketStatus: 'fechado',
+    marketStatusText: `Mercado Fechado (Base Preservada · ${fallbackSessionDate})`,
+    isDelayed: true,
+    isStale: true,
+    staleNotice: `Aviso de dados preservados: Exibindo cotações da sessão de ${fallbackSessionDate}. A comunicação em tempo real com a B3 está temporariamente indisponível. Nenhum valor de cotação ou variação foi fabricado.`,
   };
 }
 
@@ -478,7 +538,7 @@ const B3_WATCHLIST = [
   { ticker: 'CPFE3', companyName: 'CPFL Energia ON', sector: 'Utilidade Pública / Energia' }
 ];
 
-async function fetchB3StockRankings(sessionDate, sessionTimestamp) {
+async function fetchB3StockRankings(sessionDate, sessionTimestamp, existingRankings) {
   const stockQuotes = [];
 
   const results = await Promise.allSettled(
@@ -498,9 +558,9 @@ async function fetchB3StockRankings(sessionDate, sessionTimestamp) {
       const lastIdx = timestamps.length - 1;
       const prevIdx = lastIdx - 1;
 
-      const close = (typeof quote?.close?.[lastIdx] === 'number' && !isNaN(quote.close[lastIdx]))
-        ? quote.close[lastIdx]
-        : (typeof meta?.regularMarketPrice === 'number' ? meta.regularMarketPrice : null);
+      const close = (typeof meta?.regularMarketPrice === 'number' && !isNaN(meta.regularMarketPrice))
+        ? meta.regularMarketPrice
+        : ((typeof quote?.close?.[lastIdx] === 'number' && !isNaN(quote.close[lastIdx])) ? quote.close[lastIdx] : null);
 
       const prevClose = (typeof quote?.close?.[prevIdx] === 'number' && !isNaN(quote.close[prevIdx]))
         ? quote.close[prevIdx]
@@ -522,6 +582,17 @@ async function fetchB3StockRankings(sessionDate, sessionTimestamp) {
         ? `R$ ${(financialVolume / 1000000000).toFixed(2).replace('.', ',')} bi`
         : `R$ ${(financialVolume / 1000000).toFixed(1).replace('.', ',')} mi`;
 
+      const stockTimeSec = meta?.regularMarketTime || timestamps[lastIdx];
+      const stockDate = new Date(stockTimeSec * 1000);
+      const stockSessionDate = stockDate.toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+      const stockTimeStr = stockDate.toLocaleTimeString('pt-BR', {
+        timeZone: 'America/Sao_Paulo',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      });
+      const stockTimestamp = `${stockSessionDate} ${stockTimeStr}`;
+
       return {
         ticker: item.ticker,
         companyName: item.companyName,
@@ -534,8 +605,8 @@ async function fetchB3StockRankings(sessionDate, sessionTimestamp) {
         financialVolume,
         formattedFinancialVolume,
         shareVolume: vol,
-        tradingSession: sessionDate,
-        timestamp: sessionTimestamp,
+        tradingSession: stockSessionDate || sessionDate,
+        timestamp: stockTimestamp || sessionTimestamp,
         source: 'B3'
       };
     })
@@ -560,7 +631,12 @@ async function fetchB3StockRankings(sessionDate, sessionTimestamp) {
     };
   }
 
-  return { success: false };
+  return {
+    success: false,
+    mostTraded: existingRankings?.mostTraded || [],
+    gainers: existingRankings?.gainers || [],
+    decliners: existingRankings?.decliners || []
+  };
 }
 
 // Mapeamento dos 11 indicadores para provedores oficiais verificados
@@ -637,7 +713,7 @@ async function main() {
 
     try {
       console.log(`\nConsultando fonte oficial para [${indicator.shortName}] via ${provider.name}...`);
-      const newData = await provider.fn();
+      const newData = await provider.fn(indicator);
 
       const valueChanged = newData.value !== indicator.value;
       const refChanged = newData.referencePeriod !== indicator.referencePeriod;
@@ -656,6 +732,23 @@ async function main() {
 
       if (newData.quoteTimestamp) {
         updatedIndicators[i].quoteTimestamp = newData.quoteTimestamp;
+      }
+      if (newData.sessionDate) {
+        updatedIndicators[i].sessionDate = newData.sessionDate;
+      }
+      if (newData.marketStatus) {
+        updatedIndicators[i].marketStatus = newData.marketStatus;
+      }
+      if (newData.marketStatusText) {
+        updatedIndicators[i].marketStatusText = newData.marketStatusText;
+      }
+      if (typeof newData.isStale === 'boolean') {
+        updatedIndicators[i].isStale = newData.isStale;
+      }
+      if (newData.staleNotice) {
+        updatedIndicators[i].staleNotice = newData.staleNotice;
+      } else {
+        delete updatedIndicators[i].staleNotice;
       }
 
       report.updated++;
@@ -709,8 +802,11 @@ async function main() {
       const marketObj = JSON.parse(rawMarket);
       const ibovInd = updatedIndicators.find((i) => i.id === 'ibovespa');
       if (ibovInd && marketObj && marketObj.ibov) {
-        const sessionDate = ibovInd.referencePeriod ? ibovInd.referencePeriod.split(' ')[0] : (marketObj.tradingSession || '14/10/2026');
-        const sessionTimestamp = ibovInd.quoteTimestamp || `${sessionDate} 18:00`;
+        const sessionDate = ibovInd.sessionDate || (ibovInd.referencePeriod ? ibovInd.referencePeriod.split(' ')[0] : (marketObj.tradingSession || '16/10/2026'));
+        const quoteTimestamp = ibovInd.quoteTimestamp || `${sessionDate} 18:00`;
+        const fetchTimestamp = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', hour12: false });
+        const marketStatus = ibovInd.marketStatus || 'fechado';
+        const marketStatusText = ibovInd.marketStatusText || (marketStatus === 'aberto' ? 'Pregão Aberto (15 min defasagem)' : `Mercado Fechado (Último Fechamento Oficial · ${sessionDate})`);
 
         marketObj.ibov.points = ibovInd.value;
         marketObj.ibov.formattedPoints = ibovInd.formattedValue;
@@ -720,25 +816,46 @@ async function main() {
           marketObj.ibov.previousClosePoints = ibovInd.previousValue;
           marketObj.ibov.formattedPreviousClose = ibovInd.formattedPreviousValue || `${ibovInd.previousValue.toLocaleString('pt-BR')} pts`;
         }
-        marketObj.ibov.timestamp = sessionTimestamp;
+        marketObj.ibov.timestamp = quoteTimestamp;
         marketObj.ibov.tradingSession = sessionDate;
-        marketObj.timestamp = sessionTimestamp;
+        marketObj.ibov.marketStatus = marketStatus;
+        marketObj.ibov.marketStatusText = marketStatusText;
+        marketObj.ibov.isDelayed = true;
+        marketObj.ibov.isStale = Boolean(ibovInd.isStale);
+        if (ibovInd.isStale) {
+          marketObj.ibov.staleNotice = ibovInd.staleNotice;
+        } else {
+          delete marketObj.ibov.staleNotice;
+        }
+
+        marketObj.timestamp = quoteTimestamp;
         marketObj.tradingSession = sessionDate;
-        marketObj.lastSuccessfulUpdate = sessionTimestamp;
+        marketObj.lastSuccessfulUpdate = fetchTimestamp;
+        marketObj.marketStatus = marketStatus;
+        marketObj.marketStatusText = marketStatusText;
+        marketObj.isDelayed = true;
+        marketObj.isStale = Boolean(ibovInd.isStale);
+        if (ibovInd.isStale) {
+          marketObj.staleNotice = ibovInd.staleNotice;
+        } else {
+          delete marketObj.staleNotice;
+        }
 
         console.log(`\nAtualizando rankings de mercado da B3 (mais negociadas, maiores altas e baixas) para sessão ${sessionDate}...`);
-        const rankingsResult = await fetchB3StockRankings(sessionDate, sessionTimestamp);
+        const rankingsResult = await fetchB3StockRankings(sessionDate, quoteTimestamp, marketObj);
 
         if (rankingsResult.success) {
           marketObj.mostTraded = rankingsResult.mostTraded;
           marketObj.gainers = rankingsResult.gainers;
           marketObj.decliners = rankingsResult.decliners;
-          marketObj.isStale = false;
-          delete marketObj.staleNotice;
+          if (!ibovInd.isStale) {
+            marketObj.isStale = false;
+            delete marketObj.staleNotice;
+          }
           console.log(`✓ Rankings de mercado da B3 atualizados com sucesso (${sessionDate}).`);
         } else {
           marketObj.isStale = true;
-          marketObj.staleNotice = `Aviso de dados preservados: Exibindo último fechamento oficial consolidado de ${marketObj.tradingSession}. O serviço em tempo real da B3 está temporariamente indisponível.`;
+          marketObj.staleNotice = `Aviso de dados preservados: Exibindo cotações consolidadas da sessão de ${marketObj.tradingSession}. A comunicação em tempo real com a B3 está temporariamente indisponível. Nenhum valor de cotação ou variação foi fabricado.`;
           console.warn(`! Consulta aos rankings da B3 retornou dados parciais. Base anterior auditada de ${marketObj.tradingSession} preservada.`);
         }
 
@@ -749,10 +866,12 @@ async function main() {
         const tsContent = `import { B3MarketRankings } from "../types/market";\n\n/**\n * Catálogo compilado de cotações e rankings da Bolsa de Valores (B3 - Brasil, Bolsa, Balcão).\n * Atualizado automaticamente pelo pipeline oficial de dados de mercado.\n */\nexport const OFFICIAL_B3_MARKET_DATA: B3MarketRankings = ${JSON.stringify(marketObj, null, 2)};\n`;
         fs.writeFileSync(TS_MARKET_PATH, tsContent, 'utf8');
 
-        // Sincroniza dist/data/marketData.json se o diretório de build existir
+        // Sincroniza dist/data se o diretório de build existir
         const DIST_MARKET_PATH = path.join(rootDir, 'dist', 'data', 'marketData.json');
         if (fs.existsSync(path.dirname(DIST_MARKET_PATH))) {
           fs.writeFileSync(DIST_MARKET_PATH, JSON.stringify(marketObj, null, 2) + '\n', 'utf8');
+          fs.writeFileSync(path.join(rootDir, 'dist', 'data', 'economyData.json'), serialized, 'utf8');
+          fs.writeFileSync(path.join(rootDir, 'dist', 'data', 'economicData.json'), serialized, 'utf8');
         }
 
         marketSynced = true;

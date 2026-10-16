@@ -583,29 +583,29 @@
     "id": "ibovespa",
     "name": "Índice Bovespa (Principal indicador de ações da B3)",
     "shortName": "Ibovespa (IBOV)",
-    "value": 204324,
-    "formattedValue": "204.324 pts",
+    "value": 204549,
+    "formattedValue": "204.549 pts",
     "unit": "pontos",
-    "variation": -1.06,
-    "variationPeriod": "vs. pregão anterior (-1,06%)",
-    "previousValue": 206506,
-    "formattedPreviousValue": "206.506 pts",
-    "referencePeriod": "15/10/2026 (Fechamento)",
+    "variation": 0.11,
+    "variationPeriod": "vs. pregão anterior (+0,11%)",
+    "previousValue": 204324,
+    "formattedPreviousValue": "204.324 pts",
+    "referencePeriod": "16/10/2026 (Pregão em andamento)",
     "source": "B3",
     "sourceAgency": "B3 - Brasil, Bolsa, Balcão",
     "sourceUrl": "https://b3.com.br/pt_br/market-data-e-indices/indices/indices-amplos/ibovespa-b3.htm",
     "quotationUrl": "https://b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/cotacoes/",
     "officialSeriesCode": "IBOV (Código B3)",
-    "updatedAt": "15/10/2026 18:00",
+    "updatedAt": "16/10/2026 13:07",
     "frequency": "Pregão Diário",
     "category": "Juros & Câmbio",
     "description": "Principal índice acionário da América Latina e termômetro do mercado de capitais brasileiro. Composto pelas ações e units das empresas de maior negociabilidade e representatividade na B3.",
     "methodologySummary": "Índice de retorno total ponderado pelo valor de mercado das ações em circulação (free float). Rebalanceado a cada quatro meses pela B3. Cotações públicas possuem defasagem regulatória mínima de 15 minutos durante o pregão.",
-    "marketStatus": "fechado",
-    "marketStatusText": "Mercado Fechado (Último Fechamento)",
+    "marketStatus": "aberto",
+    "marketStatusText": "Pregão Aberto (15 min defasagem)",
     "isDelayed": true,
     "delayNotice": "Cotações públicas com defasagem regulatória mínima de 15 minutos (B3). Fora do horário de negociação, exibe o último fechamento oficial verificado.",
-    "quoteTimestamp": "15/10/2026 18:00",
+    "quoteTimestamp": "16/10/2026 13:07",
     "historicalData": [
       {
         "period": "30/09/2026",
@@ -655,6 +655,8 @@
         "formattedValue": "209.067 pts",
         "variation": 1.38
       }
-    ]
+    ],
+    "sessionDate": "16/10/2026",
+    "isStale": false
   }
 ]

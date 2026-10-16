@@ -129,20 +129,21 @@ export function normalizeMarketRankings(raw: any): B3MarketRankings {
  */
 export async function fetchMarketRankings(): Promise<B3MarketRankings> {
   const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
+  const cacheBuster = `_t=${Date.now()}`;
   const candidateUrls = [
-    ...(origin ? [`${origin}/data/marketData.json`] : []),
-    "/data/marketData.json",
-    "../data/marketData.json",
-    "./data/marketData.json",
-    "data/marketData.json",
-    "https://sociedadeativa.github.io/data/marketData.json",
+    ...(origin ? [`${origin}/data/marketData.json?${cacheBuster}`] : []),
+    `/data/marketData.json?${cacheBuster}`,
+    `../data/marketData.json?${cacheBuster}`,
+    `./data/marketData.json?${cacheBuster}`,
+    `data/marketData.json?${cacheBuster}`,
+    `https://sociedadeativa.github.io/data/marketData.json?${cacheBuster}`,
   ];
 
   for (const url of candidateUrls) {
     try {
       const res = await fetch(url, {
         headers: { Accept: "application/json" },
-        cache: "default",
+        cache: "no-cache",
       });
 
       if (res.ok) {
