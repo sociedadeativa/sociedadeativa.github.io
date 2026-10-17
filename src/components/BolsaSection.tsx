@@ -98,7 +98,7 @@ export const BolsaSection: React.FC = () => {
       });
       const errorMsg = err?.message || "Falha na conexão com o feed de dados de mercado da B3";
 
-      console.error(`[B3 Market] Falha na tentativa de atualização às ${failedTime}:`, err);
+      console.warn(`[B3 Market] Falha na tentativa de atualização às ${failedTime}:`, err);
 
       setSyncStatus("error");
       setSyncError({

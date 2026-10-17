@@ -63,11 +63,6 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
       if (canonical) {
         canonical.setAttribute("href", `https://sociedadeativa.github.io${getArticleUrl(article.id)}`);
       }
-
-      const ogUrl = document.querySelector('meta[property="og:url"]');
-      if (ogUrl) {
-        ogUrl.setAttribute("content", `https://sociedadeativa.github.io${getArticleUrl(article.id)}`);
-      }
     }
   }, [article]);
 
@@ -150,7 +145,7 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
 
         {/* Cabeçalho do Artigo */}
         <header className="mb-8">
-          <div className="flex items-center gap-2 mb-3 text-xs">
+          <div className="flex items-center gap-2 mb-3 text-xs flex-wrap">
             <span className={`font-bold uppercase tracking-wider ${catStyle.kicker}`}>
               {article.category}
             </span>
@@ -158,14 +153,17 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
             <span className="text-slate-500 font-medium">
               {article.readTime || "3 min de leitura"}
             </span>
-            {isSociedadeAtiva && (
-              <>
-                <span className="text-slate-300" aria-hidden="true">·</span>
-                <span className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-900">
-                  <Sparkles className="w-3 h-3" />
-                  Especial Sociedade Ativa
-                </span>
-              </>
+            <span className="text-slate-300" aria-hidden="true">·</span>
+            {isSociedadeAtiva ? (
+              <span className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-900 bg-blue-50 border border-blue-200 px-2.5 py-0.5 rounded-md">
+                <Sparkles className="w-3 h-3 text-blue-700" />
+                Reportagem Especial &amp; Análise
+              </span>
+            ) : (
+              <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-700 bg-slate-100 border border-slate-200 px-2.5 py-0.5 rounded-md">
+                <Building2 className="w-3 h-3 text-slate-500" />
+                Súmula Institucional Oficial
+              </span>
             )}
           </div>
 
@@ -217,32 +215,30 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
           </div>
         </header>
 
-        {/* Imagem Editorial Oficial Verificada */}
+        {/* Imagem Oficial com Atribuição Transparente */}
         {article.imageUrl && (
-          <figure className="mb-8 rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-xs">
+          <figure className="mb-8 rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-2xs">
             <img
               src={article.imageUrl}
               alt={article.imageAlt || article.title}
               className="w-full max-h-[480px] object-cover"
               loading="eager"
             />
-            {(article.imageCaption || article.imageCredit) && (
-              <figcaption className="p-3 text-[11px] sm:text-xs text-slate-500 bg-slate-50/80 border-t border-slate-200/60 flex items-center justify-between gap-2 flex-wrap">
-                <span>{article.imageCaption || article.title}</span>
-                {article.imageCredit && (
-                  <span className="font-semibold text-slate-700">
-                    Foto: {article.imageCredit}
-                  </span>
-                )}
-              </figcaption>
-            )}
+            <figcaption className="p-3 text-xs text-slate-600 bg-white border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-1 leading-relaxed">
+              <span>{article.imageCaption || article.title}</span>
+              {article.imageCredit && (
+                <span className="font-semibold text-slate-500 shrink-0">
+                  {article.imageCredit}
+                </span>
+              )}
+            </figcaption>
           </figure>
         )}
 
         {/* Corpo do Conteúdo Autorizado */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8 shadow-xs">
           {article.content && article.content.length > 0 ? (
-            /* Artigos proprietários com texto integral autorizado */
+            /* Artigos proprietários ou com texto estruturado */
             <div className="space-y-5 text-sm sm:text-base text-slate-800 leading-relaxed font-serif">
               {article.content.map((paragraph, idx) => (
                 <p key={idx}>{paragraph}</p>
@@ -254,10 +250,10 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 leading-relaxed space-y-2">
                 <div className="flex items-center gap-1.5 font-bold text-slate-800 uppercase tracking-wider text-[11px]">
                   <ShieldCheck className="w-4 h-4 text-blue-700" />
-                  <span>Diretriz de Transparência e Direitos Autorais</span>
+                  <span>Diretriz de Transparência e Integridade da Informação</span>
                 </div>
                 <p>
-                  Esta é uma súmula factual oficial distribuída por <strong>{article.source}</strong>. Para preservar os direitos de publicação e garantir a integridade dos documentos, tabelas ou anexos oficiais, a íntegra completa do conteúdo está disponível diretamente no portal oficial da agência responsável.
+                  Esta é uma súmula factual oficial distribuída por <strong>{article.source}</strong>. Para preservar os direitos autorais da agência e garantir a integridade de notas técnicas, tabelas ou documentos originais, a íntegra da reportagem está disponível diretamente no portal oficial da agência responsável.
                 </p>
               </div>
 

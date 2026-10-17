@@ -104,6 +104,9 @@ export function normalizeNewsItem(raw: any, index: number = 0): NewsItem {
 
   const tags = Array.isArray(raw.tags) ? raw.tags.map((t: any) => String(t).trim()).filter(Boolean) : [];
 
+  const isSociedadeAtiva = source.includes("Sociedade Ativa") || (raw.author && String(raw.author).includes("Sociedade Ativa"));
+  const editorialType = raw.editorialType || (isSociedadeAtiva ? "reportagem_especial" : "sumula_oficial");
+
   return {
     id,
     title,
@@ -114,13 +117,13 @@ export function normalizeNewsItem(raw: any, index: number = 0): NewsItem {
     publishedAt,
     updatedAt,
     category,
-    imageUrl: typeof raw.imageUrl === "string" && raw.imageUrl.trim() ? raw.imageUrl.trim() : undefined,
-    imageCaption: typeof raw.imageCaption === "string" && raw.imageCaption.trim() ? raw.imageCaption.trim() : undefined,
-    imageCredit: typeof raw.imageCredit === "string" && raw.imageCredit.trim() ? raw.imageCredit.trim() : undefined,
-    imageAlt: typeof raw.imageAlt === "string" && raw.imageAlt.trim() ? raw.imageAlt.trim() : undefined,
-    isOriginalReporting: Boolean(raw.isOriginalReporting || raw.source?.includes("Sociedade Ativa") || raw.author?.includes("Sociedade Ativa")),
+    imageUrl: typeof raw.imageUrl === "string" && raw.imageUrl.trim().startsWith("https://") ? raw.imageUrl.trim() : undefined,
+    imageCaption: typeof raw.imageCaption === "string" ? raw.imageCaption.trim() : undefined,
+    imageCredit: typeof raw.imageCredit === "string" ? raw.imageCredit.trim() : undefined,
+    imageAlt: typeof raw.imageAlt === "string" ? raw.imageAlt.trim() : title,
     author: raw.author ? String(raw.author).trim() : source,
     tags,
+    editorialType,
     // Campos legados para compatibilidade
     headline: title,
     lead: summary,
@@ -173,21 +176,25 @@ export function filterNewsItems(items: NewsItem[], options: NewsFilterOptions): 
  */
 export async function fetchNewsItems(): Promise<NewsItem[]> {
   const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
+  const cacheBuster = `_t=${Date.now()}`;
   const candidateUrls = [
-    ...(origin ? [`${origin}/data/newsData.json`] : []),
-    "/data/newsData.json",
-    "../../data/newsData.json",
-    "../data/newsData.json",
-    "./data/newsData.json",
-    "data/newsData.json",
-    "https://sociedadeativa.github.io/data/newsData.json",
+    ...(origin ? [`${origin}/data/newsData.json?${cacheBuster}`] : []),
+    `/data/newsData.json?${cacheBuster}`,
+    `../../data/newsData.json?${cacheBuster}`,
+    `../data/newsData.json?${cacheBuster}`,
+    `./data/newsData.json?${cacheBuster}`,
+    `data/newsData.json?${cacheBuster}`,
+    `https://sociedadeativa.github.io/data/newsData.json?${cacheBuster}`,
   ];
 
-  const timestamp = Date.now();
-  for (const baseUrl of candidateUrls) {
+  for (const url of candidateUrls) {
     try {
-      const url = `${baseUrl}?t=${timestamp}`;
-      const response = await fetch(url, { cache: "no-store" });
+      const response = await fetch(url, {
+        cache: "no-store",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+        },
+      });
       if (response.ok) {
         const contentType = response.headers.get("content-type") || "";
         if (contentType.includes("application/json") || contentType.includes("text/json")) {

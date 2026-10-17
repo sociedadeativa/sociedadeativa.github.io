@@ -35,6 +35,7 @@ export interface NewsItem {
   imageAlt?: string;
   author?: string;
   tags?: string[];
+  editorialType?: "analise_propria" | "sumula_oficial" | "reportagem_especial";
 
   // Campos de compatibilidade editorial
   headline?: string;

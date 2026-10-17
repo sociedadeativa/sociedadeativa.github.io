@@ -106,57 +106,30 @@ function escapeJson(str) {
   return JSON.stringify(str).slice(1, -1);
 }
 
-// Gera o sitemap.xml final com as 10 seções canônicas e todos os artigos gerados
+// Gera o sitemap.xml final com as 8 seções canônicas e todos os artigos gerados
 function generateSitemap(generatedArticles) {
   const DIST_SITEMAP = path.join(DIST_DIR, 'sitemap.xml');
   const BASE_SITEMAP = path.join(rootDir, 'public', 'sitemap.xml');
 
-  // 1. Calcula datas dinâmicas mais recentes a partir dos artigos publicados para cada caderno editorial
-  const allArticleDates = generatedArticles
-    .map((a) => extractReliableDateYmd(a.updatedAt || a.publishedAt))
-    .filter(Boolean)
-    .sort()
-    .reverse();
-  const latestOverallDate = allArticleDates[0] || '2026-10-16';
-
-  const getLatestDateForCategories = (categories, fallback) => {
-    const dates = generatedArticles
-      .filter((a) => categories.includes(a.category))
-      .map((a) => extractReliableDateYmd(a.updatedAt || a.publishedAt))
-      .filter(Boolean)
-      .sort()
-      .reverse();
-    return dates[0] || fallback;
-  };
-
-  const latestPoliticaDate = getLatestDateForCategories(
-    ['Política', 'Governo', 'Congresso', 'Justiça'],
-    latestOverallDate
-  );
-  const latestEconomiaDate = getLatestDateForCategories(['Economia'], '2026-10-15');
-  const latestEleicoesDate = getLatestDateForCategories(['Eleições'], '2026-10-16');
-
-  // As 10 seções canônicas principais do portal Sociedade Ativa
+  // As seções canônicas principais do portal Sociedade Ativa
   const canonicalSections = [
-    { loc: 'https://sociedadeativa.github.io/', defaultDate: latestOverallDate },
-    { loc: 'https://sociedadeativa.github.io/politica/', defaultDate: latestPoliticaDate },
-    { loc: 'https://sociedadeativa.github.io/eleicoes/', defaultDate: latestEleicoesDate },
-    { loc: 'https://sociedadeativa.github.io/economia/', defaultDate: latestEconomiaDate },
+    { loc: 'https://sociedadeativa.github.io/', defaultDate: '2026-10-13' },
+    { loc: 'https://sociedadeativa.github.io/politica/', defaultDate: '2026-10-13' },
+    { loc: 'https://sociedadeativa.github.io/eleicoes/', defaultDate: '2026-10-13' },
+    { loc: 'https://sociedadeativa.github.io/economia/', defaultDate: '2026-10-13' },
     { loc: 'https://sociedadeativa.github.io/estados/', defaultDate: '2026-10-13' },
     { loc: 'https://sociedadeativa.github.io/dados-publicos/', defaultDate: '2026-10-13' },
-    { loc: 'https://sociedadeativa.github.io/noticias/', defaultDate: latestOverallDate },
+    { loc: 'https://sociedadeativa.github.io/noticias/', defaultDate: '2026-10-13' },
     { loc: 'https://sociedadeativa.github.io/esportes/', defaultDate: '2026-10-14' },
     { loc: 'https://sociedadeativa.github.io/clima/', defaultDate: '2026-10-15' },
     { loc: 'https://sociedadeativa.github.io/sobre/', defaultDate: '2026-10-13' },
   ];
 
-  // Preserva os valores de lastmod definidos nas seções principais a partir de public/sitemap.xml caso sejam mais recentes
+  // Preserva os valores de lastmod definidos nas seções principais a partir de public/sitemap.xml
   const existingSectionDates = new Map();
   if (fs.existsSync(BASE_SITEMAP)) {
     const raw = fs.readFileSync(BASE_SITEMAP, 'utf8');
-    const matches = raw.matchAll(
-      /<url>[\s\S]*?<loc>(https:\/\/sociedadeativa\.github\.io\/[^<]*)<\/loc>(?:[\s\S]*?<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>)?[\s\S]*?<\/url>/g
-    );
+    const matches = raw.matchAll(/<url>[\s\S]*?<loc>(https:\/\/sociedadeativa\.github\.io\/[^<]*)<\/loc>(?:[\s\S]*?<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>)?[\s\S]*?<\/url>/g);
     for (const match of matches) {
       if (match[1] && match[2]) {
         existingSectionDates.set(match[1], match[2]);
@@ -167,15 +140,11 @@ function generateSitemap(generatedArticles) {
   const sitemapEntries = [];
   const seenLocs = new Set();
 
-  // 1. Inclui as 10 seções canônicas principais com datas verificadas
+  // 1. Inclui as 8 seções canônicas principais
   for (const section of canonicalSections) {
     if (!seenLocs.has(section.loc)) {
       seenLocs.add(section.loc);
-      const existingDate = existingSectionDates.get(section.loc);
-      const lastmod =
-        existingDate && existingDate > section.defaultDate
-          ? existingDate
-          : section.defaultDate;
+      const lastmod = existingSectionDates.get(section.loc) || section.defaultDate;
       sitemapEntries.push({
         loc: section.loc,
         lastmod,
@@ -218,9 +187,7 @@ function generateSitemap(generatedArticles) {
   const sitemapXml = xmlLines.join('\n');
   fs.writeFileSync(DIST_SITEMAP, sitemapXml, 'utf8');
   fs.writeFileSync(BASE_SITEMAP, sitemapXml, 'utf8');
-  console.log(
-    `Sucesso: dist/sitemap.xml e public/sitemap.xml gerados com ${sitemapEntries.length} URLs (${canonicalSections.length} seções canônicas + ${sitemapEntries.length - canonicalSections.length} matérias individuais).`
-  );
+  console.log(`Sucesso: dist/sitemap.xml e public/sitemap.xml gerados com ${sitemapEntries.length} URLs (${canonicalSections.length} seções canônicas + ${sitemapEntries.length - canonicalSections.length} matérias individuais).`);
 }
 
 function main() {
@@ -320,12 +287,6 @@ function main() {
       /<meta\s+property=["']og:type["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
       () => `<meta property="og:type" content="article" />\n    <meta property="article:published_time" content="${isoDate}" />\n    <meta property="article:section" content="${escapeHtml(article.category)}" />`
     );
-    if (article.imageUrl) {
-      pageHtml = pageHtml.replace(
-        /<meta\s+property=["']og:image["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-        () => `<meta property="og:image" content="${escapeHtml(article.imageUrl)}" />`
-      );
-    }
 
     // Substitui Twitter Cards
     pageHtml = pageHtml.replace(
@@ -336,15 +297,8 @@ function main() {
       /<meta\s+name=["']twitter:description["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
       () => `<meta name="twitter:description" content="${escapeHtml(metaDescription)}" />`
     );
-    if (article.imageUrl) {
-      pageHtml = pageHtml.replace(
-        /<meta\s+name=["']twitter:image["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-        () => `<meta name="twitter:image" content="${escapeHtml(article.imageUrl)}" />`
-      );
-    }
 
     // Substitui dados estruturados Schema.org
-    const isSociedadeAtiva = article.source?.includes('Sociedade Ativa') || article.id?.startsWith('eleicoes-2026');
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "NewsArticle",
@@ -355,7 +309,6 @@ function main() {
       },
       "headline": article.title,
       "description": article.summary,
-      ...(article.imageUrl ? { "image": [article.imageUrl] } : {}),
       "datePublished": isoDate,
       "dateModified": isoModDate,
       "articleSection": article.category,
@@ -371,16 +324,22 @@ function main() {
         }
       },
       "author": {
-        "@type": isSociedadeAtiva ? "NewsMediaOrganization" : "Organization",
+        "@type": "Organization",
         "name": article.source
       },
       "isAccessibleForFree": true
     };
 
+    if (article.imageUrl) {
+      structuredData.image = [article.imageUrl];
+    }
+
     pageHtml = pageHtml.replace(
       /<script\s+type=["']application\/ld\+json["']>[\s\S]*?<\/script>/i,
       () => `<script type="application/ld+json">\n${JSON.stringify(structuredData, null, 2)}\n    </script>`
     );
+
+    const isSociedadeAtiva = article.source?.includes("Sociedade Ativa") || article.author?.includes("Sociedade Ativa");
 
     // Pre-rendered HTML dentro de <div id="root"> para robôs de indexação e usuários sem JS
     const fallbackArticleHtml = `
@@ -395,46 +354,54 @@ function main() {
             <div style="margin-bottom:12px;">
               ${
                 isSociedadeAtiva
-                  ? `<span style="font-size:11px;font-weight:bold;text-transform:uppercase;color:#ffffff;background:#0f172a;padding:4px 8px;border-radius:6px;letter-spacing:0.05em;">Especial Sociedade Ativa &mdash; Cobertura Própria</span>`
-                  : `<span style="font-size:11px;font-weight:bold;text-transform:uppercase;color:#1e40af;letter-spacing:0.05em;">${escapeHtml(article.category)} &middot; Despacho Oficial</span>`
+                  ? `<span style="display:inline-block;background:#0f172a;color:#ffffff;font-size:11px;font-weight:bold;letter-spacing:0.04em;text-transform:uppercase;padding:4px 10px;border-radius:6px;">Reportagem Especial &bull; Redação Sociedade Ativa</span>`
+                  : `<span style="display:inline-block;background:#f1f5f9;color:#334155;border:1px solid #cbd5e1;font-size:11px;font-weight:bold;letter-spacing:0.04em;text-transform:uppercase;padding:4px 10px;border-radius:6px;">Súmula Institucional Oficial &bull; ${escapeHtml(article.source)}</span>`
               }
             </div>
+            <p style="font-size:12px;font-weight:bold;text-transform:uppercase;color:#1e40af;margin-bottom:8px;">${escapeHtml(article.category)}</p>
             <h1 style="font-size:28px;line-height:1.2;font-weight:900;color:#020617;margin-bottom:16px;">${escapeHtml(article.title)}</h1>
             <p style="font-size:16px;line-height:1.6;font-weight:600;color:#334155;background:#f8fafc;padding:16px;border-radius:12px;border:1px solid #e2e8f0;margin-bottom:20px;">${escapeHtml(article.summary)}</p>
-            <div style="font-size:12px;color:#64748b;margin-bottom:24px;border-bottom:1px solid #e2e8f0;padding-bottom:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-              <div>
-                <span><strong>Fonte:</strong> ${escapeHtml(article.source)}</span>
-                ${article.author && article.author !== article.source ? ` &middot; <span><strong>Autoria:</strong> ${escapeHtml(article.author)}</span>` : ''}
-              </div>
-              <div>
-                <span>Publicado em ${escapeHtml(article.publishedAt)}</span>
-              </div>
+            
+            <div style="font-size:12px;color:#64748b;margin-bottom:24px;border-bottom:1px solid #e2e8f0;padding-bottom:12px;display:flex;gap:12px;flex-wrap:wrap;">
+              <span><strong>Fonte:</strong> ${escapeHtml(article.source)}</span> &middot; 
+              ${article.author && article.author !== article.source ? `<span><strong>Apuração:</strong> ${escapeHtml(article.author)}</span> &middot; ` : ''}
+              <span>Publicado em ${escapeHtml(article.publishedAt)}</span>
             </div>
+
             ${
               article.imageUrl
-                ? `
-                <figure style="margin:20px 0 28px 0;">
-                  <img src="${escapeHtml(article.imageUrl)}" alt="${escapeHtml(article.imageAlt || article.title)}" style="width:100%;max-height:460px;object-fit:cover;border-radius:12px;border:1px solid #e2e8f0;" loading="lazy" />
-                  ${
-                    (article.imageCaption || article.imageCredit)
-                      ? `<figcaption style="font-size:12px;color:#64748b;margin-top:8px;line-height:1.4;">${escapeHtml(article.imageCaption ? article.imageCaption + ' ' : '')}${article.imageCredit ? `<strong>Foto/Crédito:</strong> ${escapeHtml(article.imageCredit)}` : ''}</figcaption>`
-                      : ''
-                  }
-                </figure>
-                `
+                ? `<figure style="margin:24px 0;">
+                    <img src="${escapeHtml(article.imageUrl)}" alt="${escapeHtml(article.imageAlt || article.title)}" style="width:100%;max-height:480px;object-fit:cover;border-radius:12px;border:1px solid #e2e8f0;" loading="lazy" />
+                    <figcaption style="font-size:11px;color:#64748b;margin-top:8px;padding:0 4px;line-height:1.4;">
+                      ${escapeHtml(article.imageCaption || article.title)}
+                      ${article.imageCredit ? ` &mdash; <span style="font-style:italic;">${escapeHtml(article.imageCredit)}</span>` : ''}
+                    </figcaption>
+                  </figure>`
                 : ''
             }
+
             ${
               article.content && article.content.length > 0
-                ? article.content.map(p => `<p style="font-size:15px;line-height:1.7;color:#1e293b;margin-bottom:16px;">${escapeHtml(p)}</p>`).join('')
-                : `<p style="font-size:13px;color:#64748b;font-style:italic;margin-bottom:20px;">Esta é uma súmula factual oficial distribuída por ${escapeHtml(article.source)}. Acesse a matéria original para conferir documentos e anexos completos.</p>`
+                ? `<div style="font-family:Georgia,serif;font-size:16px;line-height:1.8;color:#1e293b;margin:24px 0;">
+                    ${article.content.map(p => `<p style="margin-bottom:18px;">${escapeHtml(p)}</p>`).join('')}
+                  </div>`
+                : `<div style="font-size:13px;color:#64748b;background:#f8fafc;padding:16px;border-radius:12px;border:1px solid #e2e8f0;margin-bottom:24px;">
+                    <p style="margin:0 0 8px 0;font-weight:bold;color:#1e293b;">Diretriz de Transparência e Integridade de Dados:</p>
+                    <p style="margin:0;">Esta é uma súmula factual oficial distribuída por <strong>${escapeHtml(article.source)}</strong> para fins de transparência e acesso à informação pública. Para consultar relatórios integrais, notas técnicas ou anexos originais, acesse a publicação direta na agência responsável pelo link abaixo.</p>
+                  </div>`
             }
-            <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
-              ${
-                isSociedadeAtiva
-                  ? `<a href="/eleicoes/" style="display:inline-block;background:#1e3a8a;color:#ffffff;padding:10px 20px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:bold;">Acessar painel interativo de apuração</a>`
-                  : `<a href="${escapeHtml(article.articleUrl)}" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#1e3a8a;color:#ffffff;padding:10px 20px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:bold;">Acessar reportagem completa em ${escapeHtml(article.source)}</a>`
-              }
+
+            ${
+              article.tags && article.tags.length > 0
+                ? `<div style="margin:20px 0;display:flex;gap:6px;flex-wrap:wrap;font-size:11px;">
+                    <span style="color:#64748b;font-weight:bold;align-self:center;">Temas:</span>
+                    ${article.tags.map(t => `<span style="background:#f1f5f9;color:#475569;padding:3px 8px;border-radius:6px;">#${escapeHtml(t)}</span>`).join('')}
+                  </div>`
+                : ''
+            }
+
+            <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;border-top:1px solid #e2e8f0;padding-top:20px;">
+              <a href="${escapeHtml(article.articleUrl)}" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#1e3a8a;color:#ffffff;padding:10px 20px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:bold;">Acessar reportagem completa em ${escapeHtml(article.source)}</a>
               <a href="/noticias/" style="display:inline-block;background:#f1f5f9;color:#334155;padding:10px 20px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:bold;">Voltar para Notícias</a>
             </div>
           </article>

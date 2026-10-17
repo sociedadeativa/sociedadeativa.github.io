@@ -192,8 +192,11 @@ export async function fetchMarketRankings(
     }
   }
 
-  // 3. Caminho absoluto padrão relativo à raiz
+  // 3. Caminhos relativos e raiz
   candidateUrls.push(`/data/marketData.json?${cacheBuster}`);
+  candidateUrls.push(`./data/marketData.json?${cacheBuster}`);
+  candidateUrls.push(`../data/marketData.json?${cacheBuster}`);
+  candidateUrls.push(`data/marketData.json?${cacheBuster}`);
 
   // 4. URL canônica em produção como salvaguarda
   candidateUrls.push(`https://sociedadeativa.github.io/data/marketData.json?${cacheBuster}`);
@@ -203,13 +206,11 @@ export async function fetchMarketRankings(
 
   for (const url of uniqueUrls) {
     try {
+      // Uso de headers simples para evitar disparo de preflight CORS (OPTIONS 405) no GitHub Pages
       const res = await fetch(url, {
         method: "GET",
         headers: {
           Accept: "application/json, text/plain, */*",
-          "Cache-Control": "no-cache, no-store, must-revalidate",
-          Pragma: "no-cache",
-          Expires: "0",
         },
         cache: "no-store",
       });
@@ -261,7 +262,7 @@ export async function fetchMarketRankings(
   }
 
   const errorSummary = errors.join("; ");
-  console.error(`[marketService] Falha ao sincronizar cotações B3 de todos os endpoints: ${errorSummary}`);
+  console.warn(`[marketService] Aviso de conectividade: endpoints remotos temporariamente inacessíveis (${errorSummary}). Aplicando base auditada de salvaguarda.`);
 
   if (options.throwOnError) {
     throw new Error(`Não foi possível sincronizar com o feed de dados da B3: ${errorSummary}`);
