@@ -5,6 +5,161 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1705659",
+    "title": "José Sarney recebe alta hospitalar após nove dias de internação",
+    "summary": "Ele estava internado na UDI Hospital, da Rede D’Or, em São Luís (MA) desde o dia 09 de outubro, onde passou por uma cirurgia abdominal .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/jose-sarney-recebe-alta-hospitalar-apos-nove-dias-de-internacao",
+    "publishedAt": "17/10/2026 às 12:33",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/q5FLDjBFX6f6CL1mTeg8yy9p26s=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/posse-renan-filho_mcamgo_abr_030120231818-2.jpg?itok=BsGQpdgv",
+    "imageCaption": "José Sarney recebe alta hospitalar após nove dias de internação",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "José Sarney recebe alta hospitalar após nove dias de internação",
+    "author": "Elaine Patrícia Cruz - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "José Sarney",
+      "Brasil"
+    ],
+    "content": [
+      "Ele estava internado na UDI Hospital, da Rede D’Or, em São Luís (MA) desde o dia 09 de outubro, onde passou por uma cirurgia abdominal .",
+      "Abstenção de eleitores com mais de 70 anos cai 9,7 pontos percentuais. Em sabatina, Flávio não explica propostas e faz acusações sem provas. Descanso de trabalhador não quebra empresas, diz Lula após fim da 6x1. Segundo o boletim médico divulgado de hoje, Sarney recebeu alta após apresentar uma evolução clínica satisfatória. Ele continuará sob acompanhamento médico ambulatorial.",
+      "Desde setembro, Sarney foi internado outras duas vezes. No dia 13 de setembro, foi internado neste mesmo hospital devido ao quadro de pneumonia .",
+      "Já no dia 24 de setembro, foi internado no Hospital Sírio Libanês, em São Paulo, para dar continuidade ao tratamento de pneumonia.",
+      "Escritor e político, José Sarney foi o primeiro presidente da República da era da redemocratização, entre 1985 e 1990. Foi também senador da República e governador do Maranhão. Em 2014 ele anunciou sua aposentadoria da carreira política."
+    ]
+  },
+  {
+    "id": "ebc-1705658",
+    "title": "Recife vai sediar maior festival de animação do Brasil, o Animage",
+    "summary": "Este ano, o festival traz duas grandes novidades: a mostra competitiva para longas-metragens e o Animage Conecta, com programação voltada para proporcionar ambiente de negócios na área de animação e pensar os desafios e o futuro do setor.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-10/recife-vai-sediar-maior-festival-de-animacao-do-brasil-o-animage",
+    "publishedAt": "17/10/2026 às 12:21",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/Y4Wqbh05t7H0cmzJtJT2WSlIdMg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/17/sem_titulo-2_0.jpg?itok=8vv9uR6o",
+    "imageCaption": "Recife vai sediar maior festival de animação do Brasil, o Animage",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Recife vai sediar maior festival de animação do Brasil, o Animage",
+    "author": "Iara Balduino - Repórter da Agência Brasil",
+    "tags": [
+      "Cultura",
+      "filme de animação",
+      "Cinema",
+      "festival animage",
+      "Animage Conecta"
+    ],
+    "content": [
+      "Este ano, o festival traz duas grandes novidades: a mostra competitiva para longas-metragens e o Animage Conecta, com programação voltada para proporcionar ambiente de negócios na área de animação e pensar os desafios e o futuro do setor.",
+      "Mostra Internacional de Cinema de SP começa nesta quinta-feira. A Margem do Rio e Elza vencem principais prêmios do Festival do Rio. A programação inclui reuniões de negócios, sessões de pitching com projetos de seis países e debates sobre os desafios da animação brasileira, com temas como distribuição, inteligência artificial e coprodução internacional.",
+      "A programação do Animage Conecta contará ainda com seis oficinas abertas ao público com um total de 90 vagas. As inscrições começam no próximo dia 19 e vão até 29 de outubro.",
+      "Haverá ainda duas masterclasses com profissionais premiados. No dia da abertura, 20 de novembro, a aula será com a animadora e diretora norte-americana Sarah de Gaudemar.",
+      "Com mais de duas décadas de experiência, Sarah Gaudemar venceu um Emmy do Primetime com o filme Frango Robô e participou de produções como Coraline , Anomalisa e Wendell & Wild e Lego Batman: o Filme.",
+      "No dia 22, haverá uma masterclass com o diretor Hugo Covarrubias, do curta Bestia , indicado ao Oscar de Melhor Curta-metragem de Animação em 2022.",
+      "Também vão participar do festival os cineastas Marco Nguyen, diretor do longa Jim Queen , e Otto Guerra, um dos diretores do filme O Filho da Puta .",
+      "A Agência Brasil estará no Festival Animage."
+    ]
+  },
+  {
+    "id": "ebc-1705657",
+    "title": "Chuvas provocam alagamentos e deslizamentos pelo interior paulista",
+    "summary": "Apesar das várias ocorrências, a Defesa Civil do estado de São Paulo informou que não houve registro de feridos.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/chuvas-provocam-alagamentos-e-deslizamentos-pelo-interior-paulista",
+    "publishedAt": "17/10/2026 às 12:02",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/aAymo3CVf9c_om7Ni5An9hmvu9w=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2022-01-31t201350z_2442105_rc2gas9yirm8_rtrmadp_3_brazil-flooding-sao-paulo.jpg?itok=hSDKD81x",
+    "imageCaption": "Chuvas provocam alagamentos e deslizamentos pelo interior paulista",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Chuvas provocam alagamentos e deslizamentos pelo interior paulista",
+    "author": "Elaine Patrícia Cruz - Repórter da Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "Chuvas",
+      "São Paulo",
+      "Alagamentos",
+      "Política"
+    ],
+    "content": [
+      "Apesar das várias ocorrências, a Defesa Civil do estado de São Paulo informou que não houve registro de feridos.",
+      "Desmatamento cai 41,8% na Amazônia e 23,8% no Cerrado em um ano. Manaus é capital com maior poluição atmosférica do país nesta sexta. Cidade de São Paulo terá mais chuvas nesta sexta-feira. Em São Sebastião , no litoral paulista, foram registradas fortes chuvas e rajadas de vento, que ocasionaram a queda da cobertura da garagem da empresa de transporte público da cidade.",
+      "Uma das cidades que também sofreu com o temporal foi Presidente Prudente . Segundo informações da Defesa Civil do estado de São Paulo, as chuvas provocaram um deslizamento de terra nas proximidades da Avenida Miguel Damha, no sentido da Rodovia Júlio Budisk, com rompimento de uma tubulação de água. O local precisou ser interditado preventivamente.",
+      "Em Itapevi , a chuva causou diversos pontos de alagamento e também o escorregamento de um muro no Bairro Colinas de São José. Segundo a Defesa Civil, não houve vítimas.",
+      "Em São Luiz do Paraitinga , uma descarga elétrica provocou a morte de oito bovinos. As chuvas também contribuíram para um deslizamento de terra na Rodovia Oswaldo Cruz, na altura do quilômetro 42, provocando a interdição parcial da pista.",
+      "Na cidade de Jundiaí , houve quedas de muros e de árvores e um deslizamento de terra no acostamento da Rodovia Vereador Geraldo Dias.",
+      "Em Paulicéia , além dos pontos de alagamento, as chuvas contribuíram para a erosão da cabeceira de uma ponte que liga o município ao Balneário Municipal, que foi interditada parcialmente.",
+      "Já na cidade de Estiva Gerbi , uma árvore caiu sobre a fiação elétrica e ocasionou a queda de um poste de energia sobre dois carros. Não houve vítimas, mas o município enfrentou falta de energia."
+    ]
+  },
+  {
+    "id": "ebc-1705636",
+    "title": "Estudantes desenvolvem plataformas para combater a desinformação",
+    "summary": "Até onde vai o impacto do que as pessoas criam com a IA? Essa foi uma das perguntas que motivou as estudantes Alice Gomes, Beatriz Vasconcellos e Letícia de Oliveira, de 14 anos de idade, do 9º ano do Colégio e Curso Desafio, em Recife, a criarem a ferramenta Pense Bem .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/estudantes-desenvolvem-plataformas-para-combater-desinformacao",
+    "publishedAt": "17/10/2026 às 10:19",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/DRZeHuMLx18nPXudLRwleRwxthg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/16/dscf7168.jpg.jpg?itok=APObCjRI",
+    "imageCaption": "Estudantes desenvolvem plataformas para combater a desinformação",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Estudantes desenvolvem plataformas para combater a desinformação",
+    "author": "Mariana Tokarnia – Repórter da Agência Brasil",
+    "tags": [
+      "Educação",
+      "fake news",
+      "desinformação",
+      "inteligência artificial",
+      "plataforma"
+    ],
+    "content": [
+      "Até onde vai o impacto do que as pessoas criam com a IA? Essa foi uma das perguntas que motivou as estudantes Alice Gomes, Beatriz Vasconcellos e Letícia de Oliveira, de 14 anos de idade, do 9º ano do Colégio e Curso Desafio, em Recife, a criarem a ferramenta Pense Bem .",
+      "Docentes usam inteligência artificial para inovar e engajar alunos. RN vai abrigar supercomputador brasileiro de Inteligência Artificial. IA e vídeos falsos superam fake news como maior ameaça à democracia. O projeto venceu o HackaNAV 2026, competição nacional de inovação organizada pelo Nave a Vela, solução de educação tecnológica da Arco Educação. Como prêmio, as estudantes ganharam uma imersão tecnológica na agência de pesquisa espacial dos Estados Unidos, a Nasa.",
+      "“No Pense Bem, você pode colocar publicações que você pretende fazer para que ele faça o cálculo de risco, como que isso pode escalonar, se aquilo ali pode ter um efeito dominó negativo”, explica Beatriz Vasconcellos, uma das estudantes criadoras do Pense Bem.",
+      "A plataforma já está no ar, mas ainda deve ser aprimorada para ser lançada oficialmente.",
+      "“Antes de publicar, pense no impacto”, esse é o convite para quem acessa. A partir daí, são feitas diversas perguntas para que se possa avaliar se o conteúdo oferece ou não algum risco ao ser divulgado.",
+      "A plataforma, então, classifica o conteúdo quanto ao risco e aponta se é possível fazer adequações ao conteúdo e a postagem para que ela não gere desinformação e cause danos à população.",
+      "\"A gente viu em várias pesquisas que as fake news podem afetar muito a vida das pessoas, até mesmo na vida pessoal, a socialização. Fake news criada por uma pessoa, sobre uma pessoa, pode afetar diretamente até mesmo o psicológico\", avalia Beatriz.",
+      "A Organização das Nações Unidas para a Educação, a Ciência e a Cultura (Unesco) chegou a classificar a desinformação como principal risco global para 2025 e para os anos que estão por vir, à frente das mudanças climáticas, da crise ambiental, dos fluxos migratórios, da violência e do terrorismo."
+    ]
+  },
+  {
+    "id": "ebc-1705653",
+    "title": "Duelo de Guitarras, da TV Brasil, termina com perfil do campeão",
+    "summary": "Fluente nos ritmos das décadas de 1970 e 1980, o guitarrista teve um desempenho vitorioso na atração exibida pelo canal público e mereceu a conquista da disputa que é celebrada nesse especial dedicado a sua jornada na produção.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-10/duelo-de-guitarras-da-tv-brasil-termina-com-perfil-do-campeao",
+    "publishedAt": "17/10/2026 às 10:16",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/5aLTwEsuNaQGqJKrOG2riWOdZTQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/17/duelo-de-guitarras-pedro-hills-02-credito-divulgacao-tv-brasil.jpg?itok=83nNSniB",
+    "imageCaption": "Duelo de Guitarras, da TV Brasil, termina com perfil do campeão",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Duelo de Guitarras, da TV Brasil, termina com perfil do campeão",
+    "author": "EBC",
+    "tags": [
+      "Cultura",
+      "Duelo de Guitarras",
+      "reality show",
+      "TV Brasil",
+      "Pedro Hills"
+    ],
+    "content": [
+      "Fluente nos ritmos das décadas de 1970 e 1980, o guitarrista teve um desempenho vitorioso na atração exibida pelo canal público e mereceu a conquista da disputa que é celebrada nesse especial dedicado a sua jornada na produção.",
+      "Decisão do Paulista F Sub-15 inicia parceria entre TV Brasil e FPF. SP: TV Brasil fecha acordo para exibir 41 partidas de futebol feminino. O programa temático que encerra a sequência do reality show musical recorda os desafios encarados por Pedro Hills. O programa acompanha o desenvolvimento do campeão no embate com outros guitarristas no decorrer da competição em diferentes gêneros musicais com performances brilhantes na avaliação dos jurados Navalha Carrera e João Gaspar.",
+      "Pedro Hills encarou Roger Oliveira logo na primeira batalha do programa no estilo rock clássico. O folk e o sertanejo embalaram a disputa com André Sampaio na segunda rodada da fase classificatória do programa.",
+      "Sobre a estratégia, Pedro Hills considera sempre o inesperado. \"Você planeja algumas coisas, mas, de repente, na hora, tem que modificar a estratégia por causa da dificuldade aleatória. Não estava preparado para esse desafio, mas eu tive que criar alternativas\", destaca Pedro Hills sobre o ritmo sertanejo.",
+      "\"Eu me inspirei bastante nas questões do banjo, por mais que eu estivesse na guitarra. Com menos duas cordas é a mesma coisa que dirigir um carro sem a primeira e a segunda marcha. Você tem que arrancar de terceira. Eu fiquei surpreso com o que eu consegui desenvolver ali na hora\", completa o artista.",
+      "O programa foi liderado por Pedro Hills na etapa inicial com 69 pontos. Na vice-liderança, Lucas Mosca obteve 67,5. Na sequência, o reality trouxe Lui Rabello com 62,5 e Roger Oliveira com 61,5. O experiente André Sampaio, com 58,5 pontos, e a guitarrista Gabi Terra, com 57,5, deixaram o confronto, mas permaneceram na casa para apoiar os colegas.",
+      "\"Estou feliz novamente em ter essa segunda chance e dialogar com as guitarras\", pontua Pedro Hills sobre a classificação para as semifinais. O participante voltou a enfrentar o amigo Roger Oliveira. A dupla que realizou o primeiro desafio da produção Duelo de Guitarras definiu uma vaga na final. Cada um escolheu um ritmo para mostrar que merecia estar na decisão do reality.",
+      "O reencontro dos guitarristas no palco da atração foi emocionante. Pedro Hills e Roger Oliveira ganham mentoria direta e individual com os jurados Navalha Carrera e João Gaspar. Os concorrentes solaram em dois ritmos escolhidos por eles mesmos."
+    ]
+  },
+  {
     "id": "ebc-1705618",
     "title": "Abstenção de eleitores com mais de 70 anos cai 9,7 pontos percentuais",
     "summary": "Segundo dados do Tribunal Superior Eleitoral (TSE) reunidos pelo movimento , o percentual de eleitores nessa faixa etária que não foram votar passou de 58,8% em 2022 para 49,1% no primeiro turno de 2026 .",
@@ -1211,146 +1366,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Previsão do Tempo",
       "Inmet",
       "Ciclone"
-    ]
-  },
-  {
-    "id": "camara-1311546",
-    "title": "Comissão aprova reforço no monitoramento de recursos aplicados no esporte",
-    "summary": "Projeto de Lei segue em análise na Câmara dos Deputados",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311546-comissao-aprova-reforco-no-monitoramento-de-recursos-aplicados-no-esporte",
-    "publishedAt": "16/10/2026 às 08:38",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260715161437877-768x473.jpg",
-    "imageCaption": "Luiz Lima: versão aprovada fortalece instrumentos de fiscalização existentes",
-    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Luiz Lima (NOVO - RJ)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "A Comissão do Esporte da Câmara dos Deputados aprovou projeto que altera a Lei Geral do Esporte para aperfeiçoar o Sistema Nacional de Informações e Indicadores Esportivos (SNIIE). Conforme o texto aprovado, o Sistema terá indicadores para avaliar políticas, programas, projetos e ações no setor esportivo financiados com recursos federais.",
-      "As métricas vão abranger a execução física e financeira, o cumprimento de metas, a inclusão de pessoas com deficiência e a promoção da igualdade de oportunidades entre mulheres e homens no esporte.",
-      "A proposta também exige a adoção de práticas de integridade, governança e transparência por parte das entidades beneficiárias.",
-      "Além disso, o órgão federal responsável publicará, anualmente, um relatório consolidado com a avaliação dos resultados, garantindo amplo acesso público em formato eletrônico.",
-      "O texto aprovado é a versão do relator , deputado Luiz Lima (Novo-RJ), ao Projeto de Lei 6587/25, do deputado Amom Mandel (Republicanos-AM). Segundo o relator, a iniciativa original poderia gerar duplicidade administrativa em relação a sistema já existente.",
-      "“O substitutivo preserva os objetivos do projeto, evita a criação de estruturas paralelas e fortalece instrumentos já instituídos pelo Congresso na Lei Geral do Esporte”, disse Luiz Lima no parecer aprovado.",
-      "Próximos passos O projeto ainda será analisado, em caráter conclusivo , pela Comissão de Constituição e Justiça e de Cidadania.",
-      "Para virar lei, terá de ser aprovado pela Câmara e pelo Senado."
-    ]
-  },
-  {
-    "id": "ebc-1705533",
-    "title": "Atirador mata pelo menos 4 pessoas em escola dos Estados Unidos",
-    "summary": "Um atirador de 16 anos abriu fogo nessa quinta-feira (15) em uma escola em Bend, no estado norte-americano do Oregon, matando quatro pessoas, incluindo três crianças. Ele foi morto por um morador da comunidade que o havia perseguido até dentro da escola, informou a polícia. O...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/atirador-mata-pelo-menos-4-pessoas-em-escola-dos-estados-unidos",
-    "publishedAt": "16/10/2026 às 08:25",
-    "category": "Política",
-    "author": "Daniel Trotta e Steve Gorman - Repórteres da Reuters*",
-    "tags": [
-      "Internacional",
-      "atirador",
-      "escola",
-      "EUA",
-      "mortes"
-    ]
-  },
-  {
-    "id": "ebc-1705492",
-    "title": "Economia: Lula e Flávio divergem sobre ajuste fiscal e papel do Estado",
-    "summary": "Enquanto Lula aposta na continuidade do modelo atual, com investimentos públicos, programas sociais e valorização da renda, Flávio defende a redução da estrutura estatal, cortes de despesas e diminuição de impostos e encargos.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/economia-lula-e-flavio-divergem-sobre-ajuste-fiscal-e-papel-do-estado",
-    "publishedAt": "16/10/2026 às 08:20",
-    "category": "Economia",
-    "imageUrl": "https://imagens.ebc.com.br/XDWwl8iPBYdCQzG966E7kv8LpLA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/brasilia_60_anos_esplanada_dos_ministerios_0420202390_2.jpg?itok=u1LaYpYV",
-    "imageCaption": "Economia: Lula e Flávio divergem sobre ajuste fiscal e papel do Estado",
-    "imageCredit": "Agência Brasil / EBC",
-    "imageAlt": "Economia: Lula e Flávio divergem sobre ajuste fiscal e papel do Estado",
-    "author": "Wellton Máximo – Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "planos de governo",
-      "eleições 2026"
-    ],
-    "content": [
-      "Enquanto Lula aposta na continuidade do modelo atual, com investimentos públicos, programas sociais e valorização da renda, Flávio defende a redução da estrutura estatal, cortes de despesas e diminuição de impostos e encargos.",
-      "Corte amplo de gastos públicos afetaria área social, dizem economistas. Apesar das divergências, as duas campanhas reconhecem a necessidade de enfrentar o crescimento da dívida pública. O principal contraste está nos instrumentos previstos para equilibrar as contas e estimular a atividade econômica.",
-      "Lula pretende manter o arcabouço fiscal, mecanismo que estabelece limites para o crescimento das despesas públicas. A estratégia combina controle de gastos, busca por maior arrecadação e crescimento econômico para melhorar os resultados das contas públicas.",
-      "A política econômica também prevê investimentos em infraestrutura, reindustrialização, inovação e energia renovável. A avaliação da equipe é que a expansão da atividade econômica pode contribuir para elevar a arrecadação e sustentar políticas públicas.",
-      "Flávio Bolsonaro propõe uma nova regra fiscal vinculada à trajetória da dívida e medidas para reduzir despesas administrativas, incluindo a estrutura ministerial e os cargos comissionados. A campanha também defende a simplificação regulatória e a redução de tributos.",
-      "Em agosto deste ano, em entrevista à Globo News, a coordenadora da equipe econômica de Flávio Bolsonaro, Daniella Marques, afirmou que o plano do candidato prevê mudanças nas regras fiscais para controlar a dívida pública, o que inclui um ajuste de 1,5% do Produto Interno Bruto, algo em torno de R$ 190 bilhões, considerado o PIB de 2025.",
-      "O detalhamento dos cortes e seus efeitos sobre os serviços públicos permanecem entre os pontos que exigem esclarecimento. No último dia 9, o candidato negou que acabará com programas sociais, como o Bolsa Família e o Farmácia Popular.",
-      "Na área tributária, Lula defende maior progressividade, com participação proporcionalmente maior das rendas mais altas no financiamento do Estado. O governo também pretende dar continuidade a investimentos do Novo PAC e a políticas de incentivo à indústria nacional."
-    ]
-  },
-  {
-    "id": "ebc-1705474",
-    "title": "Segurança alimentar exige esforço coletivo e articulação",
-    "summary": "Em julho deste ano, a Organização das Nações Unidas reafirmou que o país manteve abaixo de 2,5% o percentual da população subnutrida nos últimos três anos .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/seguranca-alimentar-exige-esforco-coletivo-e-articulacao",
-    "publishedAt": "16/10/2026 às 08:01",
-    "category": "Economia",
-    "imageUrl": "https://imagens.ebc.com.br/GEPGNsPNmmahENoZJSnHdnyFWrU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/15/pzzb7591.jpg?itok=kHrBaZgz",
-    "imageCaption": "Segurança alimentar exige esforço coletivo e articulação",
-    "imageCredit": "Agência Brasil / EBC",
-    "imageAlt": "Segurança alimentar exige esforço coletivo e articulação",
-    "author": "Fabíola Sinimbú - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "agricultura familiar",
-      "cozinhas solidárias",
-      "combate à fome",
-      "variedade alimentar"
-    ],
-    "content": [
-      "Em julho deste ano, a Organização das Nações Unidas reafirmou que o país manteve abaixo de 2,5% o percentual da população subnutrida nos últimos três anos .",
-      "Combustíveis e agricultura familiar recebem quase R$ 7 bi em créditos . Prêmio para produção acadêmica destaca agricultura familiar. Isso foi possível graças ao trabalho de pessoas como dona Maria do Cerrado, liderança comunitária à frente da Cozinha Solidária Cantinho da Vovó, em Brasília, que alimenta mais de 800 pessoas em situação de vulnerabilidade.",
-      "Três vezes por semana, dona Maria e outros 37 voluntários se revezam na separação, no armazenamento e no preparo dos alimentos, na arrumação das mesas e na recepção daqueles que chegam em busca não só de alimento, mas também de acolhimento.",
-      "Dona Maria diz que muitos problemas familiares e até mesmo casos de violência são solucionados em volta da mesa.",
-      "“É o momento em que a gente se aproxima para conversar aqui dentro desse espaço que alimenta, onde a gente cultua o alimento como sagrado, como cura. Por isso, é feito com muito zelo”, diz.",
-      "O lugar também entrega 200 cestas básicas às famílias mais vulneráveis cadastradas. Tudo isso só foi possível depois que a Cozinha Solidária Cantinho da Vovó passou a receber frutas, verduras, legumes e hortaliças diretamente de produtores como Hosana Alves do Nascimento.",
-      "Filha de agricultores familiares, ela conseguiu transformar uma área urbana em São Sebastião, cidade-satélite do Distrito Federal, em um sistema agroflorestal que produz culturas de curto prazo, como hortaliças, verduras e raízes, junto com árvores frutíferas e oleaginosas.",
-      "“Como é uma área pequena, então a gente otimizou para dar muita coisa. A nossa produção é considerada agroecológica, porque não usa veneno”, diz."
-    ]
-  },
-  {
-    "id": "camara-1311507",
-    "title": "Comissão aprova criação de política nacional para inclusão no esporte",
-    "summary": "Texto segue em análise na Câmara dos Deputados",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311507-comissao-aprova-criacao-de-politica-nacional-para-inclusao-no-esporte",
-    "publishedAt": "16/10/2026 às 07:59",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260429121623293-768x473.jpg",
-    "imageCaption": "André Figueiredo: proposta prevê a criação de centros de treinamento adaptados",
-    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
-    "imageAlt": "Homenagem aos 300 anos da cidade de Fortaleza. Dep. André Figueiredo (PDT-CE)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "A Comissão do Esporte da Câmara dos Deputados aprovou projeto que institui a Política Nacional para Inclusão da Pessoa com Deficiência no Esporte, com o objetivo de garantir acesso a práticas educacionais, comunitárias e de alto rendimento.",
-      "O texto aprovado é a versão do relator , deputado André Figueiredo (PDT-CE), ao Projeto de Lei 6753/25 , do deputado Duda Ramos (Pode-RR). Segundo o relator, os ajustes foram necessários para transformar dispositivos em diretrizes.",
-      "Para viabilizar as ações, o substitutivo prevê a coleta periódica de informações sobre a prática esportiva inclusiva no país e a destinação de recursos do Fundo Nacional do Esporte, mediante o cumprimento de metas pactuadas.",
-      "Diretrizes e equipamentos A proposta estabelece a criação de centros de treinamento para formação esportiva, inclusive em instituições públicas de ensino. Esses locais deverão contar com equipamentos adaptados para empréstimo gratuito aos praticantes, com prioridade para regiões que tenham menor oferta de infraestrutura.",
-      "Além disso, determina a realização de auditorias bienais de acessibilidade em instalações esportivas públicas e a capacitação anual de professores de educação física da rede pública e técnicos que atuem em projetos com recursos públicos.",
-      "Próximos passos O projeto ainda será analisado, em caráter conclusivo , pelas comissões de Defesa dos Direitos das Pessoas com Deficiência; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania.",
-      "Para virar lei, o texto terá de ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
     ]
   },
   {
