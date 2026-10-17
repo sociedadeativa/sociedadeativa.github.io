@@ -5,869 +5,1376 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
-    "id": "ebc-1705195",
-    "title": "Cantor de axé Netinho morre em Salvador aos 60 anos",
-    "summary": "O cantor de axé Netinho morreu, aos 60 anos, nesta terça-feira (13), no Hospital Aliança Star, em Salvador, Bahia. A notícia foi confirmada pela assessoria do artista. Um dos maiores destaques do axé music, com sucessos como Milla , Fim de Semana , Menina e Beijo na Boca...",
+    "id": "ebc-1705493",
+    "title": "Alunos e professores participam hoje de Olimpíada de Matemática",
+    "summary": "São esperados mais de 900 mil estudantes para a segunda fase da Olimpíada Brasileira de Matemática das Escolas Públicas (Obmep), que está em sua 21ª edição. Eles foram classificados entre os 18,3 milhões de alunos do 6º ano do ensino fundamental ao 3º ano do ensino médio que...",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/cantor-de-axe-netinho-morre-em-salvador-aos-60-anos",
-    "publishedAt": "13/10/2026 às 13:02",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/olimpiadas-de-matematica-reunem-alunos-e-professores-no-rio-de-janeiro",
+    "publishedAt": "17/10/2026 às 09:01",
     "category": "Política",
-    "author": "Cristina Índio do Brasil – Repórter da Agência Brasil",
+    "imageUrl": "https://imagens.ebc.com.br/n_qS8MfxpYx6tx8UNJOvoFgupeo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/15/whatsapp-image-2026-06-08-at-16.39.34-1200x797_0.jpeg?itok=qEwI7BR5",
+    "imageCaption": "Alunos e professores participam hoje de Olimpíada de Matemática",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Alunos e professores participam hoje de Olimpíada de Matemática",
+    "author": "Agência Brasil",
+    "tags": [
+      "Educação",
+      "olimpíada de matemática",
+      "obmep",
+      "escolas públicas",
+      "matemática"
+    ],
+    "content": [
+      "São esperados mais de 900 mil estudantes para a segunda fase da Olimpíada Brasileira de Matemática das Escolas Públicas (Obmep), que está em sua 21ª edição. Eles foram classificados entre os 18,3 milhões de alunos do 6º ano do ensino fundamental ao 3º ano do ensino médio que participaram da primeira fase, em 9 de junho.",
+      "Docentes usam inteligência artificial para inovar e engajar alunos. A prova será composta por seis questões discursivas, que deverão ser resolvidas em até três horas.",
+      "O resultado será conhecido em 15 de dezembro, e a olimpíada vai distribuir 8.450 medalhas nacionais, sendo 650 de ouro, 1.950 de prata e 5.850 de bronze, além de 51 mil certificados de menção honrosa.",
+      "Segundo o Impa, os medalhistas nacionais da Obmep terão acesso ao Programa de Iniciação Científica (PIC Jr.), com aulas avançadas de matemática e bolsa mensal de R$ 300, concedida pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq).",
+      "Além do Impa, a Obmep é realizada pelo Ministério da Ciência, Tecnologia e Inovação (MCTI) e pelo Ministério da Educação (MEC).",
+      "No caso dos docentes, o Impa aplicará a primeira Olimpíada de Professores da Obmep Mirim. Podem participar profissionais com matrícula ativa que lecionam do 1º ao 5º ano do ensino fundamental em escolas públicas e privadas.",
+      "Serão distribuídas 25 medalhas de ouro, 50 de prata, 100 de bronze e 500 menções honrosas. Os premiados participarão de um curso de formação em matemática para professores do ensino fundamental I, oferecido pelo Impa.",
+      "No caso dos medalhistas de ouro, haverá ainda atividades presenciais no Rio de Janeiro, com despesas custeadas pelo Impa. Além disso, eles poderão submeter projetos pedagógicos para aplicação em sala de aula, com a possibilidade de receber uma bolsa de R$ 700, por quatro meses, para a implementação."
+    ]
+  },
+  {
+    "id": "ebc-1705480",
+    "title": "Mega-Sena sorteia prêmio acumulado em R$ 170 milhões neste domingo",
+    "summary": "As apostas podem ser feitas até às 22h (horário de Brasília) de sábado (17) em casas lotéricas credenciadas pela Caixa em todo o país ou pela internet . A aposta simples, com seis dezenas, custa R$ 6.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/mega-sena-sorteia-premio-acumulado-em-r-170-milhoes-neste-domingo",
+    "publishedAt": "17/10/2026 às 08:32",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/vEd3XS4gn-BA9-ds-ff-q0Iz2R4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/megasenadsc_5276.jpg?itok=BobCYIKD",
+    "imageCaption": "Mega-Sena sorteia prêmio acumulado em R$ 170 milhões neste domingo",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Mega-Sena sorteia prêmio acumulado em R$ 170 milhões neste domingo",
+    "author": "Agência Brasil",
     "tags": [
       "Geral",
-      "Bahia",
-      "axé music",
-      "Netinho",
-      "obituário"
+      "Mega-Sena",
+      "loterias",
+      "Caixa",
+      "Política"
+    ],
+    "content": [
+      "As apostas podem ser feitas até às 22h (horário de Brasília) de sábado (17) em casas lotéricas credenciadas pela Caixa em todo o país ou pela internet . A aposta simples, com seis dezenas, custa R$ 6.",
+      "Mega-Sena acumula para R$ 170 milhões; confira os números sorteados. No último concurso, foram sorteados os números 19 - 27 - 29 - 43 - 54 - 60 e nenhum apostador acertou as seis dezenas."
     ]
   },
   {
-    "id": "ebc-1705192",
-    "title": "Governo anuncia perdão de dívidas e pacote de estímulo para MEIs",
-    "summary": "O governo federal anunciou nesta terça-feira (13) um pacote de cinco medidas voltadas aos microempreendedores individuais (MEIs), com foco na redução do endividamento, ampliação do acesso a recursos para investimento, aumento do teto de faturamento e simplificação de regras...",
+    "id": "ebc-1705651",
+    "title": "Em sabatina, Flávio não explica propostas e faz acusações sem provas",
+    "summary": "Questionado, o candidato do PL afirmou que a multidão que invadiu e depredou prédios públicos na Esplanada dos Ministérios no dia 8 de janeiro exigindo a ascensão de Jair Bolsonaro, seu pai, ao poder, não foi uma tentativa de golpe de Estado. Chamou de “farsa” o julgamento do...",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-anuncia-perdao-de-dividas-e-pacote-de-estimulo-para-meis",
-    "publishedAt": "13/10/2026 às 12:46",
-    "category": "Economia",
-    "author": "Pedro Peduzzi - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "Lula",
-      "MEI",
-      "endividamento",
-      "governo"
-    ]
-  },
-  {
-    "id": "ebc-1705185",
-    "title": "Nunes Marques volta a suspender Exército do Lula por falta de registro",
-    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kássio Nunes Marques, derrubou nesta terça-feira (13) a decisão do ministro Ricardo Villas Bôas Cueva, corregedor-nacional da Justiça Eleitoral, que havia recolocado no ar o canal Exército do Lula, no aplicativo de...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/nunes-marques-volta-suspender-exercito-de-lula-por-falta-de-registro",
-    "publishedAt": "13/10/2026 às 11:58",
-    "category": "Justiça",
-    "author": "Felipe Pontes – repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "TSE",
-      "eleições 2026",
-      "Exército do Lula",
-      "Nunes Marques"
-    ]
-  },
-  {
-    "id": "camara-1307686-projeto-estabelece-regras-de-p",
-    "title": "Projeto estabelece regras de privacidade para verificação de idade na internet",
-    "summary": "A proposta está em análise na Câmara dos Deputados",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1307686-projeto-estabelece-regras-de-privacidade-para-verificacao-de-idade-na-internet",
-    "publishedAt": "13/10/2026 às 11:45",
-    "category": "Congresso",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1705182",
-    "title": "Mercado eleva previsão da inflação para 5,22% em 2026",
-    "summary": "A projeção do mercado financeiro para a inflação oficial em 2026 subiu de 5,01% para 5,22%, segundo o Boletim Focus divulgado nesta terça-feira (13) pelo Banco Central . Essa foi a quarta alta consecutiva da estimativa para o Índice Nacional de Preços ao Consumidor Amplo...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/mercado-eleva-previsao-da-inflacao-para-522-em-2026",
-    "publishedAt": "13/10/2026 às 11:28",
-    "category": "Economia",
-    "author": "Pedro Peduzzi – Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "banco central",
-      "IPCA",
-      "boletim Focus",
-      "Inflação"
-    ]
-  },
-  {
-    "id": "ebc-1705181",
-    "title": "Nunes Marques suspende novos posts e seguidores no Exército do Lula",
-    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, decidiu nesta terça-feira (13) suspender as atualizações e o ingresso de novos seguidores no canal Exército do Lula, que possui 3,7 milhões de usuários no aplicativo de mensagens WhatsApp. De...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/nunes-marques-suspende-novos-posts-e-seguidores-no-exercito-do-lula",
-    "publishedAt": "13/10/2026 às 11:15",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/em-sabatina-flavio-nao-explica-propostas-e-faz-acusacoes-sem-provas",
+    "publishedAt": "17/10/2026 às 00:55",
     "category": "Eleições",
-    "author": "Felipe Pontes – repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Exército do Lula",
-      "TSE",
-      "Nunes Marques"
-    ]
-  },
-  {
-    "id": "ebc-1705180",
-    "title": "Polícia de SP prende três suspeitos de explorar bets",
-    "summary": "A Polícia Civil de São Paulo faz na manhã desta segunda-feira (13) a Operação Disque 151 contra organização criminosa suspeita de explorar apostas e jogos ilegais clandestinos, as bets. Três suspeitos foram presos na capital paulista e na cidade de Mogi das Cruzes, região...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/policia-de-sp-prende-tres-suspeitos-de-explorar-bets",
-    "publishedAt": "13/10/2026 às 11:02",
-    "category": "Justiça",
+    "imageUrl": "https://imagens.ebc.com.br/E7Z8B8RPcQmj4IzQt7vRG8sSOpA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/0d4a2424.jpg?itok=MVIGaSxD",
+    "imageCaption": "Em sabatina, Flávio não explica propostas e faz acusações sem provas",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Em sabatina, Flávio não explica propostas e faz acusações sem provas",
     "author": "Agência Brasil",
     "tags": [
-      "Justiça",
-      "São Paulo",
-      "bets"
-    ]
-  },
-  {
-    "id": "ibge-48271",
-    "title": "IBGE e Malásia avançam em cooperação para desenvolver estatísticas da era digital",
-    "summary": "O IBGE e o Departamento de Estatística da Malásia avançam em uma cooperação voltada à produção de estatísticas da era digital. A parceria busca desenvolver novos indicadores para a economia digital e fortalecer a colaboração entre países do Sul Global,...",
-    "source": "IBGE",
-    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
-    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48271-ibge-e-malasia-avancam-em-cooperacao-para-desenvolver-estatisticas-da-era-digital.html",
-    "publishedAt": "13/10/2026 às 10:48",
-    "category": "Brasil",
-    "author": "Agência IBGE Notícias",
-    "tags": [
-      "ibge",
-      "Notícia",
-      "Brasil",
-      "Estatísticas"
-    ]
-  },
-  {
-    "id": "ebc-1705179",
-    "title": "Redução de desastres: especialistas defendem \"cultura da prevenção\"",
-    "summary": "Abandonar a cultura da tragédia e investir em prevenção. Essa é a recomendação de especialistas em conservação da natureza e adaptação climática diante do aumento dos riscos associados a eventos extremos no Brasil. O caminho inclui mapear áreas vulneráveis, preparar serviços...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/reducao-de-desastres-especialistas-defendem-cultura-da-prevencao",
-    "publishedAt": "13/10/2026 às 10:47",
-    "category": "Política",
-    "author": "Rafael Cardoso – Repórter da Agência Brasil",
-    "tags": [
-      "Meio Ambiente",
-      "eventos extremos",
-      "prevenção de desastres",
-      "El Niño",
-      "ONU"
-    ]
-  },
-  {
-    "id": "ebc-1705177",
-    "title": "Nunes Marques convoca campanhas de Lula e Flávio para reunião no TSE",
-    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kássio Nunes Marques, marcou para a tarde desta terça-feira (13) uma reunião com representantes das campanhas do presidente Luiz Inácio Lula da Silva, candidato à reeleição, e do senador Flávio Bolsonaro (PL-RJ), que...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/nunes-marques-convoca-campanhas-presidencia-para-reuniao-no-tse",
-    "publishedAt": "13/10/2026 às 10:41",
-    "category": "Justiça",
-    "author": "Felipe Pontes - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "TSE",
-      "reunião",
-      "Campanhas",
-      "Presidência"
-    ]
-  },
-  {
-    "id": "ebc-1705174",
-    "title": "Governo cria programa nacional para bloquear celulares em presídios",
-    "summary": "O Brasil tem, a partir desta terça-feira (13), plano voltado a impedir o uso irregular de celulares e outros equipamentos de telecomunicações dentro de presídios. O Programa Nacional de Neutralização de Comunicações Ilícitas em Estabelecimentos Penais prevê a atuação conjunta...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/governo-cria-programa-nacional-para-bloquear-celulares-em-presidios",
-    "publishedAt": "13/10/2026 às 10:33",
-    "category": "Justiça",
-    "author": "Agência Brasil",
-    "tags": [
-      "Justiça",
-      "brasil",
-      "Presídios",
-      "Celulares",
-      "Diário Oficial da União"
-    ]
-  },
-  {
-    "id": "ebc-1705173",
-    "title": "TSE ordena remoção de post falso sobre uso de droga em ato pró-Lula",
-    "summary": "O ministro Marco Aurélio Bellizze, do Tribunal Superior Eleitoral (TSE), ordenou na segunda-feira (12) a remoção das redes sociais de publicações que associam um vídeo falso ao ato em apoio ao presidente Luiz Inácio Lula da Silva, candidato à reeleição, na Avenida Paulista...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tse-ordena-remocao-de-post-falso-sobre-uso-de-droga-em-ato-pro-lula",
-    "publishedAt": "13/10/2026 às 10:29",
-    "category": "Eleições",
-    "author": "Felipe Pontes – repórter da Agência Brasil",
-    "tags": [
       "Política",
+      "Flávio Bolsonaro",
       "eleições 2026",
-      "Lula",
-      "TSE",
-      "remoção de conteúdo"
+      "Segundo Turno",
+      "Sabatina"
+    ],
+    "content": [
+      "Questionado, o candidato do PL afirmou que a multidão que invadiu e depredou prédios públicos na Esplanada dos Ministérios no dia 8 de janeiro exigindo a ascensão de Jair Bolsonaro, seu pai, ao poder, não foi uma tentativa de golpe de Estado. Chamou de “farsa” o julgamento do seu pai, condenado a 27 anos de prisão.",
+      "Economia: Lula e Flávio divergem sobre ajuste fiscal e papel do Estado. Flávio quer escolas militares; Lula propõe ampliar educação integral. “Essa farsa, a história vai mostrar que foi totalmente armado para tentar tirar Bolsonaro da vida pública”, disse. Ele minimizou o episódio, afirmando que “uma senhora com Bíblia” não estava tentando dar um golpe.",
+      "Na ocasião, milhares de pessoas agrediram policiais e invadiram e vandalizaram os prédios do Congresso Nacional, Palácio do Planalto e Supremo Tribunal Federal.",
+      "Flávio disse que não tratou com seu pai uma eventual vaga em seu governo. Em várias declarações anteriores, ele já havia dito que daria indulto a Jair Bolsonaro. Mas não confirmou se seu pai ocuparia um cargo no Executivo. Ele também disse que seu irmão, Eduardo Bolsonaro, não será o ministro das Relações Exteriores, caso seja eleito.",
+      "“Ele é um perseguido político” , disse o candidato sobre o irmão. “Um dia será reconhecido como alguém que se sacrificou para defender a democracia” , acrescentou.",
+      "Eduardo Bolsonaro mora atualmente nos Estados Unidos e é condenado no Brasil por coação no curso do processo. A Justiça brasileira entendeu que ele atuou contra os interesses do país, estimulando o tarifaço do governo dos EUA contra o Brasil como represália caso Jair Bolsonaro fosse condenado.",
+      "Bolsonaro foi condenado e o Brasil foi sobretaxado em vários produtos exportados para os EUA.",
+      "Após meses falando contra o fim da escala 6x1 de trabalho, Flávio, que é senador, se mostrou favorável à medida, aprovada no Senado esta semana e promulgada na manhã de hoje. Ele afirmou que ouviu trabalhadores em vários cantos do país e, por isso, votou a favor da proposta. Em seguida, disse que defende que o trabalhador escolha sua escala de trabalho."
     ]
   },
   {
-    "id": "ebc-1705171",
-    "title": "Adolescentes franceses fazem mais um dia de protestos sobre escolas",
-    "summary": "A ativista sueca Greta Thunberg participou de manifestação em frente a uma escola de ensino médio em um bairro popular de Paris nesta terça-feira (13), enquanto alunos franceses saíam às ruas para mais um dia de protestos contra as más condições dos prédios escolares.. Em sua...",
+    "id": "ebc-1705650",
+    "title": "Lula faz campanha em MG e celebra fim da jornada 6x1",
+    "summary": "O candidato do PT à reeleição para a presidência da República, Luiz Inácio Lula da Silva, participou de duas passeatas em Minas Gerais nesta sexta-feira (16). A promulgação do fim da escala de trabalho 6x1, ocorrida no Senado na manhã de hoje, deu o tom da campanha durante...",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/adolescentes-franceses-fazem-mais-um-dia-de-protestos-sobre-escolas",
-    "publishedAt": "13/10/2026 às 10:28",
-    "category": "Política",
-    "author": "Janis Laizans e Clotaire Achi - Repórteres da Reuters*",
-    "tags": [
-      "Internacional",
-      "França",
-      "Estudantes",
-      "Protesto",
-      "Escolas"
-    ]
-  },
-  {
-    "id": "ebc-1705170",
-    "title": "Fim da escala 6x1: confira próximos passos da tramitação no Senado",
-    "summary": "A Proposta de Emenda à Constituição (PEC) 221/2019, que acaba com a escala de seis dias de trabalho para um de descanso (escala 6x1), entrou na reta final de tramitação no Senado Federal. Após ser aprovada pela Câmara dos Deputados e pela Comissão de Constituição e Justiça...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/fim-da-escala-6x1-confira-proximos-passos-da-tramitacao-no-senado",
-    "publishedAt": "13/10/2026 às 10:13",
-    "category": "Política",
-    "author": "Pedro Peduzzi – Repórter da Agência Brasil",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/lula-faz-campanha-em-mg-e-celebra-fim-da-jornada-6x1",
+    "publishedAt": "16/10/2026 às 23:01",
+    "category": "Eleições",
+    "imageUrl": "https://imagens.ebc.com.br/aOBxJ1b3s4A-pQmgZa7d6U_kYTk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/16/sem_titulo-6_1.jpg?itok=QnBssagZ",
+    "imageCaption": "Lula faz campanha em MG e celebra fim da jornada 6x1",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Lula faz campanha em MG e celebra fim da jornada 6x1",
+    "author": "Marcelo Brandão - Repórter da Agência Brasilf",
     "tags": [
       "Política",
-      "fim da escala 6x1",
-      "Senado",
-      "PEC 2212019"
+      "Lula",
+      "Flávio Bolsonaro",
+      "eleições 2026",
+      "Segundo Turno"
+    ],
+    "content": [
+      "O candidato do PT à reeleição para a presidência da República, Luiz Inácio Lula da Silva, participou de duas passeatas em Minas Gerais nesta sexta-feira (16). A promulgação do fim da escala de trabalho 6x1, ocorrida no Senado na manhã de hoje, deu o tom da campanha durante todo o dia. Lula vinha defendendo há meses a aprovação da proposta.",
+      "Em Juiz de Fora, ele afirmou, em uma fala direcionada aos comerciantes, que ninguém terá prejuízo com a mudança na escala de trabalho.",
+      "Lula também pediu a seus apoiadores que estimulassem os indecisos a votar nele e convencessem aqueles que não votaram no primeiro turno a irem às urnas no segundo turno.",
+      "Também exaltou feitos de seu governo, como investimentos em escolas de tempo integral e a criação do Programa Pé-de-Meia, um incentivo financeiro-educacional pago pelo governo federal para promover a permanência e a conclusão escolar de pessoas matriculadas no ensino médio público.",
+      "Em seguida, já no início da noite, o candidato do PT participou de uma passeata em Ipatinga. Aos apoiadores, afirmou que passou os últimos quatro anos recuperando o país, após o governo de Jair Bolsonaro, pai de seu adversário na atual corrida presidencial. E que agora, em um quarto mandato, faria um governo “do crescimento econômico”.",
+      "Durante a passeata em Ipatinga, Lula criticou o fato de Flávio Bolsonaro ter almoçado com diretores da Globo nesta sexta-feira, data da entrevista de Flávio no Jornal Nacional. Para o presidente, a emissora está “sob suspeição” de sua campanha. Lula foi sabatinado ontem (14) na emissora e não houve almoço prévio com os diretores.",
+      "Em nota, a Globo confirmou que Flávio Bolsonaro fez uma visita institucional à sede da emissora no Rio de Janeiro, onde se reuniu com o presidente do Grupo Globo, João Roberto Marinho, e com o vice-presidente de Relações Institucionais, Paulo Tonet. O canal afirmou que o encontro contou com um almoço reservado, mas não teve a participação de nenhum líder ou representante da área de jornalismo da empresa, tratando-se de \"rotina e cortesia com candidatos\"."
     ]
   },
   {
-    "id": "ebc-1705168",
-    "title": "Vitória do Bragantino sobre o Cruzeiro fecha a rodada do Brasileiro",
-    "summary": "No fim da noite dessa segunda-feira (12), o Bragantino concluiu a 30ª rodada do Campeonato Brasileiro com uma vitória por 4 a 2 sobre o Cruzeiro, em Bragança Paulista, encerrando um jejum de seis jogos sem vitória na temporada. Com o resultado, o Massa Bruta foi a 40 pontos...",
+    "id": "ebc-1705649",
+    "title": "Com um a mais, Mirassol vence e complica Internacional no Brasileirão",
+    "summary": "A equipe paulista subiu para o 14º lugar, com 36 pontos. São quatro de vantagem para o próprio Colorado, primeiro time na zona de rebaixamento - que envolve as quatro piores campanhas da competição (o Z-4).",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/vitoria-do-bragantino-sobre-o-cruzeiro-fecha-rodada-do-brasileiro",
-    "publishedAt": "13/10/2026 às 09:58",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/com-um-mais-mirassol-vence-e-complica-internacional-no-brasileirao",
+    "publishedAt": "16/10/2026 às 22:18",
     "category": "Política",
-    "author": "Igor Santos - Repórter da EBC",
+    "imageUrl": "https://imagens.ebc.com.br/WlbtsgqvP2cr7KABC3TJD8bEaAg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/16/mirassol_.jpeg?itok=huS43RJt",
+    "imageCaption": "Com um a mais, Mirassol vence e complica Internacional no Brasileirão",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Com um a mais, Mirassol vence e complica Internacional no Brasileirão",
+    "author": "Lincoln Chaves - Repórter da EBC",
     "tags": [
       "Esportes",
-      "campeonato brasileiro",
-      "30 rodada",
-      "Bragantino",
-      "Cruzeiro"
+      "Mirassol",
+      "internacional",
+      "Brasileirão",
+      "Leão Caipira"
+    ],
+    "content": [
+      "A equipe paulista subiu para o 14º lugar, com 36 pontos. São quatro de vantagem para o próprio Colorado, primeiro time na zona de rebaixamento - que envolve as quatro piores campanhas da competição (o Z-4).",
+      "Copa do Brasil Feminina: Bahia vence São Paulo pelas quartas de final. Surfe: Yago Dora, Ítalo Ferreira e Medina vão às quartas em Peniche . Com 32 pontos, o time gaúcho é o 17º colocado e pode cair uma posição se o arquirrival Grêmio derrotar o Cruzeiro neste domingo (18), às 16h (horário de Brasília), na Arena, em Porto Alegre.",
+      "A missão colorada em Mirassol (SP) ficou mais difícil do que já seria com 14 minutos de jogo. O goleiro Matheus Cunha saiu da área para tentar se antecipar ao atacante Bruno Santos, mas chegou atrasado e derrubou o adversário, levando cartão vermelho direto.",
+      "O Mirassol demorou a fazer valer a superioridade numérica. A melhor chance da etapa inicial foi com Eduardo, no rebote de uma cobrança de falta do lateral Reinaldo que o goleiro Kauan Jesus - que entrou em campo devido à expulsão de Matheus Cunha - defendeu. O meia acertou o travessão.",
+      "No começo do segundo tempo, porém, Eduardo teve melhor sorte. Aos dois minutos, o meia aproveitou o cruzamento rasteiro do atacante Edson Carioca pela direita e chutou no canto de Kauan Jesus.",
+      "Mesmo com um a menos, o Inter tentou a reação e pressionou os donos da casa. Aos 31, o zagueiro Bruno Gomes acertou o travessão. Aos 37 e aos 38 minutos, o atacante João Bezerra teve duas grandes chances, parando no goleiro Walter e, depois, no zagueiro João Victor, que salvou em cima da linha.",
+      "No contra-ataque, o Mirassol liquidou a partida. Aos 41, Fernandinho acionou o também atacante André Luis, que bateu na saída de Kauan Jesus para assegurar os três pontos à equipe do interior.",
+      "Nos acréscimos, Reinaldo poderia ter ampliado, mas cobrou pênalti no travessão. Acabou não fazendo falta."
     ]
   },
   {
-    "id": "ebc-1705165",
-    "title": "Medida provisória quer coibir excesso de chamadas e golpes telefônicos",
-    "summary": "A área de telecomunicação brasileira deverá seguir novas regras para identificar e bloquear chamadas e mensagens telefônicas com o objetivo de combater fraudes e reduzir o número de ligações abusivas. Medida provisória publicada nesta terça-feira (13) determina que as...",
+    "id": "ebc-1705647",
+    "title": "Copa do Brasil Feminina: Bahia vence São Paulo pelas quartas de final",
+    "summary": "A partida de volta está marcada para a próxima quarta-feira (21), às 19h (horário de Brasília), no Estádio Brinco de Ouro da Princesa, em Campinas (SP). O Tricolor baiano tem a vantagem do empate para chegar, pelo segundo ano seguido, às semifinais. As paulistas precisam...",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/medida-provisoria-quer-coibir-excesso-de-chamadas-e-golpes-telefonicos",
-    "publishedAt": "13/10/2026 às 09:30",
-    "category": "Economia",
-    "author": "Agência Brasil",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/copa-do-brasil-feminina-bahia-vence-sao-paulo-pelas-quartas-de-final",
+    "publishedAt": "16/10/2026 às 21:28",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/Wkrv4CJ1S4vIeaRaqB37b2SwVgE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/16/mulheres_de_aco_.jpg?itok=BML2rF9r",
+    "imageCaption": "Copa do Brasil Feminina: Bahia vence São Paulo pelas quartas de final",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Copa do Brasil Feminina: Bahia vence São Paulo pelas quartas de final",
+    "author": "Lincoln Chaves - Repórter da EBC",
     "tags": [
-      "Economia",
-      "telecomunicação",
-      "Anatel",
-      "chamadas telefônicas"
+      "Esportes",
+      "Futebol Feminino",
+      "Copa do Brasil Feminina",
+      "Bahia",
+      "São Paulo"
+    ],
+    "content": [
+      "A partida de volta está marcada para a próxima quarta-feira (21), às 19h (horário de Brasília), no Estádio Brinco de Ouro da Princesa, em Campinas (SP). O Tricolor baiano tem a vantagem do empate para chegar, pelo segundo ano seguido, às semifinais. As paulistas precisam ganhar por, ao menos, dois gols de diferença para avançarem no tempo normal.",
+      "Estreante, Cruzeiro será 15º brasileiro na Libertadores Feminina. Fluminense vence Flamengo e abre vantagem na Copa do Brasil Feminina. O duelo reuniu jogadoras que estiveram na última data-Fifa, nome dado ao período voltado a jogos entre seleções. As goleiras Yanne (Bahia) e Carlinha e as zagueiras Carol Gil e Tayla (as três últimas do São Paulo) representaram o Brasil em amistosos contra a Argentina - que contou com a meia Maricel Pereyra, das Soberanas. A equipe paulista ainda teve a zagueira Camila Barbosa defendendo o Paraguai diante de El Salvador.",
+      "No primeiro tempo, o Bahia esbanjou eficiência para abrir vantagem diante do campeão brasileiro. Aos nove minutos, a volante Ángela Gómez foi acionada na área pela atacante Roqueline e dividiu com Carol Gil. A bola subiu e encobriu Carlinha, colocando as Mulheres de Aço na dianteira.",
+      "O São Paulo balançou as redes aos 20, com Aline Milene sendo lançada desde antes do círculo central por Serrana e finalizando, livre, na saída de Yanne. A meia, porém, estava em posição irregular e o gol foi anulado por impedimento.",
+      "Aos 38 minutos, as donas da casa ampliaram a vantagem. A zagueira Isa Fernandes foi para o ataque, tabelou com Gómez, invadiu a área e bateu no canto de Carlinha. Desde a derrota por 3 a 0 para a Ferroviária, há quase dois meses, pelo Campeonato Paulista, quando atuou com reservas, as Soberanas não sofriam dois gols na mesma partida.",
+      "O Tricolor paulista voltou melhor do intervalo. Aos dois minutos, a atacante Isa abriu na direita com Serrana, na linha da área. A meia - que atuou como lateral no lugar de Bruna Calderan (que trata fraturas na mandíbula) - cruzou na cabeça de Kesia Senna, que tinha acabado de entrar. A atacante mandou para as redes.",
+      "O empate não saiu aos 37 minutos por um detalhe. A atacante Mylena Carioca - outra que entrou na volta do intervalo - foi lançada por Kesia Senna e encobriu Yanne na saída da goleira. A bola, que estava indo para o gol, quicou em uma falha do gramado, mudou de direção e acabou parando na trave, a tempo da zagueira Tchula tirar o perigo.",
+      "Mesmo após a expulsão do técnico Thiago Viana por reclamação, as campeãs brasileiras pressionaram em busca do empate, parando - assim como em boa parte do jogo - em defesas de Yanne. Na melhor oportunidade, aos 40, Mylena Carioca buscou o ângulo esquerdo em chute da entrada da área, mas a goleira do Bahia, com a ponta dos dedos, garantiu o triunfo das anfitriãs."
     ]
   },
   {
-    "id": "ebc-1705158",
-    "title": "Norma amplia exigências para atendimento ao consumidor; saiba quais",
-    "summary": "Serviços de atendimento ao consumidor (SAC) passam a ter novas regras em todo o país. As mudanças entram em vigor em 20 dias e valem para empresas de setores regulados pelo governo federal e por instituições que prestam serviços financeiros digitais supervisionados pelo Banco...",
+    "id": "ebc-1705646",
+    "title": "Defesa de Vorcaro pede investigação sobre vazamento de conversas",
+    "summary": "No documento, que foi endereçado ao presidente do Supremo, Edson Fachin, os advogados afirmam que Vorcaro está sofrendo um “processo de linchamento público”.",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/norma-amplia-exigencias-para-atendimento-ao-consumidor-saiba-quais",
-    "publishedAt": "13/10/2026 às 08:51",
-    "category": "Economia",
-    "author": "Agência Brasil",
-    "tags": [
-      "Economia",
-      "defesa do consumidor",
-      "Procon",
-      "Diário Oficial da União"
-    ]
-  },
-  {
-    "id": "ebc-1705155",
-    "title": "Confira a agenda dos presidenciáveis nesta segunda-feira (13)",
-    "summary": "Os candidatos à presidência da República que disputam o segundo turno das eleições gerais cumprem agenda em Brasília e São Paulo, nesta segunda-feira (13). Flávio Bolsonaro (PL) Se reúne à tarde com integrantes do MDB e em seguida participa de encontro do Associativismo, no...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/confira-agenda-dos-presidenciaveis-nesta-segunda-feira-13",
-    "publishedAt": "13/10/2026 às 08:31",
-    "category": "Eleições",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Eleições"
-    ]
-  },
-  {
-    "id": "ebc-1705140",
-    "title": "Milhares ocupam Copacabana em ato pela democracia e em apoio a Lula",
-    "summary": "Milhares de apoiadores lotaram as duas faixas da orla de Copacabana, na zona sul do Rio de Janeiro, em apoio à democracia e à reeleição do presidente Luiz Inácio Lula da Silva (PT) , na tarde desta segunda-feira (12), feriado de Nossa Senhora Aparecida . A professora...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/milhares-de-pessoas-lotam-orla-de-copacabana-em-apoio-lula",
-    "publishedAt": "12/10/2026 às 19:04",
-    "category": "Eleições",
-    "author": "Ana Cristina Campos – Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Copacabana",
-      "Lula",
-      "Manifestações"
-    ]
-  },
-  {
-    "id": "ebc-1705139",
-    "title": "Kassio atende Flávio e suspende circulação de jornal de sindicato",
-    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), Kassio Nunes Marques, mandou suspender a circulação de um jornal do Sindicato dos Petroleiros de São Paulo (Sindipetro Unificado). A decisão foi tomada em sigilo, na semana passada, após a campanha do candidato à Presidência...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/kassio-atende-flavio-e-suspende-circulacao-de-jornal-de-sindicato",
-    "publishedAt": "12/10/2026 às 18:23",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/defesa-de-vorcaro-pede-investigacao-sobre-vazamento-de-conversas",
+    "publishedAt": "16/10/2026 às 21:18",
     "category": "Justiça",
+    "imageUrl": "https://imagens.ebc.com.br/HN9FF1bKJbokttMbBg1AgDE6hyY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/06/daniel_vorcaro.jpg?itok=uJbwWRip",
+    "imageCaption": "Defesa de Vorcaro pede investigação sobre vazamento de conversas",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Defesa de Vorcaro pede investigação sobre vazamento de conversas",
+    "author": "Agência Brasil",
+    "tags": [
+      "Justiça",
+      "stf",
+      "Daniel Vorcaro",
+      "Banco Master",
+      "Operação Compliance Zero"
+    ],
+    "content": [
+      "No documento, que foi endereçado ao presidente do Supremo, Edson Fachin, os advogados afirmam que Vorcaro está sofrendo um “processo de linchamento público”.",
+      "PF nega existência de depoimento de Vorcaro sobre Lula. Flávio usou jatinho ligado a Vorcaro em viagem em 2025, diz revista. A defesa reclama da divulgação de fatos sobre a intimidade do ex-banqueiro e conversas com advogados.",
+      "“Toda e qualquer conversa travada pelo peticionário tornou-se de conhecimento público – sem qualquer forma de confirmação sobre sua idoneidade e veracidade ou a forma em que obtidas - em um processo sem precedentes na história nacional, em que se permite e se admite que um investigado tenha sua vida e sua privacidade exposta para todo o Brasil”, afirmou a defesa.",
+      "Na avaliação dos advogados, as conversas vazadas não podem resultar em investigações contra o ex-banqueiro.",
+      "“A única repercussão jurídica da exposição da intimidade e de sua vida pessoal é a instauração de inquérito policial para averiguar e determinar os responsáveis, para que, posteriormente, venham a ser criminalmente responsabilizados com toda a força e a intensidade da Lei Penal”, completou a defesa.",
+      "Vorcaro foi preso em março deste ano e está custodiado no presídio da Papudinha, no Distrito Federal.",
+      "O ex-banqueiro é alvo das investigações da Operação Compliance Zero, da Polícia Federal (PF), que investiga fraudes financeiras no Master e a tentativa de compra da instituição pelo Banco Regional de Brasília (BRB), banco público ligado ao Governo do Distrito Federal (GDF)."
+    ]
+  },
+  {
+    "id": "ebc-1705644",
+    "title": "Anac estabelece regras mais restritivas para aviação em Congonhas (SP)",
+    "summary": "Pelas novas regras, os operadores de aviação geral - como serviço de taxi-aéreo e jatos executivos - terão de contratar um provedor de serviços de base fixa (FBO, na sigla em inglês) antes de solicitar os horários de operação, o que significa a contratação antecipada de...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/anac-estabelece-regras-mais-restritivas-para-aviacao-em-congonhas-sp",
+    "publishedAt": "16/10/2026 às 21:03",
+    "category": "Economia",
+    "imageUrl": "https://imagens.ebc.com.br/uoOBrTHcOyMZi5hmWCyCMULDEWk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/12/22/0g0a0191.jpg?itok=LD7a2MPj",
+    "imageCaption": "Anac estabelece regras mais restritivas para aviação em Congonhas (SP)",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Anac estabelece regras mais restritivas para aviação em Congonhas (SP)",
+    "author": "Agência Brasil",
+    "tags": [
+      "Economia",
+      "Congonhas",
+      "Anac",
+      "slots",
+      "aviação"
+    ],
+    "content": [
+      "Pelas novas regras, os operadores de aviação geral - como serviço de taxi-aéreo e jatos executivos - terão de contratar um provedor de serviços de base fixa (FBO, na sigla em inglês) antes de solicitar os horários de operação, o que significa a contratação antecipada de serviços de apoio em solo.",
+      "Anac permite voos após as 23h em Congonhas em situações excepcionais. A medida, segundo a Anac, \"busca combater o mercado paralelo de slots no aeroporto, estabelecendo regras mais rigorosas para a atuação de operadores de táxi-aéreo e de aeronaves privadas\".",
+      "\"Isso busca assegurar que as operações tenham estrutura de atendimento em solo previamente contratada, reduzindo o risco de impactos na movimentação aeroportuária decorrentes da indisponibilidade de serviços ou da falta de suporte operacional adequado\", diz a agência.",
+      "O diretor-presidente da Anac, Tiago Faierstein, informou que a agência vai acompanhar e fiscalizar a medida para combater o comércio paralelo de slots.",
+      "“Na prática, as novas regras também restringem as condições de utilização de Congonhas pela aviação geral, ao exigir maior planejamento e comprovação prévia da estrutura necessária para cada operação”, explica Faierstein.",
+      "A Agência Brasil tentou contato com a Aena, concessionária responsável pela gestão de Congonhas, e aguarda retorno. O espaço está aberto para manifestação."
+    ]
+  },
+  {
+    "id": "ebc-1705641",
+    "title": "TSE decide manter ordem para Meta garantir isonomia a candidatos",
+    "summary": "Os votos foram proferidos pelos ministros Floriano de Azevedo Marques, André Mendonça, Estela Aranha, Ricardo Villas Bôas Cueva, Nunes Marques e Dias Toffoli, além da manifestação de Belizze.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-decide-manter-ordem-para-meta-garantir-isonomia-candidatos",
+    "publishedAt": "16/10/2026 às 20:04",
+    "category": "Justiça",
+    "imageUrl": "https://imagens.ebc.com.br/achaHi6i7FpleG9MhZ4nazWg_sA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/aplicativo_0410211423.jpg?itok=d4VVXe-q",
+    "imageCaption": "TSE decide manter ordem para Meta garantir isonomia a candidatos",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "TSE decide manter ordem para Meta garantir isonomia a candidatos",
     "author": "André Richter - Repórter da Agência Brasil",
     "tags": [
       "Justiça",
       "eleições 2026",
       "TSE",
-      "Kassio Nunes Marques",
-      "Sindipetro Unificado"
+      "Meta",
+      "Lula"
+    ],
+    "content": [
+      "Os votos foram proferidos pelos ministros Floriano de Azevedo Marques, André Mendonça, Estela Aranha, Ricardo Villas Bôas Cueva, Nunes Marques e Dias Toffoli, além da manifestação de Belizze.",
+      "TSE define regras para canais de WhatsApp durante a campanha . TSE nega pedido da campanha de Flávio para barrar posts de sindicatos. Economia: Lula e Flávio divergem sobre ajuste fiscal e papel do Estado. Pela decisão do TSE, o Facebook, uma das plataformas operadas pela Meta, deve abster-se de aplicar medidas de redução de distribuição, exclusão de recomendação e restrição de buscas.",
+      "Em caso de descumprimento, será aplicada multa diária de R$ 500 mil.",
+      "A decisão foi proferida após a campanha do candidato à reeleição Luiz Inácio Lula da Silva (PT) informar ao TSE que comandos para geração de imagens de inteligência artificial não permitiam a criação de conteúdos sobre Lula. Contudo, a criação de imagens relacionadas ao candidato Flávio Bolsonaro (PL) está liberada.",
+      "Após o PT denunciar as falhas, a Meta declarou que a recomendação de candidatos foi proibida, conforme determinação do TSE. A plataforma também informou que tomou medidas adicionais para restringir as recomendações.",
+      "“Em cumprimento com as regras eleitorais do Brasil, nós proibimos temporariamente a recomendação de candidatos ou a geração de imagens deles. Tomamos medidas adicionais para que comandos usando apenas o primeiro nome dos candidatos e seu número nas urnas também não produzam imagens”, afirmou a empresa.",
+      "* Título e texto atualizados às 21h42"
     ]
   },
   {
-    "id": "ebc-1705132",
-    "title": "Flávio Bolsonaro participa de missa na Catedral de Brasília",
-    "summary": "O candidato do PL à Presidência da República, Flávio Bolsonaro, participou nesta segunda-feira (12) de uma missa na Catedral de Brasília. O candidato disse ter ido à missa a convite do cardeal Dom Paulo Cezar Costa, arcebispo metropolitano de Brasília. No mês passado, após...",
+    "id": "ebc-1705639",
+    "title": "MPF defende prisão de PM por matar estudante de medicina",
+    "summary": "O parecer, assinado em 9 de outubro de 2026 pelo subprocurador-geral da República José Elaeres Marques Teixeira, foi apresentado ao Superior Tribunal de Justiça (STJ).",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/flavio-bolsonaro-participa-de-missa-na-catedral-de-brasilia-0",
-    "publishedAt": "12/10/2026 às 18:03",
-    "category": "Eleições",
-    "author": "Pedro Peduzzi - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "Flávio Bolsonaro",
-      "Nossa Senhora Aparecida",
-      "Jair Bolsonaro",
-      "Multimídia"
-    ]
-  },
-  {
-    "id": "ebc-1705136",
-    "title": "SBT admite erro ao atribuir à EBC falha em propaganda eleitoral",
-    "summary": "O SBT publicou uma nota nesta segunda-feira (12) em seu portal de notícias na qual admite ter informado de forma incorreta que a Empresa Brasil de Comunicação (EBC) seria responsável pela falha de áudio registrada na propaganda eleitoral do candidato à Presidência Flávio...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/sbt-admite-erro-ao-atribuir-ebc-falha-em-propaganda-eleitoral",
-    "publishedAt": "12/10/2026 às 17:35",
-    "category": "Eleições",
-    "author": "Pedro Peduzzi - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "EBC",
-      "Propaganda Eleitoral",
-      "eleições 2026",
-      "Eleições"
-    ]
-  },
-  {
-    "id": "ebc-1705128",
-    "title": "Campanha de Lula aciona TSE após post falso sobre comício na Paulista",
-    "summary": "A coligação do candidato à reeleição Luiz Inácio Lula da Silva (PT) protocolou uma representação no Tribunal Superior Eleitoral (TSE) para solicitar a remoção de postagens falsas envolvendo o comício realizado neste domingo (11), na Avenida Paulista, em São Paulo. O PT acusa...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/campanha-de-lula-aciona-tse-apos-post-falso-sobre-comicio-na-paulista",
-    "publishedAt": "12/10/2026 às 16:37",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/mpf-defende-prisao-de-pm-por-matar-estudante-de-medicina",
+    "publishedAt": "16/10/2026 às 20:00",
     "category": "Justiça",
+    "author": "Camila Boehm - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "STJ",
+      "MPF",
+      "Prisão Preventiva",
+      "Polícia Militar"
+    ],
+    "content": [
+      "O parecer, assinado em 9 de outubro de 2026 pelo subprocurador-geral da República José Elaeres Marques Teixeira, foi apresentado ao Superior Tribunal de Justiça (STJ).",
+      "Polícia Civil pede prisão de PM que matou estudante de medicina em SP. PM que atirou em aluno de Medicina é indiciado por homicídio doloso . Diante da manifestação, cabe ao STJ analisar o recurso e decidir sobre a decretação da medida.",
+      "O policial disparou contra o jovem de 22 anos de idade, que estava desarmado, com um tiro à queima-roupa, após uma discussão envolvendo o retrovisor de uma viatura.",
+      "Segundo o documento do MPF, o policial perseguiu a vítima a pé por causa de um tapa que o jovem deu no retrovisor da viatura, sem causar dano material ao veículo. Marco Aurélio buscou abrigo no saguão do hotel em que estava hospedado, onde foi alcançado por Macedo e por outro policial militar que estava no local, Bruno Carvalho do Prado.",
+      "Na descrição dos fatos que constam no parecer, o jovem estava desarmado e sem camisa, e não oferecia risco concreto à integridade física dos policiais. Ainda assim, Marco Aurélio ficou sob a mira de uma arma de fogo, conforme imagens das câmeras corporais dos agentes que foram amplamente divulgadas na imprensa.",
+      "Após um chute de Prado contra a vítima, o policial caiu no chão. Foi então que Macedo disparou contra o abdômen do estudante. As lesões decorrentes do disparo causaram a morte de Marco Aurélio.",
+      "Para o MPF, a desproporcionalidade da reação, o uso de arma institucional contra uma pessoa desarmada e as circunstâncias do disparo demonstram a gravidade concreta do caso e a periculosidade do réu. O MPF considera que as medidas cautelares anteriormente impostas são insuficientes para garantir a ordem pública.",
+      "“A jurisprudência do Superior Tribunal de Justiça admite que a gravidade concreta do delito, evidenciada pelo modus operandi e pelas circunstâncias que denotem a periculosidade do agente, constitui fundamento idôneo para a decretação da prisão preventiva com base na garantia da ordem pública”, diz trecho do parecer."
+    ]
+  },
+  {
+    "id": "ebc-1705638",
+    "title": "USP: estagnação de auxílios sociais pode gerar retração em municípios",
+    "summary": "Segundo o estudo, as aposentadorias, o Bolsa Família e o Benefício de Prestação Continuada (BPC) têm peso significativo na economia dessas cidades e chegam a representar quase metade do orçamento das famílias mais pobres.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/usp-estagnacao-de-auxilios-sociais-pode-gerar-retracao-em-municipios",
+    "publishedAt": "16/10/2026 às 19:55",
+    "category": "Economia",
+    "imageUrl": "https://imagens.ebc.com.br/s3A7xaAKbxyCilSOgYGoB-FfT0k=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/12/23/_d6a0146.jpg?itok=FDlDe5Vn",
+    "imageCaption": "USP: estagnação de auxílios sociais pode gerar retração em municípios",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "USP: estagnação de auxílios sociais pode gerar retração em municípios",
+    "author": "Bruno Bocchni - Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "USP",
+      "auxílios sociais",
+      "MADE",
+      "FEA-USP"
+    ],
+    "content": [
+      "Segundo o estudo, as aposentadorias, o Bolsa Família e o Benefício de Prestação Continuada (BPC) têm peso significativo na economia dessas cidades e chegam a representar quase metade do orçamento das famílias mais pobres.",
+      "Governo prevê crédito a empresas afetadas por fim da 6x1, diz Durigan. Do trabalho sem limite ao fim da 6x1: veja avanço da jornada no Brasil. Trabalho infantil no país recua 9,2% de 2024 para 2025, aponta IBGE. “Como o valor recebido por essas famílias é usado quase integralmente para a aquisição de itens de primeira necessidade, o dinheiro circula imediatamente no comércio local, garante empregos e mantém a arrecadação municipal ativa”, destaca a co-diretora do Made-USP, a economista Luiza Nassif.",
+      "De acordo com o levantamento, dos 5.569 municípios brasileiros, cerca de 4 mil estão fora das regiões metropolitanas. Nessas cidades, segundo o estudo, o peso das transferências públicas chega a ser o dobro em relação aos dos grandes centros urbanos.",
+      "No Ceará, por exemplo, os benefícios sociais e previdenciários respondem por 22% da renda agregada da capital e região metropolitana. Já nas cidades do interior, esse número é de 40%.",
+      "O estudo do Made/USP projetou os efeitos econômicos da evolução da renda dos benefícios sociais e previdenciários nas cidades do interior para os próximos três anos. O estudo tomou como base os anos de 2022 a 2025, em que houve um crescimento real para BPC e aposentadorias, e comparou esse cenário ao contexto de reajustes utilizados entre 2019 e 2022, sem ganhos reais do salário mínimo e congelamento total.",
+      "O levantamento mostra que, sem os reajustes, a renda agregada do interior do país sofreria uma retração severa, ficando entre 6,8% e 10,8% abaixo do patamar com a valorização real dos benefícios sociais e previdenciários.",
+      "“Isso geraria uma reação em cadeia na atividade econômica que atinge inclusive as famílias que não dependem do socorro público”, avalia Nassif.",
+      "O estudo mostra que os cenários mais críticos ocorreriam no interior do Rio Grande do Norte, do Amapá e do Piauí, onde a renda total cairia entre 17% a 18%, sem o ritmo atual de aumento dos benefícios sociais."
+    ]
+  },
+  {
+    "id": "ebc-1705635",
+    "title": "PF pede prorrogação de inquérito sobre financiamento do Dark Horse",
+    "summary": "De acordo com o delegado responsável pela apuração, Anderson Rodrigo Andrade de Lima, a prorrogação é necessária para conclusão de perícias contábeis e para aguardar a tramitação do pedido de cooperação internacional com os Estados Unidos para obter registros financeiros de...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/pf-pede-prorrogacao-de-inquerito-sobre-financiamento-do-dark-horse",
+    "publishedAt": "16/10/2026 às 19:49",
+    "category": "Justiça",
+    "imageUrl": "https://imagens.ebc.com.br/gs6khWoXgAyJfztelNhCVtrkMW4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/raf05213.jpg?itok=ae7yWQz3",
+    "imageCaption": "PF pede prorrogação de inquérito sobre financiamento do Dark Horse",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "PF pede prorrogação de inquérito sobre financiamento do Dark Horse",
+    "author": "André Richter - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "Polícia Federal",
+      "stf",
+      "André Mendonça",
+      "Dark Horse"
+    ],
+    "content": [
+      "De acordo com o delegado responsável pela apuração, Anderson Rodrigo Andrade de Lima, a prorrogação é necessária para conclusão de perícias contábeis e para aguardar a tramitação do pedido de cooperação internacional com os Estados Unidos para obter registros financeiros de entidades estrangeiras que teriam recebido repasses.",
+      "Durigan: financiadora do Dark Horse recebeu verba do crime organizado. Dino determina fim do sigilo de investigações sobre o filme Dark Horse. Mendonça incluiu Flávio Bolsonaro como investigado no caso Dark Horse. Os investigadores da PF também avaliam documentos repassados pelo empresário Antônio Carlos Freixo Júnior, delator do caso Master.",
+      "Os documentos comprovariam repasses para o fundo de investimentos Havengate Development, criado nos Estados Unidos para receber os pagamentos para o filme.",
+      "O caso chegou ao Supremo após o deputado federal Lindbergh Farias (PT-RJ) solicitar a investigação sobre o pedido de dinheiro feito pelo senador Flávio Bolsonaro (PL-RJ), candidato à Presidência da República, a Vorcaro para o custeio das gravações.",
+      "O filme que retrata a vida política de Bolsonaro veio à torna após o site The Intercept revelar que o senador pediu dinheiro a Vorcaro para financiar as gravações.",
+      "Após a divulgação da conversa entre Flávio e Vorcaro, ocorrida em novembro do ano passado, o senador negou ter combinado qualquer vantagem indevida com o banqueiro e disse que os recursos eram privados.",
+      "Em julho deste ano, Flávio Bolsonaro foi incluído no inquérito e também passou a ser investigado."
+    ]
+  },
+  {
+    "id": "ebc-1705631",
+    "title": "Zanin vai relatar novo pedido do PSD por segundo turno no Rio",
+    "summary": "A ação foi protocolada pelo PSD, partido do candidato Eduardo Paes, e pretende suspender a decisão do Tribunal Superior Eleitoral (TSE) , que, na semana passada, anulou os votos obtidos pelo candidato Anthony Garotinho (Republicanos) e determinou a retotalização dos votos...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/zanin-vai-relatar-novo-pedido-do-psd-por-segundo-turno-no-rio",
+    "publishedAt": "16/10/2026 às 18:51",
+    "category": "Justiça",
+    "imageUrl": "https://imagens.ebc.com.br/LLpcdmKpJmujCE-v149UNfeOuog=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/10/21/54870540885_c9e73fcf37_o.jpg?itok=PMlC94lK",
+    "imageCaption": "Zanin vai relatar novo pedido do PSD por segundo turno no Rio",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Zanin vai relatar novo pedido do PSD por segundo turno no Rio",
+    "author": "André Richter - repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "eleições 2026",
+      "Cristiano Zanin",
+      "Supremo Tribunal Federal",
+      "stf"
+    ],
+    "content": [
+      "A ação foi protocolada pelo PSD, partido do candidato Eduardo Paes, e pretende suspender a decisão do Tribunal Superior Eleitoral (TSE) , que, na semana passada, anulou os votos obtidos pelo candidato Anthony Garotinho (Republicanos) e determinou a retotalização dos votos para o cargo de governador do Rio de Janeiro .",
+      "TRE-RJ proclama Douglas Ruas eleito para o governo do Rio de Janeiro. Após retotalização dos votos, Douglas Ruas tem 50,88% dos votos no RJ. Paes desiste de candidatura no Rio, após Zanin negar recurso ao STF. A medida permitiu que Douglas Ruas (PL) fosse declarado eleito no primeiro turno , por ter passado de 49,27% para 50,88% dos votos válidos.",
+      "Para o PSD, \"a realização de segundo turno deve depender exclusivamente dos votos dos eleitores, não de eventos processuais\".",
+      "\"A interpretação impugnada, contudo, mantém aberta outra via para o mesmo resultado: quem sabe que terá o registro negado pode manter-se na urna, captar votos e aguardar que a anulação definitiva retire esses votos da base\", argumenta o partido.",
+      "Na semana passada, em outra ação sobre o caso, Zanin negou pedido da campanha de Paes para suspender a decisão do TSE ."
+    ]
+  },
+  {
+    "id": "ebc-1705629",
+    "title": "Governo prevê crédito a empresas afetadas por fim da 6x1, diz Durigan",
+    "summary": "“É possível que a gente faça, por exemplo, uma espécie de linha de crédito ou de capacitação para a inovação”, afirmou Durigan em entrevista à TV Band nesta sexta-feira (16).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-preve-credito-empresas-afetadas-por-fim-da-6x1-diz-durigan",
+    "publishedAt": "16/10/2026 às 18:36",
+    "category": "Economia",
+    "imageUrl": "https://imagens.ebc.com.br/d9mP9Z88T5e7YEWWCVrLmOGoQgs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/05/pzzb3470.jpg?itok=ryj3w4Xa",
+    "imageCaption": "Governo prevê crédito a empresas afetadas por fim da 6x1, diz Durigan",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Governo prevê crédito a empresas afetadas por fim da 6x1, diz Durigan",
+    "author": "Wellton Máximo - Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "fim da escala 6x1",
+      "Dario Durigan",
+      "Reforma Tributária"
+    ],
+    "content": [
+      "“É possível que a gente faça, por exemplo, uma espécie de linha de crédito ou de capacitação para a inovação”, afirmou Durigan em entrevista à TV Band nesta sexta-feira (16).",
+      "Alcolumbre homenageia Paim no fim da 6x1; entenda motivo. Do trabalho sem limite ao fim da 6x1: veja avanço da jornada no Brasil. Saiba quando começa a valer o fim da escala 6x1. A medida, ressaltou o ministro, busca ajudar os negócios a se adaptarem à nova jornada, com investimentos em inovação e produtividade. Durigan também mencionou que o governo pretende apoiar empresas afetadas pela reforma tributária.",
+      "Durigan afirmou que a equipe econômica ainda está analisando quais empresas e setores terão maior impacto com a mudança. A intenção é destinar o apoio aos negócios que precisarem de mais recursos para reorganizar as atividades.",
+      "Segundo o ministro, a adaptação pode envolver modernização de processos, treinamento de funcionários e adoção de novas tecnologias para manter a produção mesmo com menos dias de trabalho.",
+      "“Os empresários têm que ter apoio do governo para participar desse novo tempo, que é uma mudança civilizacional”, declarou.",
+      "O ministro citou o Serviço Brasileiro de Apoio às Micro e Pequenas Empresas (Sebrae) e outros sistemas de capacitação como parceiros em iniciativas de treinamento, especialmente para pequenos negócios.",
+      "Durigan afirmou que o governo já ampliou o limite de crédito para pequenas empresas, de R$ 250 mil para R$ 500 mil, inclusive para operações destinadas ao capital de giro, recursos usados para manter as despesas e o funcionamento cotidiano dos negócios.",
+      "O ministro não anunciou uma desoneração da folha de pagamento ou outra compensação direta aos empregadores. Em vez disso, destacou a possibilidade de financiamento direcionado e capacitação para empresas que precisarem se adaptar."
+    ]
+  },
+  {
+    "id": "ebc-1705627",
+    "title": "Morre Chiaki Ishii, primeiro medalhista olímpico do judô brasileiro",
+    "summary": "Primeiro medalhista olímpico e mundial do judô brasileiro, Chiaki Ishii morreu nesta sexta-feira (16), aos 85 anos. A causa da morte não foi divulgada. Ishii entrou para a história do esporte nacional ao conquistar o bronze na Olimpíada de Munique (1972), um ano após ter...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/morre-chiaki-ishii-primeiro-medalhista-olimpico-do-judo-brasileiro",
+    "publishedAt": "16/10/2026 às 17:47",
+    "category": "Política",
     "author": "Agência Brasil",
     "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Eleições",
-      "Lula",
-      "TSE"
+      "Esportes",
+      "Chiaki Ishii",
+      "Judô",
+      "obituário",
+      "pioneiro"
     ]
   },
   {
-    "id": "ebc-1705129",
-    "title": "Em Aparecida, Alckmin pede isenção da Justiça Eleitoral",
-    "summary": "O vice-presidente da República e candidato à reeleição, Geraldo Alckmin, defendeu nesta segunda-feira (12) que a Justiça Eleitoral seja isenta e guardiã da liberdade de expressão. As declarações foram dadas após ser questionado se ele via a justiça eleitoral como parcial...",
+    "id": "ebc-1705622",
+    "title": "Brasil é 2º maior importador de pesticidas proibidos na UE, diz Oxfam",
+    "summary": "Pesticidas considerados tóxicos demais para utilização dentro da União Europeia (UE) continuam sendo fabricados por empresas do bloco e exportados para dezenas de países ao redor do mundo. No Dia Mundial da Alimentação, relatório da Oxfam aponta que o Brasil foi o segundo...",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/em-aparecida-alckmin-pede-isencao-da-justica-eleitoral",
-    "publishedAt": "12/10/2026 às 16:18",
-    "category": "Eleições",
-    "author": "Camila Boehm - Enviada especial a Aparecida e Bruno Bocchini - Repórter da Agência Brasil",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/brasil-e-2o-maior-importador-de-pesticidas-proibidos-na-ue-diz-oxfam",
+    "publishedAt": "16/10/2026 às 17:17",
+    "category": "Política",
+    "author": "Camila Boehm - Repórter da Agência Brasil",
     "tags": [
-      "Política",
-      "Nossa Senhora Aparecida",
-      "Geraldo Alckmin",
+      "Internacional",
+      "União Europeia",
+      "agricultura",
+      "pesticidas",
+      "Agrotóxicos"
+    ]
+  },
+  {
+    "id": "ebc-1705625",
+    "title": "Desmatamento cai 41,8% na Amazônia e 23,8% no Cerrado em um ano",
+    "summary": "O desmatamento caiu 41,8% na Amazônia e 23,8% no Cerrado entre agosto de 2025 e julho de 2026, na comparação com os 12 meses anteriores, segundo dados divulgados nesta sexta-feira (16) pelo governo federal com base no monitoramento do Instituto Nacional de Pesquisas Espaciais...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/desmatamento-caiu-418-na-amazonia-e-238-no-cerrado-em-um-ano",
+    "publishedAt": "16/10/2026 às 17:09",
+    "category": "Governo",
+    "author": "Marcelo Brandão - Repórter da Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "Desmatamento",
+      "Amazônia",
+      "Cerrado",
+      "Inpe"
+    ]
+  },
+  {
+    "id": "camara-1311899",
+    "title": "Motta determina adoção imediata da nova escala de trabalho na Câmara dos Deputados",
+    "summary": "Para o presidente da Câmara, trata-se de uma reforma na qualidade de vida dos brasileiros",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311899-motta-determina-adocao-imediata-da-nova-escala-de-trabalho-na-camara-dos-deputados",
+    "publishedAt": "16/10/2026 às 16:53",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261016103907801-768x474.jpg",
+    "imageCaption": "Motta assina a nova emenda constitucional, em sessão do Congresso",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "motta assina pec da escala 6x1",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "O presidente da Câmara dos Deputados, Hugo Motta, afirmou que a Casa vai implementar imediatamente as novas regras da jornada de trabalho da emenda à Constituição promulgada hoje, que acaba com a escala 6x1 e reduz a carga máxima de 44 para 40 horas semanais. Em vídeo para as redes sociais, Motta lembrou que a emenda permite até um ano para a adequação dos contratos de trabalho, mas disse que a Câmara já vai realizar os ajustes a partir da próxima semana.",
+      "\"Serão beneficiados os cerca de 1.700 trabalhadores e trabalhadoras terceirizados que estão na escala 6x1. Pessoas que cuidam todos os dias desta Casa e ajudam a Câmara a funcionar. Entre elas, estão mais de 600 mulheres. Para muitas, o trabalho continua depois do expediente, com as responsabilidades de casa e da família. Esse tempo faz toda a diferença. Tempo para descansar, cuidar da saúde, estudar, estar com os filhos e realizar seus próprios projetos\", afirmou.",
+      "\"É uma reforma na qualidade de vida dos brasileiros. Tenho muita honra e felicidade de presidir a Câmara neste momento histórico, em que damos esse passo a favor de vida mais digna para a classe trabalhadora do Brasil\", ressaltou Motta."
+    ]
+  },
+  {
+    "id": "ebc-1705621",
+    "title": "TSE define regras para canais de WhatsApp durante a campanha",
+    "summary": "A decisão foi tomada após a guerra de liminares sobre o funcionamento do canal Exército do Lula , criado pelo deputado federal André Janones (Rede-MG) para apoiar a candidatura à reeleição do presidente Luiz Inácio Lula da Silva (PT).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-define-regras-para-canais-de-whatsapp-durante-campanha",
+    "publishedAt": "16/10/2026 às 16:27",
+    "category": "Justiça",
+    "imageUrl": "https://imagens.ebc.com.br/3Ie0oL6tJ5oT8FuQouqJVeDwzs4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/08/55577083236_185d230b4e_o.jpg?itok=Y7JB9-cf",
+    "imageCaption": "TSE define regras para canais de WhatsApp durante a campanha",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "TSE define regras para canais de WhatsApp durante a campanha",
+    "author": "André Richter - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
       "TSE",
-      "Multimídia"
-    ]
-  },
-  {
-    "id": "ebc-1705103",
-    "title": "Lula defende respeito às religiões no Dia de Nossa Senhora Aparecida",
-    "summary": "O presidente Luiz Inácio Lula da Silva defendeu, nesta segunda-feira (12), a harmonia, a democracia e o respeito à fé de todos os brasileiros. Candidato à reeleição, ele disse repudiar ofensas religiosas. Moraes autoriza Flávio Bolsonaro a visitar o pai, preso em casa. Nossa...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/lula-defende-respeito-religioes-no-dia-de-nossa-senhora-aparecida",
-    "publishedAt": "12/10/2026 às 15:28",
-    "category": "Eleições",
-    "author": "Daniella Almeida - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "Multimídia",
       "eleições 2026",
-      "Eleições",
-      "Lula"
+      "Exército do Lula",
+      "Campanha Eleitoral"
+    ],
+    "content": [
+      "A decisão foi tomada após a guerra de liminares sobre o funcionamento do canal Exército do Lula , criado pelo deputado federal André Janones (Rede-MG) para apoiar a candidatura à reeleição do presidente Luiz Inácio Lula da Silva (PT).",
+      "TSE nega pedido da campanha de Flávio para barrar posts de sindicatos. TSE determina isonomia após IA da Meta barrar imagens de Lula. Campanha de Flávio aciona TSE contra posts de artistas e parlamentares. Por unanimidade, os sete ministros da Corte aprovaram uma atualização na resolução do TSE que trata da propaganda eleitoral na internet e da fiscalização dos canais de comunicação utilizados pelas candidaturas.",
+      "Conforme a decisão, canais que receberem apoio técnico ou financeiro das campanhas deverão ser registrados na Justiça Eleitoral .",
+      "O vínculo deverá ser estabelecido a partir do recebimento de recursos, ajuda técnica, além do direcionamento para página oficial do candidato.",
+      "O apoio espontâneo ou compartilhamento de materiais de campanha não poderão ser caracterizados como vínculo direto com a campanha.",
+      "Se as regras não forem cumpridas, os canais poderão ser desativados até que a regularização seja providenciada.",
+      "Na terça-feira (13), o presidente do TSE, Kassio Nunes Marques, determinou a reativação do canal Exército do Lula , após a campanha de Lula registrar o canal no tribunal , conforme determinação do ministro.",
+      "A reativação ocorreu após decisões conflitantes de Kassio e do ministro corregedor-geral do TSE, Villas Bôas Cueva, que havia liberado o canal."
     ]
   },
   {
-    "id": "ebc-1705046",
-    "title": "Lula quer aumentar incentivos à cultura; Flávio defende patrimônio",
-    "summary": "A área cultural é tema de forte debate entre os candidatos Flávio Bolsonaro e Luiz Inácio Lula da Silva. No governo de Jair Bolsonaro, que integrou o PL no último ano de mandato, mesmo partido de Flávio, o Ministério da Cultura foi extinto, sendo substituído por uma...",
+    "id": "ebc-1705619",
+    "title": "Alcolumbre homenageia Paim no fim da 6x1; entenda motivo",
+    "summary": "“Eu sei que o cerimonial estabeleceu esse rito constitucional de uma sessão solene, mas o meu coração não me permitiria, presidente Hugo Motta e presidente Lula, deixar de convidar uma pessoa para a mesa para representar o povo brasileiro”, disse Alcolumbre.",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/conheca-propostas-de-flavio-e-lula-para-cultura",
-    "publishedAt": "12/10/2026 às 15:00",
-    "category": "Eleições",
-    "author": "Iara Balduino - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Cultura",
-      "plano de governo",
-      "Flávio Bolsonaro"
-    ]
-  },
-  {
-    "id": "ebc-1705083",
-    "title": "Moraes autoriza Flávio Bolsonaro a visitar o pai, preso em casa",
-    "summary": "O ministro do Supremo Tribunal Federal (STF) Alexandre de Moraes autorizou o senador Flávio Bolsonaro a visitar o pai, Jair Bolsonaro, preso em regime domiciliar. As visitas de Flávio estavam proibidas desde julho , quando ele postou nas redes sociais uma carta escrita pelo...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/moraes-autoriza-flavio-bolsonaro-visitar-o-pai-preso-em-casa",
-    "publishedAt": "12/10/2026 às 11:38",
-    "category": "Justiça",
-    "author": "Marcelo Brandão – Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Flávio Bolsonaro",
-      "Golpe de Estado",
-      "Jair Bolsonaro",
-      "stf"
-    ]
-  },
-  {
-    "id": "ibge-48258",
-    "title": "IBGE disponibiliza Agenda semanal com programações para os dias 12 a 16 de outubro",
-    "summary": "Agenda IBGE traz a programação do instituto para a semana - Foto: Bel Corção/Brasil com S O Instituto Brasileiro de Geografia e Estatística (IBGE) disponibilizou hoje (12) a Agenda IBGE para a semana dos dias 12 a 16 de outubro. A edição contempla as...",
-    "source": "IBGE",
-    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
-    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48258-ibge-disponibiliza-agenda-semanal-com-programacoes-para-os-dias-12-a-16-de-outubro.html",
-    "publishedAt": "12/10/2026 às 09:00",
-    "category": "Brasil",
-    "author": "Agência IBGE Notícias",
-    "tags": [
-      "ibge",
-      "Notícia",
-      "Brasil",
-      "Estatísticas"
-    ]
-  },
-  {
-    "id": "ebc-1704640",
-    "title": "União estável não formalizada: como provar e entrar no inventário",
-    "summary": "Muitos casais vivem juntos por anos sem jamais formalizar a união em cartório. Com o falecimento de um dos companheiros, essa ausência de registro pode dificultar o acesso do sobrevivente à herança. A formalização da união estável por escritura pública ou contrato é um...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/uniao-estavel-nao-formalizada-como-provar-e-entrar-no-inventario",
-    "publishedAt": "12/10/2026 às 08:30",
-    "category": "Justiça",
-    "author": "Ana Cristina Campos – Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Direito",
-      "União Estável",
-      "herança",
-      "Suzana Borges"
-    ]
-  },
-  {
-    "id": "ibge-48267",
-    "title": "Seminário debate o papel do IBGE no planejamento desenvolvimentista e nos Censos de 1970 e 1980",
-    "summary": "O projeto Memória e História do IBGE realiza na próxima quarta-feira o seminário temático da série de cinco seminários, que compõem o ciclo do projeto. O evento será dia 14 de outubro, de 9 às 11h, com transmissão pelo IBGE Digital. A iniciativa é do...",
-    "source": "IBGE",
-    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
-    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48267-seminario-debate-o-papel-do-ibge-no-planejamento-desenvolvimentista-e-nos-censos-de-1970-e-1980.html",
-    "publishedAt": "12/10/2026 às 04:11",
-    "category": "Brasil",
-    "author": "Agência IBGE Notícias",
-    "tags": [
-      "ibge",
-      "Notícia",
-      "Brasil",
-      "Estatísticas"
-    ]
-  },
-  {
-    "id": "ebc-1705057",
-    "title": "Derrubar canal com eleitores limita mobilização, dizem especialistas",
-    "summary": "A decisão de derrubar o canal Exército do Lula no WhatsApp com 3,3 milhões de pessoas, que acabou revertida horas depois, limita a mobilização de eleitores no segundo turno e extrapola o combate à desinformação, avaliam especialistas em direito no ambiente digital. A gerente...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/derrubar-canal-com-eleitores-limita-mobilizacao-dizem-especialistas",
-    "publishedAt": "11/10/2026 às 18:23",
-    "category": "Justiça",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/alcolumbre-homenageia-paim-no-fim-da-6x1-entenda-motivo",
+    "publishedAt": "16/10/2026 às 15:44",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/m_U8zikPmw4bWmpHgy0OogSDRq8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/16/whatsapp_image_2026-10-16_at_10.32.59.jpg?itok=2iU_HkYh",
+    "imageCaption": "Alcolumbre homenageia Paim no fim da 6x1; entenda motivo",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Alcolumbre homenageia Paim no fim da 6x1; entenda motivo",
     "author": "Lucas Pordeus León - Repórter da Agência Brasil",
     "tags": [
-      "Justiça",
-      "multimídia",
-      "eleições 2026",
-      "TSE",
-      "Exército do Lula"
+      "Política",
+      "fim da escala 6x1",
+      "Paulo Paim",
+      "Davi Alcolumbre"
+    ],
+    "content": [
+      "“Eu sei que o cerimonial estabeleceu esse rito constitucional de uma sessão solene, mas o meu coração não me permitiria, presidente Hugo Motta e presidente Lula, deixar de convidar uma pessoa para a mesa para representar o povo brasileiro”, disse Alcolumbre.",
+      "Do trabalho sem limite ao fim da 6x1: veja avanço da jornada no Brasil. Saiba quando começa a valer o fim da escala 6x1. Descanso de trabalhador não quebra empresas, diz Lula após fim da 6x1. O parlamentar gaúcho Paulo Paim está há três mandatos no Senado, tendo sido deputado federal por outros quatro mandatos. Antes, Paim foi presidente do Sindicato dos Trabalhadores Metalúrgicos de Canoas (RS), na década de 1980.",
+      "“Nós precisamos fazer uma homenagem a um grande ser humano, a um grande brasileiro que esteve, nas últimas quatro décadas, lutando por esta conquista”, completou Alcolumbre.",
+      "Ainda em 1994, Paulo Paim apresentou o Projeto de Lei 4.653 para reduzir a jornada de trabalho de 44 horas para 40 horas semanais, mas o texto acabou arquivado, assim como outras propostas apresentadas durante os mandatos do político gaúcho.",
+      "Nesta sexta, ao conversar com jornalistas, Paim destacou que a emoção de aprovar o fim da escala de seis dias de trabalho por um de descanso, que também reduz a jornada para 40 horas, é parecida com a promulgação da Constituição, em 1988, quando a jornada foi reduzida de 48 para 44 horas semanais.",
+      "“Eu me sinto realizado, de lá para cá, da constituinte, eu apresentei dez projetos”, disse, acrescentando que a emenda promulgada hoje “vai melhorar a vida da nossa gente”.",
+      "O senador Paulo Paim deixa o Senado no final desta legislatura. Com 76 anos, ele decidiu não disputar nova vaga pelo Rio Grande do Sul na eleição deste ano após mais de 40 anos de vida pública.",
+      "O Congresso Nacional promulgou, nesta sexta-feira (16), a Emenda Constitucional 141 de 2026, que põe fim à escala de um dia de descanso para cada seis trabalhados (6x1) e prevê a escala 5x2 , com duas folgas por semana, para todos os trabalhadores do Brasil dentro de dois meses."
     ]
   },
   {
-    "id": "ebc-1705059",
-    "title": "TSE barra anúncios de Lula acusando Flávio de ser contra escala 6x1",
-    "summary": "O ministro André Mendonça, do Tribunal Superior Eleitoral (TSE), proibiu neste domingo (11) a campanha do candidato à reeleição Luiz Inácio Lula da Silva (PT) de promover anúncios pagos para afirmar que o candidato Flávio Bolsonaro (PL) é contra o fim da escala 6x1 de...",
+    "id": "ebc-1705617",
+    "title": "TSE nega pedido da campanha de Flávio para barrar posts de sindicatos",
+    "summary": "A campanha alegou que há uso da estrutura física das entidades e dos perfis nas redes socais para favorecer a candidatura à reeleição do presidente Luiz Inácio Lula da Silva.",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-barra-anuncios-de-lula-acusando-flavio-de-ser-contra-escala-6x1",
-    "publishedAt": "11/10/2026 às 18:02",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-nega-pedido-da-campanha-de-flavio-para-barrar-posts-de-sindicatos",
+    "publishedAt": "16/10/2026 às 15:20",
     "category": "Justiça",
-    "author": "André Richter - Repórter da Agência Brasil",
+    "imageUrl": "https://imagens.ebc.com.br/p-dx2UWJZRF38KkLdIGnr6eh4WM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/16/_raf1359.jpg?itok=yYd2EImW",
+    "imageCaption": "TSE nega pedido da campanha de Flávio para barrar posts de sindicatos",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "TSE nega pedido da campanha de Flávio para barrar posts de sindicatos",
+    "author": "Agência Brasil",
     "tags": [
       "Justiça",
-      "fim da escala 6x1",
       "eleições 2026",
+      "Flávio Bolsonaro",
       "Lula",
-      "Flávio Bolsonaro"
+      "TSE"
+    ],
+    "content": [
+      "A campanha alegou que há uso da estrutura física das entidades e dos perfis nas redes socais para favorecer a candidatura à reeleição do presidente Luiz Inácio Lula da Silva.",
+      "Campanha de Flávio aciona TSE contra posts de artistas e parlamentares. TSE determina isonomia após IA da Meta barrar imagens de Lula. TSE ordena que Flávio e Nikolas removam vídeo de crianças contra Lula. Ao analisar as alegações, o ministro entendeu que as acusações necessitam ser analisadas individualmente e deu prazo de 72 horas para os advogados da campanha de Flávio apresentarem fatos detalhados sobre as supostas irregularidades.",
+      "“A presente decisão limita-se a reconhecer que os elementos disponíveis não são suficientes para justificar, neste momento, a medida inibitória postulada”, afirmou o ministro.",
+      "Cueva também ressaltou que a rejeição da liminar para barrar as postagens não constitui autorização para uso de bens, serviços e recursos financeiros dos sindicatos em benefício de candidaturas.",
+      "“O custeio de despesas de campanha, a produção ou distribuição de materiais que configurem contribuição econômica à candidatura e o fornecimento de bens ou serviços com essa finalidade sujeitam-se à vedação legal, independentemente da transferência direta de valores”, completou.",
+      "O caso ainda será julgado definitivamente pelo ministro. Não há prazo para a análise do caso."
     ]
   },
   {
-    "id": "ebc-1705001",
-    "title": "Bets: mais de R$ 1 bilhão foram devolvidos a apostadores",
-    "summary": "Mais de R$ 1 bilhão em saldos de apostadores de bets foram devolvidos aos usuários dessas plataformas. Com isso, o saldo atual, que ainda precisa ser transferido após a proibição das apostas online, caiu de R$ 1,2 bilhão para R$ 159 milhões, segundo dados enviados pelas...",
+    "id": "ebc-1705614",
+    "title": "Manaus é capital com maior poluição atmosférica do país nesta sexta",
+    "summary": "Manaus voltou a registrar a pior qualidade do ar entre as capitais brasileiras na manhã desta sexta-feira (16) por causa da fumaça provocada por queimadas. Por volta das seis horas da manhã, a plataforma internacional IQAir registrou índice de qualidade do ar de 167...",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/bets-mais-de-r-1-bilhao-foram-devolvidos-apostadores",
-    "publishedAt": "10/10/2026 às 11:47",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/manaus-e-capital-com-maior-poluicao-atmosferica-do-pais-nesta-sexta",
+    "publishedAt": "16/10/2026 às 14:28",
+    "category": "Política",
+    "author": "Carlos Araújo – Repórter do Sistema Encontro das Águas de Comunicação",
+    "tags": [
+      "Meio Ambiente",
+      "Amazonas",
+      "Manaus",
+      "Amazônia",
+      "Queimadas"
+    ]
+  },
+  {
+    "id": "ebc-1705611",
+    "title": "Governo monitora saúde de amazonenses em locais afetados por queimadas",
+    "summary": "O Ministério da Saúde vem monitorando os impactos das queimadas na saúde dos amazonenses e sobre o Sistema Único de Saúde (SUS) na região. A medida ocorre depois que o governo do Amazonas decretou situação de emergência em 36 municípios, no último dia 10, em razão dos...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/governo-monitora-saude-de-amazonenses-em-locais-afetados-por-queimadas",
+    "publishedAt": "16/10/2026 às 13:50",
+    "category": "Governo",
+    "author": "Daniella Almeida – Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "clima",
+      "meteorologia",
+      "SUS",
+      "seca no Amazonas"
+    ]
+  },
+  {
+    "id": "camara-1311420",
+    "title": "Projeto destina recursos orçamentários para contribuições do Brasil a órgãos internacionais",
+    "summary": "Texto será analisado pela Comissão Mista de Orçamento e, em seguida, pelo Plenário do Congresso Nacional",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311420-projeto-destina-recursos-orcamentarios-para-contribuicoes-do-brasil-a-orgaos-internacionais",
+    "publishedAt": "16/10/2026 às 13:49",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20200214160605480-768x384.jpg",
+    "imageCaption": "Parte do dinheiro será destinado a programa das Nações Unidas para assentamentos urbanos",
+    "imageCredit": "Divulgação/ONU",
+    "imageAlt": "Organização das Nações Unidas (ONU)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "O Congresso Nacional analisa proposta (PLN 31/26) que abre crédito especial no Orçamento deste ano de R$ 2,7 milhões para o pagamento de contribuições do país a organismos internacionais e outras despesas que não estavam na lei orçamentária.",
+      "Os recursos serão obtidos pela anulação de outras despesas que, segundo o governo, não seriam realizadas neste ano.",
+      "O prazo final para encaminhamento dos pedidos de créditos suplementares e especiais ao Congresso Nacional é o dia 15 de outubro.",
+      "Tramitação A proposta será analisada pela Comissão Mista de Orçamento (CMO) e, em seguida, pelo Plenário do Congresso Nacional (sessão conjunta de Câmara dos Deputados e Senado Federal)."
+    ]
+  },
+  {
+    "id": "ebc-1705606",
+    "title": "Congresso promulga emenda de aposentadoria especial de agente de saúde",
+    "summary": "A emenda fixa requisitos diferenciados para esses trabalhadores no Regime Próprio de Previdência Social (RPPS) e no Regime Geral de Previdência Social (RGPS), com idade mínima de 57 anos para mulheres e 60 anos para homens, condicionada a 25 anos de contribuição e de efetivo...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/congresso-promulga-emenda-de-aposentadoria-especial-de-agente-de-saude",
+    "publishedAt": "16/10/2026 às 13:31",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/_RJDvalafZvl6fUL_bxS3Dbdolc=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/16/sem_titulo_1.jpg?itok=2_BF6Jw_",
+    "imageCaption": "Congresso promulga emenda de aposentadoria especial de agente de saúde",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Congresso promulga emenda de aposentadoria especial de agente de saúde",
+    "author": "Lucas Pordeus León - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "Congresso Nacional",
+      "Aposentadoria Especial",
+      "Previdência Social"
+    ],
+    "content": [
+      "A emenda fixa requisitos diferenciados para esses trabalhadores no Regime Próprio de Previdência Social (RPPS) e no Regime Geral de Previdência Social (RGPS), com idade mínima de 57 anos para mulheres e 60 anos para homens, condicionada a 25 anos de contribuição e de efetivo exercício na atividade.",
+      "Congresso promulga emenda do fim da 6x1; escala 5x2 começa em 60 dias. Atualmente, o regime geral prevê 62 anos de idade mínima para mulheres e 65 para homens. Aprovada em julho no Senado , a nova emenda foi promulgada hoje em sessão solene com participação dos presidentes do Senado, Davi Alcolumbre (União-AP), da Câmara, Hugo Motta (Republicanos-PB), e do presidente da República, Luiz Inácio Lula da Silva.",
+      "O presidente do Congresso, Davi Alcolumbre, lembrou que a proposta começou a tramitar em 2021 e destacou que a promulgação traz “dignidade para o trabalhador”.",
+      "“Esses profissionais levam o Estado brasileiro aonde ele, em muitas das vezes, não chega. Hoje, o Estado brasileiro reconhece o valor de cada um de vocês. A aposentadoria especial é o reconhecimento de uma vida inteira de trabalho e de cuidado”, ressaltou Alcolumbre.",
+      "O presidente Lula disse que “a gente não tem noção do trabalho” que esses agentes de saúde fazem, ao ir às casas das pessoas acompanhar doentes e prevenir doenças transmissíveis.",
+      "“Se eles reivindicam uma aposentadoria especial, em vez de a gente simplesmente negar, [temos que questionar se] é necessário? É importante? É justo? Ora, se é importante, necessário e justo, a gente não tem outra coisa a fazer que promulgar o direito de eles se aposentarem”, comentou o presidente.",
+      "Presente na galeria do plenário do Senado, um grupo de agentes comunitários de saúde e de combate às endemias comemorava a promulgação na nova emenda constitucional.",
+      "O texto promulgado hoje também estabelece regras permanentes e transitórias de aposentadoria, disciplina a forma de contratação dos profissionais, prevê assistência financeira complementar da União e estende as novas regras aos agentes indígenas de saúde e aos agentes indígenas de saneamento."
+    ]
+  },
+  {
+    "id": "ebc-1705602",
+    "title": "Do trabalho sem limite ao fim da 6x1: veja avanço da jornada no Brasil",
+    "summary": "Com base em informações históricas do Ministério do Trabalho e Emprego (MTE) e do Tribunal Superior do Trabalho (TST) , a Agência Brasil fez um levantamento dos principais marcos da evolução da jornada de trabalho no país.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/do-trabalho-sem-limites-ao-fim-da-escala-6x1-veja-evolucao-da-jornada",
+    "publishedAt": "16/10/2026 às 13:31",
     "category": "Economia",
+    "imageUrl": "https://imagens.ebc.com.br/t1ySLVY5umJos-K8woWvdQ_YAjs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/16/rabalhadores_em_uma_oficina.jpg?itok=TojJ_167",
+    "imageCaption": "Do trabalho sem limite ao fim da 6x1: veja avanço da jornada no Brasil",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Do trabalho sem limite ao fim da 6x1: veja avanço da jornada no Brasil",
     "author": "Pedro Peduzzi - Repórter da Agência Brasil",
     "tags": [
       "Economia",
-      "bets",
-      "Apostas online"
+      "trabalho",
+      "emprego",
+      "fim da escala 6x1",
+      "Sindicato"
+    ],
+    "content": [
+      "Com base em informações históricas do Ministério do Trabalho e Emprego (MTE) e do Tribunal Superior do Trabalho (TST) , a Agência Brasil fez um levantamento dos principais marcos da evolução da jornada de trabalho no país.",
+      "Descanso de trabalhador não quebra empresas, diz Lula após fim da 6x1. Saiba quando começa a valer o fim da escala 6x1. Congresso promulga emenda de aposentadoria especial de agente de saúde. Antes das primeiras leis trabalhistas, a economia brasileira foi sustentada por séculos pelo trabalho escravizado. Segundo o TST, a história do trabalho livre e assalariado é relativamente recente no país.",
+      "Durante 400 anos, a economia brasileira se apoiou no trabalho realizado por pessoas escravizadas. Já o período de trabalho livre e remunerado tem pouco mais de um século.",
+      "Essa herança ajuda a explicar por que a construção dos direitos trabalhistas ocorreu de forma gradual.",
+      "No início do século 20, trabalhadores passaram a se organizar para reivindicar direitos e limites para a jornada de trabalho. Naquele período, a ausência de regras gerais permitia jornadas extensas em diversos setores da economia.",
+      "Segundo o histórico do MTE, em 1912, a Confederação Brasileira do Trabalho (CBT), criada durante o 4º Congresso Operário Brasileiro, defendia uma pauta que incluía a jornada de oito horas diárias e a semana de seis dias de trabalho.",
+      "Também estavam entre as reivindicações a indenização por acidentes de trabalho, o salário mínimo, o seguro obrigatório para doenças e a pensão para velhice.",
+      "Poucos anos depois, em 1918, o governo federal criou o Departamento Nacional do Trabalho, uma das primeiras estruturas estatais voltadas à regulamentação das relações trabalhistas."
     ]
   },
   {
-    "id": "camara-1306357-projeto-pune-empresas-que-atra",
-    "title": "Projeto pune empresas que atrasarem pagamento de médicos",
-    "summary": "Proposta está em análise na Câmara dos Deputados",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1306357-projeto-pune-empresas-que-atrasarem-pagamento-de-medicos",
-    "publishedAt": "09/10/2026 às 19:15",
-    "category": "Congresso",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1704977",
-    "title": "Dólar cai a R$ 4,98 e acumula perda de 4,44% na semana",
-    "summary": "O dólar fechou em queda nesta sexta-feira (9), abaixo de R$ 5 pela segunda sessão consecutiva, enquanto a Bolsa brasileira renovou recordes históricos . A moeda estadunidense recuou cerca de 0,8% no dia e acumulou baixa de mais de 4% na semana pós-primeiro turno. A bolsa...",
+    "id": "ebc-1705600",
+    "title": "Saiba quando começa a valer o fim da escala 6x1",
+    "summary": "A emenda também incluiu uma redução gradual da jornada de trabalho das atuais 44 horas para 40 horas semanais , sem redução salarial, dentro de um período de transição de 14 meses. Após 60 dias, a redução já deverá ser de duas horas semanais. Confira os prazos:",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/dolar-cai-r-498-e-acumula-perda-de-444-na-semana",
-    "publishedAt": "09/10/2026 às 19:07",
-    "category": "Economia",
-    "author": "Wellton Máximo – Repórter da Agência Brasil*",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/saiba-quando-comeca-valer-o-fim-da-escala-6-por-1",
+    "publishedAt": "16/10/2026 às 13:07",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/JbRLWObzDjzISjipVznUA9jPDz8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/02_carteira_de_trabalho.jpg?itok=VCMlSAgJ",
+    "imageCaption": "Saiba quando começa a valer o fim da escala 6x1",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Saiba quando começa a valer o fim da escala 6x1",
+    "author": "Agência Brasil",
     "tags": [
-      "Economia",
-      "Dólar",
-      "Câmbio",
-      "Ibovespa",
-      "Mercado Financeiro"
+      "Política",
+      "fim da escala 6x1",
+      "trabalhador",
+      "Escala 5x2",
+      "Senado"
+    ],
+    "content": [
+      "A emenda também incluiu uma redução gradual da jornada de trabalho das atuais 44 horas para 40 horas semanais , sem redução salarial, dentro de um período de transição de 14 meses. Após 60 dias, a redução já deverá ser de duas horas semanais. Confira os prazos:",
+      "Fim da escala 6x1 traz esperança de mais tempo para família e saúde. Fim da 6x1: saiba quando entra em vigor nova jornada de trabalho. CUT elogia fim da “massacrante” 6x1; CNI quer revisar PEC aprovada . No intervalo entre o segundo e o 14º mês após a promulgação, o empregador deverá distribuir, ao longo da semana, as duas horas acima das oito normais de serviço. Se repartidas igualmente, o empregado terá que trabalhar 8 horas e 24 minutos nos cinco dias na semana.",
+      "Finalizada a fase de transição, todos os empregados devem trabalhar, no máximo, oito horas diárias e 40 horas semanais em cinco dias na semana. Para trabalhar mais horas, apenas mediante pagamento de hora-extra.",
+      "O texto permite, excepcionalmente, e mediante convenção ou acordo coletivo de trabalho, que seja estabelecido regime compensatório que permita escala diferente da 5x2.",
+      "Nesses casos, os trabalhadores precisam ser compensados no mesmo “mês-calendário”, garantindo “o gozo de pelo menos um dos dias dentro do período máximo de uma semana de trabalho”.",
+      "Ou seja, um trabalhador pode fazer ainda a escala 6x1, desde que prevista em acordo coletivo. Nesse caso, o dia trabalhado a mais terá que ser compensado com uma folga dentro do mesmo mês.",
+      "Ao final desse mês, ele terá que ter gozado, na média, o equivalente a duas folgas remuneradas por semana.",
+      "A regra de transição para os trabalhadores terceirizados do poder público é diferente, sob o argumento de “evitar riscos de descontinuidade na prestação de serviços públicos essenciais executados mediante terceirização”."
     ]
   },
   {
-    "id": "camara-1305403-projeto-regulamenta-uso-de-luz",
-    "title": "Projeto regulamenta uso de luz de cortesia entre motoristas no trânsito",
-    "summary": "Proposta está em análise na Câmara dos Deputados",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1305403-projeto-regulamenta-uso-de-luz-de-cortesia-entre-motoristas-no-transito",
-    "publishedAt": "09/10/2026 às 18:02",
-    "category": "Congresso",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1704965",
-    "title": "Reforma Tributária: 86% das notas fiscais destacam a CBS",
-    "summary": "Cerca de 86% das notas fiscais emitidas por empresas obrigadas pela Reforma Tributária a destacar a Contribuição sobre Bens e Serviços (CBS) cumpriram essa determinação nos últimos 30 dias, informou nesta sexta-feira (9) a Receita Federal. Segundo o levantamento, foram...",
+    "id": "ebc-1705599",
+    "title": "Descanso de trabalhador não quebra empresas, diz Lula após fim da 6x1",
+    "summary": "\"É combinar a manutenção e a existência da empresa com a manutenção e a saúde das mulheres e dos homens que trabalham\", resumiu.",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/reforma-tributaria-86-das-notas-fiscais-destacam-cbs",
-    "publishedAt": "09/10/2026 às 17:59",
-    "category": "Economia",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/descanso-de-trabalhador-nao-quebra-empresas-diz-lula-apos-fim-da-6x1",
+    "publishedAt": "16/10/2026 às 12:59",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/2EQ-gBVuVK0RSD2kwCCTrbkIZeI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/16/sem_titulo-12.jpg?itok=c1ZAygoS",
+    "imageCaption": "Descanso de trabalhador não quebra empresas, diz Lula após fim da 6x1",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Descanso de trabalhador não quebra empresas, diz Lula após fim da 6x1",
+    "author": "Lucas Pordeus León - repórter da Agência Brasil",
     "tags": [
-      "Economia",
-      "reforma tributária",
-      "imposto",
-      "Receita Federal",
-      "nota fiscal"
+      "Política",
+      "fim da escala 6x1",
+      "Congresso Nacional",
+      "Lula",
+      "Direitos Trabalhistas"
+    ],
+    "content": [
+      "\"É combinar a manutenção e a existência da empresa com a manutenção e a saúde das mulheres e dos homens que trabalham\", resumiu.",
+      "Congresso promulga emenda do fim da 6x1; escala 5x2 começa em 60 dias. Imprensa estrangeira vê vitória de Lula em aprovação do fim da 6x1. CUT elogia fim da “massacrante” 6x1; CNI quer revisar PEC aprovada . Com a promulgação das novas regras trabalhistas pelo Congresso Nacional, a jornada máxima semanal cairá de 44 para 40 horas semanais, sem a redução de salários.",
+      ">> Saiba quando entra em vigor a nova jornada de trabalho",
+      "\"Pelo amor de Deus, se a gente não garantir o direito de o ser humano descansar, de o ser humano ter o direito de visitar a família, de visitar os parentes, de levar a criança a uma praça, a algum lugar para descansar, se a gente não garante isso, que tipo de seres humanos que nós somos?”, disse Lula.",
+      "O presidente defendeu que a redução de jornada será especialmente importante para mulheres, afirmando que \"o dia do descanso é o dia que elas mais trabalham\".",
+      "\"Não é possível que as pessoas não tenham sensibilidade”, completou.",
+      "A tramitação da proposta, promulgada nesta sexta-feira, foi marcada por críticas de entidades empresariais e da oposição, que alegaram que a mudança iria prejudicar as empresas e a economia do país. A Confederação Nacional da Indústria (CNI) já pede a revisão da nova regra .",
+      "Após a promulgação da emenda, o presidente Lula defendeu que o “mundo do trabalho” está cada vez mais difícil e criticou a tentativa de \"jogar nas costas do povo trabalhador\", \"que está reivindicando um dia de descanso a mais\", a responsabilidade por uma crise que \"é mentira\"."
     ]
   },
   {
-    "id": "camara-1309819-projeto-cria-programa-de-educa",
-    "title": "Projeto cria programa de educação e conscientização para proteção animal",
-    "summary": "Proposta está em análise na Câmara",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1309819-projeto-cria-programa-de-educacao-e-conscientizacao-para-protecao-animal",
-    "publishedAt": "09/10/2026 às 17:11",
-    "category": "Congresso",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "camara-1305226-projeto-isenta-candidatos-de-b",
-    "title": "Projeto isenta candidatos de baixa renda de custos com exames médicos em concursos públicos",
-    "summary": "O texto em análise na Câmara dos Deputados mantém o direito à gratuidade na taxa de inscrição para esses grupos",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1305226-projeto-isenta-candidatos-de-baixa-renda-de-custos-com-exames-medicos-em-concursos-publicos",
-    "publishedAt": "09/10/2026 às 16:14",
-    "category": "Congresso",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1704946",
-    "title": "Bancos começam a devolver R$ 1,3 bilhão a apostadores de bets",
-    "summary": "Os bancos e as instituições financeiras começam nesta sexta-feira (9) a devolver cerca de R$ 1,325 bilhão que permaneceu nas contas de apostadores após o encerramento das plataformas de apostas on-line abrangidas pela Medida Provisória (MP) 1.394/2026 , do governo federal. A...",
+    "id": "ebc-1705596",
+    "title": "Brasil deve voltar a ser 8ª maior economia do mundo em 2027, prevê FMI",
+    "summary": "A projeção faz parte do documento Perspectivas da Economia Mundial , divulgado nesta semana pelo Fundo Monetário Internacional (FMI).",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/bancos-comecam-devolver-r-13-bilhao-apostadores-de-bets",
-    "publishedAt": "09/10/2026 às 15:48",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/brasil-deve-voltar-ser-8a-maior-economia-do-mundo-em-2027-preve-fmi",
+    "publishedAt": "16/10/2026 às 12:47",
     "category": "Economia",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
+    "imageUrl": "https://imagens.ebc.com.br/PIFJu9G0mLbpq7rr_pFNJMnHHRg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2020-12-04t162610z_113705395_rc2ggk9mzfi9_rtrmadp_3_brazil-soybeans-imports_1.jpg?itok=U7p1YGGX",
+    "imageCaption": "Brasil deve voltar a ser 8ª maior economia do mundo em 2027, prevê FMI",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Brasil deve voltar a ser 8ª maior economia do mundo em 2027, prevê FMI",
+    "author": "Bruno de Freitas Moura – Repórter da Agência Brasil",
     "tags": [
       "Economia",
-      "bets",
-      "Apostas online",
-      "Ministério da Fazenda",
-      "Endividamento"
+      "FMI",
+      "PIB",
+      "ranking",
+      "economia"
+    ],
+    "content": [
+      "A projeção faz parte do documento Perspectivas da Economia Mundial , divulgado nesta semana pelo Fundo Monetário Internacional (FMI).",
+      "FMI prevê crescimento de 2,2% do PIB do Brasil em 2026. De acordo com o estudo, o Produto Interno Bruto (PIB, conjunto de todos os bens e serviços produzidos no país) brasileiro alcançará US$ 2,80 trilhões (R$ 14,65 trilhões) no ano que vem.",
+      "Em 2026, o país termina na décima posição do ranking , com PIB de US$ 2,655 trilhões.",
+      "Para 2027, a lista mantém os Estados Unidos como maior potência econômica, seguida pela China.",
+      "Confira o Top 10 das economias mundiais, segundo a projeção do FMI, instituição multilateral vinculada às Nações Unidas.",
+      "A última vez em que o Brasil ficou no oitavo lugar foi em 2017. De acordo com a estimativa do FMI, o país segue na oitava posição até 2031, último ano projetado.",
+      "A melhor posição já ocupada pelo Brasil no ranking global de PIB foi a sétima posição, alcançada em 1995 e de 2010 a 2014.",
+      "Saiba mais no Repórter Brasil Tarde, da TV Brasil"
     ]
   },
   {
-    "id": "camara-1305283-projeto-permite-prefeitura-mud",
-    "title": "Projeto permite prefeitura mudar destino de áreas de loteamento",
-    "summary": "Texto está em análise na Câmara dos Deputados",
+    "id": "camara-1311792",
+    "title": "Congresso promulga aposentadoria especial para agentes de saúde e de combate a endemias",
+    "summary": "Pelas novas regras, as duas categorias poderão se aposentar aos 57 anos se mulher, e 60 anos se homem, com 25 anos de contribuição e de atividade",
     "source": "Agência Câmara",
     "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1305283-projeto-permite-prefeitura-mudar-destino-de-areas-de-loteamento",
-    "publishedAt": "09/10/2026 às 15:10",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311792-congresso-promulga-aposentadoria-especial-para-agentes-de-saude-e-de-combate-a-endemias",
+    "publishedAt": "16/10/2026 às 12:42",
     "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261016103903662-768x473.jpg",
+    "imageCaption": "Motta, Alcolumbre e Lula participaram da solenidade",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Promulgação da PEC Fim da escala 6x1 e da PEC Aposentadoria Especial para Agentes Comunitários de Saúde.Senador, Paulo Paim (PT - RS), Presidente da Câmara dos Deputados, Hugo Motta (REPUBLICANOS - PB), Presidente do Senado Federal, Davi Alcolumbre (UNIÃO - AP), Presidente da República, Luiz Inácio Lula da Silva, Dep. Carlos Veras (PT - PE)",
     "author": "Agência Câmara de Notícias",
     "tags": [
       "Congresso",
       "Brasil",
       "Notícias"
+    ],
+    "content": [
+      "O Congresso Nacional promulgou nesta sexta-feira (16) a Emenda Constitucional 140/26, que cria regras especiais de aposentadoria para agentes comunitários de saúde (ACS) e agentes de combate às endemias (ACE).",
+      "O texto é originário da Proposta de Emenda à Constituição (PEC) 14/21, aprovada pela Câmara dos Deputados em 2025 e pelo Senado Federal neste ano.",
+      "Pelas novas regras, as duas categorias poderão se aposentar aos 57 anos, se mulher, e aos 60 anos, se homem, com 25 anos de contribuição e de atividade. Atualmente, é aplicada a norma geral estabelecida pela reforma da Previdência: idade mínima de 62 anos para mulheres e 65 anos para homens.",
+      "A mudança valerá tanto para quem estiver vinculado ao Regime Próprio de Previdência Social (RPPS), aplicável a servidores públicos, quanto para quem estiver no regime geral, administrado pelo Instituto Nacional do Seguro Social (INSS).",
+      "Ao discursar sobre a PEC, o presidente do Senado, Davi Alcolumbre (União Brasil-AP), ressaltou que a medida é uma resposta do Estado à longa espera e ao histórico de insegurança dos agentes.",
+      "\"Esses profissionais levam o Estado brasileiro para locais onde muitas vezes o atendimento não chega. A aposentadoria especial é o reconhecimento de uma vida inteira de trabalho e de cuidado”, afirmou.",
+      "O presidente da Câmara dos Deputados , Hugo Motta (Republicanos-PB), destacou a atuação desses profissionais na prevenção e no combate a doenças como a dengue e disse que a conquista foi construída com “escuta, responsabilidade e atenção ao equilíbrio do sistema previdenciário”.",
+      "Durante a solenidade, o presidente da República, Luiz Inácio Lula da Silva, afirmou que a medida é “importante, necessária e justa” e que a promulgação atende à reivindicação popular."
     ]
   },
   {
-    "id": "camara-1306625-projeto-exclui-salario-de-jove",
-    "title": "Projeto exclui salário de Jovem Aprendiz do cálculo de renda do Bolsa Família",
-    "summary": "Texto está em análise a Câmara",
+    "id": "camara-1311797",
+    "title": "Congresso promulga emenda que acaba com escala 6x1 e estabelece jornada máxima de 40 horas semanais",
+    "summary": "Lula e os presidentes da Câmara, Hugo Motta, e do Congresso, Davi Alcolumbre, celebraram a medida e defenderam direito de descanso para o trabalhador brasileiro",
     "source": "Agência Câmara",
     "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1306625-projeto-exclui-salario-de-jovem-aprendiz-do-calculo-de-renda-do-bolsa-familia",
-    "publishedAt": "09/10/2026 às 14:17",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311797-congresso-promulga-emenda-que-acaba-com-escala-6x1-e-estabelece-jornada-maxima-de-40-horas-semanais",
+    "publishedAt": "16/10/2026 às 12:08",
     "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261016103921991-768x473.jpg",
+    "imageCaption": "Senador Paulo Paim, Hugo Motta, Davi Alcolumbre, Lula e deputado Carlos Veras comemoram promulgação",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Promulgação da PEC do fim da escala 6x1 - Senador Paulo Paim (PT-RS)), Presidente da Câmara dos Deputados, Hugo Motta (REPUBLICANOS -PB), Presidente do Senado Federal, Davi Alcolumbre (UNIÃO-AP), Presidente da República, Luiz Inácio Lula da Silva, Deputado Carlos Veras (PT-PE)",
     "author": "Agência Câmara de Notícias",
     "tags": [
       "Congresso",
       "Brasil",
       "Notícias"
+    ],
+    "content": [
+      "O Congresso Nacional promulgou nesta sexta-feira (16) a Emenda Constitucional (EC) 141, que acaba com a escala 6x1, de seis dias de trabalho para um dia de descanso. Com a promulgação, o trabalhador terá direito a repouso semanal remunerado de dois dias, um deles preferencialmente aos domingos, sem redução salarial.",
+      "Durante a solenidade de promulgação, os presidentes da Câmara, deputado Hugo Motta (Republicanos-PB), e do Congresso Nacional, senador Davi Alcolumbre (União-AP), destacaram o compromisso dos parlamentares em enfrentar o assunto.",
+      "“Quando o tema é complexo, o mais cômodo é não enfrentar, mas o Legislativo brasileiro escolheu discutir, ouvir e decidir sobre a matéria”, afirmou Alcolumbre. “ Celebramos conquistas que mostram a força das instituições democráticas quando o trabalho é pelo povo brasileiro.”",
+      "Hugo Motta acrescentou que quem trabalha merece qualidade de vida, e o fim da escala 6x1 alcança milhões de brasileiros. “Por trás desse número, estão homens e mulheres que acordam antes do amanhecer, atravessam cidades inteiras e dedicam grande parte de seus dias ao trabalho. Pessoas que muitas vezes têm apenas um dia da semana para conciliar descanso, saúde, família, estudos e tudo o mais que a vida exige”, declarou.",
+      "Solução de problemas Presente à solenidade, o presidente da República, Luiz Inácio Lula da Silva, chamou a promulgação de “vitória da sociedade brasileira” e observou que sempre haverá contrários à conquista de direitos pela classe trabalhadora. “Não tem uma conquista que não digam que vai quebrar as empresas, a economia.”",
+      "Lula disse, por outro lado, que as principais categorias organizadas já trabalham na escala 5x2 e que qualquer problema que surgir será discutido e resolvido. “Ninguém quer que empresa quebre, mas ninguém quer que o trabalhador morra por falta de descanso”, defendeu. “Não pode trabalhar seis dias por semana e ficar poucas horas em casa. Sobretudo a mulher, o dia que tem de descanso é o dia que mais trabalha, é o dia de fazer a limpeza da casa, de cuidar dos filhos.”",
+      "Transição A emenda é originária de um texto alternativo à PEC 221/19, do deputado Reginaldo Lopes (PT-MG), e à PEC 8/25, da deputada Erika Hilton (Psol-SP), aprovado pela Câmara dos Deputados em maio e pelo Senado Federal na última quarta-feira (14).",
+      "O texto também reduz a jornada máxima de trabalho semanal de 44 para 40 horas. Serão até oito horas diárias de trabalho, com possibilidade de compensação de horários e redução da jornada por acordo ou convenção coletiva de trabalho. Algumas das mudanças serão implementadas de forma progressiva."
     ]
   },
   {
-    "id": "ebc-1704932",
-    "title": "Pix ultrapassa 1 bilhão de chaves cadastradas no Brasil",
-    "summary": "O número de chaves Pix cadastradas no Brasil ultrapassou a marca de 1 bilhão em setembro, segundo dados do Banco Central (BC). Ao todo, o sistema contabilizava 1,008 bilhão de registros no dia 30, ante 998 milhões em agosto. O total representa um crescimento de...",
+    "id": "camara-1311796",
+    "title": "Motta: Somos um país que valoriza o trabalho sem esquecer o trabalhador",
+    "summary": "Presidente da Câmara destacou o fim da escala 6x1 como uma das maiores conquistas dos trabalhadores brasileiros",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311796-motta-somos-um-pais-que-valoriza-o-trabalho-sem-esquecer-o-trabalhador",
+    "publishedAt": "16/10/2026 às 11:49",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261016103907801-768x474.jpg",
+    "imageCaption": "Motta participou de solenidade de promulgação da emenda constitucional",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Promulgação da PEC Fim da escala 6x1 e da PEC Aposentadoria Especial para Agentes Comunitários de Saúde.Presidente da Câmara dos Deputados, Hugo Motta (REPUBLICANOS - PB)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Durante a sessão solene de promulgação da emenda constitucional que reduz a jornada máxima de trabalho de 44 para 40 horas semanais, sem corte de salário, o presidente da Câmara dos Deputados, Hugo Motta (Republicanos-PB), apontou a medida como uma das mais importantes conquistas da classe trabalhadora.",
+      "Ele afirmou que o fim da escala 6x1 alcança milhões de brasileiros e garante a homens e mulheres mais qualidade de vida.",
+      "\"Pessoas que, muitas vezes, têm apenas um dia da semana para conciliar descanso, família, saúde, estudo e tudo o mais que a vida exige. Foi olhando para essa realidade que o Congresso Nacional decidiu enfrentar um debate que não era revisitado de forma estrutural desde a Constituição de 1988\", destacou.",
+      "Segundo Motta, a mudança foi aprovada após muito diálogo entre todos os setores envolvidos, como trabalhadores, empresários e representantes da sociedade civil. O resultado desse processo, conforme afirmou, foi a elaboração de uma proposta madura que vai permitir ao país avançar sem perder de vista a realidade das empresas, dos trabalhadores e, especialmente, dos micro e pequenos negócios.",
+      "\"Hoje, o Congresso Nacional escreve na Constituição uma escolha sobre o Brasil que queremos ser. Um país que valoriza o trabalho sem esquecer o trabalhador\", defendeu.",
+      "MEI Motta lembrou da aprovação, pelo Congresso Nacional, de projeto que amplia o limite anual de faturamento dos Microempreendedores Individuais (MEIs) dos atuais R$ 80 mil para R$ 110 mil no próximo ano, e para R$ 140 mil em 2028.",
+      "Segundo ele, os cerca de 13 milhões de microempreendedores individuais em todo o Brasil poderão ser beneficiados. E disse esperar que a proposta seja sancionada pelo presidente da República, Luiz Inácio Lula da Silva, ainda nesta semana.",
+      "\"Afinal, fortalecer o MEI é fortalecer milhões de famílias brasileiras. É permitir que pequenos negócios cresçam sem serem penalizados pelo próprio sucesso\", disse."
+    ]
+  },
+  {
+    "id": "camara-1311742",
+    "title": "Congresso promulga o fim da escala 6x1 e aposentadoria especial para agentes de saúde",
+    "summary": "Hugo Motta diz que a aprovação da redução da jornada de trabalho coroa um esforço histórico feito pela Câmara",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311742-congresso-promulga-o-fim-da-escala-6x1-e-aposentadoria-especial-para-agentes-de-saude",
+    "publishedAt": "15/10/2026 às 20:49",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261016103859104-768x474.jpg",
+    "imageCaption": "Sessão Solene de promulgação de PECs no Congresso Nacional",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Promulgação da PEC Fim da escala 6x1 e da PEC Aposentadoria Especial para Agentes Comunitários de Saúde",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Foram promulgadas em sessão solene do Congresso nesta sexta-feira (16) duas emendas à Constituição. Uma delas acaba com a escala de trabalho 6x1, prevista na PEC 221/19, aprovada pela Câmara em maio e pelo Senado na última quinta-feira (14). A outra, decorrente da PEC 14/21, aprovada pela Câmara em outubro de 2025 , prevê aposentadoria especial para agentes comunitários de saúde.",
+      "O presidente da Câmara, Hugo Motta, participou da sessão. “Com a aprovação no Senado, coroamos um esforço histórico que debatemos, construímos e aprovamos com muito diálogo na Câmara dos Deputados desde fevereiro, quando pautei o projeto. De lá pra cá, rodamos o Brasil escutando o trabalhador, o empresário e especialistas”, afirmou Motta em suas redes sociais , após a aprovação da proposta.",
+      "Presidiu a sessão de promulgação o presidente do Senado e do Congresso Nacional, Davi Alcolumbre. A sessão também contou com a presença do presidente da República, Luiz Inácio Lula da Silva.",
+      "Fim da escala de trabalho 6x1: veja como fica"
+    ]
+  },
+  {
+    "id": "ebc-1705546",
+    "title": "Congresso promulga emenda do fim da 6x1; escala 5x2 começa em 60 dias",
+    "summary": "A nova Emenda foi promulgada em sessão solene com participação dos presidentes do Senado, Davi Alcolumbre (União-AP); da Câmara dos Deputados, Hugo Motta (Republicanos-PB); e do presidente da República, Luiz Inácio Lula da Silva.",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/pix-ultrapassa-1-bilhao-de-chaves-cadastradas-no-brasil",
-    "publishedAt": "09/10/2026 às 13:42",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/congresso-promulga-emenda-do-fim-da-6x1-escala-5x2-comeca-em-60-dias",
+    "publishedAt": "16/10/2026 às 10:39",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/m_U8zikPmw4bWmpHgy0OogSDRq8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/16/whatsapp_image_2026-10-16_at_10.32.59.jpg?itok=2iU_HkYh",
+    "imageCaption": "Congresso promulga emenda do fim da 6x1; escala 5x2 começa em 60 dias",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Congresso promulga emenda do fim da 6x1; escala 5x2 começa em 60 dias",
+    "author": "Lucas Pordeus León – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "fim da escala 6x1",
+      "Congresso Nacional",
+      "promulgação",
+      "multimídia"
+    ],
+    "content": [
+      "A nova Emenda foi promulgada em sessão solene com participação dos presidentes do Senado, Davi Alcolumbre (União-AP); da Câmara dos Deputados, Hugo Motta (Republicanos-PB); e do presidente da República, Luiz Inácio Lula da Silva.",
+      "Imprensa estrangeira vê vitória de Lula em aprovação do fim da 6x1. Fim da escala 6x1 traz esperança de mais tempo para família e saúde. CUT elogia fim da “massacrante” 6x1; CNI quer revisar PEC aprovada . Ministros de estado, senadores e deputados da base aliada lotaram o plenário do Senado. Lideranças da oposição não compareceram à sessão.",
+      "O presidente do Congresso, Davi Alcolumbre, destacou que os impactos da medida “são incalculáveis”.",
+      "“Quanto vale mais tempo para cuidar de si e de quem se ama? Para milhões de pessoas que precisam trabalhar seis, às vezes sete dias por semana, a resposta é simples, essas coisas não tem preço, tem valor.”",
+      "Alcolumbre acrescentou que foi preciso “muita coragem” para enfrentar um assunto que “tanta gente preferia deixar para depois”.",
+      "“Um assunto que divide opiniões, que afeta as relações de trabalho e mexe com a vida de milhões de famílias. Quando o tema é complexo, o mais cômodo é deixar para lá e não enfrentar. Mas o Legislativo brasileiro escolheu o caminho certo, não o caminho fácil”, completou o presidente do Senado.",
+      "O presidente da Câmara, Hugo Motta, afirmou que o fim da 6x1 alcança milhões de brasileiros que “acordam antes do amanhecer, atravessam cidades inteiras e dedicam grande parte de seus dias ao trabalho”.",
+      "Motta acrescentou que os impactos da mudança para os micro e pequenos negócios serão mitigados pela aprovação do aumento do limite anual de faturamento dos MEIs dos atuais R$ 80 mil para R$ 110 mil em 2027 e R$ 140 mil em 2028."
+    ]
+  },
+  {
+    "id": "ebc-1705543",
+    "title": "Atividade econômica tem alta de 0,3% em agosto, mostra IBC-Br",
+    "summary": "Em relação a agosto de 2025, o indicador registrou crescimento de 1,2%. Nos últimos 12 meses, a alta acumulada é de 1,6%.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/atividade-economica-tem-alta-de-03-em-agosto-mostra-ibc-br",
+    "publishedAt": "16/10/2026 às 10:29",
     "category": "Economia",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
+    "imageUrl": "https://imagens.ebc.com.br/McvjmVYwxrI85fsoHOXMjh38Mhs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/industrias_wd2212.jpg?itok=6myvZaPB",
+    "imageCaption": "Atividade econômica tem alta de 0,3% em agosto, mostra IBC-Br",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Atividade econômica tem alta de 0,3% em agosto, mostra IBC-Br",
+    "author": "Pedro Peduzzi – Repórter da Agência Brasil",
     "tags": [
       "Economia",
-      "PIX",
-      "sistema financeiro",
       "banco central",
-      "chaves pix"
+      "IBC-Br",
+      "PIB",
+      "indústria"
+    ],
+    "content": [
+      "Em relação a agosto de 2025, o indicador registrou crescimento de 1,2%. Nos últimos 12 meses, a alta acumulada é de 1,6%.",
+      "Confiança da indústria sobe em outubro, mas setor segue pessimista. As informações que compõem o indicador abrangem os setores da indústria, de serviços e da agropecuária, além dos impostos sobre produtos.",
+      "Em agosto, a agropecuária recuou 1,8% em relação a julho. No mesmo período, a indústria avançou 0,9%, enquanto o setor de serviços variou 0,2%. Os impostos sobre produtos subiram 0,1%.",
+      "Excluindo a agropecuária, o IBC-Br variou 0,3% no mês.",
+      "Segundo os dados divulgados, os resultados de agosto, na comparação com julho, foram os seguintes:",
+      "Já na comparação com agosto de 2025, o indicador apresentou avanço de 1,2%. Nesse tipo de comparação, o resultado mostra que a atividade econômica ficou acima do nível registrado no mesmo mês do ano passado.",
+      "Entre os setores, na comparação com o mesmo período do ano anterior, a agropecuária teve alta de 5,8%; os serviços avançaram 1,3%; a indústria cresceu 0,4% e os impostos aumentaram 0,3%.",
+      "Sem a agropecuária, o IBC-Br registrou alta de 0,9%."
     ]
   },
   {
-    "id": "ebc-1704931",
-    "title": "Tributos da gasolina são zerados e subsídios a combustíveis, ampliados",
-    "summary": "A equipe econômica anunciou nesta sexta-feira (9) que vai ampliar a desoneração de tributos federais sobre a gasolina e aumentar os subsídios ao etanol e ao diesel importado. As medidas ocorrem a 16 dias do segundo turno das eleições e envolvem custos estimados em R$ 5,2...",
+    "id": "ibge-48304",
+    "title": "País tinha 1,5 milhão de crianças e adolescentes em situação de trabalho infantil em 2025",
+    "summary": "Na análise por grupos etários, o trabalho infantil tende a aumentar com o avanço da idade. - Foto: Ministério do Trabalho O país tinha 1,499 milhão de crianças e adolescentes entre 5 e 17 anos em situação de trabalho infantil em 2025, o que representa...",
+    "source": "IBGE",
+    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
+    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48304-pais-tinha-1-5-milhao-de-criancas-e-adolescentes-em-situacao-de-trabalho-infantil-em-2025.html",
+    "publishedAt": "16/10/2026 às 10:00",
+    "category": "Economia",
+    "imageUrl": "https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/ibge/2026_10/pnad_trabalho_infantil_capa.jpg",
+    "imageCaption": "País tinha 1,5 milhão de crianças e adolescentes em situação de trabalho infantil em 2025",
+    "imageCredit": "Agência IBGE Notícias",
+    "imageAlt": "País tinha 1,5 milhão de crianças e adolescentes em situação de trabalho infantil em 2025",
+    "author": "Agência IBGE Notícias",
+    "tags": [
+      "sociais",
+      "Notícia",
+      "Economia",
+      "Estatísticas"
+    ],
+    "content": [
+      "Na análise por grupos etários, o trabalho infantil tende a aumentar com o avanço da idade. - Foto: Ministério do Trabalho O país tinha 1,499 milhão de crianças e adolescentes entre 5 e 17 anos em situação de trabalho infantil em 2025, o que representa..."
+    ]
+  },
+  {
+    "id": "camara-1311491",
+    "title": "Comissão aprova uniformes de seleções brasileiras nas cores da bandeira nacional",
+    "summary": "Exigência vale para todas as modalidades esportivas; texto segue em análise na Câmara dos Deputados",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311491-comissao-aprova-uniformes-de-selecoes-brasileiras-nas-cores-da-bandeira-nacional",
+    "publishedAt": "16/10/2026 às 09:48",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261014160002324-768x473.jpg",
+    "imageCaption": "Julio Cesar Ribeiro ampliou o alcance da proposta original, que tratava apenas de futebol",
+    "imageCredit": "Vinicius Loures / Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Julio Cesar Ribeiro (REPUBLICANOS-DF)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "A Comissão do Esporte da Câmara dos Deputados aprovou projeto de lei que determina que os uniformes das seleções brasileiras em competições esportivas de qualquer modalidade adotem exclusivamente as cores da bandeira (verde, amarelo, azul e branco), conforme a Lei dos Símbolos Nacionais .",
+      "O texto aprovado altera a Lei Geral do Esporte .",
+      "A regra só não precisará ser cumprida no caso de eventos esportivos beneficentes ou comemorativos, de acordo com regulamento do Poder Executivo.",
+      "O relator lembrou que medida semelhante já foi adotada durante a análise do Projeto de Lei 1928/25 , que trata do mesmo assunto.",
+      "O texto aprovado é a versão do relator , deputado Julio Cesar Ribeiro (Republicanos-DF) (Republicanos-DF), para o Projeto de Lei 1437/26, do deputado Eros Biondini (PL-MG) (PL-MG). A iniciativa original tratava especificamente das equipes do futebol.",
+      "Próximos passos O PL 1437/26 ainda será analisado, em caráter conclusivo , pela Comissão de Constituição e Justiça e de Cidadania. Para virar lei, terá de ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
+    ]
+  },
+  {
+    "id": "camara-1311405",
+    "title": "Projeto amplia recursos no Orçamento para negociação de contratos habitacionais antigos",
+    "summary": "Texto será analisado pela Comissão Mista de Orçamento e pelo Plenário do Congresso Nacional",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311405-projeto-amplia-recursos-no-orcamento-para-negociacao-de-contratos-habitacionais-antigos",
+    "publishedAt": "16/10/2026 às 09:14",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20220427083435299-768x510.jpg",
+    "imageCaption": "Segundo o Executivo, foram feitas novas projeções de contratos que podem ser negociados neste ano",
+    "imageCredit": "Paulo H. Carvalho/Agência Brasília",
+    "imageAlt": "Conjunto habitacional",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "O Congresso Nacional analisa projeto (PLN 30/26) que abre crédito suplementar no Orçamento de 2026 de R$ 420,7 milhões, principalmente para negociação de contratos habitacionais antigos com cobertura do Fundo de Compensação das Variações Salariais.",
+      "De acordo com a mensagem que acompanha a proposta, foram feitas novas projeções de contratos que podem ser negociados em 2026, chegando a 314 mil análises.",
+      "“O volume é significativamente superior ao considerado na elaboração da proposta orçamentária”, informa o texto.",
+      "O projeto também atende outras despesas:",
+      "Os recursos serão obtidos por excesso de arrecadação e anulação de outras despesas.",
+      "O prazo final para encaminhamento dos pedidos de créditos suplementares e de créditos especiais ao Congresso Nacional é dia 15 de outubro.",
+      "Próximos passos A proposta será analisada pela Comissão Mista de Orçamento e, em seguida, pelo Plenário do Congresso Nacional (sessão conjunta de Câmara dos Deputados e Senado Federal)."
+    ]
+  },
+  {
+    "id": "ebc-1705528",
+    "title": "Professora aposentada da UFRJ é baleada em assalto na zona sul do Rio",
+    "summary": "A idosa Tânia Andrade Lima, de 81 anos, foi assaltada na esquina das ruas João de Barros com Venâncio Flores, no Leblon, zona sul do Rio. Na ação, o assaltante deu um tiro na mão da vítima, levou seus pertences e fugiu com um comparsa em uma motocicleta. Equipes da Operação...",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/tributos-da-gasolina-sao-zerados-e-subsidios-combustiveis-ampliados",
-    "publishedAt": "09/10/2026 às 13:40",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/professora-aposentada-da-ufrj-e-baleada-em-assalto-na-zona-sul-do-rio",
+    "publishedAt": "16/10/2026 às 08:48",
+    "category": "Política",
+    "author": "Douglas Corrêa - Repórter da Agência Brasil",
+    "tags": [
+      "Geral",
+      "Idosa",
+      "professora aposentada",
+      "UFRJ",
+      "Assalto"
+    ]
+  },
+  {
+    "id": "ebc-1705536",
+    "title": "Confira a agenda dos presidenciáveis nesta sexta-feira (16)",
+    "summary": "Luiz Inácio Lula da Silva (PT) Participa de caminhada em Juiz de Fora (MG), ao meio dia. Em seguida, às 17h, haverá ato de campanha em Ipatinga (MG).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/confira-agenda-dos-presidenciaveis-nesta-sexta-feira-16",
+    "publishedAt": "16/10/2026 às 08:42",
+    "category": "Eleições",
+    "imageUrl": "https://imagens.ebc.com.br/Qjn25j4kWuBB0OOSqVFyv-s7K54=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/18/banner_agenda_-_1170x700.png?itok=KJR_nOUL",
+    "imageCaption": "Confira a agenda dos presidenciáveis nesta sexta-feira (16)",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Confira a agenda dos presidenciáveis nesta sexta-feira (16)",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "sabatina da Globo",
+      "Eleições"
+    ],
+    "content": [
+      "Luiz Inácio Lula da Silva (PT) Participa de caminhada em Juiz de Fora (MG), ao meio dia. Em seguida, às 17h, haverá ato de campanha em Ipatinga (MG).",
+      "2º turno: 7 cidades também terão eleições complementares para prefeito. Flávio Bolsonaro (PL) À noite, após o Jornal Nacional, o candidato participa de sabatina da TV Globo, nos estúdios da emissora, no Rio de Janeiro.",
+      "A ordem de apresentação da agenda dos candidatos a presidente segue alternância diária."
+    ]
+  },
+  {
+    "id": "ebc-1705535",
+    "title": "Formação de ciclone próximo à Região Sul traz ventos costeiros",
+    "summary": "A formação de um ciclone extratropical próximo à costa da Região Sul, nesta sexta-feira (16), pode ocasionar ventos costeiros intensos no litoral da região e favorecer o avanço de ar frio sobre o centro-sul do Brasil. Na Região Sul, um aviso amarelo de perigo potencial alerta...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/formacao-de-ciclone-proximo-regiao-sul-traz-ventos-costeiros",
+    "publishedAt": "16/10/2026 às 08:40",
+    "category": "Política",
+    "author": "Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "meteorologia",
+      "Previsão do Tempo",
+      "Inmet",
+      "Ciclone"
+    ]
+  },
+  {
+    "id": "camara-1311546",
+    "title": "Comissão aprova reforço no monitoramento de recursos aplicados no esporte",
+    "summary": "Projeto de Lei segue em análise na Câmara dos Deputados",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311546-comissao-aprova-reforco-no-monitoramento-de-recursos-aplicados-no-esporte",
+    "publishedAt": "16/10/2026 às 08:38",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260715161437877-768x473.jpg",
+    "imageCaption": "Luiz Lima: versão aprovada fortalece instrumentos de fiscalização existentes",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Luiz Lima (NOVO - RJ)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "A Comissão do Esporte da Câmara dos Deputados aprovou projeto que altera a Lei Geral do Esporte para aperfeiçoar o Sistema Nacional de Informações e Indicadores Esportivos (SNIIE). Conforme o texto aprovado, o Sistema terá indicadores para avaliar políticas, programas, projetos e ações no setor esportivo financiados com recursos federais.",
+      "As métricas vão abranger a execução física e financeira, o cumprimento de metas, a inclusão de pessoas com deficiência e a promoção da igualdade de oportunidades entre mulheres e homens no esporte.",
+      "A proposta também exige a adoção de práticas de integridade, governança e transparência por parte das entidades beneficiárias.",
+      "Além disso, o órgão federal responsável publicará, anualmente, um relatório consolidado com a avaliação dos resultados, garantindo amplo acesso público em formato eletrônico.",
+      "O texto aprovado é a versão do relator , deputado Luiz Lima (Novo-RJ), ao Projeto de Lei 6587/25, do deputado Amom Mandel (Republicanos-AM). Segundo o relator, a iniciativa original poderia gerar duplicidade administrativa em relação a sistema já existente.",
+      "“O substitutivo preserva os objetivos do projeto, evita a criação de estruturas paralelas e fortalece instrumentos já instituídos pelo Congresso na Lei Geral do Esporte”, disse Luiz Lima no parecer aprovado.",
+      "Próximos passos O projeto ainda será analisado, em caráter conclusivo , pela Comissão de Constituição e Justiça e de Cidadania.",
+      "Para virar lei, terá de ser aprovado pela Câmara e pelo Senado."
+    ]
+  },
+  {
+    "id": "ebc-1705533",
+    "title": "Atirador mata pelo menos 4 pessoas em escola dos Estados Unidos",
+    "summary": "Um atirador de 16 anos abriu fogo nessa quinta-feira (15) em uma escola em Bend, no estado norte-americano do Oregon, matando quatro pessoas, incluindo três crianças. Ele foi morto por um morador da comunidade que o havia perseguido até dentro da escola, informou a polícia. O...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/atirador-mata-pelo-menos-4-pessoas-em-escola-dos-estados-unidos",
+    "publishedAt": "16/10/2026 às 08:25",
+    "category": "Política",
+    "author": "Daniel Trotta e Steve Gorman - Repórteres da Reuters*",
+    "tags": [
+      "Internacional",
+      "atirador",
+      "escola",
+      "EUA",
+      "mortes"
+    ]
+  },
+  {
+    "id": "ebc-1705492",
+    "title": "Economia: Lula e Flávio divergem sobre ajuste fiscal e papel do Estado",
+    "summary": "Enquanto Lula aposta na continuidade do modelo atual, com investimentos públicos, programas sociais e valorização da renda, Flávio defende a redução da estrutura estatal, cortes de despesas e diminuição de impostos e encargos.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/economia-lula-e-flavio-divergem-sobre-ajuste-fiscal-e-papel-do-estado",
+    "publishedAt": "16/10/2026 às 08:20",
     "category": "Economia",
+    "imageUrl": "https://imagens.ebc.com.br/XDWwl8iPBYdCQzG966E7kv8LpLA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/brasilia_60_anos_esplanada_dos_ministerios_0420202390_2.jpg?itok=u1LaYpYV",
+    "imageCaption": "Economia: Lula e Flávio divergem sobre ajuste fiscal e papel do Estado",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Economia: Lula e Flávio divergem sobre ajuste fiscal e papel do Estado",
     "author": "Wellton Máximo – Repórter da Agência Brasil",
     "tags": [
       "Economia",
-      "undefined",
-      "Brasil"
+      "planos de governo",
+      "eleições 2026"
+    ],
+    "content": [
+      "Enquanto Lula aposta na continuidade do modelo atual, com investimentos públicos, programas sociais e valorização da renda, Flávio defende a redução da estrutura estatal, cortes de despesas e diminuição de impostos e encargos.",
+      "Corte amplo de gastos públicos afetaria área social, dizem economistas. Apesar das divergências, as duas campanhas reconhecem a necessidade de enfrentar o crescimento da dívida pública. O principal contraste está nos instrumentos previstos para equilibrar as contas e estimular a atividade econômica.",
+      "Lula pretende manter o arcabouço fiscal, mecanismo que estabelece limites para o crescimento das despesas públicas. A estratégia combina controle de gastos, busca por maior arrecadação e crescimento econômico para melhorar os resultados das contas públicas.",
+      "A política econômica também prevê investimentos em infraestrutura, reindustrialização, inovação e energia renovável. A avaliação da equipe é que a expansão da atividade econômica pode contribuir para elevar a arrecadação e sustentar políticas públicas.",
+      "Flávio Bolsonaro propõe uma nova regra fiscal vinculada à trajetória da dívida e medidas para reduzir despesas administrativas, incluindo a estrutura ministerial e os cargos comissionados. A campanha também defende a simplificação regulatória e a redução de tributos.",
+      "Em agosto deste ano, em entrevista à Globo News, a coordenadora da equipe econômica de Flávio Bolsonaro, Daniella Marques, afirmou que o plano do candidato prevê mudanças nas regras fiscais para controlar a dívida pública, o que inclui um ajuste de 1,5% do Produto Interno Bruto, algo em torno de R$ 190 bilhões, considerado o PIB de 2025.",
+      "O detalhamento dos cortes e seus efeitos sobre os serviços públicos permanecem entre os pontos que exigem esclarecimento. No último dia 9, o candidato negou que acabará com programas sociais, como o Bolsa Família e o Farmácia Popular.",
+      "Na área tributária, Lula defende maior progressividade, com participação proporcionalmente maior das rendas mais altas no financiamento do Estado. O governo também pretende dar continuidade a investimentos do Novo PAC e a políticas de incentivo à indústria nacional."
     ]
   },
   {
-    "id": "camara-1310518-governo-edita-9-medida-proviso",
-    "title": "Governo edita 9ª medida provisória para conter efeito da guerra no preço dos combustíveis",
-    "summary": "Texto já está em vigor, mas precisa ser aprovado pela Câmara e pelo Senado para virar lei",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310518-governo-edita-9a-medida-provisoria-para-conter-efeito-da-guerra-no-preco-dos-combustiveis",
-    "publishedAt": "09/10/2026 às 11:37",
-    "category": "Congresso",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "camara-1310450-quatro-medidas-provisorias-per",
-    "title": "Quatro medidas provisórias perdem a validade sem aprovação do Congresso",
-    "summary": "No caso das MPs de crédito extraordinário, a perda de validade não exige a devolução dos recursos já utilizados",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310450-quatro-medidas-provisorias-perdem-a-validade-sem-aprovacao-do-congresso",
-    "publishedAt": "09/10/2026 às 11:37",
-    "category": "Congresso",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "camara-1310205-camara-tera-seis-deputados-com",
-    "title": "Câmara terá seis deputados com deficiência em 2027",
-    "summary": "Deficiência auditiva ou física foram declarados por dois candidatos cada; um se declarou com deficiência visual e outro com transtorno do espectro autista",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310205-camara-tera-seis-deputados-com-deficiencia-em-2027",
-    "publishedAt": "09/10/2026 às 11:35",
-    "category": "Congresso",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "camara-1310470-consultorias-da-camara-e-do-se",
-    "title": "Consultorias da Câmara e do Senado indicam necessidade de ajustes no projeto do Orçamento para 2027",
-    "summary": "Nota técnica aponta divergências entre projeções do governo e do mercado financeiro",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310470-consultorias-da-camara-e-do-senado-indicam-necessidade-de-ajustes-no-projeto-do-orcamento-para-2027",
-    "publishedAt": "09/10/2026 às 11:31",
-    "category": "Congresso",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1704904",
-    "title": "INPC, inflação que corrige salários, acumula 4,29% em 12 meses",
-    "summary": "O Índice Nacional de Preços ao Consumidor (INPC) fechou o mês de setembro em 0,82%. Com isso, o acumulado de 12 meses chega a 4,29%. Em agosto, a inflação de um ano estava em 3,98%. Os dados foram divulgados nesta sexta-feira (9) pelo Instituto Brasileiro de Geografia e...",
+    "id": "ebc-1705474",
+    "title": "Segurança alimentar exige esforço coletivo e articulação",
+    "summary": "Em julho deste ano, a Organização das Nações Unidas reafirmou que o país manteve abaixo de 2,5% o percentual da população subnutrida nos últimos três anos .",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/inpc-inflacao-que-corrige-salarios-acumula-429-em-12-meses",
-    "publishedAt": "09/10/2026 às 10:48",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/seguranca-alimentar-exige-esforco-coletivo-e-articulacao",
+    "publishedAt": "16/10/2026 às 08:01",
     "category": "Economia",
-    "author": "Bruno de Freitas Moura - Repórter da Agência Brasil",
+    "imageUrl": "https://imagens.ebc.com.br/GEPGNsPNmmahENoZJSnHdnyFWrU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/15/pzzb7591.jpg?itok=kHrBaZgz",
+    "imageCaption": "Segurança alimentar exige esforço coletivo e articulação",
+    "imageCredit": "Agência Brasil / EBC",
+    "imageAlt": "Segurança alimentar exige esforço coletivo e articulação",
+    "author": "Fabíola Sinimbú - Repórter da Agência Brasil",
     "tags": [
       "Economia",
-      "Inflação",
-      "INPC",
-      "Salários",
-      "Reajuste"
+      "agricultura familiar",
+      "cozinhas solidárias",
+      "combate à fome",
+      "variedade alimentar"
+    ],
+    "content": [
+      "Em julho deste ano, a Organização das Nações Unidas reafirmou que o país manteve abaixo de 2,5% o percentual da população subnutrida nos últimos três anos .",
+      "Combustíveis e agricultura familiar recebem quase R$ 7 bi em créditos . Prêmio para produção acadêmica destaca agricultura familiar. Isso foi possível graças ao trabalho de pessoas como dona Maria do Cerrado, liderança comunitária à frente da Cozinha Solidária Cantinho da Vovó, em Brasília, que alimenta mais de 800 pessoas em situação de vulnerabilidade.",
+      "Três vezes por semana, dona Maria e outros 37 voluntários se revezam na separação, no armazenamento e no preparo dos alimentos, na arrumação das mesas e na recepção daqueles que chegam em busca não só de alimento, mas também de acolhimento.",
+      "Dona Maria diz que muitos problemas familiares e até mesmo casos de violência são solucionados em volta da mesa.",
+      "“É o momento em que a gente se aproxima para conversar aqui dentro desse espaço que alimenta, onde a gente cultua o alimento como sagrado, como cura. Por isso, é feito com muito zelo”, diz.",
+      "O lugar também entrega 200 cestas básicas às famílias mais vulneráveis cadastradas. Tudo isso só foi possível depois que a Cozinha Solidária Cantinho da Vovó passou a receber frutas, verduras, legumes e hortaliças diretamente de produtores como Hosana Alves do Nascimento.",
+      "Filha de agricultores familiares, ela conseguiu transformar uma área urbana em São Sebastião, cidade-satélite do Distrito Federal, em um sistema agroflorestal que produz culturas de curto prazo, como hortaliças, verduras e raízes, junto com árvores frutíferas e oleaginosas.",
+      "“Como é uma área pequena, então a gente otimizou para dar muita coisa. A nossa produção é considerada agroecológica, porque não usa veneno”, diz."
     ]
   },
   {
-    "id": "camara-1310054-projeto-cria-classificacao-eta",
-    "title": "Projeto cria classificação etária detalhada para desenhos animados",
-    "summary": "Texto está em análise na Câmara dos Deputados",
+    "id": "camara-1311507",
+    "title": "Comissão aprova criação de política nacional para inclusão no esporte",
+    "summary": "Texto segue em análise na Câmara dos Deputados",
     "source": "Agência Câmara",
     "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310054-projeto-cria-classificacao-etaria-detalhada-para-desenhos-animados",
-    "publishedAt": "09/10/2026 às 10:45",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311507-comissao-aprova-criacao-de-politica-nacional-para-inclusao-no-esporte",
+    "publishedAt": "16/10/2026 às 07:59",
     "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260429121623293-768x473.jpg",
+    "imageCaption": "André Figueiredo: proposta prevê a criação de centros de treinamento adaptados",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Homenagem aos 300 anos da cidade de Fortaleza. Dep. André Figueiredo (PDT-CE)",
     "author": "Agência Câmara de Notícias",
     "tags": [
       "Congresso",
       "Brasil",
       "Notícias"
+    ],
+    "content": [
+      "A Comissão do Esporte da Câmara dos Deputados aprovou projeto que institui a Política Nacional para Inclusão da Pessoa com Deficiência no Esporte, com o objetivo de garantir acesso a práticas educacionais, comunitárias e de alto rendimento.",
+      "O texto aprovado é a versão do relator , deputado André Figueiredo (PDT-CE), ao Projeto de Lei 6753/25 , do deputado Duda Ramos (Pode-RR). Segundo o relator, os ajustes foram necessários para transformar dispositivos em diretrizes.",
+      "Para viabilizar as ações, o substitutivo prevê a coleta periódica de informações sobre a prática esportiva inclusiva no país e a destinação de recursos do Fundo Nacional do Esporte, mediante o cumprimento de metas pactuadas.",
+      "Diretrizes e equipamentos A proposta estabelece a criação de centros de treinamento para formação esportiva, inclusive em instituições públicas de ensino. Esses locais deverão contar com equipamentos adaptados para empréstimo gratuito aos praticantes, com prioridade para regiões que tenham menor oferta de infraestrutura.",
+      "Além disso, determina a realização de auditorias bienais de acessibilidade em instalações esportivas públicas e a capacitação anual de professores de educação física da rede pública e técnicos que atuem em projetos com recursos públicos.",
+      "Próximos passos O projeto ainda será analisado, em caráter conclusivo , pelas comissões de Defesa dos Direitos das Pessoas com Deficiência; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania.",
+      "Para virar lei, o texto terá de ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
     ]
   },
   {
-    "id": "bcb-21280-bc-passa-a-divulgar-mensalment",
+    "id": "ebc-1705527",
+    "title": "Estreante, Cruzeiro será 15º brasileiro na Libertadores Feminina",
+    "summary": "Bicampeão da Libertadores entre os homens, o Cruzeiro chega à versão feminina do maior torneio do continente pela primeira vez. A estreia será nesta sexta-feira (16), às 21h (horário de Brasília), contra a LDU, dona da casa - a competição ocorre em Quito, capital equatoriana...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/estreante-cruzeiro-sera-15o-brasileiro-na-libertadores-feminina",
+    "publishedAt": "16/10/2026 às 07:02",
+    "category": "Política",
+    "author": "Lincoln Chaves - Repórter da EBC",
+    "tags": [
+      "Esportes",
+      "libertadores feminina",
+      "Cruzeiro",
+      "estreia",
+      "Política"
+    ]
+  },
+  {
+    "id": "ebc-1705526",
+    "title": "Sem chutar a gol na Argentina, Flamengo sobrevive na Libertadores",
+    "summary": "O torcedor do Flamengo acordou nesta sexta-feira (16) mais aliviado do que satisfeito com o que viu na noite de ontem (15). O empate sem gols contra o Estudiantes, no Estádio Jorge Luis Hirschi, em La Plata, pelas semifinais da Libertadores, foi melhor que a atuação em solo...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/sem-chutar-gol-na-argentina-flamengo-sobrevive-na-libertadores",
+    "publishedAt": "16/10/2026 às 06:45",
+    "category": "Política",
+    "author": "Lincoln Chaves - Repórter da EBC",
+    "tags": [
+      "Esportes",
+      "Libertadores",
+      "semifinal",
+      "flamengo",
+      "estudiantes"
+    ]
+  },
+  {
+    "id": "ibge-48310",
+    "title": "Em Xangai, IBGE debate uso de dados e tecnologia digital a serviço das pessoas",
+    "summary": "Como garantir que os avanços na produção de dados e nas tecnologias digitais contribuam efetivamente para melhorar a vida das pessoas? Essa é a questão central do evento “Os dados e a tecnologia digital a serviço das pessoas”, realizado no dia 16 de...",
+    "source": "IBGE",
+    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
+    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48310-em-xangai-ibge-participa-de-debate-sobre-como-colocar-os-dados-e-a-tecnologia-digital-a-servico-das-pessoas.html",
+    "publishedAt": "16/10/2026 às 01:28",
+    "category": "Economia",
+    "imageUrl": "https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/ibge/2026_10/IBGE_Xangai_ACT2026_011.jpg",
+    "imageCaption": "Em Xangai, IBGE debate uso de dados e tecnologia digital a serviço das pessoas",
+    "imageCredit": "Agência IBGE Notícias",
+    "imageAlt": "Em Xangai, IBGE debate uso de dados e tecnologia digital a serviço das pessoas",
+    "author": "Agência IBGE Notícias",
+    "tags": [
+      "ibge",
+      "Notícia",
+      "Economia",
+      "Estatísticas"
+    ],
+    "content": [
+      "Como garantir que os avanços na produção de dados e nas tecnologias digitais contribuam efetivamente para melhorar a vida das pessoas? Essa é a questão central do evento “Os dados e a tecnologia digital a serviço das pessoas”, realizado no dia 16 de..."
+    ]
+  },
+  {
+    "id": "ibge-48309",
+    "title": "ENDEF é destaque do terceiro seminário do projeto Memória e História do IBGE",
+    "summary": "O IBGE realiza, na próxima quarta-feira (21/10), das 9h às 11h, o terceiro seminário do projeto Memória e História, com o tema \"O conflito entre a autonomia técnica e a interferência política\", com destaque para o Estudo Nacional de Despesa Familiar...",
+    "source": "IBGE",
+    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
+    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48309-estudo-nacional-de-despesa-familiar-endef-e-o-destaque-do-terceiro-seminario-do-projeto-memoria-e-historia-do-ibge.html",
+    "publishedAt": "16/10/2026 às 01:17",
+    "category": "Brasil",
+    "imageUrl": "https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/ibge/2026_10/youtube_1920x1080px_memoria_e_historia_03.jpg",
+    "imageCaption": "ENDEF é destaque do terceiro seminário do projeto Memória e História do IBGE",
+    "imageCredit": "Agência IBGE Notícias",
+    "imageAlt": "ENDEF é destaque do terceiro seminário do projeto Memória e História do IBGE",
+    "author": "Agência IBGE Notícias",
+    "tags": [
+      "ibge",
+      "Notícia",
+      "Brasil",
+      "Estatísticas"
+    ],
+    "content": [
+      "O IBGE realiza, na próxima quarta-feira (21/10), das 9h às 11h, o terceiro seminário do projeto Memória e História, com o tema \"O conflito entre a autonomia técnica e a interferência política\", com destaque para o Estudo Nacional de Despesa Familiar..."
+    ]
+  },
+  {
+    "id": "bcb-21280",
     "title": "BC passa a divulgar mensalmente indicadores de reajustes salariais negociados",
     "summary": "Dados mostram forte relação entre reajustes pactuados e inflação passada. Estudo mostra que ganhos reais são mais frequentes em períodos de baixa taxa de desocupação.",
     "source": "Banco Central",
@@ -875,11 +1382,23 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "articleUrl": "https://www.bcb.gov.br/detalhenoticia/21280/nota",
     "publishedAt": "06/10/2026 às 07:34",
     "category": "Economia",
+    "imageUrl": "https://www.bcb.gov.br/content/home/noticias-img/thumbnail/cedulas.png",
+    "imageCaption": "BC passa a divulgar mensalmente indicadores de reajustes salariais negociados",
+    "imageCredit": "Banco Central do Brasil",
+    "imageAlt": "BC passa a divulgar mensalmente indicadores de reajustes salariais negociados",
     "author": "Banco Central do Brasil",
     "tags": [
       "Banco Central",
       "Economia",
       "Política Monetária"
+    ],
+    "content": [
+      "Os reajustes salariais negociados por meio das convenções coletivas de trabalho passaram a contar com um novo conjunto de indicadores divulgados mensalmente pelo Banco Central (BC). Construídas a partir das informações registradas no Sistema de Negociações Coletivas de Trabalho (Mediador), do Ministério do Trabalho e Emprego, as séries ampliam o monitoramento das condições do mercado de trabalho e de sua relação com a dinâmica inflacionária. As informações estão em um boxe do Relatório de Política Monetária de setembro de 2026 e na Nota técnica 60​ , ambos disponíveis no site do BC.",
+      "​Os indicadores reúnem informações sobre reajustes nominais e reais, participação das convenções com aumentos acima, abaixo ou iguais à inflação e quantidade de instrumentos coletivos utilizados nos cálculos.",
+      "“Os indicadores construídos a partir das convenções coletivas oferecem uma visão abrangente dos reajustes negociados no setor privado formal. Os resultados mostram que a inflação passada continua sendo uma referência importante nas negociações e ajudam a avaliar como as condições do mercado de trabalho influenciam a dinâmica salarial no país”, afirmou Ricardo Sabbadini, Chefe do Departamento Econômico (Depec) do BC.",
+      "A nova base permite acompanhar com maior precisão o comportamento das negociações salariais no setor privado formal. De acordo com estudo do BC, publicado como boxe do Relatório de Política Monetária de setembro de 2026, os reajustes pactuados apresentam elevada aderência à inflação passada, medida pelo Índice Nacional de Preços ao Consumidor (INPC). Embora não exista obrigação legal de reposição integral da inflação, os dados indicam que a variação dos preços continua sendo uma referência central para empregadores e trabalhadores durante as negociações coletivas.",
+      "A análise também evidencia que os resultados das negociações variam conforme as condições do mercado de trabalho. Entre 2012 e 2014 e novamente após 2023, períodos marcados por taxas de desocupação relativamente baixas, aumentou a participação de convenções com reajustes superiores à inflação. Os dados permitem ainda acompanhar potenciais diferenças entre setores econômicos. De forma geral, agropecuária, indústria, construção, comércio e serviços apresentaram trajetórias semelhantes ao longo do período analisado.",
+      "A divulgação regular dessas estatísticas amplia o conjunto de informações disponíveis para a análise do mercado de trabalho e de seus reflexos sobre a inflação, oferecendo à sociedade uma nova ferramenta para acompanhar a evolução dos salários negociados no país."
     ]
   },
   {
@@ -888,10 +1407,11 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "summary": "Mapa eleitoral aponta consolidação regional: candidato do PL vence em 14 estados mais o Distrito Federal, enquanto o PT lidera em 13 unidades da federação.",
     "source": "Redação Sociedade Ativa",
     "sourceUrl": "https://sociedadeativa.github.io/",
-    "articleUrl": "https://sociedadeativa.github.io/",
+    "articleUrl": "https://sociedadeativa.github.io/noticias/eleicoes-2026-mapa-regional-votacao/",
     "publishedAt": "05/10/2026 às 11:15",
     "category": "Eleições",
     "updatedAt": "05/10/2026 às 11:15",
+    "isOriginalReporting": true,
     "author": "Análise de Dados / Sociedade Ativa",
     "tags": [
       "Mapa Eleitoral",
@@ -899,10 +1419,19 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Nordeste",
       "Geopolítica",
       "Regiões"
+    ],
+    "headline": "Raio-X dos estados: Flávio lidera Sul, Sudeste e Centro-Oeste; Lula vence no Nordeste",
+    "lead": "Mapa eleitoral aponta consolidação regional: candidato do PL vence em 14 estados mais o Distrito Federal, enquanto o PT lidera em 13 unidades da federação.",
+    "readTime": "4 min de leitura",
+    "content": [
+      "A consolidação da apuração oficial pelo Tribunal Superior Eleitoral (TSE) no primeiro turno das Eleições Presidenciais de 2026 revelou uma nítida divisão geográfica na preferência do eleitorado brasileiro. O candidato Flávio Bolsonaro (PL) venceu em 14 estados e no Distrito Federal, alcançando a liderança absoluta nas regiões Sul, Sudeste e Centro-Oeste, com margens decisivas nos maiores colégios eleitorais como São Paulo, Rio de Janeiro e Minas Gerais.",
+      "O presidente Luiz Inácio Lula da Silva (PT) manteve sua histórica hegemonia na região Nordeste, onde venceu em todos os 9 estados com percentuais expressivos, além de triunfar em quatro estados da região Norte: Pará, Amazonas, Amapá e Piauí (Nordeste). Essa concentração regional assegurou ao candidato governista uma base sólida de mais de 48,7 milhões de votos nominais.",
+      "A análise dos índices de abstenção e comparecimento por unidade da federação aponta que o engajamento cívico foi decisivo para os resultados: enquanto o Centro-Oeste e o Sul apresentaram taxas de comparecimento superiores a 81%, capitais do Nordeste registraram índices de abstenção ligeiramente maiores, impactadas por condições climáticas e logística de transporte no dia do pleito.",
+      "Para a disputa do segundo turno, os dados indicam que o fiel da balança será a mobilização do eleitorado moderado no interior paulista e na região metropolitana de Belo Horizonte, regiões onde os candidatos Ronaldo Caiado (PSD) e Romeu Zema (NOVO) obtiveram desempenhos significativos no primeiro turno."
     ]
   },
   {
-    "id": "bcb-21279-bc-moderniza-apresentacao-de-d",
+    "id": "bcb-21279",
     "title": "BC moderniza apresentação de dados sobre atuação no mercado de câmbio",
     "summary": "Iniciativa traz histórico de estoque e cronograma de vencimentos de Swap Cambial e Linha com Recompra sem mudar formato de leilões de câmbio.",
     "source": "Banco Central",
@@ -910,16 +1439,29 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "articleUrl": "https://www.bcb.gov.br/detalhenoticia/21279/nota",
     "publishedAt": "05/10/2026 às 08:30",
     "category": "Economia",
+    "imageUrl": "https://www.bcb.gov.br/content/home/noticias-img/thumbnail/monetaria.png",
+    "imageCaption": "BC moderniza apresentação de dados sobre atuação no mercado de câmbio",
+    "imageCredit": "Banco Central do Brasil",
+    "imageAlt": "BC moderniza apresentação de dados sobre atuação no mercado de câmbio",
     "author": "Banco Central do Brasil",
     "tags": [
       "Banco Central",
       "Economia",
       "Política Monetária",
       "Câmbio"
+    ],
+    "content": [
+      "Com o objetivo de ampliar a transparência na divulgação de dados de atuação no mercado de câmbio​, o Banco Central (BC) passará a apresentar, na página de Política Cambial do seu site, o histórico de estoque e o cronograma de vencimentos das operações de Swap Cambial e de Linha com Recompra, dois dos instrumentos disponíveis para assegurar o regular funcionamento do mercado de câmbio. A medida não altera o formato de divulgação dos leilões de câmbio, somente reorganiza informações já presentes no Portal de Dados Abertos do BC, oferecendo ao público uma forma direta de visualização.",
+      "Clique para acessar a página de Política Cambial.​",
+      "O Swap Cambial funciona como uma proteção financeira no mercado futuro, trocando a rentabilidade em dólar pela taxa Selic, sem alterar as reservas internacionais. Já a Linha com Recompra fornece dólares físicos diretamente no mercado à vista com o compromisso de recomprá-los no futuro, restabelecendo temporariamente a liquidez em moeda estrangeira das reservas do país.",
+      "A iniciativa traz avanços no acesso e na visualização dos dados e das informações. Se antes os usuários contavam com a tabela de vencimentos do Swap Cambial, agora, a Linha com Recompra passa a ter um espelho de tabela equivalente. As duas modalidades ganham cronogramas atualizados e uma ferramenta gráfica com histórico de estoques de dez anos, permitindo baixar dados e imagens em diferentes formatos.",
+      "Como suporte a essa modernização, a autoridade monetária incorporou ao Sistema Gerenciador de Séries Temporais (SGS) três novas séries de dados diários. Trata-se do acompanhamento de estoque de Linhas com Recompra (código 29722), valor nocional de Swap Cambial (código 29723) e número de contratos de Swap Cambial (código 29724).",
+      "\"Ao consolidar e divulgar novas séries temporais relacionadas à Política Cambial, o BC simplifica o acesso à informação e reafirma seu compromisso com a transparência e a estabilidade econômica\", afirmou Nilton David, Diretor de Política Monetária.",
+      "Com a modernização na apresentação de dados sobre atuação no mercado de câmbio​, o BC assegura maior acessibilidade a estas informações, conferindo maior transparência na condução da política cambial."
     ]
   },
   {
-    "id": "bcb-21278-pix-amplia-funcionalidades-e-r",
+    "id": "bcb-21278",
     "title": "Pix amplia funcionalidades e reforça segurança com nova rodada de aperfeiçoamentos regulatórios",
     "summary": "Pix Automático poderá ser usado em contas-salário a partir de julho de 2027. Cobrança híbrida passa a ter regras específicas para evitar pagamento em duplicidade.",
     "source": "Banco Central",
@@ -927,11 +1469,25 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "articleUrl": "https://www.bcb.gov.br/detalhenoticia/21278/nota",
     "publishedAt": "05/10/2026 às 08:30",
     "category": "Economia",
+    "imageUrl": "https://www.bcb.gov.br/content/home/noticias-img/thumbnail/pix_escuro.png",
+    "imageCaption": "Pix amplia funcionalidades e reforça segurança com nova rodada de aperfeiçoamentos regulatórios",
+    "imageCredit": "Banco Central do Brasil",
+    "imageAlt": "Pix amplia funcionalidades e reforça segurança com nova rodada de aperfeiçoamentos regulatórios",
     "author": "Banco Central do Brasil",
     "tags": [
       "Banco Central",
       "Economia",
       "Política Monetária"
+    ],
+    "content": [
+      "O Banco Central aprovou uma nova rodada de atualizações no Regulamento do Pix com o objetivo de aperfeiçoar funcionalidades, fortalecer mecanismos de segurança e ajustar procedimentos operacionais à evolução do ecossistema de pagamentos instantâneos. As alterações foram consolidadas na Resolução BCB 587, publicada em 18 de setembro, e refletem demandas identificadas ao longo da operação do sistema e nas interações com participantes do mercado.",
+      "“As alterações aprovadas atualizam o Regulamento do Pix para acompanhar a evolução dos modelos de negócio e das necessidades dos usuários. As medidas ampliam possibilidades de uso e contribuem para que o arranjo continue oferecendo uma experiência simples, eficiente e confiável para toda a sociedade”, destacou Ricardo Teixeira Leite Mourão, Chefe do Departamento de Competição e de Estrutura do Mercado Financeiro (Decem) do BC.​",
+      "Nesse escopo, a ampliação das possibilidades de uso do Pix Automático está entre as principais novidades. A partir de 1º de julho de 2027, a funcionalidade poderá ser utilizada em contas-salário para a realização de pagamentos recorrentes autorizados pelo cliente. A medida alinha o produto às regras recentemente estabelecidas para débitos automáticos interbancários e amplia a conveniência para os usuários desse tipo de conta, preservadas as restrições já existentes para recebimento de recursos, transferências e outras modalidades de pagamento, por meio do Pix.",
+      "A norma também disciplina a chamada cobrança híbrida, modalidade que reúne em um mesmo documento o código de barras do boleto e o QR Code do Pix Cobrança. Embora essa solução já venha sendo utilizada por algumas instituições, o novo regulamento estabelece critérios específicos para garantir a convivência segura entre os dois instrumentos de pagamento e prevenir liquidações indevidas ou em duplicidade. Entre as medidas previstas estão regras para cancelamento automático do Pix Cobrança após o pagamento do boleto e vice-versa. Ou seja, quando o Pix Cobrança for pago, a instituição deve cancelar o boleto. Além disso, houve definição de responsabilidades para os participantes envolvidos na operação em caso de falhas operacionais.",
+      "Outro aperfeiçoamento permite que o BC dispense a participação obrigatória no Pix de determinadas instituições com mais de quinhentas mil contas transacionais ativas, quando características específicas de seus clientes ou modelos de negócio não justificarem o acesso à infraestrutura do arranjo. A medida busca conferir maior proporcionalidade regulatória sem comprometer a eficiência do sistema.",
+      "As mudanças contemplam ainda aprimoramentos nos processos de adesão e permanência de participantes. O regulamento passa a prever, por exemplo, anulação de aprovações obtidas com informações falsas ou omissões relevantes, novos procedimentos para instituições submetidas à liquidação extrajudicial, desligamento imediato de participantes que sofreram a penalidade de exclusão do arranjo e ajustes relacionados à saída ordenada de participantes. Também foram reforçadas exigências voltadas à transparência e à comunicação com os usuários.",
+      "No campo da segurança, a atualização incorpora mecanismos destinados a reforçar a confiabilidade do ecossistema. Entre as medidas adotadas destacam-se o aprimoramento dos procedimentos relacionados ao registro de marcações de fundada suspeita de fraude no Diretório de Identificadores de Contas Transacionais (DICT), a obrigatoriedade de comunicação ao usuário sobre realização de marcação, informando a data do registro e a possibilidade de revisão da medida, bem como a exigência de cancelamento da marcação quando, após análise, não subsistirem elementos que justifiquem a suspeita.",
+      "Assim, o participante que aceitar uma notificação de infração ou que registrar uma marcação de fundada suspeita de fraude passa a ser expressamente o responsável pela respectiva marcação, inclusive por seu eventual cancelamento."
     ]
   },
   {
@@ -940,10 +1496,11 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "summary": "Com 125,2 milhões de votos válidos nominais, Tribunal Superior Eleitoral confirma votação e convoca eleitores para o segundo turno no último domingo de outubro.",
     "source": "Redação Sociedade Ativa",
     "sourceUrl": "https://sociedadeativa.github.io/",
-    "articleUrl": "https://sociedadeativa.github.io/",
+    "articleUrl": "https://sociedadeativa.github.io/noticias/eleicoes-2026-tse-apuracao-primeiro-turno/",
     "publishedAt": "05/10/2026 às 08:30",
     "category": "Eleições",
     "updatedAt": "05/10/2026 às 10:15",
+    "isOriginalReporting": true,
     "author": "Redação Sociedade Ativa / Cobertura Especial",
     "tags": [
       "TSE",
@@ -951,6 +1508,15 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Segundo Turno",
       "Apuração",
       "Presidência"
+    ],
+    "headline": "TSE conclui 100% da totalização: Flávio Bolsonaro e Lula disputarão o 2º turno",
+    "lead": "Com 125,2 milhões de votos válidos nominais, Tribunal Superior Eleitoral confirma votação e convoca eleitores para o segundo turno no último domingo de outubro.",
+    "readTime": "3 min de leitura",
+    "content": [
+      "O Tribunal Superior Eleitoral (TSE) concluiu na manhã desta segunda-feira a totalização de 100% das 568.423 seções eleitorais em todo o Brasil e no exterior. O sistema de urnas eletrônicas registrou 125.267.892 votos válidos nominais para o cargo de Presidente da República, consolidando a disputa de segundo turno entre Flávio Bolsonaro (PL) e Luiz Inácio Lula da Silva (PT).",
+      "Na contagem final oficial, Flávio Bolsonaro obteve 56.104.268 votos, o equivalente a 47,03% dos votos válidos. O presidente Luiz Inácio Lula da Silva alcançou 48.729.043 votos nominais, correspondendo a 40,85%. Os demais concorrentes — Ronaldo Caiado (PSD), Romeu Zema (NOVO), Renan dos Santos (Missão) e Augusto Cury (Avante) — somaram juntos 12,12% dos votos válidos nominais.",
+      "O índice de comparecimento nacional foi de 79,20%, com 20,80% de abstenção, dentro dos parâmetros históricos observados nas últimas três eleições gerais. Os votos nulos somaram 3.842.110 (2,96%) e os votos em branco totalizaram 2.105.440 (1,62%). A integridade e segurança do pleito foram atestadas por missões de observação nacionais e internacionais.",
+      "A campanha eleitoral oficial do segundo turno foi aberta imediatamente após a proclamação provisória dos resultados, com a retomada do horário eleitoral gratuito no rádio e na televisão. A votação definitiva ocorrerá no último domingo de outubro, das 8h às 17h, pelo horário oficial de Brasília."
     ]
   }
 ];

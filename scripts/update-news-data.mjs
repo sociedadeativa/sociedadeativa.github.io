@@ -267,13 +267,17 @@ function extractAllTags(xml, tag) {
 
 /**
  * Converte data para padrão brasileiro oficial: DD/MM/YYYY às HH:mm no fuso de Brasília (UTC-3)
+ * Rejeita datas inválidas ou não determináveis (timestamp 0 e formatted null).
  */
 function parseDateToBrasilia(dateStr) {
-  if (!dateStr) {
-    return { formatted: 'Data não informada', timestamp: 0 };
+  if (!dateStr || typeof dateStr !== 'string') {
+    return { formatted: null, timestamp: 0 };
   }
 
-  const str = String(dateStr).trim();
+  const str = dateStr.trim();
+  if (!str) {
+    return { formatted: null, timestamp: 0 };
+  }
 
   // Caso 1: Se já estiver formatada no padrão brasileiro "DD/MM/YYYY às HH:mm"
   const brPattern = /^(\d{2})\/(\d{2})\/(\d{4}) às (\d{2}):(\d{2})$/;
@@ -299,23 +303,76 @@ function parseDateToBrasilia(dateStr) {
   // Caso 3: ISO 8601 ou RFC 2822
   const parsed = new Date(str);
   if (isNaN(parsed.getTime())) {
-    return { formatted: str, timestamp: 0 };
+    return { formatted: null, timestamp: 0 };
   }
 
-  const pad = (n) => String(n).padStart(2, '0');
-  // Horário oficial de Brasília é UTC-3
-  const brTimeMs = parsed.getTime() - 3 * 60 * 60 * 1000;
-  const brDate = new Date(brTimeMs);
-  const day = pad(brDate.getUTCDate());
-  const month = pad(brDate.getUTCMonth() + 1);
-  const year = brDate.getUTCFullYear();
-  const hours = pad(brDate.getUTCHours());
-  const minutes = pad(brDate.getUTCMinutes());
+  const formatter = new Intl.DateTimeFormat('pt-BR', {
+    timeZone: 'America/Sao_Paulo',
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  });
+
+  const parts = formatter.formatToParts(parsed);
+  const getPart = (type) => parts.find((p) => p.type === type)?.value || '00';
+  const day = getPart('day');
+  const month = getPart('month');
+  const year = getPart('year');
+  const hour = getPart('hour');
+  const minute = getPart('minute');
 
   return {
-    formatted: `${day}/${month}/${year} às ${hours}:${minutes}`,
+    formatted: `${day}/${month}/${year} às ${hour}:${minute}`,
     timestamp: parsed.getTime()
   };
+}
+
+/**
+ * Extrai parágrafos limpos de um fragmento HTML de notícia jornalística
+ */
+function extractParagraphs(rawHtml, maxCount = 8) {
+  if (!rawHtml) return [];
+  let decoded = decodeHtmlEntities(String(rawHtml));
+  decoded = decoded.replace(/<(script|style|iframe|object|embed|svg)[\s\S]*?<\/\1>/gi, ' ');
+  decoded = decoded.replace(/<div[^>]*class=["'][^"']*midia-(creditos|legenda)[^"']*["'][\s\S]*?<\/div>/gi, ' ');
+  decoded = decoded.replace(/<div[^>]*class=["'][^"']*image-container[^"']*["'][\s\S]*?<\/div>/gi, ' ');
+
+  const paragraphs = [];
+  const pRegex = /<p(?:\s+[^>]*)?>([\s\S]*?)<\/p>/gi;
+  let match;
+  while ((match = pRegex.exec(decoded)) !== null) {
+    const pClean = cleanText(match[1]);
+    if (
+      pClean.length >= 35 &&
+      !pClean.includes('Logo Agência Brasil') &&
+      !pClean.startsWith('Edição:') &&
+      !pClean.startsWith('Notícias relacionadas:') &&
+      !pClean.startsWith('Saiba mais:') &&
+      !pClean.startsWith('Compartilhe:')
+    ) {
+      paragraphs.push(pClean);
+      if (paragraphs.length >= maxCount) break;
+    }
+  }
+
+  if (paragraphs.length === 0) {
+    const cleanLines = decoded
+      .replace(/<br\s*\/?>/gi, '\n')
+      .replace(/<\/div>/gi, '\n')
+      .replace(/<[^>]+>/g, ' ')
+      .split(/\n+/)
+      .map((l) => cleanText(l))
+      .filter((l) => l.length >= 40 && !l.startsWith('Edição:') && !l.includes('Logo Agência Brasil'));
+    for (const line of cleanLines) {
+      paragraphs.push(line);
+      if (paragraphs.length >= maxCount) break;
+    }
+  }
+
+  return paragraphs;
 }
 
 /**
@@ -492,11 +549,36 @@ async function fetchAgenciaBrasil() {
         const categories = extractAllTags(raw, 'category');
 
         const title = cleanText(rawTitle);
-        const summary = cleanText(rawDesc, MAX_SUMMARY_LENGTH);
         const articleUrl = sanitizeAndNormalizeUrl(rawLink);
+        const { formatted: publishedAt, timestamp } = parseDateToBrasilia(rawPubDate);
 
-        if (!title || !summary || !articleUrl) {
+        if (!title || !articleUrl || !publishedAt || !timestamp) {
+          continue; // Rejeita itens sem título, sem URL válida ou com data não comprovável
+        }
+
+        // Extrai parágrafos jornalísticos completos do corpo do RSS
+        const paragraphs = extractParagraphs(rawDesc);
+        const summary = cleanText(paragraphs[0] || rawDesc, MAX_SUMMARY_LENGTH);
+
+        if (!summary) {
           continue;
+        }
+
+        // Extrai imagem destacada oficial da EBC quando disponível e autorizada
+        const rawImg = extractTag(raw, 'imagem-destaque');
+        let imageUrl = undefined;
+        let imageCredit = undefined;
+        let imageCaption = undefined;
+        let imageAlt = undefined;
+
+        if (rawImg && rawImg.startsWith('https://') && rawImg.includes('ebc.com.br')) {
+          const normImg = sanitizeAndNormalizeUrl(rawImg);
+          if (normImg) {
+            imageUrl = normImg;
+            imageCredit = 'Agência Brasil / EBC';
+            imageCaption = title;
+            imageAlt = title;
+          }
         }
 
         // Determinação de Categoria
@@ -525,7 +607,6 @@ async function fetchAgenciaBrasil() {
           }
         }
 
-        const { formatted: publishedAt, timestamp } = parseDateToBrasilia(rawPubDate);
         const author = rawCreator ? cleanText(rawCreator) : 'Agência Brasil';
 
         // Identificador determinístico
@@ -545,12 +626,17 @@ async function fetchAgenciaBrasil() {
           id,
           title,
           summary,
+          content: paragraphs.length > 0 ? paragraphs : [summary],
           source: 'Agência Brasil',
           sourceUrl: 'https://agenciabrasil.ebc.com.br',
           articleUrl,
           publishedAt,
           category,
           author,
+          imageUrl,
+          imageCredit,
+          imageCaption,
+          imageAlt,
           tags,
           _timestamp: timestamp
         });
@@ -582,30 +668,51 @@ async function fetchCamara() {
     for (const raw of rawItems) {
       const rawTitle = extractTag(raw, 'title');
       const rawDesc = extractTag(raw, 'description');
+      const rawContent = extractTag(raw, 'content:encoded');
       const rawLink = extractTag(raw, 'link') || extractTag(raw, 'guid');
       const rawPubDate = extractTag(raw, 'pubDate');
       const rawCategories = extractAllTags(raw, 'category');
 
       const title = cleanText(rawTitle);
-      const summary = cleanText(rawDesc, MAX_SUMMARY_LENGTH);
       const articleUrl = sanitizeAndNormalizeUrl(rawLink);
+      const { formatted: publishedAt, timestamp } = parseDateToBrasilia(rawPubDate);
 
-      if (!title || !summary || !articleUrl) {
+      if (!title || !articleUrl || !publishedAt || !timestamp) {
         continue;
+      }
+
+      // Extrai parágrafos jornalísticos completos
+      const paragraphs = extractParagraphs(rawContent || rawDesc);
+      const summary = cleanText(rawDesc.length >= 45 ? rawDesc : (paragraphs[0] || rawDesc), MAX_SUMMARY_LENGTH);
+
+      if (!summary) {
+        continue;
+      }
+
+      // Extrai imagem editorial e créditos oficiais da Câmara
+      let imageUrl = undefined;
+      let imageCredit = undefined;
+      let imageCaption = undefined;
+      let imageAlt = undefined;
+
+      const imgMatch = rawContent.match(/<img[^>]+src=["'](https:\/\/[^"']+)["'][^>]*alt=["']([^"']*)["']/i);
+      if (imgMatch && imgMatch[1].includes('camara.leg.br')) {
+        const normImg = sanitizeAndNormalizeUrl(imgMatch[1]);
+        if (normImg) {
+          imageUrl = normImg;
+          const creditMatch = rawContent.match(/<div class=["']midia-creditos["']><em>([\s\S]*?)<\/em><\/div>/i);
+          imageCredit = creditMatch ? cleanText(creditMatch[1]) : 'Agência Câmara';
+          const captionMatch = rawContent.match(/<div class=["']midia-legenda["']>([\s\S]*?)<\/div>/i);
+          imageCaption = captionMatch ? cleanText(captionMatch[1]) : title;
+          imageAlt = cleanText(imgMatch[2]) || title;
+        }
       }
 
       // Regra oficial: Câmara dos Deputados → Congresso
       const category = 'Congresso';
-      const { formatted: publishedAt, timestamp } = parseDateToBrasilia(rawPubDate);
 
-      let idPart = '';
       const urlMatch = articleUrl.match(/noticias\/(\d+)/);
-      if (urlMatch) {
-        idPart = `${urlMatch[1]}-${slugify(title)}`;
-      } else {
-        idPart = slugify(title);
-      }
-      const id = `camara-${idPart}`;
+      const id = urlMatch ? `camara-${urlMatch[1]}` : `camara-${slugify(title)}`;
 
       const tags = generateTags(rawCategories, category, title, 'Agência Câmara');
 
@@ -613,12 +720,17 @@ async function fetchCamara() {
         id,
         title,
         summary,
+        content: paragraphs.length > 0 ? paragraphs : [summary],
         source: 'Agência Câmara',
         sourceUrl: 'https://www.camara.leg.br',
         articleUrl,
         publishedAt,
         category,
         author: 'Agência Câmara de Notícias',
+        imageUrl,
+        imageCredit,
+        imageCaption,
+        imageAlt,
         tags,
         _timestamp: timestamp
       });
@@ -672,9 +784,33 @@ async function fetchIBGE() {
       const title = cleanText(item.titulo);
       const summary = cleanText(item.introducao, MAX_SUMMARY_LENGTH);
       const articleUrl = sanitizeAndNormalizeUrl(item.link);
+      const { formatted: publishedAt, timestamp } = parseDateToBrasilia(item.data_publicacao);
 
-      if (!title || !summary || !articleUrl) {
+      if (!title || !summary || !articleUrl || !publishedAt || !timestamp) {
         continue;
+      }
+
+      // Imagem oficial do IBGE
+      let imageUrl = undefined;
+      let imageCredit = undefined;
+      let imageCaption = undefined;
+      let imageAlt = undefined;
+
+      if (item.imagens) {
+        try {
+          const imgObj = typeof item.imagens === 'string' ? JSON.parse(item.imagens) : item.imagens;
+          const relPath = imgObj.image_intro || imgObj.image_fulltext;
+          if (relPath && typeof relPath === 'string') {
+            const fullUrl = `https://agenciadenoticias.ibge.gov.br/${relPath.replace(/^\/+/, '')}`;
+            const normImg = sanitizeAndNormalizeUrl(fullUrl);
+            if (normImg) {
+              imageUrl = normImg;
+              imageCredit = 'Agência IBGE Notícias';
+              imageCaption = cleanText(imgObj.image_intro_caption || item.titulo);
+              imageAlt = cleanText(imgObj.image_intro_alt || item.titulo);
+            }
+          }
+        } catch {}
       }
 
       // Regra oficial IBGE:
@@ -686,7 +822,6 @@ async function fetchIBGE() {
         category = 'Economia';
       }
 
-      const { formatted: publishedAt, timestamp } = parseDateToBrasilia(item.data_publicacao);
       const id = `ibge-${item.id || slugify(title)}`;
 
       const rawTags = [];
@@ -698,12 +833,17 @@ async function fetchIBGE() {
         id,
         title,
         summary,
+        content: [cleanText(item.introducao)],
         source: 'IBGE',
         sourceUrl: 'https://agenciadenoticias.ibge.gov.br',
         articleUrl,
         publishedAt,
         category,
         author: 'Agência IBGE Notícias',
+        imageUrl,
+        imageCredit,
+        imageCaption,
+        imageAlt,
         tags,
         _timestamp: timestamp
       });
@@ -734,7 +874,8 @@ async function fetchBancoCentral() {
     // Considera as 20 notícias mais recentes
     for (const item of items.slice(0, 20)) {
       const title = cleanText(item.titulo);
-      const summary = cleanText(item.lead || item.corpo, MAX_SUMMARY_LENGTH);
+      const paragraphs = extractParagraphs(item.corpo || item.lead);
+      const summary = cleanText(item.lead || paragraphs[0] || item.corpo, MAX_SUMMARY_LENGTH);
 
       if (!title || !summary || !item.Id) {
         continue;
@@ -742,27 +883,47 @@ async function fetchBancoCentral() {
 
       const rawUrl = `https://www.bcb.gov.br/detalhenoticia/${item.Id}/nota`;
       const articleUrl = sanitizeAndNormalizeUrl(rawUrl);
+      const { formatted: publishedAt, timestamp } = parseDateToBrasilia(item.dataPublicacao);
 
-      if (!articleUrl) {
+      if (!articleUrl || !publishedAt || !timestamp) {
         continue;
+      }
+
+      let imageUrl = undefined;
+      let imageCredit = undefined;
+      let imageCaption = undefined;
+      let imageAlt = undefined;
+
+      if (item.urlImg?.Url && item.urlImg.Url.startsWith('https://')) {
+        const normImg = sanitizeAndNormalizeUrl(item.urlImg.Url);
+        if (normImg) {
+          imageUrl = normImg;
+          imageCredit = 'Banco Central do Brasil';
+          imageCaption = title;
+          imageAlt = title;
+        }
       }
 
       // Regra oficial Banco Central → Economia
       const category = 'Economia';
-      const { formatted: publishedAt, timestamp } = parseDateToBrasilia(item.dataPublicacao);
-      const id = `bcb-${item.Id}-${slugify(title)}`;
+      const id = `bcb-${item.Id}`;
       const tags = generateTags(['Banco Central', 'Economia', 'Política Monetária'], category, title, 'Banco Central');
 
       results.push({
         id,
         title,
         summary,
+        content: paragraphs.length > 0 ? paragraphs : [summary],
         source: 'Banco Central',
         sourceUrl: 'https://www.bcb.gov.br',
         articleUrl,
         publishedAt,
         category,
         author: 'Banco Central do Brasil',
+        imageUrl,
+        imageCredit,
+        imageCaption,
+        imageAlt,
         tags,
         _timestamp: timestamp
       });
@@ -786,6 +947,55 @@ async function main() {
   let existingItems = [];
   let protectedArticles = [];
 
+  const CANONICAL_SOCIEDADE_ATIVA_ARTICLES = [
+    {
+      id: 'eleicoes-2026-mapa-regional-votacao',
+      title: 'Raio-X dos estados: Flávio lidera Sul, Sudeste e Centro-Oeste; Lula vence no Nordeste',
+      summary: 'Mapa eleitoral aponta consolidação regional: candidato do PL vence em 14 estados mais o Distrito Federal, enquanto o PT lidera em 13 unidades da federação.',
+      source: 'Redação Sociedade Ativa',
+      sourceUrl: 'https://sociedadeativa.github.io/',
+      articleUrl: 'https://sociedadeativa.github.io/noticias/eleicoes-2026-mapa-regional-votacao/',
+      publishedAt: '05/10/2026 às 11:15',
+      updatedAt: '05/10/2026 às 11:15',
+      category: 'Eleições',
+      author: 'Análise de Dados / Sociedade Ativa',
+      isOriginalReporting: true,
+      tags: ['Mapa Eleitoral', 'São Paulo', 'Nordeste', 'Geopolítica', 'Regiões'],
+      headline: 'Raio-X dos estados: Flávio lidera Sul, Sudeste e Centro-Oeste; Lula vence no Nordeste',
+      lead: 'Mapa eleitoral aponta consolidação regional: candidato do PL vence em 14 estados mais o Distrito Federal, enquanto o PT lidera em 13 unidades da federação.',
+      readTime: '4 min de leitura',
+      content: [
+        'A consolidação da apuração oficial pelo Tribunal Superior Eleitoral (TSE) no primeiro turno das Eleições Presidenciais de 2026 revelou uma nítida divisão geográfica na preferência do eleitorado brasileiro. O candidato Flávio Bolsonaro (PL) venceu em 14 estados e no Distrito Federal, alcançando a liderança absoluta nas regiões Sul, Sudeste e Centro-Oeste, com margens decisivas nos maiores colégios eleitorais como São Paulo, Rio de Janeiro e Minas Gerais.',
+        'O presidente Luiz Inácio Lula da Silva (PT) manteve sua histórica hegemonia na região Nordeste, onde venceu em todos os 9 estados com percentuais expressivos, além de triunfar em quatro estados da região Norte: Pará, Amazonas, Amapá e Piauí (Nordeste). Essa concentração regional assegurou ao candidato governista uma base sólida de mais de 48,7 milhões de votos nominais.',
+        'A análise dos índices de abstenção e comparecimento por unidade da federação aponta que o engajamento cívico foi decisivo para os resultados: enquanto o Centro-Oeste e o Sul apresentaram taxas de comparecimento superiores a 81%, capitais do Nordeste registraram índices de abstenção ligeiramente maiores, impactadas por condições climáticas e logística de transporte no dia do pleito.',
+        'Para a disputa do segundo turno, os dados indicam que o fiel da balança será a mobilização do eleitorado moderado no interior paulista e na região metropolitana de Belo Horizonte, regiões onde os candidatos Ronaldo Caiado (PSD) e Romeu Zema (NOVO) obtiveram desempenhos significativos no primeiro turno.'
+      ]
+    },
+    {
+      id: 'eleicoes-2026-tse-apuracao-primeiro-turno',
+      title: 'TSE conclui 100% da totalização: Flávio Bolsonaro e Lula disputarão o 2º turno',
+      summary: 'Com 125,2 milhões de votos válidos nominais, Tribunal Superior Eleitoral confirma votação e convoca eleitores para o segundo turno no último domingo de outubro.',
+      source: 'Redação Sociedade Ativa',
+      sourceUrl: 'https://sociedadeativa.github.io/',
+      articleUrl: 'https://sociedadeativa.github.io/noticias/eleicoes-2026-tse-apuracao-primeiro-turno/',
+      publishedAt: '05/10/2026 às 08:30',
+      updatedAt: '05/10/2026 às 10:15',
+      category: 'Eleições',
+      author: 'Redação Sociedade Ativa / Cobertura Especial',
+      isOriginalReporting: true,
+      tags: ['TSE', 'Eleições 2026', 'Segundo Turno', 'Apuração', 'Presidência'],
+      headline: 'TSE conclui 100% da totalização: Flávio Bolsonaro e Lula disputarão o 2º turno',
+      lead: 'Com 125,2 milhões de votos válidos nominais, Tribunal Superior Eleitoral confirma votação e convoca eleitores para o segundo turno no último domingo de outubro.',
+      readTime: '3 min de leitura',
+      content: [
+        'O Tribunal Superior Eleitoral (TSE) concluiu na manhã desta segunda-feira a totalização de 100% das 568.423 seções eleitorais em todo o Brasil e no exterior. O sistema de urnas eletrônicas registrou 125.267.892 votos válidos nominais para o cargo de Presidente da República, consolidando a disputa de segundo turno entre Flávio Bolsonaro (PL) e Luiz Inácio Lula da Silva (PT).',
+        'Na contagem final oficial, Flávio Bolsonaro obteve 56.104.268 votos, o equivalente a 47,03% dos votos válidos. O presidente Luiz Inácio Lula da Silva alcançou 48.729.043 votos nominais, correspondendo a 40,85%. Os demais concorrentes — Ronaldo Caiado (PSD), Romeu Zema (NOVO), Renan dos Santos (Missão) e Augusto Cury (Avante) — somaram juntos 12,12% dos votos válidos nominais.',
+        'O índice de comparecimento nacional foi de 79,20%, com 20,80% de abstenção, dentro dos parâmetros históricos observados nas últimas três eleições gerais. Os votos nulos somaram 3.842.110 (2,96%) e os votos em branco totalizaram 2.105.440 (1,62%). A integridade e segurança do pleito foram atestadas por missões de observação nacionais e internacionais.',
+        'A campanha eleitoral oficial do segundo turno foi aberta imediatamente após a proclamação provisória dos resultados, com a retomada do horário eleitoral gratuito no rádio e na televisão. A votação definitiva ocorrerá no último domingo de outubro, das 8h às 17h, pelo horário oficial de Brasília.'
+      ]
+    }
+  ];
+
   if (fs.existsSync(NEWS_DATA_PATH)) {
     try {
       const raw = fs.readFileSync(NEWS_DATA_PATH, 'utf8');
@@ -797,6 +1007,21 @@ async function main() {
       console.warn(`Aviso ao ler dataset existente (${NEWS_DATA_PATH}): ${err.message}`);
     }
   }
+
+  // Mescla garantindo presença e enriquecimento com o acervo editorial completo
+  const protectedById = new Map();
+  for (const item of CANONICAL_SOCIEDADE_ATIVA_ARTICLES) {
+    protectedById.set(item.id, item);
+  }
+  for (const item of protectedArticles) {
+    if (protectedById.has(item.id)) {
+      const canonical = protectedById.get(item.id);
+      protectedById.set(item.id, { ...item, ...canonical });
+    } else {
+      protectedById.set(item.id, item);
+    }
+  }
+  protectedArticles = Array.from(protectedById.values());
 
   console.log(`Artigos protegidos do Sociedade Ativa preservados: ${protectedArticles.length}`);
   for (const p of protectedArticles) {
@@ -1025,14 +1250,18 @@ async function main() {
 
     if (item.updatedAt) cleanItem.updatedAt = item.updatedAt;
     if (item.imageUrl) cleanItem.imageUrl = item.imageUrl;
+    if (item.imageCaption) cleanItem.imageCaption = item.imageCaption;
+    if (item.imageCredit) cleanItem.imageCredit = item.imageCredit;
+    if (item.imageAlt) cleanItem.imageAlt = item.imageAlt;
+    if (item.isOriginalReporting) cleanItem.isOriginalReporting = item.isOriginalReporting;
     if (item.author) cleanItem.author = item.author;
     if (item.tags && item.tags.length > 0) cleanItem.tags = item.tags;
 
-    // Preserva compatibilidade editorial de artigos proprietários
+    // Preserva compatibilidade editorial de artigos proprietários e externos
     if (item.headline) cleanItem.headline = item.headline;
     if (item.lead) cleanItem.lead = item.lead;
     if (item.readTime) cleanItem.readTime = item.readTime;
-    if (item.content) cleanItem.content = item.content;
+    if (item.content && item.content.length > 0) cleanItem.content = item.content;
 
     return cleanItem;
   });
@@ -1091,9 +1320,14 @@ async function main() {
     }
   }
 
-  // 8. Gravação do arquivo JSON
+  // 8. Gravação do arquivo JSON e sincronização com o TypeScript estático
   const serialized = JSON.stringify(finalDataset, null, 2) + '\n';
   fs.writeFileSync(NEWS_DATA_PATH, serialized, 'utf8');
+
+  const tsDataPath = path.join(rootDir, 'src', 'data', 'newsData.ts');
+  const tsSource = `import { NewsItem, NewsCategory } from "../types/news";\n\nexport type { NewsItem, NewsCategory };\nexport type NewsArticle = NewsItem;\n\nexport const OFFICIAL_NEWS_ARTICLES: NewsItem[] = ${JSON.stringify(finalDataset, null, 2)};\n`;
+  fs.writeFileSync(tsDataPath, tsSource, 'utf8');
+  console.log(`Dataset sincronizado com sucesso em ${path.relative(rootDir, tsDataPath)}`);
 
   // 9. Relatório de Execução Consolidado
   const categoryCount = {};

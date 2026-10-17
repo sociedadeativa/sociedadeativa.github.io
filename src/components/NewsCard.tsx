@@ -38,6 +38,21 @@ export const NewsCard: React.FC<NewsCardProps> = ({
       }`}
     >
       <div>
+        {/* Imagem Editorial Oficial (quando disponível) */}
+        {article.imageUrl && (
+          <div className="mb-3 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 aspect-[16/9] relative">
+            <img
+              src={article.imageUrl}
+              alt={article.imageAlt || article.title}
+              className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+              loading="lazy"
+              onError={(e) => {
+                (e.target as HTMLElement).style.display = "none";
+              }}
+            />
+          </div>
+        )}
+
         {/* Cabeçalho do Card: Kicker Tipográfico Não-Enclausurado (Zero-Pill Discipline) */}
         <div className="flex items-center justify-between gap-2 mb-2.5">
           <div className="flex items-center gap-2 text-xs">

@@ -77,6 +77,8 @@ for (const dataFile of requiredDataFiles) {
         console.error(`ERROR: dist/data/newsData.json possui menos de 10 artigos (${parsed?.length || 0})!`);
         process.exit(1);
       }
+      const seenDatasetIds = new Set();
+      const seenDatasetUrls = new Set();
       for (const item of parsed) {
         if (!item.id || !item.title || !item.summary || !item.source || !item.articleUrl || !item.publishedAt || !item.category) {
           console.error('ERROR: Artigo com campos obrigatórios ausentes em dist/data/newsData.json:', item);
@@ -85,6 +87,39 @@ for (const dataFile of requiredDataFiles) {
         if (!item.articleUrl.startsWith('https://')) {
           console.error('ERROR: URL de notícia não é HTTPS em dist/data/newsData.json:', item.articleUrl);
           process.exit(1);
+        }
+        if (!/^\d{2}\/\d{2}\/\d{4} às \d{2}:\d{2}$/.test(item.publishedAt)) {
+          console.error(`ERROR: Data inválida "${item.publishedAt}" no artigo ${item.id} (esperado DD/MM/AAAA às HH:mm)!`);
+          process.exit(1);
+        }
+        if (/<[^>]+>/.test(item.title) || /<[^>]+>/.test(item.summary)) {
+          console.error(`ERROR: Tags HTML detectadas no título ou resumo do artigo ${item.id}!`);
+          process.exit(1);
+        }
+        if (seenDatasetIds.has(item.id)) {
+          console.error(`ERROR: ID duplicado em dist/data/newsData.json: ${item.id}`);
+          process.exit(1);
+        }
+        seenDatasetIds.add(item.id);
+
+        if (!item.source.includes('Sociedade Ativa')) {
+          if (seenDatasetUrls.has(item.articleUrl)) {
+            console.error(`ERROR: URL canônica duplicada em dist/data/newsData.json: ${item.articleUrl}`);
+            process.exit(1);
+          }
+          seenDatasetUrls.add(item.articleUrl);
+        }
+
+        // Validação de integridade de imagens e créditos
+        if (item.imageUrl) {
+          if (!item.imageUrl.startsWith('https://')) {
+            console.error(`ERROR: Imagem não é HTTPS no artigo ${item.id}: ${item.imageUrl}`);
+            process.exit(1);
+          }
+          if (!item.imageCredit || !item.imageCredit.trim()) {
+            console.error(`ERROR: Imagem sem crédito/atribuição comprovada no artigo ${item.id}!`);
+            process.exit(1);
+          }
         }
       }
     }

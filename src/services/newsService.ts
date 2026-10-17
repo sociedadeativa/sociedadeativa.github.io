@@ -115,13 +115,17 @@ export function normalizeNewsItem(raw: any, index: number = 0): NewsItem {
     updatedAt,
     category,
     imageUrl: typeof raw.imageUrl === "string" && raw.imageUrl.trim() ? raw.imageUrl.trim() : undefined,
+    imageCaption: typeof raw.imageCaption === "string" && raw.imageCaption.trim() ? raw.imageCaption.trim() : undefined,
+    imageCredit: typeof raw.imageCredit === "string" && raw.imageCredit.trim() ? raw.imageCredit.trim() : undefined,
+    imageAlt: typeof raw.imageAlt === "string" && raw.imageAlt.trim() ? raw.imageAlt.trim() : undefined,
+    isOriginalReporting: Boolean(raw.isOriginalReporting || raw.source?.includes("Sociedade Ativa") || raw.author?.includes("Sociedade Ativa")),
     author: raw.author ? String(raw.author).trim() : source,
     tags,
     // Campos legados para compatibilidade
     headline: title,
     lead: summary,
     readTime: raw.readTime || "3 min de leitura",
-    content: Array.isArray(raw.content) ? raw.content : [summary],
+    content: Array.isArray(raw.content) && raw.content.length > 0 ? raw.content : [summary],
   };
 }
 
@@ -179,9 +183,11 @@ export async function fetchNewsItems(): Promise<NewsItem[]> {
     "https://sociedadeativa.github.io/data/newsData.json",
   ];
 
-  for (const url of candidateUrls) {
+  const timestamp = Date.now();
+  for (const baseUrl of candidateUrls) {
     try {
-      const response = await fetch(url, { cache: "no-cache" });
+      const url = `${baseUrl}?t=${timestamp}`;
+      const response = await fetch(url, { cache: "no-store" });
       if (response.ok) {
         const contentType = response.headers.get("content-type") || "";
         if (contentType.includes("application/json") || contentType.includes("text/json")) {

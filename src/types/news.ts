@@ -30,6 +30,9 @@ export interface NewsItem {
   updatedAt?: string;
   category: NewsCategory;
   imageUrl?: string;
+  imageCaption?: string;
+  imageCredit?: string;
+  imageAlt?: string;
   author?: string;
   tags?: string[];
 
@@ -38,6 +41,7 @@ export interface NewsItem {
   lead?: string;
   readTime?: string;
   content?: string[];
+  isOriginalReporting?: boolean;
 }
 
 export type NewsArticle = NewsItem;

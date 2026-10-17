@@ -320,6 +320,12 @@ function main() {
       /<meta\s+property=["']og:type["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
       () => `<meta property="og:type" content="article" />\n    <meta property="article:published_time" content="${isoDate}" />\n    <meta property="article:section" content="${escapeHtml(article.category)}" />`
     );
+    if (article.imageUrl) {
+      pageHtml = pageHtml.replace(
+        /<meta\s+property=["']og:image["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
+        () => `<meta property="og:image" content="${escapeHtml(article.imageUrl)}" />`
+      );
+    }
 
     // Substitui Twitter Cards
     pageHtml = pageHtml.replace(
@@ -330,8 +336,15 @@ function main() {
       /<meta\s+name=["']twitter:description["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
       () => `<meta name="twitter:description" content="${escapeHtml(metaDescription)}" />`
     );
+    if (article.imageUrl) {
+      pageHtml = pageHtml.replace(
+        /<meta\s+name=["']twitter:image["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
+        () => `<meta name="twitter:image" content="${escapeHtml(article.imageUrl)}" />`
+      );
+    }
 
     // Substitui dados estruturados Schema.org
+    const isSociedadeAtiva = article.source?.includes('Sociedade Ativa') || article.id?.startsWith('eleicoes-2026');
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "NewsArticle",
@@ -342,6 +355,7 @@ function main() {
       },
       "headline": article.title,
       "description": article.summary,
+      ...(article.imageUrl ? { "image": [article.imageUrl] } : {}),
       "datePublished": isoDate,
       "dateModified": isoModDate,
       "articleSection": article.category,
@@ -357,7 +371,7 @@ function main() {
         }
       },
       "author": {
-        "@type": "Organization",
+        "@type": isSociedadeAtiva ? "NewsMediaOrganization" : "Organization",
         "name": article.source
       },
       "isAccessibleForFree": true
@@ -378,20 +392,49 @@ function main() {
             <span>${escapeHtml(article.category)}</span>
           </nav>
           <article>
-            <p style="font-size:12px;font-weight:bold;text-transform:uppercase;color:#1e40af;margin-bottom:8px;">${escapeHtml(article.category)}</p>
+            <div style="margin-bottom:12px;">
+              ${
+                isSociedadeAtiva
+                  ? `<span style="font-size:11px;font-weight:bold;text-transform:uppercase;color:#ffffff;background:#0f172a;padding:4px 8px;border-radius:6px;letter-spacing:0.05em;">Especial Sociedade Ativa &mdash; Cobertura Própria</span>`
+                  : `<span style="font-size:11px;font-weight:bold;text-transform:uppercase;color:#1e40af;letter-spacing:0.05em;">${escapeHtml(article.category)} &middot; Despacho Oficial</span>`
+              }
+            </div>
             <h1 style="font-size:28px;line-height:1.2;font-weight:900;color:#020617;margin-bottom:16px;">${escapeHtml(article.title)}</h1>
             <p style="font-size:16px;line-height:1.6;font-weight:600;color:#334155;background:#f8fafc;padding:16px;border-radius:12px;border:1px solid #e2e8f0;margin-bottom:20px;">${escapeHtml(article.summary)}</p>
-            <div style="font-size:12px;color:#64748b;margin-bottom:24px;border-bottom:1px solid #e2e8f0;padding-bottom:12px;">
-              <span><strong>Fonte:</strong> ${escapeHtml(article.source)}</span> &middot; 
-              <span>Publicado em ${escapeHtml(article.publishedAt)}</span>
+            <div style="font-size:12px;color:#64748b;margin-bottom:24px;border-bottom:1px solid #e2e8f0;padding-bottom:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+              <div>
+                <span><strong>Fonte:</strong> ${escapeHtml(article.source)}</span>
+                ${article.author && article.author !== article.source ? ` &middot; <span><strong>Autoria:</strong> ${escapeHtml(article.author)}</span>` : ''}
+              </div>
+              <div>
+                <span>Publicado em ${escapeHtml(article.publishedAt)}</span>
+              </div>
             </div>
+            ${
+              article.imageUrl
+                ? `
+                <figure style="margin:20px 0 28px 0;">
+                  <img src="${escapeHtml(article.imageUrl)}" alt="${escapeHtml(article.imageAlt || article.title)}" style="width:100%;max-height:460px;object-fit:cover;border-radius:12px;border:1px solid #e2e8f0;" loading="lazy" />
+                  ${
+                    (article.imageCaption || article.imageCredit)
+                      ? `<figcaption style="font-size:12px;color:#64748b;margin-top:8px;line-height:1.4;">${escapeHtml(article.imageCaption ? article.imageCaption + ' ' : '')}${article.imageCredit ? `<strong>Foto/Crédito:</strong> ${escapeHtml(article.imageCredit)}` : ''}</figcaption>`
+                      : ''
+                  }
+                </figure>
+                `
+                : ''
+            }
             ${
               article.content && article.content.length > 0
                 ? article.content.map(p => `<p style="font-size:15px;line-height:1.7;color:#1e293b;margin-bottom:16px;">${escapeHtml(p)}</p>`).join('')
                 : `<p style="font-size:13px;color:#64748b;font-style:italic;margin-bottom:20px;">Esta é uma súmula factual oficial distribuída por ${escapeHtml(article.source)}. Acesse a matéria original para conferir documentos e anexos completos.</p>`
             }
             <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
-              <a href="${escapeHtml(article.articleUrl)}" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#1e3a8a;color:#ffffff;padding:10px 20px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:bold;">Acessar reportagem completa em ${escapeHtml(article.source)}</a>
+              ${
+                isSociedadeAtiva
+                  ? `<a href="/eleicoes/" style="display:inline-block;background:#1e3a8a;color:#ffffff;padding:10px 20px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:bold;">Acessar painel interativo de apuração</a>`
+                  : `<a href="${escapeHtml(article.articleUrl)}" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#1e3a8a;color:#ffffff;padding:10px 20px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:bold;">Acessar reportagem completa em ${escapeHtml(article.source)}</a>`
+              }
               <a href="/noticias/" style="display:inline-block;background:#f1f5f9;color:#334155;padding:10px 20px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:bold;">Voltar para Notícias</a>
             </div>
           </article>

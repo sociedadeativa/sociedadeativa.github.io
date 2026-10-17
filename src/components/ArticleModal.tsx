@@ -66,6 +66,28 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
           {article.title}
         </h2>
 
+        {/* Imagem Editorial Oficial Verificada */}
+        {article.imageUrl && (
+          <figure className="mb-4 rounded-2xl overflow-hidden border border-slate-200 bg-slate-50">
+            <img
+              src={article.imageUrl}
+              alt={article.imageAlt || article.title}
+              className="w-full max-h-[300px] object-cover"
+              loading="lazy"
+            />
+            {(article.imageCaption || article.imageCredit) && (
+              <figcaption className="p-2.5 text-[10px] sm:text-[11px] text-slate-500 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-2 flex-wrap">
+                <span>{article.imageCaption || article.title}</span>
+                {article.imageCredit && (
+                  <span className="font-semibold text-slate-700">
+                    Foto: {article.imageCredit}
+                  </span>
+                )}
+              </figcaption>
+            )}
+          </figure>
+        )}
+
         {/* Resumo em Destaque */}
         <p className="text-sm sm:text-base font-semibold text-slate-700 mb-5 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-200/80">
           {article.summary}

@@ -2,12 +2,9 @@ name: Update Official News Data
 
 on:
   schedule:
-    # 08:00 BRT = 11:00 UTC
-    - cron: '0 11 * * *'
-    # 13:30 BRT = 16:30 UTC
-    - cron: '30 16 * * *'
-    # 19:00 BRT = 22:00 UTC
-    - cron: '0 22 * * *'
+    # Horário Oficial de Brasília (UTC-3): 06:00, 08:30, 11:00, 13:30, 16:00, 18:30 e 21:00
+    - cron: '0 9,14,19,0 * * *'
+    - cron: '30 11,16,21 * * *'
   workflow_dispatch:
 
 permissions:
@@ -86,7 +83,7 @@ jobs:
           git config user.name "Sociedade Ativa DataBot"
           git config user.email "bot@sociedadeativa.org"
 
-          git add public/data/newsData.json public/sitemap.xml
+          git add public/data/newsData.json public/sitemap.xml src/data/newsData.ts
 
           if git diff --staged --quiet; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"

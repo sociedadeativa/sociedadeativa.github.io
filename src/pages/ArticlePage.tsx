@@ -217,6 +217,28 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
           </div>
         </header>
 
+        {/* Imagem Editorial Oficial Verificada */}
+        {article.imageUrl && (
+          <figure className="mb-8 rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-xs">
+            <img
+              src={article.imageUrl}
+              alt={article.imageAlt || article.title}
+              className="w-full max-h-[480px] object-cover"
+              loading="eager"
+            />
+            {(article.imageCaption || article.imageCredit) && (
+              <figcaption className="p-3 text-[11px] sm:text-xs text-slate-500 bg-slate-50/80 border-t border-slate-200/60 flex items-center justify-between gap-2 flex-wrap">
+                <span>{article.imageCaption || article.title}</span>
+                {article.imageCredit && (
+                  <span className="font-semibold text-slate-700">
+                    Foto: {article.imageCredit}
+                  </span>
+                )}
+              </figcaption>
+            )}
+          </figure>
+        )}
+
         {/* Corpo do Conteúdo Autorizado */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8 shadow-xs">
           {article.content && article.content.length > 0 ? (
