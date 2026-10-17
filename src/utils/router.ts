@@ -287,6 +287,16 @@ export function navigateTo(route: PortalRoute, hash?: string) {
       metaDesc.setAttribute("content", config.description);
     }
 
+    // Atualiza link canonical e og:url dinamicamente no cliente
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) {
+      canonicalLink.setAttribute("href", `https://sociedadeativa.github.io${config.path}`);
+    }
+    const ogUrlMeta = document.querySelector('meta[property="og:url"]');
+    if (ogUrlMeta) {
+      ogUrlMeta.setAttribute("content", `https://sociedadeativa.github.io${config.path}`);
+    }
+
     // Rola para o topo caso não haja hash específico
     if (!hash) {
       window.scrollTo({ top: 0, behavior: "smooth" });

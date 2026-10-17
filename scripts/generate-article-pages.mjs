@@ -106,30 +106,57 @@ function escapeJson(str) {
   return JSON.stringify(str).slice(1, -1);
 }
 
-// Gera o sitemap.xml final com as 8 seções canônicas e todos os artigos gerados
+// Gera o sitemap.xml final com as 10 seções canônicas e todos os artigos gerados
 function generateSitemap(generatedArticles) {
   const DIST_SITEMAP = path.join(DIST_DIR, 'sitemap.xml');
   const BASE_SITEMAP = path.join(rootDir, 'public', 'sitemap.xml');
 
-  // As seções canônicas principais do portal Sociedade Ativa
+  // 1. Calcula datas dinâmicas mais recentes a partir dos artigos publicados para cada caderno editorial
+  const allArticleDates = generatedArticles
+    .map((a) => extractReliableDateYmd(a.updatedAt || a.publishedAt))
+    .filter(Boolean)
+    .sort()
+    .reverse();
+  const latestOverallDate = allArticleDates[0] || '2026-10-16';
+
+  const getLatestDateForCategories = (categories, fallback) => {
+    const dates = generatedArticles
+      .filter((a) => categories.includes(a.category))
+      .map((a) => extractReliableDateYmd(a.updatedAt || a.publishedAt))
+      .filter(Boolean)
+      .sort()
+      .reverse();
+    return dates[0] || fallback;
+  };
+
+  const latestPoliticaDate = getLatestDateForCategories(
+    ['Política', 'Governo', 'Congresso', 'Justiça'],
+    latestOverallDate
+  );
+  const latestEconomiaDate = getLatestDateForCategories(['Economia'], '2026-10-15');
+  const latestEleicoesDate = getLatestDateForCategories(['Eleições'], '2026-10-16');
+
+  // As 10 seções canônicas principais do portal Sociedade Ativa
   const canonicalSections = [
-    { loc: 'https://sociedadeativa.github.io/', defaultDate: '2026-10-13' },
-    { loc: 'https://sociedadeativa.github.io/politica/', defaultDate: '2026-10-13' },
-    { loc: 'https://sociedadeativa.github.io/eleicoes/', defaultDate: '2026-10-13' },
-    { loc: 'https://sociedadeativa.github.io/economia/', defaultDate: '2026-10-13' },
+    { loc: 'https://sociedadeativa.github.io/', defaultDate: latestOverallDate },
+    { loc: 'https://sociedadeativa.github.io/politica/', defaultDate: latestPoliticaDate },
+    { loc: 'https://sociedadeativa.github.io/eleicoes/', defaultDate: latestEleicoesDate },
+    { loc: 'https://sociedadeativa.github.io/economia/', defaultDate: latestEconomiaDate },
     { loc: 'https://sociedadeativa.github.io/estados/', defaultDate: '2026-10-13' },
     { loc: 'https://sociedadeativa.github.io/dados-publicos/', defaultDate: '2026-10-13' },
-    { loc: 'https://sociedadeativa.github.io/noticias/', defaultDate: '2026-10-13' },
+    { loc: 'https://sociedadeativa.github.io/noticias/', defaultDate: latestOverallDate },
     { loc: 'https://sociedadeativa.github.io/esportes/', defaultDate: '2026-10-14' },
     { loc: 'https://sociedadeativa.github.io/clima/', defaultDate: '2026-10-15' },
     { loc: 'https://sociedadeativa.github.io/sobre/', defaultDate: '2026-10-13' },
   ];
 
-  // Preserva os valores de lastmod definidos nas seções principais a partir de public/sitemap.xml
+  // Preserva os valores de lastmod definidos nas seções principais a partir de public/sitemap.xml caso sejam mais recentes
   const existingSectionDates = new Map();
   if (fs.existsSync(BASE_SITEMAP)) {
     const raw = fs.readFileSync(BASE_SITEMAP, 'utf8');
-    const matches = raw.matchAll(/<url>[\s\S]*?<loc>(https:\/\/sociedadeativa\.github\.io\/[^<]*)<\/loc>(?:[\s\S]*?<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>)?[\s\S]*?<\/url>/g);
+    const matches = raw.matchAll(
+      /<url>[\s\S]*?<loc>(https:\/\/sociedadeativa\.github\.io\/[^<]*)<\/loc>(?:[\s\S]*?<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>)?[\s\S]*?<\/url>/g
+    );
     for (const match of matches) {
       if (match[1] && match[2]) {
         existingSectionDates.set(match[1], match[2]);
@@ -140,11 +167,15 @@ function generateSitemap(generatedArticles) {
   const sitemapEntries = [];
   const seenLocs = new Set();
 
-  // 1. Inclui as 8 seções canônicas principais
+  // 1. Inclui as 10 seções canônicas principais com datas verificadas
   for (const section of canonicalSections) {
     if (!seenLocs.has(section.loc)) {
       seenLocs.add(section.loc);
-      const lastmod = existingSectionDates.get(section.loc) || section.defaultDate;
+      const existingDate = existingSectionDates.get(section.loc);
+      const lastmod =
+        existingDate && existingDate > section.defaultDate
+          ? existingDate
+          : section.defaultDate;
       sitemapEntries.push({
         loc: section.loc,
         lastmod,
@@ -186,7 +217,10 @@ function generateSitemap(generatedArticles) {
 
   const sitemapXml = xmlLines.join('\n');
   fs.writeFileSync(DIST_SITEMAP, sitemapXml, 'utf8');
-  console.log(`Sucesso: dist/sitemap.xml gerado com ${sitemapEntries.length} URLs (${canonicalSections.length} seções canônicas + ${sitemapEntries.length - canonicalSections.length} matérias individuais).`);
+  fs.writeFileSync(BASE_SITEMAP, sitemapXml, 'utf8');
+  console.log(
+    `Sucesso: dist/sitemap.xml e public/sitemap.xml gerados com ${sitemapEntries.length} URLs (${canonicalSections.length} seções canônicas + ${sitemapEntries.length - canonicalSections.length} matérias individuais).`
+  );
 }
 
 function main() {

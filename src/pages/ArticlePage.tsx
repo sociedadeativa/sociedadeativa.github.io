@@ -63,6 +63,11 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
       if (canonical) {
         canonical.setAttribute("href", `https://sociedadeativa.github.io${getArticleUrl(article.id)}`);
       }
+
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) {
+        ogUrl.setAttribute("content", `https://sociedadeativa.github.io${getArticleUrl(article.id)}`);
+      }
     }
   }, [article]);
 

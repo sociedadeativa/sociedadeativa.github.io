@@ -130,20 +130,50 @@ if (!fs.existsSync('dist/sitemap.xml')) {
   console.error('ERROR: dist/sitemap.xml does not exist!');
   process.exit(1);
 }
+if (!fs.existsSync('public/sitemap.xml')) {
+  console.error('ERROR: public/sitemap.xml does not exist!');
+  process.exit(1);
+}
 if (!fs.existsSync('dist/robots.txt')) {
   console.error('ERROR: dist/robots.txt does not exist!');
   process.exit(1);
 }
+if (!fs.existsSync('public/robots.txt')) {
+  console.error('ERROR: public/robots.txt does not exist!');
+  process.exit(1);
+}
+
+const distRobots = fs.readFileSync('dist/robots.txt', 'utf8');
+const publicRobots = fs.readFileSync('public/robots.txt', 'utf8');
+const expectedSitemapDirective = 'Sitemap: https://sociedadeativa.github.io/sitemap.xml';
+
+if (!distRobots.includes(expectedSitemapDirective)) {
+  console.error(`ERROR: dist/robots.txt não aponta para o sitemap correto (${expectedSitemapDirective})!`);
+  process.exit(1);
+}
+if (!publicRobots.includes(expectedSitemapDirective)) {
+  console.error(`ERROR: public/robots.txt não aponta para o sitemap correto (${expectedSitemapDirective})!`);
+  process.exit(1);
+}
 
 const sitemapContent = fs.readFileSync('dist/sitemap.xml', 'utf8');
+const publicSitemapContent = fs.readFileSync('public/sitemap.xml', 'utf8');
 
 if (!sitemapContent.startsWith('<?xml version="1.0" encoding="UTF-8"?>')) {
   console.error('ERROR: dist/sitemap.xml deve iniciar com a declaração UTF-8 padrão!');
   process.exit(1);
 }
+if (!publicSitemapContent.startsWith('<?xml version="1.0" encoding="UTF-8"?>')) {
+  console.error('ERROR: public/sitemap.xml deve iniciar com a declaração UTF-8 padrão!');
+  process.exit(1);
+}
 
 if (!sitemapContent.includes('xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"')) {
   console.error('ERROR: dist/sitemap.xml deve utilizar o namespace oficial do sitemap.org!');
+  process.exit(1);
+}
+if (!publicSitemapContent.includes('xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"')) {
+  console.error('ERROR: public/sitemap.xml deve utilizar o namespace oficial do sitemap.org!');
   process.exit(1);
 }
 
@@ -195,9 +225,15 @@ for (const articleId of generatedArticleDirs) {
 // Valida a contagem total de URLs no sitemap contra as seções canônicas e artigos gerados
 const expectedTotalUrls = canonicalPages.length + generatedArticleDirs.length;
 const urlBlocks = sitemapContent.match(/<url>[\s\S]*?<\/url>/g) || [];
+const publicUrlBlocks = publicSitemapContent.match(/<url>[\s\S]*?<\/url>/g) || [];
 
 if (urlBlocks.length !== expectedTotalUrls) {
   console.error(`ERROR: dist/sitemap.xml possui ${urlBlocks.length} URLs, esperado ${expectedTotalUrls} (${canonicalPages.length} seções canônicas + ${generatedArticleDirs.length} artigos gerados)!`);
+  process.exit(1);
+}
+
+if (publicUrlBlocks.length !== expectedTotalUrls) {
+  console.error(`ERROR: public/sitemap.xml possui ${publicUrlBlocks.length} URLs, esperado ${expectedTotalUrls} para paridade com dist/sitemap.xml!`);
   process.exit(1);
 }
 
