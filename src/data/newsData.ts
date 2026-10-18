@@ -5,6 +5,72 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1705479",
+    "title": "Estudantes retomam protagonismo em momento decisivo no país, diz UNE",
+    "summary": "A preocupação com os rumos do país e com os riscos para as instituições democráticas e para a educação, às vésperas do segundo turno das eleições presidenciais, impulsionou a retomada das ruas pelo movimento estudantil. Milhares de estudantes têm promovido atos em diversas...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/estudantes-retomam-protagonismo-em-momento-decisivo-no-pais-diz-une",
+    "publishedAt": "18/10/2026 às 12:45",
+    "category": "Eleições",
+    "imageUrl": "https://imagens.ebc.com.br/KA_PHylrkJXOBZemUqaVJyQRAKA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/15/dsc01057.jpg.jpeg?itok=xOoUJBL3",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "Estudantes retomam protagonismo em momento decisivo no país, diz UNE",
+    "author": "Camila Boehm - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "UNE",
+      "Movimento Estudantil",
+      "Lula"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "ebc-1705698",
+    "title": "Eleições: quem não votou no primeiro turno pode participar do segundo",
+    "summary": "O eleitor que não votou no primeiro turno das Eleições Gerais de 2026, em 4 de outubro, pode participar normalmente do segundo turno, marcado para o próximo domingo, 25 de outubro. A ausência na primeira etapa não impede a participação na segunda fase, desde que a situação...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleicoes-quem-nao-votou-no-primeiro-turno-pode-participar-do-segundo",
+    "publishedAt": "18/10/2026 às 11:38",
+    "category": "Eleições",
+    "imageUrl": "https://imagens.ebc.com.br/YIJ85t0M4Fov1zo7g6UbiELmBJE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/0g0a9889.jpg?itok=YMktaw5P",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "Eleições: quem não votou no primeiro turno pode participar do segundo",
+    "author": "Daniella Almeida – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Segundo Turno",
+      "justificativa",
+      "Eleições"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "ebc-1705643",
+    "title": "Empresas de três regiões terão aporte de R$ 450 milhões para inovação",
+    "summary": "A segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Financiadora de Estudos e Projetos (Finep) terá um total de R$ 450 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/empresas-de-tres-regioes-terao-aporte-de-r-450-milhoes-para-inovacao",
+    "publishedAt": "18/10/2026 às 11:20",
+    "category": "Brasil",
+    "imageUrl": "https://imagens.ebc.com.br/D2D71d33oxREJg4gmXdXZXAhHdc=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/03/27/img_7392.jpg?itok=vWWGzE7w",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "Empresas de três regiões terão aporte de R$ 450 milhões para inovação",
+    "author": "Agência Brasil",
+    "tags": [
+      "Economia",
+      "Finep",
+      "MCTI",
+      "Inovação",
+      "Brasil"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
     "id": "ebc-1705342",
     "title": "BB recebe até 31 de outubro inscrições para projetos de impacto social",
     "summary": "Projetos de impacto social podem se inscrever até 31 de outubro para receber recursos do Banco do Brasil (BB). A instituição financeira abriu edital de 2026 do Programa Mãos Dadas, que também inclui projetos de saúde e, a partir deste ano, empreendimentos de reciclagem e de...",
@@ -147,8 +213,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "author": "Bruno Bocchini - Repórter da Agência Brasil",
     "tags": [
       "Economia",
-      "Bolsa Família",
-      "Benefícios Sociais",
+      "bolsa família",
+      "benefícios sociais",
       "economia",
       "Cidades"
     ],
@@ -949,50 +1015,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "editorialType": "sumula_oficial"
   },
   {
-    "id": "ebc-1705546",
-    "title": "Congresso promulga emenda do fim da 6x1; escala 5x2 começa em 60 dias",
-    "summary": "O Congresso Nacional promulgou, nesta sexta-feira (16), a Emenda Constitucional nº 141 de 2026 , que põe fim à escala de seis dias de trabalho e apenas um de descanso (6x1) e prevê a escala 5x2, com duas folgas por semana, para todos os trabalhadores do Brasil dentro de dois...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/congresso-promulga-emenda-do-fim-da-6x1-escala-5x2-comeca-em-60-dias",
-    "publishedAt": "16/10/2026 às 10:39",
-    "category": "Política",
-    "imageUrl": "https://imagens.ebc.com.br/m_U8zikPmw4bWmpHgy0OogSDRq8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/16/whatsapp_image_2026-10-16_at_10.32.59.jpg?itok=2iU_HkYh",
-    "imageCredit": "Foto: Agência Brasil / EBC",
-    "imageAlt": "Congresso promulga emenda do fim da 6x1; escala 5x2 começa em 60 dias",
-    "author": "Lucas Pordeus León – Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "fim da escala 6x1",
-      "Congresso Nacional",
-      "promulgação",
-      "multimídia"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "ebc-1705543",
-    "title": "Atividade econômica tem alta de 0,3% em agosto, mostra IBC-Br",
-    "summary": "O Índice de Atividade Econômica do Banco Central (IBC-Br), indicador usado para acompanhar a evolução da economia brasileira, ficou estável com variação de 0,3% em agosto de 2026 na comparação com julho, informou nesta sexta-feira (16) o Banco Central. Em relação a agosto de...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/atividade-economica-tem-alta-de-03-em-agosto-mostra-ibc-br",
-    "publishedAt": "16/10/2026 às 10:29",
-    "category": "Economia",
-    "imageUrl": "https://imagens.ebc.com.br/McvjmVYwxrI85fsoHOXMjh38Mhs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/industrias_wd2212.jpg?itok=6myvZaPB",
-    "imageCredit": "Foto: Agência Brasil / EBC",
-    "imageAlt": "Atividade econômica tem alta de 0,3% em agosto, mostra IBC-Br",
-    "author": "Pedro Peduzzi – Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "banco central",
-      "IBC-Br",
-      "PIB",
-      "indústria"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
     "id": "ibge-48304",
     "title": "País tinha 1,5 milhão de crianças e adolescentes em situação de trabalho infantil em 2025",
     "summary": "Na análise por grupos etários, o trabalho infantil tende a aumentar com o avanço da idade. - Foto: Ministério do Trabalho O país tinha 1,499 milhão de crianças e adolescentes entre 5 e 17 anos em situação de trabalho infantil em 2025, o que representa...",
@@ -1010,26 +1032,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Notícia",
       "Economia",
       "Estatísticas"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "camara-1311491-comissao-aprova-uniformes-de-s",
-    "title": "Comissão aprova uniformes de seleções brasileiras nas cores da bandeira nacional",
-    "summary": "Exigência vale para todas as modalidades esportivas; texto segue em análise na Câmara dos Deputados",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311491-comissao-aprova-uniformes-de-selecoes-brasileiras-nas-cores-da-bandeira-nacional",
-    "publishedAt": "16/10/2026 às 09:48",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261014160002324-768x473.jpg",
-    "imageCredit": "Divulgação / Agência Câmara de Notícias",
-    "imageAlt": "Comissão aprova uniformes de seleções brasileiras nas cores da bandeira nacional",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
     ],
     "editorialType": "sumula_oficial"
   },
