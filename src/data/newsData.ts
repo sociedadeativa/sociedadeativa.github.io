@@ -1111,36 +1111,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
-    "id": "eleicoes-2026-tse-apuracao-primeiro-turno",
-    "title": "TSE conclui 100% da totalização: Flávio Bolsonaro e Lula disputarão o 2º turno",
-    "summary": "Com 125,2 milhões de votos válidos nominais, Tribunal Superior Eleitoral confirma votação e convoca eleitores para o segundo turno no último domingo de outubro.",
-    "source": "Redação Sociedade Ativa",
-    "sourceUrl": "https://sociedadeativa.github.io/",
-    "articleUrl": "https://sociedadeativa.github.io/noticias/eleicoes-2026-tse-apuracao-primeiro-turno/",
-    "publishedAt": "05/10/2026 às 08:30",
-    "category": "Eleições",
-    "updatedAt": "05/10/2026 às 10:15",
-    "imageCaption": "Seção eleitoral oficial brasileira durante o processo de votação e fiscalização democrática.",
-    "imageCredit": "Acervo Editorial Sociedade Ativa",
-    "imageAlt": "Eleitores e mesários em seção eleitoral oficial brasileira durante a votação",
-    "author": "Redação Sociedade Ativa / Cobertura Especial",
-    "tags": [
-      "TSE",
-      "Eleições 2026",
-      "Segundo Turno",
-      "Apuração",
-      "Presidência"
-    ],
-    "editorialType": "reportagem_especial",
-    "readTime": "4 min de leitura",
-    "content": [
-      "O Tribunal Superior Eleitoral (TSE) concluiu no início da manhã de segunda-feira (06/10) a totalização de 100% das seções eleitorais em todo o território nacional e no exterior, confirmando a realização do segundo turno presidencial entre Flávio Bolsonaro (PL) e Luiz Inácio Lula da Silva (PT). De acordo com os dados consolidados pelo Centro Integrado de Comando e Controle das Eleições, 125.241.373 eleitores compareceram às urnas e registraram votos válidos nominais.",
-      "O candidato do PL, Flávio Bolsonaro, obteve 58.789.245 votos, o que representa 46,95% dos sufrágios válidos nominais apurados. O atual presidente da República e candidato do PT à reeleição, Luiz Inácio Lula da Silva, conquistou 56.452.128 votos nominais, correspondendo a 45,08% do eleitorado válido. A diferença em números absolutos entre os dois primeiros colocados foi de 2.337.117 votos em âmbito nacional.",
-      "Os demais concorrentes somaram 9.999.900 votos válidos nominais. Romeu Zema (Novo) alcançou 3.125.400 votos (2,50%), seguido por Ronaldo Caiado (União Brasil) com 2.850.120 votos (2,28%), Tarcísio de Freitas (Republicanos) com 2.150.300 votos (1,72%) e Simone Tebet (MDB) com 1.874.080 votos (1,50%). Votos em branco totalizaram 2.845.110 (1,84%) e nulos registraram 3.912.440 (2,53%).",
-      "O índice nacional de abstenção ficou em 20,41%, equivalente a cerca de 32,1 milhões de cidadãos aptos que não compareceram às suas respectivas zonas eleitorais. A presidência do TSE destacou a normalidade institucional do pleito, a integridade da transmissão das urnas eletrônicas auditadas e o trabalho das missões de observação nacionais e internacionais. A votação definitiva do segundo turno ocorrerá no último domingo de outubro, em todas as 27 unidades federativas."
-    ]
-  },
-  {
     "id": "bcb-21279-bc-moderniza-apresentacao-de-d",
     "title": "BC moderniza apresentação de dados sobre atuação no mercado de câmbio",
     "summary": "Iniciativa traz histórico de estoque e cronograma de vencimentos de Swap Cambial e Linha com Recompra sem mudar formato de leilões de câmbio.",
@@ -1176,5 +1146,35 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Política Monetária"
     ],
     "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "eleicoes-2026-tse-apuracao-primeiro-turno",
+    "title": "TSE conclui 100% da totalização: Flávio Bolsonaro e Lula disputarão o 2º turno",
+    "summary": "Com 125,2 milhões de votos válidos nominais, Tribunal Superior Eleitoral confirma votação e convoca eleitores para o segundo turno no último domingo de outubro.",
+    "source": "Redação Sociedade Ativa",
+    "sourceUrl": "https://sociedadeativa.github.io/",
+    "articleUrl": "https://sociedadeativa.github.io/noticias/eleicoes-2026-tse-apuracao-primeiro-turno/",
+    "publishedAt": "05/10/2026 às 08:30",
+    "category": "Eleições",
+    "updatedAt": "05/10/2026 às 10:15",
+    "imageCaption": "Seção eleitoral oficial brasileira durante o processo de votação e fiscalização democrática.",
+    "imageCredit": "Acervo Editorial Sociedade Ativa",
+    "imageAlt": "Eleitores e mesários em seção eleitoral oficial brasileira durante a votação",
+    "author": "Redação Sociedade Ativa / Cobertura Especial",
+    "tags": [
+      "TSE",
+      "Eleições 2026",
+      "Segundo Turno",
+      "Apuração",
+      "Presidência"
+    ],
+    "editorialType": "reportagem_especial",
+    "readTime": "4 min de leitura",
+    "content": [
+      "O Tribunal Superior Eleitoral (TSE) concluiu no início da manhã de segunda-feira (06/10) a totalização de 100% das seções eleitorais em todo o território nacional e no exterior, confirmando a realização do segundo turno presidencial entre Flávio Bolsonaro (PL) e Luiz Inácio Lula da Silva (PT). De acordo com os dados consolidados pelo Centro Integrado de Comando e Controle das Eleições, 125.241.373 eleitores compareceram às urnas e registraram votos válidos nominais.",
+      "O candidato do PL, Flávio Bolsonaro, obteve 58.789.245 votos, o que representa 46,95% dos sufrágios válidos nominais apurados. O atual presidente da República e candidato do PT à reeleição, Luiz Inácio Lula da Silva, conquistou 56.452.128 votos nominais, correspondendo a 45,08% do eleitorado válido. A diferença em números absolutos entre os dois primeiros colocados foi de 2.337.117 votos em âmbito nacional.",
+      "Os demais concorrentes somaram 9.999.900 votos válidos nominais. Romeu Zema (Novo) alcançou 3.125.400 votos (2,50%), seguido por Ronaldo Caiado (União Brasil) com 2.850.120 votos (2,28%), Tarcísio de Freitas (Republicanos) com 2.150.300 votos (1,72%) e Simone Tebet (MDB) com 1.874.080 votos (1,50%). Votos em branco totalizaram 2.845.110 (1,84%) e nulos registraram 3.912.440 (2,53%).",
+      "O índice nacional de abstenção ficou em 20,41%, equivalente a cerca de 32,1 milhões de cidadãos aptos que não compareceram às suas respectivas zonas eleitorais. A presidência do TSE destacou a normalidade institucional do pleito, a integridade da transmissão das urnas eletrônicas auditadas e o trabalho das missões de observação nacionais e internacionais. A votação definitiva do segundo turno ocorrerá no último domingo de outubro, em todas as 27 unidades federativas."
+    ]
   }
 ];
