@@ -5,6 +5,93 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1705722",
+    "title": "Tensões voltam a crescer; França contabiliza custos de protestos",
+    "summary": "Novos confrontos eclodiram em Paris neste domingo (18), um dia depois de a França ter vivido um dos piores dias de agitação dos últimos anos, com protestos contra os preços altos que deixaram um manifestante morto, milhares de pessoas presas e lojas saqueadas ou danificadas...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/tensoes-voltam-crescer-franca-contabiliza-custos-de-protestos",
+    "publishedAt": "18/10/2026 às 15:02",
+    "category": "Mundo",
+    "imageUrl": "https://imagens.ebc.com.br/_eJuPurHh31eSSM3Th_pQzE34UQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/18/2026-10-18t164635z_13488822_rc2s5oam4bmn_rtrmadp_3_france-protest.jpg?itok=9dhSTbgQ",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "Tensões voltam a crescer; França contabiliza custos de protestos",
+    "author": "Sybille de La Hamaide* – Repórter da Reuters",
+    "tags": [
+      "Internacional",
+      "França",
+      "Protestos",
+      "Manifestação",
+      "Paris"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "ebc-1705705",
+    "title": "Mega-Sena acumula; prêmio pode chegar a R$ 185 milhões na terça-feira",
+    "summary": "O concurso 3.071 da Mega-sena acumulou já que nenhuma aposta acertou as seis dezenas sorteadas na manhã deste domingo (18). Com isso, o prêmio estimado para o concurso de terça-feira (20) deve chegar a R$ 185 milhões. Os números sorteados no Espaço da Sorte, em São Paulo...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/mega-sena-acumula-premio-pode-chegar-r-185-milhoes-na-terca-feira",
+    "publishedAt": "18/10/2026 às 14:22",
+    "category": "Brasil",
+    "imageUrl": "https://imagens.ebc.com.br/4FxaKp-ufKrP2KKeqa46Ii_CIGc=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/05/23/mega-sena-30-anos-mc_abr_23052026-5.jpg?itok=YvaILHK7",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "Mega-Sena acumula; prêmio pode chegar a R$ 185 milhões na terça-feira",
+    "author": "Daniella Almeida – Repórter da Agência Brasil",
+    "tags": [
+      "Geral",
+      "Mega-Sena",
+      "Loterias Caixa",
+      "Brasil"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "ebc-1705704",
+    "title": "Eleitor sem biometria pode votar no segundo turno das eleições",
+    "summary": "O cadastro biométrico na Justiça Eleitoral não é obrigatório para o exercício do voto. O eleitor que não tiver a biometria cadastrada ou tiver problemas no reconhecimento da biometria dentro da seção eleitoral, poderá votar também no segundo turno das eleições, marcado para o...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitor-sem-biometria-pode-votar-no-segundo-turno-das-eleicoes",
+    "publishedAt": "18/10/2026 às 14:02",
+    "category": "Eleições",
+    "imageUrl": "https://imagens.ebc.com.br/gSHAMArfxc4DklKHG57B4Ipe_wQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/img_2873.jpg?itok=yKi5kreN",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "Eleitor sem biometria pode votar no segundo turno das eleições",
+    "author": "Daniella Almeida – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "Justiça Eleitoral",
+      "eleições 2026",
+      "Biometria",
+      "Cadastro Biométrico"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "ebc-1705703",
+    "title": "Termina neste domingo prazo escolher idioma da prova do Enem 2026",
+    "summary": "Termina neste domingo (18) o prazo para que os candidatos inscritos automaticamente no Exame Nacional do Ensino Médio (Enem) 2026 selecionem o idioma de preferência para a prova de língua estrangeira . As opções são inglês ou espanhol e a escolha deve ser feita na Página do...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/termina-neste-domingo-prazo-escolher-idioma-da-prova-do-enem-2026",
+    "publishedAt": "18/10/2026 às 13:15",
+    "category": "Brasil",
+    "imageUrl": "https://imagens.ebc.com.br/lH7bRogdP7SK-HNCj1cFQxVZPFQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/11/16/toms0175.jpg?itok=mBi7D9da",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "Termina neste domingo prazo escolher idioma da prova do Enem 2026",
+    "author": "Daniella Almeida – Repórter da Agência Brasil",
+    "tags": [
+      "Educação",
+      "Enem 2026",
+      "idioma estrangeiro",
+      "Página do Participante",
+      "MEC"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
     "id": "ebc-1705479",
     "title": "Estudantes retomam protagonismo em momento decisivo no país, diz UNE",
     "summary": "A preocupação com os rumos do país e com os riscos para as instituições democráticas e para a educação, às vésperas do segundo turno das eleições presidenciais, impulsionou a retomada das ruas pelo movimento estudantil. Milhares de estudantes têm promovido atos em diversas...",
@@ -913,28 +1000,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "editorialType": "sumula_oficial"
   },
   {
-    "id": "ebc-1705596",
-    "title": "Brasil deve voltar a ser 8ª maior economia do mundo em 2027, prevê FMI",
-    "summary": "O Brasil deve voltar ao posto de oitava maior economia do mundo em 2027, deixando para trás Rússia e Itália. A projeção faz parte do documento Perspectivas da Economia Mundial , divulgado nesta semana pelo Fundo Monetário Internacional (FMI). FMI prevê crescimento de 2,2% do...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/brasil-deve-voltar-ser-8a-maior-economia-do-mundo-em-2027-preve-fmi",
-    "publishedAt": "16/10/2026 às 12:47",
-    "category": "Economia",
-    "imageUrl": "https://imagens.ebc.com.br/PIFJu9G0mLbpq7rr_pFNJMnHHRg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2020-12-04t162610z_113705395_rc2ggk9mzfi9_rtrmadp_3_brazil-soybeans-imports_1.jpg?itok=U7p1YGGX",
-    "imageCredit": "Foto: Agência Brasil / EBC",
-    "imageAlt": "Brasil deve voltar a ser 8ª maior economia do mundo em 2027, prevê FMI",
-    "author": "Bruno de Freitas Moura – Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "FMI",
-      "PIB",
-      "ranking",
-      "economia"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
     "id": "camara-1311792-congresso-promulga-aposentador",
     "title": "Congresso promulga aposentadoria especial para agentes de saúde e de combate a endemias",
     "summary": "Pelas novas regras, as duas categorias poderão se aposentar aos 57 anos se mulher, e 60 anos se homem, com 25 anos de contribuição e de atividade",
@@ -946,66 +1011,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261016103903662-768x473.jpg",
     "imageCredit": "Divulgação / Agência Câmara de Notícias",
     "imageAlt": "Congresso promulga aposentadoria especial para agentes de saúde e de combate a endemias",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "camara-1311797-congresso-promulga-emenda-que-",
-    "title": "Congresso promulga emenda que acaba com escala 6x1 e estabelece jornada máxima de 40 horas semanais",
-    "summary": "Lula e os presidentes da Câmara, Hugo Motta, e do Congresso, Davi Alcolumbre, celebraram a medida e defenderam direito de descanso para o trabalhador brasileiro",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311797-congresso-promulga-emenda-que-acaba-com-escala-6x1-e-estabelece-jornada-maxima-de-40-horas-semanais",
-    "publishedAt": "16/10/2026 às 12:08",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261016103921991-768x473.jpg",
-    "imageCredit": "Divulgação / Agência Câmara de Notícias",
-    "imageAlt": "Congresso promulga emenda que acaba com escala 6x1 e estabelece jornada máxima de 40 horas semanais",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "camara-1311796-motta-somos-um-pais-que-valori",
-    "title": "Motta: Somos um país que valoriza o trabalho sem esquecer o trabalhador",
-    "summary": "Presidente da Câmara destacou o fim da escala 6x1 como uma das maiores conquistas dos trabalhadores brasileiros",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311796-motta-somos-um-pais-que-valoriza-o-trabalho-sem-esquecer-o-trabalhador",
-    "publishedAt": "16/10/2026 às 11:49",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261016103907801-768x474.jpg",
-    "imageCredit": "Divulgação / Agência Câmara de Notícias",
-    "imageAlt": "Motta: Somos um país que valoriza o trabalho sem esquecer o trabalhador",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "camara-1311742-congresso-promulga-o-fim-da-es",
-    "title": "Congresso promulga o fim da escala 6x1 e aposentadoria especial para agentes de saúde",
-    "summary": "Hugo Motta diz que a aprovação da redução da jornada de trabalho coroa um esforço histórico feito pela Câmara",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311742-congresso-promulga-o-fim-da-escala-6x1-e-aposentadoria-especial-para-agentes-de-saude",
-    "publishedAt": "15/10/2026 às 20:49",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261016103859104-768x474.jpg",
-    "imageCredit": "Divulgação / Agência Câmara de Notícias",
-    "imageAlt": "Congresso promulga o fim da escala 6x1 e aposentadoria especial para agentes de saúde",
     "author": "Agência Câmara de Notícias",
     "tags": [
       "Congresso",
