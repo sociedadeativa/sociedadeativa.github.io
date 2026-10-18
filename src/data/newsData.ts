@@ -5,6 +5,26 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1705742",
+    "title": "Minerais críticos e estratégicos empregam 129 mil pessoas no Brasil",
+    "summary": "As atividades relacionadas ao setor de minerais críticos e estratégicos (MCE) para o Brasil somaram 129.423 empregos, em 2025, o equivalente a 57% dos 226.634 empregos da indústria extrativa mineral do país. Quando comparado ao mesmo mercado de trabalho registrado em 2023...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/minerais-criticos-e-estrategicos-empregam-129-mil-pessoas-no-brasil",
+    "publishedAt": "18/10/2026 às 17:12",
+    "category": "Economia",
+    "imageUrl": "https://imagens.ebc.com.br/1G0laUv1Nd3sz6xaakOAyJeFCKk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/04/22/sigma-lithium-litio-jequitinhonh.jpeg?itok=E_oW8sHb",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "Minerais críticos e estratégicos empregam 129 mil pessoas no Brasil",
+    "author": "Daniella Almeida – Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "minerais críticos",
+      "ANM"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
     "id": "ebc-1705722",
     "title": "Tensões voltam a crescer; França contabiliza custos de protestos",
     "summary": "Novos confrontos eclodiram em Paris neste domingo (18), um dia depois de a França ter vivido um dos piores dias de agitação dos últimos anos, com protestos contra os preços altos que deixaram um manifestante morto, milhares de pessoas presas e lojas saqueadas ou danificadas...",
@@ -974,28 +994,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "trabalhador",
       "Escala 5x2",
       "Senado"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "ebc-1705599",
-    "title": "Descanso de trabalhador não quebra empresas, diz Lula após fim da 6x1",
-    "summary": "O presidente Luiz Inácio Lula da Silva rebateu nesta sexta-feira (16) críticas à aprovação do fim da escala 6x1. Ao discursar durante a promulgação da Emenda Constitucional 221, que instituiu a escala 5x2 para todos os trabalhadores , ele afirmou que “ninguém quer que a...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/descanso-de-trabalhador-nao-quebra-empresas-diz-lula-apos-fim-da-6x1",
-    "publishedAt": "16/10/2026 às 12:59",
-    "category": "Política",
-    "imageUrl": "https://imagens.ebc.com.br/2EQ-gBVuVK0RSD2kwCCTrbkIZeI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/16/sem_titulo-12.jpg?itok=c1ZAygoS",
-    "imageCredit": "Foto: Agência Brasil / EBC",
-    "imageAlt": "Descanso de trabalhador não quebra empresas, diz Lula após fim da 6x1",
-    "author": "Lucas Pordeus León - repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "fim da escala 6x1",
-      "Congresso Nacional",
-      "Lula",
-      "Direitos Trabalhistas"
     ],
     "editorialType": "sumula_oficial"
   },
