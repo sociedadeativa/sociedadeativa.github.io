@@ -5,6 +5,137 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1705863",
+    "title": "TRE-RJ alterou apenas um local de votação no estado; confira",
+    "summary": "O Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ) informou nesta segunda-feira (19) que houve alteração em apenas um local de votação no segundo turno. A mudança ocorre na capital, no bairro de Brás de Pina, na zona norte do Rio.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tre-rj-alterou-apenas-um-local-de-votacao-no-estado-confira",
+    "publishedAt": "19/10/2026 às 18:39",
+    "category": "Eleições",
+    "ingestedAt": "19/10/2026 às 18:58",
+    "author": "Douglas Corrêa – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Local de Votação",
+      "TRE-RJ",
+      "Brás de Pina"
+    ]
+  },
+  {
+    "id": "ebc-1705846",
+    "title": "Órgão Especial do TJRJ confirma Vasco x Boca Juniors no Maracanã",
+    "summary": "O Órgão Especial do Tribunal de Justiça do Rio de Janeiro (TJRJ) em sessão realizada nesta segunda-feira, (19), decidiu, por unanimidade, que a partida válida pela semifinal da Copa Sul-Americana entre Vasco da Gama e Boca Juniors será realizada nesta terça-feira, (20).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/orgao-especial-do-tjrj-confirma-vasco-x-boca-juniors-no-maracana",
+    "publishedAt": "19/10/2026 às 18:20",
+    "category": "Justiça",
+    "ingestedAt": "19/10/2026 às 18:58",
+    "author": "Douglas Corrêa - Repórter da Agência Brasil",
+    "tags": [
+      "Esportes",
+      "Vasco",
+      "Boca Juniors",
+      "Maracanã",
+      "Justiça"
+    ]
+  },
+  {
+    "id": "ebc-1705840",
+    "title": "Moradores da Maré se mobilizam para divulgar locais de votação",
+    "summary": "“Pensei em todo momento em desistir”. A declaração é do fotógrafo Marlon Soares, morador do Complexo da Maré, conjunto de 16 comunidades onde moram cerca de 140 mil pessoas, na zona norte do Rio de Janeiro.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/moradores-da-mare-se-mobilizam-para-divulgar-locais-de-votacao",
+    "publishedAt": "19/10/2026 às 17:56",
+    "category": "Eleições",
+    "ingestedAt": "19/10/2026 às 18:58",
+    "author": "Bruno de Freitas Moura - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "TSE",
+      "TRE-RJ",
+      "Complexo da Maré"
+    ]
+  },
+  {
+    "id": "ebc-1705847",
+    "title": "Revalida 2026/2: divulgado resultado de casos de logística e de saúde",
+    "summary": "O resultado individual da análise de solicitações apresentadas por participantes da primeira etapa do Exame Nacional de Revalidação de Diplomas Médicos Expedidos por Instituições de Educação Superior Estrangeiras (Revalida) 2026/2, que tiveram problemas logísticos durante.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/revalida-20262-divulgado-resultado-de-casos-de-logistica-e-de-saude",
+    "publishedAt": "19/10/2026 às 17:49",
+    "category": "Governo",
+    "ingestedAt": "19/10/2026 às 18:58",
+    "author": "Daniella Almeida - Repórter da Agência Brasil",
+    "tags": [
+      "Educação",
+      "Revalida",
+      "recursos",
+      "taxa de inscrição",
+      "Inep"
+    ]
+  },
+  {
+    "id": "camara-1310379-projeto-cria-politica-nacional",
+    "title": "Projeto cria política nacional para proteger povos e comunidades tradicionais de terreiro",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1310379-projeto-cria-politica-nacional-para-proteger-povos-e-comunidades-tradicionais-de-terreiro",
+    "publishedAt": "19/10/2026 às 17:25",
+    "category": "Congresso",
+    "ingestedAt": "19/10/2026 às 18:58",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "ebc-1705845",
+    "title": "Janones poderá ter alta em 48 horas, diz boletim médico",
+    "summary": "O deputado federal André Janones (Rede-MG) poderá ter alta em 48 horas, segundo boletim médico divulgado nesta segunda-feira (19) pelo Hospital Vila Nova Star, na capital paulista.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/janones-podera-ter-alta-em-48-horas-diz-boletim-medico",
+    "publishedAt": "19/10/2026 às 17:25",
+    "category": "Eleições",
+    "ingestedAt": "19/10/2026 às 18:58",
+    "author": "Bruno Bocchini - repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "André Janones",
+      "Exército do Lula",
+      "Lula"
+    ]
+  },
+  {
+    "id": "ebc-1705842",
+    "title": "DF e mais 4 estados não tiveram locais de votação alterados",
+    "summary": "Dados do Tribunal Superior Eleitoral (TSE) mostram que Distrito Federal, Acre, Rio de Janeiro, Roraima e Santa Catarina não terão alterações nos locais de votação no segundo turno.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/df-e-outros-4-estados-nao-tiveram-locais-de-votacao-alterados",
+    "publishedAt": "19/10/2026 às 17:13",
+    "category": "Eleições",
+    "ingestedAt": "19/10/2026 às 18:58",
+    "author": "Iara Balduino – Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "eleições",
+      "eleições 2026",
+      "TSE",
+      "Eleições"
+    ]
+  },
+  {
     "id": "camara-1309837-projeto-preve-lista-triplice-p",
     "title": "Projeto prevê lista tríplice para diretores de agências reguladoras e novas regras para perda de mandato",
     "summary": "Texto está em análise na Câmara dos Deputados.",
@@ -24,7 +155,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
     "id": "ebc-1705838",
     "title": "2º turno: 130 mil eleitores de 22 estados votarão em local diferente",
-    "summary": "O número de seções eleitorais alteradas entre os 1º e 2º turnos diminuiu para 444 de acordo com dados do Superior Tribunal Eleitoral. Isso significa que 130 mil eleitores de 22 estados vão votar no dia 25 em local diferente do que votaram no primeiro turno.",
+    "summary": "O Tribunal Superior Eleitoral (TSE) informou nesta segunda-feira (19) que 444 seções eleitorais terão alteração de endereço de votação entre o primeiro e o segundo turno das eleições de 2026.",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/2o-turno-130-mil-eleitores-de-22-estados-votarao-em-local-diferente",
@@ -37,6 +168,25 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições 2026",
       "Eleições",
       "TSE"
+    ]
+  },
+  {
+    "id": "ebc-1705835",
+    "title": "CNU 2: servidor pode indicar órgão de preferência a partir de quinta",
+    "summary": "Os servidores das carreiras de analista técnico de desenvolvimento socioeconômico (ATDS) e analista técnico de justiça e defesa (ATJD), da segunda edição do Concurso Público Nacional Unificado (CPNU 2), podem fazer a manifestação de preferência por órgão, entidade e local.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/concursos/noticia/2026-10/cnu-2-servidor-pode-indicar-orgao-de-preferencia-partir-de-quinta",
+    "publishedAt": "19/10/2026 às 16:48",
+    "category": "Justiça",
+    "ingestedAt": "19/10/2026 às 18:58",
+    "author": "Daniella Almeida – Repórter da Agência Brasil",
+    "tags": [
+      "Concursos",
+      "CNU 2",
+      "CPNU 2",
+      "Concurso Público",
+      "Administração Pública"
     ]
   },
   {
@@ -727,153 +877,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Lula",
       "Rio de Janeiro",
       "Eleições"
-    ]
-  },
-  {
-    "id": "ebc-1705743",
-    "title": "Campanha de Flávio Bolsonaro realiza manifestação na Paulista",
-    "summary": "A uma semana do segundo turno das eleições para presidência da República, o candidato Flávio Bolsonaro (PL) participou de ato na Avenida Paulista, na região central de São Paulo, neste domingo (18) .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/campanha-de-flavio-bolsonaro-realiza-manifestacao-na-paulista",
-    "publishedAt": "18/10/2026 às 19:44",
-    "category": "Eleições",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Flávio Bolsonaro",
-      "São Paulo",
-      "Eleições"
-    ]
-  },
-  {
-    "id": "ebc-1705742",
-    "title": "Minerais críticos e estratégicos empregam 129 mil pessoas no Brasil",
-    "summary": "As atividades relacionadas ao setor de minerais críticos e estratégicos (MCE) para o Brasil somaram 129. 423 empregos, em 2025, o equivalente a 57% dos 226. 634 empregos da indústria extrativa mineral do país.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/minerais-criticos-e-estrategicos-empregam-129-mil-pessoas-no-brasil",
-    "publishedAt": "18/10/2026 às 17:12",
-    "category": "Economia",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Daniella Almeida – Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "minerais críticos",
-      "ANM"
-    ]
-  },
-  {
-    "id": "ebc-1705704",
-    "title": "Eleitor sem biometria pode votar no segundo turno das eleições",
-    "summary": "O cadastro biométrico na Justiça Eleitoral não é obrigatório para o exercício do voto.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitor-sem-biometria-pode-votar-no-segundo-turno-das-eleicoes",
-    "publishedAt": "18/10/2026 às 14:02",
-    "category": "Eleições",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Daniella Almeida – Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "Justiça Eleitoral",
-      "eleições 2026",
-      "Biometria",
-      "Cadastro Biométrico"
-    ]
-  },
-  {
-    "id": "ebc-1705479",
-    "title": "Estudantes retomam protagonismo em momento decisivo no país, diz UNE",
-    "summary": "A preocupação com os rumos do país e com os riscos para as instituições democráticas e para a educação, às vésperas do segundo turno das eleições presidenciais, impulsionou a retomada das ruas pelo movimento estudantil.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/estudantes-retomam-protagonismo-em-momento-decisivo-no-pais-diz-une",
-    "publishedAt": "18/10/2026 às 12:45",
-    "category": "Eleições",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Camila Boehm - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "UNE",
-      "Movimento Estudantil",
-      "Lula"
-    ]
-  },
-  {
-    "id": "ebc-1705698",
-    "title": "Eleições: quem não votou no primeiro turno pode participar do segundo",
-    "summary": "O eleitor que não votou no primeiro turno das Eleições Gerais de 2026, em 4 de outubro, pode participar normalmente do segundo turno, marcado para o próximo domingo, 25 de outubro.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleicoes-quem-nao-votou-no-primeiro-turno-pode-participar-do-segundo",
-    "publishedAt": "18/10/2026 às 11:38",
-    "category": "Eleições",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Daniella Almeida – Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Segundo Turno",
-      "justificativa",
-      "Eleições"
-    ]
-  },
-  {
-    "id": "ebc-1705643",
-    "title": "Empresas de três regiões terão aporte de R$ 450 milhões para inovação",
-    "summary": "A segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Financiadora de Estudos e Projetos (Finep) terá um total de R$ 450 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/empresas-de-tres-regioes-terao-aporte-de-r-450-milhoes-para-inovacao",
-    "publishedAt": "18/10/2026 às 11:20",
-    "category": "Economia",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Agência Brasil",
-    "tags": [
-      "Economia",
-      "Finep",
-      "MCTI",
-      "Inovação"
-    ]
-  },
-  {
-    "id": "ebc-1705342",
-    "title": "BB recebe até 31 de outubro inscrições para projetos de impacto social",
-    "summary": "Projetos de impacto social podem se inscrever até 31 de outubro para receber recursos do Banco do Brasil (BB).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/bb-recebe-ate-31-de-outubro-inscricoes-para-projetos-de-impacto-social",
-    "publishedAt": "18/10/2026 às 10:15",
-    "category": "Economia",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "banco do brasil",
-      "Reciclagem",
-      "economia circular",
-      "coleta seletiva"
-    ]
-  },
-  {
-    "id": "ebc-1705696",
-    "title": "Partido Novo entra com ação no TSE contra atos musicais por democracia",
-    "summary": "O Partido Novo informou, por meio das redes sociais, que entrou, neste sábado (17), com uma ação no Tribunal Superior Eleitoral (TSE) contra os atos musicais pela democracia.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/partido-novo-entra-com-acao-no-tse-contra-atos-musicais-por-democracia",
-    "publishedAt": "17/10/2026 às 17:58",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Eleições",
-      "eleições 2026"
     ]
   },
   {
