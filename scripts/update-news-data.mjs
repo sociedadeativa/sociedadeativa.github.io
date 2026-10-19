@@ -200,7 +200,7 @@ function decodeHtmlEntities(str) {
 /**
  * Sanitiza texto puro removendo blocos indesejados, tags HTML e normalizando espaços
  */
-function cleanText(raw, maxLen = 0) {
+export function cleanText(raw, maxLen = 0) {
   if (!raw) return '';
   let text = String(raw);
 
@@ -238,7 +238,7 @@ function cleanText(raw, maxLen = 0) {
  * preposições ou palavras cortadas). Prefere sentenças completas do texto original
  * que caibam no limite estrito sem truncamento artificial.
  */
-function cleanSummary(raw, maxLen = MAX_SUMMARY_LENGTH) {
+export function cleanSummary(raw, maxLen = MAX_SUMMARY_LENGTH) {
   if (!raw) return '';
   // Primeiro, higieniza HTML e entidades
   let text = cleanText(raw, 0);
@@ -297,15 +297,47 @@ function cleanSummary(raw, maxLen = MAX_SUMMARY_LENGTH) {
     }
   }
 
+  // Fallback quando a primeira sentença sozinha excede maxLen
   if (!accumulated && sentences.length > 0) {
-    accumulated = sentences[0];
+    let first = sentences[0].trim();
+    if (first.length > maxLen) {
+      // Reserva espaço para pontuação final caso precise ser inserida
+      let sliced = first.slice(0, maxLen - 1);
+      const lastSpace = sliced.lastIndexOf(' ');
+      if (lastSpace > 0) {
+        sliced = sliced.slice(0, lastSpace);
+      }
+      sliced = sliced.replace(/[\s,;:!?-]+$/, '');
+      for (const pat of danglingPatterns) {
+        if (pat.test(sliced)) {
+          sliced = sliced.replace(pat, '').trim();
+        }
+      }
+      sliced = sliced.replace(/[\s,;:!?-]+$/, '');
+      if (sliced.length > maxLen - 1) {
+        sliced = sliced.slice(0, maxLen - 1).replace(/[\s,;:!?-]+$/, '');
+      }
+      accumulated = sliced;
+    } else {
+      accumulated = first;
+    }
   }
 
   accumulated = accumulated.trim().replace(/[\s,;:!?-]+$/, '');
 
-  // Garante terminação pontuada oficial da oração
+  // Garante terminação pontuada oficial da oração se couber no limite estrito
   if (!/[.!?]["”’\)]*$/.test(accumulated)) {
-    accumulated += '.';
+    if (accumulated.length + 1 <= maxLen) {
+      accumulated += '.';
+    }
+  }
+
+  // Garantia absoluta de que o resumo nunca excederá maxLen sob nenhuma circunstância
+  if (accumulated.length > maxLen) {
+    accumulated = accumulated.slice(0, maxLen).replace(/[\s,;:!?-]+$/, '');
+    if (!/[.!?]["”’\)]*$/.test(accumulated) && accumulated.length + 1 <= maxLen) {
+      accumulated += '.';
+    }
   }
 
   return accumulated;

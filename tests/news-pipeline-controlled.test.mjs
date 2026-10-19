@@ -41,6 +41,81 @@ function runScript(scriptContent, env = {}) {
 async function runTests() {
   let passedTests = 0;
 
+  // TEST 0: News Summary Length Validation & Fallback Truncation
+  console.log('\n[TEST 0] News Summary Length Validation & Fallback Truncation');
+  const test0Code = `
+    import fs from 'node:fs';
+    import assert from 'node:assert';
+
+    const script = fs.readFileSync('scripts/update-news-data.mjs', 'utf8');
+    const startIdx = script.indexOf('function decodeHtmlEntities');
+    const endIdx = script.indexOf('/**\\n * Extrai conteúdo de uma tag XML/RSS');
+    if (startIdx === -1 || endIdx === -1) throw new Error('Could not find helper functions in update-news-data.mjs');
+    const codeBlock = script.slice(startIdx, endIdx).replace(/export\\s+/g, '');
+
+    const { cleanSummary } = new Function(codeBlock + '\\nreturn { cleanSummary };')();
+
+    // 1. Normal short summary
+    const shortInput = "Presidente assina decreto com novas regras eleitorais para 2026.";
+    const shortRes = cleanSummary(shortInput, 280);
+    assert.ok(shortRes.length <= 280, "Short summary exceeded maxLen");
+    assert.strictEqual(shortRes, shortInput, "Short summary was altered unexpectedly");
+    console.log("  [PASS] 1. Normal short summary preserved correctly:", shortRes.length, "chars");
+
+    // 2. Summary containing several sentences
+    const multiSentenceInput = "Primeira frase sobre a decisão judicial. Segunda frase detalhando as medidas adotadas. Terceira frase com desdobramentos adicionais do processo.";
+    const multiRes = cleanSummary(multiSentenceInput, 280);
+    assert.ok(multiRes.length <= 280, "Multi-sentence summary exceeded maxLen");
+    assert.ok(/[.!?]["”’\\)]*$/.test(multiRes), "Multi-sentence summary does not end with terminal punctuation");
+    assert.ok(multiRes.includes("Primeira frase"), "Multi-sentence summary lost initial sentence");
+    console.log("  [PASS] 2. Multi-sentence summary preserved and punctuated:", multiRes.length, "chars");
+
+    // 3. First sentence longer than 280 characters
+    const longFirstSentence = "A Polícia Federal (PF) pediu nesta sexta-feira (16) ao ministro André Mendonça, do Supremo Tribunal Federal (STF), a prorrogação, por 90 dias, do inquérito que investiga os pagamentos do ex-banqueiro Daniel Vorcaro para o filme Dark Horse, a cinebiografia do ex-presidente Jair Bolsonaro.";
+    assert.ok(longFirstSentence.length > 280, "Test fixture first sentence must be > 280 chars");
+    const longRes = cleanSummary(longFirstSentence, 280);
+    assert.ok(longRes.length <= 280, "Long first sentence summary exceeded maxLen: " + longRes.length);
+    assert.ok(longRes.length > 200, "Long first sentence truncated excessively: " + longRes.length);
+    assert.ok(!/[\\s,;:!?-]$/.test(longRes.slice(0, -1)), "Long first sentence has dangling punctuation before period");
+    assert.ok(/[.!?]["”’\\)]*$/.test(longRes), "Long first sentence does not end with proper punctuation");
+    console.log("  [PASS] 3. First sentence > 280 truncated cleanly at word boundary:", longRes.length, "chars ->", JSON.stringify(longRes));
+
+    // 4. Summary with a long first sentence and no usable sentence boundary (no spaces)
+    const noWordBoundary = "X".repeat(350);
+    const noBoundaryRes = cleanSummary(noWordBoundary, 280);
+    assert.ok(noBoundaryRes.length <= 280, "Unsplittable summary exceeded maxLen: " + noBoundaryRes.length);
+    assert.strictEqual(noBoundaryRes.length, 280, "Unsplittable summary length should equal maxLen");
+    assert.ok(noBoundaryRes.endsWith("."), "Unsplittable summary should terminate with period");
+    console.log("  [PASS] 4. Long summary without sentence/word boundary handled strictly:", noBoundaryRes.length, "chars");
+
+    // 5. Guarantee that result never exceeds requested maxLen across varying lengths
+    const testCases = [
+      "A".repeat(500),
+      "Curta. " + "B".repeat(290) + ". Outra frase.",
+      "Frase com vírgula pendente no final, e mais texto que ultrapassa o limite permitido com muitas palavras adicionais para forçar o corte da sentença.",
+      "Texto terminando em preposição de corte residual na ",
+      longFirstSentence + " Segunda frase também longa que não deve ser incluída de jeito nenhum.",
+      "TSE dá 24 horas para Meta dar informações sobre igualdade de campanhas em meio ao segundo turno da corrida presidencial brasileira de 2026."
+    ];
+    for (const testLen of [50, 100, 150, 200, 280, 300]) {
+      for (const tc of testCases) {
+        const res = cleanSummary(tc, testLen);
+        assert.ok(res.length <= testLen, "Result length " + res.length + " exceeded requested maxLen " + testLen + " for case: " + tc.slice(0, 30));
+        assert.ok(/[.!?]["”’\\)]*$/.test(res) || res.length === 0, "Result missing terminal punctuation: " + res);
+      }
+    }
+    console.log("  [PASS] 5. Guarantee verified: Result strictly never exceeds maxLen across all length limits and edge cases.");
+    console.log("TEST 0 PASSED: All 5 summary length validation checks succeeded.");
+  `;
+
+  const t0 = await runScript(test0Code);
+  if (t0.code !== 0) {
+    console.error('Test 0 failed with stderr:', t0.stderr);
+    process.exit(1);
+  }
+  console.log(t0.stdout.trim());
+  passedTests++;
+
   // TEST 1: Date validation and timezone handling
   console.log('\n[TEST 1] Date validation, future-date rejection, and timezone handling');
   const test1Code = `
