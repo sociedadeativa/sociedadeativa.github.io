@@ -5,15 +5,15 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
-    "id": "camara-1307904-projeto-exige-notificacao-prev",
-    "title": "Projeto exige notificação prévia sobre renegociação contas de água e luz antes da negativação",
-    "summary": "O texto está em análise na Câmara; para virar lei, precisa ser aprovado pelos deputados e pelos senadores.",
+    "id": "camara-1309837-projeto-preve-lista-triplice-p",
+    "title": "Projeto prevê lista tríplice para diretores de agências reguladoras e novas regras para perda de mandato",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
     "source": "Agência Câmara",
     "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1307904-projeto-exige-notificacao-previa-sobre-renegociacao-contas-de-agua-e-luz-antes-da-negativacao",
-    "publishedAt": "19/10/2026 às 14:41",
+    "articleUrl": "https://www.camara.leg.br/noticias/1309837-projeto-preve-lista-triplice-para-diretores-de-agencias-reguladoras-e-novas-regras-para-perda-de-mandato",
+    "publishedAt": "19/10/2026 às 17:01",
     "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 14:49",
+    "ingestedAt": "19/10/2026 às 17:04",
     "author": "Agência Câmara de Notícias",
     "tags": [
       "Congresso",
@@ -22,15 +22,250 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
-    "id": "camara-1311936-projeto-preve-incentivo-a-come",
-    "title": "Projeto prevê incentivo à comercialização de produtos da agricultura familiar em feiras livres",
+    "id": "ebc-1705838",
+    "title": "2º turno: 130 mil eleitores de 22 estados votarão em local diferente",
+    "summary": "O número de seções eleitorais alteradas entre os 1º e 2º turnos diminuiu para 444 de acordo com dados do Superior Tribunal Eleitoral. Isso significa que 130 mil eleitores de 22 estados vão votar no dia 25 em local diferente do que votaram no primeiro turno.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/2o-turno-130-mil-eleitores-de-22-estados-votarao-em-local-diferente",
+    "publishedAt": "19/10/2026 às 16:57",
+    "category": "Justiça",
+    "ingestedAt": "19/10/2026 às 17:04",
+    "author": "Iara Balduino – Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "eleições 2026",
+      "Eleições",
+      "TSE"
+    ]
+  },
+  {
+    "id": "ebc-1705834",
+    "title": "Mulher e filho de Marcinho VP são presos em operação da PF no Rio",
+    "summary": "A empresária Márcia Gama Nepomuceno, mulher do traficante Márcio dos Santos Nepomuceno, o Marcinho VP, e mãe do rapper Oruam, foi presa pela Polícia Federal (PF) nesta segunda-feira (19), na Operação Backbone.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/mulher-e-filho-de-marcinho-vp-sao-presos-em-operacao-da-pf-no-rio",
+    "publishedAt": "19/10/2026 às 16:40",
+    "category": "Justiça",
+    "ingestedAt": "19/10/2026 às 17:04",
+    "author": "Cristina Índio do Brasil - repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "Rio de Janeiro",
+      "Operação Backbone",
+      "Polícia Federal",
+      "Marcinho VP"
+    ]
+  },
+  {
+    "id": "ebc-1705833",
+    "title": "Saiba quais locais de votação mudaram em São Paulo no 2º turno",
+    "summary": "O estado de São Paulo teve dois locais de votação alterados para o segundo turno nas eleições. De acordo com informações do Tribunal Regional Eleitoral de São Paulo, as mudanças foram necessárias “por motivo de força maior”, em decorrência de danos causados pelas fortes chuvas.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/saiba-quais-locais-de-votacao-mudaram-em-sao-paulo-no-2o-turno",
+    "publishedAt": "19/10/2026 às 16:29",
+    "category": "Justiça",
+    "ingestedAt": "19/10/2026 às 17:04",
+    "author": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "eleições 2026",
+      "Eleições",
+      "TRE-SP"
+    ]
+  },
+  {
+    "id": "camara-1308170-projeto-cria-sistema-nacional-",
+    "title": "Projeto cria sistema nacional para registrar e acompanhar crianças e adolescentes órfãos",
+    "summary": "A proposta está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1308170-projeto-cria-sistema-nacional-para-registrar-e-acompanhar-criancas-e-adolescentes-orfaos",
+    "publishedAt": "19/10/2026 às 16:26",
+    "category": "Congresso",
+    "ingestedAt": "19/10/2026 às 17:04",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "camara-1309526-projeto-preve-isencao-de-impos",
+    "title": "Projeto prevê isenção de Imposto de Renda para aposentados com sequelas neurológicas permanentes",
     "summary": "Texto está em análise na Câmara dos Deputados.",
     "source": "Agência Câmara",
     "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311936-projeto-preve-incentivo-a-comercializacao-de-produtos-da-agricultura-familiar-em-feiras-livres",
-    "publishedAt": "19/10/2026 às 14:29",
+    "articleUrl": "https://www.camara.leg.br/noticias/1309526-projeto-preve-isencao-de-imposto-de-renda-para-aposentados-com-sequelas-neurologicas-permanentes",
+    "publishedAt": "19/10/2026 às 16:02",
     "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 14:49",
+    "ingestedAt": "19/10/2026 às 17:04",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "ebc-1705830",
+    "title": "Governo pretende realocar R$ 20 bilhões no Orçamento de 2027",
+    "summary": "A equipe econômica pretende remanejar cerca de R$ 20 bilhões no Orçamento de 2027 para acomodar medidas de estímulo econômico anunciadas recentemente, informou nesta segunda-feira (19) o Ministério do Planejamento e Orçamento (MPO).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-pretende-realocar-r-20-bilhoes-no-orcamento-de-2027",
+    "publishedAt": "19/10/2026 às 15:50",
+    "category": "Economia",
+    "ingestedAt": "19/10/2026 às 17:04",
+    "author": "Wellton Máximo – Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "Orçamento 2027",
+      "PLOA"
+    ]
+  },
+  {
+    "id": "ebc-1705828",
+    "title": "Agricultura confirma foco de doença de Newcastle em Santa Catarina",
+    "summary": "O Ministério da Agricultura e Pecuária (Mapa) confirmou o registro de um foco da doença de Newcastle em um estabelecimento de avicultura comercial de corte de perus no município de Nova Itaberaba, em Santa Catarina. A existência do foco foi confirmada no domingo (18).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/agricultura-confirma-foco-de-doenca-de-newcastle-em-santa-catarina",
+    "publishedAt": "19/10/2026 às 15:43",
+    "category": "Governo",
+    "ingestedAt": "19/10/2026 às 17:04",
+    "author": "Luciano Nascimento - Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "Mapa",
+      "doença de Newcastle",
+      "avicultura",
+      "serviço de inspeção"
+    ]
+  },
+  {
+    "id": "camara-1306400-projeto-preve-incentivo-fiscal",
+    "title": "Projeto prevê incentivo fiscal para doações a conselhos comunitários de segurança",
+    "summary": "Proposta está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1306400-projeto-preve-incentivo-fiscal-para-doacoes-a-conselhos-comunitarios-de-seguranca",
+    "publishedAt": "19/10/2026 às 15:34",
+    "category": "Congresso",
+    "ingestedAt": "19/10/2026 às 17:04",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "ebc-1705826",
+    "title": "Zanin pede parecer da PGR e AGU sobre ação do PSD por 2º turno no Rio",
+    "summary": "O ministro do Supremo Tribunal Federal Cristiano Zanin pediu nesta segunda-feira (19) a manifestação da Procuradoria-Geral da República (PGR) e da Advocacia-Geral da União (AGU) sobre a ação que pede a realização de segundo turno para governador do estado do Rio de Janeiro.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/zanin-pede-parecer-da-pgr-e-agu-sobre-acao-do-psd-por-2-turno-no-rio",
+    "publishedAt": "19/10/2026 às 15:12",
+    "category": "Justiça",
+    "ingestedAt": "19/10/2026 às 17:04",
+    "author": "André Richter - repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "eleições 2026",
+      "Rio de Janeiro",
+      "Cristiano Zanin",
+      "Supremo Tribunal Federal"
+    ]
+  },
+  {
+    "id": "camara-1309592-projeto-isenta-feirantes-de-ip",
+    "title": "Projeto isenta feirantes de IPI na compra de veículos utilitários",
+    "summary": "A proposta beneficia trabalhadores ativos há pelo menos dois anos e vale para caminhonetes e furgões.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1309592-projeto-isenta-feirantes-de-ipi-na-compra-de-veiculos-utilitarios",
+    "publishedAt": "19/10/2026 às 15:07",
+    "category": "Congresso",
+    "ingestedAt": "19/10/2026 às 17:04",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "ebc-1705824",
+    "title": "Prêmio TV Brasil Petrobras Para Elas anuncia finalistas à revelação",
+    "summary": "A organização do Prêmio TV Brasil Petrobras Para Elas anunciou, nesta segunda-feira (19), as finalistas da categoria Jogadora Revelação da temporada 2026. As candidatas são a meio-campista Kaylane, do Flamengo; e as atacantes Evelin Bonifácio, do Santos, e Isa, do São Paulo.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/premio-tv-brasil-petrobras-para-elas-anuncia-finalistas-revelacao",
+    "publishedAt": "19/10/2026 às 14:56",
+    "category": "Política",
+    "ingestedAt": "19/10/2026 às 17:04",
+    "author": "Lincoln Chaves - Repórter da EBC",
+    "tags": [
+      "Esportes",
+      "Futebol Feminino",
+      "categoria",
+      "revelação",
+      "Kaylane"
+    ]
+  },
+  {
+    "id": "ebc-1705825",
+    "title": "Confira o que muda no licenciamento ambiental da aquicultura",
+    "summary": "Os aquicultores que cultivam peixe, crustáceos, moluscos, algas e outros seres vivos em ambientes controlados – como tanques e áreas delimitadas em rios e no mar –, terão novas regras de licenciamento ambiental a partir de abril de 2027.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/confira-o-que-muda-no-licenciamento-ambiental-da-aquicultura",
+    "publishedAt": "19/10/2026 às 14:55",
+    "category": "Política",
+    "ingestedAt": "19/10/2026 às 17:04",
+    "author": "Fabíola Sinimbú – Repórter da Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "aquicultura",
+      "licenciamento ambiental",
+      "Conama",
+      "Política"
+    ]
+  },
+  {
+    "id": "ebc-1705821",
+    "title": "Motoristas de ônibus fazem paralisação na zona sul de São Paulo",
+    "summary": "Motoristas de ônibus da capital paulista iniciaram uma paralisação na manhã desta segunda-feira (19), na zona sul da cidade, atingindo as linhas do Lote D10. Esses trabalhadores atuavam na antiga Transwolff.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/motoristas-de-onibus-fazem-paralisacao-na-zona-sul-de-sao-paulo",
+    "publishedAt": "19/10/2026 às 14:37",
+    "category": "Política",
+    "ingestedAt": "19/10/2026 às 17:04",
+    "author": "Agência Brasil",
+    "tags": [
+      "Geral",
+      "São Paulo",
+      "transporte público",
+      "motoristas de ônibus",
+      "Política"
+    ]
+  },
+  {
+    "id": "camara-1307904-projeto-exige-notificacao-prev",
+    "title": "Projeto exige notificação prévia sobre renegociação de contas de água e luz antes da negativação",
+    "summary": "O texto está em análise na Câmara; para virar lei, precisa ser aprovado pelos deputados e pelos senadores.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1307904-projeto-exige-notificacao-previa-sobre-renegociacao-de-contas-de-agua-e-luz-antes-da-negativacao",
+    "publishedAt": "19/10/2026 às 14:11",
+    "category": "Congresso",
+    "ingestedAt": "19/10/2026 às 17:04",
     "author": "Agência Câmara de Notícias",
     "tags": [
       "Congresso",
@@ -58,6 +293,23 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
+    "id": "camara-1311936-projeto-preve-incentivo-a-come",
+    "title": "Projeto prevê incentivo à comercialização de produtos da agricultura familiar em feiras livres",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311936-projeto-preve-incentivo-a-comercializacao-de-produtos-da-agricultura-familiar-em-feiras-livres",
+    "publishedAt": "19/10/2026 às 14:29",
+    "category": "Congresso",
+    "ingestedAt": "19/10/2026 às 14:49",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
     "id": "ebc-1705815",
     "title": "Deputado André Janones é internado com arritmia em São Paulo",
     "summary": "O deputado federal André Janones (Rede-MG) foi internado com arritmia cardíaca na madrugada desta segunda-feira (19), na Unidade de Terapia Intensiva (UTI) do Hospital Vila Nova Star, em São Paulo.",
@@ -72,7 +324,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Política",
       "André Janones",
       "Exército do Lula",
-      "Debate",
+      "debate",
       "Lula"
     ]
   },
@@ -90,7 +342,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Geral",
       "disparo de arma",
-      "Deputado estadual",
+      "Deputado Estadual",
       "PMSP",
       "Marcelo Aguiar"
     ]
@@ -622,267 +874,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Justiça",
       "Eleições",
       "eleições 2026"
-    ]
-  },
-  {
-    "id": "ebc-1705694",
-    "title": "Cortes em auxílios sociais podem gerar retração em cidades do interior",
-    "summary": "A estagnação ou cortes no valor dos benefícios sociais e previdenciários poderão causar uma retração severa à atividade econômica em municípios do interior do Brasil, mostra levantamento do Centro de Pesquisa em Macroeconomia das Desigualdades (Made), da Faculdade de Economia.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/cortes-em-auxilios-sociais-podem-gerar-retracao-em-cidades-do-interior",
-    "publishedAt": "17/10/2026 às 17:29",
-    "category": "Economia",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Bruno Bocchini - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "bolsa família",
-      "benefícios sociais",
-      "economia",
-      "Cidades"
-    ]
-  },
-  {
-    "id": "ebc-1705692",
-    "title": "Justiça Federal manda Meta restabelecer contas estudantis do RS",
-    "summary": "A 1ª Vara Federal de Porto Alegre determinou que a empresa Meta restabeleça, em até dois dias, as contas no Instagram de entidades estudantis do Rio Grande do Sul que foram bloqueadas.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/justica-federal-manda-meta-restabelecer-contas-estudantis-do-rs",
-    "publishedAt": "17/10/2026 às 16:46",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Iara Balduino - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Meta",
-      "TSE",
-      "bloqueio de perfis"
-    ]
-  },
-  {
-    "id": "ebc-1705687",
-    "title": "Eleições: mais de 4 mil seções tiveram locais alterados; confira",
-    "summary": "Os tribunais regionais eleitorais (TREs) alteraram o local de votação de 4. 352 seções eleitorais neste 2º turno. Isso corresponde a apenas 0,87% das seções do país.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleicoes-mais-de-4-mil-secoes-tiveram-locais-alterados-confira",
-    "publishedAt": "17/10/2026 às 14:20",
-    "category": "Eleições",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "TSE",
-      "Segundo Turno",
-      "Eleições"
-    ]
-  },
-  {
-    "id": "ebc-1705646",
-    "title": "Defesa de Vorcaro pede investigação sobre vazamento de conversas",
-    "summary": "A defesa do ex-banqueiro Daniel Vorcaro enviou nesta sexta-feira (16) uma petição ao Supremo Tribunal Federal (STF) para solicitar a abertura de investigação sobre o vazamento de conversas privadas que fazem parte das investigações do caso Master.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/defesa-de-vorcaro-pede-investigacao-sobre-vazamento-de-conversas",
-    "publishedAt": "16/10/2026 às 21:18",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Agência Brasil",
-    "tags": [
-      "Justiça",
-      "stf",
-      "Daniel Vorcaro",
-      "Banco Master",
-      "Operação Compliance Zero"
-    ]
-  },
-  {
-    "id": "ebc-1705644",
-    "title": "Anac estabelece regras mais restritivas para aviação em Congonhas (SP)",
-    "summary": "A Agência Nacional de Aviação Civil (Anac) estabeleceu regras mais restritivas para alocação de horários de pousos e decolagens (slots) no Aeroporto de Congonhas (SP).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/anac-estabelece-regras-mais-restritivas-para-aviacao-em-congonhas-sp",
-    "publishedAt": "16/10/2026 às 21:03",
-    "category": "Economia",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Agência Brasil",
-    "tags": [
-      "Economia",
-      "Congonhas",
-      "Anac",
-      "slots",
-      "aviação"
-    ]
-  },
-  {
-    "id": "ebc-1705641",
-    "title": "TSE decide manter ordem para Meta garantir isonomia a candidatos",
-    "summary": "O Tribunal Superior Eleitoral (TSE) decidiu, por unanimidade, nesta sexta-feira (16) manter a decisão individual do ministro Marco Aurélio Belizze que proibiu a Meta de restringir a entrega de postagens que envolvem os candidatos à Presidência da República.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-decide-manter-ordem-para-meta-garantir-isonomia-candidatos",
-    "publishedAt": "16/10/2026 às 20:04",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "André Richter - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "TSE",
-      "Meta",
-      "Lula"
-    ]
-  },
-  {
-    "id": "ebc-1705639",
-    "title": "MPF defende prisão de PM por matar estudante de medicina",
-    "summary": "O Ministério Público Federal (MPF) manifestou-se a favor da prisão preventiva do policial militar Guilherme Augusto Macedo, réu pela morte do estudante de medicina Marco Aurélio Cardenas Acosta , em novembro do ano passado, na capital paulista.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/mpf-defende-prisao-de-pm-por-matar-estudante-de-medicina",
-    "publishedAt": "16/10/2026 às 20:00",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Camila Boehm - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "STJ",
-      "MPF",
-      "Prisão Preventiva",
-      "Polícia Militar"
-    ]
-  },
-  {
-    "id": "ebc-1705635",
-    "title": "PF pede prorrogação de inquérito sobre financiamento do Dark Horse",
-    "summary": "A Polícia Federal (PF) pediu nesta sexta-feira (16) ao ministro André Mendonça, do Supremo Tribunal Federal (STF), a prorrogação, por 90 dias, do inquérito que investiga os pagamentos do ex-banqueiro Daniel Vorcaro para o filme Dark Horse , a cinebiografia do ex-presidente Jair.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/pf-pede-prorrogacao-de-inquerito-sobre-financiamento-do-dark-horse",
-    "publishedAt": "16/10/2026 às 19:49",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "André Richter - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Polícia Federal",
-      "stf",
-      "André Mendonça",
-      "Dark Horse"
-    ]
-  },
-  {
-    "id": "ebc-1705631",
-    "title": "Zanin vai relatar novo pedido do PSD por segundo turno no Rio",
-    "summary": "O ministro do Supremo Tribunal Federal Cristiano Zanin foi sorteado nesta sexta-feira (16) para relatar a ação que pede a realização de segundo turno para o governo do estado do Rio de Janeiro.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/zanin-vai-relatar-novo-pedido-do-psd-por-segundo-turno-no-rio",
-    "publishedAt": "16/10/2026 às 18:51",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "André Richter - repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Cristiano Zanin",
-      "Supremo Tribunal Federal",
-      "stf"
-    ]
-  },
-  {
-    "id": "ebc-1705629",
-    "title": "Governo prevê crédito a empresas afetadas por fim da 6x1, diz Durigan",
-    "summary": "A equipe econômica estuda oferecer linhas de crédito e programas de capacitação para empresas que enfrentarem dificuldades com o fim da escala de trabalho 6x1, disse nesta sexta-feira (16) o ministro da Fazenda, Dario Durigan.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-preve-credito-empresas-afetadas-por-fim-da-6x1-diz-durigan",
-    "publishedAt": "16/10/2026 às 18:36",
-    "category": "Economia",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "fim da escala 6x1",
-      "Dario Durigan",
-      "Reforma Tributária"
-    ]
-  },
-  {
-    "id": "camara-1311899-motta-determina-adocao-imediat",
-    "title": "Motta determina adoção imediata da nova escala de trabalho na Câmara dos Deputados",
-    "summary": "Para o presidente da Câmara, trata-se de uma reforma na qualidade de vida dos brasileiros.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311899-motta-determina-adocao-imediata-da-nova-escala-de-trabalho-na-camara-dos-deputados",
-    "publishedAt": "16/10/2026 às 16:53",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "camara-1311420-projeto-destina-recursos-orcam",
-    "title": "Projeto destina recursos orçamentários para contribuições do Brasil a órgãos internacionais",
-    "summary": "Texto será analisado pela Comissão Mista de Orçamento e, em seguida, pelo Plenário do Congresso Nacional.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311420-projeto-destina-recursos-orcamentarios-para-contribuicoes-do-brasil-a-orgaos-internacionais",
-    "publishedAt": "16/10/2026 às 13:49",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1705602",
-    "title": "Do trabalho sem limite ao fim da 6x1: veja avanço da jornada no Brasil",
-    "summary": "A promulgação da emenda constitucional que extingue a escala de seis dias de trabalho para um de descanso marca um novo capítulo da história das relações trabalhistas no Brasil.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/do-trabalho-sem-limites-ao-fim-da-escala-6x1-veja-evolucao-da-jornada",
-    "publishedAt": "16/10/2026 às 13:31",
-    "category": "Economia",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Pedro Peduzzi - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "trabalho",
-      "emprego",
-      "fim da escala 6x1",
-      "Sindicato"
-    ]
-  },
-  {
-    "id": "ebc-1705596",
-    "title": "Brasil deve voltar a ser 8ª maior economia do mundo em 2027, prevê FMI",
-    "summary": "O Brasil deve voltar ao posto de oitava maior economia do mundo em 2027, deixando para trás Rússia e Itália. A projeção faz parte do documento Perspectivas da Economia Mundial , divulgado nesta semana pelo Fundo Monetário Internacional (FMI).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/brasil-deve-voltar-ser-8a-maior-economia-do-mundo-em-2027-preve-fmi",
-    "publishedAt": "16/10/2026 às 12:47",
-    "category": "Economia",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Bruno de Freitas Moura – Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "FMI",
-      "PIB",
-      "ranking",
-      "economia"
     ]
   },
   {
