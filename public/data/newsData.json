@@ -1,5 +1,27 @@
 [
   {
+    "id": "ebc-1705743",
+    "title": "Campanha de Flávio Bolsonaro realiza manifestação na Paulista",
+    "summary": "A uma semana do segundo turno das eleições para presidência da República, o candidato Flávio Bolsonaro (PL) participou de ato na Avenida Paulista, na região central de São Paulo, neste domingo (18) . Durante seu discurso, ele voltou a afirmar que o ex-presidente Jair...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/campanha-de-flavio-bolsonaro-realiza-manifestacao-na-paulista",
+    "publishedAt": "18/10/2026 às 19:44",
+    "category": "Eleições",
+    "imageUrl": "https://imagens.ebc.com.br/4I3Dy3NPoqymlB8nqQ10NlEa4Jo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/18/_raf2559-13_0.jpg?itok=YBSsNtX6",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "Campanha de Flávio Bolsonaro realiza manifestação na Paulista",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Flávio Bolsonaro",
+      "São Paulo",
+      "Eleições"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
     "id": "ebc-1705742",
     "title": "Minerais críticos e estratégicos empregam 129 mil pessoas no Brasil",
     "summary": "As atividades relacionadas ao setor de minerais críticos e estratégicos (MCE) para o Brasil somaram 129.423 empregos, em 2025, o equivalente a 57% dos 226.634 empregos da indústria extrativa mineral do país. Quando comparado ao mesmo mercado de trabalho registrado em 2023...",
@@ -390,7 +412,7 @@
   {
     "id": "ebc-1705687",
     "title": "Eleições: mais de 4 mil seções tiveram locais alterados; confira",
-    "summary": "O Tribunal Regional Eleitoral (TRE) alterou o local de votação de 4.352 seções eleitorais neste 2º turno. Isso corresponde a apenas 0,87% das seções do país. Mesmo assim, o TRE alerta os eleitores para que confiram com antecedência se a sua seção está entre as que mudaram de...",
+    "summary": "Os tribunais regionais eleitorais (TREs) alteraram o local de votação de 4.352 seções eleitorais neste 2º turno. Isso corresponde a apenas 0,87% das seções do país. Mesmo assim, os TREs alertam os eleitores para que confiram com antecedência se a sua seção está entre as que...",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleicoes-mais-de-4-mil-secoes-tiveram-locais-alterados-confira",
@@ -404,7 +426,7 @@
       "Política",
       "eleições 2026",
       "TSE",
-      "segundo turno",
+      "Segundo Turno",
       "Eleições"
     ],
     "editorialType": "sumula_oficial"
@@ -928,27 +950,6 @@
     "editorialType": "sumula_oficial"
   },
   {
-    "id": "ebc-1705606",
-    "title": "Congresso promulga emenda de aposentadoria especial de agente de saúde",
-    "summary": "O Congresso Nacional promulgou, nesta sexta-feira (16), a Emenda Constitucional nº 140 de 2026, que cria regras específicas para aposentadoria diferenciada dos agentes comunitários de saúde (ACS) e dos agentes de combate às endemias (ACE). A emenda fixa requisitos...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/congresso-promulga-emenda-de-aposentadoria-especial-de-agente-de-saude",
-    "publishedAt": "16/10/2026 às 13:31",
-    "category": "Política",
-    "imageUrl": "https://imagens.ebc.com.br/_RJDvalafZvl6fUL_bxS3Dbdolc=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/16/sem_titulo_1.jpg?itok=2_BF6Jw_",
-    "imageCredit": "Foto: Agência Brasil / EBC",
-    "imageAlt": "Congresso promulga emenda de aposentadoria especial de agente de saúde",
-    "author": "Lucas Pordeus León - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "Congresso Nacional",
-      "Aposentadoria Especial",
-      "Previdência Social"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
     "id": "ebc-1705602",
     "title": "Do trabalho sem limite ao fim da 6x1: veja avanço da jornada no Brasil",
     "summary": "A promulgação da emenda constitucional que extingue a escala de seis dias de trabalho para um de descanso marca um novo capítulo da história das relações trabalhistas no Brasil. A mudança, que garante o direito a dois dias de descanso semanal, ocorre após mais de um século de...",
@@ -971,24 +972,23 @@
     "editorialType": "sumula_oficial"
   },
   {
-    "id": "ebc-1705600",
-    "title": "Saiba quando começa a valer o fim da escala 6x1",
-    "summary": "Em sessão solene do Congresso Nacional, foi promulgada nesta sexta-feira (16) a Emenda Constitucional nº 141 de 2026, que põe fim à escala de seis dias de trabalho e apenas um de descanso (6x1) e prevê a escala 5x2, com duas folgas por semana. Com isso, a partir de 15 de...",
+    "id": "ebc-1705606",
+    "title": "Congresso promulga emenda de aposentadoria especial de agente de saúde",
+    "summary": "O Congresso Nacional promulgou, nesta sexta-feira (16), a Emenda Constitucional nº 140 de 2026, que cria regras específicas para aposentadoria diferenciada dos agentes comunitários de saúde (ACS) e dos agentes de combate às endemias (ACE). A emenda fixa requisitos...",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/saiba-quando-comeca-valer-o-fim-da-escala-6-por-1",
-    "publishedAt": "16/10/2026 às 13:07",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/congresso-promulga-emenda-de-aposentadoria-especial-de-agente-de-saude",
+    "publishedAt": "16/10/2026 às 13:31",
     "category": "Política",
-    "imageUrl": "https://imagens.ebc.com.br/JbRLWObzDjzISjipVznUA9jPDz8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/02_carteira_de_trabalho.jpg?itok=VCMlSAgJ",
+    "imageUrl": "https://imagens.ebc.com.br/_RJDvalafZvl6fUL_bxS3Dbdolc=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/16/sem_titulo_1.jpg?itok=2_BF6Jw_",
     "imageCredit": "Foto: Agência Brasil / EBC",
-    "imageAlt": "Saiba quando começa a valer o fim da escala 6x1",
-    "author": "Agência Brasil",
+    "imageAlt": "Congresso promulga emenda de aposentadoria especial de agente de saúde",
+    "author": "Lucas Pordeus León - Repórter da Agência Brasil",
     "tags": [
       "Política",
-      "fim da escala 6x1",
-      "trabalhador",
-      "Escala 5x2",
-      "Senado"
+      "Congresso Nacional",
+      "Aposentadoria Especial",
+      "Previdência Social"
     ],
     "editorialType": "sumula_oficial"
   },
