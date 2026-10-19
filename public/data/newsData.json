@@ -1,5 +1,154 @@
 [
   {
+    "id": "ibge-48307",
+    "title": "IBGE disponibiliza Agenda semanal com programações para os dias 19 a 23 de outubro",
+    "summary": "Agenda IBGE traz a programação do instituto para a semana - Foto: Bel Corção/Brasil com S O Instituto Brasileiro de Geografia e Estatística (IBGE) disponibilizou hoje (19) a Agenda IBGE para a semana dos dias 19 a 23 de outubro. A edição contempla as...",
+    "source": "IBGE",
+    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
+    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48307-ibge-disponibiliza-agenda-semanal-com-programacoes-para-os-dias-19-a-23-de-outubro.html",
+    "publishedAt": "19/10/2026 às 09:00",
+    "category": "Brasil",
+    "imageUrl": "https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/ibge/2024_02/Agenda-IBGE_THUMB.jpg",
+    "imageCredit": "Acervo / Agência IBGE Notícias",
+    "imageAlt": "IBGE disponibiliza Agenda semanal com programações para os dias 19 a 23 de outubro",
+    "author": "Agência IBGE Notícias",
+    "tags": [
+      "ibge",
+      "Notícia",
+      "Brasil",
+      "Estatísticas"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "ebc-1705782",
+    "title": "Confira a agenda dos presidenciáveis nesta segunda-feira (19)",
+    "summary": "Os candidatos à Presidência da República que disputam o segundo turno das eleições gerais cumprem agenda no Norte e no Sul do país, nesta segunda-feira (19). Flávio Bolsonaro estará no Pará e no Amazonas. Lula, no Rio Grande do Sul. Flávio Bolsonaro (PL) Às 11h, participa de...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/confira-agenda-dos-presidenciaveis-nesta-segunda-feira-19",
+    "publishedAt": "19/10/2026 às 08:40",
+    "category": "Eleições",
+    "imageUrl": "https://imagens.ebc.com.br/Qjn25j4kWuBB0OOSqVFyv-s7K54=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/18/banner_agenda_-_1170x700.png?itok=KJR_nOUL",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "Confira a agenda dos presidenciáveis nesta segunda-feira (19)",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Eleições"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "ebc-1705781",
+    "title": "Força Nacional vai atuar por 90 dias na região de Belo Monte",
+    "summary": "O Ministério da Justiça e Segurança Pública autorizou a atuação da Força Nacional de Segurança Pública por 90 dias na região da Usina Hidrelétrica de Belo Monte , no Pará. A medida prevê apoio aos órgãos de segurança pública federais e estaduais. O trabalho será voltado à...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/forca-nacional-vai-atuar-por-90-dias-na-regiao-de-belo-monte",
+    "publishedAt": "19/10/2026 às 08:27",
+    "category": "Justiça",
+    "imageUrl": "https://imagens.ebc.com.br/N0GUpzcusvclPbkiQ4YuRZXcK7g=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/01/08/_jaf4439.jpg?itok=olkfD169",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "Força Nacional vai atuar por 90 dias na região de Belo Monte",
+    "author": "Agência Brasil",
+    "tags": [
+      "Justiça",
+      "Belo Monte",
+      "Norte Energia",
+      "Pará",
+      "Polícia Federal"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "camara-1307050-projeto-torna-obrigatorio-indi",
+    "title": "Projeto torna obrigatório indicar a cor de roupa na etiqueta para auxiliar daltônicos",
+    "summary": "A Câmara dos Deputados analisa a proposta.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1307050-projeto-torna-obrigatorio-indicar-a-cor-de-roupa-na-etiqueta-para-auxiliar-daltonicos",
+    "publishedAt": "19/10/2026 às 08:22",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/08/img20260616110718141-768x473.jpg",
+    "imageCredit": "Divulgação / Agência Câmara de Notícias",
+    "imageAlt": "Projeto torna obrigatório indicar a cor de roupa na etiqueta para auxiliar daltônicos",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "ebc-1705779",
+    "title": "Ex-balconista de farmácia mobilizou trabalhadores para reduzir jornada",
+    "summary": "Na última sexta-feira (16), o Congresso Nacional promulgou a Emenda Constitucional 141/2026 , que acaba com a escala de trabalho 6x1. A partir de dezembro deste ano, os trabalhadores brasileiros terão direito a dois dias de descanso semanal, em vez de um, como é atualmente. A...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/ex-balconista-de-farmacia-mobilizou-trabalhadores-para-reduzir-jornada",
+    "publishedAt": "19/10/2026 às 08:19",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/4dTUTG3N1sujvMEUwLpRy9upeB0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/04/15/0d7a1704.jpg.jpeg?itok=lvZbj2Si",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "Ex-balconista de farmácia mobilizou trabalhadores para reduzir jornada",
+    "author": "Vitor Abdala - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "fim da escala 6x1",
+      "redução da jornada",
+      "trabalhadores",
+      "mobilização"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "ebc-1705777",
+    "title": "Lula e Flávio fazem primeiro debate das eleições na TV Band",
+    "summary": "Candidatos à presidência da República, Luiz Inácio Lula da Silva (PT) e Flávio Bolsonaro (PL) participaram neste domingo (18) de debate realizado pela TV Bandeirantes. O encontro foi marcado por provocações entre os candidatos e, em alguns momentos, necessidade de intervenção...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/lula-e-flavio-fazem-primeiro-debate-das-eleicoes-na-band",
+    "publishedAt": "19/10/2026 às 08:07",
+    "category": "Eleições",
+    "imageUrl": "https://imagens.ebc.com.br/Pkh0ccdLTbr4TlGANDhx23COeek=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/18/sem_titulo_1.jpg?itok=WGMsot7n",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "Lula e Flávio fazem primeiro debate das eleições na TV Band",
+    "author": "Marcelo Brandão e Pedro Rafael Villela - Repórteres da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Lula",
+      "Flávio Bolsonaro",
+      "Band"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "ebc-1705345",
+    "title": "Caminhos da Reportagem exibe edição sobre Serra da Capivara, no Piauí",
+    "summary": "No Dia do Piauí, celebrado nesta segunda-feira (19), o programa Caminhos da Reportagem, da TV Brasil , exibe, às 23h30, uma produção da TV Antares que revela a história e as belezas do Parque Nacional Serra da Capivara . Em meio a paredões que guardam as marcas do tempo, as...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-10/caminhos-da-reportagem-exibe-edi%C3%A7%C3%A3o-sobre-serra-da-capivara-no-Piaui",
+    "publishedAt": "19/10/2026 às 07:02",
+    "category": "Brasil",
+    "imageUrl": "https://imagens.ebc.com.br/fsQqiVCjZTyDWpjWUnRmuSGAD7s=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/14/pedra_furada_na_serra_da_capivara-2.jpg?itok=YKyGbGNn",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "Caminhos da Reportagem exibe edição sobre Serra da Capivara, no Piauí",
+    "author": "TV Brasil",
+    "tags": [
+      "Cultura",
+      "Dia do Piauí",
+      "Serra da Capivara",
+      "história",
+      "arqueologia"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
     "id": "ebc-1705776",
     "title": "Ícone da MPB, Benito di Paula morre em São Paulo aos 84 anos",
     "summary": "Morreu neste domingo (18), aos 84 anos, o cantor, compositor e pianista Benito di Paula. Um dos grandes nomes da música popular brasileira (MPB), o artista estava internado no Hospital 9 de Julho, em São Paulo, e tratava um câncer havia cerca de um ano. Nascido Uday Vellozo...",
@@ -845,49 +994,6 @@
     "editorialType": "sumula_oficial"
   },
   {
-    "id": "ebc-1705631",
-    "title": "Zanin vai relatar novo pedido do PSD por segundo turno no Rio",
-    "summary": "O ministro do Supremo Tribunal Federal Cristiano Zanin foi sorteado nesta sexta-feira (16) para relatar a ação que pede a realização de segundo turno para o governo do estado do Rio de Janeiro. A ação foi protocolada pelo PSD, partido do candidato Eduardo Paes, e pretende...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/zanin-vai-relatar-novo-pedido-do-psd-por-segundo-turno-no-rio",
-    "publishedAt": "16/10/2026 às 18:51",
-    "category": "Justiça",
-    "imageUrl": "https://imagens.ebc.com.br/LLpcdmKpJmujCE-v149UNfeOuog=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/10/21/54870540885_c9e73fcf37_o.jpg?itok=PMlC94lK",
-    "imageCredit": "Foto: Agência Brasil / EBC",
-    "imageAlt": "Zanin vai relatar novo pedido do PSD por segundo turno no Rio",
-    "author": "André Richter - repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Cristiano Zanin",
-      "Supremo Tribunal Federal",
-      "stf"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "ebc-1705629",
-    "title": "Governo prevê crédito a empresas afetadas por fim da 6x1, diz Durigan",
-    "summary": "A equipe econômica estuda oferecer linhas de crédito e programas de capacitação para empresas que enfrentarem dificuldades com o fim da escala de trabalho 6x1, disse nesta sexta-feira (16) o ministro da Fazenda, Dario Durigan. Segundo ele, o impacto da emenda constitucional...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-preve-credito-empresas-afetadas-por-fim-da-6x1-diz-durigan",
-    "publishedAt": "16/10/2026 às 18:36",
-    "category": "Economia",
-    "imageUrl": "https://imagens.ebc.com.br/d9mP9Z88T5e7YEWWCVrLmOGoQgs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/05/pzzb3470.jpg?itok=ryj3w4Xa",
-    "imageCredit": "Foto: Agência Brasil / EBC",
-    "imageAlt": "Governo prevê crédito a empresas afetadas por fim da 6x1, diz Durigan",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "fim da escala 6x1",
-      "Dario Durigan",
-      "Reforma Tributária"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
     "id": "camara-1311899-motta-determina-adocao-imediat",
     "title": "Motta determina adoção imediata da nova escala de trabalho na Câmara dos Deputados",
     "summary": "Para o presidente da Câmara, trata-se de uma reforma na qualidade de vida dos brasileiros",
@@ -908,71 +1014,6 @@
     "editorialType": "sumula_oficial"
   },
   {
-    "id": "ebc-1705621",
-    "title": "TSE define regras para canais de WhatsApp durante a campanha",
-    "summary": "O Tribunal Superior Eleitoral (TSE) definiu nesta sexta-feira (16) regras para o funcionamento de canais de WhatsApp que apoiam campanhas eleitorais. A decisão foi tomada após a guerra de liminares sobre o funcionamento do canal Exército do Lula , criado pelo deputado federal...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-define-regras-para-canais-de-whatsapp-durante-campanha",
-    "publishedAt": "16/10/2026 às 16:27",
-    "category": "Justiça",
-    "imageUrl": "https://imagens.ebc.com.br/3Ie0oL6tJ5oT8FuQouqJVeDwzs4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/08/55577083236_185d230b4e_o.jpg?itok=Y7JB9-cf",
-    "imageCredit": "Foto: Agência Brasil / EBC",
-    "imageAlt": "TSE define regras para canais de WhatsApp durante a campanha",
-    "author": "André Richter - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "TSE",
-      "eleições 2026",
-      "Exército do Lula",
-      "Campanha Eleitoral"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "ebc-1705619",
-    "title": "Alcolumbre homenageia Paim no fim da 6x1; entenda motivo",
-    "summary": "O presidente do Congresso Nacional, senador Davi Alcolumbre (União-AP), quebrou o protocolo, nesta sexta-feira (16), durante a promulgação da emenda constitucional que acabou com a escala 6x1 no Brasil ao convidar o senador Paulo Paim (PT-RS) (esquerda na foto em destaque)...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/alcolumbre-homenageia-paim-no-fim-da-6x1-entenda-motivo",
-    "publishedAt": "16/10/2026 às 15:44",
-    "category": "Política",
-    "imageUrl": "https://imagens.ebc.com.br/m_U8zikPmw4bWmpHgy0OogSDRq8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/16/whatsapp_image_2026-10-16_at_10.32.59.jpg?itok=2iU_HkYh",
-    "imageCredit": "Foto: Agência Brasil / EBC",
-    "imageAlt": "Alcolumbre homenageia Paim no fim da 6x1; entenda motivo",
-    "author": "Lucas Pordeus León - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "fim da escala 6x1",
-      "Paulo Paim",
-      "Davi Alcolumbre"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "ebc-1705617",
-    "title": "TSE nega pedido da campanha de Flávio para barrar posts de sindicatos",
-    "summary": "O ministro Ricardo Villas Bôas Cueva, do Tribunal Superior Eleitoral (TSE), negou nesta sexta-feira (16) pedido da campanha do candidato a presidente Flávio Bolsonaro (PL) para barrar publicações nas redes socais de 54 dirigentes de sindicatos, entidades estudantis e...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-nega-pedido-da-campanha-de-flavio-para-barrar-posts-de-sindicatos",
-    "publishedAt": "16/10/2026 às 15:20",
-    "category": "Justiça",
-    "imageUrl": "https://imagens.ebc.com.br/p-dx2UWJZRF38KkLdIGnr6eh4WM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/16/_raf1359.jpg?itok=yYd2EImW",
-    "imageCredit": "Foto: Agência Brasil / EBC",
-    "imageAlt": "TSE nega pedido da campanha de Flávio para barrar posts de sindicatos",
-    "author": "Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Flávio Bolsonaro",
-      "Lula",
-      "TSE"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
     "id": "camara-1311420-projeto-destina-recursos-orcam",
     "title": "Projeto destina recursos orçamentários para contribuições do Brasil a órgãos internacionais",
     "summary": "Texto será analisado pela Comissão Mista de Orçamento e, em seguida, pelo Plenário do Congresso Nacional",
@@ -984,26 +1025,6 @@
     "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20200214160605480-768x384.jpg",
     "imageCredit": "Divulgação / Agência Câmara de Notícias",
     "imageAlt": "Projeto destina recursos orçamentários para contribuições do Brasil a órgãos internacionais",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "camara-1311792-congresso-promulga-aposentador",
-    "title": "Congresso promulga aposentadoria especial para agentes de saúde e de combate a endemias",
-    "summary": "Pelas novas regras, as duas categorias poderão se aposentar aos 57 anos se mulher, e 60 anos se homem, com 25 anos de contribuição e de atividade",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311792-congresso-promulga-aposentadoria-especial-para-agentes-de-saude-e-de-combate-a-endemias",
-    "publishedAt": "16/10/2026 às 12:42",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261016103903662-768x473.jpg",
-    "imageCredit": "Divulgação / Agência Câmara de Notícias",
-    "imageAlt": "Congresso promulga aposentadoria especial para agentes de saúde e de combate a endemias",
     "author": "Agência Câmara de Notícias",
     "tags": [
       "Congresso",
@@ -1050,27 +1071,6 @@
       "ibge",
       "Notícia",
       "Economia",
-      "Estatísticas"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "ibge-48309",
-    "title": "ENDEF é destaque do terceiro seminário do projeto Memória e História do IBGE",
-    "summary": "O IBGE realiza, na próxima quarta-feira (21/10), das 9h às 11h, o terceiro seminário do projeto Memória e História, com o tema \"O conflito entre a autonomia técnica e a interferência política\", com destaque para o Estudo Nacional de Despesa Familiar...",
-    "source": "IBGE",
-    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
-    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48309-estudo-nacional-de-despesa-familiar-endef-e-o-destaque-do-terceiro-seminario-do-projeto-memoria-e-historia-do-ibge.html",
-    "publishedAt": "16/10/2026 às 01:17",
-    "category": "Brasil",
-    "imageUrl": "https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/ibge/2026_10/youtube_1920x1080px_memoria_e_historia_03.jpg",
-    "imageCredit": "Acervo / Agência IBGE Notícias",
-    "imageAlt": "ENDEF é destaque do terceiro seminário do projeto Memória e História do IBGE",
-    "author": "Agência IBGE Notícias",
-    "tags": [
-      "ibge",
-      "Notícia",
-      "Brasil",
       "Estatísticas"
     ],
     "editorialType": "sumula_oficial"
