@@ -121,6 +121,37 @@ for (const dataFile of requiredDataFiles) {
             process.exit(1);
           }
         }
+
+        if (item.ingestedAt && !/^\d{2}\/\d{2}\/\d{4} às \d{2}:\d{2}$/.test(item.ingestedAt)) {
+          console.error(`ERROR: Data de ingestão inválida "${item.ingestedAt}" no artigo ${item.id} (esperado DD/MM/AAAA às HH:mm)!`);
+          process.exit(1);
+        }
+      }
+
+      // Validação estrita de sincronização entre public/data/newsData.json e src/data/newsData.ts
+      if (fs.existsSync('src/data/newsData.ts')) {
+        const tsContent = fs.readFileSync('src/data/newsData.ts', 'utf8');
+        const match = tsContent.match(/export const OFFICIAL_NEWS_ARTICLES: NewsItem\[\] = (\[[\s\S]*\]);/);
+        if (!match) {
+          console.error('ERROR: src/data/newsData.ts não exporta OFFICIAL_NEWS_ARTICLES em formato válido!');
+          process.exit(1);
+        }
+        const tsArticles = JSON.parse(match[1]);
+        if (tsArticles.length !== parsed.length) {
+          console.error(`ERROR: Assincronia entre dataset JSON (${parsed.length}) e TypeScript (${tsArticles.length})!`);
+          process.exit(1);
+        }
+        for (let i = 0; i < parsed.length; i++) {
+          if (parsed[i].id !== tsArticles[i].id) {
+            console.error(`ERROR: Divergência de ID no índice ${i}: JSON="${parsed[i].id}" vs TS="${tsArticles[i].id}"`);
+            process.exit(1);
+          }
+          if (parsed[i].publishedAt !== tsArticles[i].publishedAt) {
+            console.error(`ERROR: Divergência de publishedAt no artigo ${parsed[i].id}!`);
+            process.exit(1);
+          }
+        }
+        console.log(`Paridade comprovada entre newsData.json e newsData.ts: ${parsed.length} artigos sincronizados.`);
       }
     }
   } catch (err) {

@@ -28,6 +28,7 @@ export interface NewsItem {
   articleUrl: string;
   publishedAt: string;
   updatedAt?: string;
+  ingestedAt?: string;
   category: NewsCategory;
   imageUrl?: string;
   imageCaption?: string;

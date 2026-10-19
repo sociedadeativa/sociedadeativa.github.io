@@ -299,18 +299,25 @@ function parseDateToBrasilia(dateStr) {
   // Caso 3: ISO 8601 ou RFC 2822
   const parsed = new Date(str);
   if (isNaN(parsed.getTime())) {
-    return { formatted: str, timestamp: 0 };
+    return { formatted: 'Data não informada', timestamp: 0 };
   }
 
-  const pad = (n) => String(n).padStart(2, '0');
-  // Horário oficial de Brasília é UTC-3
-  const brTimeMs = parsed.getTime() - 3 * 60 * 60 * 1000;
-  const brDate = new Date(brTimeMs);
-  const day = pad(brDate.getUTCDate());
-  const month = pad(brDate.getUTCMonth() + 1);
-  const year = brDate.getUTCFullYear();
-  const hours = pad(brDate.getUTCHours());
-  const minutes = pad(brDate.getUTCMinutes());
+  const formatter = new Intl.DateTimeFormat('pt-BR', {
+    timeZone: 'America/Sao_Paulo',
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  });
+  const parts = formatter.formatToParts(parsed);
+  const getPart = (type) => parts.find((p) => p.type === type)?.value || '00';
+  const day = getPart('day');
+  const month = getPart('month');
+  const year = getPart('year');
+  const hours = getPart('hour');
+  const minutes = getPart('minute');
 
   return {
     formatted: `${day}/${month}/${year} às ${hours}:${minutes}`,
@@ -466,6 +473,7 @@ async function fetchAgenciaBrasil() {
   ];
 
   const results = [];
+  const feedErrors = [];
   const electoralRegex = /\b(urna|urnas|eleitor|eleitores|eleitoral|eleitorais|eleição|eleic[aã]o|eleições|eleic[oõ]es|candidato|candidatos|candidatura|candidaturas|votação|votac[aã]o|segundo\s+turno|1º\s+turno|2º\s+turno|pleito)\b/i;
   const justiceRegex = /\b(stf|stj|tse|cnj|justiça|justica|tribunal|julgamento|juiz|juíza|magistrad|processo|ministério público|mpf|pgr|vara\s+federal|inquérito)\b/i;
   const congressRegex = /\b(câmara|camara|senado|deputad|senador|congresso|parlamentar|parlamentares|mesa\s+diretora|cpi|ccj)\b/i;
@@ -479,7 +487,9 @@ async function fetchAgenciaBrasil() {
     try {
       const res = await fetchWithTimeout(url);
       if (!res.ok) {
-        console.warn(`[Agência Brasil] HTTP ${res.status} ao consultar feed ${section}`);
+        const msg = `HTTP ${res.status}`;
+        console.warn(`[Agência Brasil] ${msg} ao consultar feed ${section}`);
+        feedErrors.push({ section, error: msg });
         continue;
       }
       const xml = await res.text();
@@ -502,9 +512,9 @@ async function fetchAgenciaBrasil() {
           continue;
         }
 
-        // Validação estrita de data de publicação: rejeita se a data não puder ser estabelecida
+        // Validação estrita de data de publicação: rejeita se a data não puder ser estabelecida ou for inválida/futura
         const { formatted: publishedAt, timestamp } = parseDateToBrasilia(rawPubDate);
-        if (!timestamp || timestamp === 0 || publishedAt === 'Data não informada') {
+        if (!timestamp || timestamp === 0 || publishedAt === 'Data não informada' || isNaN(timestamp) || timestamp > Date.now() + 86400000) {
           continue;
         }
 
@@ -603,10 +613,20 @@ async function fetchAgenciaBrasil() {
       }
     } catch (err) {
       console.warn(`[Agência Brasil] Falha ao processar feed ${section}: ${err.message}`);
+      feedErrors.push({ section, error: err.message });
     }
   }
 
-  return results;
+  if (results.length === 0) {
+    const errorDetails = feedErrors.map(e => `${e.section}: ${e.error}`).join('; ');
+    throw new Error(`Nenhum artigo válido coletado da Agência Brasil (${errorDetails || 'todos os feeds falharam'})`);
+  }
+
+  return {
+    source: 'Agência Brasil',
+    items: results,
+    errors: feedErrors
+  };
 }
 
 // ============================================================================
@@ -616,108 +636,111 @@ async function fetchCamara() {
   const url = 'https://www.camara.leg.br/noticias/rss/ultimas-noticias';
   const results = [];
 
-  try {
-    const res = await fetchWithTimeout(url);
-    if (!res.ok) {
-      console.warn(`[Câmara dos Deputados] HTTP ${res.status}`);
-      return [];
-    }
-    const xml = await res.text();
-    const rawItems = xml.split('<item>').slice(1).map((chunk) => chunk.split('</item>')[0]);
+  const res = await fetchWithTimeout(url);
+  if (!res.ok) {
+    throw new Error(`HTTP ${res.status} ao consultar feed da Câmara`);
+  }
+  const xml = await res.text();
+  const rawItems = xml.split('<item>').slice(1).map((chunk) => chunk.split('</item>')[0]);
 
-    for (const raw of rawItems) {
-      const rawTitle = extractTag(raw, 'title');
-      const rawDesc = extractTag(raw, 'description');
-      const rawLink = extractTag(raw, 'link') || extractTag(raw, 'guid');
-      const rawPubDate = extractTag(raw, 'pubDate');
-      const rawCategories = extractAllTags(raw, 'category');
+  for (const raw of rawItems) {
+    const rawTitle = extractTag(raw, 'title');
+    const rawDesc = extractTag(raw, 'description');
+    const rawLink = extractTag(raw, 'link') || extractTag(raw, 'guid');
+    const rawPubDate = extractTag(raw, 'pubDate');
+    const rawCategories = extractAllTags(raw, 'category');
 
-      const title = cleanText(rawTitle);
-      const summary = cleanText(rawDesc, MAX_SUMMARY_LENGTH);
-      const articleUrl = sanitizeAndNormalizeUrl(rawLink);
+    const title = cleanText(rawTitle);
+    const summary = cleanText(rawDesc, MAX_SUMMARY_LENGTH);
+    const articleUrl = sanitizeAndNormalizeUrl(rawLink);
 
-      if (!title || !summary || !articleUrl) {
-        continue;
-      }
-
-      // Validação estrita de data de publicação
-      const { formatted: publishedAt, timestamp } = parseDateToBrasilia(rawPubDate);
-      if (!timestamp || timestamp === 0 || publishedAt === 'Data não informada') {
-        continue;
-      }
-
-      // Regra oficial: Câmara dos Deputados → Congresso
-      const category = 'Congresso';
-
-      let idPart = '';
-      const urlMatch = articleUrl.match(/noticias\/(\d+)/);
-      if (urlMatch) {
-        idPart = `${urlMatch[1]}-${slugify(title)}`;
-      } else {
-        idPart = slugify(title);
-      }
-      const id = `camara-${idPart}`;
-
-      const tags = generateTags(rawCategories, category, title, 'Agência Câmara');
-
-      // Extrai imagem oficial verificada da Câmara dos Deputados
-      let imageUrl;
-      let imageCredit;
-      let rawImg = '';
-      const encMatch = raw.match(/<enclosure[^>]+url=["']([^"']+)["']/i);
-      if (encMatch) rawImg = encMatch[1];
-      if (!rawImg) {
-        const imgTagMatch = raw.match(/<img[^>]+src=["']([^"']+)["']/i);
-        if (imgTagMatch) rawImg = imgTagMatch[1];
-      }
-      if (rawImg && (rawImg.includes('camara.leg.br') || rawImg.includes('camara.gov.br'))) {
-        imageUrl = rawImg.startsWith('http:') ? rawImg.replace('http:', 'https:') : rawImg;
-        imageCredit = 'Divulgação / Agência Câmara de Notícias';
-      }
-
-      results.push({
-        id,
-        title,
-        summary,
-        source: 'Agência Câmara',
-        sourceUrl: 'https://www.camara.leg.br',
-        articleUrl,
-        publishedAt,
-        category,
-        author: 'Agência Câmara de Notícias',
-        tags,
-        imageUrl,
-        imageCredit,
-        imageAlt: title,
-        editorialType: 'sumula_oficial',
-        _timestamp: timestamp
-      });
+    if (!title || !summary || !articleUrl) {
+      continue;
     }
 
-    // Deduplica internamente matérias da Câmara que compartilham o mesmo número de publicação oficial
-    const camaraById = new Map();
-    for (const item of results) {
-      const match = item.articleUrl.match(/noticias\/(\d+)/);
-      const camaraKey = match ? `camara-${match[1]}` : item.id;
-      if (camaraById.has(camaraKey)) {
-        const existing = camaraById.get(camaraKey);
-        const isCurrentAcompanhe = item.articleUrl.includes('acompanhe') || item.title.toLowerCase().includes('acompanhe');
-        const isExistingAcompanhe = existing.articleUrl.includes('acompanhe') || existing.title.toLowerCase().includes('acompanhe');
-        if (isExistingAcompanhe && !isCurrentAcompanhe) {
-          camaraById.set(camaraKey, item);
-        } else if (!isCurrentAcompanhe && item.summary.length > existing.summary.length) {
-          camaraById.set(camaraKey, item);
-        }
-      } else {
-        camaraById.set(camaraKey, item);
-      }
+    // Validação estrita de data de publicação: rejeita se a data não puder ser estabelecida ou for inválida/futura
+    const { formatted: publishedAt, timestamp } = parseDateToBrasilia(rawPubDate);
+    if (!timestamp || timestamp === 0 || publishedAt === 'Data não informada' || isNaN(timestamp) || timestamp > Date.now() + 86400000) {
+      continue;
     }
-    return Array.from(camaraById.values());
-  } catch (err) {
-    console.warn(`[Câmara dos Deputados] Falha na requisição: ${err.message}`);
+
+    // Regra oficial: Câmara dos Deputados → Congresso
+    const category = 'Congresso';
+
+    let idPart = '';
+    const urlMatch = articleUrl.match(/noticias\/(\d+)/);
+    if (urlMatch) {
+      idPart = `${urlMatch[1]}-${slugify(title)}`;
+    } else {
+      idPart = slugify(title);
+    }
+    const id = `camara-${idPart}`;
+
+    const tags = generateTags(rawCategories, category, title, 'Agência Câmara');
+
+    // Extrai imagem oficial verificada da Câmara dos Deputados
+    let imageUrl;
+    let imageCredit;
+    let rawImg = '';
+    const encMatch = raw.match(/<enclosure[^>]+url=["']([^"']+)["']/i);
+    if (encMatch) rawImg = encMatch[1];
+    if (!rawImg) {
+      const imgTagMatch = raw.match(/<img[^>]+src=["']([^"']+)["']/i);
+      if (imgTagMatch) rawImg = imgTagMatch[1];
+    }
+    if (rawImg && (rawImg.includes('camara.leg.br') || rawImg.includes('camara.gov.br'))) {
+      imageUrl = rawImg.startsWith('http:') ? rawImg.replace('http:', 'https:') : rawImg;
+      imageCredit = 'Divulgação / Agência Câmara de Notícias';
+    }
+
+    results.push({
+      id,
+      title,
+      summary,
+      source: 'Agência Câmara',
+      sourceUrl: 'https://www.camara.leg.br',
+      articleUrl,
+      publishedAt,
+      category,
+      author: 'Agência Câmara de Notícias',
+      tags,
+      imageUrl,
+      imageCredit,
+      imageAlt: title,
+      editorialType: 'sumula_oficial',
+      _timestamp: timestamp
+    });
   }
 
-  return results;
+  // Deduplica internamente matérias da Câmara que compartilham o mesmo número de publicação oficial
+  const camaraById = new Map();
+  for (const item of results) {
+    const match = item.articleUrl.match(/noticias\/(\d+)/);
+    const camaraKey = match ? `camara-${match[1]}` : item.id;
+    if (camaraById.has(camaraKey)) {
+      const existing = camaraById.get(camaraKey);
+      const isCurrentAcompanhe = item.articleUrl.includes('acompanhe') || item.title.toLowerCase().includes('acompanhe');
+      const isExistingAcompanhe = existing.articleUrl.includes('acompanhe') || existing.title.toLowerCase().includes('acompanhe');
+      if (isExistingAcompanhe && !isCurrentAcompanhe) {
+        camaraById.set(camaraKey, item);
+      } else if (!isCurrentAcompanhe && item.summary.length > existing.summary.length) {
+        camaraById.set(camaraKey, item);
+      }
+    } else {
+      camaraById.set(camaraKey, item);
+    }
+  }
+
+  const finalCamara = Array.from(camaraById.values());
+  if (finalCamara.length === 0) {
+    throw new Error('Nenhum artigo com data de publicação válida retornado pela Câmara');
+  }
+
+  return {
+    source: 'Agência Câmara',
+    items: finalCamara,
+    errors: []
+  };
 }
 
 // ============================================================================
@@ -727,90 +750,93 @@ async function fetchIBGE() {
   const url = 'https://servicodados.ibge.gov.br/api/v3/noticias/?qtd=15';
   const results = [];
 
-  try {
-    const res = await fetchWithTimeout(url);
-    if (!res.ok) {
-      console.warn(`[IBGE] HTTP ${res.status}`);
-      return [];
+  const res = await fetchWithTimeout(url);
+  if (!res.ok) {
+    throw new Error(`HTTP ${res.status} ao consultar API do IBGE`);
+  }
+  const data = await res.json();
+  const items = Array.isArray(data.items) ? data.items : [];
+
+  const economicRegex = /\b(pib|inflação|inflacao|ipca|inpc|indústria|industria|comércio|comercio|serviço|serviços|servicos|desemprego|rendimento|safra|agropecuária|agropecuaria|pim-pf|pmc|pms|sinapi|trabalho|varejo)\b/i;
+
+  for (const item of items) {
+    const title = cleanText(item.titulo);
+    const summary = cleanText(item.introducao, MAX_SUMMARY_LENGTH);
+    const articleUrl = sanitizeAndNormalizeUrl(item.link);
+
+    if (!title || !summary || !articleUrl) {
+      continue;
     }
-    const data = await res.json();
-    const items = Array.isArray(data.items) ? data.items : [];
 
-    const economicRegex = /\b(pib|inflação|inflacao|ipca|inpc|indústria|industria|comércio|comercio|serviço|serviços|servicos|desemprego|rendimento|safra|agropecuária|agropecuaria|pim-pf|pmc|pms|sinapi|trabalho|varejo)\b/i;
-
-    for (const item of items) {
-      const title = cleanText(item.titulo);
-      const summary = cleanText(item.introducao, MAX_SUMMARY_LENGTH);
-      const articleUrl = sanitizeAndNormalizeUrl(item.link);
-
-      if (!title || !summary || !articleUrl) {
-        continue;
-      }
-
-      // Validação estrita de data de publicação
-      const { formatted: publishedAt, timestamp } = parseDateToBrasilia(item.data_publicacao);
-      if (!timestamp || timestamp === 0 || publishedAt === 'Data não informada') {
-        continue;
-      }
-
-      // Regra oficial IBGE:
-      // Econômicas / editorias e dados econômicos → "Economia"
-      // Outros (sociais, demografia, censo, geral) → "Brasil"
-      const editorias = (item.editorias || '').toLowerCase();
-      let category = 'Brasil';
-      if (editorias.includes('econom') || economicRegex.test(`${title} ${summary}`)) {
-        category = 'Economia';
-      }
-
-      const id = `ibge-${item.id || slugify(title)}`;
-
-      const rawTags = [];
-      if (item.editorias) rawTags.push(item.editorias);
-      if (item.tipo) rawTags.push(item.tipo);
-      const tags = generateTags(rawTags, category, title, 'IBGE');
-
-      // Extrai imagem oficial do IBGE se fornecida pela API
-      let imageUrl;
-      let imageCredit;
-      let imageCaption;
-      if (item.imagens) {
-        try {
-          const parsedImg = typeof item.imagens === 'string' ? JSON.parse(item.imagens) : item.imagens;
-          const imgPath = parsedImg.image_intro || parsedImg.image_fulltext;
-          if (imgPath && typeof imgPath === 'string') {
-            imageUrl = imgPath.startsWith('http')
-              ? imgPath.replace('http://', 'https://')
-              : `https://agenciadenoticias.ibge.gov.br/${imgPath.replace(/^\/+/, '')}`;
-            imageCredit = 'Acervo / Agência IBGE Notícias';
-            imageCaption = parsedImg.image_intro_caption || parsedImg.image_fulltext_caption || undefined;
-          }
-        } catch {}
-      }
-
-      results.push({
-        id,
-        title,
-        summary,
-        source: 'IBGE',
-        sourceUrl: 'https://agenciadenoticias.ibge.gov.br',
-        articleUrl,
-        publishedAt,
-        category,
-        author: 'Agência IBGE Notícias',
-        tags,
-        imageUrl,
-        imageCredit,
-        imageCaption,
-        imageAlt: title,
-        editorialType: 'sumula_oficial',
-        _timestamp: timestamp
-      });
+    // Validação estrita de data de publicação: rejeita se a data não puder ser estabelecida ou for inválida/futura
+    const { formatted: publishedAt, timestamp } = parseDateToBrasilia(item.data_publicacao);
+    if (!timestamp || timestamp === 0 || publishedAt === 'Data não informada' || isNaN(timestamp) || timestamp > Date.now() + 86400000) {
+      continue;
     }
-  } catch (err) {
-    console.warn(`[IBGE] Falha na requisição: ${err.message}`);
+
+    // Regra oficial IBGE:
+    // Econômicas / editorias e dados econômicos → "Economia"
+    // Outros (sociais, demografia, censo, geral) → "Brasil"
+    const editorias = (item.editorias || '').toLowerCase();
+    let category = 'Brasil';
+    if (editorias.includes('econom') || economicRegex.test(`${title} ${summary}`)) {
+      category = 'Economia';
+    }
+
+    const id = `ibge-${item.id || slugify(title)}`;
+
+    const rawTags = [];
+    if (item.editorias) rawTags.push(item.editorias);
+    if (item.tipo) rawTags.push(item.tipo);
+    const tags = generateTags(rawTags, category, title, 'IBGE');
+
+    // Extrai imagem oficial do IBGE se fornecida pela API
+    let imageUrl;
+    let imageCredit;
+    let imageCaption;
+    if (item.imagens) {
+      try {
+        const parsedImg = typeof item.imagens === 'string' ? JSON.parse(item.imagens) : item.imagens;
+        const imgPath = parsedImg.image_intro || parsedImg.image_fulltext;
+        if (imgPath && typeof imgPath === 'string') {
+          imageUrl = imgPath.startsWith('http')
+            ? imgPath.replace('http://', 'https://')
+            : `https://agenciadenoticias.ibge.gov.br/${imgPath.replace(/^\/+/, '')}`;
+          imageCredit = 'Acervo / Agência IBGE Notícias';
+          imageCaption = parsedImg.image_intro_caption || parsedImg.image_fulltext_caption || undefined;
+        }
+      } catch {}
+    }
+
+    results.push({
+      id,
+      title,
+      summary,
+      source: 'IBGE',
+      sourceUrl: 'https://agenciadenoticias.ibge.gov.br',
+      articleUrl,
+      publishedAt,
+      category,
+      author: 'Agência IBGE Notícias',
+      tags,
+      imageUrl,
+      imageCredit,
+      imageCaption,
+      imageAlt: title,
+      editorialType: 'sumula_oficial',
+      _timestamp: timestamp
+    });
   }
 
-  return results;
+  if (results.length === 0) {
+    throw new Error('Nenhum artigo com data de publicação válida retornado pela API do IBGE');
+  }
+
+  return {
+    source: 'IBGE',
+    items: results,
+    errors: []
+  };
 }
 
 // ============================================================================
@@ -820,63 +846,66 @@ async function fetchBancoCentral() {
   const url = 'https://www.bcb.gov.br/api/servico/sitebcb/noticias';
   const results = [];
 
-  try {
-    const res = await fetchWithTimeout(url);
-    if (!res.ok) {
-      console.warn(`[Banco Central] HTTP ${res.status}`);
-      return [];
+  const res = await fetchWithTimeout(url);
+  if (!res.ok) {
+    throw new Error(`HTTP ${res.status} ao consultar API do Banco Central`);
+  }
+  const data = await res.json();
+  const items = Array.isArray(data.conteudo) ? data.conteudo : [];
+
+  // Considera as 20 notícias mais recentes
+  for (const item of items.slice(0, 20)) {
+    const title = cleanText(item.titulo);
+    const summary = cleanText(item.lead || item.corpo, MAX_SUMMARY_LENGTH);
+
+    if (!title || !summary || !item.Id) {
+      continue;
     }
-    const data = await res.json();
-    const items = Array.isArray(data.conteudo) ? data.conteudo : [];
 
-    // Considera as 20 notícias mais recentes
-    for (const item of items.slice(0, 20)) {
-      const title = cleanText(item.titulo);
-      const summary = cleanText(item.lead || item.corpo, MAX_SUMMARY_LENGTH);
+    const rawUrl = `https://www.bcb.gov.br/detalhenoticia/${item.Id}/nota`;
+    const articleUrl = sanitizeAndNormalizeUrl(rawUrl);
 
-      if (!title || !summary || !item.Id) {
-        continue;
-      }
-
-      const rawUrl = `https://www.bcb.gov.br/detalhenoticia/${item.Id}/nota`;
-      const articleUrl = sanitizeAndNormalizeUrl(rawUrl);
-
-      if (!articleUrl) {
-        continue;
-      }
-
-      // Validação estrita de data de publicação
-      const { formatted: publishedAt, timestamp } = parseDateToBrasilia(item.dataPublicacao);
-      if (!timestamp || timestamp === 0 || publishedAt === 'Data não informada') {
-        continue;
-      }
-
-      // Regra oficial Banco Central → Economia
-      const category = 'Economia';
-      const id = `bcb-${item.Id}-${slugify(title)}`;
-      const tags = generateTags(['Banco Central', 'Economia', 'Política Monetária'], category, title, 'Banco Central');
-
-      results.push({
-        id,
-        title,
-        summary,
-        source: 'Banco Central',
-        sourceUrl: 'https://www.bcb.gov.br',
-        articleUrl,
-        publishedAt,
-        category,
-        author: 'Banco Central do Brasil',
-        tags,
-        imageAlt: title,
-        editorialType: 'sumula_oficial',
-        _timestamp: timestamp
-      });
+    if (!articleUrl) {
+      continue;
     }
-  } catch (err) {
-    console.warn(`[Banco Central] Falha na requisição: ${err.message}`);
+
+    // Validação estrita de data de publicação: rejeita se a data não puder ser estabelecida ou for inválida/futura
+    const { formatted: publishedAt, timestamp } = parseDateToBrasilia(item.dataPublicacao);
+    if (!timestamp || timestamp === 0 || publishedAt === 'Data não informada' || isNaN(timestamp) || timestamp > Date.now() + 86400000) {
+      continue;
+    }
+
+    // Regra oficial Banco Central → Economia
+    const category = 'Economia';
+    const id = `bcb-${item.Id}-${slugify(title)}`;
+    const tags = generateTags(['Banco Central', 'Economia', 'Política Monetária'], category, title, 'Banco Central');
+
+    results.push({
+      id,
+      title,
+      summary,
+      source: 'Banco Central',
+      sourceUrl: 'https://www.bcb.gov.br',
+      articleUrl,
+      publishedAt,
+      category,
+      author: 'Banco Central do Brasil',
+      tags,
+      imageAlt: title,
+      editorialType: 'sumula_oficial',
+      _timestamp: timestamp
+    });
   }
 
-  return results;
+  if (results.length === 0) {
+    throw new Error('Nenhum artigo com data de publicação válida retornado pela API do Banco Central');
+  }
+
+  return {
+    source: 'Banco Central',
+    items: results,
+    errors: []
+  };
 }
 
 // ============================================================================
@@ -898,6 +927,7 @@ async function main() {
       articleUrl: 'https://sociedadeativa.github.io/noticias/eleicoes-2026-tse-apuracao-primeiro-turno/',
       publishedAt: '05/10/2026 às 08:30',
       updatedAt: '05/10/2026 às 10:15',
+      ingestedAt: '05/10/2026 às 08:30',
       category: 'Eleições',
       author: 'Redação Sociedade Ativa / Cobertura Especial',
       tags: ['TSE', 'Eleições 2026', 'Segundo Turno', 'Apuração', 'Presidência'],
@@ -922,6 +952,7 @@ async function main() {
       articleUrl: 'https://sociedadeativa.github.io/noticias/eleicoes-2026-mapa-regional-votacao/',
       publishedAt: '05/10/2026 às 11:15',
       updatedAt: '05/10/2026 às 11:15',
+      ingestedAt: '05/10/2026 às 11:15',
       category: 'Eleições',
       author: 'Análise de Dados / Sociedade Ativa',
       tags: ['Mapa Eleitoral', 'São Paulo', 'Nordeste', 'Geopolítica', 'Regiões'],
@@ -985,16 +1016,33 @@ async function main() {
   const elapsedMs = Date.now() - t0;
   console.log(`Coleta concluída em ${elapsedMs}ms.\n`);
 
-  const ebcItems = ebcRes.status === 'fulfilled' ? ebcRes.value : [];
-  const camaraItems = camaraRes.status === 'fulfilled' ? camaraRes.value : [];
-  const ibgeItems = ibgeRes.status === 'fulfilled' ? ibgeRes.value : [];
-  const bcbItems = bcbRes.status === 'fulfilled' ? bcbRes.value : [];
+  const ebcData = ebcRes.status === 'fulfilled' ? ebcRes.value : { source: 'Agência Brasil', items: [], errors: [{ section: 'todos', error: ebcRes.reason?.message || 'Falha na conexão' }] };
+  const camaraData = camaraRes.status === 'fulfilled' ? camaraRes.value : { source: 'Agência Câmara', items: [], errors: [{ section: 'ultimas', error: camaraRes.reason?.message || 'Falha na conexão' }] };
+  const ibgeData = ibgeRes.status === 'fulfilled' ? ibgeRes.value : { source: 'IBGE', items: [], errors: [{ section: 'api_v3', error: ibgeRes.reason?.message || 'Falha na conexão' }] };
+  const bcbData = bcbRes.status === 'fulfilled' ? bcbRes.value : { source: 'Banco Central', items: [], errors: [{ section: 'sitebcb', error: bcbRes.reason?.message || 'Falha na conexão' }] };
+
+  const ebcItems = Array.isArray(ebcData.items) ? ebcData.items : [];
+  const camaraItems = Array.isArray(camaraData.items) ? camaraData.items : [];
+  const ibgeItems = Array.isArray(ibgeData.items) ? ibgeData.items : [];
+  const bcbItems = Array.isArray(bcbData.items) ? bcbData.items : [];
 
   console.log('Status das fontes oficiais:');
-  console.log(`  - Agência Brasil / EBC : ${ebcRes.status === 'fulfilled' ? `OK (${ebcItems.length} coletadas)` : `FALHA (${ebcRes.reason?.message})`}`);
-  console.log(`  - Agência Câmara       : ${camaraRes.status === 'fulfilled' ? `OK (${camaraItems.length} coletadas)` : `FALHA (${camaraRes.reason?.message})`}`);
-  console.log(`  - IBGE Notícias        : ${ibgeRes.status === 'fulfilled' ? `OK (${ibgeItems.length} coletadas)` : `FALHA (${ibgeRes.reason?.message})`}`);
-  console.log(`  - Banco Central        : ${bcbRes.status === 'fulfilled' ? `OK (${bcbItems.length} coletadas)` : `FALHA (${bcbRes.reason?.message})`}`);
+  const formatSourceReport = (name, res, data) => {
+    if (res.status === 'rejected') {
+      return `FALHA (${res.reason?.message || 'Erro de rede/timeout'})`;
+    }
+    const errors = data.errors || [];
+    if (errors.length > 0) {
+      const errList = errors.map((e) => `${e.section}: ${e.error}`).join('; ');
+      return `PARCIAL (${data.items.length} coletadas; Falhas parciais: ${errList})`;
+    }
+    return `OK (${data.items.length} coletadas)`;
+  };
+
+  console.log(`  - Agência Brasil / EBC : ${formatSourceReport('Agência Brasil', ebcRes, ebcData)}`);
+  console.log(`  - Agência Câmara       : ${formatSourceReport('Agência Câmara', camaraRes, camaraData)}`);
+  console.log(`  - IBGE Notícias        : ${formatSourceReport('IBGE Notícias', ibgeRes, ibgeData)}`);
+  console.log(`  - Banco Central        : ${formatSourceReport('Banco Central', bcbRes, bcbData)}`);
 
   const totalCollectedRaw = ebcItems.length + camaraItems.length + ibgeItems.length + bcbItems.length;
 
@@ -1035,7 +1083,9 @@ async function main() {
   console.log(`Artigos oficiais previamente publicados disponíveis no histórico: ${existingOfficialItems.length}`);
 
   // 4. Consolidação e Deduplicação por URL Canônica Normalizada e por ID
-  // Preserva artigos previamente publicados se fontes falharem ou para manter histórico recente
+  // Data de ingestão desta rodada bem-sucedida (no fuso de Brasília)
+  const currentIngestionTimestamp = parseDateToBrasilia(new Date()).formatted;
+
   const allRawItems = [...ebcItems, ...camaraItems, ...ibgeItems, ...bcbItems];
   const newlyCollectedUrls = new Set();
   const newlyCollectedIds = new Set();
@@ -1061,15 +1111,27 @@ async function main() {
 
     const normUrl = item.articleUrl.toLowerCase();
 
-    // Se o artigo já foi publicado anteriormente, preservamos a data de publicação original e atribuições
+    // Se o artigo já foi publicado anteriormente, preservamos o ID existente, data de publicação original, data de ingestão e atribuições
     if (existingByUrl.has(normUrl)) {
       const prev = existingByUrl.get(normUrl);
-      item.publishedAt = prev.publishedAt;
+      item.id = prev.id; // PRESERVA ID EXISTENTE
+      item.publishedAt = prev.publishedAt; // PRESERVA DATA DE PUBLICAÇÃO ORIGINAL DA FONTE
+      item.ingestedAt = prev.ingestedAt || currentIngestionTimestamp; // MANTÉM DATA DE INGESTÃO OU INICIALIZA
       if (prev._timestamp) {
         item._timestamp = prev._timestamp;
       }
       if (prev.source) item.source = prev.source;
       if (prev.sourceUrl) item.sourceUrl = prev.sourceUrl;
+      if (prev.imageUrl && !item.imageUrl) {
+        item.imageUrl = prev.imageUrl;
+        item.imageCredit = prev.imageCredit;
+        item.imageCaption = prev.imageCaption;
+        item.imageAlt = prev.imageAlt;
+      }
+      if (prev.editorialType) item.editorialType = prev.editorialType;
+    } else {
+      // Artigo novo coletado nesta execução: registra timestamp de ingestão
+      item.ingestedAt = currentIngestionTimestamp;
     }
 
     newlyCollectedUrls.add(normUrl);
@@ -1086,6 +1148,9 @@ async function main() {
         const { timestamp } = parseDateToBrasilia(prevItem.publishedAt);
         prevItem._timestamp = timestamp;
       }
+      if (!prevItem.ingestedAt) {
+        prevItem.ingestedAt = prevItem.publishedAt;
+      }
       allCandidateItems.push(prevItem);
     }
   }
@@ -1097,9 +1162,11 @@ async function main() {
     if (deduplicatedByUrl.has(normUrl)) {
       duplicatesCount++;
       const existing = deduplicatedByUrl.get(normUrl);
-      // Mantém versão mais detalhada, sempre respeitando a data de publicação original
+      // Mantém versão mais detalhada, sempre respeitando o ID original, a data de publicação original e a data de ingestão
       if ((item.tags?.length || 0) > (existing.tags?.length || 0) || item.summary.length > existing.summary.length) {
+        item.id = existing.id;
         item.publishedAt = existing.publishedAt;
+        item.ingestedAt = existing.ingestedAt || item.ingestedAt;
         if (existing._timestamp) item._timestamp = existing._timestamp;
         deduplicatedByUrl.set(normUrl, item);
       }
@@ -1114,9 +1181,10 @@ async function main() {
     if (deduplicatedById.has(item.id)) {
       duplicatesCount++;
       const existing = deduplicatedById.get(item.id);
-      // Mantém a matéria mais completa
+      // Mantém a matéria mais completa, preservando data de publicação original e ingestão
       if (item.summary.length > existing.summary.length || (item.tags?.length || 0) > (existing.tags?.length || 0)) {
         item.publishedAt = existing.publishedAt;
+        item.ingestedAt = existing.ingestedAt || item.ingestedAt;
         if (existing._timestamp) item._timestamp = existing._timestamp;
         deduplicatedById.set(item.id, item);
       }
@@ -1137,6 +1205,7 @@ async function main() {
     const { timestamp } = parseDateToBrasilia(item.publishedAt);
     return {
       ...item,
+      ingestedAt: item.ingestedAt || item.publishedAt,
       _timestamp: timestamp,
       _isProtected: true
     };
@@ -1191,6 +1260,7 @@ async function main() {
       category: item.category
     };
 
+    if (item.ingestedAt) cleanItem.ingestedAt = item.ingestedAt;
     if (item.updatedAt) cleanItem.updatedAt = item.updatedAt;
     if (item.imageUrl) cleanItem.imageUrl = item.imageUrl;
     if (item.imageCaption) cleanItem.imageCaption = item.imageCaption;
@@ -1205,6 +1275,7 @@ async function main() {
     if (item.lead) cleanItem.lead = item.lead;
     if (item.readTime) cleanItem.readTime = item.readTime;
     if (item.content) cleanItem.content = item.content;
+    if (item.isOriginalReporting) cleanItem.isOriginalReporting = item.isOriginalReporting;
 
     return cleanItem;
   });
@@ -1228,7 +1299,7 @@ async function main() {
   const seenUrls = new Set();
   const seenIds = new Set();
   for (const item of finalDataset) {
-    if (!item.id || !item.title || !item.summary || !item.source || !item.articleUrl) {
+    if (!item.id || !item.title || !item.summary || !item.source || !item.articleUrl || !item.publishedAt) {
       console.error('[ERRO DE INTEGRIDADE] Artigo com campos obrigatórios ausentes:', item);
       process.exit(1);
     }
@@ -1237,6 +1308,14 @@ async function main() {
       process.exit(1);
     }
     seenIds.add(item.id);
+    if (!/^\d{2}\/\d{2}\/\d{4} às \d{2}:\d{2}$/.test(item.publishedAt)) {
+      console.error(`[ERRO DE INTEGRIDADE] Data de publicação com formato inválido no artigo ${item.id}: "${item.publishedAt}"`);
+      process.exit(1);
+    }
+    if (item.ingestedAt && !/^\d{2}\/\d{2}\/\d{4} às \d{2}:\d{2}$/.test(item.ingestedAt)) {
+      console.error(`[ERRO DE INTEGRIDADE] Data de ingestão com formato inválido no artigo ${item.id}: "${item.ingestedAt}"`);
+      process.exit(1);
+    }
     if (item.summary.length > MAX_SUMMARY_LENGTH + 5) {
       console.error(`[ERRO DE INTEGRIDADE] Resumo excede tamanho máximo de ${MAX_SUMMARY_LENGTH}:`, item.title);
       process.exit(1);

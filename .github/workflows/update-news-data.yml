@@ -2,7 +2,15 @@ name: Update Official News Data
 
 on:
   schedule:
-    # Horário Oficial de Brasília (UTC-3): 06:00, 08:30, 11:00, 13:30, 16:00, 18:30 e 21:00
+    # Horário Oficial de Brasília (BRT = UTC-3):
+    # Execuções a cada 2h30 ao longo do expediente jornalístico brasileiro (06:00 às 21:00 BRT):
+    # 09:00 UTC -> 06:00 BRT (primeira edição matutina)
+    # 11:30 UTC -> 08:30 BRT (abertura dos mercados e expediente oficial)
+    # 14:00 UTC -> 11:00 BRT (divulgações matinais do IBGE e pautas ministeriais)
+    # 16:30 UTC -> 13:30 BRT (início das sessões plenárias na Câmara e Senado)
+    # 19:00 UTC -> 16:00 BRT (divulgações da tarde, Banco Central e indicadores)
+    # 21:30 UTC -> 18:30 BRT (fechamento dos trabalhos legislativos e mercados)
+    # 00:00 UTC -> 21:00 BRT (resumo noturno final do dia)
     - cron: '0 9,14,19,0 * * *'
     - cron: '30 11,16,21 * * *'
   workflow_dispatch:
@@ -21,6 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       has_changes: ${{ steps.commit_step.outputs.has_changes }}
+      commit_sha: ${{ steps.commit_step.outputs.commit_sha }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -39,10 +48,14 @@ jobs:
       - name: Ingest and Validate Official Brazilian Public News
         run: node scripts/update-news-data.mjs
 
-      - name: Validate Generated News Dataset
+      - name: Validate Generated News Dataset and Synchronization
         run: |
           if [ ! -s "public/data/newsData.json" ]; then
             echo "ERRO CRÍTICO: public/data/newsData.json está ausente ou vazio!"
+            exit 1
+          fi
+          if [ ! -s "src/data/newsData.ts" ]; then
+            echo "ERRO CRÍTICO: src/data/newsData.ts está ausente ou vazio!"
             exit 1
           fi
           node -e '
@@ -50,6 +63,17 @@ jobs:
             const data = JSON.parse(fs.readFileSync("public/data/newsData.json", "utf8"));
             if (!Array.isArray(data) || data.length < 10) {
               console.error("Validação falhou: dataset insuficiente (< 10 artigos)");
+              process.exit(1);
+            }
+            const tsContent = fs.readFileSync("src/data/newsData.ts", "utf8");
+            const match = tsContent.match(/export const OFFICIAL_NEWS_ARTICLES: NewsItem\[\] = (\[[\s\S]*\]);/);
+            if (!match) {
+              console.error("Validação falhou: src/data/newsData.ts não possui array OFFICIAL_NEWS_ARTICLES válido");
+              process.exit(1);
+            }
+            const tsArticles = JSON.parse(match[1]);
+            if (tsArticles.length !== data.length) {
+              console.error("Validação falhou: divergência entre newsData.json (" + data.length + ") e newsData.ts (" + tsArticles.length + ")");
               process.exit(1);
             }
             const seenIds = new Set();
@@ -62,13 +86,21 @@ jobs:
                 console.error("Validação falhou: URL não é HTTPS:", item.articleUrl);
                 process.exit(1);
               }
+              if (!/^\d{2}\/\d{2}\/\d{4} às \d{2}:\d{2}$/.test(item.publishedAt)) {
+                console.error("Validação falhou: formato de publishedAt inválido:", item.publishedAt);
+                process.exit(1);
+              }
+              if (item.ingestedAt && !/^\d{2}\/\d{2}\/\d{4} às \d{2}:\d{2}$/.test(item.ingestedAt)) {
+                console.error("Validação falhou: formato de ingestedAt inválido:", item.ingestedAt);
+                process.exit(1);
+              }
               if (seenIds.has(item.id)) {
                 console.error("Validação falhou: ID duplicado detectado:", item.id);
                 process.exit(1);
               }
               seenIds.add(item.id);
             }
-            console.log("Validação de integridade do newsData.json aprovada com " + data.length + " artigos.");
+            console.log("Validação de integridade aprovada: " + data.length + " artigos em total paridade entre JSON e TS.");
           '
 
       - name: Type Check and Lint
@@ -94,6 +126,9 @@ jobs:
             git commit -m "data(noticias): atualização automática das notícias oficiais e sitemap [skip ci]"
             git pull --rebase origin main || true
             git push
+            NEW_SHA=$(git rev-parse HEAD)
+            echo "commit_sha=$NEW_SHA" >> "$GITHUB_OUTPUT"
+            echo "Novo commit publicado para deploy: $NEW_SHA"
           fi
 
   deploy-pages:
@@ -101,6 +136,8 @@ jobs:
     needs: update-news-data
     if: needs.update-news-data.outputs.has_changes == 'true' || github.event_name == 'workflow_dispatch'
     uses: ./.github/workflows/deploy.yml
+    with:
+      ref: ${{ needs.update-news-data.outputs.commit_sha || 'main' }}
     permissions:
       contents: read
       pages: write

@@ -116,6 +116,7 @@ export function normalizeNewsItem(raw: any, index: number = 0): NewsItem {
     articleUrl,
     publishedAt,
     updatedAt,
+    ingestedAt: typeof raw.ingestedAt === "string" ? raw.ingestedAt : undefined,
     category,
     imageUrl: typeof raw.imageUrl === "string" && raw.imageUrl.trim().startsWith("https://") ? raw.imageUrl.trim() : undefined,
     imageCaption: typeof raw.imageCaption === "string" ? raw.imageCaption.trim() : undefined,
@@ -128,7 +129,7 @@ export function normalizeNewsItem(raw: any, index: number = 0): NewsItem {
     headline: title,
     lead: summary,
     readTime: raw.readTime || "3 min de leitura",
-    content: Array.isArray(raw.content) && raw.content.length > 0 ? raw.content : [summary],
+    content: Array.isArray(raw.content) && raw.content.length > 0 ? raw.content : undefined,
   };
 }
 
