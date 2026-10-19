@@ -181,7 +181,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
     "id": "ibge-48307",
     "title": "IBGE disponibiliza Agenda semanal com programações para os dias 19 a 23 de outubro",
-    "summary": "Agenda IBGE traz a programação do instituto para a semana - Foto: Bel Corção/Brasil com S O Instituto Brasileiro de Geografia e Estatística (IBGE) disponibilizou hoje (19) a Agenda IBGE para a semana dos dias 19 a 23 de outubro. A edição contempla as...",
+    "summary": "Agenda IBGE traz a programação do instituto para a semana - Foto: Bel Corção/Brasil com S O Instituto Brasileiro de Geografia e Estatística (IBGE) disponibilizou hoje (19) a Agenda IBGE para a semana dos dias 19 a 23 de outubro.",
     "source": "IBGE",
     "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
     "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48307-ibge-disponibiliza-agenda-semanal-com-programacoes-para-os-dias-19-a-23-de-outubro.html",
@@ -1085,7 +1085,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
     "id": "ibge-48304",
     "title": "País tinha 1,5 milhão de crianças e adolescentes em situação de trabalho infantil em 2025",
-    "summary": "Na análise por grupos etários, o trabalho infantil tende a aumentar com o avanço da idade. - Foto: Ministério do Trabalho O país tinha 1,499 milhão de crianças e adolescentes entre 5 e 17 anos em situação de trabalho infantil em 2025, o que representa...",
+    "summary": "Na análise por grupos etários, o trabalho infantil tende a aumentar com o avanço da idade.",
     "source": "IBGE",
     "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
     "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48304-pais-tinha-1-5-milhao-de-criancas-e-adolescentes-em-situacao-de-trabalho-infantil-em-2025.html",
@@ -1107,7 +1107,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
     "id": "ibge-48310",
     "title": "Em Xangai, IBGE debate uso de dados e tecnologia digital a serviço das pessoas",
-    "summary": "Como garantir que os avanços na produção de dados e nas tecnologias digitais contribuam efetivamente para melhorar a vida das pessoas? Essa é a questão central do evento “Os dados e a tecnologia digital a serviço das pessoas”, realizado no dia 16 de...",
+    "summary": "Como garantir que os avanços na produção de dados e nas tecnologias digitais contribuam efetivamente para melhorar a vida das pessoas?",
     "source": "IBGE",
     "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
     "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48310-em-xangai-ibge-participa-de-debate-sobre-como-colocar-os-dados-e-a-tecnologia-digital-a-servico-das-pessoas.html",
