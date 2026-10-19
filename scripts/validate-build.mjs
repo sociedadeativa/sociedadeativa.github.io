@@ -413,8 +413,13 @@ if (fs.existsSync('dist/noticias')) {
       console.error(`ERROR: ${articleHtmlPath} não possui bloco JSON-LD!`);
       process.exit(1);
     }
+    let ld;
     try {
-      const ld = JSON.parse(jsonLdMatch[1]);
+      ld = JSON.parse(jsonLdMatch[1]);
+      if (ld['@context'] !== 'https://schema.org') {
+        console.error(`ERROR: ${articleHtmlPath} JSON-LD @context inválido: ${ld['@context']}`);
+        process.exit(1);
+      }
       if (ld['@type'] !== 'NewsArticle') {
         console.error(`ERROR: ${articleHtmlPath} JSON-LD @type não é NewsArticle!`);
         process.exit(1);
@@ -427,9 +432,108 @@ if (fs.existsSync('dist/noticias')) {
         console.error(`ERROR: ${articleHtmlPath} JSON-LD author diverge da fonte oficial!`);
         process.exit(1);
       }
+      if (!ld.datePublished || isNaN(new Date(ld.datePublished).getTime())) {
+        console.error(`ERROR: ${articleHtmlPath} JSON-LD datePublished inválida: ${ld.datePublished}`);
+        process.exit(1);
+      }
+      if (!ld.mainEntityOfPage || ld.mainEntityOfPage['@id'] !== expectedCanonical) {
+        console.error(`ERROR: ${articleHtmlPath} JSON-LD mainEntityOfPage diverge da URL canônica!`);
+        process.exit(1);
+      }
+      if (!ld.publisher || ld.publisher.name !== 'Sociedade Ativa') {
+        console.error(`ERROR: ${articleHtmlPath} JSON-LD publisher inválido!`);
+        process.exit(1);
+      }
     } catch (e) {
       console.error(`ERROR: ${articleHtmlPath} JSON-LD inválido:`, e.message);
       process.exit(1);
+    }
+
+    // Validação de parágrafos disponíveis: a página estática gerada DEVE renderizar todos os parágrafos legítimos no corpo HTML
+    if (article.content && Array.isArray(article.content) && article.content.length > 0) {
+      const bodyHtml = html.split('<div id="root">')[1] || html;
+      for (let i = 0; i < article.content.length; i++) {
+        const paragraph = article.content[i].trim();
+        const pSample = paragraph.slice(0, Math.min(50, paragraph.length));
+        if (!bodyHtml.includes(pSample) && !bodyHtml.includes(paragraph)) {
+          console.error(`ERROR: ${articleHtmlPath} omitiu parágrafo de conteúdo ${i + 1}/${article.content.length} no corpo do artigo: "${pSample}..."`);
+          process.exit(1);
+        }
+      }
+      // Validação de articleBody no JSON-LD
+      if (!ld.articleBody || typeof ld.articleBody !== 'string' || !ld.articleBody.trim()) {
+        console.error(`ERROR: ${articleHtmlPath} possui parágrafos no dataset mas o JSON-LD omite articleBody!`);
+        process.exit(1);
+      }
+    } else {
+      // Quando não há parágrafos completos disponíveis, o JSON-LD não deve inventar articleBody
+      if (ld.articleBody) {
+        console.error(`ERROR: ${articleHtmlPath} não possui parágrafos completos mas JSON-LD inventou articleBody!`);
+        process.exit(1);
+      }
+    }
+
+    // Validação de integridade de imagens e concordância entre HTML, Open Graph, Twitter e JSON-LD
+    const isVerifiedImage = Boolean(
+      article.imageUrl &&
+      article.imageUrl.startsWith('https://') &&
+      article.imageCredit &&
+      article.imageCredit.trim()
+    );
+
+    const ogImageMatch = html.match(/<meta\s+property=["']og:image["']\s+content=["']([^"']+)["']/i);
+    const twImageMatch = html.match(/<meta\s+name=["']twitter:image["']\s+content=["']([^"']+)["']/i);
+    const twCardMatch = html.match(/<meta\s+name=["']twitter:card["']\s+content=["']([^"']+)["']/i);
+
+    if (isVerifiedImage) {
+      // Deve conter a imagem no HTML estático
+      if (!html.includes(article.imageUrl)) {
+        console.error(`ERROR: ${articleHtmlPath} possui imagem verificada mas omitiu a tag <img> no HTML!`);
+        process.exit(1);
+      }
+      // Deve conter o crédito da imagem no HTML estático
+      if (article.imageCredit && !html.includes(article.imageCredit)) {
+        console.error(`ERROR: ${articleHtmlPath} omitiu o crédito da imagem "${article.imageCredit}" no HTML!`);
+        process.exit(1);
+      }
+      // og:image deve concordar com a imagem verificada
+      if (!ogImageMatch || ogImageMatch[1] !== article.imageUrl) {
+        console.error(`ERROR: ${articleHtmlPath} og:image (${ogImageMatch?.[1]}) diverge da imagem do artigo (${article.imageUrl})!`);
+        process.exit(1);
+      }
+      // twitter:image deve concordar com a imagem verificada
+      if (!twImageMatch || twImageMatch[1] !== article.imageUrl) {
+        console.error(`ERROR: ${articleHtmlPath} twitter:image (${twImageMatch?.[1]}) diverge da imagem do artigo (${article.imageUrl})!`);
+        process.exit(1);
+      }
+      // twitter:card deve ser summary_large_image
+      if (!twCardMatch || twCardMatch[1] !== 'summary_large_image') {
+        console.error(`ERROR: ${articleHtmlPath} twitter:card deve ser summary_large_image quando há imagem!`);
+        process.exit(1);
+      }
+      // JSON-LD deve conter a imagem verificada
+      if (!ld.image || !Array.isArray(ld.image) || !ld.image.includes(article.imageUrl)) {
+        console.error(`ERROR: ${articleHtmlPath} JSON-LD image diverge ou não contém ${article.imageUrl}!`);
+        process.exit(1);
+      }
+    } else {
+      // Quando NÃO há imagem verificada, as tags de imagem DEVEM ser omitidas
+      if (ogImageMatch) {
+        console.error(`ERROR: ${articleHtmlPath} não possui imagem verificada mas contém og:image (${ogImageMatch[1]})!`);
+        process.exit(1);
+      }
+      if (twImageMatch) {
+        console.error(`ERROR: ${articleHtmlPath} não possui imagem verificada mas contém twitter:image (${twImageMatch[1]})!`);
+        process.exit(1);
+      }
+      if (twCardMatch && twCardMatch[1] !== 'summary') {
+        console.error(`ERROR: ${articleHtmlPath} twitter:card deve ser summary quando não há imagem verificada!`);
+        process.exit(1);
+      }
+      if (ld.image) {
+        console.error(`ERROR: ${articleHtmlPath} não possui imagem verificada mas JSON-LD contém propriedade image!`);
+        process.exit(1);
+      }
     }
 
     // Validação de verificação do Google
