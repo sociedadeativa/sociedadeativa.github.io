@@ -333,6 +333,12 @@ function main() {
     const hasGenuineUpdate = Boolean(article.updatedAt && article.updatedAt !== article.publishedAt);
     const isoDate = parseDateToIso(article.publishedAt);
     const isoModDate = hasGenuineUpdate ? parseDateToIso(article.updatedAt) : isoDate;
+    const isVerifiedImage = Boolean(
+      article.imageUrl &&
+      article.imageUrl.startsWith('https://') &&
+      article.imageCredit &&
+      article.imageCredit.trim()
+    );
 
     // Ajusta referências relativas de "../assets/" para "../../assets/" e "../favicon.svg" para "../../favicon.svg"
     let pageHtml = templateHtml
@@ -391,6 +397,40 @@ function main() {
       () => `<meta name="twitter:description" content="${escapeHtml(metaDescription)}" />`
     );
 
+    // Ajusta Open Graph / Twitter image e twitter:card de acordo com a verificação da imagem
+    if (isVerifiedImage) {
+      if (/<meta\s+property=["']og:image["']/i.test(pageHtml)) {
+        pageHtml = pageHtml.replace(
+          /<meta\s+property=["']og:image["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
+          () => `<meta property="og:image" content="${escapeHtml(article.imageUrl)}" />`
+        );
+      } else {
+        pageHtml = pageHtml.replace(/<\/head>/i, `    <meta property="og:image" content="${escapeHtml(article.imageUrl)}" />\n  </head>`);
+      }
+
+      if (/<meta\s+name=["']twitter:image["']/i.test(pageHtml)) {
+        pageHtml = pageHtml.replace(
+          /<meta\s+name=["']twitter:image["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
+          () => `<meta name="twitter:image" content="${escapeHtml(article.imageUrl)}" />`
+        );
+      } else {
+        pageHtml = pageHtml.replace(/<\/head>/i, `    <meta name="twitter:image" content="${escapeHtml(article.imageUrl)}" />\n  </head>`);
+      }
+
+      pageHtml = pageHtml.replace(
+        /<meta\s+name=["']twitter:card["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
+        () => `<meta name="twitter:card" content="summary_large_image" />`
+      );
+    } else {
+      // Quando não há imagem verificada, remove totalmente og:image e twitter:image, e define twitter:card como summary
+      pageHtml = pageHtml.replace(/\s*<meta\s+property=["']og:image["']\s+content=["'][\s\S]*?["']\s*\/?>/gi, '');
+      pageHtml = pageHtml.replace(/\s*<meta\s+name=["']twitter:image["']\s+content=["'][\s\S]*?["']\s*\/?>/gi, '');
+      pageHtml = pageHtml.replace(
+        /<meta\s+name=["']twitter:card["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
+        () => `<meta name="twitter:card" content="summary" />`
+      );
+    }
+
     // Substitui dados estruturados Schema.org
     const structuredData = {
       "@context": "https://schema.org",
@@ -423,6 +463,14 @@ function main() {
       "isAccessibleForFree": true
     };
 
+    if (isVerifiedImage) {
+      structuredData.image = [article.imageUrl];
+    }
+
+    if (article.content && Array.isArray(article.content) && article.content.length > 0) {
+      structuredData.articleBody = article.content.join('\n\n');
+    }
+
     pageHtml = pageHtml.replace(
       /<script\s+type=["']application\/ld\+json["']>[\s\S]*?<\/script>/i,
       () => `<script type="application/ld+json">\n${JSON.stringify(structuredData, null, 2)}\n    </script>`
@@ -434,6 +482,10 @@ function main() {
     } else if (article.ingestedAt && article.ingestedAt !== article.publishedAt) {
       timestampHtml += ` &middot; <span>Recebido pelo portal em ${escapeHtml(article.ingestedAt)}</span>`;
     }
+
+    const imageBlockHtml = isVerifiedImage
+      ? `\n            <figure style="margin:20px 0;">\n              <img src="${escapeHtml(article.imageUrl)}" alt="${escapeHtml(article.title)}" style="width:100%;max-height:480px;object-fit:cover;border-radius:8px;" />\n              <figcaption style="font-size:12px;color:#64748b;margin-top:6px;">Foto: ${escapeHtml(article.imageCredit)}</figcaption>\n            </figure>`
+      : '';
 
     // Pre-rendered HTML dentro de <div id="root"> para robôs de indexação e usuários sem JS
     const fallbackArticleHtml = `
@@ -451,7 +503,7 @@ function main() {
             <div style="font-size:12px;color:#64748b;margin-bottom:24px;border-bottom:1px solid #e2e8f0;padding-bottom:12px;">
               <span><strong>Fonte:</strong> ${escapeHtml(article.source)}</span> &middot; 
               ${timestampHtml}
-            </div>
+            </div>${imageBlockHtml}
             ${
               article.content && article.content.length > 0
                 ? article.content.map(p => `<p style="font-size:15px;line-height:1.7;color:#1e293b;margin-bottom:16px;">${escapeHtml(p)}</p>`).join('')
