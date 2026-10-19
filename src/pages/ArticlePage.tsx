@@ -205,10 +205,17 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
                 <span>Publicado em {article.publishedAt}</span>
               </div>
 
-              {article.updatedAt && (
+              {article.updatedAt && article.updatedAt !== article.publishedAt && (
                 <div className="flex items-center gap-1.5 text-slate-400 text-[11px]">
                   <Clock className="w-3 h-3" />
-                  <span>Atualizado às {article.updatedAt.includes(" às ") ? article.updatedAt.split(" às ")[1] : article.updatedAt}</span>
+                  <span>Atualizado em {article.updatedAt}</span>
+                </div>
+              )}
+
+              {(!article.updatedAt || article.updatedAt === article.publishedAt) && article.ingestedAt && article.ingestedAt !== article.publishedAt && (
+                <div className="flex items-center gap-1.5 text-slate-400 text-[11px]">
+                  <Clock className="w-3 h-3" />
+                  <span>Recebido pelo portal em {article.ingestedAt}</span>
                 </div>
               )}
             </div>

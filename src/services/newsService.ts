@@ -94,7 +94,8 @@ export function normalizeNewsItem(raw: any, index: number = 0): NewsItem {
   const source = (raw.source || (raw.author?.includes("Sociedade Ativa") ? "Redação Sociedade Ativa" : "Agência Brasil")).trim();
   const category = normalizeCategory(raw.category);
   const publishedAt = formatNewsDate(raw.publishedAt);
-  const updatedAt = raw.updatedAt ? formatNewsDate(raw.updatedAt) : publishedAt;
+  const updatedAt = raw.updatedAt && raw.updatedAt !== raw.publishedAt ? formatNewsDate(raw.updatedAt) : undefined;
+  const ingestedAt = raw.ingestedAt ? formatNewsDate(raw.ingestedAt) : undefined;
 
   // Garantir URLs válidas
   const sourceUrl = raw.sourceUrl || "https://agenciabrasil.ebc.com.br/";
@@ -103,9 +104,6 @@ export function normalizeNewsItem(raw: any, index: number = 0): NewsItem {
   const id = raw.id || `noticia-${index}-${title.toLowerCase().replace(/[^a-z0-9]/g, "-").slice(0, 30)}`;
 
   const tags = Array.isArray(raw.tags) ? raw.tags.map((t: any) => String(t).trim()).filter(Boolean) : [];
-
-  const isSociedadeAtiva = source.includes("Sociedade Ativa") || (raw.author && String(raw.author).includes("Sociedade Ativa"));
-  const editorialType = raw.editorialType || (isSociedadeAtiva ? "reportagem_especial" : "sumula_oficial");
 
   return {
     id,
@@ -116,20 +114,16 @@ export function normalizeNewsItem(raw: any, index: number = 0): NewsItem {
     articleUrl,
     publishedAt,
     updatedAt,
-    ingestedAt: typeof raw.ingestedAt === "string" ? raw.ingestedAt : undefined,
+    ingestedAt,
     category,
-    imageUrl: typeof raw.imageUrl === "string" && raw.imageUrl.trim().startsWith("https://") ? raw.imageUrl.trim() : undefined,
-    imageCaption: typeof raw.imageCaption === "string" ? raw.imageCaption.trim() : undefined,
-    imageCredit: typeof raw.imageCredit === "string" ? raw.imageCredit.trim() : undefined,
-    imageAlt: typeof raw.imageAlt === "string" ? raw.imageAlt.trim() : title,
+    imageUrl: typeof raw.imageUrl === "string" && raw.imageUrl.trim() ? raw.imageUrl.trim() : undefined,
     author: raw.author ? String(raw.author).trim() : source,
     tags,
-    editorialType,
     // Campos legados para compatibilidade
     headline: title,
     lead: summary,
     readTime: raw.readTime || "3 min de leitura",
-    content: Array.isArray(raw.content) && raw.content.length > 0 ? raw.content : undefined,
+    content: Array.isArray(raw.content) ? raw.content : [summary],
   };
 }
 
@@ -177,25 +171,19 @@ export function filterNewsItems(items: NewsItem[], options: NewsFilterOptions): 
  */
 export async function fetchNewsItems(): Promise<NewsItem[]> {
   const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
-  const cacheBuster = `_t=${Date.now()}`;
   const candidateUrls = [
-    ...(origin ? [`${origin}/data/newsData.json?${cacheBuster}`] : []),
-    `/data/newsData.json?${cacheBuster}`,
-    `../../data/newsData.json?${cacheBuster}`,
-    `../data/newsData.json?${cacheBuster}`,
-    `./data/newsData.json?${cacheBuster}`,
-    `data/newsData.json?${cacheBuster}`,
-    `https://sociedadeativa.github.io/data/newsData.json?${cacheBuster}`,
+    ...(origin ? [`${origin}/data/newsData.json`] : []),
+    "/data/newsData.json",
+    "../../data/newsData.json",
+    "../data/newsData.json",
+    "./data/newsData.json",
+    "data/newsData.json",
+    "https://sociedadeativa.github.io/data/newsData.json",
   ];
 
   for (const url of candidateUrls) {
     try {
-      const response = await fetch(url, {
-        cache: "no-store",
-        headers: {
-          Accept: "application/json, text/plain, */*",
-        },
-      });
+      const response = await fetch(url, { cache: "no-cache" });
       if (response.ok) {
         const contentType = response.headers.get("content-type") || "";
         if (contentType.includes("application/json") || contentType.includes("text/json")) {

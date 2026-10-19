@@ -141,9 +141,23 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
             )}
           </div>
 
-          <div className="flex items-center gap-2 text-[11px] text-slate-500">
-            <Calendar className="w-3.5 h-3.5 text-slate-400" />
-            <span>Publicado em {article.publishedAt}</span>
+          <div className="flex items-center gap-2 text-[11px] text-slate-500 flex-wrap">
+            <span className="flex items-center gap-1.5">
+              <Calendar className="w-3.5 h-3.5 text-slate-400" />
+              <span>Publicado em {article.publishedAt}</span>
+            </span>
+            {article.updatedAt && article.updatedAt !== article.publishedAt && (
+              <span className="flex items-center gap-1 text-slate-400">
+                <Clock className="w-3 h-3" />
+                <span>Atualizado em {article.updatedAt}</span>
+              </span>
+            )}
+            {(!article.updatedAt || article.updatedAt === article.publishedAt) && article.ingestedAt && article.ingestedAt !== article.publishedAt && (
+              <span className="flex items-center gap-1 text-slate-400">
+                <Clock className="w-3 h-3" />
+                <span>Recebido pelo portal em {article.ingestedAt}</span>
+              </span>
+            )}
           </div>
         </div>
 

@@ -14,16 +14,51 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
   articles,
   onOpenArticleDetails,
 }) => {
-  // Encontra artigo principal (Lead) e secundários
-  const leadArticle =
-    articles.find((a) => a.id === "eleicoes-2026-tse-apuracao-primeiro-turno") ||
-    articles[0];
+  // Configuração editorial: definir ID de artigo para fixar manualmente, ou null para seleção dinâmica automática
+  const PINNED_LEAD_ARTICLE_ID: string | null = null;
 
-  const secondaryArticles = articles
-    .filter((a) => a.id !== leadArticle?.id)
-    .slice(0, 3);
+  const validArticles = Array.isArray(articles) ? articles : [];
 
-  const civicWireArticles = articles.slice(4, 9);
+  // Encontra artigo principal (Lead): prioriza fixação intencional, depois o mais recente (articles[0])
+  const pinnedArticle = PINNED_LEAD_ARTICLE_ID
+    ? validArticles.find((a) => a.id === PINNED_LEAD_ARTICLE_ID)
+    : null;
+  const leadArticle = pinnedArticle || validArticles[0] || null;
+
+  // Remove o lead selecionado da lista restante para evitar qualquer sobreposição
+  const remainingArticles = leadArticle
+    ? validArticles.filter((a) => a.id !== leadArticle.id)
+    : validArticles;
+
+  // Destaques secundários (3 matérias) e Radar Cívico (5 matérias seguintes) sem sobreposição
+  const secondaryArticles = remainingArticles.slice(0, 3);
+  const civicWireArticles = remainingArticles.slice(3, 8);
+
+  // Tratamento da imagem da matéria principal com suporte a imagem do artigo e fallback editorial
+  const hasValidArticleImage = Boolean(
+    leadArticle?.imageUrl && leadArticle.imageUrl.trim().startsWith("https://")
+  );
+
+  const leadImageSrc = hasValidArticleImage
+    ? leadArticle!.imageUrl!
+    : EDITORIAL_IMAGES.congresso.src;
+
+  const leadImageAlt = hasValidArticleImage
+    ? (leadArticle!.imageAlt || leadArticle!.title)
+    : EDITORIAL_IMAGES.congresso.alt;
+
+  let leadImageCaption = EDITORIAL_IMAGES.congresso.caption;
+  if (hasValidArticleImage && leadArticle) {
+    if (leadArticle.imageCaption && leadArticle.imageCredit) {
+      leadImageCaption = `${leadArticle.imageCaption} (${leadArticle.imageCredit})`;
+    } else if (leadArticle.imageCaption) {
+      leadImageCaption = leadArticle.imageCaption;
+    } else if (leadArticle.imageCredit) {
+      leadImageCaption = `Foto: ${leadArticle.imageCredit}`;
+    } else {
+      leadImageCaption = leadArticle.title || EDITORIAL_IMAGES.congresso.caption;
+    }
+  }
 
   return (
     <section className="py-8 sm:py-10 bg-white border-b border-slate-200">
@@ -79,15 +114,15 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                 {/* Imagem Editorial de Alta Definição */}
                 <div className="relative rounded-2xl overflow-hidden mb-5 bg-slate-100 aspect-16/9 shadow-xs border border-slate-200/80">
                   <img
-                    src={EDITORIAL_IMAGES.congresso.src}
-                    alt={EDITORIAL_IMAGES.congresso.alt}
+                    src={leadImageSrc}
+                    alt={leadImageAlt}
                     className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
                     loading="eager"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
                   <div className="absolute bottom-3 left-4 right-4 text-white text-[11px] font-medium flex items-center justify-between">
-                    <span className="opacity-90">{EDITORIAL_IMAGES.congresso.caption}</span>
+                    <span className="opacity-90">{leadImageCaption}</span>
                     <span className="hidden sm:inline bg-black/40 backdrop-blur-xs px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">
                       Fotojornalismo
                     </span>

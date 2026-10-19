@@ -106,15 +106,97 @@ function escapeJson(str) {
   return JSON.stringify(str).slice(1, -1);
 }
 
-// Verifica se a matéria possui imagem autêntica, segura e com crédito comprovado
-function isVerifiedImage(article) {
-  if (!article.imageUrl || typeof article.imageUrl !== 'string') return false;
-  const url = article.imageUrl.trim();
-  if (!url.startsWith('https://')) return false;
-  if (!article.imageCredit || typeof article.imageCredit !== 'string' || !article.imageCredit.trim()) {
-    return false;
+// Garante que o resumo termine sempre em sentença completa sem pontas soltas ou reticências
+function cleanSummary(raw, maxLen = 280) {
+  if (!raw) return '';
+  let text = String(raw).trim();
+
+  // 1. Remove ruídos de créditos fotográficos no início ou fim (ex: IBGE: "- Foto: ...")
+  text = text.replace(/\s*-\s*Foto:[\s\S]*$/i, '');
+  text = text.replace(/\s*Foto:\s*[\s\S]*$/i, '');
+
+  // 2. Remove reticências ou pontos suspensivos causados por truncamento por caracteres
+  text = text.replace(/(\s*\.{2,}|\s*…)+$/g, '');
+
+  // 3. Remove conectivos e preposições pendentes residuais
+  const danglingPatterns = [
+    /\s+(?:na|no|nas|nos|de|da|do|das|dos|em|para|por|com|e|ou|que|o|a|os|as|um|uma|uns|umas|se|ao|aos|à|às|sobre|após|pelo|pela|pelos|pelas)\s*$/i,
+    /\s+(?:veiculação|veiculacao|distribuição|distribuicao|intermediação|intermediacao|operação|operacao)\s+de\s*$/i
+  ];
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (const pat of danglingPatterns) {
+      if (pat.test(text)) {
+        text = text.replace(pat, '').trim();
+        changed = true;
+      }
+    }
   }
-  return true;
+
+  // Remove pontuação solta residual
+  text = text.replace(/[\s,;:!?-]+$/, '').trim();
+
+  // 4. Protege abreviações brasileiras para não quebrar sentenças indevidamente
+  const abbrevProtected = text
+    .replace(/R\$\s*/g, 'R$__TEMP_SPACE__')
+    .replace(/\b(art|nº|n°|dr|dra|sr|sra|prof|profa|gov|min|des|dep|sen|ex|etc|pág|p|vol|cap|inc|par|fls|jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez)\.\s*/gi, (m) => m.replace('.', '__TEMP_DOT__'));
+
+  const sentenceMatches = abbrevProtected.match(/[^.!?]+(?:[.!?]+["”’\)]*|$)/g) || [abbrevProtected];
+  const sentences = [];
+  for (let s of sentenceMatches) {
+    s = s.replace(/__TEMP_DOT__/g, '.').replace(/R\$__TEMP_SPACE__/g, 'R$ ').trim();
+    if (s.length > 0) {
+      sentences.push(s);
+    }
+  }
+
+  // 5. Acumula sentenças completas que caibam no limite
+  let accumulated = '';
+  for (const s of sentences) {
+    const isTerminated = /[.!?]["”’\)]*$/.test(s);
+    const candidate = accumulated ? `${accumulated} ${s}` : s;
+    if (candidate.length <= maxLen && isTerminated) {
+      accumulated = candidate;
+    } else if (!accumulated && candidate.length <= maxLen) {
+      accumulated = candidate;
+    } else {
+      break;
+    }
+  }
+
+  if (!accumulated && sentences.length > 0) {
+    accumulated = sentences[0];
+  }
+
+  accumulated = accumulated.trim().replace(/[\s,;:!?-]+$/, '');
+
+  // Garante terminação pontuada oficial da oração
+  if (!/[.!?]["”’\)]*$/.test(accumulated)) {
+    accumulated += '.';
+  }
+
+  return accumulated;
+}
+
+function formatMetaDescription(summary) {
+  if (!summary) return 'Sociedade Ativa — Notícias e dados do Brasil.';
+  if (summary.length <= 155) return summary;
+
+  // Prefere a primeira sentença completa se couber em até 155 caracteres
+  const firstSentenceMatch = summary.match(/^([^.!?]+[.!?]["”’\)]*)/);
+  if (firstSentenceMatch && firstSentenceMatch[1].length <= 155) {
+    return firstSentenceMatch[1].trim();
+  }
+
+  // Truncamento em limite de palavra sem deixar conectivos ou pontas soltas
+  let sliced = summary.slice(0, 152);
+  const lastSpace = sliced.lastIndexOf(' ');
+  if (lastSpace > 100) {
+    sliced = sliced.slice(0, lastSpace);
+  }
+  sliced = sliced.replace(/[\s,;:!?-]+$/, '');
+  return sliced;
 }
 
 // Gera o sitemap.xml final com as 8 seções canônicas e todos os artigos gerados
@@ -170,7 +252,8 @@ function generateSitemap(generatedArticles) {
 
     if (fs.existsSync(articleHtmlPath) && !seenLocs.has(articleUrl)) {
       seenLocs.add(articleUrl);
-      const reliableDate = extractReliableDateYmd(article.updatedAt || article.publishedAt);
+      const isGenuineUpdate = Boolean(article.updatedAt && article.updatedAt !== article.publishedAt);
+      const reliableDate = extractReliableDateYmd((isGenuineUpdate ? article.updatedAt : null) || article.publishedAt);
       sitemapEntries.push({
         loc: articleUrl,
         lastmod: reliableDate,
@@ -197,8 +280,7 @@ function generateSitemap(generatedArticles) {
 
   const sitemapXml = xmlLines.join('\n');
   fs.writeFileSync(DIST_SITEMAP, sitemapXml, 'utf8');
-  fs.writeFileSync(BASE_SITEMAP, sitemapXml, 'utf8');
-  console.log(`Sucesso: dist/sitemap.xml e public/sitemap.xml gerados com ${sitemapEntries.length} URLs (${canonicalSections.length} seções canônicas + ${sitemapEntries.length - canonicalSections.length} matérias individuais).`);
+  console.log(`Sucesso: dist/sitemap.xml gerado com ${sitemapEntries.length} URLs (${canonicalSections.length} seções canônicas + ${sitemapEntries.length - canonicalSections.length} matérias individuais).`);
 }
 
 function main() {
@@ -245,12 +327,12 @@ function main() {
 
     const canonicalUrl = `https://sociedadeativa.github.io/noticias/${article.id}/`;
     const pageTitle = `${article.title} — Sociedade Ativa | Notícias`;
-    const metaDescription = article.summary.length > 155
-      ? `${article.summary.slice(0, 152)}...`
-      : article.summary;
+    const cleanSummaryText = cleanSummary(article.summary, 280);
+    const metaDescription = formatMetaDescription(cleanSummaryText);
 
+    const hasGenuineUpdate = Boolean(article.updatedAt && article.updatedAt !== article.publishedAt);
     const isoDate = parseDateToIso(article.publishedAt);
-    const isoModDate = parseDateToIso(article.updatedAt || article.publishedAt);
+    const isoModDate = hasGenuineUpdate ? parseDateToIso(article.updatedAt) : isoDate;
 
     // Ajusta referências relativas de "../assets/" para "../../assets/" e "../favicon.svg" para "../../favicon.svg"
     let pageHtml = templateHtml
@@ -296,7 +378,7 @@ function main() {
     );
     pageHtml = pageHtml.replace(
       /<meta\s+property=["']og:type["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-      () => `<meta property="og:type" content="article" />\n    <meta property="article:published_time" content="${isoDate}" />\n    <meta property="article:section" content="${escapeHtml(article.category)}" />`
+      () => `<meta property="og:type" content="article" />\n    <meta property="article:published_time" content="${isoDate}" />${hasGenuineUpdate ? `\n    <meta property="article:modified_time" content="${isoModDate}" />` : ''}\n    <meta property="article:section" content="${escapeHtml(article.category)}" />`
     );
 
     // Substitui Twitter Cards
@@ -309,51 +391,7 @@ function main() {
       () => `<meta name="twitter:description" content="${escapeHtml(metaDescription)}" />`
     );
 
-    const isSociedadeAtiva = article.source?.includes("Sociedade Ativa") || article.author?.includes("Sociedade Ativa");
-    const hasVerifiedImg = isVerifiedImage(article);
-
-    // Trata metadados de imagem em Open Graph e Twitter Cards
-    // Se a imagem for verificada, utiliza a URL e texto alternativo correspondentes
-    // Se não houver imagem verificada, omite estritamente as tags de imagem para concordância total com o conteúdo
-    if (hasVerifiedImg) {
-      const imgAlt = article.imageAlt || article.imageCaption || article.title;
-      pageHtml = pageHtml.replace(
-        /<meta\s+property=["']og:image["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-        () => `<meta property="og:image" content="${escapeHtml(article.imageUrl)}" />\n    <meta property="og:image:alt" content="${escapeHtml(imgAlt)}" />`
-      );
-      pageHtml = pageHtml.replace(
-        /<meta\s+name=["']twitter:card["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-        () => `<meta name="twitter:card" content="summary_large_image" />`
-      );
-      pageHtml = pageHtml.replace(
-        /<meta\s+name=["']twitter:image["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-        () => `<meta name="twitter:image" content="${escapeHtml(article.imageUrl)}" />\n    <meta name="twitter:image:alt" content="${escapeHtml(imgAlt)}" />`
-      );
-    } else {
-      // Quando não há imagem verificada, omite estritamente as tags de imagem
-      pageHtml = pageHtml.replace(
-        /\s*<meta\s+property=["']og:image["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-        ''
-      );
-      pageHtml = pageHtml.replace(
-        /\s*<meta\s+property=["']og:image:alt["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-        ''
-      );
-      pageHtml = pageHtml.replace(
-        /\s*<meta\s+name=["']twitter:image["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-        ''
-      );
-      pageHtml = pageHtml.replace(
-        /\s*<meta\s+name=["']twitter:image:alt["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-        ''
-      );
-      pageHtml = pageHtml.replace(
-        /<meta\s+name=["']twitter:card["']\s+content=["'][\s\S]*?["']\s*\/?>/i,
-        () => `<meta name="twitter:card" content="summary" />`
-      );
-    }
-
-    // Substitui dados estruturados Schema.org NewsArticle
+    // Substitui dados estruturados Schema.org
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "NewsArticle",
@@ -363,7 +401,7 @@ function main() {
         "@id": canonicalUrl
       },
       "headline": article.title,
-      "description": article.summary,
+      "description": cleanSummaryText,
       "datePublished": isoDate,
       "dateModified": isoModDate,
       "articleSection": article.category,
@@ -379,105 +417,48 @@ function main() {
         }
       },
       "author": {
-        "@type": isSociedadeAtiva ? "NewsMediaOrganization" : "Organization",
-        "name": article.source,
-        "url": article.sourceUrl || canonicalUrl
+        "@type": "Organization",
+        "name": article.source
       },
       "isAccessibleForFree": true
     };
 
-    if (hasVerifiedImg) {
-      structuredData.image = [article.imageUrl];
-    }
-
-    if (article.content && Array.isArray(article.content) && article.content.length > 0) {
-      structuredData.articleBody = article.content.join('\n\n');
-    }
-
-    const safeJsonLdString = JSON.stringify(structuredData, null, 2).replace(/<\/script/gi, '<\\/script');
     pageHtml = pageHtml.replace(
       /<script\s+type=["']application\/ld\+json["']>[\s\S]*?<\/script>/i,
-      () => `<script type="application/ld+json">\n${safeJsonLdString}\n    </script>`
+      () => `<script type="application/ld+json">\n${JSON.stringify(structuredData, null, 2)}\n    </script>`
     );
+
+    let timestampHtml = `<span>Publicado em ${escapeHtml(article.publishedAt)}</span>`;
+    if (hasGenuineUpdate) {
+      timestampHtml += ` &middot; <span>Atualizado em ${escapeHtml(article.updatedAt)}</span>`;
+    } else if (article.ingestedAt && article.ingestedAt !== article.publishedAt) {
+      timestampHtml += ` &middot; <span>Recebido pelo portal em ${escapeHtml(article.ingestedAt)}</span>`;
+    }
 
     // Pre-rendered HTML dentro de <div id="root"> para robôs de indexação e usuários sem JS
     const fallbackArticleHtml = `
       <div id="root">
-        <main style="max-width:840px;margin:32px auto;padding:0 20px;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;color:#0f172a;line-height:1.6;">
-          <nav aria-label="Breadcrumb" style="font-size:12px;margin-bottom:20px;color:#64748b;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-bottom:12px;border-bottom:1px solid #e2e8f0;">
-            <div>
-              <a href="/" style="color:#2563eb;text-decoration:none;font-weight:500;">Início</a> &rarr; 
-              <a href="/noticias/" style="color:#2563eb;text-decoration:none;font-weight:500;">Notícias</a> &rarr; 
-              <span style="font-weight:700;color:#0f172a;">${escapeHtml(article.category)}</span>
-            </div>
-            <a href="/noticias/" style="color:#475569;text-decoration:none;font-size:12px;font-weight:600;background:#f1f5f9;padding:6px 12px;border-radius:6px;border:1px solid #cbd5e1;">&larr; Voltar para Notícias</a>
+        <main style="max-width:800px;margin:40px auto;padding:0 20px;font-family:system-ui,-apple-system,sans-serif;color:#0f172a;">
+          <nav style="font-size:13px;margin-bottom:20px;color:#64748b;">
+            <a href="/" style="color:#2563eb;text-decoration:none;">Início</a> &rarr; 
+            <a href="/noticias/" style="color:#2563eb;text-decoration:none;">Notícias</a> &rarr; 
+            <span>${escapeHtml(article.category)}</span>
           </nav>
-
           <article>
-            <div style="margin-bottom:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:11px;">
-              <span style="display:inline-block;background:#e0e7ff;color:#1e3a8a;font-weight:bold;letter-spacing:0.04em;text-transform:uppercase;padding:3px 8px;border-radius:4px;">${escapeHtml(article.category)}</span>
-              ${
-                article.readTime
-                  ? `<span style="color:#64748b;">&bull; ${escapeHtml(article.readTime)}</span>`
-                  : ''
-              }
-              ${
-                isSociedadeAtiva
-                  ? `<span style="display:inline-block;background:#0f172a;color:#ffffff;font-size:11px;font-weight:bold;letter-spacing:0.04em;text-transform:uppercase;padding:3px 8px;border-radius:4px;">Reportagem Especial &bull; Redação Sociedade Ativa</span>`
-                  : `<span style="display:inline-block;background:#f1f5f9;color:#334155;border:1px solid #cbd5e1;font-size:11px;font-weight:bold;letter-spacing:0.04em;text-transform:uppercase;padding:3px 8px;border-radius:4px;">Súmula Institucional Oficial &bull; ${escapeHtml(article.source)}</span>`
-              }
+            <p style="font-size:12px;font-weight:bold;text-transform:uppercase;color:#1e40af;margin-bottom:8px;">${escapeHtml(article.category)}</p>
+            <h1 style="font-size:28px;line-height:1.2;font-weight:900;color:#020617;margin-bottom:16px;">${escapeHtml(article.title)}</h1>
+            <p style="font-size:16px;line-height:1.6;font-weight:600;color:#334155;background:#f8fafc;padding:16px;border-radius:12px;border:1px solid #e2e8f0;margin-bottom:20px;">${escapeHtml(cleanSummaryText)}</p>
+            <div style="font-size:12px;color:#64748b;margin-bottom:24px;border-bottom:1px solid #e2e8f0;padding-bottom:12px;">
+              <span><strong>Fonte:</strong> ${escapeHtml(article.source)}</span> &middot; 
+              ${timestampHtml}
             </div>
-
-            <h1 style="font-size:28px;line-height:1.25;font-weight:900;color:#020617;margin:0 0 16px 0;letter-spacing:-0.02em;">${escapeHtml(article.title)}</h1>
-
-            <div style="font-size:16px;line-height:1.6;font-weight:600;color:#334155;background:#f8fafc;padding:18px 20px;border-radius:12px;border:1px solid #e2e8f0;margin-bottom:20px;">
-              ${escapeHtml(article.summary)}
-            </div>
-            
-            <div style="font-size:12px;color:#64748b;margin-bottom:24px;border-bottom:1px solid #e2e8f0;padding-bottom:12px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
-              <span><strong>Fonte:</strong> ${escapeHtml(article.source)}</span>
-              ${article.author && article.author !== article.source ? `&middot; <span><strong>Apuração / Autoria:</strong> ${escapeHtml(article.author)}</span>` : ''}
-              &middot; <span><strong>Publicado em:</strong> ${escapeHtml(article.publishedAt)}</span>
-              ${article.updatedAt && article.updatedAt !== article.publishedAt ? `&middot; <span><strong>Atualizado em:</strong> ${escapeHtml(article.updatedAt)}</span>` : ''}
-            </div>
-
             ${
-              hasVerifiedImg
-                ? `<figure style="margin:24px 0;">
-                    <img src="${escapeHtml(article.imageUrl)}" alt="${escapeHtml(article.imageAlt || article.imageCaption || article.title)}" style="width:100%;max-height:480px;object-fit:cover;border-radius:12px;border:1px solid #e2e8f0;display:block;" loading="eager" />
-                    <figcaption style="font-size:11px;color:#64748b;margin-top:8px;padding:0 4px;line-height:1.4;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-                      <span>${escapeHtml(article.imageCaption || article.title)}</span>
-                      ${article.imageCredit ? `<span style="font-style:italic;font-weight:600;">${escapeHtml(article.imageCredit)}</span>` : ''}
-                    </figcaption>
-                  </figure>`
-                : ''
+              article.content && article.content.length > 0
+                ? article.content.map(p => `<p style="font-size:15px;line-height:1.7;color:#1e293b;margin-bottom:16px;">${escapeHtml(p)}</p>`).join('')
+                : `<p style="font-size:13px;color:#64748b;font-style:italic;margin-bottom:20px;">Esta é uma súmula factual oficial distribuída por ${escapeHtml(article.source)}. Acesse a matéria original para conferir documentos e anexos completos.</p>`
             }
-
-            ${
-              article.content && Array.isArray(article.content) && article.content.length > 0
-                ? `<div style="font-family:Georgia,Cambria,'Times New Roman',Times,serif;font-size:17px;line-height:1.8;color:#1e293b;margin:28px 0;">
-                    ${article.content.map(p => `<p style="margin-bottom:20px;">${escapeHtml(p)}</p>`).join('')}
-                  </div>`
-                : `<div style="font-size:13px;color:#475569;background:#f8fafc;padding:20px;border-radius:12px;border:1px solid #e2e8f0;margin-bottom:24px;line-height:1.6;">
-                    <p style="margin:0 0 10px 0;font-weight:700;color:#0f172a;">Diretriz de Transparência e Integridade de Dados:</p>
-                    <p style="margin:0 0 14px 0;">Esta é uma súmula factual oficial distribuída por <strong>${escapeHtml(article.source)}</strong> para fins de transparência e acesso à informação pública. Para consultar relatórios integrais, notas técnicas ou anexos originais, acesse a publicação direta na agência responsável pelo link abaixo.</p>
-                    <div>
-                      <a href="${escapeHtml(article.articleUrl)}" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#1e3a8a;color:#ffffff;padding:10px 18px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:bold;">Acessar reportagem completa em ${escapeHtml(article.source)} &rarr;</a>
-                    </div>
-                  </div>`
-            }
-
-            ${
-              article.tags && article.tags.length > 0
-                ? `<div style="margin:24px 0;display:flex;gap:6px;flex-wrap:wrap;font-size:11px;align-items:center;">
-                    <span style="color:#64748b;font-weight:bold;margin-right:4px;">Temas:</span>
-                    ${article.tags.map(t => `<span style="background:#f1f5f9;color:#475569;padding:4px 9px;border-radius:6px;border:1px solid #e2e8f0;">#${escapeHtml(t)}</span>`).join('')}
-                  </div>`
-                : ''
-            }
-
-            <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;border-top:1px solid #e2e8f0;padding-top:20px;">
-              <a href="${escapeHtml(article.articleUrl)}" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#1e3a8a;color:#ffffff;padding:10px 20px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:bold;">Acessar publicação oficial em ${escapeHtml(article.source)}</a>
+            <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
+              <a href="${escapeHtml(article.articleUrl)}" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#1e3a8a;color:#ffffff;padding:10px 20px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:bold;">Acessar reportagem completa em ${escapeHtml(article.source)}</a>
               <a href="/noticias/" style="display:inline-block;background:#f1f5f9;color:#334155;padding:10px 20px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:bold;">Voltar para Notícias</a>
             </div>
           </article>
