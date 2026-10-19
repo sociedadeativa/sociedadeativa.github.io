@@ -167,36 +167,163 @@ export function filterNewsItems(items: NewsItem[], options: NewsFilterOptions): 
 }
 
 /**
- * Busca de notícias com fallback automático para os dados embutidos
+ * Converte qualquer representação de data (formato brasileiro 'DD/MM/AAAA às HH:mm',
+ * 'DD/MM/AAAA HH:mm:ss', ISO 8601, RFC 2822, etc.) em timestamp numérico UTC (em milissegundos).
+ * Nunca realiza ordenação lexicográfica de strings de data.
+ */
+export function parseNewsDateToTimestamp(dateStr: string | undefined | null): number {
+  if (!dateStr || typeof dateStr !== "string") return 0;
+  const trimmed = dateStr.trim();
+  if (!trimmed || trimmed === "Data não informada" || trimmed === "Hoje") return 0;
+
+  // 1. Padrão brasileiro com "às": DD/MM/AAAA às HH:mm(:ss)?
+  const brAsPattern = /^(\d{1,2})\/(\d{1,2})\/(\d{4})(?:\s+às\s+(\d{1,2}):(\d{2})(?::(\d{2}))?)?$/i;
+  const matchAs = trimmed.match(brAsPattern);
+  if (matchAs) {
+    const day = parseInt(matchAs[1], 10);
+    const month = parseInt(matchAs[2], 10) - 1;
+    const year = parseInt(matchAs[3], 10);
+    const hours = matchAs[4] !== undefined ? parseInt(matchAs[4], 10) : 0;
+    const minutes = matchAs[5] !== undefined ? parseInt(matchAs[5], 10) : 0;
+    const seconds = matchAs[6] !== undefined ? parseInt(matchAs[6], 10) : 0;
+
+    // Horário oficial de Brasília é UTC-3
+    return Date.UTC(year, month, day, hours + 3, minutes, seconds);
+  }
+
+  // 2. Padrão brasileiro com espaço: DD/MM/AAAA [HH:mm[:ss]]
+  const brSpacePattern = /^(\d{1,2})\/(\d{1,2})\/(\d{4})(?:\s+(\d{1,2}):(\d{2})(?::(\d{2}))?)?$/;
+  const matchSpace = trimmed.match(brSpacePattern);
+  if (matchSpace) {
+    const day = parseInt(matchSpace[1], 10);
+    const month = parseInt(matchSpace[2], 10) - 1;
+    const year = parseInt(matchSpace[3], 10);
+    const hours = matchSpace[4] !== undefined ? parseInt(matchSpace[4], 10) : 0;
+    const minutes = matchSpace[5] !== undefined ? parseInt(matchSpace[5], 10) : 0;
+    const seconds = matchSpace[6] !== undefined ? parseInt(matchSpace[6], 10) : 0;
+
+    return Date.UTC(year, month, day, hours + 3, minutes, seconds);
+  }
+
+  // 3. Padrão ISO YYYY-MM-DDTHH:mm:ss... ou YYYY-MM-DD
+  const isoPattern = /^(\d{4})-(\d{2})-(\d{2})(?:[T\s](\d{2}):(\d{2})(?::(\d{2}))?(?:\.\d+)?(Z|[+-]\d{2}:?\d{2})?)?$/i;
+  const matchIso = trimmed.match(isoPattern);
+  if (matchIso) {
+    const year = parseInt(matchIso[1], 10);
+    const month = parseInt(matchIso[2], 10) - 1;
+    const day = parseInt(matchIso[3], 10);
+    const hours = matchIso[4] !== undefined ? parseInt(matchIso[4], 10) : 0;
+    const minutes = matchIso[5] !== undefined ? parseInt(matchIso[5], 10) : 0;
+    const seconds = matchIso[6] !== undefined ? parseInt(matchIso[6], 10) : 0;
+    const tz = matchIso[7];
+
+    if (!tz) {
+      // Sem fuso explícito em portal brasileiro: assume fuso de Brasília UTC-3
+      return Date.UTC(year, month, day, hours + 3, minutes, seconds);
+    }
+  }
+
+  // 4. Fallback padrão para Date.parse (RFC 2822, ISO com fuso, etc.)
+  const parsed = new Date(trimmed);
+  const time = parsed.getTime();
+  return isNaN(time) ? 0 : time;
+}
+
+/**
+ * Deduplica artigos por ID e por URL canônica (para matérias externas).
+ * Preserva artigos institucionais protegidos do Sociedade Ativa.
+ */
+export function deduplicateNewsItems(items: NewsItem[]): NewsItem[] {
+  if (!Array.isArray(items)) return [];
+  const seenIds = new Set<string>();
+  const seenUrls = new Set<string>();
+  const result: NewsItem[] = [];
+
+  for (const item of items) {
+    if (!item || !item.id) continue;
+    if (seenIds.has(item.id)) continue;
+
+    const isInternalGenericUrl =
+      !item.articleUrl ||
+      item.articleUrl === "https://sociedadeativa.github.io/" ||
+      item.articleUrl === "https://sociedadeativa.github.io/noticias/" ||
+      item.articleUrl === "https://sociedadeativa.github.io/eleicoes/";
+
+    if (!isInternalGenericUrl && seenUrls.has(item.articleUrl.toLowerCase())) {
+      continue;
+    }
+
+    seenIds.add(item.id);
+    if (!isInternalGenericUrl) {
+      seenUrls.add(item.articleUrl.toLowerCase());
+    }
+    result.push(item);
+  }
+  return result;
+}
+
+/**
+ * Ordena os artigos em ordem cronológica decrescente estrita (mais recente primeiro).
+ * Converte datas brasileiras e ISO em timestamp para comparação cronológica,
+ * evitando qualquer falha decorrente de ordenação lexicográfica.
+ */
+export function sortNewsItems(items: NewsItem[]): NewsItem[] {
+  if (!Array.isArray(items)) return [];
+  return [...items].sort((a, b) => {
+    const timeA = parseNewsDateToTimestamp(a.publishedAt);
+    const timeB = parseNewsDateToTimestamp(b.publishedAt);
+    if (timeB !== timeA) {
+      return timeB - timeA;
+    }
+    // Desempate por ingestedAt se houver
+    const ingA = parseNewsDateToTimestamp(a.ingestedAt);
+    const ingB = parseNewsDateToTimestamp(b.ingestedAt);
+    if (ingB !== ingA) {
+      return ingB - ingA;
+    }
+    return 0;
+  });
+}
+
+/**
+ * Busca de notícias com fallback automático para os dados embutidos.
+ * Aplica cache-busting para garantir que novas versões de public/data/newsData.json
+ * sejam baixadas imediatamente pelo navegador sem ficar presas no cache HTTP do CDN.
  */
 export async function fetchNewsItems(): Promise<NewsItem[]> {
   const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
+  const cacheBuster = `_t=${Date.now()}`;
   const candidateUrls = [
-    ...(origin ? [`${origin}/data/newsData.json`] : []),
-    "/data/newsData.json",
-    "../../data/newsData.json",
-    "../data/newsData.json",
-    "./data/newsData.json",
-    "data/newsData.json",
-    "https://sociedadeativa.github.io/data/newsData.json",
+    ...(origin ? [`${origin}/data/newsData.json?${cacheBuster}`] : []),
+    `/data/newsData.json?${cacheBuster}`,
+    `../../data/newsData.json?${cacheBuster}`,
+    `../data/newsData.json?${cacheBuster}`,
+    `./data/newsData.json?${cacheBuster}`,
+    `data/newsData.json?${cacheBuster}`,
+    `https://sociedadeativa.github.io/data/newsData.json?${cacheBuster}`,
   ];
 
   for (const url of candidateUrls) {
     try {
-      const response = await fetch(url, { cache: "no-cache" });
+      const response = await fetch(url, {
+        headers: { Accept: "application/json" },
+        cache: "no-cache",
+      });
       if (response.ok) {
         const contentType = response.headers.get("content-type") || "";
         if (contentType.includes("application/json") || contentType.includes("text/json")) {
           const data = await response.json();
           if (Array.isArray(data) && data.length > 0) {
-            return data.map((item, idx) => normalizeNewsItem(item, idx));
+            const normalized = data.map((item, idx) => normalizeNewsItem(item, idx));
+            return sortNewsItems(deduplicateNewsItems(normalized));
           }
         } else {
           const text = await response.text();
           if (text.trim().startsWith("[")) {
             const data = JSON.parse(text);
             if (Array.isArray(data) && data.length > 0) {
-              return data.map((item, idx) => normalizeNewsItem(item, idx));
+              const normalized = data.map((item, idx) => normalizeNewsItem(item, idx));
+              return sortNewsItems(deduplicateNewsItems(normalized));
             }
           }
         }
@@ -207,5 +334,6 @@ export async function fetchNewsItems(): Promise<NewsItem[]> {
   }
 
   // Fallback garantido para dados estáticos compilados
-  return OFFICIAL_NEWS_ARTICLES.map((item, idx) => normalizeNewsItem(item, idx));
+  const fallback = OFFICIAL_NEWS_ARTICLES.map((item, idx) => normalizeNewsItem(item, idx));
+  return sortNewsItems(deduplicateNewsItems(fallback));
 }

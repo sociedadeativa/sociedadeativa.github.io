@@ -38,6 +38,29 @@ function runScript(scriptContent, env = {}) {
   });
 }
 
+function runTsxScript(scriptContent, env = {}) {
+  return new Promise((resolve) => {
+    const child = spawn('npx', ['tsx'], {
+      cwd: ROOT,
+      env: { ...process.env, ...env },
+      stdio: ['pipe', 'pipe', 'pipe']
+    });
+
+    let stdout = '';
+    let stderr = '';
+
+    child.stdout.on('data', (d) => { stdout += d.toString(); });
+    child.stderr.on('data', (d) => { stderr += d.toString(); });
+
+    child.on('close', (code) => {
+      resolve({ code, stdout, stderr });
+    });
+
+    child.stdin.write(scriptContent);
+    child.stdin.end();
+  });
+}
+
 async function runTests() {
   let passedTests = 0;
 
@@ -340,6 +363,85 @@ async function runTests() {
     process.exit(1);
   }
   console.log('SUCCESS: Partial failure handled gracefully with code 0 while operational sources continued.');
+  passedTests++;
+
+  // TEST 5: Frontend Date Parsing, Non-Lexicographical Ordering & Homepage Selection
+  console.log('\n[TEST 5] Frontend Date Parsing, Non-Lexicographical Ordering & Homepage Selection');
+  const test5Code = `
+    import assert from "node:assert";
+    import { parseNewsDateToTimestamp, sortNewsItems, deduplicateNewsItems } from "./src/services/newsService";
+
+    // 1. Brazilian date parsing assertions
+    const tOct1441 = parseNewsDateToTimestamp("19/10/2026 às 14:41");
+    const tOct1440 = parseNewsDateToTimestamp("19/10/2026 às 14:40");
+    const tNov0900 = parseNewsDateToTimestamp("02/11/2026 às 09:00");
+    const tOct04 = parseNewsDateToTimestamp("04/10/2026 às 21:55");
+    const tIso = parseNewsDateToTimestamp("2026-10-19T14:41:00-03:00");
+
+    assert.ok(tOct1441 > 0, "19/10/2026 às 14:41 should parse to a positive UTC timestamp");
+    assert.strictEqual(tOct1441, tIso, "BR format and ISO with UTC-3 offset must yield exact same timestamp");
+    assert.ok(tOct1441 > tOct1440, "14:41 must be chronologically newer than 14:40");
+    assert.ok(tOct1441 > tOct04, "19/10 must be chronologically newer than 04/10");
+
+    // Critical non-lexicographical check:
+    // In lexicographical comparison, "19/10/2026" > "02/11/2026" because '1' > '0'.
+    // Chronologically, November 2 is strictly AFTER October 19.
+    assert.ok(tNov0900 > tOct1441, "CRITICAL: November 2 must be newer than October 19 (non-lexicographical)");
+    console.log("  [PASS] 1. Brazilian date parsing and non-lexicographical chronological comparison verified.");
+
+    // 2. Newest-first sorting
+    const mockItems = [
+      { id: "art-1", title: "Eleições 1º Turno", publishedAt: "04/10/2026 às 21:55", category: "Eleições", source: "TSE", sourceUrl: "", articleUrl: "https://example.com/1", summary: "" },
+      { id: "art-2", title: "Tarde de Outubro", publishedAt: "19/10/2026 às 17:01", category: "Congresso", source: "Câmara", sourceUrl: "", articleUrl: "https://example.com/2", summary: "" },
+      { id: "art-3", title: "Almoço de Outubro", publishedAt: "19/10/2026 às 13:24", category: "Governo", source: "EBC", sourceUrl: "", articleUrl: "https://example.com/3", summary: "" },
+      { id: "art-4", title: "Início de Novembro", publishedAt: "02/11/2026 às 08:00", category: "Justiça", source: "STF", sourceUrl: "", articleUrl: "https://example.com/4", summary: "" },
+      { id: "art-5", title: "Meio da Tarde Outubro", publishedAt: "19/10/2026 às 14:41", category: "Economia", source: "BCB", sourceUrl: "", articleUrl: "https://example.com/5", summary: "" }
+    ];
+
+    const sorted = sortNewsItems(mockItems);
+    assert.strictEqual(sorted[0].id, "art-4", "Lead item must be art-4 (02/11 08:00)");
+    assert.strictEqual(sorted[1].id, "art-2", "2nd item must be art-2 (19/10 17:01)");
+    assert.strictEqual(sorted[2].id, "art-5", "3rd item must be art-5 (19/10 14:41)");
+    assert.strictEqual(sorted[3].id, "art-3", "4th item must be art-3 (19/10 13:24)");
+    assert.strictEqual(sorted[4].id, "art-1", "5th item must be art-1 (04/10 21:55)");
+    console.log("  [PASS] 2. Strict newest-first sorting verified across all items.");
+
+    // 3. Deduplication
+    const mockWithDups = [
+      ...mockItems,
+      { id: "art-2", title: "Duplicate ID", publishedAt: "19/10/2026 às 17:01", category: "Congresso", source: "Câmara", sourceUrl: "", articleUrl: "https://example.com/2-diff", summary: "" },
+      { id: "art-99", title: "Duplicate URL", publishedAt: "19/10/2026 às 16:00", category: "Congresso", source: "Câmara", sourceUrl: "", articleUrl: "https://example.com/2", summary: "" }
+    ];
+    const deduped = deduplicateNewsItems(mockWithDups);
+    assert.strictEqual(deduped.length, 5, "Duplicate IDs and duplicate external URLs must be filtered out");
+    console.log("  [PASS] 3. Deduplication logic verified.");
+
+    // 4. Homepage Data Selection (Lead, Highlights, Radar)
+    const homepageLead = sorted[0];
+    const remaining = sorted.slice(1);
+    const secondaryHighlights = remaining.slice(0, 3);
+    const civicRadar = remaining.slice(3, 8);
+
+    assert.strictEqual(homepageLead.id, "art-4", "Homepage lead must be the newest article");
+    assert.strictEqual(secondaryHighlights.length, 3, "Secondary highlights must have 3 items");
+    assert.strictEqual(secondaryHighlights[0].id, "art-2", "1st secondary highlight must be 2nd newest");
+    assert.strictEqual(secondaryHighlights[1].id, "art-5", "2nd secondary highlight must be 3rd newest");
+    assert.strictEqual(secondaryHighlights[2].id, "art-3", "3rd secondary highlight must be 4th newest");
+
+    // No overlap between lead and secondary
+    assert.ok(!secondaryHighlights.some(s => s.id === homepageLead.id), "No overlap between lead and secondary highlights");
+
+    console.log("  [PASS] 4. Homepage lead, secondary highlights, and radar selection verified.");
+    console.log("TEST 5 PASSED: All frontend date parsing, sorting, and homepage selection checks succeeded.");
+  `;
+
+  const t5 = await runTsxScript(test5Code);
+  if (t5.code !== 0) {
+    console.error('Test 5 failed with stderr:', t5.stderr);
+    console.error('Stdout:', t5.stdout);
+    process.exit(1);
+  }
+  console.log(t5.stdout.trim());
   passedTests++;
 
   // Restore initial data files

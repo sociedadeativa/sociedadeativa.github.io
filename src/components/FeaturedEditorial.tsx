@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { NewsItem } from "../types/news";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { Clock, Calendar, ArrowUpRight, Sparkles } from "lucide-react";
 import { PortalLink } from "./PortalLink";
 import { PortalRoute } from "../utils/router";
+import { sortNewsItems, deduplicateNewsItems } from "../services/newsService";
 
 interface FeaturedEditorialProps {
   articles: NewsItem[];
@@ -17,7 +18,10 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
   // Configuração editorial: definir ID de artigo para fixar manualmente, ou null para seleção dinâmica automática
   const PINNED_LEAD_ARTICLE_ID: string | null = null;
 
-  const validArticles = Array.isArray(articles) ? articles : [];
+  // Garante ordenação cronológica decrescente estrita (mais recente primeiro) e ausência de duplicatas
+  const validArticles = useMemo(() => {
+    return sortNewsItems(deduplicateNewsItems(Array.isArray(articles) ? articles : []));
+  }, [articles]);
 
   // Encontra artigo principal (Lead): prioriza fixação intencional, depois o mais recente (articles[0])
   const pinnedArticle = PINNED_LEAD_ARTICLE_ID

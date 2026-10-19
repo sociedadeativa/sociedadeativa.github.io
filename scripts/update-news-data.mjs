@@ -374,10 +374,19 @@ function extractAllTags(xml, tag) {
  */
 function parseDateToBrasilia(dateStr) {
   if (!dateStr) {
-    return { formatted: 'Data não informada', timestamp: 0 };
+    return { formatted: 'Data não informada', timestamp: 0, isValid: false };
   }
 
   const str = String(dateStr).trim();
+
+  // Helper de validação do timestamp (rejeita datas no futuro acima de 15 minutos)
+  const checkResult = (ms, formatted) => {
+    if (!ms || isNaN(ms)) return { formatted: str, timestamp: 0, isValid: false };
+    if (ms > Date.now() + 15 * 60 * 1000) {
+      return { formatted: str, timestamp: 0, isValid: false };
+    }
+    return { formatted, timestamp: ms, isValid: true };
+  };
 
   // Caso 1: Se já estiver formatada no padrão brasileiro "DD/MM/YYYY às HH:mm"
   const brPattern = /^(\d{2})\/(\d{2})\/(\d{4}) às (\d{2}):(\d{2})$/;
@@ -385,7 +394,7 @@ function parseDateToBrasilia(dateStr) {
   if (brMatch) {
     const [, day, mon, yr, hr, min] = brMatch;
     const ms = Date.UTC(Number(yr), Number(mon) - 1, Number(day), Number(hr) + 3, Number(min));
-    return { formatted: str, timestamp: ms };
+    return checkResult(ms, str);
   }
 
   // Caso 2: Padrão IBGE "DD/MM/YYYY HH:mm:ss"
@@ -394,16 +403,23 @@ function parseDateToBrasilia(dateStr) {
   if (ibgeMatch) {
     const [, day, mon, yr, hr, min] = ibgeMatch;
     const ms = Date.UTC(Number(yr), Number(mon) - 1, Number(day), Number(hr) + 3, Number(min));
-    return {
-      formatted: `${day}/${mon}/${yr} às ${hr}:${min}`,
-      timestamp: ms
-    };
+    return checkResult(ms, `${day}/${mon}/${yr} às ${hr}:${min}`);
+  }
+
+  // Caso 2b: Padrão BCB ISO sem fuso explícito "YYYY-MM-DDTHH:mm:ss"
+  const bcbPattern = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})(?::(\d{2}))?$/;
+  const bcbMatch = str.match(bcbPattern);
+  if (bcbMatch) {
+    const [, yr, mon, day, hr, min] = bcbMatch;
+    const ms = Date.UTC(Number(yr), Number(mon) - 1, Number(day), Number(hr) + 3, Number(min));
+    const pad = (n) => String(n).padStart(2, '0');
+    return checkResult(ms, `${pad(day)}/${pad(mon)}/${yr} às ${pad(hr)}:${pad(min)}`);
   }
 
   // Caso 3: ISO 8601 ou RFC 2822
   const parsed = new Date(str);
   if (isNaN(parsed.getTime())) {
-    return { formatted: str, timestamp: 0 };
+    return { formatted: str, timestamp: 0, isValid: false };
   }
 
   const pad = (n) => String(n).padStart(2, '0');
@@ -416,10 +432,7 @@ function parseDateToBrasilia(dateStr) {
   const hours = pad(brDate.getUTCHours());
   const minutes = pad(brDate.getUTCMinutes());
 
-  return {
-    formatted: `${day}/${month}/${year} às ${hours}:${minutes}`,
-    timestamp: parsed.getTime()
-  };
+  return checkResult(parsed.getTime(), `${day}/${month}/${year} às ${hours}:${minutes}`);
 }
 
 /**
@@ -952,16 +965,11 @@ async function main() {
 
   const totalCollectedRaw = ebcItems.length + camaraItems.length + ibgeItems.length + bcbItems.length;
 
-  // 3. Resiliência de Nível 2: Se todas as fontes falharem
+  // 3. Resiliência de Nível 2: Se todas as fontes falharem (outage total)
   if (totalCollectedRaw === 0) {
-    if (existingItems.length > 0) {
-      console.warn('\n[AVISO CRÍTICO] Nenhuma fonte externa retornou novos artigos.');
-      console.warn('Dataset pré-existente preservado integralmente sem modificação.');
-      process.exit(0);
-    } else {
-      console.error('\n[ERRO CRÍTICO] Nenhuma fonte retornou dados e não há dataset pré-existente.');
-      process.exit(1);
-    }
+    console.error('\n[ERRO CRÍTICO] Falha total: nenhuma fonte oficial retornou dados.');
+    console.error('Dataset pré-existente preservado integralmente sem modificação.');
+    process.exit(1);
   }
 
   // 1b. Extrai e mapeia artigos oficiais previamente publicados e válidos

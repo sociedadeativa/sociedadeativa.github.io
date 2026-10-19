@@ -1,6 +1,12 @@
 import { useState, useEffect, useMemo, useCallback } from "react";
 import { NewsItem } from "../types/news";
-import { fetchNewsItems, filterNewsItems, normalizeNewsItem } from "../services/newsService";
+import {
+  fetchNewsItems,
+  filterNewsItems,
+  normalizeNewsItem,
+  sortNewsItems,
+  deduplicateNewsItems,
+} from "../services/newsService";
 
 interface UseNewsOptions {
   initialArticles?: NewsItem[];
@@ -9,7 +15,9 @@ interface UseNewsOptions {
 export function useNews(options?: UseNewsOptions) {
   const [articles, setArticles] = useState<NewsItem[]>(() => {
     if (options?.initialArticles && options.initialArticles.length > 0) {
-      return options.initialArticles.map((a, idx) => normalizeNewsItem(a, idx));
+      return sortNewsItems(
+        deduplicateNewsItems(options.initialArticles.map((a, idx) => normalizeNewsItem(a, idx)))
+      );
     }
     return [];
   });
@@ -19,11 +27,32 @@ export function useNews(options?: UseNewsOptions) {
   const [selectedSource, setSelectedSource] = useState<string>("Todas");
   const [activeArticle, setActiveArticle] = useState<NewsItem | null>(null);
 
+  // Sincroniza sempre que a prop initialArticles mudar (ex: após o fetch do App.tsx)
+  useEffect(() => {
+    if (options?.initialArticles && options.initialArticles.length > 0) {
+      const incoming = sortNewsItems(
+        deduplicateNewsItems(options.initialArticles.map((a, idx) => normalizeNewsItem(a, idx)))
+      );
+      setArticles((prev) => {
+        if (
+          prev.length === incoming.length &&
+          prev[0]?.id === incoming[0]?.id &&
+          prev[0]?.publishedAt === incoming[0]?.publishedAt
+        ) {
+          return prev;
+        }
+        return incoming;
+      });
+    }
+  }, [options?.initialArticles]);
+
   const loadData = useCallback(async () => {
     setLoading(true);
     try {
       const items = await fetchNewsItems();
-      setArticles(items);
+      if (Array.isArray(items) && items.length > 0) {
+        setArticles(items);
+      }
     } catch {
       // Falha silenciosa: mantém dados existentes
     } finally {
