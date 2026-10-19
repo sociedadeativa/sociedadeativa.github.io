@@ -5,6 +5,92 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "camara-1311934-projeto-reserva-5-das-compras-",
+    "title": "Projeto reserva 5% das compras públicas de alimentos para produtos típicos de biomas locais",
+    "summary": "Texto está em análise na Câmara do Deputados",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311934-projeto-reserva-5-das-compras-publicas-de-alimentos-para-produtos-tipicos-de-biomas-locais",
+    "publishedAt": "19/10/2026 às 11:23",
+    "category": "Congresso",
+    "ingestedAt": "19/10/2026 às 11:31",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260209210855050-768x473.jpg",
+    "imageCredit": "Divulgação / Agência Câmara de Notícias",
+    "imageAlt": "Projeto reserva 5% das compras públicas de alimentos para produtos típicos de biomas locais",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "ebc-1705795",
+    "title": "TSE dá 24 horas para Meta dar informações sobre igualdade de campanhas",
+    "summary": "O ministro Marco Aurélio Buzzi, do Tribunal Superior Eleitoral (TSE), deu 24 horas para que a empresa Meta - responsável por plataformas como Facebook, Instagram e WhatsApp - comprove a adoção de medidas de isonomia na distribuição de posts políticos e na veiculação de...",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-da-24-horas-para-meta-dar-informacoes-sobre-igualdade-de-campanhas",
+    "publishedAt": "19/10/2026 às 11:05",
+    "category": "Justiça",
+    "ingestedAt": "19/10/2026 às 11:31",
+    "imageUrl": "https://imagens.ebc.com.br/Q9U7eoc8fF7K1ZF8MbVxVfEfgXY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/img_1704.jpg.jpg?itok=I3NHlw24",
+    "imageCredit": "Foto: Agência Brasil / EBC",
+    "imageAlt": "TSE dá 24 horas para Meta dar informações sobre igualdade de campanhas",
+    "author": "Felipe Pontes - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "TSE",
+      "Prazo",
+      "Meta",
+      "Explicações"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "camara-1307742-projeto-preve-que-um-terco-da-",
+    "title": "Projeto prevê que um terço da jornada de professores regidos pela CLT seja reservado para planejamento",
+    "summary": "Proposta altera a Consolidação das Leis do Trabalho para incluir formalmente preparação de aulas, correções e estudos na carga horária semanal",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1307742-projeto-preve-que-um-terco-da-jornada-de-professores-regidos-pela-clt-seja-reservado-para-planejamento",
+    "publishedAt": "19/10/2026 às 10:55",
+    "category": "Congresso",
+    "ingestedAt": "19/10/2026 às 11:31",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260812185725009-768x473.jpg",
+    "imageCredit": "Divulgação / Agência Câmara de Notícias",
+    "imageAlt": "Projeto prevê que um terço da jornada de professores regidos pela CLT seja reservado para planejamento",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
+    "id": "camara-1306699-projeto-exige-presenca-de-fisi",
+    "title": "Projeto exige presença de fisioterapeuta em equipes de segurança de grandes empresas",
+    "summary": "Texto está em análise na Câmara dos Deputados",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1306699-projeto-exige-presenca-de-fisioterapeuta-em-equipes-de-seguranca-de-grandes-empresas",
+    "publishedAt": "19/10/2026 às 10:44",
+    "category": "Congresso",
+    "ingestedAt": "19/10/2026 às 11:31",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20211026142349298-768x512.jpg",
+    "imageCredit": "Divulgação / Agência Câmara de Notícias",
+    "imageAlt": "Projeto exige presença de fisioterapeuta em equipes de segurança de grandes empresas",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "editorialType": "sumula_oficial"
+  },
+  {
     "id": "ebc-1705793",
     "title": "Pagamentos de outubro do Bolsa Família começam nesta segunda",
     "summary": "Os pagamentos do Bolsa Família referentes ao mês de outubro começam a ser feitos nesta segunda-feira (19), quando recebem os beneficiários com NIS terminado em 1. Na terça-feira (20), será a vez de quem tem NIS terminado em 2. De acordo com a Secretaria de Comunicação Social...",
@@ -993,96 +1079,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Copa do Brasil Feminina",
       "Bahia",
       "São Paulo"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "ebc-1705646",
-    "title": "Defesa de Vorcaro pede investigação sobre vazamento de conversas",
-    "summary": "A defesa do ex-banqueiro Daniel Vorcaro enviou nesta sexta-feira (16) uma petição ao Supremo Tribunal Federal (STF) para solicitar a abertura de investigação sobre o vazamento de conversas privadas que fazem parte das investigações do caso Master. No documento, que foi...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/defesa-de-vorcaro-pede-investigacao-sobre-vazamento-de-conversas",
-    "publishedAt": "16/10/2026 às 21:18",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 10:22",
-    "imageUrl": "https://imagens.ebc.com.br/HN9FF1bKJbokttMbBg1AgDE6hyY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/06/daniel_vorcaro.jpg?itok=uJbwWRip",
-    "imageCredit": "Foto: Agência Brasil / EBC",
-    "imageAlt": "Defesa de Vorcaro pede investigação sobre vazamento de conversas",
-    "author": "Agência Brasil",
-    "tags": [
-      "Justiça",
-      "stf",
-      "Daniel Vorcaro",
-      "Banco Master",
-      "Operação Compliance Zero"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "ebc-1705644",
-    "title": "Anac estabelece regras mais restritivas para aviação em Congonhas (SP)",
-    "summary": "A Agência Nacional de Aviação Civil (Anac) estabeleceu regras mais restritivas para alocação de horários de pousos e decolagens (slots) no Aeroporto de Congonhas (SP). Pelas novas regras, os operadores de aviação geral - como serviço de taxi-aéreo e jatos executivos - terão...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/anac-estabelece-regras-mais-restritivas-para-aviacao-em-congonhas-sp",
-    "publishedAt": "16/10/2026 às 21:03",
-    "category": "Economia",
-    "ingestedAt": "19/10/2026 às 10:22",
-    "imageUrl": "https://imagens.ebc.com.br/uoOBrTHcOyMZi5hmWCyCMULDEWk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/12/22/0g0a0191.jpg?itok=LD7a2MPj",
-    "imageCredit": "Foto: Agência Brasil / EBC",
-    "imageAlt": "Anac estabelece regras mais restritivas para aviação em Congonhas (SP)",
-    "author": "Agência Brasil",
-    "tags": [
-      "Economia",
-      "Congonhas",
-      "Anac",
-      "slots",
-      "aviação"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "ebc-1705641",
-    "title": "TSE decide manter ordem para Meta garantir isonomia a candidatos",
-    "summary": "O Tribunal Superior Eleitoral (TSE) decidiu, por unanimidade, nesta sexta-feira (16) manter a decisão individual do ministro Marco Aurélio Belizze que proibiu a Meta de restringir a entrega de postagens que envolvem os candidatos à Presidência da República. Os votos foram...",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-decide-manter-ordem-para-meta-garantir-isonomia-candidatos",
-    "publishedAt": "16/10/2026 às 20:04",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 10:22",
-    "imageUrl": "https://imagens.ebc.com.br/achaHi6i7FpleG9MhZ4nazWg_sA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/aplicativo_0410211423.jpg?itok=d4VVXe-q",
-    "imageCredit": "Foto: Agência Brasil / EBC",
-    "imageAlt": "TSE decide manter ordem para Meta garantir isonomia a candidatos",
-    "author": "André Richter - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "TSE",
-      "Meta",
-      "Lula"
-    ],
-    "editorialType": "sumula_oficial"
-  },
-  {
-    "id": "camara-1311899-motta-determina-adocao-imediat",
-    "title": "Motta determina adoção imediata da nova escala de trabalho na Câmara dos Deputados",
-    "summary": "Para o presidente da Câmara, trata-se de uma reforma na qualidade de vida dos brasileiros",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311899-motta-determina-adocao-imediata-da-nova-escala-de-trabalho-na-camara-dos-deputados",
-    "publishedAt": "16/10/2026 às 16:53",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 10:22",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261016103907801-768x474.jpg",
-    "imageCredit": "Divulgação / Agência Câmara de Notícias",
-    "imageAlt": "Motta determina adoção imediata da nova escala de trabalho na Câmara dos Deputados",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
     ],
     "editorialType": "sumula_oficial"
   },
