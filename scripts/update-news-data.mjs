@@ -224,56 +224,112 @@ function cleanText(raw, maxLen = 0) {
   // 6. Normaliza quebras de linha e múltiplos espaços
   text = text.replace(/[\r\n\t]+/g, ' ').replace(/\s+/g, ' ').trim();
 
-  // 7. Trunca com elegância em limite de palavras se especificado (estritamente <= maxLen)
-  if (maxLen > 0 && text.length > maxLen) {
-    let slice = text.slice(0, maxLen - 3);
-    const lastSpace = slice.lastIndexOf(' ');
-    if (lastSpace > maxLen * 0.7) {
-      slice = slice.slice(0, lastSpace);
-    }
-    slice = slice.replace(/[\s.,;:!?-]+$/, '');
-    const truncated = slice + '...';
-    return truncated.length <= maxLen ? truncated : truncated.slice(0, maxLen);
-  }
-
   return text;
 }
 
 /**
- * Extrai conteúdo de uma tag XML/RSS tratando blocos CDATA
+ * Divide o texto em sentenças completas respeitando numerais e abreviações brasileiras
  */
-function extractTag(xml, tag) {
-  const regex = new RegExp('<' + tag + '(?:\\s+[^>]*)?>([\\s\\S]*?)</' + tag + '>', 'i');
-  const match = xml.match(regex);
-  if (!match) return '';
-  let content = match[1];
-  content = content.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/gi, '$1');
-  return content.trim();
-}
+function splitSentences(text) {
+  if (!text) return { sentences: [], leftover: '' };
 
-/**
- * Extrai todas as ocorrências de uma tag XML/RSS
- */
-function extractAllTags(xml, tag) {
-  const regex = new RegExp('<' + tag + '(?:\\s+[^>]*)?>([\\s\\S]*?)</' + tag + '>', 'gi');
-  const matches = [];
-  let m;
-  while ((m = regex.exec(xml)) !== null) {
-    let content = m[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/gi, '$1');
-    matches.push(content.trim());
+  // Protege números com ponto decimal/milhar (ex: 3.071, 1.499)
+  const placeholderMap = [];
+  let protectedText = text.replace(/(\b\d+)\.(\d+\b)/g, (match) => {
+    const placeholder = `__NUM_DOT_${placeholderMap.length}__`;
+    placeholderMap.push({ placeholder, original: match });
+    return placeholder;
+  });
+
+  // Protege abreviações comuns da língua portuguesa
+  protectedText = protectedText.replace(/\b(Sr|Sra|Dr|Dra|Prof|Min|Gov|art|inc|pág|av|R\$)\./gi, (match) => {
+    const placeholder = `__ABBR_DOT_${placeholderMap.length}__`;
+    placeholderMap.push({ placeholder, original: match });
+    return placeholder;
+  });
+
+  // Identifica sentenças terminadas em [.!?] seguidas de espaço e caractere de nova sentença ou fim do texto
+  const regex = /([^.!?]+[.!?]+(?:["'”’)]?))(?:\s+(?=[-–—"“«(\s]*[A-Z0-9ÁÉÍÓÚÀÂÊÔÃÕÇ])|$)/g;
+  const rawSentences = [];
+  let match;
+  let lastIndex = 0;
+  while ((match = regex.exec(protectedText)) !== null) {
+    rawSentences.push(match[1].trim());
+    lastIndex = regex.lastIndex;
   }
-  return matches;
+  const remainder = protectedText.slice(lastIndex).trim();
+
+  const restore = (str) => {
+    let s = str;
+    for (const { placeholder, original } of placeholderMap) {
+      s = s.replaceAll(placeholder, original);
+    }
+    return s;
+  };
+
+  const sentences = rawSentences.map(restore);
+  const leftover = restore(remainder);
+
+  return { sentences, leftover };
 }
 
 /**
- * Converte data para padrão brasileiro oficial: DD/MM/YYYY às HH:mm no fuso de Brasília (UTC-3)
+ * Sanitiza e formata resumos jornalísticos garantindo término em sentenças completas.
+ * Nunca exibe terminações truncadas ("...", "na veiculação de...") ou palavras cortadas.
+ * Prefere sentenças completas da fonte dentro do limite de caracteres.
+ */
+function cleanSummary(raw, maxLen = MAX_SUMMARY_LENGTH) {
+  if (!raw) return '';
+  // 1. Limpeza padrão de tags HTML, entidades e normalização de espaços
+  let text = cleanText(raw, 0);
+
+  // 2. Remove reticências ou marcadores de truncamento da fonte original
+  let cleaned = text.replace(/(\.{3}|…)+$/g, '').trim();
+
+  const { sentences, leftover } = splitSentences(cleaned);
+
+  // 3. Se houver sentenças completas com pontuação terminativa
+  if (sentences.length > 0) {
+    let acc = '';
+    for (const s of sentences) {
+      const candidate = acc ? `${acc} ${s}` : s;
+      if (candidate.length <= maxLen) {
+        acc = candidate;
+      } else {
+        break;
+      }
+    }
+    if (acc) return acc;
+    return sentences[0];
+  }
+
+  // 4. Caso residual: frase única sem pontuação terminativa
+  let candidate = leftover || cleaned;
+  // Remove orações incompletas de atribuição truncada
+  candidate = candidate.replace(/,\s*(?:informa|mostra|diz|segundo|de acordo)[^,.]*$/i, '');
+  candidate = candidate.replace(/\b(?:e|ou|mas|com|de|da|do|das|dos|em|na|no|nas|nos|para|por|pelo|pela|que|se|a|o|as|os)\s*$/i, '');
+  candidate = candidate.replace(/[\s,;:!?-]+$/, '');
+
+  if (!candidate.endsWith('.') && !candidate.endsWith('!') && !candidate.endsWith('?')) {
+    candidate += '.';
+  }
+
+  return candidate;
+}
+
+/**
+ * Converte e valida data para padrão brasileiro oficial: DD/MM/YYYY às HH:mm no fuso de Brasília (UTC-3).
+ * Rejeita datas não parseáveis e datas com mais de 15 minutos no futuro (tolerância para clock drift).
+ * Evita dupla aplicação de offset em datas UTC e ISO.
  */
 function parseDateToBrasilia(dateStr) {
   if (!dateStr) {
-    return { formatted: 'Data não informada', timestamp: 0 };
+    return { formatted: 'Data não informada', timestamp: 0, isValid: false };
   }
 
   const str = String(dateStr).trim();
+  const now = Date.now();
+  const maxFuture = now + 15 * 60 * 1000;
 
   // Caso 1: Se já estiver formatada no padrão brasileiro "DD/MM/YYYY às HH:mm"
   const brPattern = /^(\d{2})\/(\d{2})\/(\d{4}) às (\d{2}):(\d{2})$/;
@@ -281,7 +337,10 @@ function parseDateToBrasilia(dateStr) {
   if (brMatch) {
     const [, day, mon, yr, hr, min] = brMatch;
     const ms = Date.UTC(Number(yr), Number(mon) - 1, Number(day), Number(hr) + 3, Number(min));
-    return { formatted: str, timestamp: ms };
+    if (isNaN(ms) || ms > maxFuture) {
+      return { formatted: 'Data não informada', timestamp: 0, isValid: false };
+    }
+    return { formatted: str, timestamp: ms, isValid: true };
   }
 
   // Caso 2: Padrão IBGE "DD/MM/YYYY HH:mm:ss"
@@ -290,16 +349,42 @@ function parseDateToBrasilia(dateStr) {
   if (ibgeMatch) {
     const [, day, mon, yr, hr, min] = ibgeMatch;
     const ms = Date.UTC(Number(yr), Number(mon) - 1, Number(day), Number(hr) + 3, Number(min));
+    if (isNaN(ms) || ms > maxFuture) {
+      return { formatted: 'Data não informada', timestamp: 0, isValid: false };
+    }
     return {
       formatted: `${day}/${mon}/${yr} às ${hr}:${min}`,
-      timestamp: ms
+      timestamp: ms,
+      isValid: true
     };
   }
 
-  // Caso 3: ISO 8601 ou RFC 2822
+  // Caso 3: ISO 8601 sem offset explícito (ex: API do Banco Central "2026-10-19T10:00:00")
+  // Representa horário oficial local de Brasília (UTC-3)
+  const isoNoOffset = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})(?::\d{2})?$/;
+  const isoMatch = str.match(isoNoOffset);
+  if (isoMatch) {
+    const [, yr, mon, day, hr, min] = isoMatch;
+    const ms = Date.UTC(Number(yr), Number(mon) - 1, Number(day), Number(hr) + 3, Number(min));
+    if (isNaN(ms) || ms > maxFuture) {
+      return { formatted: 'Data não informada', timestamp: 0, isValid: false };
+    }
+    return {
+      formatted: `${day}/${mon}/${yr} às ${hr}:${min}`,
+      timestamp: ms,
+      isValid: true
+    };
+  }
+
+  // Caso 4: ISO 8601 com offset explícito ou RFC 2822
   const parsed = new Date(str);
   if (isNaN(parsed.getTime())) {
-    return { formatted: 'Data não informada', timestamp: 0 };
+    return { formatted: 'Data não informada', timestamp: 0, isValid: false };
+  }
+
+  const ms = parsed.getTime();
+  if (ms > maxFuture) {
+    return { formatted: 'Data não informada', timestamp: 0, isValid: false };
   }
 
   const formatter = new Intl.DateTimeFormat('pt-BR', {
@@ -321,7 +406,8 @@ function parseDateToBrasilia(dateStr) {
 
   return {
     formatted: `${day}/${month}/${year} às ${hours}:${minutes}`,
-    timestamp: parsed.getTime()
+    timestamp: ms,
+    isValid: true
   };
 }
 
@@ -505,7 +591,7 @@ async function fetchAgenciaBrasil() {
         const categories = extractAllTags(raw, 'category');
 
         const title = cleanText(rawTitle);
-        const summary = cleanText(rawDesc, MAX_SUMMARY_LENGTH);
+        const summary = cleanSummary(rawDesc, MAX_SUMMARY_LENGTH);
         const articleUrl = sanitizeAndNormalizeUrl(rawLink);
 
         if (!title || !summary || !articleUrl) {
@@ -513,8 +599,8 @@ async function fetchAgenciaBrasil() {
         }
 
         // Validação estrita de data de publicação: rejeita se a data não puder ser estabelecida ou for inválida/futura
-        const { formatted: publishedAt, timestamp } = parseDateToBrasilia(rawPubDate);
-        if (!timestamp || timestamp === 0 || publishedAt === 'Data não informada' || isNaN(timestamp) || timestamp > Date.now() + 86400000) {
+        const { formatted: publishedAt, timestamp, isValid } = parseDateToBrasilia(rawPubDate);
+        if (!isValid || !timestamp || timestamp === 0 || publishedAt === 'Data não informada' || isNaN(timestamp)) {
           continue;
         }
 
@@ -651,7 +737,7 @@ async function fetchCamara() {
     const rawCategories = extractAllTags(raw, 'category');
 
     const title = cleanText(rawTitle);
-    const summary = cleanText(rawDesc, MAX_SUMMARY_LENGTH);
+    const summary = cleanSummary(rawDesc, MAX_SUMMARY_LENGTH);
     const articleUrl = sanitizeAndNormalizeUrl(rawLink);
 
     if (!title || !summary || !articleUrl) {
@@ -659,8 +745,8 @@ async function fetchCamara() {
     }
 
     // Validação estrita de data de publicação: rejeita se a data não puder ser estabelecida ou for inválida/futura
-    const { formatted: publishedAt, timestamp } = parseDateToBrasilia(rawPubDate);
-    if (!timestamp || timestamp === 0 || publishedAt === 'Data não informada' || isNaN(timestamp) || timestamp > Date.now() + 86400000) {
+    const { formatted: publishedAt, timestamp, isValid } = parseDateToBrasilia(rawPubDate);
+    if (!isValid || !timestamp || timestamp === 0 || publishedAt === 'Data não informada' || isNaN(timestamp)) {
       continue;
     }
 
@@ -761,7 +847,7 @@ async function fetchIBGE() {
 
   for (const item of items) {
     const title = cleanText(item.titulo);
-    const summary = cleanText(item.introducao, MAX_SUMMARY_LENGTH);
+    const summary = cleanSummary(item.introducao, MAX_SUMMARY_LENGTH);
     const articleUrl = sanitizeAndNormalizeUrl(item.link);
 
     if (!title || !summary || !articleUrl) {
@@ -769,8 +855,8 @@ async function fetchIBGE() {
     }
 
     // Validação estrita de data de publicação: rejeita se a data não puder ser estabelecida ou for inválida/futura
-    const { formatted: publishedAt, timestamp } = parseDateToBrasilia(item.data_publicacao);
-    if (!timestamp || timestamp === 0 || publishedAt === 'Data não informada' || isNaN(timestamp) || timestamp > Date.now() + 86400000) {
+    const { formatted: publishedAt, timestamp, isValid } = parseDateToBrasilia(item.data_publicacao);
+    if (!isValid || !timestamp || timestamp === 0 || publishedAt === 'Data não informada' || isNaN(timestamp)) {
       continue;
     }
 
@@ -856,7 +942,7 @@ async function fetchBancoCentral() {
   // Considera as 20 notícias mais recentes
   for (const item of items.slice(0, 20)) {
     const title = cleanText(item.titulo);
-    const summary = cleanText(item.lead || item.corpo, MAX_SUMMARY_LENGTH);
+    const summary = cleanSummary(item.lead || item.corpo, MAX_SUMMARY_LENGTH);
 
     if (!title || !summary || !item.Id) {
       continue;
@@ -870,8 +956,8 @@ async function fetchBancoCentral() {
     }
 
     // Validação estrita de data de publicação: rejeita se a data não puder ser estabelecida ou for inválida/futura
-    const { formatted: publishedAt, timestamp } = parseDateToBrasilia(item.dataPublicacao);
-    if (!timestamp || timestamp === 0 || publishedAt === 'Data não informada' || isNaN(timestamp) || timestamp > Date.now() + 86400000) {
+    const { formatted: publishedAt, timestamp, isValid } = parseDateToBrasilia(item.dataPublicacao);
+    if (!isValid || !timestamp || timestamp === 0 || publishedAt === 'Data não informada' || isNaN(timestamp)) {
       continue;
     }
 
@@ -1048,14 +1134,9 @@ async function main() {
 
   // 3. Resiliência de Nível 2: Se todas as fontes falharem
   if (totalCollectedRaw === 0) {
-    if (existingItems.length > 0) {
-      console.warn('\n[AVISO CRÍTICO] Nenhuma fonte externa retornou novos artigos.');
-      console.warn('Dataset pré-existente preservado integralmente sem modificação.');
-      process.exit(0);
-    } else {
-      console.error('\n[ERRO CRÍTICO] Nenhuma fonte retornou dados e não há dataset pré-existente.');
-      process.exit(1);
-    }
+    console.error('\n[ERRO CRÍTICO] Falha total: nenhuma fonte externa retornou artigos válidos.');
+    console.error('Dataset pré-existente preservado integralmente sem modificação.');
+    process.exit(1);
   }
 
   // 1b. Extrai e mapeia artigos oficiais previamente publicados e válidos
