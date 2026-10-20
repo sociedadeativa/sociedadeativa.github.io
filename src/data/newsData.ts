@@ -5,6 +5,62 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1705883",
+    "title": "Justiça decreta fim da recuperação judicial da Americanas",
+    "summary": "A Justiça do Rio de Janeiro decretou, nesta segunda-feira (19), o fim da recuperação judicial do Grupo Americanas. A decisão, da 4ª Vara Empresarial da capital, considera que o grupo cumpriu as obrigações do plano de recuperação judicial. Ainda cabe recurso da decisão.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/justica-decreta-fim-da-recuperacao-judicial-da-americanas",
+    "publishedAt": "19/10/2026 às 22:26",
+    "category": "Justiça",
+    "ingestedAt": "20/10/2026 às 06:27",
+    "author": "Douglas Corrêa - Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "americanas",
+      "recuperação judicial",
+      "Justiça"
+    ]
+  },
+  {
+    "id": "ebc-1705882",
+    "title": "Flávio faz motociata no Pará; Lula participa de marcha no RS",
+    "summary": "Os candidatos a presidente Flávio Bolsonaro e Lula tiveram agendas de campanha no Pará e no Rio Grande do Sul nesta segunda-feira (19).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/flavio-faz-motociata-no-para-lula-participa-de-marcha-no-rs",
+    "publishedAt": "19/10/2026 às 22:25",
+    "category": "Eleições",
+    "ingestedAt": "20/10/2026 às 06:27",
+    "author": "Luciano Nascimento - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Lula",
+      "Flávio Bolsonaro",
+      "Eleições"
+    ]
+  },
+  {
+    "id": "ebc-1705881",
+    "title": "Rebeca, Flavinha e Lorrane avançam às finais do Mundial de Ginástica",
+    "summary": "O Brasil se classificou nesta segunda-feira (19) para cinco finais femininas no Mundial de Ginástica Artística, em Roterdã (Países Baixos), com início na próxima quarta (21), a partir das 14h30 (horário de Brasília).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/rebeca-flavinha-e-lorrane-avancam-finais-do-mundial-de-ginastica",
+    "publishedAt": "19/10/2026 às 21:04",
+    "category": "Política",
+    "ingestedAt": "20/10/2026 às 06:27",
+    "author": "Agência Brasil",
+    "tags": [
+      "Esportes",
+      "Seleção Feminina",
+      "Rebeca Andrade",
+      "Salto",
+      "individual geral"
+    ]
+  },
+  {
     "id": "ebc-1705880",
     "title": "PGR não vê abuso de André Mendonça em investigação contra Moraes",
     "summary": "A Procuradoria-Geral da República (PGR) enviou nesta segunda-feira (19) ao Supremo Tribunal Federal (STF) um parecer contrário ao pedido para investigar o ministro André Mendonça por abuso de autoridade.",
@@ -807,61 +863,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Congresso",
       "Brasil",
       "Notícias"
-    ]
-  },
-  {
-    "id": "camara-1306699-projeto-exige-presenca-de-fisi",
-    "title": "Projeto exige presença de fisioterapeuta em equipes de segurança de grandes empresas",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1306699-projeto-exige-presenca-de-fisioterapeuta-em-equipes-de-seguranca-de-grandes-empresas",
-    "publishedAt": "19/10/2026 às 10:44",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1705793",
-    "title": "Pagamentos de outubro do Bolsa Família começam nesta segunda",
-    "summary": "Os pagamentos do Bolsa Família referentes ao mês de outubro começam a ser feitos nesta segunda-feira (19), quando recebem os beneficiários com NIS terminado em 1. Na terça-feira (20), será a vez de quem tem NIS terminado em 2.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/pagamentos-de-outubro-do-bolsa-familia-comecam-nesta-segunda",
-    "publishedAt": "19/10/2026 às 10:04",
-    "category": "Economia",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Paula Laboissière - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "Bolsa Família",
-      "Outubro",
-      "Pagamento",
-      "início"
-    ]
-  },
-  {
-    "id": "ebc-1705789",
-    "title": "PF faz ação para prender 23 envolvidos com facção criminosa no Rio",
-    "summary": "A Polícia Federal (PF) cumpre 23 mandados de prisão preventiva e 24 de busca e apreensão nesta segunda-feira (19) .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/pf-faz-acao-para-prender-23-envolvidos-com-faccao-criminosa-no-rio",
-    "publishedAt": "19/10/2026 às 09:44",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Vitor Abdala - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Polícia Federal",
-      "Anatel",
-      "stf",
-      "Comando Vermelho"
     ]
   },
   {
