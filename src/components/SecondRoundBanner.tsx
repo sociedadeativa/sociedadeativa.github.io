@@ -31,7 +31,7 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
   candidates,
   onOpenMethodology,
 }) => {
-  // Obtém os dois candidatos homologados para a disputa presidencial do 2º turno
+  // Obtém os dois candidatos do 2º turno para a disputa presidencial
   const finalists: Candidate[] = (candidates && candidates.length >= 2
     ? candidates
     : CANDIDATES_2026.filter((c) => c.id === "flavio" || c.id === "lula")
@@ -64,7 +64,7 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
         </h2>
 
         <p className="text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed">
-          Cobertura em tempo integral da disputa à Presidência da República entre os candidatos mais votados do país. A votação ocorre no domingo, <strong>25 de outubro de 2026</strong>, das <strong>08h00 às 17h00</strong> (horário de Brasília).
+          Acompanhe a disputa e consulte a apuração oficial no portal do TSE. A votação ocorre no domingo, <strong>25 de outubro de 2026</strong>, das <strong>08h00 às 17h00</strong> (horário de Brasília).
         </p>
       </div>
 
@@ -105,7 +105,7 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
           <div className="flex items-center justify-between mb-4">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-0.5">
-                Candidaturas Homologadas
+                Candidatos do 2º Turno
               </span>
               <h3 className="font-heading text-lg sm:text-xl font-bold text-white">
                 Candidatos à Presidência da República no 2º Turno
