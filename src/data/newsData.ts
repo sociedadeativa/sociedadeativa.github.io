@@ -5,6 +5,287 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "camara-1309911-projeto-institui-programa-de-a",
+    "title": "Projeto institui programa de apoio a famílias superendividadas",
+    "summary": "O texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1309911-projeto-institui-programa-de-apoio-a-familias-superendividadas",
+    "publishedAt": "20/10/2026 às 16:22",
+    "category": "Congresso",
+    "ingestedAt": "20/10/2026 às 16:28",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20250521131114372-768x512.jpg",
+    "imageCaption": "Yandra Moura alerta para maior número de inadimplentes em toda a série histórica",
+    "imageCredit": "Vinicius Loures/Câmara dos Deputados",
+    "imageAlt": "Homenagem aos 50 anos da TV Atalaia - afiliada Record em Sergipe/PE. Dep. Yandra Moura (UNIÃO-SE)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "ebc-1705954",
+    "title": "TCU aprova contas do BC de 2025 após desvincular processo do Master",
+    "summary": "O Tribunal de Contas da União (TCU) aprovou, nesta terça-feira (20), as contas do Banco Central (BC) referentes ao exercício de 2025 e concedeu quitação plena aos nove responsáveis pela gestão analisada, entre eles o presidente da autarquia, Gabriel Galípolo .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/tcu-aprova-contas-do-bc-de-2025-apos-desvincular-processo-do-master",
+    "publishedAt": "20/10/2026 às 16:00",
+    "category": "Economia",
+    "ingestedAt": "20/10/2026 às 16:28",
+    "imageUrl": "https://imagens.ebc.com.br/0KN7IARqDMTbD09D3d5EkSzcU48=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/banco_central_economia_0413202009.jpg?itok=QdbVS1tk",
+    "imageCaption": "TCU aprova contas do BC de 2025 após desvincular processo do Master",
+    "imageCredit": "Wellton Máximo - Repórter da Agência Brasil",
+    "imageAlt": "TCU aprova contas do BC de 2025 após desvincular processo do Master",
+    "author": "Wellton Máximo - Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "banco central",
+      "Banco Master",
+      "TCU",
+      "Gabriel Galípolo"
+    ]
+  },
+  {
+    "id": "camara-1310478-projeto-cria-estatuto-de-prote",
+    "title": "Projeto cria estatuto de proteção financeira da pessoa idosa",
+    "summary": "Texto traz regras para combater golpes digitais e assegura atendimento humano nas redes bancárias.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1310478-projeto-cria-estatuto-de-protecao-financeira-da-pessoa-idosa",
+    "publishedAt": "20/10/2026 às 15:54",
+    "category": "Congresso",
+    "ingestedAt": "20/10/2026 às 16:28",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260203191618474-768x473.jpg",
+    "imageCaption": "Duda Ramos diz que ainda falta uma legislação específica voltada à proteção financeira e patrimonial desse grupo",
+    "imageCredit": "Kayo Magalhães/Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Duda Ramos (MDB - RR)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "ebc-1705955",
+    "title": "Restituições do IR batem recorde e chegam a R$ 41 bilhões em 2026",
+    "summary": "Quase 26 milhões de contribuintes receberam um valor recorde de mais de R$ 41 bilhões em restituições do Imposto de Renda Pessoa Física (IRPF) em 2026, informou nesta terça-feira (20) a Receita Federal.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/restituicoes-do-ir-batem-recorde-e-chegam-r-41-bilhoes-em-2026",
+    "publishedAt": "20/10/2026 às 15:51",
+    "category": "Economia",
+    "ingestedAt": "20/10/2026 às 16:28",
+    "imageUrl": "https://imagens.ebc.com.br/RkfqKzBsbfNtTqR2t1JjvPMu8Ko=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/mcam20022020.jpg?itok=6I7jZbwW",
+    "imageCaption": "Restituições do IR batem recorde e chegam a R$ 41 bilhões em 2026",
+    "imageCredit": "Wellton Máximo - Repórter da Agência Brasil",
+    "imageAlt": "Restituições do IR batem recorde e chegam a R$ 41 bilhões em 2026",
+    "author": "Wellton Máximo - Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "Imposto de Renda",
+      "Receita Federal",
+      "IRPF 2026",
+      "cashback do IRPF"
+    ]
+  },
+  {
+    "id": "ebc-1705953",
+    "title": "IBGE é autorizado a abrir 325 vagas temporárias",
+    "summary": "O Instituto Brasileiro de Geografia e Estatística (IBGE) recebeu autorização nesta terça-feira (20) para realizar 325 contratações temporárias por meio de processo seletivo simplificado. O órgão terá seis meses para divulgar o edital de abertura e dar início ao concurso público.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/ibge-e-autorizado-abrir-325-vagas-temporarias",
+    "publishedAt": "20/10/2026 às 15:29",
+    "category": "Economia",
+    "ingestedAt": "20/10/2026 às 16:28",
+    "imageUrl": "https://imagens.ebc.com.br/k3TkEtMg941OELrLZFO8ECkSG4E=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/05/29/trbr9004.jpg?itok=uHSIl_d_",
+    "imageCaption": "IBGE é autorizado a abrir 325 vagas temporárias",
+    "imageCredit": "Daniella Almeida - repórter da Agência Brasil",
+    "imageAlt": "IBGE é autorizado a abrir 325 vagas temporárias",
+    "author": "Daniella Almeida - repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "IBGE",
+      "Concurso Público",
+      "Vagas Temporárias",
+      "MGI"
+    ]
+  },
+  {
+    "id": "camara-1310174-projeto-cria-politica-para-red",
+    "title": "Projeto cria política para reduzir atropelamento de animais em rodovias",
+    "summary": "Proposta prevê passagens de fauna, cercas e redutores de velocidade, financiados com multas de trânsito.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1310174-projeto-cria-politica-para-reduzir-atropelamento-de-animais-em-rodovias",
+    "publishedAt": "20/10/2026 às 15:22",
+    "category": "Congresso",
+    "ingestedAt": "20/10/2026 às 16:28",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260520120125672-768x473.jpeg",
+    "imageCaption": "Deputado Cobalchini, autor da proposta",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Audiência Pública - Lista Nacional Oficial de Espécies Exóticas Invasoras Prioritárias. Dep. Cobalchini (MDB - SC)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "camara-1307878-projeto-cria-requisitos-adicio",
+    "title": "Projeto cria requisitos adicionais de governança para investimentos de empresas estatais",
+    "summary": "A medida alcança transações de alto valor, mudanças de controle societário e negócios com exposição a risco.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1307878-projeto-cria-requisitos-adicionais-de-governanca-para-investimentos-de-empresas-estatais",
+    "publishedAt": "20/10/2026 às 15:19",
+    "category": "Congresso",
+    "ingestedAt": "20/10/2026 às 16:28",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260811172306440-768x473.jpeg",
+    "imageCaption": "Deputado Julio Lopes, autor da proposta",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Audiência Pública - Impactos da pirataria no mercado de apostas online. Dep. Julio Lopes (PP - RJ)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "camara-1309856-projeto-amplia-exigencias-em-d",
+    "title": "Projeto amplia exigências em declaração de bens de agentes públicos",
+    "summary": "A proposta obriga o detalhamento de participações societárias e de bens mantidos com parentes.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1309856-projeto-amplia-exigencias-em-declaracao-de-bens-de-agentes-publicos",
+    "publishedAt": "20/10/2026 às 15:14",
+    "category": "Congresso",
+    "ingestedAt": "20/10/2026 às 16:28",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20241216203141935-768x473.jpg",
+    "imageCaption": "Amom Mandel: modelo vigente revela-se insuficiente para capturar a complexidade das estruturas patrimoniais contemporâneas",
+    "imageCredit": "Bruno Spada/Câmara dos Deputados",
+    "imageAlt": "Deputado Amom Mandel (Republicanos-AM) fala no Plenário da Câmara dos Deputados",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "camara-1308068-projeto-inclui-desempenho-de-e",
+    "title": "Projeto inclui desempenho de ex-alunos no mercado de trabalho na avaliação de universidades",
+    "summary": "A proposta altera o Sinaes para considerar dados sobre empregabilidade, renda e continuidade dos estudos dos formandos.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1308068-projeto-inclui-desempenho-de-ex-alunos-no-mercado-de-trabalho-na-avaliacao-de-universidades",
+    "publishedAt": "20/10/2026 às 15:01",
+    "category": "Congresso",
+    "ingestedAt": "20/10/2026 às 16:28",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260609173750195-1-768x473.jpeg",
+    "imageCaption": "Deputado Nikolas Ferreira, autor do projeto",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Audiência Pública - Educação domiciliar, liberdade educacional e segurança jurídica para crianças e suas famílias. Dep. Nikolas Ferreira (PL - MG)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "ebc-1705947",
+    "title": "Justiça torna ré PM por homicídio de mulher na zona leste de SP",
+    "summary": "A Justiça de São Paulo reconheceu, nesta terça-feira (20), a policial militar Yasmin Ferreira como responsável pelo homicídio de Thawanna da Silva Salmázio .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/justica-torna-re-pm-por-homicidio-de-mulher-na-zona-leste-de-sp",
+    "publishedAt": "20/10/2026 às 14:40",
+    "category": "Justiça",
+    "ingestedAt": "20/10/2026 às 16:28",
+    "imageUrl": "https://imagens.ebc.com.br/EhqZ6zZemY2sT9kS2mq-Ccj1fyw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/12/21/retrospectiva63.jpg?itok=pdbKyVoq",
+    "imageCaption": "Justiça torna ré PM por homicídio de mulher na zona leste de SP",
+    "imageCredit": "Matheus Crobelatti*",
+    "imageAlt": "Justiça torna ré PM por homicídio de mulher na zona leste de SP",
+    "author": "Matheus Crobelatti*",
+    "tags": [
+      "Justiça",
+      "Justiça de São Paulo",
+      "Brasil"
+    ]
+  },
+  {
+    "id": "camara-1307703-projeto-preve-uso-do-fundo-de-",
+    "title": "Projeto prevê uso do Fundo de Segurança Pública para indenizar vítimas da violência e policiais",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1307703-projeto-preve-uso-do-fundo-de-seguranca-publica-para-indenizar-vitimas-da-violencia-e-policiais",
+    "publishedAt": "20/10/2026 às 14:31",
+    "category": "Congresso",
+    "ingestedAt": "20/10/2026 às 16:28",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261014152540002-768x473.jpg",
+    "imageCaption": "Cabo Gilberto Silva: hoje, famílias passam por longos processos judiciais para obter reparação financeira",
+    "imageCredit": "Vinicius Loures / Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Cabo Gilberto Silva (PL - PB)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "camara-1310801-uniao-foi-o-partido-que-mais-p",
+    "title": "União foi o partido que mais perdeu deputados federais nesta eleição",
+    "summary": "PL foi o que mais cresceu; veja a variação das bancadas na Câmara dos Deputados desde a eleição de 2022.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1310801-uniao-foi-o-partido-que-mais-perdeu-deputados-federais-nesta-eleicao",
+    "publishedAt": "20/10/2026 às 14:18",
+    "category": "Congresso",
+    "ingestedAt": "20/10/2026 às 16:28",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/mosaico-partidos-768x513.jpg",
+    "imageCaption": "União foi o partido que mais perdeu deputados federais nesta eleição",
+    "imageCredit": "Câmara dos Deputados",
+    "imageAlt": "União foi o partido que mais perdeu deputados federais nesta eleição",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Eleições 2026",
+      "Brasil"
+    ]
+  },
+  {
+    "id": "ebc-1705938",
+    "title": "Esporte: conheça as propostas de Flávio Bolsonaro e Lula para a área",
+    "summary": "O esporte como política pública é citado no plano de governo dos dois candidatos que disputam o segundo turno para a Presidência da República. A relação do tema com a educação é mencionada por ambos.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/esporte-conheca-propostas-de-flavio-bolsonaro-e-lula-para-area",
+    "publishedAt": "20/10/2026 às 14:11",
+    "category": "Eleições",
+    "ingestedAt": "20/10/2026 às 16:28",
+    "imageUrl": "https://imagens.ebc.com.br/NGlR4pEkOyZf8Ko94vHl_IqfTzw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/16/cbf_anuncia_amistosos_da_selecao_feminina_em_palcos_da_copa_do_mundo.jpg?itok=r4qOQet0",
+    "imageCaption": "Esporte: conheça as propostas de Flávio Bolsonaro e Lula para a área",
+    "imageCredit": "Guilherme Jeronymo - Repórter da Agência Brasil",
+    "imageAlt": "Esporte: conheça as propostas de Flávio Bolsonaro e Lula para a área",
+    "author": "Guilherme Jeronymo - Repórter da Agência Brasil",
+    "tags": [
+      "Esportes",
+      "eleições 2026",
+      "esportes",
+      "Flávio Bolsonaro",
+      "Lula"
+    ]
+  },
+  {
     "id": "ebc-1705941",
     "title": "TSE: Lula autoriza quebra de sigilo bancário se Flávio fizer o mesmo",
     "summary": "O presidente Luiz Inácio Lula da Silva, candidato à reeleição, enviou nesta terça-feira (20) ao Tribunal Superior Eleitoral (TSE) um requerimento autorizando que sejam levantados seus sigilos bancário, fiscal e telefônico, bem como de seus familiares, desde que o mesmo seja.",
@@ -21,8 +302,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "author": "Felipe Pontes – repórter da Agência Brasil",
     "tags": [
       "Política",
-      "Sigilo Telefônico",
-      "Sigilo Bancário",
+      "sigilo telefônico",
+      "sigilo bancário",
       "Lula",
       "Flávio Bolsonaro"
     ]
@@ -231,27 +512,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
-    "id": "camara-1309832-projeto-cria-politica-nacional",
-    "title": "Projeto cria política nacional para eletrificar frota de ônibus e caminhões no Brasil",
-    "summary": "A proposta está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1309832-projeto-cria-politica-nacional-para-eletrificar-frota-de-onibus-e-caminhoes-no-brasil",
-    "publishedAt": "20/10/2026 às 10:49",
-    "category": "Congresso",
-    "ingestedAt": "20/10/2026 às 11:27",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/08/transporte-urbano-mcamgo-abr-09082023-3-768x512.jpg",
-    "imageCaption": "Pelo texto, 30% das vendas anuais de ônibus urbanos novos deverão ser de modelos com emissão zero até 2030",
-    "imageCredit": "Marcelo Camargo/Agência Brasil",
-    "imageAlt": "Ônibus elétrico de transporte coletivo",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
     "id": "ibge-48325",
     "title": "IBGE apresenta ações do Censo Experimental e lança Cadastro Prévio de Estabelecimentos Agropecuários",
     "summary": "PP2 realizado em Irati (PR).",
@@ -271,6 +531,27 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Notícia",
       "Brasil",
       "Estatísticas"
+    ]
+  },
+  {
+    "id": "camara-1309832-projeto-cria-politica-nacional",
+    "title": "Projeto cria política nacional para eletrificar frota de ônibus e caminhões no Brasil",
+    "summary": "A proposta está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1309832-projeto-cria-politica-nacional-para-eletrificar-frota-de-onibus-e-caminhoes-no-brasil",
+    "publishedAt": "20/10/2026 às 10:49",
+    "category": "Congresso",
+    "ingestedAt": "20/10/2026 às 11:27",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/08/transporte-urbano-mcamgo-abr-09082023-3-768x512.jpg",
+    "imageCaption": "Pelo texto, 30% das vendas anuais de ônibus urbanos novos deverão ser de modelos com emissão zero até 2030",
+    "imageCredit": "Marcelo Camargo/Agência Brasil",
+    "imageAlt": "Ônibus elétrico de transporte coletivo",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
     ]
   },
   {
@@ -578,7 +859,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Economia",
       "americanas",
-      "recuperação judicial"
+      "Recuperação Judicial",
+      "Multimídia"
     ]
   },
   {
@@ -647,7 +929,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "stf",
       "André Mendonça",
       "Alexandre de Moraes",
-      "abuso de autoridade"
+      "Abuso de Autoridade"
     ]
   },
   {
@@ -780,288 +1062,10 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "author": "André Richter - Repórter da Agência Brasil",
     "tags": [
       "Justiça",
-      "Eleições",
+      "eleições",
       "eleições 2026",
       "TSE",
       "MPE"
-    ]
-  },
-  {
-    "id": "ebc-1705863",
-    "title": "TRE-RJ alterou apenas um local de votação no estado; confira",
-    "summary": "O Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ) informou nesta segunda-feira (19) que houve alteração em apenas um local de votação no segundo turno. A mudança ocorre na capital, no bairro de Brás de Pina, na zona norte do Rio.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tre-rj-alterou-apenas-um-local-de-votacao-no-estado-confira",
-    "publishedAt": "19/10/2026 às 18:39",
-    "category": "Eleições",
-    "ingestedAt": "19/10/2026 às 18:58",
-    "imageUrl": "https://imagens.ebc.com.br/EEIqCiy6SpJ9ZAEiJqnWuh0MC9c=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/_d6a9608_1.jpg?itok=XTe0srbQ",
-    "imageCaption": "TRE-RJ alterou apenas um local de votação no estado; confira",
-    "imageCredit": "Douglas Corrêa – Repórter da Agência Brasil",
-    "imageAlt": "TRE-RJ alterou apenas um local de votação no estado; confira",
-    "author": "Douglas Corrêa – Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Local de Votação",
-      "TRE-RJ",
-      "Brás de Pina"
-    ]
-  },
-  {
-    "id": "ebc-1705846",
-    "title": "Órgão Especial do TJRJ confirma Vasco x Boca Juniors no Maracanã",
-    "summary": "O Órgão Especial do Tribunal de Justiça do Rio de Janeiro (TJRJ) em sessão realizada nesta segunda-feira, (19), decidiu, por unanimidade, que a partida válida pela semifinal da Copa Sul-Americana entre Vasco da Gama e Boca Juniors será realizada nesta terça-feira, (20).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/orgao-especial-do-tjrj-confirma-vasco-x-boca-juniors-no-maracana",
-    "publishedAt": "19/10/2026 às 18:20",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 18:58",
-    "author": "Douglas Corrêa - Repórter da Agência Brasil",
-    "tags": [
-      "Esportes",
-      "Vasco",
-      "Boca Juniors",
-      "Maracanã",
-      "Justiça"
-    ]
-  },
-  {
-    "id": "ebc-1705840",
-    "title": "Moradores da Maré se mobilizam para divulgar locais de votação",
-    "summary": "“Pensei em todo momento em desistir”. A declaração é do fotógrafo Marlon Soares, morador do Complexo da Maré, conjunto de 16 comunidades onde moram cerca de 140 mil pessoas, na zona norte do Rio de Janeiro.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/moradores-da-mare-se-mobilizam-para-divulgar-locais-de-votacao",
-    "publishedAt": "19/10/2026 às 17:56",
-    "category": "Eleições",
-    "ingestedAt": "19/10/2026 às 18:58",
-    "imageUrl": "https://imagens.ebc.com.br/QOOicqyZsKLGg32RMRw3fYeXDf4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/0g0a0034.jpg?itok=xVERCdKm",
-    "imageCaption": "Moradores da Maré se mobilizam para divulgar locais de votação",
-    "imageCredit": "Bruno de Freitas Moura - Repórter da Agência Brasil",
-    "imageAlt": "Moradores da Maré se mobilizam para divulgar locais de votação",
-    "author": "Bruno de Freitas Moura - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "TSE",
-      "TRE-RJ",
-      "Complexo da Maré"
-    ]
-  },
-  {
-    "id": "ebc-1705847",
-    "title": "Revalida 2026/2: divulgado resultado de casos de logística e de saúde",
-    "summary": "O resultado individual da análise de solicitações apresentadas por participantes da primeira etapa do Exame Nacional de Revalidação de Diplomas Médicos Expedidos por Instituições de Educação Superior Estrangeiras (Revalida) 2026/2, que tiveram problemas logísticos durante.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/revalida-20262-divulgado-resultado-de-casos-de-logistica-e-de-saude",
-    "publishedAt": "19/10/2026 às 17:49",
-    "category": "Governo",
-    "ingestedAt": "19/10/2026 às 18:58",
-    "author": "Daniella Almeida - Repórter da Agência Brasil",
-    "tags": [
-      "Educação",
-      "Revalida",
-      "recursos",
-      "taxa de inscrição",
-      "Inep"
-    ]
-  },
-  {
-    "id": "camara-1310379-projeto-cria-politica-nacional",
-    "title": "Projeto cria política nacional para proteger povos e comunidades tradicionais de terreiro",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310379-projeto-cria-politica-nacional-para-proteger-povos-e-comunidades-tradicionais-de-terreiro",
-    "publishedAt": "19/10/2026 às 17:25",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 18:58",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260428165731458-768x473.jpg",
-    "imageCaption": "Deputada Laura Carneiro, autora da proposta",
-    "imageCredit": "Marina Ramos/Camara dos Deputados",
-    "imageAlt": "Reunião de líderes. Dep. Laura Carneiro (PSD - RJ)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1705845",
-    "title": "Janones poderá ter alta em 48 horas, diz boletim médico",
-    "summary": "O deputado federal André Janones (Rede-MG) poderá ter alta em 48 horas, segundo boletim médico divulgado nesta segunda-feira (19) pelo Hospital Vila Nova Star, na capital paulista.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/janones-podera-ter-alta-em-48-horas-diz-boletim-medico",
-    "publishedAt": "19/10/2026 às 17:25",
-    "category": "Eleições",
-    "ingestedAt": "19/10/2026 às 18:58",
-    "imageUrl": "https://imagens.ebc.com.br/toGKuy5TriCqOFdLqiKyEm-5Wik=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/11/img20260304104419464.jpg?itok=7UESXv-w",
-    "imageCaption": "Janones poderá ter alta em 48 horas, diz boletim médico",
-    "imageCredit": "Bruno Bocchini - repórter da Agência Brasil",
-    "imageAlt": "Janones poderá ter alta em 48 horas, diz boletim médico",
-    "author": "Bruno Bocchini - repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "André Janones",
-      "Exército do Lula",
-      "Lula"
-    ]
-  },
-  {
-    "id": "ebc-1705842",
-    "title": "DF e mais 4 estados não tiveram locais de votação alterados",
-    "summary": "Dados do Tribunal Superior Eleitoral (TSE) mostram que Distrito Federal, Acre, Rio de Janeiro, Roraima e Santa Catarina não terão alterações nos locais de votação no segundo turno.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/df-e-outros-4-estados-nao-tiveram-locais-de-votacao-alterados",
-    "publishedAt": "19/10/2026 às 17:13",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 18:58",
-    "imageUrl": "https://imagens.ebc.com.br/B2rIudFK9nh9TKcgAQvZXOlfSEU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/sem_titulo-5.jpg?itok=e7HGr7Fb",
-    "imageCaption": "DF e mais 4 estados não tiveram locais de votação alterados",
-    "imageCredit": "Iara Balduino – Repórter da Agência Brasil",
-    "imageAlt": "DF e mais 4 estados não tiveram locais de votação alterados",
-    "author": "Iara Balduino – Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições",
-      "eleições 2026",
-      "TSE"
-    ]
-  },
-  {
-    "id": "camara-1309837-projeto-preve-lista-triplice-p",
-    "title": "Projeto prevê lista tríplice para diretores de agências reguladoras e novas regras para perda de mandato",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1309837-projeto-preve-lista-triplice-para-diretores-de-agencias-reguladoras-e-novas-regras-para-perda-de-mandato",
-    "publishedAt": "19/10/2026 às 17:01",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260609184434828-768x473.jpg",
-    "imageCaption": "Arlindo Chinaglia: medida dá mais legitimidade aos escolhidos pelo presidente da República",
-    "imageCredit": "Thiago Cristino / Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Arlindo Chinaglia (PT - SP)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1705838",
-    "title": "2º turno: 130 mil eleitores de 22 estados votarão em local diferente",
-    "summary": "O Tribunal Superior Eleitoral (TSE) informou nesta segunda-feira (19) que 444 seções eleitorais terão alteração de endereço de votação entre o primeiro e o segundo turno das eleições de 2026.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/2o-turno-130-mil-eleitores-de-22-estados-votarao-em-local-diferente",
-    "publishedAt": "19/10/2026 às 16:57",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "imageUrl": "https://imagens.ebc.com.br/dUoUmamFgGVk2lD2cK7-3ZZOFgo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/_mg_9118.jpg?itok=bFdDa-9A",
-    "imageCaption": "2º turno: 130 mil eleitores de 22 estados votarão em local diferente",
-    "imageCredit": "Iara Balduino – Repórter da Agência Brasil",
-    "imageAlt": "2º turno: 130 mil eleitores de 22 estados votarão em local diferente",
-    "author": "Iara Balduino – Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Eleições",
-      "TSE"
-    ]
-  },
-  {
-    "id": "ebc-1705835",
-    "title": "CNU 2: servidor pode indicar órgão de preferência a partir de quinta",
-    "summary": "Os servidores das carreiras de analista técnico de desenvolvimento socioeconômico (ATDS) e analista técnico de justiça e defesa (ATJD), da segunda edição do Concurso Público Nacional Unificado (CPNU 2), podem fazer a manifestação de preferência por órgão, entidade e local.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/concursos/noticia/2026-10/cnu-2-servidor-pode-indicar-orgao-de-preferencia-partir-de-quinta",
-    "publishedAt": "19/10/2026 às 16:48",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 18:58",
-    "author": "Daniella Almeida – Repórter da Agência Brasil",
-    "tags": [
-      "Concursos",
-      "CNU 2",
-      "CPNU 2",
-      "Concurso Público",
-      "Administração Pública"
-    ]
-  },
-  {
-    "id": "ebc-1705834",
-    "title": "Mulher e filho de Marcinho VP são presos em operação da PF no Rio",
-    "summary": "A empresária Márcia Gama Nepomuceno, mulher do traficante Márcio dos Santos Nepomuceno, o Marcinho VP, e mãe do rapper Oruam, foi presa pela Polícia Federal (PF) nesta segunda-feira (19), na Operação Backbone.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/mulher-e-filho-de-marcinho-vp-sao-presos-em-operacao-da-pf-no-rio",
-    "publishedAt": "19/10/2026 às 16:40",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "imageUrl": "https://imagens.ebc.com.br/eby-wpcEXc6vnkdG1QTkrPe5-Oc=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/19/image.jpg?itok=dnBdAkkB",
-    "imageCaption": "Mulher e filho de Marcinho VP são presos em operação da PF no Rio",
-    "imageCredit": "Cristina Índio do Brasil - repórter da Agência Brasil",
-    "imageAlt": "Mulher e filho de Marcinho VP são presos em operação da PF no Rio",
-    "author": "Cristina Índio do Brasil - repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Rio de Janeiro",
-      "Operação Backbone",
-      "Polícia Federal",
-      "Marcinho VP"
-    ]
-  },
-  {
-    "id": "ebc-1705833",
-    "title": "Saiba quais locais de votação mudaram em São Paulo no 2º turno",
-    "summary": "O estado de São Paulo teve dois locais de votação alterados para o segundo turno nas eleições. De acordo com informações do Tribunal Regional Eleitoral de São Paulo, as mudanças foram necessárias “por motivo de força maior”, em decorrência de danos causados pelas fortes chuvas.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/saiba-quais-locais-de-votacao-mudaram-em-sao-paulo-no-2o-turno",
-    "publishedAt": "19/10/2026 às 16:29",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "imageUrl": "https://imagens.ebc.com.br/9PN5VLWVpSnOGjYy73QO7IJx3MQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/24/_pin5507.jpg-7.jpg?itok=7bREIW4f",
-    "imageCaption": "Saiba quais locais de votação mudaram em São Paulo no 2º turno",
-    "imageCredit": "Elaine Patricia Cruz – Repórter da Agência Brasil",
-    "imageAlt": "Saiba quais locais de votação mudaram em São Paulo no 2º turno",
-    "author": "Elaine Patricia Cruz – Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Eleições",
-      "TRE-SP"
-    ]
-  },
-  {
-    "id": "camara-1308170-projeto-cria-sistema-nacional-",
-    "title": "Projeto cria sistema nacional para registrar e acompanhar crianças e adolescentes órfãos",
-    "summary": "A proposta está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1308170-projeto-cria-sistema-nacional-para-registrar-e-acompanhar-criancas-e-adolescentes-orfaos",
-    "publishedAt": "19/10/2026 às 16:26",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260902154538773-768x473.jpeg",
-    "imageCaption": "Laura Carneiro: sistema contribuirá para o atendimento rápido de crianças e adolescentes em situação de vulnerabilidade",
-    "imageCredit": "Renato Araújo / Câmara dos Deputados",
-    "imageAlt": "Deputada Laura Carneiro (PSD-RJ) fala em comissão da Câmara dos Deputados",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
     ]
   },
   {
