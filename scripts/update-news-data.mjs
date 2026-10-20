@@ -1478,7 +1478,7 @@ async function main() {
   console.log('Ingestão de notícias oficiais concluída com 100% de integridade e segurança.\n');
 }
 
-main().catch((err) => {
+await main().catch((err) => {
   console.error('[ERRO FATAL NO SCRIPT DE NOTÍCIAS]:', err);
   process.exit(1);
 });

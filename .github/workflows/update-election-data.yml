@@ -1,0 +1,86 @@
+name: Update Official 2nd Round Election Data
+
+on:
+  schedule:
+    # Execuções programadas no domingo de eleição (25/10/2026):
+    # Acompanhamento prévio e durante a apuração (a partir das 17h BRT = 20h UTC):
+    - cron: '*/15 20-23 25 10 *'
+    - cron: '*/15 0-3 26 10 *'
+    # Execução diária regular de verificação de integridade:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "election-2nd-round-update"
+  cancel-in-progress: false
+
+jobs:
+  update-election-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      has_changes: ${{ steps.commit_step.outputs.has_changes }}
+      commit_sha: ${{ steps.commit_step.outputs.commit_sha }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Update Official TSE 2nd Round Election Data
+        run: node scripts/update-election-second-round-data.mjs
+
+      - name: Validate Generated Files
+        run: |
+          if [ ! -s "public/data/electionSecondRoundData.json" ]; then
+            echo "ERRO CRÍTICO: public/data/electionSecondRoundData.json está ausente ou vazio!"
+            exit 1
+          fi
+          if [ ! -s "src/data/electionSecondRoundData.ts" ]; then
+            echo "ERRO CRÍTICO: src/data/electionSecondRoundData.ts está ausente ou vazio!"
+            exit 1
+          fi
+
+      - name: Commit and Push Changes if Updated
+        id: commit_step
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/electionSecondRoundData.json src/data/electionSecondRoundData.ts
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "Nenhuma alteração nos dados do 2º turno do TSE."
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            git commit -m "chore(eleicoes): atualiza apuração oficial do 2º turno presidencial 2026 [skip ci]"
+            git push
+            NEW_SHA=$(git rev-parse HEAD)
+            echo "commit_sha=$NEW_SHA" >> "$GITHUB_OUTPUT"
+            echo "Novo commit publicado para deploy: $NEW_SHA"
+          fi
+
+  deploy-pages:
+    name: Deploy Updated Election Data to GitHub Pages
+    needs: update-election-data
+    if: needs.update-election-data.outputs.has_changes == 'true'
+    uses: ./.github/workflows/deploy.yml
+    with:
+      ref: ${{ needs.update-election-data.outputs.commit_sha || 'main' }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
