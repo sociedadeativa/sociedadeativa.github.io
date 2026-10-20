@@ -5,6 +5,181 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1705902",
+    "title": "Fenaj manifesta indignação com formato do debate da TV Band",
+    "summary": "A Federação Nacional dos Jornalistas (Fenaj) e seus sindicatos filiados manifestam indignação com a condução e o formato do debate eleitoral promovido pela TV Bandeirantes, na noite do último domingo (18).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/fenaj-manifesta-indignacao-com-formato-do-debate-da-tv-band",
+    "publishedAt": "20/10/2026 às 10:50",
+    "category": "Eleições",
+    "ingestedAt": "20/10/2026 às 11:27",
+    "imageUrl": "https://imagens.ebc.com.br/vq-sHuXFMrGfZhKt0GEjrJtUU08=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/20/images.jpeg?itok=XnfS2VSa",
+    "imageCaption": "Fenaj manifesta indignação com formato do debate da TV Band",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Fenaj manifesta indignação com formato do debate da TV Band",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "Fenaj",
+      "Nota",
+      "repúdio",
+      "debate"
+    ]
+  },
+  {
+    "id": "camara-1309832-projeto-cria-politica-nacional",
+    "title": "Projeto cria política nacional para eletrificar frota de ônibus e caminhões no Brasil",
+    "summary": "A proposta está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1309832-projeto-cria-politica-nacional-para-eletrificar-frota-de-onibus-e-caminhoes-no-brasil",
+    "publishedAt": "20/10/2026 às 10:49",
+    "category": "Congresso",
+    "ingestedAt": "20/10/2026 às 11:27",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/08/transporte-urbano-mcamgo-abr-09082023-3-768x512.jpg",
+    "imageCaption": "Pelo texto, 30% das vendas anuais de ônibus urbanos novos deverão ser de modelos com emissão zero até 2030",
+    "imageCredit": "Marcelo Camargo/Agência Brasil",
+    "imageAlt": "Ônibus elétrico de transporte coletivo",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "ibge-48325",
+    "title": "IBGE apresenta ações do Censo Experimental e lança Cadastro Prévio de Estabelecimentos Agropecuários",
+    "summary": "PP2 realizado em Irati (PR).",
+    "source": "IBGE",
+    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
+    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48325-ibge-apresenta-acoes-do-censo-experimental-e-lanca-cadastro-previo-de-estabelecimentos-agropecuarios-no-pais.html",
+    "publishedAt": "20/10/2026 às 10:49",
+    "category": "Brasil",
+    "ingestedAt": "20/10/2026 às 11:27",
+    "imageUrl": "https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/ibge/2026_10/censoexp-home.jpg",
+    "imageCaption": "IBGE apresenta ações do Censo Experimental e lança Cadastro Prévio de Estabelecimentos Agropecuários",
+    "imageCredit": "Equipe CDDI/CCS O Instituto Brasileiro de Geografia e Estatística (IBGE) realizará, no dia 27 de outubro, uma coletiva pública para apresentar as ações do Censo Experimental do 12º Censo Agropecuário, Florestal e",
+    "imageAlt": "IBGE apresenta ações do Censo Experimental e lança Cadastro Prévio de Estabelecimentos Agropecuários",
+    "author": "Agência IBGE Notícias",
+    "tags": [
+      "ibge",
+      "Notícia",
+      "Brasil",
+      "Estatísticas"
+    ]
+  },
+  {
+    "id": "camara-1309907-projeto-reserva-1-do-fundo-de-",
+    "title": "Projeto reserva 1% do Fundo de Segurança para cursos gratuitos de defesa pessoal para mulheres",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1309907-projeto-reserva-1-do-fundo-de-seguranca-para-cursos-gratuitos-de-defesa-pessoal-para-mulheres",
+    "publishedAt": "20/10/2026 às 10:31",
+    "category": "Congresso",
+    "ingestedAt": "20/10/2026 às 11:27",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20241008205619950-768x499.jpg",
+    "imageCaption": "Silvye Alves:Brasil convive com índices alarmantes de violência contra as mulheres",
+    "imageCredit": "Mário Agra/Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Silvye Alves (UNIÃO - GO)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "ebc-1705903",
+    "title": "Hipertensão atinge 28% de crianças e adolescentes, mostra estudo",
+    "summary": "A hipertensão atinge 28,3% de crianças e adolescentes até 18 anos no Brasil. A pré-hipertensão alcança 11,6% dos indivíduos nessa faixa etária. Os dados são da pesquisa Brasil Coração Saudável da Sociedade Brasileira de Cardiologia (SBC).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/hipertensao-atinge-28-de-criancas-e-adolescentes-mostra-estudo",
+    "publishedAt": "20/10/2026 às 10:03",
+    "category": "Política",
+    "ingestedAt": "20/10/2026 às 11:27",
+    "imageUrl": "https://imagens.ebc.com.br/F5PAQCfuINCeTd5ikAXCTB2RL_o=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/03/21/marcelo-leal-k7ll1hpdhfa-unsplash.jpg?itok=KGivVZVE",
+    "imageCaption": "Hipertensão atinge 28% de crianças e adolescentes, mostra estudo",
+    "imageCredit": "Ana Cristina Campos – Repórter da Agência Brasil",
+    "imageAlt": "Hipertensão atinge 28% de crianças e adolescentes, mostra estudo",
+    "author": "Ana Cristina Campos – Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "hipertensão",
+      "obesidade",
+      "Criança e Adolescente",
+      "Política"
+    ]
+  },
+  {
+    "id": "ebc-1705899",
+    "title": "Confira a agenda dos presidenciáveis nesta terça-feira (20)",
+    "summary": "Confira a agenda dos candidatos à Presidência da República que disputam o segundo turno das eleições gerais nesta terça-feira (20). Luiz Inácio Lula da Silva (PT) Pela manhã, participa de ato politico em São Luís, no Maranhão.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/confira-agenda-dos-presidenciaveis-nesta-terca-feira-20",
+    "publishedAt": "20/10/2026 às 09:28",
+    "category": "Eleições",
+    "ingestedAt": "20/10/2026 às 11:27",
+    "imageUrl": "https://imagens.ebc.com.br/Qjn25j4kWuBB0OOSqVFyv-s7K54=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/18/banner_agenda_-_1170x700.png?itok=KJR_nOUL",
+    "imageCaption": "Confira a agenda dos presidenciáveis nesta terça-feira (20)",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Confira a agenda dos presidenciáveis nesta terça-feira (20)",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Eleições"
+    ]
+  },
+  {
+    "id": "camara-1306419-projeto-proibe-cobrar-divida-t",
+    "title": "Projeto proíbe cobrar dívida trabalhista de empresa que não participou da ação desde o início",
+    "summary": "O texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1306419-projeto-proibe-cobrar-divida-trabalhista-de-empresa-que-nao-participou-da-acao-desde-o-inicio",
+    "publishedAt": "20/10/2026 às 09:20",
+    "category": "Congresso",
+    "ingestedAt": "20/10/2026 às 11:27",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261013170228652-768x473.jpg",
+    "imageCaption": "Jonas Donizette, autor da proposta",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Reunião de Líderes. Dep. Jonas Donizette (PSB - SP)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "ebc-1705895",
+    "title": "Eleições 2026: nenhum eleitor pode ser preso a partir desta terça",
+    "summary": "A partir desta terça-feira (20), cinco dias antes do segundo turno das eleições, nenhum eleitor pode ser preso ou detido por qualquer autoridade, com exceção de prisões em flagrante delito, prisões realizadas em razão de sentença criminal condenatória por crime inafiançável.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/eleicoes-2026-nenhum-eleitor-pode-ser-preso-partir-desta-terca",
+    "publishedAt": "20/10/2026 às 09:07",
+    "category": "Justiça",
+    "ingestedAt": "20/10/2026 às 11:27",
+    "imageUrl": "https://imagens.ebc.com.br/MEIilsaPm7unSOeUnS0YKFpkj_M=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/16/_raf1321.jpg?itok=oZD5Ay5y",
+    "imageCaption": "Eleições 2026: nenhum eleitor pode ser preso a partir desta terça",
+    "imageCredit": "Paula Laboissière - Repórter da Agência Brasil",
+    "imageAlt": "Eleições 2026: nenhum eleitor pode ser preso a partir desta terça",
+    "author": "Paula Laboissière - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "eleições 2026",
+      "TSE",
+      "Eleitores",
+      "prisão"
+    ]
+  },
+  {
     "id": "ebc-1705886",
     "title": "Sociedade civil apresenta propostas aos candidatos à Presidência",
     "summary": "A coalizão Vida em Conta , iniciativa que reúne cerca de 140 economistas e 70 organizações da sociedade civil, apresenta o documento 10 Propostas para um Novo Ciclo de Desenvolvimento no Brasil.",
@@ -14,6 +189,10 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "publishedAt": "20/10/2026 às 08:35",
     "category": "Eleições",
     "ingestedAt": "20/10/2026 às 09:00",
+    "imageUrl": "https://imagens.ebc.com.br/adh00lrRXUFMTZXeR_w9LyHKe0k=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/15/toms4996.jpg?itok=9tTsUIwh",
+    "imageCaption": "Sociedade civil apresenta propostas aos candidatos à Presidência",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Sociedade civil apresenta propostas aos candidatos à Presidência",
     "author": "Agência Brasil",
     "tags": [
       "Política",
@@ -21,6 +200,52 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "sociedade civil",
       "propostas",
       "candidatos à Presidência"
+    ]
+  },
+  {
+    "id": "ebc-1705891",
+    "title": "Estiagem: governo federal reconhece emergência em municípios do Amapá",
+    "summary": "O governo federal reconheceu nesta terça-feira (20) situação de emergência em 14 municípios do Amapá em decorrência da estiagem . O estado tem 16 cidades, ao todo. A Portaria nº 3.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/estiagem-governo-federal-reconhece-emergencia-em-municipios-do-amapa",
+    "publishedAt": "20/10/2026 às 08:34",
+    "category": "Governo",
+    "ingestedAt": "20/10/2026 às 11:27",
+    "imageUrl": "https://imagens.ebc.com.br/JvSubK2JXn4Q6P3C9rZfiEZfA88=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/20/amapa.jpg?itok=pWsDGNQC",
+    "imageCaption": "Estiagem: governo federal reconhece emergência em municípios do Amapá",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Estiagem: governo federal reconhece emergência em municípios do Amapá",
+    "author": "Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "Estiagem",
+      "Seca",
+      "Amapá",
+      "Diário Oficial da União"
+    ]
+  },
+  {
+    "id": "ebc-1705866",
+    "title": "Cena Musical, da TV Brasil, celebra vida e obra de Roberto Menescal",
+    "summary": "Prestes a completar 89 anos no dia 25 de outubro, o músico Roberto Menescal é homenageado pelo programa Cena Musical , da TV Brasil , nesta terça (20), às 22h30, com o show exclusivo O Lado B da Bossa, em que o veterano sobe ao palco com a cantora Cris Delanno e seu trio.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-10/cena-musical-da-tv-brasil-celebra-vida-e-obra-de-roberto-menescal",
+    "publishedAt": "20/10/2026 às 08:30",
+    "category": "Política",
+    "ingestedAt": "20/10/2026 às 11:27",
+    "imageUrl": "https://imagens.ebc.com.br/Gh7YrXL9OEQMfXvwZV1Cz3fZ_dQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/foto_menescal_1.jpg?itok=g9vMzAPu",
+    "imageCaption": "Cena Musical, da TV Brasil, celebra vida e obra de Roberto Menescal",
+    "imageCredit": "EBC",
+    "imageAlt": "Cena Musical, da TV Brasil, celebra vida e obra de Roberto Menescal",
+    "author": "EBC",
+    "tags": [
+      "Cultura",
+      "TV Brasil",
+      "Cena Musical",
+      "música",
+      "Música Brasileira"
     ]
   },
   {
@@ -40,7 +265,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "author": "Vitor Abdala – Repórter da Agência Brasil",
     "tags": [
       "Geral",
-      "segurança pública",
+      "Segurança Pública",
       "Queimados",
       "Jefferson Dias da Silva",
       "Violência Policial"
@@ -140,7 +365,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/justica-decreta-fim-da-recuperacao-judicial-da-americanas",
     "publishedAt": "19/10/2026 às 22:26",
-    "category": "Justiça",
+    "category": "Economia",
     "ingestedAt": "20/10/2026 às 08:04",
     "imageUrl": "https://imagens.ebc.com.br/n5b2MZEsFfsKmDTcNnBHF8Uowag=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/07/02/_mg_8996_0.jpg?itok=eDEPJu4R",
     "imageCaption": "Justiça decreta fim da recuperação judicial da Americanas",
@@ -150,8 +375,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Economia",
       "americanas",
-      "recuperação judicial",
-      "Justiça"
+      "recuperação judicial"
     ]
   },
   {
@@ -444,27 +668,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
-    "id": "camara-1310379-projeto-cria-politica-nacional",
-    "title": "Projeto cria política nacional para proteger povos e comunidades tradicionais de terreiro",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310379-projeto-cria-politica-nacional-para-proteger-povos-e-comunidades-tradicionais-de-terreiro",
-    "publishedAt": "19/10/2026 às 17:25",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 18:58",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260428165731458-768x473.jpg",
-    "imageCaption": "Deputada Laura Carneiro, autora da proposta",
-    "imageCredit": "Marina Ramos/Camara dos Deputados",
-    "imageAlt": "Reunião de líderes. Dep. Laura Carneiro (PSD - RJ)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
     "id": "ebc-1705845",
     "title": "Janones poderá ter alta em 48 horas, diz boletim médico",
     "summary": "O deputado federal André Janones (Rede-MG) poderá ter alta em 48 horas, segundo boletim médico divulgado nesta segunda-feira (19) pelo Hospital Vila Nova Star, na capital paulista.",
@@ -485,6 +688,27 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "André Janones",
       "Exército do Lula",
       "Lula"
+    ]
+  },
+  {
+    "id": "camara-1310379-projeto-cria-politica-nacional",
+    "title": "Projeto cria política nacional para proteger povos e comunidades tradicionais de terreiro",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1310379-projeto-cria-politica-nacional-para-proteger-povos-e-comunidades-tradicionais-de-terreiro",
+    "publishedAt": "19/10/2026 às 17:25",
+    "category": "Congresso",
+    "ingestedAt": "19/10/2026 às 18:58",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260428165731458-768x473.jpg",
+    "imageCaption": "Deputada Laura Carneiro, autora da proposta",
+    "imageCredit": "Marina Ramos/Camara dos Deputados",
+    "imageAlt": "Reunião de líderes. Dep. Laura Carneiro (PSD - RJ)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
     ]
   },
   {
@@ -821,186 +1045,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
-    "id": "camara-1307904-projeto-exige-notificacao-prev",
-    "title": "Projeto exige notificação prévia sobre renegociação de contas de água e luz antes da negativação",
-    "summary": "O texto está em análise na Câmara; para virar lei, precisa ser aprovado pelos deputados e pelos senadores.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1307904-projeto-exige-notificacao-previa-sobre-renegociacao-de-contas-de-agua-e-luz-antes-da-negativacao",
-    "publishedAt": "19/10/2026 às 14:11",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20250903170356973-768x473.jpg",
-    "imageCaption": "Pastor Gil, autor da proposta",
-    "imageCredit": "Vinicius Loures/Câmara dos Deputados",
-    "imageAlt": "Deputado Pastor Gil (PL-MA) fala em comissão da Câmara dos Deputados",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1705819",
-    "title": "Provas de português para estrangeiros começam nesta terça-feira",
-    "summary": "A aplicação das provas da segunda edição de 2026 do Certificado de Proficiência em Língua Portuguesa para Estrangeiros (Celpe-Bras) ocorre entre esta terça-feira (20) e sexta-feira (23).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/provas-de-portugues-para-estrangeiros-comecam-nesta-terca-feira",
-    "publishedAt": "19/10/2026 às 13:24",
-    "category": "Política",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Daniella Almeida – Repórter da Agência Brasil",
-    "tags": [
-      "Educação",
-      "Inep",
-      "português",
-      "Celpe-Bras",
-      "Política"
-    ]
-  },
-  {
-    "id": "camara-1311936-projeto-preve-incentivo-a-come",
-    "title": "Projeto prevê incentivo à comercialização de produtos da agricultura familiar em feiras livres",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311936-projeto-preve-incentivo-a-comercializacao-de-produtos-da-agricultura-familiar-em-feiras-livres",
-    "publishedAt": "19/10/2026 às 14:29",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260506171852784-768x473.jpg",
-    "imageCaption": "Gustinho Ribeiro: feiras aproximam produtor e consumidor",
-    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Gustinho Ribeiro (PP - SE)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1705815",
-    "title": "Deputado André Janones é internado com arritmia em São Paulo",
-    "summary": "O deputado federal André Janones (Rede-MG) foi internado com arritmia cardíaca na madrugada desta segunda-feira (19), na Unidade de Terapia Intensiva (UTI) do Hospital Vila Nova Star, em São Paulo.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/deputado-andre-janones-e-internado-com-arritmia-em-sao-paulo",
-    "publishedAt": "19/10/2026 às 12:57",
-    "category": "Eleições",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "imageUrl": "https://imagens.ebc.com.br/tnX4Zn1Sndt-MuGBpcMEp9OGi2c=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/11/img20260415173718994.jpg?itok=wzLjGK-i",
-    "imageCaption": "Deputado André Janones é internado com arritmia em São Paulo",
-    "imageCredit": "Flávia Albuquerque - repórter da Agência Brasil",
-    "imageAlt": "Deputado André Janones é internado com arritmia em São Paulo",
-    "author": "Flávia Albuquerque - repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "André Janones",
-      "Exército do Lula",
-      "debate",
-      "Lula"
-    ]
-  },
-  {
-    "id": "ebc-1705813",
-    "title": "Deputado estadual Marcelo Aguiar é detido após disparo em bar",
-    "summary": "O deputado estadual Marcelo Aguiar, do Partido Liberal, foi detido pela Polícia Militar de São Paulo, na madrugada desta segunda-feira (19), após fazer um disparo com uma arma de fogo no interior de um bar na Vila Nova Conceição, zona sul da capital paulista.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/deputado-estadual-marcelo-aguiar-e-detido-apos-disparo-em-bar",
-    "publishedAt": "19/10/2026 às 12:47",
-    "category": "Política",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Matheus Crobelatti *",
-    "tags": [
-      "Geral",
-      "disparo de arma",
-      "Deputado Estadual",
-      "PMSP",
-      "Marcelo Aguiar"
-    ]
-  },
-  {
-    "id": "ebc-1705806",
-    "title": "Pé-de-Meia: pagamento da sétima parcela começa nesta segunda",
-    "summary": "Os beneficiários do programa Pé-de-Meia de 2026 do ensino médio regular que atingiram pelo menos 80% de frequência nas aulas em agosto deste ano começaram a receber, nesta segunda-feira (19), a sétima parcela do incentivo à frequência.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/pe-de-meia-pagamento-da-setima-parcela-comeca-nesta-segunda",
-    "publishedAt": "19/10/2026 às 12:21",
-    "category": "Política",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Daniella Almeida - Repórter da Agência Brasil",
-    "tags": [
-      "Educação",
-      "pé-de-meia",
-      "Ensino Médio",
-      "EJA",
-      "CadÚnico"
-    ]
-  },
-  {
-    "id": "ebc-1705804",
-    "title": "Anvisa proíbe lotes de medicamento para tratar câncer",
-    "summary": "A Agência Nacional de Vigilância (Anvisa) determinou a apreensão dos lotes Z005197 e Z012354 do medicamento Keytruda (pembrolizumabe) 100 mg/4 mL , indicado para o tratamento de diversos tipos de câncer.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/anvisa-proibe-lotes-de-medicamento-para-tratar-cancer",
-    "publishedAt": "19/10/2026 às 12:18",
-    "category": "Política",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Paula Laboissière – Repórter da Agência Brasil",
-    "tags": [
-      "Saúde",
-      "Anvisa",
-      "câncer",
-      "falsificação",
-      "Keytruda"
-    ]
-  },
-  {
-    "id": "camara-1307075-projeto-obriga-sus-a-oferecer-",
-    "title": "Projeto obriga SUS a oferecer alimentos especiais para doenças metabólicas raras",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1307075-projeto-obriga-sus-a-oferecer-alimentos-especiais-para-doencas-metabolicas-raras",
-    "publishedAt": "19/10/2026 às 12:13",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260609170542182-768x473.jpg",
-    "imageCaption": "Reimont: medida visa reduzir a judicialização e assegurar que o tratamento não seja interrompido",
-    "imageCredit": "Thiago Cristino / Câmara dos Deputados",
-    "imageAlt": "Deputado Reimont (PT-RJ) fala no Plenário da Câmara dos Deputados",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1705803",
-    "title": "Anvisa determina apreensão de lote falsificado de toxina botulínica",
-    "summary": "A Agência Nacional de Vigilância (Anvisa) determinou a apreensão do lote 025155 do medicamento Dysport, um neuromodulador à base de toxina botulínica. A decisão foi publicada nesta segunda-feira (19) no Diário Oficial da União .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/anvisa-determina-apreensao-de-lote-falsificado-de-toxina-botulinica",
-    "publishedAt": "19/10/2026 às 11:59",
-    "category": "Política",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Paula Laboissière – Repórter da Agência Brasil",
-    "tags": [
-      "Saúde",
-      "Anvisa",
-      "toxina botulínica",
-      "Política"
-    ]
-  },
-  {
     "id": "ibge-48307",
     "title": "IBGE disponibiliza Agenda semanal com programações para os dias 19 a 23 de outubro",
     "summary": "Agenda IBGE traz a programação do instituto para a semana.",
@@ -1041,28 +1085,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "ibge",
       "Notícia",
       "Brasil",
-      "Estatísticas"
-    ]
-  },
-  {
-    "id": "ibge-48304",
-    "title": "País tinha 1,5 milhão de crianças e adolescentes em situação de trabalho infantil em 2025",
-    "summary": "Na análise por grupos etários, o trabalho infantil tende a aumentar com o avanço da idade.",
-    "source": "IBGE",
-    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
-    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48304-pais-tinha-1-5-milhao-de-criancas-e-adolescentes-em-situacao-de-trabalho-infantil-em-2025.html",
-    "publishedAt": "16/10/2026 às 10:00",
-    "category": "Economia",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "imageUrl": "https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/ibge/2026_10/pnad_trabalho_infantil_capa.jpg",
-    "imageCaption": "País tinha 1,5 milhão de crianças e adolescentes em situação de trabalho infantil em 2025",
-    "imageCredit": "Ministério do Trabalho O país tinha 1,499 milhão de crianças e adolescentes entre 5 e 17 anos em situação de trabalho infantil em 2025, o que representa",
-    "imageAlt": "País tinha 1,5 milhão de crianças e adolescentes em situação de trabalho infantil em 2025",
-    "author": "Agência IBGE Notícias",
-    "tags": [
-      "sociais",
-      "Notícia",
-      "Economia",
       "Estatísticas"
     ]
   },
