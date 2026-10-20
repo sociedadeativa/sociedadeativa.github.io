@@ -114,7 +114,7 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
           </div>
           <div className="self-start lg:self-center shrink-0">
             <span className="text-xs uppercase tracking-wider font-extrabold text-blue-900 bg-blue-100/90 px-3 py-1.5 rounded-lg border border-blue-200 whitespace-nowrap">
-              Resultado Homologado
+              1º Turno Homologado
             </span>
           </div>
         </div>
@@ -325,7 +325,7 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
                     nº 22
                   </span>
                 </div>
-                <div className="flex items-baseline justify-between">
+                <div className="flex flex-wrap items-baseline justify-between gap-1">
                   <span className="font-mono text-2xl sm:text-3xl font-black text-blue-950 block tracking-tight">
                     {formatPercentBR(flavioTotal?.percentage || 47.03)}
                   </span>
@@ -425,7 +425,7 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
                 {otherCandidatesTotals.length} concorrentes
               </span>
             </div>
-            <div className="flex items-baseline justify-between">
+            <div className="flex flex-wrap items-baseline justify-between gap-1">
               <span className="font-mono text-3xl font-black text-slate-900 block tracking-tight">
                 {formatPercentBR(otherPctSum)}
               </span>
