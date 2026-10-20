@@ -325,14 +325,14 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
                     nº 22
                   </span>
                 </div>
-                <div className="flex flex-wrap items-baseline justify-between gap-1">
-                  <span className="font-mono text-2xl sm:text-3xl font-black text-blue-950 block tracking-tight">
-                    {formatPercentBR(flavioTotal?.percentage || 47.03)}
-                  </span>
-                  <span className="font-mono text-xs font-bold text-slate-600">
-                    {formatVotesBR(flavioTotal?.votes || 56104268)} votos
-                  </span>
-                </div>
+               <div className="flex flex-col gap-0.5">
+  <span className="font-mono text-2xl sm:text-3xl font-black text-blue-950 block tracking-tight leading-tight">
+    {formatPercentBR(flavioTotal?.percentage || 47.03)}
+  </span>
+  <span className="font-mono text-xs font-bold text-slate-600 truncate">
+    {formatVotesBR(flavioTotal?.votes || 56104268)} votos
+  </span>
+</div>
               </div>
             </div>
             <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
@@ -382,14 +382,14 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
                     nº 13
                   </span>
                 </div>
-                <div className="flex items-baseline justify-between">
-                  <span className="font-mono text-2xl sm:text-3xl font-black text-red-950 block tracking-tight">
-                    {formatPercentBR(lulaTotal?.percentage || 45.16)}
-                  </span>
-                  <span className="font-mono text-xs font-bold text-slate-600">
-                    {formatVotesBR(lulaTotal?.votes || 53876617)} votos
-                  </span>
-                </div>
+                <div className="flex flex-col gap-0.5">
+  <span className="font-mono text-2xl sm:text-3xl font-black text-red-950 block tracking-tight leading-tight">
+    {formatPercentBR(lulaTotal?.percentage || 45.16)}
+  </span>
+  <span className="font-mono text-xs font-bold text-slate-600 truncate">
+    {formatVotesBR(lulaTotal?.votes || 53876617)} votos
+  </span>
+</div>
               </div>
             </div>
             <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
