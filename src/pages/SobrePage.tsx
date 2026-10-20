@@ -165,15 +165,15 @@ export const SobrePage: React.FC<SobrePageProps> = ({
                 </li>
                 <li className="flex justify-between p-2 rounded-lg bg-slate-50 border border-slate-200">
                   <span>Comparecimento às Urnas:</span>
-                  <strong className="font-mono text-slate-900">131.247.443 (83,89%)</strong>
+                  <strong className="font-mono text-slate-900">125.272.513 (80,07%)</strong>
                 </li>
                 <li className="flex justify-between p-2 rounded-lg bg-slate-50 border border-slate-200">
                   <span>Taxa de Abstenção Oficial:</span>
-                  <strong className="font-mono text-slate-900">25.206.568 (16,11%)</strong>
+                  <strong className="font-mono text-slate-900">31.181.498 (19,93%)</strong>
                 </li>
                 <li className="flex justify-between p-2 rounded-lg bg-slate-50 border border-slate-200">
                   <span>Votos Válidos Nominais:</span>
-                  <strong className="font-mono text-slate-900">125.234.619 (95,42%)</strong>
+                  <strong className="font-mono text-slate-900">119.297.583 (95,23%)</strong>
                 </li>
               </ul>
             </div>

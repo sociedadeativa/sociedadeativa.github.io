@@ -1004,7 +1004,7 @@ export const ClimaPage: React.FC<ClimaPageProps> = ({
                       </button>
                     )}
                     <a
-                      href={article.sourceUrl}
+                      href={article.articleUrl || article.sourceUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xs text-slate-500 hover:text-slate-800 flex items-center gap-1"

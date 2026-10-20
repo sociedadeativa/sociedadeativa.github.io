@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NewsItem, NewsCategory } from "../types/news";
 import { getArticleUrl, navigateToArticle } from "../utils/router";
+import { PortalLink } from "../components/PortalLink";
 import { isValidImageUrl } from "../services/newsService";
 import {
   Calendar,
@@ -117,16 +118,12 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
           className="flex flex-wrap items-center justify-between gap-3 text-xs mb-6 pb-4 border-b border-slate-200"
         >
           <div className="flex items-center gap-1.5 text-slate-500 overflow-hidden">
-            <a
-              href="/"
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "/";
-              }}
+            <PortalLink
+              route="home"
               className="hover:text-slate-900 transition-colors whitespace-nowrap"
             >
               Início
-            </a>
+            </PortalLink>
             <ChevronRight className="w-3.5 h-3.5 text-slate-300 shrink-0" />
             <button
               onClick={onNavigateBack}
@@ -320,15 +317,17 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
               )}
             </button>
 
-            <a
-              href={article.articleUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-slate-600 hover:text-slate-900 text-xs font-semibold hover:bg-slate-50 transition-colors"
-            >
-              <span>Ver no portal {article.source}</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
+            {!isSociedadeAtiva && (
+              <a
+                href={article.articleUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-slate-600 hover:text-slate-900 text-xs font-semibold hover:bg-slate-50 transition-colors"
+              >
+                <span>Ver no portal {article.source}</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
           </div>
         </section>
 

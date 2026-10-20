@@ -35,6 +35,11 @@ export const Header: React.FC<HeaderProps> = ({
   const ipcaRef = ipcaIndicator?.referencePeriod || "setembro 2026";
   const selicVal = selicIndicator?.formattedValue || "14,00% a.a.";
   const selicRef = selicIndicator?.referencePeriod || "Vigência a partir de 06/08/2026 (Copom)";
+  const selicDateMatch = selicRef ? selicRef.match(/(\d{2}\/\d{2}\/)(\d{2,4})/) : null;
+  const formattedSelicDate = selicDateMatch
+    ? `${selicDateMatch[1]}${selicDateMatch[2].slice(-2)}`
+    : "";
+  const selicBadgeText = formattedSelicDate ? `${formattedSelicDate} · BCB` : "BCB";
   const dolarVal = dolarIndicator?.formattedValue || "R$ 4,99";
   const dolarRef = dolarIndicator?.referencePeriod || "PTAX 09/10/2026";
 
@@ -142,7 +147,7 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 <strong className="text-emerald-400 font-sans font-bold text-[11px]">Selic Meta:</strong>
                 <span>{selicVal}</span>
-                <span className="text-[10px] text-slate-400 font-sans ml-0.5">[06/08/26 · BCB]</span>
+                <span className="text-[10px] text-slate-400 font-sans ml-0.5">[{selicBadgeText}]</span>
               </PortalLink>
 
               <span className="text-slate-600" aria-hidden="true">·</span>
