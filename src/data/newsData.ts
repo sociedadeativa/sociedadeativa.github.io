@@ -5,6 +5,94 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1705886",
+    "title": "Sociedade civil apresenta propostas aos candidatos à Presidência",
+    "summary": "A coalizão Vida em Conta , iniciativa que reúne cerca de 140 economistas e 70 organizações da sociedade civil, apresenta o documento 10 Propostas para um Novo Ciclo de Desenvolvimento no Brasil.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/sociedade-civil-apresenta-propostas-aos-candidatos-presidencia",
+    "publishedAt": "20/10/2026 às 08:35",
+    "category": "Eleições",
+    "ingestedAt": "20/10/2026 às 09:00",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "sociedade civil",
+      "propostas",
+      "candidatos à Presidência"
+    ]
+  },
+  {
+    "id": "ebc-1705890",
+    "title": "Secretário de Queimados, no Rio, morre baleado em abordagem da PM",
+    "summary": "O secretário Municipal de Desenvolvimento Econômico de Queimados, na Baixada Fluminense, Jefferson Dias da Silva, morreu na noite desta segunda-feira (19), baleado durante uma abordagem da Polícia Militar. O carro onde ele estava foi alvo de tiros disparados por policiais.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/secretario-de-queimados-no-rio-morre-baleado-em-abordagem-da-pm",
+    "publishedAt": "20/10/2026 às 08:04",
+    "category": "Política",
+    "ingestedAt": "20/10/2026 às 09:00",
+    "imageUrl": "https://imagens.ebc.com.br/Kjthp6BtHhYQpO0B5Xv6HM3VavI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/20/jef.jpg?itok=DLrDLpq_",
+    "imageCaption": "Secretário de Queimados, no Rio, morre baleado em abordagem da PM",
+    "imageCredit": "Vitor Abdala – Repórter da Agência Brasil",
+    "imageAlt": "Secretário de Queimados, no Rio, morre baleado em abordagem da PM",
+    "author": "Vitor Abdala – Repórter da Agência Brasil",
+    "tags": [
+      "Geral",
+      "segurança pública",
+      "Queimados",
+      "Jefferson Dias da Silva",
+      "Violência Policial"
+    ]
+  },
+  {
+    "id": "ebc-1705885",
+    "title": "Ministério Público do Rio renova acordo para enfrentar criminalidade",
+    "summary": "O acordo de cooperação técnica para a integração de informações estratégicas e o aprimoramento das ações de enfrentamento à criminalidade no estado do Rio foi renovado pelo Ministério Público (MP) e o Instituto de Segurança Pública (ISP).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/ministerio-publico-do-rio-renova-acordo-para-enfrentar-criminalidade",
+    "publishedAt": "20/10/2026 às 08:02",
+    "category": "Justiça",
+    "ingestedAt": "20/10/2026 às 09:00",
+    "imageUrl": "https://imagens.ebc.com.br/QGhKGfQ24rj8iCy5gt82XEftjUY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/mprj_ffraz_abr_1510212158_1.jpg?itok=d6TUo2zQ",
+    "imageCaption": "Ministério Público do Rio renova acordo para enfrentar criminalidade",
+    "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
+    "imageAlt": "Ministério Público do Rio renova acordo para enfrentar criminalidade",
+    "author": "Douglas Corrêa - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "MPRJ",
+      "Acordo",
+      "ISP",
+      "combate à criminalidade"
+    ]
+  },
+  {
+    "id": "ebc-1705889",
+    "title": "Chuvas permanecem intensas nas regiões Norte e Nordeste",
+    "summary": "A Zona de Convergência do Atlântico Sul permanece atuando sobre as regiões Norte, Nordeste e parte do Centro-Oeste, nesta terça-feira (20), informa o Instituto Nacional de Meteorologia (Inmet).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/chuvas-permanecem-intensas-nas-regioes-norte-e-nordeste",
+    "publishedAt": "20/10/2026 às 08:00",
+    "category": "Política",
+    "ingestedAt": "20/10/2026 às 09:00",
+    "imageUrl": "https://imagens.ebc.com.br/q9GN6MgWlpL0TzjohnJAmQib--Q=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/04/chuva_no_ceara.jpg?itok=65E6RJAB",
+    "imageCaption": "Chuvas permanecem intensas nas regiões Norte e Nordeste",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Chuvas permanecem intensas nas regiões Norte e Nordeste",
+    "author": "Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "meteorologia",
+      "Previsão do Tempo",
+      "Inmet",
+      "Chuvas"
+    ]
+  },
+  {
     "id": "ebc-1705831",
     "title": "Beneficiários com NIS de final 2 recebem Bolsa Família de outubro",
     "summary": "A Caixa Econômica Federal paga nesta terça-feira (20) a parcela de outubro do Bolsa Família aos beneficiários com Número de Inscrição Social (NIS) de final 2. Neste mês, 19,3 milhões de família serão beneficiadas, com o valor médio do benefício em R$ 782,92.",
@@ -910,91 +998,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Anvisa",
       "toxina botulínica",
       "Política"
-    ]
-  },
-  {
-    "id": "ebc-1705799",
-    "title": "Economia cresce 0,5% em agosto após dois meses de recuo, estima FGV",
-    "summary": "Depois de dois meses de recuo, a economia brasileira voltou a crescer e apresentou expansão de 0,5% na passagem de julho para agosto . Como resultado, o desempenho chega a 1,8% no acumulado de 12 meses.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/economia-cresce-05-em-agosto-apos-dois-meses-de-recuo-estima-fgv",
-    "publishedAt": "19/10/2026 às 11:52",
-    "category": "Economia",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "imageUrl": "https://imagens.ebc.com.br/nv6S9mksLSN22lOYY8NRR-x2nFo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/05/28/dji_20260527115826_0082_d.jpg?itok=4hTm21bC",
-    "imageCaption": "Economia cresce 0,5% em agosto após dois meses de recuo, estima FGV",
-    "imageCredit": "Bruno de Freitas Moura - Repórter da Agência Brasil",
-    "imageAlt": "Economia cresce 0,5% em agosto após dois meses de recuo, estima FGV",
-    "author": "Bruno de Freitas Moura - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "FGV",
-      "Ibre",
-      "serviços",
-      "indústria extrativa"
-    ]
-  },
-  {
-    "id": "ebc-1705797",
-    "title": "Morre Mãe Senhora de Ewá, liderança do candomblé, aos 104 anos",
-    "summary": "Elza Bahia de Araújo, conhecida como Mãe Senhora de Ewá, morreu em Salvador no último sábado (17). Uma das mais antigas lideranças do candomblé no Brasil, a ialorixá (mãe de santo) do Ilê Axé Omi Ewá tinha 104 anos de idade, completados no último dia 11 de setembro.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/morre-mae-senhora-de-ewa-lideranca-do-candomble-aos-104-anos",
-    "publishedAt": "19/10/2026 às 11:31",
-    "category": "Política",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "author": "Alex Rodrigues - Repórter da Agência Brasil",
-    "tags": [
-      "Direitos Humanos",
-      "Candomblé",
-      "Salvador",
-      "Política"
-    ]
-  },
-  {
-    "id": "camara-1311934-projeto-reserva-5-das-compras-",
-    "title": "Projeto reserva 5% das compras públicas de alimentos para produtos típicos de biomas locais",
-    "summary": "Texto está em análise na Câmara do Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311934-projeto-reserva-5-das-compras-publicas-de-alimentos-para-produtos-tipicos-de-biomas-locais",
-    "publishedAt": "19/10/2026 às 11:23",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260209210855050-768x473.jpg",
-    "imageCaption": "Romero Rodrigues é o autor da proposta",
-    "imageCredit": "Bruno Spada/Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Romero Rodrigues (PODE-PB)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1705795",
-    "title": "TSE dá 24 horas para Meta dar informações sobre igualdade de campanhas",
-    "summary": "O ministro Marco Aurélio Bellizze, do Tribunal Superior Eleitoral (TSE), deu 24 horas para que a empresa Meta - responsável por plataformas como Facebook, Instagram e WhatsApp - comprove a adoção de medidas de isonomia na distribuição de posts políticos e na veiculação.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-da-24-horas-para-meta-dar-informacoes-sobre-igualdade-de-campanhas",
-    "publishedAt": "19/10/2026 às 11:05",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 14:49",
-    "imageUrl": "https://imagens.ebc.com.br/Q9U7eoc8fF7K1ZF8MbVxVfEfgXY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/img_1704.jpg.jpg?itok=I3NHlw24",
-    "imageCaption": "TSE dá 24 horas para Meta dar informações sobre igualdade de campanhas",
-    "imageCredit": "Felipe Pontes - Repórter da Agência Brasil",
-    "imageAlt": "TSE dá 24 horas para Meta dar informações sobre igualdade de campanhas",
-    "author": "Felipe Pontes - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "TSE",
-      "prazo",
-      "meta",
-      "explicações"
     ]
   },
   {
