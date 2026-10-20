@@ -9,6 +9,7 @@ import { NewsCard } from "../components/NewsCard";
 import { PortalLink } from "../components/PortalLink";
 import { AdBanner } from "../components/AdBanner";
 import { isElectionArticle } from "../utils/electionNewsFilter";
+import { SecondRoundBanner } from "../components/SecondRoundBanner";
 import {
   Vote,
   ShieldCheck,
@@ -21,7 +22,8 @@ import {
   Smartphone,
   FileCheck,
   ExternalLink,
-  AlertCircle
+  AlertCircle,
+  History,
 } from "lucide-react";
 
 interface EleicoesPageProps {
@@ -327,24 +329,48 @@ export const EleicoesPage: React.FC<EleicoesPageProps> = ({
           </div>
         </section>
 
-        {/* 1. Painel Nacional Oficial (100% Totalizado) */}
-        <div className="mb-10">
-          <NationalBanner
-            dataset={dataset}
-            onOpenMethodology={onOpenMethodology}
-            selectedCandidateFilter={selectedCandidateFilter}
-            onSelectCandidateFilter={onSelectCandidateFilter}
-          />
-        </div>
+        {/* 1. Painel Informativo Oficial do 2º Turno (25 de Outubro de 2026) */}
+        <SecondRoundBanner onOpenMethodology={onOpenMethodology} />
 
-        {/* 2. Quadro Individual de Candidatos à Presidência (Fotografias Oficiais e Busca/Filtros) */}
-        <div className="mb-12">
-          <CandidateResultsView
-            dataset={dataset}
-            onSelectCandidate={onSelectCandidateFilter}
-            selectedCandidateId={selectedCandidateFilter}
-          />
-        </div>
+        {/* 2. Arquivo Histórico Oficial do 1º Turno (4 de Outubro de 2026) */}
+        <section aria-labelledby="historico-primeiro-turno-titulo" className="mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 p-5 rounded-2xl bg-slate-100/80 border border-slate-200">
+            <div>
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 text-xs font-bold uppercase tracking-wider mb-1.5">
+                <History className="w-3.5 h-3.5 text-slate-600" />
+                <span>Arquivo Histórico Oficial</span>
+              </div>
+              <h2
+                id="historico-primeiro-turno-titulo"
+                className="font-heading text-xl sm:text-2xl font-black text-slate-900"
+              >
+                Resultados Homologados do 1º Turno (4 de Outubro de 2026)
+              </h2>
+            </div>
+            <p className="text-xs text-slate-600 sm:max-w-xs sm:text-right leading-relaxed">
+              Totalização definitiva com 100% das seções apuradas pelo Tribunal Superior Eleitoral (TSE).
+            </p>
+          </div>
+
+          {/* Painel Nacional Oficial do 1º Turno (100% Totalizado) */}
+          <div className="mb-10">
+            <NationalBanner
+              dataset={dataset}
+              onOpenMethodology={onOpenMethodology}
+              selectedCandidateFilter={selectedCandidateFilter}
+              onSelectCandidateFilter={onSelectCandidateFilter}
+            />
+          </div>
+
+          {/* Quadro Individual de Candidatos à Presidência no 1º Turno */}
+          <div>
+            <CandidateResultsView
+              dataset={dataset}
+              onSelectCandidate={onSelectCandidateFilter}
+              selectedCandidateId={selectedCandidateFilter}
+            />
+          </div>
+        </section>
 
         {/* 3. Banner Editorial com Fotografia e Regras do 2º Turno */}
         <div className="mb-12 bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xs">
