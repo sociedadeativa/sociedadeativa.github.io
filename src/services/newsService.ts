@@ -72,6 +72,25 @@ export function formatNewsDate(dateStr: string | undefined): string {
 }
 
 /**
+ * Valida rigorosamente URLs de imagem aceitas pelo portal
+ */
+export function isValidImageUrl(url: string | undefined | null): boolean {
+  if (!url || typeof url !== "string") return false;
+  const trimmed = url.trim();
+  if (!trimmed.startsWith("https://") && !trimmed.startsWith("http://") && !trimmed.startsWith("/")) {
+    return false;
+  }
+  if (/\.(aspx|php|html?|jsp)(\?.*)?$/i.test(trimmed)) return false;
+  if (/(\.gif|ebc\.png|pixel|beacon|spacer|1x1|tracking)/i.test(trimmed)) return false;
+  if (/(logo-agenciabrasil|favicon|banner-default|placeholder)/i.test(trimmed)) return false;
+
+  const isImageExt = /\.(jpe?g|png|webp|avif)(\?.*)?$/i.test(trimmed);
+  const isKnownImagePath = /(\/thumbnails\/image\/|\/midias\/image\/|\/noticias-img\/|\/images\/agenciadenoticias\/)/i.test(trimmed);
+
+  return isImageExt || isKnownImagePath;
+}
+
+/**
  * Normaliza qualquer objeto de notícia bruto aplicando valores padrão seguros e tipagem rígida
  */
 export function normalizeNewsItem(raw: any, index: number = 0): NewsItem {
@@ -105,6 +124,11 @@ export function normalizeNewsItem(raw: any, index: number = 0): NewsItem {
 
   const tags = Array.isArray(raw.tags) ? raw.tags.map((t: any) => String(t).trim()).filter(Boolean) : [];
 
+  const imageUrl = typeof raw.imageUrl === "string" && isValidImageUrl(raw.imageUrl) ? raw.imageUrl.trim() : undefined;
+  const imageCaption = typeof raw.imageCaption === "string" && raw.imageCaption.trim() ? raw.imageCaption.trim() : undefined;
+  const imageCredit = typeof raw.imageCredit === "string" && raw.imageCredit.trim() ? raw.imageCredit.trim() : undefined;
+  const imageAlt = typeof raw.imageAlt === "string" && raw.imageAlt.trim() ? raw.imageAlt.trim() : undefined;
+
   return {
     id,
     title,
@@ -116,7 +140,10 @@ export function normalizeNewsItem(raw: any, index: number = 0): NewsItem {
     updatedAt,
     ingestedAt,
     category,
-    imageUrl: typeof raw.imageUrl === "string" && raw.imageUrl.trim() ? raw.imageUrl.trim() : undefined,
+    imageUrl,
+    imageCaption,
+    imageCredit,
+    imageAlt,
     author: raw.author ? String(raw.author).trim() : source,
     tags,
     // Campos legados para compatibilidade

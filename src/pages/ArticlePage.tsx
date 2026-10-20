@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NewsItem, NewsCategory } from "../types/news";
 import { getArticleUrl, navigateToArticle } from "../utils/router";
+import { isValidImageUrl } from "../services/newsService";
 import {
   Calendar,
   Clock,
@@ -42,6 +43,11 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
   onSelectArticle,
 }) => {
   const [copied, setCopied] = useState(false);
+  const [imageError, setImageError] = useState(false);
+
+  useEffect(() => {
+    setImageError(false);
+  }, [article?.id, article?.imageUrl]);
 
   const catStyle = CATEGORY_STYLES[article.category] || CATEGORY_STYLES["Política"];
   const isSociedadeAtiva =
@@ -223,13 +229,14 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
         </header>
 
         {/* Imagem Oficial com Atribuição Transparente */}
-        {article.imageUrl && (
+        {article.imageUrl && isValidImageUrl(article.imageUrl) && !imageError && (
           <figure className="mb-8 rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-2xs">
             <img
               src={article.imageUrl}
               alt={article.imageAlt || article.title}
               className="w-full max-h-[480px] object-cover"
               loading="eager"
+              onError={() => setImageError(true)}
             />
             <figcaption className="p-3 text-xs text-slate-600 bg-white border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-1 leading-relaxed">
               <span>{article.imageCaption || article.title}</span>

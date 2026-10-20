@@ -1,10 +1,10 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { NewsItem } from "../types/news";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { Clock, Calendar, ArrowUpRight, Sparkles } from "lucide-react";
 import { PortalLink } from "./PortalLink";
 import { PortalRoute } from "../utils/router";
-import { sortNewsItems, deduplicateNewsItems } from "../services/newsService";
+import { sortNewsItems, deduplicateNewsItems, isValidImageUrl } from "../services/newsService";
 
 interface FeaturedEditorialProps {
   articles: NewsItem[];
@@ -17,6 +17,7 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
 }) => {
   // Configuração editorial: definir ID de artigo para fixar manualmente, ou null para seleção dinâmica automática
   const PINNED_LEAD_ARTICLE_ID: string | null = null;
+  const [leadImageError, setLeadImageError] = useState(false);
 
   // Garante ordenação cronológica decrescente estrita (mais recente primeiro) e ausência de duplicatas
   const validArticles = useMemo(() => {
@@ -29,6 +30,11 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
     : null;
   const leadArticle = pinnedArticle || validArticles[0] || null;
 
+  // Reseta estado de erro se o artigo principal mudar
+  useEffect(() => {
+    setLeadImageError(false);
+  }, [leadArticle?.id, leadArticle?.imageUrl]);
+
   // Remove o lead selecionado da lista restante para evitar qualquer sobreposição
   const remainingArticles = leadArticle
     ? validArticles.filter((a) => a.id !== leadArticle.id)
@@ -38,21 +44,35 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
   const secondaryArticles = remainingArticles.slice(0, 3);
   const civicWireArticles = remainingArticles.slice(3, 8);
 
-  // Tratamento da imagem da matéria principal com suporte a imagem do artigo e fallback editorial
+  // Tratamento da imagem da matéria principal: prioriza fotojornalismo original comprovado
   const hasValidArticleImage = Boolean(
-    leadArticle?.imageUrl && leadArticle.imageUrl.trim().startsWith("https://")
+    leadArticle?.imageUrl && isValidImageUrl(leadArticle.imageUrl)
   );
 
-  const leadImageSrc = hasValidArticleImage
+  const categoryFallbackMap: Record<string, typeof EDITORIAL_IMAGES.congresso> = {
+    Eleições: EDITORIAL_IMAGES.urna,
+    Economia: EDITORIAL_IMAGES.economia,
+    Brasil: EDITORIAL_IMAGES.dadosPublicos,
+    Congresso: EDITORIAL_IMAGES.congresso,
+    Política: EDITORIAL_IMAGES.congresso,
+    Governo: EDITORIAL_IMAGES.congresso,
+    Justiça: EDITORIAL_IMAGES.congresso,
+    Mundo: EDITORIAL_IMAGES.congresso,
+  };
+  const institutionalFallback = categoryFallbackMap[leadArticle?.category || ""] || EDITORIAL_IMAGES.congresso;
+
+  const isUsingOriginalPhoto = Boolean(hasValidArticleImage && !leadImageError);
+
+  const leadImageSrc = isUsingOriginalPhoto
     ? leadArticle!.imageUrl!
-    : EDITORIAL_IMAGES.congresso.src;
+    : institutionalFallback.src;
 
-  const leadImageAlt = hasValidArticleImage
+  const leadImageAlt = isUsingOriginalPhoto
     ? (leadArticle!.imageAlt || leadArticle!.title)
-    : EDITORIAL_IMAGES.congresso.alt;
+    : institutionalFallback.alt;
 
-  let leadImageCaption = EDITORIAL_IMAGES.congresso.caption;
-  if (hasValidArticleImage && leadArticle) {
+  let leadImageCaption = institutionalFallback.caption;
+  if (isUsingOriginalPhoto && leadArticle) {
     if (leadArticle.imageCaption && leadArticle.imageCredit) {
       leadImageCaption = `${leadArticle.imageCaption} (${leadArticle.imageCredit})`;
     } else if (leadArticle.imageCaption) {
@@ -60,7 +80,7 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
     } else if (leadArticle.imageCredit) {
       leadImageCaption = `Foto: ${leadArticle.imageCredit}`;
     } else {
-      leadImageCaption = leadArticle.title || EDITORIAL_IMAGES.congresso.caption;
+      leadImageCaption = leadArticle.title || institutionalFallback.caption;
     }
   }
 
@@ -123,12 +143,13 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                     className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
                     loading="eager"
                     referrerPolicy="no-referrer"
+                    onError={() => setLeadImageError(true)}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
                   <div className="absolute bottom-3 left-4 right-4 text-white text-[11px] font-medium flex items-center justify-between">
                     <span className="opacity-90">{leadImageCaption}</span>
                     <span className="hidden sm:inline bg-black/40 backdrop-blur-xs px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">
-                      Fotojornalismo
+                      {isUsingOriginalPhoto ? "Fotojornalismo" : "Institucional"}
                     </span>
                   </div>
                 </div>

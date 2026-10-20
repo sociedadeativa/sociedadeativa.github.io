@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NewsItem, NewsCategory, NEWS_CATEGORIES } from "../types/news";
+import { isValidImageUrl } from "../services/newsService";
 import { NewsCard } from "./NewsCard";
 import { useNews } from "../hooks/useNews";
 import { AdBanner } from "./AdBanner";
@@ -32,6 +33,11 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ articles }) => {
   } = useNews({ initialArticles: articles });
 
   const [copied, setCopied] = useState(false);
+  const [modalImageError, setModalImageError] = useState(false);
+
+  useEffect(() => {
+    setModalImageError(false);
+  }, [activeArticle?.id, activeArticle?.imageUrl]);
 
   const categories = ["Todas", ...NEWS_CATEGORIES];
 
@@ -201,6 +207,29 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ articles }) => {
               <h2 className="font-heading text-xl sm:text-2xl font-black text-slate-900 mb-3 leading-tight">
                 {activeArticle.title}
               </h2>
+
+              {/* Imagem Editorial Oficial Verificada */}
+              {activeArticle.imageUrl && isValidImageUrl(activeArticle.imageUrl) && !modalImageError && (
+                <figure className="mb-4 rounded-2xl overflow-hidden border border-slate-200 bg-slate-50">
+                  <img
+                    src={activeArticle.imageUrl}
+                    alt={activeArticle.imageAlt || activeArticle.title}
+                    className="w-full max-h-[300px] object-cover"
+                    loading="lazy"
+                    onError={() => setModalImageError(true)}
+                  />
+                  {(activeArticle.imageCaption || activeArticle.imageCredit) && (
+                    <figcaption className="p-2.5 text-[10px] sm:text-[11px] text-slate-500 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-2 flex-wrap">
+                      <span>{activeArticle.imageCaption || activeArticle.title}</span>
+                      {activeArticle.imageCredit && (
+                        <span className="font-semibold text-slate-700">
+                          Foto: {activeArticle.imageCredit}
+                        </span>
+                      )}
+                    </figcaption>
+                  )}
+                </figure>
+              )}
 
               <p className="text-sm sm:text-base font-semibold text-slate-700 mb-5 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-200/80">
                 {activeArticle.summary}

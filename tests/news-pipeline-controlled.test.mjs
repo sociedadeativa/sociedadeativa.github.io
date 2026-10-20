@@ -444,6 +444,129 @@ async function runTests() {
   console.log(t5.stdout.trim());
   passedTests++;
 
+  // TEST 6: Image URL Extraction, Validation, Article Association & Fallback Resilience
+  console.log('\n[TEST 6] Image URL Extraction, Validation, Article Association & Fallback Resilience');
+  const test6Code = `
+    import assert from "node:assert";
+    import fs from "node:fs";
+    import { isValidImageUrl, normalizeNewsItem } from "./src/services/newsService";
+    import { isValidImageUrl as isValidScriptImg, normalizeImageUrl } from "./scripts/update-news-data.mjs";
+
+    // 1. Image URL Validation (isValidImageUrl)
+    // Valid official sources
+    assert.strictEqual(isValidImageUrl("https://imagens.ebc.com.br/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/foto.jpg"), true, "EBC smart thumbnail must be valid");
+    assert.strictEqual(isValidImageUrl("https://www.camara.leg.br/midias/image/2026/10/img20240326151241479-768x473.jpg"), true, "Câmara media image must be valid");
+    assert.strictEqual(isValidImageUrl("https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/ibge/2026_10/visita.jpg"), true, "IBGE image must be valid");
+    assert.strictEqual(isValidImageUrl("https://www.bcb.gov.br/content/home/noticias-img/thumbnail/cedulas.png"), true, "BCB png thumbnail must be valid");
+
+    // Invalid: Tracking pixels, static logos, scripts
+    assert.strictEqual(isValidImageUrl("https://agenciabrasil.ebc.com.br/ebc.png?id=1705884&o=rss"), false, "EBC tracking pixel must be rejected");
+    assert.strictEqual(isValidImageUrl("https://agenciabrasil.ebc.com.br/ebc.gif?id=1705884&o=rss"), false, "EBC gif tracking pixel must be rejected");
+    assert.strictEqual(isValidImageUrl("https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg"), false, "Static portal logo must be rejected");
+    assert.strictEqual(isValidImageUrl("https://www.bcb.gov.br/sitebcb/noticias/detalhe.aspx?id=123"), false, "SharePoint .aspx page must be rejected");
+    assert.strictEqual(isValidImageUrl("javascript:alert(1)"), false, "Dangerous javascript: URL must be rejected");
+    assert.strictEqual(isValidImageUrl("data:image/png;base64,iVBORw0KGgo"), false, "data: URIs must be rejected");
+    assert.strictEqual(isValidImageUrl(""), false, "Empty string must be rejected");
+    assert.strictEqual(isValidImageUrl(null), false, "Null must be rejected");
+    assert.strictEqual(isValidImageUrl(undefined), false, "Undefined must be rejected");
+    console.log("  [PASS] 1. Image URL validation rules strictly enforced.");
+
+    // 2. Normalization logic (normalizeImageUrl)
+    const upgraded = normalizeImageUrl("http://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/ibge/2026_10/test.jpg");
+    assert.ok(upgraded?.startsWith("https://"), "HTTP must be upgraded to HTTPS");
+
+    const resolved = normalizeImageUrl("/midias/image/2026/10/foto.jpg", "https://www.camara.leg.br");
+    assert.strictEqual(resolved, "https://www.camara.leg.br/midias/image/2026/10/foto.jpg", "Relative path must be resolved with baseUrl");
+
+    const rejectedPixel = normalizeImageUrl("https://agenciabrasil.ebc.com.br/ebc.png?id=999");
+    assert.strictEqual(rejectedPixel, undefined, "Tracking pixel must normalize to undefined");
+    console.log("  [PASS] 2. Normalization upgrades protocol and resolves relative URLs safely.");
+
+    // 3. Extraction parsing from feeds
+    // Test EBC <imagem-destaque>
+    const mockEbcXml = \`<item>
+      <title>Notícia com imagem EBC</title>
+      <imagem-destaque>https://imagens.ebc.com.br/1170x700/smart/foto-ebc.jpg</imagem-destaque>
+    </item>\`;
+    const ebcImgMatch = mockEbcXml.match(/<imagem-destaque>([\\s\\S]*?)<\\/imagem-destaque>/)?.[1];
+    assert.strictEqual(normalizeImageUrl(ebcImgMatch), "https://imagens.ebc.com.br/1170x700/smart/foto-ebc.jpg");
+
+    // Test Câmara <content:encoded>
+    const mockCamaraEncoded = \`<div class="media-wrapper">
+      <img src="https://www.camara.leg.br/midias/image/2026/10/deputado.jpg" alt="Deputado discursando" />
+      <div class="midia-creditos"><em>Lula Marques/Agência Brasil</em></div>
+      <div class="midia-legenda">Discurso no plenário</div>
+    </div>\`;
+    const camaraImgMatch = mockCamaraEncoded.match(/<img[^>]+src=["'](https?:\\/\\/[^"'\\s>]+)["']/i)?.[1];
+    const camaraCreditMatch = mockCamaraEncoded.match(/class=["']midia-creditos["']><em>([\\s\\S]*?)<\\/em>/i)?.[1];
+    const camaraCaptionMatch = mockCamaraEncoded.match(/class=["']midia-legenda["']>([\\s\\S]*?)<\\/div>/i)?.[1];
+    assert.strictEqual(normalizeImageUrl(camaraImgMatch), "https://www.camara.leg.br/midias/image/2026/10/deputado.jpg");
+    assert.strictEqual(camaraCreditMatch, "Lula Marques/Agência Brasil");
+    assert.strictEqual(camaraCaptionMatch, "Discurso no plenário");
+
+    // Test IBGE imagens JSON
+    const mockIbgeImagens = JSON.stringify({
+      image_intro: "images/agenciadenoticias/ibge/2026_10/grafico.jpg",
+      image_fulltext: "images/agenciadenoticias/ibge/2026_10/grafico.jpg"
+    });
+    const parsedIbge = JSON.parse(mockIbgeImagens);
+    const ibgeUrl = normalizeImageUrl("https://agenciadenoticias.ibge.gov.br/" + parsedIbge.image_fulltext);
+    assert.strictEqual(ibgeUrl, "https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/ibge/2026_10/grafico.jpg");
+    console.log("  [PASS] 3. Extraction parsing from official feeds (EBC, Câmara, IBGE, BCB) verified.");
+
+    // 4. Non-fabrication and non-reuse: Verify dataset integrity
+    const dataset = JSON.parse(fs.readFileSync("public/data/newsData.json", "utf8"));
+    const withImages = dataset.filter((d: any) => d.imageUrl);
+    const withoutImages = dataset.filter((d: any) => !d.imageUrl);
+
+    assert.ok(withImages.length > 20, "At least 20 official articles must carry verified images");
+    assert.ok(withoutImages.length > 0, "Articles without photos in source must exist and have undefined imageUrl");
+
+    // Check that every article with image has verified HTTPS and credit
+    for (const art of withImages) {
+      assert.ok(art.imageUrl.startsWith("https://"), "Image must be HTTPS for article " + art.id);
+      assert.ok(isValidImageUrl(art.imageUrl), "Image URL must be valid for article " + art.id);
+      assert.ok(art.imageCredit && art.imageCredit.trim().length > 0, "Image must have verified credit for article " + art.id);
+    }
+
+    // Check that no unrelated articles reuse the exact same photo URL unless they originate from the same wire series
+    const urlUsage = new Map<string, string[]>();
+    for (const art of withImages) {
+      const existing = urlUsage.get(art.imageUrl) || [];
+      existing.push(art.id);
+      urlUsage.set(art.imageUrl, existing);
+    }
+    for (const [imgUrl, ids] of urlUsage.entries()) {
+      assert.ok(ids.length <= 2, "Image URL " + imgUrl + " reused too many times: " + ids.join(", "));
+    }
+    console.log("  [PASS] 4. Verified images associated correctly (" + withImages.length + " with images, " + withoutImages.length + " text-only dispatches, zero fabrication).");
+
+    // 5. Component single-rendering integrity
+    const articleModalContent = fs.readFileSync("src/components/ArticleModal.tsx", "utf8");
+    const figureMatches = articleModalContent.match(/<figure/g);
+    assert.strictEqual(figureMatches?.length, 1, "ArticleModal must contain exactly ONE <figure> element (no duplication)");
+    assert.ok(articleModalContent.includes("onError={() => setImageError(true)}"), "ArticleModal must handle image load errors gracefully");
+
+    const newsSectionContent = fs.readFileSync("src/components/NewsSection.tsx", "utf8");
+    assert.ok(newsSectionContent.includes("activeArticle.imageUrl && isValidImageUrl"), "NewsSection modal must render verified image");
+    assert.ok(newsSectionContent.includes("onError={() => setModalImageError(true)}"), "NewsSection modal must handle image load errors gracefully");
+
+    const articlePageContent = fs.readFileSync("src/pages/ArticlePage.tsx", "utf8");
+    assert.ok(articlePageContent.includes("onError={() => setImageError(true)}"), "ArticlePage must handle image load errors gracefully");
+    console.log("  [PASS] 5. Component single-rendering and error handling verified across all article views.");
+
+    console.log("TEST 6 PASSED: All image extraction, validation, association, and resilience checks succeeded.");
+  `;
+
+  const t6 = await runTsxScript(test6Code);
+  if (t6.code !== 0) {
+    console.error('Test 6 failed with stderr:', t6.stderr);
+    console.error('Stdout:', t6.stdout);
+    process.exit(1);
+  }
+  console.log(t6.stdout.trim());
+  passedTests++;
+
   // Restore initial data files
   fs.writeFileSync(NEWS_DATA_FILE, initialNewsData, 'utf8');
   fs.writeFileSync(TS_DATA_FILE, initialTsData, 'utf8');

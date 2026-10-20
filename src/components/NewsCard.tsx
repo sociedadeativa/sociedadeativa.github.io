@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NewsItem, NewsCategory } from "../types/news";
 import { getArticleUrl } from "../utils/router";
 import { Calendar, ExternalLink, Sparkles } from "lucide-react";
@@ -25,8 +25,13 @@ export const NewsCard: React.FC<NewsCardProps> = ({
   isFeatured = false,
   onOpenDetails,
 }) => {
+  const [imageError, setImageError] = useState(false);
   const catStyle = CATEGORY_STYLES[article.category] || CATEGORY_STYLES["Política"];
   const isSociedadeAtiva = article.source.includes("Sociedade Ativa");
+
+  useEffect(() => {
+    setImageError(false);
+  }, [article?.id, article?.imageUrl]);
 
   return (
     <article
@@ -38,17 +43,15 @@ export const NewsCard: React.FC<NewsCardProps> = ({
       }`}
     >
       <div>
-        {/* Imagem Editorial Oficial (quando disponível) */}
-        {article.imageUrl && (
+        {/* Imagem Editorial Oficial (quando disponível e válida) */}
+        {article.imageUrl && !imageError && (
           <div className="mb-3 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 aspect-[16/9] relative">
             <img
               src={article.imageUrl}
               alt={article.imageAlt || article.title}
               className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
               loading="lazy"
-              onError={(e) => {
-                (e.target as HTMLElement).style.display = "none";
-              }}
+              onError={() => setImageError(true)}
             />
           </div>
         )}

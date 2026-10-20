@@ -370,6 +370,56 @@ function extractAllTags(xml, tag) {
 }
 
 /**
+ * Validação rigorosa de URLs de imagens oficiais:
+ * - Deve iniciar com https:// (ou path relativo confiável)
+ * - Não deve ser tracking pixel (1x1, ebc.png, pixel, beacon)
+ * - Não deve ser página de script/formulário (.aspx, .php, .html)
+ * - Não deve ser logotipo estático genérico do portal
+ * - Deve conter extensão de imagem válida ou caminho de repositório oficial de imagens
+ */
+export function isValidImageUrl(url) {
+  if (!url || typeof url !== 'string') return false;
+  const trimmed = url.trim();
+  if (!trimmed.startsWith('https://') && !trimmed.startsWith('http://') && !trimmed.startsWith('/')) {
+    return false;
+  }
+  // Bloqueia páginas dinâmicas ou scripts confundidos com imagens (ex: SharePoint .aspx no BCB)
+  if (/\.(aspx|php|html?|jsp)(\?.*)?$/i.test(trimmed)) return false;
+  // Bloqueia pixels de rastreamento e contadores
+  if (/(\.gif|ebc\.png|pixel|beacon|spacer|1x1|tracking)/i.test(trimmed)) return false;
+  // Bloqueia logotipos estáticos genéricos do portal
+  if (/(logo-agenciabrasil|favicon|banner-default|placeholder)/i.test(trimmed)) return false;
+
+  const isImageExt = /\.(jpe?g|png|webp|avif)(\?.*)?$/i.test(trimmed);
+  const isKnownImagePath = /(\/thumbnails\/image\/|\/midias\/image\/|\/noticias-img\/|\/images\/agenciadenoticias\/)/i.test(trimmed);
+
+  return isImageExt || isKnownImagePath;
+}
+
+/**
+ * Normaliza URL de imagem garantindo protocolo seguro HTTPS
+ */
+export function normalizeImageUrl(url, baseUrl = '') {
+  if (!url || typeof url !== 'string') return undefined;
+  let trimmed = url.trim();
+  if (!trimmed) return undefined;
+
+  if (trimmed.startsWith('//')) {
+    trimmed = 'https:' + trimmed;
+  } else if (trimmed.startsWith('/')) {
+    if (baseUrl) {
+      trimmed = baseUrl.replace(/\/+$/, '') + trimmed;
+    } else {
+      return undefined;
+    }
+  } else if (trimmed.startsWith('http://')) {
+    trimmed = trimmed.replace(/^http:\/\//i, 'https://');
+  }
+
+  return isValidImageUrl(trimmed) ? trimmed : undefined;
+}
+
+/**
  * Converte data para padrão brasileiro oficial: DD/MM/YYYY às HH:mm no fuso de Brasília (UTC-3)
  */
 function parseDateToBrasilia(dateStr) {
@@ -626,12 +676,29 @@ async function fetchAgenciaBrasil() {
         const rawGuid = extractTag(raw, 'guid');
         const categories = extractAllTags(raw, 'category');
 
+        const rawImagemDestaque = extractTag(raw, 'imagem-destaque');
+
         const title = cleanText(rawTitle);
         const summary = cleanText(rawDesc, MAX_SUMMARY_LENGTH);
         const articleUrl = sanitizeAndNormalizeUrl(rawLink);
 
         if (!title || !summary || !articleUrl) {
           continue;
+        }
+
+        // Extração de imagem oficial comprovada
+        let imageUrl = normalizeImageUrl(rawImagemDestaque);
+        if (!imageUrl) {
+          const enclosureMatch = raw.match(/<enclosure[^>]+url=["']([^"']+)["'][^>]*type=["']image\/[^"']+["']/i);
+          if (enclosureMatch) {
+            imageUrl = normalizeImageUrl(enclosureMatch[1]);
+          }
+        }
+        if (!imageUrl) {
+          const mediaMatch = raw.match(/<media:content[^>]+url=["']([^"']+)["']/i);
+          if (mediaMatch) {
+            imageUrl = normalizeImageUrl(mediaMatch[1]);
+          }
         }
 
         // Determinação de Categoria
@@ -676,7 +743,7 @@ async function fetchAgenciaBrasil() {
 
         const tags = generateTags(categories, category, title, 'Agência Brasil');
 
-        results.push({
+        const ebcItem = {
           id,
           title,
           summary,
@@ -688,7 +755,16 @@ async function fetchAgenciaBrasil() {
           author,
           tags,
           _timestamp: timestamp
-        });
+        };
+
+        if (imageUrl) {
+          ebcItem.imageUrl = imageUrl;
+          ebcItem.imageCredit = author || 'Agência Brasil';
+          ebcItem.imageCaption = title;
+          ebcItem.imageAlt = title;
+        }
+
+        results.push(ebcItem);
       }
     } catch (err) {
       console.warn(`[Agência Brasil] Falha ao processar feed ${section}: ${err.message}`);
@@ -720,6 +796,7 @@ async function fetchCamara() {
       const rawLink = extractTag(raw, 'link') || extractTag(raw, 'guid');
       const rawPubDate = extractTag(raw, 'pubDate');
       const rawCategories = extractAllTags(raw, 'category');
+      const rawEncoded = extractTag(raw, 'content:encoded') || '';
 
       const title = cleanText(rawTitle);
       const summary = cleanText(rawDesc, MAX_SUMMARY_LENGTH);
@@ -727,6 +804,21 @@ async function fetchCamara() {
 
       if (!title || !summary || !articleUrl) {
         continue;
+      }
+
+      // Extração de imagem oficial, créditos do fotógrafo e legenda
+      const imgMatch = rawEncoded.match(/<img[^>]+src=["'](https?:\/\/[^"'\s>]+)["']/i) ||
+                       rawDesc.match(/<img[^>]+src=["'](https?:\/\/[^"'\s>]+)["']/i);
+      const altMatch = rawEncoded.match(/<img[^>]+alt=["']([^"']*)["']/i);
+      const creditMatch = rawEncoded.match(/class=["']midia-creditos["']><em>([\s\S]*?)<\/em>/i);
+      const captionMatch = rawEncoded.match(/class=["']midia-legenda["']>([\s\S]*?)<\/div>/i);
+
+      let imageUrl = normalizeImageUrl(imgMatch ? imgMatch[1] : null);
+      if (!imageUrl) {
+        const enclosureMatch = raw.match(/<enclosure[^>]+url=["']([^"']+)["'][^>]*type=["']image\/[^"']+["']/i);
+        if (enclosureMatch) {
+          imageUrl = normalizeImageUrl(enclosureMatch[1]);
+        }
       }
 
       // Regra oficial: Câmara dos Deputados → Congresso
@@ -744,7 +836,7 @@ async function fetchCamara() {
 
       const tags = generateTags(rawCategories, category, title, 'Agência Câmara');
 
-      results.push({
+      const camaraItem = {
         id,
         title,
         summary,
@@ -756,7 +848,16 @@ async function fetchCamara() {
         author: 'Agência Câmara de Notícias',
         tags,
         _timestamp: timestamp
-      });
+      };
+
+      if (imageUrl) {
+        camaraItem.imageUrl = imageUrl;
+        camaraItem.imageCredit = cleanText(creditMatch ? creditMatch[1] : '') || 'Câmara dos Deputados';
+        camaraItem.imageCaption = cleanText(captionMatch ? captionMatch[1] : '') || title;
+        camaraItem.imageAlt = cleanText(altMatch ? altMatch[1] : '') || title;
+      }
+
+      results.push(camaraItem);
     }
 
     // Deduplica internamente matérias da Câmara que compartilham o mesmo número de publicação oficial
@@ -829,7 +930,29 @@ async function fetchIBGE() {
       if (item.tipo) rawTags.push(item.tipo);
       const tags = generateTags(rawTags, category, title, 'IBGE');
 
-      results.push({
+      let imageUrl = undefined;
+      let imageAlt = undefined;
+      let imageCaption = undefined;
+      let imageCredit = undefined;
+
+      if (item.imagens) {
+        try {
+          const parsed = typeof item.imagens === 'string' ? JSON.parse(item.imagens) : item.imagens;
+          const relPath = parsed.image_fulltext || parsed.image_intro;
+          if (relPath) {
+            const candidateUrl = `https://agenciadenoticias.ibge.gov.br/${relPath.replace(/^\/+/, '')}`;
+            imageUrl = normalizeImageUrl(candidateUrl);
+          }
+          if (imageUrl) {
+            imageAlt = cleanText(parsed.image_fulltext_alt || parsed.image_intro_alt) || title;
+            imageCaption = cleanText(parsed.image_fulltext_caption || parsed.image_intro_caption) || title;
+            const photoMatch = item.introducao?.match(/Foto:\s*([^–\-\.\n\r]+)/i);
+            imageCredit = photoMatch ? cleanText(photoMatch[1]) : 'Agência IBGE Notícias';
+          }
+        } catch {}
+      }
+
+      const ibgeItem = {
         id,
         title,
         summary,
@@ -841,7 +964,16 @@ async function fetchIBGE() {
         author: 'Agência IBGE Notícias',
         tags,
         _timestamp: timestamp
-      });
+      };
+
+      if (imageUrl) {
+        ibgeItem.imageUrl = imageUrl;
+        ibgeItem.imageCredit = imageCredit || 'Agência IBGE Notícias';
+        ibgeItem.imageCaption = imageCaption || title;
+        ibgeItem.imageAlt = imageAlt || title;
+      }
+
+      results.push(ibgeItem);
     }
   } catch (err) {
     console.warn(`[IBGE] Falha na requisição: ${err.message}`);
@@ -888,7 +1020,13 @@ async function fetchBancoCentral() {
       const id = `bcb-${item.Id}-${slugify(title)}`;
       const tags = generateTags(['Banco Central', 'Economia', 'Política Monetária'], category, title, 'Banco Central');
 
-      results.push({
+      let imageUrl = undefined;
+      const rawImgUrl = item.urlImg?.Url || item.urlImg?.Description || (typeof item.urlImg === 'string' ? item.urlImg : null);
+      if (rawImgUrl) {
+        imageUrl = normalizeImageUrl(rawImgUrl, 'https://www.bcb.gov.br');
+      }
+
+      const bcbItem = {
         id,
         title,
         summary,
@@ -900,7 +1038,16 @@ async function fetchBancoCentral() {
         author: 'Banco Central do Brasil',
         tags,
         _timestamp: timestamp
-      });
+      };
+
+      if (imageUrl) {
+        bcbItem.imageUrl = imageUrl;
+        bcbItem.imageCredit = 'Banco Central do Brasil';
+        bcbItem.imageCaption = title;
+        bcbItem.imageAlt = title;
+      }
+
+      results.push(bcbItem);
     }
   } catch (err) {
     console.warn(`[Banco Central] Falha na requisição: ${err.message}`);
@@ -1037,6 +1184,13 @@ async function main() {
       }
       if (prev.source) item.source = prev.source;
       if (prev.sourceUrl) item.sourceUrl = prev.sourceUrl;
+      // Preserva imagem de histórico confiável se a coleta atual vier sem imagem
+      if (!item.imageUrl && prev.imageUrl) {
+        item.imageUrl = prev.imageUrl;
+        item.imageCredit = prev.imageCredit;
+        item.imageCaption = prev.imageCaption;
+        item.imageAlt = prev.imageAlt;
+      }
     } else {
       // Artigo novo capturado nesta rodada
       item.ingestedAt = getBrasiliaFormattedNow();
@@ -1075,7 +1229,20 @@ async function main() {
         if (existing.updatedAt && existing.updatedAt !== existing.publishedAt) {
           item.updatedAt = existing.updatedAt;
         }
+        if (!item.imageUrl && existing.imageUrl) {
+          item.imageUrl = existing.imageUrl;
+          item.imageCredit = existing.imageCredit;
+          item.imageCaption = existing.imageCaption;
+          item.imageAlt = existing.imageAlt;
+        }
         deduplicatedByUrl.set(normUrl, item);
+      } else {
+        if (!existing.imageUrl && item.imageUrl) {
+          existing.imageUrl = item.imageUrl;
+          existing.imageCredit = item.imageCredit;
+          existing.imageCaption = item.imageCaption;
+          existing.imageAlt = item.imageAlt;
+        }
       }
     } else {
       deduplicatedByUrl.set(normUrl, item);
@@ -1096,7 +1263,20 @@ async function main() {
         if (existing.updatedAt && existing.updatedAt !== existing.publishedAt) {
           item.updatedAt = existing.updatedAt;
         }
+        if (!item.imageUrl && existing.imageUrl) {
+          item.imageUrl = existing.imageUrl;
+          item.imageCredit = existing.imageCredit;
+          item.imageCaption = existing.imageCaption;
+          item.imageAlt = existing.imageAlt;
+        }
         deduplicatedById.set(item.id, item);
+      } else {
+        if (!existing.imageUrl && item.imageUrl) {
+          existing.imageUrl = item.imageUrl;
+          existing.imageCredit = item.imageCredit;
+          existing.imageCaption = item.imageCaption;
+          existing.imageAlt = item.imageAlt;
+        }
       }
     } else {
       deduplicatedById.set(item.id, item);
@@ -1175,6 +1355,9 @@ async function main() {
       cleanItem.updatedAt = item.updatedAt;
     }
     if (item.imageUrl) cleanItem.imageUrl = item.imageUrl;
+    if (item.imageCaption) cleanItem.imageCaption = item.imageCaption;
+    if (item.imageCredit) cleanItem.imageCredit = item.imageCredit;
+    if (item.imageAlt) cleanItem.imageAlt = item.imageAlt;
     if (item.author) cleanItem.author = item.author;
     if (item.tags && item.tags.length > 0) cleanItem.tags = item.tags;
 
@@ -1238,6 +1421,18 @@ async function main() {
         process.exit(1);
       }
       seenUrls.add(item.articleUrl);
+    }
+
+    // Validação estrita de imagens comprovadas
+    if (item.imageUrl) {
+      if (!item.imageUrl.startsWith('https://')) {
+        console.error(`[ERRO DE SEGURANÇA] Imagem não é HTTPS no artigo ${item.id}:`, item.imageUrl);
+        process.exit(1);
+      }
+      if (!item.imageCredit || !item.imageCredit.trim()) {
+        console.error(`[ERRO DE INTEGRIDADE] Imagem sem crédito/atribuição comprovada no artigo ${item.id}`);
+        process.exit(1);
+      }
     }
   }
 

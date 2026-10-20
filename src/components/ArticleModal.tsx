@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NewsItem } from "../types/news";
+import { isValidImageUrl } from "../services/newsService";
 import { X, Calendar, Clock, Share2, Check, ExternalLink, ShieldCheck, Tag } from "lucide-react";
 
 interface ArticleModalProps {
@@ -9,6 +10,11 @@ interface ArticleModalProps {
 
 export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) => {
   const [copied, setCopied] = useState(false);
+  const [imageError, setImageError] = useState(false);
+
+  useEffect(() => {
+    setImageError(false);
+  }, [article?.id, article?.imageUrl]);
 
   if (!article) return null;
 
@@ -32,6 +38,10 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
   const isSociedadeAtivaAuthor =
     article.source?.includes("Sociedade Ativa") ||
     article.author?.includes("Sociedade Ativa");
+
+  const hasValidImage = Boolean(
+    article.imageUrl && isValidImageUrl(article.imageUrl) && !imageError
+  );
 
   return (
     <div
@@ -77,13 +87,14 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
         </h2>
 
         {/* Imagem Editorial Oficial Verificada */}
-        {article.imageUrl && (
+        {hasValidImage && (
           <figure className="mb-4 rounded-2xl overflow-hidden border border-slate-200 bg-slate-50">
             <img
               src={article.imageUrl}
               alt={article.imageAlt || article.title}
               className="w-full max-h-[300px] object-cover"
               loading="lazy"
+              onError={() => setImageError(true)}
             />
             {(article.imageCaption || article.imageCredit) && (
               <figcaption className="p-2.5 text-[10px] sm:text-[11px] text-slate-500 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-2 flex-wrap">
@@ -102,24 +113,6 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
         <p className="text-sm sm:text-base font-semibold text-slate-700 mb-5 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-200/80">
           {article.summary}
         </p>
-
-        {/* Imagem Oficial quando verificada */}
-        {article.imageUrl && (
-          <figure className="mb-5 rounded-2xl overflow-hidden border border-slate-200 bg-slate-100">
-            <img
-              src={article.imageUrl}
-              alt={article.imageAlt || article.title}
-              className="w-full max-h-72 object-cover"
-              loading="lazy"
-            />
-            <figcaption className="p-2.5 text-[11px] text-slate-500 bg-white border-t border-slate-100 flex items-center justify-between gap-2">
-              <span className="truncate">{article.imageCaption || article.title}</span>
-              {article.imageCredit && (
-                <span className="font-semibold text-slate-400 shrink-0">{article.imageCredit}</span>
-              )}
-            </figcaption>
-          </figure>
-        )}
 
         {/* Informações de Autoria e Publicação */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-500 pb-4 mb-5 border-b border-slate-200">
