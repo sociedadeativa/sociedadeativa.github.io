@@ -5,6 +5,209 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1705941",
+    "title": "TSE: Lula autoriza quebra de sigilo bancário se Flávio fizer o mesmo",
+    "summary": "O presidente Luiz Inácio Lula da Silva, candidato à reeleição, enviou nesta terça-feira (20) ao Tribunal Superior Eleitoral (TSE) um requerimento autorizando que sejam levantados seus sigilos bancário, fiscal e telefônico, bem como de seus familiares, desde que o mesmo seja.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tse-lula-autoriza-quebra-de-sigilo-bancario-se-flavio-fizer-o-mesmo",
+    "publishedAt": "20/10/2026 às 13:44",
+    "category": "Eleições",
+    "ingestedAt": "20/10/2026 às 14:11",
+    "imageUrl": "https://imagens.ebc.com.br/2SnYHbQke4IJDM80UyLFhiioxJE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/18/debate_tv_bandeirantes_-_eleicoes_202602.jpg?itok=dLVNywlx",
+    "imageCaption": "TSE: Lula autoriza quebra de sigilo bancário se Flávio fizer o mesmo",
+    "imageCredit": "Felipe Pontes – repórter da Agência Brasil",
+    "imageAlt": "TSE: Lula autoriza quebra de sigilo bancário se Flávio fizer o mesmo",
+    "author": "Felipe Pontes – repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "Sigilo Telefônico",
+      "Sigilo Bancário",
+      "Lula",
+      "Flávio Bolsonaro"
+    ]
+  },
+  {
+    "id": "ebc-1705935",
+    "title": "Governo impõe emergência zoossanitária após detectar Newcastle em SC",
+    "summary": "O governo federal declarou estado de emergência zoossanitária nos municípios de Nova Itaberaba, Águas Frias, Coronel Freitas e Nova Erechim, todos em Santa Catarina , em razão de um foco da doença de Newcastle encontrado em um estabelecimento de aves comerciais no município.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/governo-impoe-emergencia-zoossanitaria-apos-detectar-newcastle-em-sc",
+    "publishedAt": "20/10/2026 às 12:52",
+    "category": "Governo",
+    "ingestedAt": "20/10/2026 às 14:11",
+    "imageUrl": "https://imagens.ebc.com.br/7aGzwuXtqMrUONgTsviva0qWkrY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/19/peru2-1024x683.jpg?itok=BTkYMliJ",
+    "imageCaption": "Governo impõe emergência zoossanitária após detectar Newcastle em SC",
+    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
+    "imageAlt": "Governo impõe emergência zoossanitária após detectar Newcastle em SC",
+    "author": "Paula Laboissière – Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "doença de Newcastle",
+      "emergência zoosanitária",
+      "Santa Catarina",
+      "aves"
+    ]
+  },
+  {
+    "id": "ebc-1705930",
+    "title": "Ao TSE, Meta nega tratamento desigual entre candidaturas presidenciais",
+    "summary": "Em manifestação enviada na noite de segunda-feira (19) ao Tribunal Superior Eleitoral (TSE), a empresa Meta - responsável por plataformas como Facebook, Instagram e WhatsApp - negou ter favorecido o alcance de publicações em prol de algum dos candidatos na corrida presidencial.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/ao-tse-meta-nega-tratamento-desigual-entre-candidaturas-presidenciais",
+    "publishedAt": "20/10/2026 às 12:25",
+    "category": "Justiça",
+    "ingestedAt": "20/10/2026 às 14:11",
+    "imageUrl": "https://imagens.ebc.com.br/9TkgVWV030kE49gyIXnZcFixvO4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/17/dji_20260716173911_0314_d.jpg?itok=cnBGH_s5",
+    "imageCaption": "Ao TSE, Meta nega tratamento desigual entre candidaturas presidenciais",
+    "imageCredit": "Felipe Pontes – Repórter da Agência Brasil",
+    "imageAlt": "Ao TSE, Meta nega tratamento desigual entre candidaturas presidenciais",
+    "author": "Felipe Pontes – Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "TSE",
+      "eleições 2026",
+      "Meta",
+      "Marco Aurélio Bellizze"
+    ]
+  },
+  {
+    "id": "ebc-1705928",
+    "title": "Local de votação ainda pode mudar; consulte de novo antes de ir à urna",
+    "summary": "Mesmo que o eleitor tenha consultado o local de votação com antecedência, ele deve verificar novamente a informação no dia da eleição, no domingo (25), antes de sair de casa.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/local-de-votacao-ainda-pode-mudar-consulte-de-novo-antes-de-ir-urna",
+    "publishedAt": "20/10/2026 às 12:07",
+    "category": "Eleições",
+    "ingestedAt": "20/10/2026 às 14:11",
+    "imageUrl": "https://imagens.ebc.com.br/pJ5yxCNarlt1-R8CTRHpJvBVET0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/24/_pin5558.jpg-10.jpg?itok=8hFkf_Nh",
+    "imageCaption": "Local de votação ainda pode mudar; consulte de novo antes de ir à urna",
+    "imageCredit": "Lucas Pordeus León - repórter da Agência Brasil",
+    "imageAlt": "Local de votação ainda pode mudar; consulte de novo antes de ir à urna",
+    "author": "Lucas Pordeus León - repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "TRE",
+      "TSE",
+      "Justiça Eleitoral"
+    ]
+  },
+  {
+    "id": "ebc-1705927",
+    "title": "Enamed 2026: Inep divulga gabarito preliminar da reaplicação da prova",
+    "summary": "O Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) divulgou, nesta terça-feira (20), o gabarito preliminar da reaplicação do Exame Nacional de Avaliação da Formação Médica (Enamed) 2026, realizado no domingo (18), em todo o país.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/concursos/noticia/2026-10/enamed-2026-inep-divulga-gabarito-preliminar-da-reaplicacao-da-prova",
+    "publishedAt": "20/10/2026 às 12:00",
+    "category": "Política",
+    "ingestedAt": "20/10/2026 às 14:11",
+    "imageUrl": "https://imagens.ebc.com.br/Tbzyj2loYgOZWaCeWszyFyRF3QU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/11/16/enem-mc_abr_16112025-3.jpg?itok=u5NcfFQZ",
+    "imageCaption": "Enamed 2026: Inep divulga gabarito preliminar da reaplicação da prova",
+    "imageCredit": "Daniella Almeida - Repórter da Agência Brasil",
+    "imageAlt": "Enamed 2026: Inep divulga gabarito preliminar da reaplicação da prova",
+    "author": "Daniella Almeida - Repórter da Agência Brasil",
+    "tags": [
+      "Concursos",
+      "Inep",
+      "Enamed",
+      "medicina",
+      "diploma médico"
+    ]
+  },
+  {
+    "id": "camara-1312295-brasileiros-voltam-as-urnas-no",
+    "title": "Brasileiros voltam às urnas no domingo para escolher presidente da República e seis governadores",
+    "summary": "Consulta ao local de votação pode ser feita pelo aplicativo e-Título ou pelo site do TSE; algumas seções eleitorais foram alteradas em relação ao primeiro turno.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1312295-brasileiros-voltam-as-urnas-no-domingo-para-escolher-presidente-da-republica-e-seis-governadores",
+    "publishedAt": "20/10/2026 às 11:54",
+    "category": "Congresso",
+    "ingestedAt": "20/10/2026 às 14:11",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20241008122836493-1-768x512.jpg",
+    "imageCaption": "Votação no segundo turno ocorrerá das 8 às 17 horas, pelo horário de Brasília",
+    "imageCredit": "Bruno Peres/Agência Brasil",
+    "imageAlt": "Eleições - eleição - votação - justiça eleitoral - Valparaíso (GO), 06/10/2024 - Eleitores durante dia de votação nas eleições 2024.",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Eleições 2026",
+      "Brasil"
+    ]
+  },
+  {
+    "id": "camara-1309541-projeto-cria-crime-de-corrupca",
+    "title": "Projeto cria crime de corrupção sistêmica no Código Penal",
+    "summary": "A proposta está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1309541-projeto-cria-crime-de-corrupcao-sistemica-no-codigo-penal",
+    "publishedAt": "20/10/2026 às 11:40",
+    "category": "Congresso",
+    "ingestedAt": "20/10/2026 às 14:11",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20201106094730060-768x512.jpg",
+    "imageCaption": "Pelo texto, a conduta deve buscar influenciar, capturar, manipular ou comprometer a administração pública",
+    "imageCredit": "Depositphotos",
+    "imageAlt": "Homem com algema pendurada em um dos punhos guardando dinheiro no paletó",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
+    "id": "ebc-1705910",
+    "title": "Estudantes de escolas públicas querem ensino e aprendizagem melhores",
+    "summary": "Melhorias relacionadas ao ensino e à aprendizagem são a principal expectativa de pelo menos um quarto dos estudantes brasileiros do ensino médio em relação aos governos que se iniciam em 2027 .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/estudantes-de-escolas-publicas-querem-ensino-e-aprendizagem-melhores",
+    "publishedAt": "20/10/2026 às 11:26",
+    "category": "Eleições",
+    "ingestedAt": "20/10/2026 às 14:11",
+    "imageUrl": "https://imagens.ebc.com.br/ZUbl5wsNDe2BlYFJWn2itP_oQc4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/06/25/img_7264.jpg_0.jpg?itok=A5DvF6Lo",
+    "imageCaption": "Estudantes de escolas públicas querem ensino e aprendizagem melhores",
+    "imageCredit": "Ana Cristina Campos – Repórter da Agência Brasil",
+    "imageAlt": "Estudantes de escolas públicas querem ensino e aprendizagem melhores",
+    "author": "Ana Cristina Campos – Repórter da Agência Brasil",
+    "tags": [
+      "Educação",
+      "eleições 2026",
+      "Ensino Médio",
+      "Ensino Fundamental",
+      "escola"
+    ]
+  },
+  {
+    "id": "ebc-1705911",
+    "title": "Polícia faz operação no interior de SP contra fraudes bancárias",
+    "summary": "Uma organização criminosa especializada em fraudes bancárias causou prejuízos de R$ 1,27 milhão no interior de São Paulo. Segundo a investigação da Polícia Civil de Presidente Venceslau, os suspeitos utilizaram 2,7 mil linhas telefônicas para aplicar golpes.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/policia-faz-operacao-no-interior-de-sp-contra-fraudes-bancarias",
+    "publishedAt": "20/10/2026 às 11:18",
+    "category": "Governo",
+    "ingestedAt": "20/10/2026 às 14:11",
+    "imageUrl": "https://imagens.ebc.com.br/Zj2HBg8LcNNFpfyVNq2OHmDNV8A=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/02/12/policia_civil_sp.jpg?itok=rHkR2SKK",
+    "imageCaption": "Polícia faz operação no interior de SP contra fraudes bancárias",
+    "imageCredit": "Matheus Crobelatti*",
+    "imageAlt": "Polícia faz operação no interior de SP contra fraudes bancárias",
+    "author": "Matheus Crobelatti*",
+    "tags": [
+      "Geral",
+      "polícia civil",
+      "São Paulo",
+      "operação",
+      "fraudes bancárias"
+    ]
+  },
+  {
     "id": "ebc-1705902",
     "title": "Fenaj manifesta indignação com formato do debate da TV Band",
     "summary": "A Federação Nacional dos Jornalistas (Fenaj) e seus sindicatos filiados manifestam indignação com a condução e o formato do debate eleitoral promovido pela TV Bandeirantes, na noite do último domingo (18).",
@@ -22,9 +225,9 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Política",
       "Fenaj",
-      "Nota",
+      "nota",
       "repúdio",
-      "debate"
+      "Debate"
     ]
   },
   {
@@ -352,9 +555,9 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Justiça",
       "eleições 2026",
-      "Segundo Turno",
+      "segundo turno",
       "TSE",
-      "Locais de Votação"
+      "locais de votação"
     ]
   },
   {
@@ -668,6 +871,27 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
+    "id": "camara-1310379-projeto-cria-politica-nacional",
+    "title": "Projeto cria política nacional para proteger povos e comunidades tradicionais de terreiro",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1310379-projeto-cria-politica-nacional-para-proteger-povos-e-comunidades-tradicionais-de-terreiro",
+    "publishedAt": "19/10/2026 às 17:25",
+    "category": "Congresso",
+    "ingestedAt": "19/10/2026 às 18:58",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260428165731458-768x473.jpg",
+    "imageCaption": "Deputada Laura Carneiro, autora da proposta",
+    "imageCredit": "Marina Ramos/Camara dos Deputados",
+    "imageAlt": "Reunião de líderes. Dep. Laura Carneiro (PSD - RJ)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ]
+  },
+  {
     "id": "ebc-1705845",
     "title": "Janones poderá ter alta em 48 horas, diz boletim médico",
     "summary": "O deputado federal André Janones (Rede-MG) poderá ter alta em 48 horas, segundo boletim médico divulgado nesta segunda-feira (19) pelo Hospital Vila Nova Star, na capital paulista.",
@@ -688,27 +912,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "André Janones",
       "Exército do Lula",
       "Lula"
-    ]
-  },
-  {
-    "id": "camara-1310379-projeto-cria-politica-nacional",
-    "title": "Projeto cria política nacional para proteger povos e comunidades tradicionais de terreiro",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310379-projeto-cria-politica-nacional-para-proteger-povos-e-comunidades-tradicionais-de-terreiro",
-    "publishedAt": "19/10/2026 às 17:25",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 18:58",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260428165731458-768x473.jpg",
-    "imageCaption": "Deputada Laura Carneiro, autora da proposta",
-    "imageCredit": "Marina Ramos/Camara dos Deputados",
-    "imageAlt": "Reunião de líderes. Dep. Laura Carneiro (PSD - RJ)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
     ]
   },
   {
@@ -859,189 +1062,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Congresso",
       "Brasil",
       "Notícias"
-    ]
-  },
-  {
-    "id": "camara-1309526-projeto-preve-isencao-de-impos",
-    "title": "Projeto prevê isenção de Imposto de Renda para aposentados com sequelas neurológicas permanentes",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1309526-projeto-preve-isencao-de-imposto-de-renda-para-aposentados-com-sequelas-neurologicas-permanentes",
-    "publishedAt": "19/10/2026 às 16:02",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260204181612361-768x474.jpg",
-    "imageCaption": "Dr. Frederico: mudança torna tratamento tributário compatível com o comprometimento de saúde",
-    "imageCredit": "Kayo Magalhães/Câmara dos Deputados",
-    "imageAlt": "Reunião de Instalação e Eleição. Dep. Dr. Frederico (PRD - MG)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1705830",
-    "title": "Governo pretende realocar R$ 20 bilhões no Orçamento de 2027",
-    "summary": "A equipe econômica pretende remanejar cerca de R$ 20 bilhões no Orçamento de 2027 para acomodar medidas de estímulo econômico anunciadas recentemente, informou nesta segunda-feira (19) o Ministério do Planejamento e Orçamento (MPO).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-pretende-realocar-r-20-bilhoes-no-orcamento-de-2027",
-    "publishedAt": "19/10/2026 às 15:50",
-    "category": "Economia",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "imageUrl": "https://imagens.ebc.com.br/_y6SFYSw0pMmGhy-eIhqvmHNbX0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/04/15/raf08832.jpg?itok=hMPGor4l",
-    "imageCaption": "Governo pretende realocar R$ 20 bilhões no Orçamento de 2027",
-    "imageCredit": "Wellton Máximo – Repórter da Agência Brasil",
-    "imageAlt": "Governo pretende realocar R$ 20 bilhões no Orçamento de 2027",
-    "author": "Wellton Máximo – Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "Orçamento 2027",
-      "PLOA"
-    ]
-  },
-  {
-    "id": "ebc-1705828",
-    "title": "Agricultura confirma foco de doença de Newcastle em Santa Catarina",
-    "summary": "O Ministério da Agricultura e Pecuária (Mapa) confirmou o registro de um foco da doença de Newcastle em um estabelecimento de avicultura comercial de corte de perus no município de Nova Itaberaba, em Santa Catarina. A existência do foco foi confirmada no domingo (18).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/agricultura-confirma-foco-de-doenca-de-newcastle-em-santa-catarina",
-    "publishedAt": "19/10/2026 às 15:43",
-    "category": "Governo",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "author": "Luciano Nascimento - Repórter da Agência Brasil",
-    "tags": [
-      "Saúde",
-      "Mapa",
-      "doença de Newcastle",
-      "avicultura",
-      "serviço de inspeção"
-    ]
-  },
-  {
-    "id": "camara-1306400-projeto-preve-incentivo-fiscal",
-    "title": "Projeto prevê incentivo fiscal para doações a conselhos comunitários de segurança",
-    "summary": "Proposta está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1306400-projeto-preve-incentivo-fiscal-para-doacoes-a-conselhos-comunitarios-de-seguranca",
-    "publishedAt": "19/10/2026 às 15:34",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/07/img20260520164555819-768x473.jpg",
-    "imageCaption": "Diego Garcia, autor do projeto de lei",
-    "imageCredit": "Thiago Cristino/Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Diego Garcia (UNIÃO - PR)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1705826",
-    "title": "Zanin pede parecer da PGR e AGU sobre ação do PSD por 2º turno no Rio",
-    "summary": "O ministro do Supremo Tribunal Federal Cristiano Zanin pediu nesta segunda-feira (19) a manifestação da Procuradoria-Geral da República (PGR) e da Advocacia-Geral da União (AGU) sobre a ação que pede a realização de segundo turno para governador do estado do Rio de Janeiro.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/zanin-pede-parecer-da-pgr-e-agu-sobre-acao-do-psd-por-2-turno-no-rio",
-    "publishedAt": "19/10/2026 às 15:12",
-    "category": "Justiça",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "imageUrl": "https://imagens.ebc.com.br/9Wrtu516bbT1YKQ-7-TxaTg9LCo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/124a4619.jpg?itok=f9q9_zLd",
-    "imageCaption": "Zanin pede parecer da PGR e AGU sobre ação do PSD por 2º turno no Rio",
-    "imageCredit": "André Richter - repórter da Agência Brasil",
-    "imageAlt": "Zanin pede parecer da PGR e AGU sobre ação do PSD por 2º turno no Rio",
-    "author": "André Richter - repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Rio de Janeiro",
-      "Cristiano Zanin",
-      "Supremo Tribunal Federal"
-    ]
-  },
-  {
-    "id": "camara-1309592-projeto-isenta-feirantes-de-ip",
-    "title": "Projeto isenta feirantes de IPI na compra de veículos utilitários",
-    "summary": "A proposta beneficia trabalhadores ativos há pelo menos dois anos e vale para caminhonetes e furgões.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1309592-projeto-isenta-feirantes-de-ipi-na-compra-de-veiculos-utilitarios",
-    "publishedAt": "19/10/2026 às 15:07",
-    "category": "Congresso",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20240424140155588-768x473.jpg",
-    "imageCaption": "Adriano do Baldy: automóvel deverá ser usado somente no exercício da atividade de feirante",
-    "imageCredit": "Mario Agra / Câmara dos Deputados",
-    "imageAlt": "Homenagem ao Dia Mundial da Agricultura. Dep. Adriano do Baldy (PP - GO)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1705824",
-    "title": "Prêmio TV Brasil Petrobras Para Elas anuncia finalistas à revelação",
-    "summary": "A organização do Prêmio TV Brasil Petrobras Para Elas anunciou, nesta segunda-feira (19), as finalistas da categoria Jogadora Revelação da temporada 2026. As candidatas são a meio-campista Kaylane, do Flamengo; e as atacantes Evelin Bonifácio, do Santos, e Isa, do São Paulo.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/premio-tv-brasil-petrobras-para-elas-anuncia-finalistas-revelacao",
-    "publishedAt": "19/10/2026 às 14:56",
-    "category": "Política",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "author": "Lincoln Chaves - Repórter da EBC",
-    "tags": [
-      "Esportes",
-      "Futebol Feminino",
-      "categoria",
-      "revelação",
-      "Kaylane"
-    ]
-  },
-  {
-    "id": "ebc-1705825",
-    "title": "Confira o que muda no licenciamento ambiental da aquicultura",
-    "summary": "Os aquicultores que cultivam peixe, crustáceos, moluscos, algas e outros seres vivos em ambientes controlados – como tanques e áreas delimitadas em rios e no mar –, terão novas regras de licenciamento ambiental a partir de abril de 2027.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/confira-o-que-muda-no-licenciamento-ambiental-da-aquicultura",
-    "publishedAt": "19/10/2026 às 14:55",
-    "category": "Política",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "author": "Fabíola Sinimbú – Repórter da Agência Brasil",
-    "tags": [
-      "Meio Ambiente",
-      "aquicultura",
-      "licenciamento ambiental",
-      "Conama",
-      "Política"
-    ]
-  },
-  {
-    "id": "ebc-1705821",
-    "title": "Motoristas de ônibus fazem paralisação na zona sul de São Paulo",
-    "summary": "Motoristas de ônibus da capital paulista iniciaram uma paralisação na manhã desta segunda-feira (19), na zona sul da cidade, atingindo as linhas do Lote D10. Esses trabalhadores atuavam na antiga Transwolff.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/motoristas-de-onibus-fazem-paralisacao-na-zona-sul-de-sao-paulo",
-    "publishedAt": "19/10/2026 às 14:37",
-    "category": "Política",
-    "ingestedAt": "19/10/2026 às 17:04",
-    "author": "Agência Brasil",
-    "tags": [
-      "Geral",
-      "São Paulo",
-      "transporte público",
-      "motoristas de ônibus",
-      "Política"
     ]
   },
   {
