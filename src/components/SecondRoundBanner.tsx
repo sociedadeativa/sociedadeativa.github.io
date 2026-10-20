@@ -137,10 +137,10 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
             </div>
             <div className="text-xs sm:text-sm leading-relaxed">
               <strong className="text-white block font-semibold mb-1">
-                Compromisso com Dados Oficiais Verificados do TSE
+                Dados oficiais do TSE
               </strong>
               <span>
-                Os totais e boletins de urna do 2º turno são integrados diretamente do repositório oficial do Tribunal Superior Eleitoral (TSE — arquivo unificado EA20, Pleito 3221, Eleição 6258). Não divulgamos projeções extraoficiais, amostragens de boca de urna ou dados simulados.
+                Dados de candidatos e totalização obtidos dos arquivos oficiais do Tribunal Superior Eleitoral (TSE). A atualização do site depende da publicação dos dados oficiais e do processamento do sistema.
               </span>
             </div>
           </div>
