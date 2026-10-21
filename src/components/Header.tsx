@@ -169,12 +169,12 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="border-b border-slate-200 bg-white/98 backdrop-blur-md sticky top-0 z-40 transition-all">
-      {/* 1. Barra de Utilitários e Mini-Cards de Indicadores Econômicos */}
-      <div className="bg-slate-900 text-slate-300 text-[11px] py-2 px-4 sm:px-6 lg:px-8 border-b border-slate-800/90 block w-full overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-2.5 lg:gap-4 w-full">
-          {/* Mini-Cards dos Indicadores Econômicos (IPCA, Selic, PTAX e Ibovespa) com rolagem fluida e espaçamento limpo */}
-          <div className="flex items-center gap-2 sm:gap-2.5 overflow-x-auto scrollbar-none py-0.5 -mx-4 px-4 sm:mx-0 sm:px-0 max-w-full touch-pan-x min-w-0 flex-1">
-            <span className="font-heading font-extrabold text-slate-200 uppercase tracking-wider text-[11px] shrink-0 hidden sm:inline-flex items-center gap-1.5 mr-1 select-none">
+      {/* 1. Linha Exclusiva de Indicadores Econômicos (Totalmente visíveis e sem corte no desktop) */}
+      <div className="bg-slate-900 text-slate-300 py-2 px-3 sm:px-4 lg:px-4 xl:px-6 2xl:px-8 border-b border-slate-800/80 block w-full overflow-hidden">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          {/* Mini-Cards dos Indicadores Econômicos (IPCA, Selic, PTAX, Ibovespa e Eleições) com espaço e distribuição equilibrada */}
+          <div className="flex items-center justify-start lg:justify-between gap-1.5 sm:gap-2 xl:gap-2.5 overflow-x-auto lg:overflow-x-visible scrollbar-none py-0.5 -mx-3 px-3 sm:mx-0 sm:px-0 max-w-full touch-pan-x min-w-0 w-full">
+            <span className="font-heading font-extrabold text-slate-200 uppercase tracking-wider text-[11px] shrink-0 hidden 2xl:inline-flex items-center gap-1.5 mr-1 select-none">
               <TrendingUp className="w-3.5 h-3.5 text-slate-400" />
               <span>Indicadores:</span>
             </span>
@@ -182,7 +182,7 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Mini-Card 1: IPCA (Neutro, sem inferência de bom/ruim) */}
             <PortalLink
               route="economia"
-              className="group flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-500/80 transition-all shrink-0 text-xs text-slate-200 shadow-2xs"
+              className="group flex items-center gap-1.5 lg:gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-500/80 transition-all shrink-0 text-xs text-slate-200 shadow-2xs"
               title={`IPCA mensal oficial: ${ipcaVal} (${ipcaRef}) — Fonte: IBGE`}
             >
               <span className="text-[11px] font-bold uppercase tracking-wider text-slate-300 group-hover:text-white transition-colors">
@@ -207,7 +207,7 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Mini-Card 2: Selic Meta (Neutro, sem inferência de bom/ruim) */}
             <PortalLink
               route="economia"
-              className="group flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-500/80 transition-all shrink-0 text-xs text-slate-200 shadow-2xs"
+              className="group flex items-center gap-1.5 lg:gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-500/80 transition-all shrink-0 text-xs text-slate-200 shadow-2xs"
               title={`Taxa Selic Meta Copom: ${selicVal} (${selicRef}) — Fonte: BCB`}
             >
               <span className="text-[11px] font-bold uppercase tracking-wider text-slate-300 group-hover:text-white transition-colors">
@@ -229,7 +229,7 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Mini-Card 3: PTAX Venda */}
             <PortalLink
               route="economia"
-              className="group flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-500/80 transition-all shrink-0 text-xs text-slate-200 shadow-2xs"
+              className="group flex items-center gap-1.5 lg:gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-500/80 transition-all shrink-0 text-xs text-slate-200 shadow-2xs"
               title={`Dólar Comercial PTAX Venda oficial: ${dolarVal} (${dolarRef}) — Fonte: BCB`}
             >
               <span className="text-[11px] font-bold uppercase tracking-wider text-slate-300 group-hover:text-white transition-colors">
@@ -247,7 +247,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </span>
               )}
               <span className="text-[10px] sm:text-[11px] text-slate-400 font-sans pl-1.5 border-l border-slate-700/80 whitespace-nowrap">
-                {dolarRef.replace("Fechamento PTAX ", "").replace("PTAX ", "")} · BCB
+                {dolarRef.replace("Fechamento PTAX ", "").replace("PTAX ", "").replace("2026", "26")} · BCB
               </span>
             </PortalLink>
 
@@ -255,7 +255,7 @@ export const Header: React.FC<HeaderProps> = ({
             <div className="flex items-center rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-500/80 transition-all shrink-0 text-xs text-slate-200 shadow-2xs">
               <PortalLink
                 route="economia"
-                className="group flex items-center gap-2 px-3 py-1.5 text-slate-200 hover:text-white transition-colors"
+                className="group flex items-center gap-1.5 lg:gap-2 px-2.5 sm:px-3 py-1.5 text-slate-200 hover:text-white transition-colors"
                 title={`Ibovespa (IBOV): ${ibovVal} (${ibovVariationInfo.formatted}). ${
                   isIbovOpen
                     ? "Pregão Aberto (cotações públicas com defasagem regulatória mínima de 15 min)."
@@ -290,7 +290,7 @@ export const Header: React.FC<HeaderProps> = ({
                 href="https://b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/cotacoes/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="pr-2.5 pl-0.5 py-1.5 text-slate-400 hover:text-white transition-colors inline-flex items-center"
+                className="pr-2 pl-0.5 py-1.5 text-slate-400 hover:text-white transition-colors inline-flex items-center"
                 title="Abrir cotação oficial diretamente no portal da B3 (defasagem de 15 min)"
                 aria-label="Abrir cotação oficial do Ibovespa no portal da B3"
               >
@@ -298,10 +298,10 @@ export const Header: React.FC<HeaderProps> = ({
               </a>
             </div>
 
-            {/* Mini-Card 5: Eleições 2026 (Apuração 1º Turno) */}
+            {/* Mini-Card 5: Eleições 2026 (Apuração 1º Turno) — Totalmente visível no desktop */}
             <PortalLink
               route="eleicoes"
-              className="group flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 hover:border-blue-900/80 transition-all shrink-0 text-xs text-slate-200 shadow-2xs"
+              className="group flex items-center gap-1.5 lg:gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 hover:border-blue-900/80 transition-all shrink-0 text-xs text-slate-200 shadow-2xs"
               title="Eleições 2026: 100% das seções totalizadas pelo TSE no 1º turno"
             >
               <span className="text-[11px] font-bold uppercase tracking-wider text-blue-400 group-hover:text-blue-300 transition-colors">
@@ -315,26 +315,34 @@ export const Header: React.FC<HeaderProps> = ({
               </span>
             </PortalLink>
           </div>
+        </div>
+      </div>
 
-          {/* Links Institucionais e Link Técnico JSON TSE Discreto */}
-          <div className="flex items-center gap-3 shrink-0 text-xs font-sans text-slate-400 self-end lg:self-auto pt-1 lg:pt-0">
+      {/* 2. Linha Utilitária Discreta (Transparência, Metodologia e JSON TSE) */}
+      <div className="bg-slate-950 text-slate-400 text-[11px] py-1.5 px-4 sm:px-6 lg:px-8 border-b border-slate-800/90 block w-full overflow-hidden">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 w-full">
+          <div className="hidden sm:flex items-center gap-2 text-[10px] sm:text-[11px] text-slate-400 font-medium">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+            <span>Dados Oficiais Verificados · Fontes primárias públicas</span>
+          </div>
+          <div className="flex items-center gap-3 shrink-0 text-xs font-sans text-slate-400 w-full sm:w-auto justify-end">
             <PortalLink
               route="sobre"
-              className="text-slate-300 hover:text-white transition-colors font-medium"
+              className="text-slate-300 hover:text-white transition-colors font-medium text-[11px] sm:text-xs"
             >
               Transparência &amp; Fontes
             </PortalLink>
             <span className="text-slate-700" aria-hidden="true">·</span>
             <button
               onClick={onOpenMethodology}
-              className="text-slate-300 hover:text-white transition-colors cursor-pointer font-medium"
+              className="text-slate-300 hover:text-white transition-colors cursor-pointer font-medium text-[11px] sm:text-xs"
             >
               Metodologia
             </button>
             <span className="text-slate-700" aria-hidden="true">·</span>
             <button
               onClick={onOpenDataInspector}
-              className="text-slate-400 hover:text-slate-200 transition-colors cursor-pointer inline-flex items-center gap-1.5 font-medium px-2 py-0.5 rounded border border-slate-800 hover:border-slate-700 bg-slate-800/50"
+              className="text-slate-300 hover:text-white transition-colors cursor-pointer inline-flex items-center gap-1.5 font-medium px-2 py-0.5 rounded border border-slate-800 hover:border-slate-700 bg-slate-900 text-[11px] sm:text-xs"
               title="Inspecionar dados oficiais em formato JSON (TSE)"
             >
               <Database className="w-3 h-3 text-slate-400" />
