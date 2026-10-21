@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { NewsItem } from "../types/news";
 import { PortalLink } from "../components/PortalLink";
+import { sortNewsItems, deduplicateNewsItems } from "../services/newsService";
 import {
   Trophy,
   Calendar,
@@ -40,15 +41,19 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
   const [matchStatusFilter, setMatchStatusFilter] = useState<"todos" | "ao_vivo" | "encerrado" | "proximos">("todos");
   const [standingsTab, setStandingsTab] = useState<"serie-a" | "serie-b">("serie-a");
 
-  // Filtra notícias reais do dataset sobre esportes/futebol
-  const realSportsArticles = articles.filter(
-    (a) =>
-      (a.category as string) === "Esportes" ||
-      a.tags?.some((t) => ["Esportes", "Futebol", "Copa Libertadores", "Fluminense", "Palmeiras"].includes(t)) ||
-      a.title.toLowerCase().includes("libertadores") ||
-      a.title.toLowerCase().includes("fluminense") ||
-      a.title.toLowerCase().includes("futebol")
-  );
+  // Filtra e ordena cronologicamente notícias reais do dataset sobre esportes/futebol
+  const realSportsArticles = useMemo(() => {
+    if (!Array.isArray(articles)) return [];
+    const filtered = articles.filter(
+      (a) =>
+        (a.category as string) === "Esportes" ||
+        a.tags?.some((t) => ["Esportes", "Futebol", "Copa Libertadores", "Fluminense", "Palmeiras"].includes(t)) ||
+        a.title.toLowerCase().includes("libertadores") ||
+        a.title.toLowerCase().includes("fluminense") ||
+        a.title.toLowerCase().includes("futebol")
+    );
+    return sortNewsItems(deduplicateNewsItems(filtered));
+  }, [articles]);
 
   // Filtro de partidas
   const filteredMatches = MATCHES_DATA.filter((m) => {
@@ -179,20 +184,23 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
             <div className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-xs">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
                 <div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
                     <h2 className="font-heading text-xl sm:text-2xl font-black text-slate-950 flex items-center gap-2">
                       <Activity className="w-5 h-5 text-emerald-600" />
                       <span>Jogos &amp; Placares</span>
                     </h2>
+                    <span className="text-[10px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">
+                      {DEMO_NOTICE}
+                    </span>
                     {liveCount > 0 && (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-black bg-rose-600 text-white animate-pulse">
-                        <span className="w-1.5 h-1.5 rounded-full bg-white"></span>
-                        {liveCount} AO VIVO
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300">
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
+                        {liveCount} Simulação Ao Vivo
                       </span>
                     )}
                   </div>
                   <p className="text-xs text-slate-500 mt-0.5">
-                    Acompanhamento de partidas do futebol brasileiro e internacional
+                    Ambiente demonstrativo de acompanhamento de partidas com dados e placares simulados
                   </p>
                 </div>
 
@@ -255,9 +263,9 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                             {match.disclaimer}
                           </span>
                           {match.status === "ao_vivo" ? (
-                            <span className="inline-flex items-center gap-1 font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded-full border border-rose-200">
-                              <span className="w-1.5 h-1.5 rounded-full bg-rose-600 animate-ping"></span>
-                              {match.minute || "Ao Vivo"}
+                            <span className="inline-flex items-center gap-1 font-bold text-amber-900 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 text-xs">
+                              <span className="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
+                              {match.minute || "Simulado"} (Demonstração)
                             </span>
                           ) : match.status === "encerrado" ? (
                             <span className="font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded-md">
@@ -355,39 +363,86 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                 </span>
               </div>
 
-              {/* Se houver notícia real de esporte no acervo oficial */}
-              {realSportsArticles.length > 0 && (
-                <div className="mb-6 bg-emerald-50/60 border border-emerald-200 rounded-xl p-4">
-                  <div className="flex items-center gap-2 text-xs font-bold text-emerald-900 mb-2">
-                    <Radio className="w-4 h-4 text-emerald-700" />
-                    <span>Matéria Oficial do Acervo Sociedade Ativa</span>
+              {/* Notícias Oficiais Apuradas do Acervo */}
+              {realSportsArticles.length > 0 ? (
+                <div className="mb-6 bg-emerald-50/60 border border-emerald-200 rounded-xl p-4 sm:p-5">
+                  <div className="flex items-center justify-between gap-2 pb-2.5 mb-3 border-b border-emerald-200/70">
+                    <div className="flex items-center gap-2 text-xs font-bold text-emerald-900">
+                      <Radio className="w-4 h-4 text-emerald-700 animate-pulse" />
+                      <span>Notícias Oficiais Apuradas · Agência Brasil &amp; Fontes Públicas</span>
+                    </div>
+                    <span className="text-[11px] font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">
+                      {realSportsArticles.length} {realSportsArticles.length === 1 ? "matéria oficial" : "matérias oficiais"}
+                    </span>
                   </div>
-                  {realSportsArticles.map((art) => (
-                    <div key={art.id} className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                      <div>
-                        <h3 className="font-heading font-black text-base text-slate-900 hover:text-emerald-700 transition-colors">
+
+                  <div className="space-y-4 divide-y divide-emerald-200/60">
+                    {realSportsArticles.map((art, idx) => (
+                      <div
+                        key={art.id}
+                        className={`flex flex-col sm:flex-row sm:items-center justify-between gap-4 ${idx > 0 ? "pt-4" : ""}`}
+                      >
+                        <div className="flex-1">
+                          <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                            <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100/80 px-2 py-0.5 rounded border border-emerald-200">
+                              {art.category || "Esportes"}
+                            </span>
+                            <span className="text-[11px] text-slate-500 flex items-center gap-1">
+                              <Clock className="w-3 h-3 text-slate-400" />
+                              <span>{art.publishedAt}</span>
+                            </span>
+                          </div>
+                          <h3 className="font-heading font-black text-base text-slate-900 hover:text-emerald-700 transition-colors">
+                            <button
+                              onClick={() => onOpenArticleDetails && onOpenArticleDetails(art)}
+                              className="text-left cursor-pointer hover:underline"
+                            >
+                              {art.title}
+                            </button>
+                          </h3>
+                          <p className="text-xs text-slate-600 mt-1 line-clamp-2 leading-relaxed">
+                            {art.summary}
+                          </p>
+                          <div className="text-[11px] text-slate-500 mt-2 flex flex-wrap items-center gap-2">
+                            <span><strong>Fonte:</strong> {art.source}</span>
+                            {art.articleUrl && (
+                              <>
+                                <span>&middot;</span>
+                                <a
+                                  href={art.articleUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 text-emerald-700 hover:underline font-medium"
+                                >
+                                  <span>Ver na fonte original</span>
+                                  <ExternalLink className="w-3 h-3" />
+                                </a>
+                              </>
+                            )}
+                          </div>
+                        </div>
+
+                        <div className="shrink-0 flex sm:flex-col items-center sm:items-end gap-2">
                           <button
                             onClick={() => onOpenArticleDetails && onOpenArticleDetails(art)}
-                            className="text-left cursor-pointer hover:underline"
+                            className="px-3.5 py-1.5 rounded-lg bg-emerald-700 text-white text-xs font-bold hover:bg-emerald-800 transition-colors cursor-pointer shadow-2xs"
                           >
-                            {art.title}
+                            Ler Reportagem &rarr;
                           </button>
-                        </h3>
-                        <p className="text-xs text-slate-600 mt-1 line-clamp-2">{art.summary}</p>
-                        <div className="text-[11px] text-slate-500 mt-1.5 flex items-center gap-2">
-                          <span><strong>Fonte:</strong> {art.source}</span>
-                          <span>&middot;</span>
-                          <span>{art.publishedAt}</span>
                         </div>
                       </div>
-                      <button
-                        onClick={() => onOpenArticleDetails && onOpenArticleDetails(art)}
-                        className="shrink-0 px-3 py-1.5 rounded-lg bg-emerald-700 text-white text-xs font-bold hover:bg-emerald-800 transition-colors"
-                      >
-                        Ler Reportagem &rarr;
-                      </button>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className="mb-6 rounded-xl border border-dashed border-slate-200 bg-slate-50/60 p-4 sm:p-5 text-center">
+                  <div className="flex items-center justify-center gap-2 text-xs font-bold text-slate-600 mb-1">
+                    <Radio className="w-4 h-4 text-slate-400" />
+                    <span>Nenhuma matéria oficial de esportes no momento</span>
+                  </div>
+                  <p className="text-xs text-slate-500 max-w-lg mx-auto">
+                    Novas reportagens esportivas apuradas pela Agência Brasil e fontes públicas serão sincronizadas e listadas aqui automaticamente.
+                  </p>
                 </div>
               )}
 

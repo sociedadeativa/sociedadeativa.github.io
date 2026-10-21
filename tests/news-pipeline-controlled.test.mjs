@@ -740,6 +740,13 @@ async function runTests() {
     };
 
     await import('./scripts/update-news-data.mjs');
+
+    // Verify existing sports articles were retained and not wiped
+    const datasetAfterOutage = JSON.parse(fs.readFileSync('public/data/newsData.json', 'utf8'));
+    const sportsAfterOutage = datasetAfterOutage.filter(a => a.category === 'Esportes');
+    assert.ok(sportsAfterOutage.length > 0, "Pre-existing sports articles must be preserved and not deleted when sports feed fails");
+    console.log("  [PASS] Pre-existing sports articles preserved during sports feed outage (" + sportsAfterOutage.length + " sports articles retained).");
+
     console.log("TEST 8 PASSED: Sports feed failure handled safely without aborting pipeline.");
   `;
 

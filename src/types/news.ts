@@ -6,7 +6,8 @@ export type NewsCategory =
   | "Justiça"
   | "Economia"
   | "Brasil"
-  | "Mundo";
+  | "Mundo"
+  | "Esportes";
 
 export const NEWS_CATEGORIES: NewsCategory[] = [
   "Política",

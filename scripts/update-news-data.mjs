@@ -630,7 +630,7 @@ function generateTags(initialTags, category, title, source) {
   if (lowerTitle.includes('pib')) tagsSet.add('PIB');
   if (category === 'Esportes' || lowerTitle.includes('futebol') || lowerTitle.includes('esporte')) {
     tagsSet.add('Esportes');
-    if (lowerTitle.includes('futebol') || lowerTitle.includes('brasileirão') || lowerTitle.includes('libertadores')) {
+    if (lowerTitle.includes('futebol') || lowerTitle.includes('brasileirão') || lowerTitle.includes('libertadores') || lowerTitle.includes('copa do brasil') || lowerTitle.includes('sul-americana') || lowerTitle.includes('série a') || lowerTitle.includes('série b')) {
       tagsSet.add('Futebol');
     }
   }
@@ -1336,6 +1336,13 @@ async function main() {
     for (let i = 0; i < minQuota; i++) {
       selectedOfficial.add(items[i]);
     }
+  }
+
+  // Garante representatividade também para categorias temáticas essenciais como Esportes
+  const sportsItems = uniqueOfficialItems.filter((item) => item.category === 'Esportes');
+  const minSportsQuota = Math.min(sportsItems.length, 3);
+  for (let i = 0; i < minSportsQuota; i++) {
+    selectedOfficial.add(sportsItems[i]);
   }
 
   // Preenche as vagas restantes com as notícias mais recentes no geral
