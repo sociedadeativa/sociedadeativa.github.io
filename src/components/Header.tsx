@@ -170,135 +170,171 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="border-b border-slate-200 bg-white/98 backdrop-blur-md sticky top-0 z-40 transition-all">
       {/* 1. Barra de Utilitários e Mini-Cards de Indicadores Econômicos */}
-      <div className="bg-slate-900 text-slate-300 text-[11px] py-1.5 px-4 sm:px-6 lg:px-8 border-b border-slate-800 block">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-2.5 sm:gap-4">
-          {/* Mini-Cards dos Indicadores Econômicos (IPCA, Selic, PTAX e Ibovespa) */}
-          <div className="flex items-center gap-2 overflow-x-auto scrollbar-none py-0.5">
-            <span className="font-heading font-extrabold text-slate-300 uppercase tracking-wider text-[10px] shrink-0 hidden sm:inline-flex items-center gap-1.5 mr-0.5">
-              <TrendingUp className="w-3 h-3 text-slate-400" />
+      <div className="bg-slate-900 text-slate-300 text-[11px] py-2 px-4 sm:px-6 lg:px-8 border-b border-slate-800/90 block w-full overflow-hidden">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-2.5 lg:gap-4 w-full">
+          {/* Mini-Cards dos Indicadores Econômicos (IPCA, Selic, PTAX e Ibovespa) com rolagem fluida e espaçamento limpo */}
+          <div className="flex items-center gap-2 sm:gap-2.5 overflow-x-auto scrollbar-none py-0.5 -mx-4 px-4 sm:mx-0 sm:px-0 max-w-full touch-pan-x min-w-0 flex-1">
+            <span className="font-heading font-extrabold text-slate-200 uppercase tracking-wider text-[11px] shrink-0 hidden sm:inline-flex items-center gap-1.5 mr-1 select-none">
+              <TrendingUp className="w-3.5 h-3.5 text-slate-400" />
               <span>Indicadores:</span>
             </span>
 
-            {/* Mini-Card 1: IPCA */}
+            {/* Mini-Card 1: IPCA (Neutro, sem inferência de bom/ruim) */}
             <PortalLink
               route="economia"
-              className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-slate-500/60 transition-colors shrink-0 text-xs text-slate-200"
+              className="group flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-500/80 transition-all shrink-0 text-xs text-slate-200 shadow-2xs"
               title={`IPCA mensal oficial: ${ipcaVal} (${ipcaRef}) — Fonte: IBGE`}
             >
-              <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">IPCA:</span>
-              <span className="font-mono font-bold text-white tabular-nums">{ipcaVal}</span>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-300 group-hover:text-white transition-colors">
+                IPCA:
+              </span>
+              <span className="font-mono font-extrabold text-white text-xs sm:text-[13px] tabular-nums tracking-tight">
+                {ipcaVal}
+              </span>
               {ipcaTrendArrow && (
-                <span className="font-mono text-[11px] text-slate-400 font-semibold" aria-label={`Variação de ${ipcaVariation} ponto percentual`}>
+                <span
+                  className="font-mono text-[11px] text-slate-300 font-bold"
+                  aria-label={`Variação de ${ipcaVariation} ponto percentual`}
+                >
                   {ipcaTrendArrow}
                 </span>
               )}
-              <span className="text-[10px] text-slate-400 font-sans">
-                [{ipcaRef.replace("setembro 2026", "Set/26").replace("Setembro 2026", "Set/26")} · IBGE]
+              <span className="text-[10px] sm:text-[11px] text-slate-400 font-sans pl-1.5 border-l border-slate-700/80 whitespace-nowrap">
+                {ipcaRef.replace("setembro 2026", "Set/26").replace("Setembro 2026", "Set/26")} · IBGE
               </span>
             </PortalLink>
 
-            {/* Mini-Card 2: Selic Meta */}
+            {/* Mini-Card 2: Selic Meta (Neutro, sem inferência de bom/ruim) */}
             <PortalLink
               route="economia"
-              className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-slate-500/60 transition-colors shrink-0 text-xs text-slate-200"
+              className="group flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-500/80 transition-all shrink-0 text-xs text-slate-200 shadow-2xs"
               title={`Taxa Selic Meta Copom: ${selicVal} (${selicRef}) — Fonte: BCB`}
             >
-              <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">Selic:</span>
-              <span className="font-mono font-bold text-white tabular-nums">{selicVal}</span>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-300 group-hover:text-white transition-colors">
+                Selic:
+              </span>
+              <span className="font-mono font-extrabold text-white text-xs sm:text-[13px] tabular-nums tracking-tight">
+                {selicVal}
+              </span>
               {selicTrendArrow && (
-                <span className="font-mono text-[11px] text-slate-400 font-semibold">
+                <span className="font-mono text-[11px] text-slate-300 font-bold">
                   {selicTrendArrow}
                 </span>
               )}
-              <span className="text-[10px] text-slate-400 font-sans">
-                [{selicBadgeText}]
+              <span className="text-[10px] sm:text-[11px] text-slate-400 font-sans pl-1.5 border-l border-slate-700/80 whitespace-nowrap">
+                {selicBadgeText}
               </span>
             </PortalLink>
 
             {/* Mini-Card 3: PTAX Venda */}
             <PortalLink
               route="economia"
-              className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-slate-500/60 transition-colors shrink-0 text-xs text-slate-200"
+              className="group flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-500/80 transition-all shrink-0 text-xs text-slate-200 shadow-2xs"
               title={`Dólar Comercial PTAX Venda oficial: ${dolarVal} (${dolarRef}) — Fonte: BCB`}
             >
-              <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">PTAX:</span>
-              <span className="font-mono font-bold text-white tabular-nums">{dolarVal}</span>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-300 group-hover:text-white transition-colors">
+                PTAX:
+              </span>
+              <span className="font-mono font-extrabold text-white text-xs sm:text-[13px] tabular-nums tracking-tight">
+                {dolarVal}
+              </span>
               {dolarTrendArrow && (
-                <span className="font-mono text-[11px] text-slate-400 font-semibold" aria-label={`Variação de ${dolarVariation}`}>
+                <span
+                  className="font-mono text-[11px] text-slate-300 font-bold"
+                  aria-label={`Variação de ${dolarVariation}`}
+                >
                   {dolarTrendArrow}
                 </span>
               )}
-              <span className="text-[10px] text-slate-400 font-sans">
-                [{dolarRef.replace("Fechamento PTAX ", "").replace("PTAX ", "")} · BCB]
+              <span className="text-[10px] sm:text-[11px] text-slate-400 font-sans pl-1.5 border-l border-slate-700/80 whitespace-nowrap">
+                {dolarRef.replace("Fechamento PTAX ", "").replace("PTAX ", "")} · BCB
               </span>
             </PortalLink>
 
-            {/* Mini-Card 4: Ibovespa (IBOV) B3 */}
-            <div className="flex items-center rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-slate-500/60 transition-colors shrink-0 text-xs text-slate-200">
+            {/* Mini-Card 4: Ibovespa (IBOV) B3 — Ativo de mercado com variação colorida */}
+            <div className="flex items-center rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-500/80 transition-all shrink-0 text-xs text-slate-200 shadow-2xs">
               <PortalLink
                 route="economia"
-                className="flex items-center gap-1.5 px-2.5 py-1 text-slate-200 hover:text-white transition-colors"
+                className="group flex items-center gap-2 px-3 py-1.5 text-slate-200 hover:text-white transition-colors"
                 title={`Ibovespa (IBOV): ${ibovVal} (${ibovVariationInfo.formatted}). ${
                   isIbovOpen
                     ? "Pregão Aberto (cotações públicas com defasagem regulatória mínima de 15 min)."
                     : "Mercado Fechado (último fechamento oficial consolidado)."
                 } ${isIbovOpen ? "Cotação:" : "Fechamento:"} ${ibovTimestamp}. Fonte oficial: B3.`}
               >
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">IBOV:</span>
-                <span className="font-mono font-bold text-white tabular-nums">{ibovVal}</span>
+                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-300 group-hover:text-white transition-colors">
+                  IBOV:
+                </span>
+                <span className="font-mono font-extrabold text-white text-xs sm:text-[13px] tabular-nums tracking-tight">
+                  {ibovVal}
+                </span>
                 {hasIbovValue && ibovVariationInfo.type !== "unavailable" && (
-                  <span className="text-[10px] px-1 py-0.2 rounded font-mono font-semibold bg-slate-700/60 text-slate-300 border border-slate-600/50 flex items-center gap-0.5">
+                  <span
+                    className={`text-[11px] px-1.5 py-0.5 rounded font-mono font-bold flex items-center gap-0.5 tabular-nums ${
+                      ibovVariationInfo.type === "positive"
+                        ? "text-emerald-400 bg-emerald-950/60 border border-emerald-500/40"
+                        : ibovVariationInfo.type === "negative"
+                        ? "text-rose-400 bg-rose-950/60 border border-rose-500/40"
+                        : "text-slate-300 bg-slate-700/70 border border-slate-600/60"
+                    }`}
+                  >
                     {ibovTrendArrow && <span>{ibovTrendArrow}</span>}
                     <span>{ibovVariationInfo.formatted}</span>
                   </span>
                 )}
-                <span className="text-[10px] text-slate-400 font-sans">
-                  [{isIbovOpen ? "Aberto · 15m" : "Fechado"} · B3]
+                <span className="text-[10px] sm:text-[11px] text-slate-400 font-sans pl-1.5 border-l border-slate-700/80 whitespace-nowrap">
+                  {isIbovOpen ? "Aberto · 15m" : "Fechado"} · B3
                 </span>
               </PortalLink>
               <a
                 href="https://b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/cotacoes/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="pr-2 pl-0.5 py-1 text-slate-400 hover:text-white transition-colors inline-flex items-center"
+                className="pr-2.5 pl-0.5 py-1.5 text-slate-400 hover:text-white transition-colors inline-flex items-center"
                 title="Abrir cotação oficial diretamente no portal da B3 (defasagem de 15 min)"
                 aria-label="Abrir cotação oficial do Ibovespa no portal da B3"
               >
-                <ExternalLink className="w-2.5 h-2.5" />
+                <ExternalLink className="w-3 h-3" />
               </a>
             </div>
 
             {/* Mini-Card 5: Eleições 2026 (Apuração 1º Turno) */}
             <PortalLink
               route="eleicoes"
-              className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-slate-500/60 transition-colors shrink-0 text-xs text-slate-200"
+              className="group flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 hover:border-blue-900/80 transition-all shrink-0 text-xs text-slate-200 shadow-2xs"
               title="Eleições 2026: 100% das seções totalizadas pelo TSE no 1º turno"
             >
-              <span className="text-[10px] font-extrabold uppercase tracking-wider text-blue-400">Eleições:</span>
-              <span className="font-mono font-bold text-white tabular-nums">100% Apurado</span>
-              <span className="text-[10px] text-slate-400 font-sans">[1ºT · TSE]</span>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-blue-400 group-hover:text-blue-300 transition-colors">
+                Eleições:
+              </span>
+              <span className="font-mono font-extrabold text-white text-xs sm:text-[13px] tabular-nums tracking-tight">
+                100% Apurado
+              </span>
+              <span className="text-[10px] sm:text-[11px] text-slate-400 font-sans pl-1.5 border-l border-slate-700/80 whitespace-nowrap">
+                1ºT · TSE
+              </span>
             </PortalLink>
           </div>
 
           {/* Links Institucionais e Link Técnico JSON TSE Discreto */}
-          <div className="flex items-center gap-2.5 shrink-0 text-[11px] font-sans text-slate-400">
+          <div className="flex items-center gap-3 shrink-0 text-xs font-sans text-slate-400 self-end lg:self-auto pt-1 lg:pt-0">
             <PortalLink
               route="sobre"
-              className="text-slate-300 hover:text-white transition-colors"
+              className="text-slate-300 hover:text-white transition-colors font-medium"
             >
               Transparência &amp; Fontes
             </PortalLink>
             <span className="text-slate-700" aria-hidden="true">·</span>
             <button
               onClick={onOpenMethodology}
-              className="text-slate-300 hover:text-white transition-colors cursor-pointer"
+              className="text-slate-300 hover:text-white transition-colors cursor-pointer font-medium"
             >
               Metodologia
             </button>
             <span className="text-slate-700" aria-hidden="true">·</span>
             <button
               onClick={onOpenDataInspector}
-              className="text-slate-400 hover:text-slate-200 transition-colors cursor-pointer inline-flex items-center gap-1 text-[11px]"
+              className="text-slate-400 hover:text-slate-200 transition-colors cursor-pointer inline-flex items-center gap-1.5 font-medium px-2 py-0.5 rounded border border-slate-800 hover:border-slate-700 bg-slate-800/50"
               title="Inspecionar dados oficiais em formato JSON (TSE)"
             >
               <Database className="w-3 h-3 text-slate-400" />
