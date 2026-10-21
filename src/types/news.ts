@@ -7,7 +7,8 @@ export type NewsCategory =
   | "Economia"
   | "Brasil"
   | "Mundo"
-  | "Esportes";
+  | "Esportes"
+  | "Tecnologia";
 
 export const NEWS_CATEGORIES: NewsCategory[] = [
   "Política",
@@ -18,6 +19,8 @@ export const NEWS_CATEGORIES: NewsCategory[] = [
   "Economia",
   "Brasil",
   "Mundo",
+  "Esportes",
+  "Tecnologia",
 ];
 
 export interface NewsItem {

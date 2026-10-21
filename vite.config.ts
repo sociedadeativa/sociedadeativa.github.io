@@ -26,6 +26,7 @@ export default defineConfig(() => {
           dadosPublicos: resolve(rootDir, 'dados-publicos/index.html'),
           noticias: resolve(rootDir, 'noticias/index.html'),
           esportes: resolve(rootDir, 'esportes/index.html'),
+          tecnologia: resolve(rootDir, 'tecnologia/index.html'),
           clima: resolve(rootDir, 'clima/index.html'),
           sobre: resolve(rootDir, 'sobre/index.html'),
           notFound: resolve(rootDir, '404.html'),

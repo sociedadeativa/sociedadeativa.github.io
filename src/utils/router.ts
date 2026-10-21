@@ -7,6 +7,7 @@ export type PortalRoute =
   | "dados-publicos"
   | "noticias"
   | "esportes"
+  | "tecnologia"
   | "clima"
   | "sobre"
   | "artigo";
@@ -127,6 +128,19 @@ export const ROUTE_CONFIGS: Record<PortalRoute, RouteConfig> = {
     badgeBg: "bg-emerald-50",
     badgeText: "text-emerald-800",
     badgeBorder: "border-emerald-200",
+  },
+  tecnologia: {
+    route: "tecnologia",
+    path: "/tecnologia/",
+    label: "Tecnologia",
+    title: "Tecnologia & Inovação — Sociedade Ativa | IA, Cibersegurança e Ciência",
+    description:
+      "Cobertura de tecnologia, inteligência artificial, computação, smartphones, internet, cibersegurança e inovação digital no Sociedade Ativa.",
+    categoryTag: "Tecnologia",
+    accentColor: "indigo",
+    badgeBg: "bg-indigo-50",
+    badgeText: "text-indigo-800",
+    badgeBorder: "border-indigo-200",
   },
   clima: {
     route: "clima",
@@ -254,6 +268,7 @@ export function getRouteFromPath(pathname: string, searchStr?: string): PortalRo
   if (clean.startsWith("dados-publicos")) return "dados-publicos";
   if (clean.startsWith("noticias")) return "noticias";
   if (clean.startsWith("esportes")) return "esportes";
+  if (clean.startsWith("tecnologia")) return "tecnologia";
   if (clean.startsWith("clima")) return "clima";
   if (clean.startsWith("sobre")) return "sobre";
 

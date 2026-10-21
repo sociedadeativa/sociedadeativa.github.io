@@ -100,6 +100,12 @@ export const Header: React.FC<HeaderProps> = ({
       activeClass: "text-emerald-700 font-black border-b-2 border-emerald-600",
     },
     {
+      route: "tecnologia",
+      label: "Tecnologia",
+      colorClass: "hover:text-indigo-700",
+      activeClass: "text-indigo-700 font-black border-b-2 border-indigo-600",
+    },
+    {
       route: "clima",
       label: "Clima",
       colorClass: "hover:text-sky-700",
