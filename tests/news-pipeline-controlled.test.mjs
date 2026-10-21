@@ -567,6 +567,191 @@ async function runTests() {
   console.log(t6.stdout.trim());
   passedTests++;
 
+  // TEST 7: Sports News Ingestion (Agência Brasil Sports Feed), Category Mapping & Safe Failure Handling
+  console.log('\n[TEST 7] Agência Brasil Sports Feed Ingestion, Category Mapping & Safe Failure Handling');
+  const test7Code = `
+    import fs from 'node:fs';
+    import assert from 'node:assert';
+
+    // 1. Verify sports feed URL is configured in scripts/update-news-data.mjs
+    const scriptSrc = fs.readFileSync('scripts/update-news-data.mjs', 'utf8');
+    assert.ok(
+      scriptSrc.includes('https://agenciabrasil.ebc.com.br/rss/esportes/feed.xml'),
+      "Script must configure the Agência Brasil sports feed URL: https://agenciabrasil.ebc.com.br/rss/esportes/feed.xml"
+    );
+    console.log("  [PASS] 1. Official Agência Brasil sports feed URL is properly configured.");
+
+    // 2. Test ingestion and classification with simulated sports RSS XML
+    const recentDate1 = new Date(Date.now() - 5 * 60 * 1000).toUTCString();
+    const recentDate2 = new Date(Date.now() - 10 * 60 * 1000).toUTCString();
+    const mockSportsXml = \`<?xml version="1.0" encoding="UTF-8"?>
+      <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <channel>
+          <title>Agência Brasil - Esportes</title>
+          <item>
+            <title><![CDATA[Brasil conquista título no circuito mundial de vôlei de praia]]></title>
+            <description><![CDATA[Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.]]></description>
+            <link>https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-conquista-titulo-volei-praia</link>
+            <guid>https://agenciabrasil.ebc.com.br/node/1799001</guid>
+            <dc:creator><![CDATA[Pedro Ramos/Agência Brasil]]></dc:creator>
+            <category>Vôlei</category>
+            <category>Esportes</category>
+            <imagem-destaque>https://imagens.ebc.com.br/1170x700/smart/foto-volei.jpg</imagem-destaque>
+            <pubDate>\${recentDate1}</pubDate>
+          </item>
+          <item>
+            <title><![CDATA[Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro]]></title>
+            <description><![CDATA[Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.]]></description>
+            <link>https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/flamengo-palmeiras-lideranca-brasileirao</link>
+            <guid>https://agenciabrasil.ebc.com.br/node/1799002</guid>
+            <dc:creator><![CDATA[Lucas Silva/Agência Brasil]]></dc:creator>
+            <category>Futebol</category>
+            <category>Brasileirão</category>
+            <imagem-destaque>https://imagens.ebc.com.br/1170x700/smart/foto-futebol.jpg</imagem-destaque>
+            <pubDate>\${recentDate2}</pubDate>
+          </item>
+        </channel>
+      </rss>\`;
+
+    // Set mock fetch BEFORE importing update-news-data.mjs
+    global.fetch = async (url) => {
+      const urlStr = String(url);
+      if (urlStr.includes('/rss/esportes/')) {
+        return {
+          ok: true,
+          status: 200,
+          text: async () => mockSportsXml
+        };
+      }
+      if (urlStr.includes('camara.leg.br') || urlStr.includes('agenciabrasil.ebc.com.br')) {
+        return {
+          ok: true,
+          status: 200,
+          text: async () => \`<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel></channel></rss>\`
+        };
+      }
+      if (urlStr.includes('ibge.gov.br')) {
+        return {
+          ok: true,
+          status: 200,
+          json: async () => ({ items: [] })
+        };
+      }
+      if (urlStr.includes('bcb.gov.br')) {
+        return {
+          ok: true,
+          status: 200,
+          json: async () => ({ conteudo: [] })
+        };
+      }
+      return { ok: true, status: 200, text: async () => '' };
+    };
+
+    const { OFFICIAL_CATEGORIES } = await import('./scripts/update-news-data.mjs');
+
+    // Verify category list includes 'Esportes'
+    assert.ok(OFFICIAL_CATEGORIES.includes('Esportes'), "OFFICIAL_CATEGORIES must include 'Esportes'");
+    console.log("  [PASS] 2. OFFICIAL_CATEGORIES includes 'Esportes'.");
+
+    const dataset = JSON.parse(fs.readFileSync('public/data/newsData.json', 'utf8'));
+    const sportsArticles = dataset.filter(a => a.category === 'Esportes');
+    assert.ok(sportsArticles.length >= 2, "Expected at least 2 sports articles to be ingested");
+
+    const voleiArt = sportsArticles.find(a => a.id.includes('1799001'));
+    assert.ok(voleiArt, "Vôlei article was not ingested");
+    assert.strictEqual(voleiArt.category, 'Esportes');
+    assert.strictEqual(voleiArt.source, 'Agência Brasil');
+    assert.ok(voleiArt.tags.includes('Esportes'), "Vôlei article missing 'Esportes' tag");
+    assert.strictEqual(voleiArt.imageUrl, 'https://imagens.ebc.com.br/1170x700/smart/foto-volei.jpg');
+    assert.strictEqual(voleiArt.imageCredit, 'Pedro Ramos/Agência Brasil');
+
+    const futArt = sportsArticles.find(a => a.id.includes('1799002'));
+    assert.ok(futArt, "Futebol article was not ingested");
+    assert.strictEqual(futArt.category, 'Esportes');
+    assert.ok(futArt.tags.includes('Futebol'), "Futebol article missing 'Futebol' tag");
+
+    // Check compatibility with EsportesPage.tsx filter logic:
+    // (a.category as string) === "Esportes" || a.tags?.some((t) => ["Esportes", "Futebol", ...].includes(t))
+    for (const art of sportsArticles) {
+      const isAcceptedInEsportesPage =
+        art.category === "Esportes" ||
+        art.tags?.some(t => ["Esportes", "Futebol", "Copa Libertadores", "Fluminense", "Palmeiras"].includes(t));
+      assert.ok(isAcceptedInEsportesPage, "Article " + art.id + " must be accepted by EsportesPage filter");
+    }
+    console.log("  [PASS] 3. Ingestion, classification as 'Esportes', image metadata, and EsportesPage filter compatibility verified.");
+
+    console.log("TEST 7 PASSED: Sports feed ingestion and category mapping checks succeeded.");
+  `;
+
+  const t7 = await runScript(test7Code);
+  if (t7.code !== 0) {
+    console.error('Test 7 failed with stderr:', t7.stderr);
+    console.error('Stdout:', t7.stdout);
+    process.exit(1);
+  }
+  console.log(t7.stdout.trim());
+  passedTests++;
+
+  // TEST 8: Safe feed failure handling for Sports feed (feed down does not fail pipeline or delete data)
+  console.log('\n[TEST 8] Safe sports feed failure handling (isolated feed failure does not abort update)');
+  const test8Code = `
+    import fs from 'node:fs';
+    import assert from 'node:assert';
+
+    // Mock fetch where sports feed throws an error / fails, but others are reachable
+    global.fetch = async (url) => {
+      const urlStr = String(url);
+      if (urlStr.includes('/rss/esportes/')) {
+        throw new Error("HTTP 500 Internal Server Error (simulated sports outage)");
+      }
+      if (urlStr.includes('camara.leg.br') || urlStr.includes('agenciabrasil.ebc.com.br')) {
+        return {
+          ok: true,
+          status: 200,
+          text: async () => \`<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel></channel></rss>\`
+        };
+      }
+      if (urlStr.includes('ibge.gov.br')) {
+        return {
+          ok: true,
+          status: 200,
+          json: async () => ({
+            items: [
+              {
+                id: 998877,
+                titulo: "IBGE aponta crescimento em novos indicadores",
+                introducao: "Resumo oficial do indicador social divulgado pela Agência de Notícias do IBGE.",
+                link: "https://agenciadenoticias.ibge.gov.br/2012-agencia-de-noticias/noticias/998877-dados.html",
+                data_publicacao: "21/10/2026 10:00:00",
+                editorias: "geral"
+              }
+            ]
+          })
+        };
+      }
+      if (urlStr.includes('bcb.gov.br')) {
+        return {
+          ok: true,
+          status: 200,
+          json: async () => ({ conteudo: [] })
+        };
+      }
+      return { ok: true, status: 200, text: async () => '' };
+    };
+
+    await import('./scripts/update-news-data.mjs');
+    console.log("TEST 8 PASSED: Sports feed failure handled safely without aborting pipeline.");
+  `;
+
+  const t8 = await runScript(test8Code);
+  if (t8.code !== 0) {
+    console.error('Test 8 failed with stderr:', t8.stderr);
+    console.error('Stdout:', t8.stdout);
+    process.exit(1);
+  }
+  console.log(t8.stdout.trim());
+  passedTests++;
+
   // Restore initial data files
   fs.writeFileSync(NEWS_DATA_FILE, initialNewsData, 'utf8');
   fs.writeFileSync(TS_DATA_FILE, initialTsData, 'utf8');

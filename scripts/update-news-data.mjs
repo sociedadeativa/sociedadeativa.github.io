@@ -5,7 +5,7 @@
  * Sociedade Ativa — Política, eleições, notícias e dados do Brasil.
  *
  * Fontes Oficiais Integradas (Tier 1):
- * 1. Agência Brasil / EBC (RSS: Política, Justiça, Economia, Últimas Notícias)
+ * 1. Agência Brasil / EBC (RSS: Política, Justiça, Economia, Esportes, Últimas Notícias)
  * 2. Câmara dos Deputados / Agência Câmara (RSS: Últimas Notícias)
  * 3. IBGE Notícias (API de Notícias v3)
  * 4. Banco Central do Brasil (API de Notícias Institucionais)
@@ -13,7 +13,7 @@
  * Diretrizes de Segurança e Integridade:
  * - Sanitização rigorosa: remoção completa de scripts, tags HTML e entidades maliciosas.
  * - Aceitação estrita e exclusiva de URLs canônicas seguras (HTTPS).
- * - Mapeamento para as 8 categorias oficiais do portal.
+ * - Mapeamento para as categorias oficiais do portal (incluindo Esportes).
  * - Preservação irrevogável dos conteúdos editoriais proprietários do Sociedade Ativa.
  * - Resiliência por fonte com timeout estrito de 8s.
  * - Deduplicação por URL normalizada e limite de retenção de 50 a 60 artigos.
@@ -42,7 +42,8 @@ export const OFFICIAL_CATEGORIES = [
   'Justiça',
   'Economia',
   'Brasil',
-  'Mundo'
+  'Mundo',
+  'Esportes'
 ];
 
 /**
@@ -627,6 +628,12 @@ function generateTags(initialTags, category, title, source) {
   if (lowerTitle.includes('inflação') || lowerTitle.includes('ipca')) tagsSet.add('Inflação');
   if (lowerTitle.includes('dólar') || lowerTitle.includes('câmbio')) tagsSet.add('Câmbio');
   if (lowerTitle.includes('pib')) tagsSet.add('PIB');
+  if (category === 'Esportes' || lowerTitle.includes('futebol') || lowerTitle.includes('esporte')) {
+    tagsSet.add('Esportes');
+    if (lowerTitle.includes('futebol') || lowerTitle.includes('brasileirão') || lowerTitle.includes('libertadores')) {
+      tagsSet.add('Futebol');
+    }
+  }
 
   const finalTags = Array.from(tagsSet).slice(0, 5);
   // Garante ao menos 3 tags
@@ -648,6 +655,7 @@ async function fetchAgenciaBrasil() {
     { url: 'https://agenciabrasil.ebc.com.br/rss/politica/feed.xml', section: 'politica' },
     { url: 'https://agenciabrasil.ebc.com.br/rss/justica/feed.xml', section: 'justica' },
     { url: 'https://agenciabrasil.ebc.com.br/rss/economia/feed.xml', section: 'economia' },
+    { url: 'https://agenciabrasil.ebc.com.br/rss/esportes/feed.xml', section: 'esportes' },
     { url: 'https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml', section: 'ultimas' }
   ];
 
@@ -657,6 +665,7 @@ async function fetchAgenciaBrasil() {
   const congressRegex = /\b(câmara|camara|senado|deputad|senador|congresso|parlamentar|parlamentares|mesa\s+diretora|cpi|ccj)\b/i;
   const economyRegex = /\b(economia|inflação|inflacao|ipca|selic|juros|câmbio|cambio|dólar|dolar|pib|mercado|fazenda|copom|tesouro)\b/i;
   const govRegex = /\b(governo|presidente|presidência|presidencia|planalto|ministro|ministério|ministerio|itamaraty|itamarati)\b/i;
+  const sportsRegex = /\b(futebol|campeonato|brasileir[aã]o|libertadores|copa|seleção\s+brasileira|atleta|atletas|esporte|esportes|olimpíadas|olimpiadas|paralimpíadas|paralimpiadas|tênis|tenis|vôlei|volei|basquete|natação|natacao|judô|judo|corrida|fórmula\s*1|formula\s*1)\b/i;
 
   for (const { url, section } of feeds) {
     try {
@@ -712,6 +721,8 @@ async function fetchAgenciaBrasil() {
           category = 'Justiça';
         } else if (section === 'economia') {
           category = 'Economia';
+        } else if (section === 'esportes') {
+          category = 'Esportes';
         } else if (section === 'ultimas') {
           if (electoralRegex.test(fullContent)) {
             category = 'Eleições';
@@ -723,6 +734,8 @@ async function fetchAgenciaBrasil() {
             category = 'Economia';
           } else if (govRegex.test(fullContent)) {
             category = 'Governo';
+          } else if (sportsRegex.test(fullContent)) {
+            category = 'Esportes';
           } else {
             category = 'Política';
           }
