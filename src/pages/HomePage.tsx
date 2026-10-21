@@ -59,11 +59,11 @@ const SportsNewsCard: React.FC<{
           </span>
         </div>
 
-        <h3 className="font-heading font-black text-base text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2 leading-snug">
+        <h3 className="font-heading font-black text-base text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2 leading-snug break-words">
           {article.title}
         </h3>
 
-        <p className="text-xs text-slate-600 mt-2 line-clamp-2 leading-relaxed">
+        <p className="text-xs text-slate-600 mt-2 line-clamp-2 leading-relaxed break-words">
           {article.summary}
         </p>
       </div>

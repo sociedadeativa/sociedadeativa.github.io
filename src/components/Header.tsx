@@ -325,24 +325,24 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
             <span>Dados Oficiais Verificados · Fontes primárias públicas</span>
           </div>
-          <div className="flex items-center gap-3 shrink-0 text-xs font-sans text-slate-400 w-full sm:w-auto justify-end">
+          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0 text-xs font-sans text-slate-400 w-full sm:w-auto justify-center sm:justify-end overflow-x-auto scrollbar-none py-0.5">
             <PortalLink
               route="sobre"
-              className="text-slate-300 hover:text-white transition-colors font-medium text-[11px] sm:text-xs"
+              className="text-slate-300 hover:text-white transition-colors font-medium text-[11px] sm:text-xs whitespace-nowrap"
             >
               Transparência &amp; Fontes
             </PortalLink>
             <span className="text-slate-700" aria-hidden="true">·</span>
             <button
               onClick={onOpenMethodology}
-              className="text-slate-300 hover:text-white transition-colors cursor-pointer font-medium text-[11px] sm:text-xs"
+              className="text-slate-300 hover:text-white transition-colors cursor-pointer font-medium text-[11px] sm:text-xs whitespace-nowrap"
             >
               Metodologia
             </button>
             <span className="text-slate-700" aria-hidden="true">·</span>
             <button
               onClick={onOpenDataInspector}
-              className="text-slate-300 hover:text-white transition-colors cursor-pointer inline-flex items-center gap-1.5 font-medium px-2 py-0.5 rounded border border-slate-800 hover:border-slate-700 bg-slate-900 text-[11px] sm:text-xs"
+              className="text-slate-300 hover:text-white transition-colors cursor-pointer inline-flex items-center gap-1.5 font-medium px-2 py-0.5 rounded border border-slate-800 hover:border-slate-700 bg-slate-900 text-[11px] sm:text-xs whitespace-nowrap"
               title="Inspecionar dados oficiais em formato JSON (TSE)"
             >
               <Database className="w-3 h-3 text-slate-400" />

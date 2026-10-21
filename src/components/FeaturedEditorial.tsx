@@ -147,16 +147,16 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
         </div>
 
         {/* Grade Editorial Principal: Lead Story + Destaques Secundários Separados */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-start">
           {/* Coluna Principal: Matéria Líder com Imagem Horizontal e Destaque Editorial */}
           {leadArticle && (
-            <div className="md:col-span-7 flex flex-col justify-between">
+            <div className="md:col-span-7 flex flex-col">
               <article
                 onClick={() => onOpenArticleDetails(leadArticle)}
-                className="group cursor-pointer flex flex-col h-full"
+                className="group cursor-pointer flex flex-col"
               >
                 {/* Imagem Editorial de Alta Definição (Horizontal Lead-Story Image com enquadramento 16:9) */}
-                <div className="relative rounded-2xl overflow-hidden mb-5 bg-slate-100 aspect-[16/9] shadow-xs border border-slate-200/80">
+                <div className="relative rounded-2xl overflow-hidden mb-4 bg-slate-100 aspect-[16/9] shadow-xs border border-slate-200/80">
                   <img
                     src={leadImageSrc}
                     alt={leadImageAlt}
@@ -165,43 +165,50 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                     referrerPolicy="no-referrer"
                     onError={() => setLeadImageError(true)}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent" />
-                  <div className="absolute bottom-3 left-4 right-4 text-white text-[11px] font-medium flex items-center justify-between gap-2">
-                    <span className="opacity-90 truncate">{leadImageCaption}</span>
-                    <span className="shrink-0 hidden sm:inline bg-black/40 backdrop-blur-xs px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">
+                  {/* Gradiente de alto contraste preservando a composição e visibilidade da foto */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent pointer-events-none" />
+                  
+                  {/* Legenda e Crédito da Foto com tipografia ampliada e contraste absoluto */}
+                  <div className="absolute bottom-0 inset-x-0 p-3 sm:px-4 sm:py-3 text-white flex items-center justify-between gap-3">
+                    <div className="min-w-0 flex-1">
+                      <p className="text-xs sm:text-[13px] font-medium text-white leading-snug line-clamp-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)] tracking-normal">
+                        {leadImageCaption}
+                      </p>
+                    </div>
+                    <span className="shrink-0 hidden sm:inline-flex items-center bg-slate-950/85 border border-white/20 backdrop-blur-xs px-2.5 py-0.5 rounded text-[11px] text-white uppercase font-bold tracking-wider shadow-xs">
                       {isUsingOriginalPhoto ? "Fotojornalismo" : "Institucional"}
                     </span>
                   </div>
                 </div>
 
                 {/* Metadados e Kicker Editorial Padronizado (Cores Sutis + Tipografia Navy) */}
-                <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-500 mb-2.5">
+                <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-500 mb-2">
                   <span className={getCategoryBadgeClass(leadArticle.category)}>
                     {leadArticle.category}
                   </span>
                   <span className="text-slate-300" aria-hidden="true">·</span>
                   <span className="text-slate-700 font-medium">{leadArticle.source}</span>
                   <span className="text-slate-300" aria-hidden="true">·</span>
-                  <span>{leadArticle.publishedAt}</span>
+                  <span className="whitespace-nowrap">{leadArticle.publishedAt}</span>
                   {leadArticle.readTime && (
                     <>
                       <span className="text-slate-300" aria-hidden="true">·</span>
-                      <span>{leadArticle.readTime}</span>
+                      <span className="whitespace-nowrap">{leadArticle.readTime}</span>
                     </>
                   )}
                 </div>
 
                 {/* Manchete Principal (Dominant Visual Anchor) */}
-                <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 leading-[1.18] group-hover:text-blue-900 transition-colors mb-3 text-balance">
+                <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 leading-tight sm:leading-[1.18] group-hover:text-blue-900 transition-colors mb-2.5 sm:mb-3 text-balance break-words">
                   {leadArticle.title}
                 </h1>
 
                 {/* Lead / Subtítulo */}
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-3 sm:mb-4 break-words">
                   {leadArticle.summary}
                 </p>
 
-                <div className="flex items-center gap-2 text-xs font-bold text-blue-900 group-hover:text-blue-700 mt-auto pt-2">
+                <div className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-blue-900 group-hover:text-blue-700 transition-colors pt-2 border-t border-slate-100 sm:border-0 sm:pt-0">
                   <span>Ler cobertura completa e dados da totalização</span>
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </div>
@@ -210,9 +217,9 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
           )}
 
           {/* Coluna Separada: Destaques Secundários e Radar Cívico */}
-          <div className="md:col-span-5 flex flex-col justify-between pt-8 border-t border-slate-200 md:pt-0 md:border-t-0 md:border-l md:border-slate-200 md:pl-6 lg:pl-8 xl:pl-10">
+          <div className="md:col-span-5 flex flex-col pt-8 border-t border-slate-200 md:pt-0 md:border-t-0 md:border-l md:border-slate-200 md:pl-6 lg:pl-8 xl:pl-10 space-y-6">
             {/* Bloco de Notícias Secundárias com Hierarquia Visual Clara */}
-            <div className="space-y-4 pb-6">
+            <div>
               <div className="flex items-center justify-between pb-3 border-b border-slate-200">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-3.5 bg-blue-900 rounded-xs" />
@@ -234,23 +241,23 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                   <article
                     key={art.id}
                     onClick={() => onOpenArticleDetails(art)}
-                    className="group cursor-pointer py-4 first:pt-1 last:pb-0"
+                    className="group cursor-pointer py-3.5 first:pt-1 last:pb-0"
                   >
-                    <div className="flex flex-wrap items-center gap-2 text-[11px] text-slate-500 mb-1.5 font-medium">
+                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] text-slate-500 mb-1.5 font-medium">
                       <span className={getCategoryBadgeClass(art.category, true)}>
                         {art.category}
                       </span>
                       <span className="text-slate-300" aria-hidden="true">·</span>
-                      <span className="text-slate-700 font-medium">{art.source}</span>
+                      <span className="text-slate-700 font-medium truncate max-w-[140px] sm:max-w-none">{art.source}</span>
                       <span className="text-slate-300" aria-hidden="true">·</span>
-                      <span>{art.publishedAt.split(" às ")[0]}</span>
+                      <span className="whitespace-nowrap">{art.publishedAt.split(" às ")[0]}</span>
                     </div>
 
-                    <h3 className="font-heading text-base sm:text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-900 transition-colors mb-1.5 text-balance">
+                    <h3 className="font-heading text-base sm:text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-900 transition-colors mb-1.5 text-balance break-words">
                       {art.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-slate-600 line-clamp-2 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-600 line-clamp-2 leading-relaxed break-words">
                       {art.summary}
                     </p>
                   </article>
@@ -259,7 +266,7 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
             </div>
 
             {/* Radar Cívico / Boletim em Tempo Real com Linha do Tempo Vertical Sutil */}
-            <div className="pt-6 border-t border-slate-100">
+            <div className="pt-2">
               <div className="bg-slate-50 rounded-2xl p-4 sm:p-5 border border-slate-200/80">
                 <div className="flex items-center justify-between mb-3.5 pb-2.5 border-b border-slate-200/60">
                   <span className="font-heading text-xs font-black uppercase tracking-wider text-slate-900 flex items-center gap-1.5">
@@ -300,8 +307,8 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                           />
 
                           {/* Cabeçalho do despacho: horário e órgão oficial */}
-                          <div className="flex items-center gap-1.5 text-[10px] text-slate-500 font-mono mb-0.5">
-                            <span className="font-bold text-slate-700 tabular-nums">
+                          <div className="flex items-center gap-1.5 text-[10px] text-slate-500 font-mono mb-0.5 min-w-0">
+                            <span className="font-bold text-slate-700 tabular-nums shrink-0">
                               {timeString}
                             </span>
                             <span className="text-slate-300 font-sans" aria-hidden="true">
@@ -313,7 +320,7 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                           </div>
 
                           {/* Conteúdo / Título do Despacho */}
-                          <p className="text-xs font-medium text-slate-800 group-hover:text-blue-900 leading-snug line-clamp-2 transition-colors">
+                          <p className="text-xs font-medium text-slate-800 group-hover:text-blue-900 leading-snug line-clamp-2 transition-colors break-words">
                             {item.title}
                           </p>
                         </li>
