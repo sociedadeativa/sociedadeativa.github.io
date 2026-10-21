@@ -213,6 +213,7 @@ if (!fs.existsSync('public/robots.txt')) {
 const distRobots = fs.readFileSync('dist/robots.txt', 'utf8');
 const publicRobots = fs.readFileSync('public/robots.txt', 'utf8');
 const expectedSitemapDirective = 'Sitemap: https://sociedadeativa.github.io/sitemap.xml';
+const expectedSitemapTxtDirective = 'Sitemap: https://sociedadeativa.github.io/sitemap.txt';
 
 if (!distRobots.includes(expectedSitemapDirective)) {
   console.error(`ERROR: dist/robots.txt não aponta para o sitemap correto (${expectedSitemapDirective})!`);
@@ -220,6 +221,14 @@ if (!distRobots.includes(expectedSitemapDirective)) {
 }
 if (!publicRobots.includes(expectedSitemapDirective)) {
   console.error(`ERROR: public/robots.txt não aponta para o sitemap correto (${expectedSitemapDirective})!`);
+  process.exit(1);
+}
+if (!distRobots.includes(expectedSitemapTxtDirective)) {
+  console.error(`ERROR: dist/robots.txt não aponta para o sitemap de texto (${expectedSitemapTxtDirective})!`);
+  process.exit(1);
+}
+if (!publicRobots.includes(expectedSitemapTxtDirective)) {
+  console.error(`ERROR: public/robots.txt não aponta para o sitemap de texto (${expectedSitemapTxtDirective})!`);
   process.exit(1);
 }
 
@@ -339,6 +348,49 @@ for (const block of urlBlocks) {
 }
 
 console.log(`Validação do sitemap.xml aprovada: ${urlBlocks.length} URLs conferidas (${canonicalPages.length} seções canônicas + ${generatedArticleDirs.length} páginas de notícias geradas).`);
+
+// Validação de integridade e paridade de dist/sitemap.txt e public/sitemap.txt (Google Search Console)
+if (!fs.existsSync('dist/sitemap.txt')) {
+  console.error('ERROR: dist/sitemap.txt does not exist!');
+  process.exit(1);
+}
+if (!fs.existsSync('public/sitemap.txt')) {
+  console.error('ERROR: public/sitemap.txt does not exist!');
+  process.exit(1);
+}
+
+const distSitemapTxt = fs.readFileSync('dist/sitemap.txt', 'utf8');
+const publicSitemapTxt = fs.readFileSync('public/sitemap.txt', 'utf8');
+
+const distTxtUrls = distSitemapTxt.trim().split('\n').map((l) => l.trim()).filter(Boolean);
+const publicTxtUrls = publicSitemapTxt.trim().split('\n').map((l) => l.trim()).filter(Boolean);
+
+if (distTxtUrls.length !== expectedTotalUrls) {
+  console.error(`ERROR: dist/sitemap.txt possui ${distTxtUrls.length} URLs, esperado ${expectedTotalUrls}!`);
+  process.exit(1);
+}
+if (publicTxtUrls.length !== expectedTotalUrls) {
+  console.error(`ERROR: public/sitemap.txt possui ${publicTxtUrls.length} URLs, esperado ${expectedTotalUrls}!`);
+  process.exit(1);
+}
+
+for (let i = 0; i < distTxtUrls.length; i++) {
+  const url = distTxtUrls[i];
+  if (url !== publicTxtUrls[i]) {
+    console.error(`ERROR: Divergência entre dist/sitemap.txt e public/sitemap.txt na linha ${i + 1}: ${url} vs ${publicTxtUrls[i]}`);
+    process.exit(1);
+  }
+  if (!url.startsWith('https://sociedadeativa.github.io/')) {
+    console.error(`ERROR: URL inválida em sitemap.txt: ${url}`);
+    process.exit(1);
+  }
+  if (!sitemapLocs.has(url)) {
+    console.error(`ERROR: URL em sitemap.txt (${url}) não existe no sitemap.xml!`);
+    process.exit(1);
+  }
+}
+
+console.log(`Validação do sitemap.txt aprovada: ${distTxtUrls.length} URLs canônicas em texto plano verificadas com 100% de paridade.`);
 
 // Auditoria de SEO nos 9 arquivos HTML gerados
 for (const filePath of requiredHtmlFiles) {

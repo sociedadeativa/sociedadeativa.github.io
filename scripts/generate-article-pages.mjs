@@ -339,7 +339,17 @@ function generateSitemap(generatedArticles) {
 
   const sitemapXml = xmlLines.join('\n');
   fs.writeFileSync(DIST_SITEMAP, sitemapXml, 'utf8');
-  console.log(`Sucesso: dist/sitemap.xml gerado com ${sitemapEntries.length} URLs (${canonicalSections.length} seções canônicas + ${sitemapEntries.length - canonicalSections.length} matérias individuais).`);
+  fs.writeFileSync(BASE_SITEMAP, sitemapXml, 'utf8');
+
+  // Gera sitemap.txt simples (uma URL canônica absoluta por linha)
+  // em conformidade com as diretrizes do Google Search Console e protocolo sitemaps.org
+  const DIST_SITEMAP_TXT = path.join(DIST_DIR, 'sitemap.txt');
+  const BASE_SITEMAP_TXT = path.join(rootDir, 'public', 'sitemap.txt');
+  const sitemapTxt = sitemapEntries.map((entry) => entry.loc).join('\n') + '\n';
+  fs.writeFileSync(DIST_SITEMAP_TXT, sitemapTxt, 'utf8');
+  fs.writeFileSync(BASE_SITEMAP_TXT, sitemapTxt, 'utf8');
+
+  console.log(`Sucesso: dist/sitemap.xml e dist/sitemap.txt gerados com ${sitemapEntries.length} URLs (${canonicalSections.length} seções canônicas + ${sitemapEntries.length - canonicalSections.length} matérias individuais).`);
 }
 
 function main() {
