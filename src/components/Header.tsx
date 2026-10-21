@@ -56,6 +56,50 @@ export const Header: React.FC<HeaderProps> = ({
   const ibovVariationInfo = formatDailyVariation(ibovIndicator?.variation ?? null);
   const isIbovOpen = b3MarketInfo.isOpen;
 
+  // Trend arrows: calculadas estritamente a partir de dados de comparação válidos e neutros (sem inferência de bom/ruim)
+  const ipcaVariation =
+    typeof ipcaIndicator?.variation === "number" && !isNaN(ipcaIndicator.variation)
+      ? ipcaIndicator.variation
+      : null;
+  const ipcaTrendArrow =
+    ipcaVariation !== null && ipcaVariation !== 0
+      ? ipcaVariation > 0
+        ? "↑"
+        : "↓"
+      : null;
+
+  const selicVariation =
+    typeof selicIndicator?.variation === "number" && !isNaN(selicIndicator.variation)
+      ? selicIndicator.variation
+      : null;
+  const selicTrendArrow =
+    selicVariation !== null && selicVariation !== 0
+      ? selicVariation > 0
+        ? "↑"
+        : "↓"
+      : null;
+
+  const dolarVariation =
+    typeof dolarIndicator?.variation === "number" && !isNaN(dolarIndicator.variation)
+      ? dolarIndicator.variation
+      : null;
+  const dolarTrendArrow =
+    dolarVariation !== null && dolarVariation !== 0
+      ? dolarVariation > 0
+        ? "↑"
+        : "↓"
+      : null;
+
+  const hasIbovVariation =
+    hasIbovValue &&
+    ibovVariationInfo.type !== "unavailable" &&
+    ibovVariationInfo.type !== "zero";
+  const ibovTrendArrow = hasIbovVariation
+    ? ibovVariationInfo.type === "positive"
+      ? "↑"
+      : "↓"
+    : null;
+
   const mainNavLinks: { route: PortalRoute; label: string; colorClass: string; activeClass: string }[] = [
     {
       route: "politica",
@@ -125,126 +169,146 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="border-b border-slate-200 bg-white/98 backdrop-blur-md sticky top-0 z-40 transition-all">
-      {/* 1. Barra de Utilitários e Indicadores Rápidos (Civic Ticker Oficial) */}
+      {/* 1. Barra de Utilitários e Mini-Cards de Indicadores Econômicos */}
       <div className="bg-slate-900 text-slate-300 text-[11px] py-1.5 px-4 sm:px-6 lg:px-8 border-b border-slate-800 block">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3 overflow-x-auto scrollbar-none py-0.5">
-            <span className="font-bold text-white uppercase tracking-wider text-[10px] shrink-0 flex items-center gap-1">
-              <TrendingUp className="w-3 h-3 text-emerald-400" />
-              Radar Oficial:
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-2.5 sm:gap-4">
+          {/* Mini-Cards dos Indicadores Econômicos (IPCA, Selic, PTAX e Ibovespa) */}
+          <div className="flex items-center gap-2 overflow-x-auto scrollbar-none py-0.5">
+            <span className="font-heading font-extrabold text-slate-300 uppercase tracking-wider text-[10px] shrink-0 hidden sm:inline-flex items-center gap-1.5 mr-0.5">
+              <TrendingUp className="w-3 h-3 text-slate-400" />
+              <span>Indicadores:</span>
             </span>
-            <div className="flex items-center gap-3 sm:gap-4 text-xs font-mono tabular-nums whitespace-nowrap shrink-0">
+
+            {/* Mini-Card 1: IPCA */}
+            <PortalLink
+              route="economia"
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-slate-500/60 transition-colors shrink-0 text-xs text-slate-200"
+              title={`IPCA mensal oficial: ${ipcaVal} (${ipcaRef}) — Fonte: IBGE`}
+            >
+              <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">IPCA:</span>
+              <span className="font-mono font-bold text-white tabular-nums">{ipcaVal}</span>
+              {ipcaTrendArrow && (
+                <span className="font-mono text-[11px] text-slate-400 font-semibold" aria-label={`Variação de ${ipcaVariation} ponto percentual`}>
+                  {ipcaTrendArrow}
+                </span>
+              )}
+              <span className="text-[10px] text-slate-400 font-sans">
+                [{ipcaRef.replace("setembro 2026", "Set/26").replace("Setembro 2026", "Set/26")} · IBGE]
+              </span>
+            </PortalLink>
+
+            {/* Mini-Card 2: Selic Meta */}
+            <PortalLink
+              route="economia"
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-slate-500/60 transition-colors shrink-0 text-xs text-slate-200"
+              title={`Taxa Selic Meta Copom: ${selicVal} (${selicRef}) — Fonte: BCB`}
+            >
+              <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">Selic:</span>
+              <span className="font-mono font-bold text-white tabular-nums">{selicVal}</span>
+              {selicTrendArrow && (
+                <span className="font-mono text-[11px] text-slate-400 font-semibold">
+                  {selicTrendArrow}
+                </span>
+              )}
+              <span className="text-[10px] text-slate-400 font-sans">
+                [{selicBadgeText}]
+              </span>
+            </PortalLink>
+
+            {/* Mini-Card 3: PTAX Venda */}
+            <PortalLink
+              route="economia"
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-slate-500/60 transition-colors shrink-0 text-xs text-slate-200"
+              title={`Dólar Comercial PTAX Venda oficial: ${dolarVal} (${dolarRef}) — Fonte: BCB`}
+            >
+              <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">PTAX:</span>
+              <span className="font-mono font-bold text-white tabular-nums">{dolarVal}</span>
+              {dolarTrendArrow && (
+                <span className="font-mono text-[11px] text-slate-400 font-semibold" aria-label={`Variação de ${dolarVariation}`}>
+                  {dolarTrendArrow}
+                </span>
+              )}
+              <span className="text-[10px] text-slate-400 font-sans">
+                [{dolarRef.replace("Fechamento PTAX ", "").replace("PTAX ", "")} · BCB]
+              </span>
+            </PortalLink>
+
+            {/* Mini-Card 4: Ibovespa (IBOV) B3 */}
+            <div className="flex items-center rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-slate-500/60 transition-colors shrink-0 text-xs text-slate-200">
               <PortalLink
                 route="economia"
-                className="text-slate-200 hover:text-white transition-colors flex items-center gap-1"
-                title={`IPCA mensal oficial: ${ipcaVal} (${ipcaRef}) - IBGE`}
+                className="flex items-center gap-1.5 px-2.5 py-1 text-slate-200 hover:text-white transition-colors"
+                title={`Ibovespa (IBOV): ${ibovVal} (${ibovVariationInfo.formatted}). ${
+                  isIbovOpen
+                    ? "Pregão Aberto (cotações públicas com defasagem regulatória mínima de 15 min)."
+                    : "Mercado Fechado (último fechamento oficial consolidado)."
+                } ${isIbovOpen ? "Cotação:" : "Fechamento:"} ${ibovTimestamp}. Fonte oficial: B3.`}
               >
-                <strong className="text-emerald-400 font-sans font-bold text-[11px]">IPCA (mensal):</strong>
-                <span>{ipcaVal}</span>
-                <span className="text-[10px] text-slate-400 font-sans ml-0.5">[{ipcaRef.replace("setembro 2026", "Set/26")} · IBGE]</span>
-              </PortalLink>
-
-              <span className="text-slate-600" aria-hidden="true">·</span>
-
-              <PortalLink
-                route="economia"
-                className="text-slate-200 hover:text-white transition-colors flex items-center gap-1"
-                title={`Taxa Selic Meta Copom: ${selicVal} (${selicRef}) - BCB`}
-              >
-                <strong className="text-emerald-400 font-sans font-bold text-[11px]">Selic Meta:</strong>
-                <span>{selicVal}</span>
-                <span className="text-[10px] text-slate-400 font-sans ml-0.5">[{selicBadgeText}]</span>
-              </PortalLink>
-
-              <span className="text-slate-600" aria-hidden="true">·</span>
-
-              <PortalLink
-                route="economia"
-                className="text-slate-200 hover:text-white transition-colors flex items-center gap-1"
-                title={`Dólar Comercial PTAX Venda oficial: ${dolarVal} (${dolarRef}) - BCB`}
-              >
-                <strong className="text-emerald-400 font-sans font-bold text-[11px]">PTAX Venda:</strong>
-                <span>{dolarVal}</span>
-                <span className="text-[10px] text-slate-400 font-sans ml-0.5">[{dolarRef.replace("Fechamento PTAX ", "")} · BCB]</span>
-              </PortalLink>
-
-              <span className="text-slate-600" aria-hidden="true">·</span>
-
-              {/* Ibovespa (IBOV) B3 */}
-              <div className="flex items-center gap-1 shrink-0">
-                <PortalLink
-                  route="economia"
-                  className="text-slate-200 hover:text-white transition-colors flex items-center gap-1.5"
-                  title={`Ibovespa (IBOV): ${ibovVal} (${ibovVariationInfo.formatted}). ${
-                    isIbovOpen
-                      ? "Pregão Aberto (cotações públicas com defasagem regulatória mínima de 15 min)."
-                      : "Mercado Fechado (último fechamento oficial consolidado)."
-                  } ${isIbovOpen ? "Cotação:" : "Fechamento:"} ${ibovTimestamp}. Fonte oficial: B3.`}
-                >
-                  <strong className="text-emerald-400 font-sans font-bold text-[11px]">Ibovespa (IBOV):</strong>
-                  <span>{ibovVal}</span>
-                  {hasIbovValue && ibovVariationInfo.type !== "unavailable" && (
-                    <span
-                      className={`text-[10px] px-1 py-0.2 rounded font-bold transition-colors ${
-                        ibovVariationInfo.type === "positive"
-                          ? "text-emerald-300 bg-emerald-950/80 border border-emerald-500/30"
-                          : ibovVariationInfo.type === "negative"
-                          ? "text-rose-300 bg-rose-950/80 border border-rose-500/30"
-                          : "text-slate-300 bg-slate-800 border border-slate-700"
-                      }`}
-                    >
-                      {ibovVariationInfo.formatted}
-                    </span>
-                  )}
-                  <span className="text-[10px] text-slate-400 font-sans ml-0.5">
-                    [{isIbovOpen ? "Aberto · 15m" : "Fechado"} · {ibovTimestamp.split(" ")[0].slice(0, 5)} · B3]
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">IBOV:</span>
+                <span className="font-mono font-bold text-white tabular-nums">{ibovVal}</span>
+                {hasIbovValue && ibovVariationInfo.type !== "unavailable" && (
+                  <span className="text-[10px] px-1 py-0.2 rounded font-mono font-semibold bg-slate-700/60 text-slate-300 border border-slate-600/50 flex items-center gap-0.5">
+                    {ibovTrendArrow && <span>{ibovTrendArrow}</span>}
+                    <span>{ibovVariationInfo.formatted}</span>
                   </span>
-                </PortalLink>
-                <a
-                  href="https://b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/cotacoes/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-emerald-400 transition-colors p-0.5 inline-flex items-center"
-                  title="Abrir cotação oficial diretamente no portal da B3 (defasagem de 15 min)"
-                  aria-label="Abrir cotação oficial do Ibovespa no portal da B3"
-                >
-                  <ExternalLink className="w-2.5 h-2.5" />
-                </a>
-              </div>
-
-              <span className="text-slate-600" aria-hidden="true">·</span>
-
-              <PortalLink
-                route="eleicoes"
-                className="text-slate-200 hover:text-white transition-colors flex items-center gap-1"
-                title="Eleições 2026: 100% das seções totalizadas pelo TSE no 1º turno"
-              >
-                <strong className="text-blue-400 font-sans font-bold text-[11px]">Eleições 2026:</strong>
-                <span>100% Apurado</span>
-                <span className="text-[10px] text-slate-400 font-sans ml-0.5">[1º Turno · TSE]</span>
+                )}
+                <span className="text-[10px] text-slate-400 font-sans">
+                  [{isIbovOpen ? "Aberto · 15m" : "Fechado"} · B3]
+                </span>
               </PortalLink>
+              <a
+                href="https://b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/cotacoes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pr-2 pl-0.5 py-1 text-slate-400 hover:text-white transition-colors inline-flex items-center"
+                title="Abrir cotação oficial diretamente no portal da B3 (defasagem de 15 min)"
+                aria-label="Abrir cotação oficial do Ibovespa no portal da B3"
+              >
+                <ExternalLink className="w-2.5 h-2.5" />
+              </a>
             </div>
+
+            {/* Mini-Card 5: Eleições 2026 (Apuração 1º Turno) */}
+            <PortalLink
+              route="eleicoes"
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-slate-500/60 transition-colors shrink-0 text-xs text-slate-200"
+              title="Eleições 2026: 100% das seções totalizadas pelo TSE no 1º turno"
+            >
+              <span className="text-[10px] font-extrabold uppercase tracking-wider text-blue-400">Eleições:</span>
+              <span className="font-mono font-bold text-white tabular-nums">100% Apurado</span>
+              <span className="text-[10px] text-slate-400 font-sans">[1ºT · TSE]</span>
+            </PortalLink>
           </div>
 
-          <div className="flex items-center gap-3 shrink-0 text-[11px] font-sans">
+          {/* Links Institucionais e Link Técnico JSON TSE Discreto */}
+          <div className="flex items-center gap-2.5 shrink-0 text-[11px] font-sans text-slate-400">
             <PortalLink
               route="sobre"
               className="text-slate-300 hover:text-white transition-colors"
             >
               Transparência &amp; Fontes
             </PortalLink>
-            <span className="text-slate-700" aria-hidden="true">|</span>
+            <span className="text-slate-700" aria-hidden="true">·</span>
             <button
               onClick={onOpenMethodology}
               className="text-slate-300 hover:text-white transition-colors cursor-pointer"
             >
               Metodologia
             </button>
+            <span className="text-slate-700" aria-hidden="true">·</span>
+            <button
+              onClick={onOpenDataInspector}
+              className="text-slate-400 hover:text-slate-200 transition-colors cursor-pointer inline-flex items-center gap-1 text-[11px]"
+              title="Inspecionar dados oficiais em formato JSON (TSE)"
+            >
+              <Database className="w-3 h-3 text-slate-400" />
+              <span>JSON TSE</span>
+            </button>
           </div>
         </div>
       </div>
 
-      {/* 2. Bloco Central da Marca (Logotipo, Wordmark e Subtítulo) e Ações Laterais */}
+      {/* 2. Bloco Central da Marca (Logotipo, Wordmark e Subtítulo) e Ação de Busca */}
       <div className="border-b border-slate-100">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 sm:py-4 flex items-center justify-center">
           {/* Marca / Identidade Editorial Sociedade Ativa Centralizada */}
@@ -269,7 +333,7 @@ export const Header: React.FC<HeaderProps> = ({
             </p>
           </PortalLink>
 
-          {/* Ações Rápidas (Busca e JSON TSE) mantidas acessíveis sem deslocar a marca ou navegação */}
+          {/* Ação de Busca e Menu Mobile */}
           <div className="absolute right-4 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 flex items-center gap-1.5 sm:gap-2">
             {onOpenSearch && (
               <button
@@ -282,15 +346,6 @@ export const Header: React.FC<HeaderProps> = ({
                 <span className="hidden sm:inline">Buscar</span>
               </button>
             )}
-
-            <button
-              onClick={onOpenDataInspector}
-              className="hidden md:flex min-h-[36px] sm:min-h-[38px] px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 hover:text-slate-950 transition-colors items-center gap-1.5 text-xs font-bold shadow-2xs cursor-pointer whitespace-nowrap active:bg-slate-100 focus-visible:ring-2 focus-visible:ring-blue-700"
-              title="Inspecionar dados oficiais em formato JSON"
-            >
-              <Database className="w-3.5 h-3.5 text-slate-500" />
-              <span>JSON TSE</span>
-            </button>
 
             {/* Botão de Menu Mobile */}
             <button
