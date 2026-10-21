@@ -258,40 +258,73 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
               </div>
             </div>
 
-            {/* Radar Cívico / Boletim em Tempo Real */}
+            {/* Radar Cívico / Boletim em Tempo Real com Linha do Tempo Vertical Sutil */}
             <div className="pt-6 border-t border-slate-100">
               <div className="bg-slate-50 rounded-2xl p-4 sm:p-5 border border-slate-200/80">
-                <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center justify-between mb-3.5 pb-2.5 border-b border-slate-200/60">
                   <span className="font-heading text-xs font-black uppercase tracking-wider text-slate-900 flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5 text-blue-900" />
                     <span>Radar Cívico · Despachos Oficiais</span>
                   </span>
-                  <span className="text-[10px] font-mono text-slate-500 font-bold">
+                  <span className="text-[10px] font-mono text-slate-500 font-bold bg-white px-2 py-0.5 rounded border border-slate-200/70">
                     Hoje
                   </span>
                 </div>
 
-                <ul className="space-y-3 text-xs">
-                  {civicWireArticles.map((item) => (
-                    <li
-                      key={item.id}
-                      onClick={() => onOpenArticleDetails(item)}
-                      className="group cursor-pointer hover:text-blue-900 transition-colors flex items-start gap-2"
-                    >
-                      <span className="text-blue-900 font-bold shrink-0 mt-0.5">•</span>
-                      <div className="min-w-0">
-                        <span className="text-slate-800 font-medium group-hover:text-blue-900 leading-snug line-clamp-2">
-                          {item.title}
-                        </span>
-                        <div className="text-[10px] text-slate-400 mt-0.5">
-                          <span>{item.source}</span>
-                          <span className="mx-1" aria-hidden="true">·</span>
-                          <span>{item.publishedAt.includes(" às ") ? item.publishedAt.split(" às ")[1] : item.publishedAt}</span>
-                        </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
+                {civicWireArticles.length > 0 ? (
+                  <ol className="relative ml-0.5 space-y-0">
+                    {civicWireArticles.map((item, idx) => {
+                      const isLast = idx === civicWireArticles.length - 1;
+                      const timeString = item.publishedAt.includes(" às ")
+                        ? item.publishedAt.split(" às ")[1]
+                        : item.publishedAt;
+
+                      return (
+                        <li
+                          key={item.id}
+                          onClick={() => onOpenArticleDetails(item)}
+                          className="group relative pl-5 pb-3.5 last:pb-0 cursor-pointer"
+                        >
+                          {/* Linha vertical conectando os nós da timeline */}
+                          {!isLast && (
+                            <div
+                              className="absolute left-[3px] top-2.5 bottom-0 w-px bg-slate-200 group-hover:bg-blue-300 transition-colors"
+                              aria-hidden="true"
+                            />
+                          )}
+
+                          {/* Ponto / nó da timeline */}
+                          <div
+                            className="absolute left-0 top-1.5 w-[7px] h-[7px] rounded-full bg-slate-300 ring-2 ring-slate-50 group-hover:bg-blue-900 group-hover:ring-blue-100 transition-all"
+                            aria-hidden="true"
+                          />
+
+                          {/* Cabeçalho do despacho: horário e órgão oficial */}
+                          <div className="flex items-center gap-1.5 text-[10px] text-slate-500 font-mono mb-0.5">
+                            <span className="font-bold text-slate-700 tabular-nums">
+                              {timeString}
+                            </span>
+                            <span className="text-slate-300 font-sans" aria-hidden="true">
+                              ·
+                            </span>
+                            <span className="font-medium text-slate-500 font-sans truncate">
+                              {item.source}
+                            </span>
+                          </div>
+
+                          {/* Conteúdo / Título do Despacho */}
+                          <p className="text-xs font-medium text-slate-800 group-hover:text-blue-900 leading-snug line-clamp-2 transition-colors">
+                            {item.title}
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ol>
+                ) : (
+                  <p className="text-xs text-slate-500 py-3 text-center">
+                    Nenhum despacho recente disponível no momento.
+                  </p>
+                )}
               </div>
             </div>
           </div>
