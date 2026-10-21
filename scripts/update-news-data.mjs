@@ -422,6 +422,37 @@ export function normalizeImageUrl(url, baseUrl = '') {
 }
 
 /**
+ * Extrai parágrafos autênticos de conteúdo HTML/RSS limpando marcações, scripts e ruídos
+ */
+export function extractParagraphs(rawHtml) {
+  if (!rawHtml || typeof rawHtml !== 'string') return undefined;
+  let text = decodeHtmlEntities(rawHtml);
+  text = text.replace(/<(script|style|iframe|object|embed|svg)[\s\S]*?<\/\1>/gi, ' ');
+  text = text.replace(/<blockquote[\s\S]*?<\/blockquote>/gi, ' ');
+  text = text.replace(/<h[1-6][\s\S]*?<\/h[1-6]>/gi, ' ');
+  text = text.replace(/<ul[\s\S]*?<\/ul>/gi, ' ');
+  text = text.replace(/<ol[\s\S]*?<\/ol>/gi, ' ');
+
+  // Normaliza quebras de blocos HTML (p, div, li, br) para delimitar parágrafos reais
+  text = text.replace(/<\/(p|div|li)>/gi, '\n\n');
+  text = text.replace(/<br\s*\/?>/gi, '\n');
+  text = text.replace(/<[^>]+>/g, ' ');
+
+  const rawBlocks = text.split(/\n\s*\n/);
+  const paragraphs = [];
+  for (let b of rawBlocks) {
+    b = decodeHtmlEntities(b);
+    b = b.replace(/[\r\n\t]+/g, ' ').replace(/\s+/g, ' ').trim();
+    if (b.length < 25) continue;
+    if (/^(foto|cr[eé]dito|imagem|legenda)\s*[:–-]/i.test(b)) continue;
+    if (/(ebc\.png|ebc\.gif|tracking|pixel|beacon)/i.test(b)) continue;
+    if (/^(not[ií]cias?\s+relacionadas?|leia\s+mais|veja\s+tamb[eé]m)\s*[:–-]?$/i.test(b)) continue;
+    paragraphs.push(b);
+  }
+  return paragraphs.length > 0 ? paragraphs : undefined;
+}
+
+/**
  * Converte data para padrão brasileiro oficial: DD/MM/YYYY às HH:mm no fuso de Brasília (UTC-3)
  */
 function parseDateToBrasilia(dateStr) {
@@ -771,6 +802,11 @@ async function fetchAgenciaBrasil() {
           _timestamp: timestamp
         };
 
+        const paragraphs = extractParagraphs(rawDesc);
+        if (paragraphs && paragraphs.length > 0) {
+          ebcItem.content = paragraphs;
+        }
+
         if (imageUrl) {
           ebcItem.imageUrl = imageUrl;
           ebcItem.imageCredit = author || 'Agência Brasil';
@@ -863,6 +899,11 @@ async function fetchCamara() {
         tags,
         _timestamp: timestamp
       };
+
+      const paragraphs = extractParagraphs(rawEncoded || rawDesc);
+      if (paragraphs && paragraphs.length > 0) {
+        camaraItem.content = paragraphs;
+      }
 
       if (imageUrl) {
         camaraItem.imageUrl = imageUrl;
@@ -1053,6 +1094,11 @@ async function fetchBancoCentral() {
         tags,
         _timestamp: timestamp
       };
+
+      const paragraphs = extractParagraphs(item.corpo);
+      if (paragraphs && paragraphs.length > 0) {
+        bcbItem.content = paragraphs;
+      }
 
       if (imageUrl) {
         bcbItem.imageUrl = imageUrl;
@@ -1249,6 +1295,11 @@ async function main() {
           item.imageCaption = existing.imageCaption;
           item.imageAlt = existing.imageAlt;
         }
+        if (!item.content && existing.content) {
+          item.content = existing.content;
+        } else if (item.content && (!existing.content || item.content.length > existing.content.length)) {
+          existing.content = item.content;
+        }
         deduplicatedByUrl.set(normUrl, item);
       } else {
         if (!existing.imageUrl && item.imageUrl) {
@@ -1256,6 +1307,9 @@ async function main() {
           existing.imageCredit = item.imageCredit;
           existing.imageCaption = item.imageCaption;
           existing.imageAlt = item.imageAlt;
+        }
+        if (!existing.content && item.content) {
+          existing.content = item.content;
         }
       }
     } else {
@@ -1283,6 +1337,11 @@ async function main() {
           item.imageCaption = existing.imageCaption;
           item.imageAlt = existing.imageAlt;
         }
+        if (!item.content && existing.content) {
+          item.content = existing.content;
+        } else if (item.content && (!existing.content || item.content.length > existing.content.length)) {
+          existing.content = item.content;
+        }
         deduplicatedById.set(item.id, item);
       } else {
         if (!existing.imageUrl && item.imageUrl) {
@@ -1290,6 +1349,9 @@ async function main() {
           existing.imageCredit = item.imageCredit;
           existing.imageCaption = item.imageCaption;
           existing.imageAlt = item.imageAlt;
+        }
+        if (!existing.content && item.content) {
+          existing.content = item.content;
         }
       }
     } else {

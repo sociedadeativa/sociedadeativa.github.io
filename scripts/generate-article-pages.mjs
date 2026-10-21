@@ -101,6 +101,14 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
+function escapeParagraphText(str) {
+  if (!str) return '';
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
 function escapeJson(str) {
   if (!str) return '';
   return JSON.stringify(str).slice(1, -1);
@@ -550,15 +558,26 @@ function main() {
           <article>
             <p style="font-size:12px;font-weight:bold;text-transform:uppercase;color:#1e40af;margin-bottom:8px;">${escapeHtml(article.category)}</p>
             <h1 style="font-size:28px;line-height:1.2;font-weight:900;color:#020617;margin-bottom:16px;">${escapeHtml(article.title)}</h1>
-            <p style="font-size:16px;line-height:1.6;font-weight:600;color:#334155;background:#f8fafc;padding:16px;border-radius:12px;border:1px solid #e2e8f0;margin-bottom:20px;">${escapeHtml(cleanSummaryText)}</p>
-            <div style="font-size:12px;color:#64748b;margin-bottom:24px;border-bottom:1px solid #e2e8f0;padding-bottom:12px;">
+            <div style="font-size:12px;color:#64748b;margin-bottom:20px;border-bottom:1px solid #e2e8f0;padding-bottom:12px;">
               <span><strong>Fonte:</strong> ${escapeHtml(article.source)}</span> &middot; 
               ${timestampHtml}
             </div>${imageBlockHtml}
             ${
               article.content && article.content.length > 0
-                ? article.content.map(p => `<p style="font-size:15px;line-height:1.7;color:#1e293b;margin-bottom:16px;">${escapeHtml(p)}</p>`).join('')
-                : `<p style="font-size:13px;color:#64748b;font-style:italic;margin-bottom:20px;">Esta é uma súmula factual oficial distribuída por ${escapeHtml(article.source)}. Acesse a matéria original para conferir documentos e anexos completos.</p>`
+                ? `
+            <div style="background:#f8fafc;padding:16px;border-radius:12px;border:1px solid #e2e8f0;margin-bottom:24px;">
+              <span style="display:block;font-size:11px;font-weight:bold;text-transform:uppercase;color:#475569;margin-bottom:6px;">Resumo Executivo</span>
+              <p style="font-size:16px;line-height:1.6;font-weight:600;color:#334155;margin:0;">${escapeHtml(cleanSummaryText)}</p>
+            </div>
+            <div style="margin-top:24px;margin-bottom:32px;">
+              ${article.content.map(p => `<p style="font-size:16px;line-height:1.75;color:#1e293b;margin-bottom:18px;">${escapeParagraphText(p)}</p>`).join('')}
+            </div>`
+                : `
+            <div style="background:#f8fafc;padding:18px;border-radius:12px;border:1px solid #cbd5e1;margin-bottom:24px;">
+              <span style="display:inline-block;font-size:11px;font-weight:bold;text-transform:uppercase;color:#1e40af;background:#eff6ff;padding:3px 8px;border-radius:6px;border:1px solid #bfdbfe;margin-bottom:10px;">Nota de Síntese Factual Oficial</span>
+              <p style="font-size:16px;line-height:1.6;font-weight:600;color:#334155;margin:0 0 12px 0;">${escapeHtml(cleanSummaryText)}</p>
+              <p style="font-size:13px;line-height:1.5;color:#64748b;margin:0;border-top:1px dashed #cbd5e1;padding-top:10px;">Esta publicação é uma súmula factual oficial distribuída por <strong>${escapeHtml(article.source)}</strong>. A reportagem completa com documentos e anexos integrais está disponível na fonte oficial.</p>
+            </div>`
             }
             <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
               <a href="${escapeHtml(article.articleUrl)}" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#1e3a8a;color:#ffffff;padding:10px 20px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:bold;">Acessar reportagem completa em ${escapeHtml(article.source)}</a>

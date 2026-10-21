@@ -178,6 +178,14 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
 
           {/* Resumo Oficial em Destaque */}
           <div className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 mb-6 shadow-2xs">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5 flex items-center gap-1.5">
+              <ShieldCheck className="w-3.5 h-3.5 text-blue-700" />
+              <span>
+                {article.content && article.content.length > 0
+                  ? "Resumo do Fato"
+                  : "Nota de Síntese Factual Oficial"}
+              </span>
+            </div>
             <p className="text-sm sm:text-base font-semibold text-slate-700 leading-relaxed">
               {article.summary}
             </p>

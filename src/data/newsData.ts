@@ -5,6 +5,207 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "camara-1312742-empresarios-e-advogados-sao-ma",
+    "title": "Empresários e advogados são maioria entre os deputados eleitos para a nova legislatura",
+    "summary": "Considerando as áreas de atuação, saúde e educação têm o maior destaque.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1312742-empresarios-e-advogados-sao-maioria-entre-os-deputados-eleitos-para-a-nova-legislatura",
+    "publishedAt": "21/10/2026 às 14:51",
+    "category": "Congresso",
+    "ingestedAt": "21/10/2026 às 14:58",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/profissoes-deputados-2026.jpg",
+    "imageCaption": "Empresários e advogados são maioria entre os deputados eleitos para a nova legislatura",
+    "imageCredit": "Câmara dos Deputados",
+    "imageAlt": "Empresários e advogados são maioria entre os deputados eleitos para a nova legislatura",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "A futura composição da Câmara dos Deputados em relação às profissões dos eleitos no último dia 4 será parecida com a atual.",
+      "Novamente, os empresários (147) e advogados (101) são a maioria entre os deputados eleitos. Em seguida, vêm professores (44), administradores (42), médicos (42), engenheiros (26) e produtores rurais (26).",
+      "Considerando áreas de atuação, destacam-se a saúde, com 60 integrantes; educação, com 47 integrantes; e segurança, com 38 integrantes. Outra área que se destaca é a religiosa, com 13 integrantes, dos quais 10 são pastores, 2 são teólogos e 1 é padre.",
+      "Muitos eleitos declararam duas ou três profissões/ocupações, de modo que estas somam 702 – número superior ao de deputados, que é 513.",
+      "O levantamento foi feito pelo Departamento Intersindical de Assessoria Parlamentar (Diap) e é mais completo do que os dados gerais do Tribunal Superior Eleitoral (TSE). Ao registrarem suas candidaturas, diversos candidatos declaram ser \"deputado\" ou informam outro cargo político, que é a ocupação atual, mas não declaram sua profissão de origem. O levantamento apura a profissão de cada um, além da ocupação.",
+      "A posse dos novos deputados está marcada para 1º de fevereiro de 2027, que é o início da 58ª legislatura.",
+      "Veja abaixo a lista completa das profissões dos deputados eleitos.",
+      "Veja a composição atual da Câmara dos Deputados por profissão"
+    ]
+  },
+  {
+    "id": "ebc-1706106",
+    "title": "Importações para pesquisa pública terão imunidade tributária",
+    "summary": "O Ministério da Fazenda anunciou nesta quarta-feira (21) medidas para assegurar a aplicação da imunidade tributária prevista na Constituição nas importações para projetos de universidades públicas, institutos federais e instituições públicas de ciência, tecnologia e inovação.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/importacoes-para-pesquisa-publica-terao-imunidade-tributaria",
+    "publishedAt": "21/10/2026 às 14:41",
+    "category": "Economia",
+    "ingestedAt": "21/10/2026 às 14:58",
+    "imageUrl": "https://imagens.ebc.com.br/38fBcl1RwAZsYExSygcoXN6SiX4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/20160613_111238_resized.jpg?itok=pdqxsfj0",
+    "imageCaption": "Importações para pesquisa pública terão imunidade tributária",
+    "imageCredit": "Pedro Peduzzi - Repórter da Agência Brasil",
+    "imageAlt": "Importações para pesquisa pública terão imunidade tributária",
+    "author": "Pedro Peduzzi - Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "importação",
+      "insumos",
+      "Ciência",
+      "tecnologia"
+    ],
+    "content": [
+      "O Ministério da Fazenda anunciou nesta quarta-feira (21) medidas para assegurar a aplicação da imunidade tributária prevista na Constituição nas importações para projetos de universidades públicas, institutos federais e instituições públicas de ciência, tecnologia e inovação.",
+      "De acordo com o ministério, equipamentos, softwares e insumos importados por fundações de apoio em nome dessas instituições passam a contar com o amparo da imunidade tributária recíproca .",
+      "A medida, segundo a pasta, permitirá que 100% dos recursos destinados à pesquisa sejam convertidos em tecnologia e insumos para laboratórios, sem perdas com tributação indevida.",
+      "A iniciativa busca dar segurança jurídica às operações de importação voltadas à pesquisa pública e eliminar dúvidas sobre a manutenção da imunidade quando as fundações de apoio atuam na gestão dos recursos e nos procedimentos de aquisição e despacho aduaneiro.",
+      "De acordo com o ministério, essa incerteza gerava risco de tributação e dificultava a compra de equipamentos, softwares e insumos para atividades de pesquisa.",
+      "A Fazenda também definiu que a administração financeira dos projetos pelas fundações é apenas um mecanismo operacional e não altera a natureza pública dos recursos vinculados às universidades e instituições de pesquisa.",
+      "Para ter acesso ao benefício, as operações deverão seguir uma série de exigências , como a realização da importação em nome da instituição pública, a movimentação dos recursos em conta exclusiva do projeto, a incorporação imediata dos bens ao patrimônio da universidade ou instituto beneficiado e a prestação de contas sujeita à fiscalização da Receita Federal e dos órgãos de controle.",
+      "Segundo o governo, a medida deve reduzir gargalos burocráticos, ampliar a capacidade de desenvolvimento científico e tecnológico do país e acelerar o reaparelhamento de universidades públicas, institutos federais e instituições públicas de pesquisa.",
+      "A medida também busca reduzir os efeitos das limitações do atual sistema de desoneração das importações para pesquisa científica , hoje condicionado a uma cota administrada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), apontada pelo governo como insuficiente para atender toda a demanda de universidades e instituições de pesquisa.",
+      "As mudanças foram definidas após discussões entre a Procuradoria-Geral da Fazenda Nacional (PGFN), a Receita Federal, a Advocacia-Geral da União (AGU) e representantes das universidades federais."
+    ]
+  },
+  {
+    "id": "ebc-1706105",
+    "title": "Democracia exige que perdedor respeite as regras do jogo, diz Fachin",
+    "summary": "O presidente do Supremo Tribunal Federal (STF), Edson Fachin, afirmou nesta quarta-feira (21) que o Estado Democrático de Direito exige “lealdade às regras do jogo, inclusive por parte de quem perde”.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/democracia-exige-que-perdedor-respeite-regras-do-jogo-diz-fachin",
+    "publishedAt": "21/10/2026 às 14:19",
+    "category": "Justiça",
+    "ingestedAt": "21/10/2026 às 14:58",
+    "imageUrl": "https://imagens.ebc.com.br/6-LSG4GLgpQioLx6Kp_2ZL61MPs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/21/55603645624_ea872fc2f4_o.jpg?itok=BdXcMxDz",
+    "imageCaption": "Democracia exige que perdedor respeite as regras do jogo, diz Fachin",
+    "imageCredit": "Felipe Pontes – Repórter da Agência Brasil",
+    "imageAlt": "Democracia exige que perdedor respeite as regras do jogo, diz Fachin",
+    "author": "Felipe Pontes – Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "crise no STF",
+      "Edson Fachin",
+      "stf",
+      "eleições 2026"
+    ],
+    "content": [
+      "O presidente do Supremo Tribunal Federal (STF), Edson Fachin, afirmou nesta quarta-feira (21) que o Estado Democrático de Direito exige “lealdade às regras do jogo, inclusive por parte de quem perde”.",
+      "O ministro discursou na abertura de um seminário realizado no STF sobre o papel dos tribunais constitucionais. Em sua fala, Fachin acrescentou que a democracia depende do respeito às decisões judiciais bem fundamentadas, embora com frequência, em tempos de polarização política, elas sejam “reduzidas e instrumentalizadas por slogans”.",
+      "Fachin deu as declarações a quatro dias do segundo turno da eleição presidencial, marcado para o próximo domingo (25).",
+      "Ele destacou que as democracias contemporâneas raramente são desfeitas por golpes abruptos, mas são corroídas por dentro, muitas vezes com aparência de legalidade: “pela captura gradual das instituições, pelo enfraquecimento dos controles, pela erosão da confiança pública”.",
+      "O presidente do STF disse ainda que “a consolidação democrática nunca é um ponto de chegada que, uma vez ultrapassado, está definitivamente conquistado; é uma tarefa permanente, que depende de instituições capazes de resistir e de uma cidadania disposta a defendê-las”.",
+      "O discurso do ministro foi proferido em meio a uma crise institucional sem precedentes no STF, com embates e acusações entre ministros envolvendo o caso do Banco Master, em que se apura fraudes financeiras bilionárias e a corrupção de agentes públicos.",
+      "A crise no STF acabou entrando na pauta das campanhas presidenciais, levando os principais candidatos a proporem reformas no Poder Judiciário."
+    ]
+  },
+  {
+    "id": "ebc-1706079",
+    "title": "TSE estuda desativar canais políticos no WhatsApp 48h antes da eleição",
+    "summary": "Uma minuta de resolução do Tribunal Superior Eleitoral (TSE) prevê que canais de WhatsApp com teor político e mais de 200 mil seguidores sejam desativados nas 48 horas anteriores e 24 horas posteriores ao segundo turno da eleição, marcado para o próximo domingo (25).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tse-estuda-desativar-canais-politicos-no-whatsapp-48h-antes-da-eleicao",
+    "publishedAt": "21/10/2026 às 13:51",
+    "category": "Eleições",
+    "ingestedAt": "21/10/2026 às 14:58",
+    "imageUrl": "https://imagens.ebc.com.br/Sl_y6XyUJcyLk6TLPrymfGz1LTA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/tse_1908200982.jpg?itok=j_pHDaMT",
+    "imageCaption": "TSE estuda desativar canais políticos no WhatsApp 48h antes da eleição",
+    "imageCredit": "Felipe Pontes - repórter da Agência Brasil",
+    "imageAlt": "TSE estuda desativar canais políticos no WhatsApp 48h antes da eleição",
+    "author": "Felipe Pontes - repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "TSE",
+      "Justiça Eleitoral",
+      "André Mendonça",
+      "Exército do Lula"
+    ],
+    "content": [
+      "Uma minuta de resolução do Tribunal Superior Eleitoral (TSE) prevê que canais de WhatsApp com teor político e mais de 200 mil seguidores sejam desativados nas 48 horas anteriores e 24 horas posteriores ao segundo turno da eleição, marcado para o próximo domingo (25).",
+      "Caso seja aprovada pelo plenário do TSE, a medida entraria em vigor de imediato , conforme o texto da minuta obtida pela Agência Brasil .",
+      "A minuta com a proposta passou a circular entre os ministros do TSE após o tema ser debatido em reuniões informais realizadas na sexta-feira (16) e na terça-feira (20). O texto foi redigido pelo ministro André Mendonça, vice-presidente da Corte Eleitora l.",
+      "Em nota à imprensa, o gabinete de Mendonça informou não se tratar de uma iniciativa pessoal do ministro, mas que coube a ele a autoria da minuta por ser tradição que as normas eleitorais sejam redigidas pelo vice-presidente do TSE.",
+      "“O objetivo discutido é proteger a integridade do pleito nas horas que antecedem e sucedem a votação, quando não há tempo hábil para resposta ou correção de conteúdos ilícitos”, diz a nota do gabinete de Mendonça.",
+      "A nota acrescenta ainda que o texto foi redigido a partir de um consenso interno, e que “os critérios em análise são objetivos e impessoais e valem igualmente para todos os canais de natureza político-eleitoral de grande alcance, qualquer que seja o candidato, o partido ou a orientação política”.",
+      "Caso seja aprovada, a iniciativa deve atingir o canal “Exército do Lula”, que atingiu nesta quarta (21) a marca de 7 milhões de inscritos no aplicativo de mensagens WhatsApp. Também seria desativado o canal “Tropa do Flávio”, que possui 2 milhões de inscritos .",
+      "O texto da minuta aplica aos canais de transmissão de natureza político-eleitoral com mais de 200 mil seguidores as mesmas restrições que já vigoram sobre o conteúdo impulsionado de campanha, aquele cujo alcance é potencializado mediante pagamento às plataformas.",
+      "O texto também considera haver “alcance desproporcional de canais com grande audiência na difusão de conteúdos ilícitos”.",
+      "Em outro trecho, a proposta diz ainda que “o período compreendido entre as 48 (quarenta e oito) horas antes e as 24 (vinte e quatro) horas depois da eleição concentra o maior risco de dano irreversível à formação livre da vontade do eleitorado, por não haver tempo hábil para resposta, esclarecimento ou tutela jurisdicional efetiva”.",
+      "A proposta surge após uma disputa de liminares em torno do canal “Exército do Lula”. Na semana passada, o canal foi retirado do ar pelo ministro Kássio Nunes Marques , presidente do TSE, após pedido da campanha do presidenciável Flávio Bolsonaro, que alegou disseminação de desinformação.",
+      "Logo em seguida, porém, o corregedor-nacional da Justiça Eleitoral, ministro Ricardo Villas Bôas Cueva, restabeleceu o canal . Ele afirmou não haver elementos que justificassem a medida e que Nunes Marques não poderia ter suspendido o canal por via administrativa, como fez, uma vez que o caso já tramitava pela via judicial em processo relatado pelo próprio corregedor.",
+      "Pouco depois, porém, Nunes Marques voltou a suspender o canal , alegando que mesmo sendo administrado por um apoiador, o deputado André Janones (Rede-MG), a ferramenta teria vínculo com a campanha oficial, e portanto deveria estar registrado no TSE como tal.",
+      "Por fim, o Exército do Lula acabou sendo liberado pelo presidente do TSE, após o registro ter sido feito pela campanha oficial ."
+    ]
+  },
+  {
+    "id": "ebc-1706098",
+    "title": "Governo envia ao Congresso proposta de tarifa zero no transporte",
+    "summary": "O governo federal enviou ao Congresso Nacional nesta quarta-feira (21) proposta de emenda à Constituição (PEC) que destina recursos de emendas parlamentares impositivas para o custeio da gratuidade dos serviços de transporte público coletivo urbano ou de caráter urbano.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/governo-envia-ao-congresso-proposta-de-tarifa-zero-no-transporte",
+    "publishedAt": "21/10/2026 às 13:49",
+    "category": "Política",
+    "ingestedAt": "21/10/2026 às 14:58",
+    "imageUrl": "https://imagens.ebc.com.br/UVgLWeFJvqL_xXZ4uMvdglcw_cc=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/transporte-urbano_mcamgo_abr_09082023-11.jpg?itok=DBmSooZt",
+    "imageCaption": "Governo envia ao Congresso proposta de tarifa zero no transporte",
+    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
+    "imageAlt": "Governo envia ao Congresso proposta de tarifa zero no transporte",
+    "author": "Paula Laboissière – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "transporte público",
+      "tarifa zero",
+      "governo federal",
+      "Lula"
+    ],
+    "content": [
+      "O governo federal enviou ao Congresso Nacional nesta quarta-feira (21) proposta de emenda à Constituição (PEC) que destina recursos de emendas parlamentares impositivas para o custeio da gratuidade dos serviços de transporte público coletivo urbano ou de caráter urbano, com potencial para financiar a tarifa zero aos fins de semana e feriados.",
+      "O texto estabelece a destinação de, no mínimo, 26,8% do montante global anual das programações de execução obrigatória provenientes de emendas parlamentares individuais e de bancada para o custeio da gratuidade do transporte coletivo. A proposta preserva recursos destinados a ações e serviços públicos de saúde e prevê que os valores sejam transferidos obrigatoriamente aos entes federados responsáveis pelos serviços.",
+      "“Como referência, o Projeto de Lei Orçamentária Anual (PLOA) de 2027 prevê R$ 44,8 bilhões em emendas parlamentares de execução obrigatória. Pela regra proposta, cerca de R$ 11,2 bilhões seriam destinados ao custeio da gratuidade do transporte público coletivo, montante com potencial para financiar a tarifa zero aos fins de semana e feriados”, detalhou, em nota, a Secretaria de Comunicação Social (Secom).",
+      "Segundo a pasta, a proposta busca ampliar o acesso da população ao trabalho, aos serviços públicos, à cultura e ao lazer, reduzindo as barreiras impostas pelo custo das tarifas . A Secom destacou ainda a importância da gratuidade para o direito de trabalhadores ao lazer, ao convívio familiar e à saúde, “especialmente no contexto da aprovação do fim da escala 6x1”.",
+      "Durante cerimônia no Palácio do Planalto, o presidente Luiz Inácio Lula da Silva avaliou que a gratuidade do transporte público urbano figura como uma “obsessão” de muitos, incluindo o movimento social. “É uma obsessão de muita gente que levanta às 4h30 para trabalhar e está gastando um bom dinheiro do seu salário para a condução”.",
+      "“Conseguimos fazer um teste. Se a coisa der certo, a gente vai procurar uma forma de estender isso mais. Na medida em que a gente aprovou o fim da escala 6x1 e está garantindo à sociedade brasileira dois dias de descanso no final de semana, é justo que a gente faça com que o transporte seja gratuito no final de semana e no feriado.”",
+      "De acordo com a Secom, os dispositivos relativos à destinação dos recursos produzirão efeitos a partir da Lei Orçamentária Anual de 2027. Segundo a justificativa da proposta, a medida não implica aumento da despesa primária nem afeta a meta de resultado primário, pois prevê a destinação de recursos dentro do montante de emendas parlamentares impositivas já estabelecido na Constituição Federal."
+    ]
+  },
+  {
+    "id": "ebc-1706099",
+    "title": "Procon paulistano multa Enel por falhas no fornecimento de energia",
+    "summary": "O Procon Paulistano, órgão vinculado à Secretaria de Justiça da prefeitura de São Paulo, multou a concessionária de energia Enel em R$ 11,4 milhões por problemas no fornecimento de energia elétrica na capital paulista ocorridos no ano passado.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/procon-paulistano-multa-enel-por-falhas-no-fornecimento-de-energia",
+    "publishedAt": "21/10/2026 às 13:43",
+    "category": "Economia",
+    "ingestedAt": "21/10/2026 às 14:58",
+    "imageUrl": "https://imagens.ebc.com.br/PQetpUAIL5uMEtvnd1yBV3lxiXo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/03/18/img_7119.jpg?itok=RVbaK42T",
+    "imageCaption": "Procon paulistano multa Enel por falhas no fornecimento de energia",
+    "imageCredit": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "imageAlt": "Procon paulistano multa Enel por falhas no fornecimento de energia",
+    "author": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "Procon",
+      "São Paulo",
+      "Enel",
+      "energia elétrica"
+    ],
+    "content": [
+      "O Procon Paulistano, órgão vinculado à Secretaria de Justiça da prefeitura de São Paulo, multou a concessionária de energia Enel em R$ 11,4 milhões por problemas no fornecimento de energia elétrica na capital paulista ocorridos no ano passado. A medida foi publicada no Diário Oficial da cidade de São Paulo desta quarta-feira (21).",
+      "Segundo o órgão, a multa se refere a falhas registradas entre setembro e dezembro de 2025, principalmente entre os dias 8 e 10 de dezembro, período em que até 3 milhões de consumidores ficaram sem fornecimento de energia elétrica.",
+      "A Enel poderá recorrer da decisão à Coordenadoria do Procon Paulistano no prazo de 15 dias, contados a partir da publicação.",
+      "De acordo com a prefeitura, a multa foi aplicada originalmente no ano passado pelo Procon Paulistano, em razão dos apagões que comprometeram a prestação de um serviço essencial aos consumidores. Após recurso apresentado pela concessionária, a decisão administrativa manteve a penalidade de R$ 11,4 milhões.",
+      "Procurada pela Agência Brasil , a Enel disse discordar da aplicação da punição e que “sua atuação durante os eventos climáticos extremos de dezembro e de setembro de 2025 foi compatível com a magnitude do impacto”.",
+      "De acordo com a concessionária, ventos fortes e prolongados atingiram a área de concessão por dois dias, em dezembro, e afetaram cerca de 4,4 milhões de consumidores.",
+      "Quanto à falha de energia identificada em setembro, a empresa informou que, naquela ocasião, “um vendaval com rajadas de cerca de 100 km/h atingiu a concessão, e a distribuidora restabeleceu a energia para mais de 90% dos clientes afetados em até 24 horas”."
+    ]
+  },
+  {
     "id": "ebc-1799001",
     "title": "Brasil conquista título no circuito mundial de vôlei de praia",
     "summary": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
@@ -45,6 +246,24 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "MEI",
       "microeempredor individual",
       "Lula"
+    ],
+    "content": [
+      "Foi sancionado nesta quarta-feira (21) o Projeto de Lei Complementar (PLP) nº 186/2026, que prevê o perdão de dívidas de microempreendedores individuais (MEIs) com a União e amplia o limite anual de faturamento da categoria.",
+      "O projeto foi aprovado pelo Senado Federal em votação nominal, com 78 votos favoráveis, nenhum contrário e nenhuma abstenção. A Câmara dos Deputados já havia aprovado a proposta por 461 votos a 4.",
+      "A lei integra o Prospera MEI, pacote lançado pelo governo federal com o objetivo de reduzir o endividamento, facilitar o acesso a recursos para investimentos e simplificar a rotina de microempreendedores individuais.",
+      "Em nota, a Secretaria de Comunicação Social (Secom) informou que a iniciativa pode beneficiar um total de 17,6 milhões de empreendedores, dos quais 7,8 milhões são mulheres.",
+      "De acordo com Lula, quase 4 milhões terão as dívidas perdoadas e ficarão com o \"nome limpo\". “Ele não vai poder pagar. O governo sabe que não vai receber. Mas fica aquele peso nas costas da pessoa. Resolvemos assumir a responsabilidade dessa dívida e perdoar os devedores”, completou.",
+      "A lei prevê a remissão integral dos débitos tributários federais dos MEIs de titularidade da União, inscritos ou não na Dívida Ativa da União até 13 de outubro de 2026.",
+      "O benefício abrange o valor original das contribuições previdenciárias em atraso, multas, juros e encargos de cobrança, inclusive dívidas ajuizadas ou parceladas.",
+      "A medida entra em vigor em 1º de janeiro de 2027 e prevê o perdão automático das dívidas, sem necessidade de solicitação pelo empreendedor à Procuradoria-Geral da Fazenda Nacional (PGFN).",
+      "Para manter o benefício, o MEI deverá pagar em dia as guias mensais do Documento de Arrecadação do Simples Nacional (DAS) durante os seis meses seguintes à entrada em vigor da lei.",
+      "A remissão também alcança o saldo devedor de parcelamentos em andamento, mas não permite a devolução de valores já pagos.",
+      "Microempreendedores que tenham processos judiciais em andamento para contestar as dívidas deverão desistir das ações para obter a baixa definitiva, sem cobrança de honorários advocatícios pela desistência.",
+      "A medida, de acordo com a Secom, pode beneficiar mais de 3,6 milhões de microempreendedores, com o perdão de mais de R$ 18,7 bilhões em dívidas. O valor médio dos débitos é de aproximadamente R$ 3,4 mil.",
+      "Ainda conforme a lei, o limite anual de faturamento do MEI passará dos atuais R$ 81 mil para R$ 110 mil em 2027 e para R$ 140 mil em 2028.",
+      "A proposta também permite a contratação de até dois empregados no lugar de apenas um. O teto de faturamento não era atualizado desde 2018.",
+      "“Com a mudança, o microempreendedor poderá aumentar sua receita sem precisar deixar o regime simplificado tão cedo, mantendo o pagamento mensal do Documento de Arrecadação do Simples Nacional (DAS)”, informou a Secom.",
+      "A mudança também pode beneficiar empresas do Simples Nacional com faturamento anual de até R$ 110 mil em 2027 e R$ 140 mil em 2028, que poderão voltar a se enquadrar como MEI, conforme regras previstas."
     ]
   },
   {
@@ -89,6 +308,18 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Metrô",
       "PIX",
       "Mobilidade Urbana"
+    ],
+    "content": [
+      "As máquinas de autoatendimento do metrô de São Paulo já estão aceitando o Pix como forma de pagamento.",
+      "A nova modalidade de pagamento passou a ser aceita nesta terça-feira (20), inicialmente, apenas para a Linha 1-Azul.",
+      "A funcionalidade será ampliada para usuários de outras linhas nos próximos dias, o que exige que os equipamentos sejam reprogramados.",
+      "Segundo a prefeitura, o calendário de implementação do sistema nas máquinas do Metrô ocorrerá da seguinte forma:",
+      "No sistema ferroviário, o recurso já está presente em todas as linhas e estações desde o primeiro semestre deste ano. A solução visa facilitar as possibilidades de pagamento tornando o Pix uma alternativa conveniente durante o processo de compras de bilhetes e recargas.",
+      "O modelo de pagamento está disponível nos terminais de venda automatizados, que oferecem diferentes opções para a compra e a recarga, incluindo cartões de crédito e débito.",
+      "Essa inovação amplia as opções de acesso às linhas do Metrô para os passageiros. Além de utilizar os guichês tradicionais e os cartões Bilhete Único e TOP, é possível adquirir bilhetes pelo WhatsApp (11 3777-9456), por aplicativo móvel (app TOP para Android e iOS), em caixas eletrônicos/máquinas ATM nas estações ou mediante pagamento por aproximação diretamente nas catracas.",
+      "Disponibilizado pelo Metrô em dezembro do ano passado, o pagamento por aproximação permite o uso de cartões de débito e crédito, tanto físicos quanto virtuais, via smartphones e smartwatches com carteira digital habilitada.",
+      "A modernização dos meios de ingresso ao sistema inclui também a aposentadoria do bilhete magnético, conhecido popularmente como Edmonson. Os passageiros têm até o dia 31 de outubro para usar este bilhete nas estações do Metrô e após esta data o Metrô vai disponibilizar postos de troca.",
+      "*Estagiário sob supervisão de Odair Braz Junior"
     ]
   },
   {
@@ -110,6 +341,30 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Congresso",
       "Brasil",
       "Notícias"
+    ],
+    "content": [
+      "Vinicius Loures/Câmara dos Deputados",
+      "Josivaldo JP: famílias em situação de vulnerabilidade terão prioridade no atendimento",
+      "O Projeto de Lei 3267/26 institui a Política Nacional de Apoio ao Desenvolvimento Integral de Crianças e Adolescentes Neurodivergentes e cria um fundo nacional para financiar ações de diagnóstico, tratamento, atendimento multiprofissional e inclusão escolar e social.",
+      "A proposta, em análise na Câmara dos Deputados, dá prioridade de atendimento à população em situação de vulnerabilidade socioeconômica.",
+      "O texto considera neurodivergentes crianças e adolescentes com funcionamento neurológico, cognitivo, comportamental ou de aprendizagem diferente do padrão majoritário.",
+      "A definição inclui condições como transtorno do espectro autista (TEA), transtorno do déficit de atenção com hiperatividade (TDAH), dislexia, discalculia, dispraxia e altas habilidades ou superdotação.",
+      "Entre os objetivos da política estão:",
+      "O texto também prevê apoio psicossocial às famílias e aos cuidadores, formação de profissionais e oferta de tecnologias assistivas e materiais pedagógicos adaptados.",
+      "O projeto cria o Fundo Nacional de Apoio ao Desenvolvimento Integral de Crianças e Adolescentes Neurodivergentes (Funadinca). A ideia é financiar centros de atendimento multiprofissional, mutirões de diagnóstico, terapias, serviços itinerantes, capacitação de profissionais e adaptação de ambientes escolares e de saúde.",
+      "Entre as fontes de recursos estão dotações do orçamento da União, emendas parlamentares, transferências de governos, doações e convênios.",
+      "A proposta determina que pelo menos 60% dos recursos anuais sejam destinados a ações voltadas prioritariamente a crianças e adolescentes de famílias inscritas no Cadastro Único (CadÚnico), com renda mensal por pessoa de até meio salário mínimo.",
+      "Dentro desse grupo, terão prioridade famílias em situação de pobreza ou extrema pobreza beneficiárias de programas de transferência de renda.",
+      "A falta de inscrição no CadÚnico, no entanto, não poderá impedir atendimento emergencial, diagnóstico inicial, acolhimento ou orientação familiar.",
+      "“O texto evita que a ausência de documentação seja barreira para o primeiro atendimento, mas assegura que o orçamento público seja direcionado majoritariamente às famílias que não conseguem custear consultas, laudos, terapias, transporte, materiais pedagógicos ou acompanhamento especializado”, afirmou o autor do projeto de lei, deputado Josivaldo JP (União-MA).",
+      "Acompanhamento e transparência",
+      "Os recursos poderão ser transferidos a estados, ao Distrito Federal, a municípios, a consórcios públicos e a entidades privadas sem fins lucrativos que atuem na proteção e no atendimento desse público.",
+      "Os planos de trabalho deverão apresentar metas, critérios de seleção e indicadores de resultados, como tempo de espera e número de atendimentos.",
+      "A proposta ainda cria um comitê nacional de acompanhamento, com representantes do governo e da sociedade civil.",
+      "O Poder Executivo deverá publicar relatórios semestrais sobre os valores arrecadados, os repasses realizados, os municípios contemplados e os resultados alcançados.",
+      "O projeto, que tramita em caráter conclusivo , será analisado pelas comissões de Saúde; de Defesa dos Direitos das Pessoas com Deficiência; de Previdência, Assistência Social, Infância, Adolescência e Família; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania.",
+      "Para virar lei, a proposta precisa ser aprovada pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
     ]
   },
   {
@@ -133,6 +388,17 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Quedas",
       "SBP",
       "internações"
+    ],
+    "content": [
+      "Apenas no primeiro semestre de 2026, quase 15 mil crianças com menos de 10 anos foram internadas após acidentes envolvendo quedas. Entre 2016 e 2025, esse número soma 330 mil internações – média de 33 mil casos por ano.",
+      "Os dados constam de levantamento da Sociedade Brasileira de Pediatria (SBP) a partir de registros do Sistema de Informações Hospitalares do Sistema Único de Saúde (SUS) .",
+      "Segundo a SBP, acidentes figuram entre as situações que mais exigem atenção de famílias e cuidadores, pois grande parte pode ser evitada por meio da adoção de medidas simples de segurança.",
+      "A orientação da entidade é investir na chamada identificação prévia de riscos que podem existir em cada ambiente onde a criança brinca, estuda e até mesmo circula. Nesse sentido, é preciso considerar as diferentes fases do desenvolvimento, com a adoção de cuidados adequados à idade e à capacidade da criança.",
+      "Veja as recomendações de prevenção da SBP para cada idade:",
+      "Os dados mostram que, entre 2016 e 2025, as quedas foram mais frequentes na faixa etária de 5 a 9 anos (193,8 mil casos). Nessa fase, segundo a SBP, as crianças começam a se movimentar mais, como correr, brincar em parques, usar brinquedos e praticar esportes, apesar de ainda estarem desenvolvendo habilidades de equilíbrio e coordenação motora.",
+      "Entre crianças de 1 a 4 anos, foram 110,1 mil hospitalizações. Entre menores de 1 ano, foram registrados 26,7 mil casos. Nessa faixa etária, a entidade destaca acidentes envolvendo quedas de leitos, que somaram 3,7 mil episódios.",
+      "São Paulo lidera o ranking de internações por quedas entre crianças com menos de 10 anos: 71,7 mil notificações, de 2016 a 2025. Na sequência, aparece Minas Gerais, com 33,4 mil notificações. O estado da Bahia vem em seguida, com 27,2 mil episódios registrados.",
+      "Outras unidades da Federação que também apresentaram números elevados são:"
     ]
   },
   {
@@ -154,6 +420,18 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Congresso",
       "Brasil",
       "Notícias"
+    ],
+    "content": [
+      "Marina Ramos / Câmara dos Deputados",
+      "O deputado Rodrigo Valadares é o autor da proposta",
+      "O Projeto de Lei 3059/26 proíbe a concessão de graça, indulto, anistia, redução de pena ou perdão judicial a pessoas processadas ou condenadas por crimes contra crianças. A proposta, que está sendo analisada pela Câmara dos Deputados, altera o Código Penal , o Estatuto da Criança e do Adolescente (ECA) e a Lei dos Crimes Hediondos .",
+      "Pelo texto, a proibição se aplica a qualquer crime cometido contra crianças de até 12 anos incompletos. A regra vale para crimes dolosos (com intenção) ou culposos (sem intenção), consumados ou tentados, praticados por ação ou omissão. A medida também se aplica a crimes que não sejam classificados como hediondos.",
+      "O texto também proíbe o juiz de conceder o perdão judicial nesses casos, ou seja, a pena deverá ser aplicada mesmo quando as consequências do fato atingirem o próprio agente do crime de forma grave.",
+      "O autor da proposta, deputado Rodrigo Valadares (PL-SE), afirma que a medida busca fechar brechas jurídicas e reforçar a proteção integral à infância prevista na Constituição Federal.",
+      "\"A criança é uma vítima marcada pela absoluta vulnerabilidade. A violação do dever de cuidado não pode ser perdoada por benevolência estatal ou judicial, mesmo nos casos em que a conduta é classificada como culposa\", disse o deputado.",
+      "A proposta será analisada pelas comissões de Previdência, Assistência Social, Infância, Adolescência e Família; e de Constituição e Justiça e de Cidadania. Depois, segue para análise do Plenário.",
+      "Para virar lei, o texto deve ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
     ]
   },
   {
@@ -177,6 +455,26 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brinquedos com IA",
       "pediatra",
       "crianças"
+    ],
+    "content": [
+      "Brinquedos que conversam com a criança, que são capazes de memorizar o que ela gosta e que até mesmo respondem com palavras de carinho e empatia fazem parte da realidade de boa parte das famílias no Brasil e no mundo e exigem olhar atento por parte de pais e responsáveis.",
+      "Diante do avanço da inteligência artificial (IA) e de sua aplicação em produtos lúdicos, a Sociedade Brasileira de Pediatria (SBP) divulgou um alerta sobre como escolher e acompanhar os efeitos da aplicação desse tipo de tecnologia junto a crianças e adolescentes .",
+      "Em nota, a entidade destacou que o objetivo do alerta é reduzir os riscos de exposição indevida. Segundo o documento, sistemas de IA generativa, por exemplo, reconhecem voz e imagem, recordam informações, adaptam respostas e mantêm conversas que não são inteiramente pré-programadas.",
+      "A SBP considera o tema urgente.",
+      "O alerta chama a atenção para o fato de que a IA, apesar de usar linguagem afetiva ou empática, não é uma pessoa, e reforça que um brinquedo, uma vez conectado, pode ter microfone, câmera e acesso integral à internet, além de fazer coleta de dados e oferecer mecanismos de personalização e de engajamento .",
+      "Segundo a SBP, uma revisão publicada na revista Pediatrics destaca o risco de crianças desenvolverem percepções equivocadas da IA como amiga ou cuidadora a partir do contato com esse tipo de brinquedo.",
+      "O Fundo das Nações Unidas para a Infância (Unicef), por sua vez, alertou para os chamados AI companions [companheiros de IA, na tradução literal]: brinquedos ou produtos que estimulam conversas em relacionamentos ao serem usados por crianças e adolescentes.",
+      "“Apesar da aparência inofensiva, são sistemas de IA que podem obter informações e causar prejuízos à saúde e dependência ao produto”, destacou a entidade.",
+      "Para a SBP, a pergunta não deve ser apenas o que o brinquedo faz, mas também como funciona, quais informações coleta, para que esses dados são utilizados e se ele incorpora mecanismos adequados de proteção à criança e ao adolescente.",
+      "No alerta, a entidade recomenda cautela na oferta de brinquedos com IA, sobretudo os que utilizam IA generativa, mantêm conversas abertas, coletam dados pessoais e simulam amizade, cuidado ou apoio emocional.",
+      "“Quando essas funcionalidades não trazem benefício claro, ou quando o funcionamento e os mecanismos de proteção carecem de transparência, a orientação é priorizar produtos e brinquedos sem esses recursos”, alerta.",
+      "Outra preocupação dos pediatras é compreender os efeitos à saúde mental e comportamental de longo prazo dessas novas formas de interação, ainda não suficientemente mapeadas.",
+      "“A incerteza científica não significa ausência de riscos e reforça a necessidade de proteção adequada à infância e à adolescência”, avalia.",
+      "O alerta propõe perguntas-chave para as famílias refletirem antes de comprar um desses produtos:",
+      "A SBP destaca que informações essenciais devem estar acessíveis, incluindo se o produto possui câmera ou microfone; se precisa de internet; quais dados registra e para quê; onde são armazenados; se são compartilhados com terceiros; se é possível apagá-los; e quais recursos vêm ativados por padrão.",
+      "“Se não estiverem acessíveis, a recomendação é não comprar e optar por outro produto ou brinquedo.”",
+      "Outro ponto importante citado no documento é que fornecedores e empresas são obrigados a informar pais, responsáveis, crianças e adolescentes, independentemente da compra ter sido efetuada, sobre riscos e medidas de segurança, incluindo privacidade e proteção de dados.",
+      "Diante de coleta de dados não informada, conteúdo inadequado, falhas de segurança ou dificuldade de exercer seus direitos, a SBP orienta que as famílias podem:"
     ]
   },
   {
@@ -198,6 +496,18 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Congresso",
       "Brasil",
       "Notícias"
+    ],
+    "content": [
+      "Marcelo Camargo/Agência Brasil",
+      "Para o autor, é uma medida de baixo custo e alto impacto social, que contribui para a humanização do atendimento",
+      "O Projeto de Lei 1736/26 obriga os hospitais públicos e privados a disponibilizar espaços para acolher familiares de pacientes internados. O texto está em análise na Câmara dos Deputados.",
+      "A proposta prevê que os locais ofereçam condições adequadas para descanso, higiene, ventilação e assentos suficientes. As instalações deverão assegurar o acesso a sanitários e manter um ambiente confortável para as famílias.",
+      "As unidades hospitalares deverão organizar os espaços sem comprometer as rotinas de atendimento e o funcionamento. A implementação poderá ocorrer de forma progressiva, conforme as condições estruturais e os recursos disponíveis.",
+      "Para o autor da proposta, deputado Ribeiro Neto (MA), atualmente na suplência, a ausência de espaços adequados gera desgaste físico e emocional, comprometendo o bem-estar dos familiares e o suporte oferecido ao paciente durante o tratamento.",
+      "Segundo o parlamentar, o projeto busca aperfeiçoar o acolhimento nas unidades de saúde. “Trata-se de medida de baixo custo e alto impacto social, que contribui para a humanização do atendimento”, escreveu Ribeiro Neto na justificativa.",
+      "O projeto será analisado, em caráter conclusivo , pelas comissões de Saúde; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania.",
+      "Para virar lei, terá de ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
     ]
   },
   {
@@ -221,6 +531,27 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Poluição",
       "CO2",
       "Emissão de Gases"
+    ],
+    "content": [
+      "O Brasil emitiu, em 2025, 1,41 bilhão de toneladas líquidas de CO2 equivalente (GtCO2e) em gases do efeito estufa. O valor significa uma redução de 9% em relação aos 1,489 bilhão de toneladas líquidos de gás carbônico equivalente emitidos em 2024 , levando o país a atingir o menor valor líquido desde 2012.",
+      "Sem considerar a remoção de carbono pela vegetação secundária, que cresceu, e pelas áreas protegidas, o país emitiu 2,06 bilhões de toneladas de CO2 equivalente (GtCO2e) brutos em 2025. Isso representa uma queda de 6% em relação ao total bruto de 2,19 GtCO2e emitidos em 2024. Esse foi o menor volume bruto emitido desde 2018.",
+      "Os dados são da 14ª edição do Sistema de Estimativas de Emissões de Gases de Efeito Estufa lançada nesta quarta-feira (21) pelo Observatório do Clima.",
+      "Na avaliação do coordenador do Seeg e pesquisador do Instituto de Energia e Meio Ambiente (Iema), David Tsai, os números mostram que nos últimos quatro anos o Brasil cortou em um quarto as suas emissões brutas.",
+      "Em 2025, o valor total das emissões brutas foi novamente influenciado pela redução do desmatamento, classificado no Seeg como mudança de uso da terra.",
+      "O setor respondeu por 814 MtCO2e, uma queda de 15% nas emissões brutas, em relação às emissões de 957 MtCO2e, no ano de 2024.",
+      "Quando considerados os valores líquidos do setor de mudança de uso da terra, a queda entre 2024 e 2025 foi de 48%, passando de 311 MtCO2e para 162 MtCO2e, o menor valor para o setor em toda a série histórica do Seeg.",
+      "As emissões brutas dos demais setores sofreram pouca variação para mais ou para menos em 2025. A agropecuária teve queda de 0,1%, tendo sido responsável por 626 MtCO2 do total de emissões britas.",
+      "O setor de energia cresceu 1,2% em emissões, passando de 422 MtCO2e, em 2024, para 427 MtCO2e, em 2025. Os processos industriais e uso de produtos variaram positivamente apenas 0,2% , ao manter as emissões em 94 MtCO2e.",
+      "O setor de resíduos foi o que registrou a maior alta entre 2024 e 2025, crescendo as emissões em 3,6%, de 92 MtCO2e para 96 MtCO2e.",
+      "A participação da mudança de uso da terra nas emissões brutas do país, em 2025, responde por 39% do total e as emissões diretas da agropecuária, respondem por mais 30%. Juntas, quando consideradas emissões diretas e indiretas do setor, elas tornam a agropecuária o maior emissor nacional.",
+      "O setor de energia aparece em seguida com 21%.",
+      "Os processos industriais e a gestão de resíduos responderam, em 2025, por 5% do total de emissões, cada um.",
+      "Com essas reduções, o país ficou a apenas 85 milhões de toneladas de cumprir a meta climática estabelecida para 2025 , em sua primeira Contribuição Nacionalmente Determinada (NDC na sigla em inglês), apresentada em 2015.",
+      "A meta previa que o país limitaria as emissões líquidas de gases de efeito estufa a 1,32 GtCO2e, em 2025, valor que deverá ser alcançado este ano, após queda recorde de desmatamento na Amazônia e Cerrado.",
+      "“Infelizmente a gente ficou ainda um pouco acima, mas bem próximo da meta. Em 2030, tem uma meta mais baixa, mas em 2026 a gente vai estar entre a meta de 2025 e a de 2030 “, avalia David Tsai.",
+      "Dados prévios divulgados pelo Observatório do Clima apontam uma emissão líquida negativa por desmatamento para este ano, com um valor estimado em menos 24 milhões de toneladas de CO2 equivalente (MtCO2e).",
+      "Para 2030, a meta estabelecida pela segunda NDC do Brasil, apresentada em 2025, busca reduzir as emissões nacionais para uma faixa entre 850 milhões e 1,05 bilhão de toneladas de CO2e.",
+      "“É uma grande vitória a queda das emissões pelo desmatamento, mas se os outros setores, a partir de agora, não começarem a reduzir as suas emissões vai ficar difícil a gente conseguir cumprir as próximas metas da NDC”, alerta David Tsai."
     ]
   },
   {
@@ -244,6 +575,42 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Voto 70",
       "Vovó Vota",
       "segundo turno"
+    ],
+    "content": [
+      "Na paisagem rural da comunidade maranhense de Ludovico, cidade de Lago do Junco a 300 quilômetros de São Luís, a quebradeira de coco babaçu Maria Alaídes Alves de Souza, de 71 anos, caminhou 600 metros para votar no primeiro turno das eleições, em 4 de outubro.",
+      "Para conscientizar outras idosas sobre a importância de votar, no entanto, ela percorre distâncias bem maiores. Na prática, ela faz uma busca ativa para que outras trabalhadoras e avós, como ela, não deixem de exercer o direito ao voto.",
+      "O Brasil tem hoje cerca de 16 milhões de idosos com mais de 70 anos, o que corresponde a 10,6% dos eleitores. Essa população tem voto facultativo desde a promulgação da Constituição de 1988 e histórico de alta abstenção.",
+      "Na comunidade em que Maria Alaídes vive, são 150 famílias, mas ela se preocupa com outras cinco comunidades da região: São José, Mata dos Reis, Marajá Alto Alegre, Estirão e Pau Seco.",
+      "Como liderança de um movimento interestadual de quebradeiras de coco, ela defende que é pela participação popular que se conquistam direitos e políticas públicas.",
+      "“O voto para mim é orgulho. Voto pela manutenção de direitos e pela democracia”.",
+      "Entre as prioridades dela está o enfrentamento das mudanças climáticas, que impactam diretamente as atividades das quebradeiras.",
+      "A estimativa é de que existam mais de 300 mil trabalhadoras nos estados do Maranhão, Pará, Piauí e Tocantins.",
+      "Mulheres entusiasmadas com as eleições como Maria Alaídes, mesmo em uma faixa etária em que o voto não é obrigatório, fazem jus à histórica luta pelo sufrágio feminino.",
+      "A abstenção de pessoas com mais de 70 anos caiu quase 10 pontos percentuais no primeiro turno das eleições, segundo levantamento do Movimento Voto 70+ .",
+      "Segundo dados do Tribunal Superior Eleitoral (TSE), o percentual de eleitores nessa faixa etária que não foram votar passou de 58,8% em 2022 para 49,1% no primeiro turno de 2026.",
+      "No intuito de que essa abstenção caia ainda mais no próximo domingo (25), o movimento apartidário promove a campanha Vovó Vota, que propõe aproximar netas e avós durante as eleições.",
+      "Uma das mensagens é que, mesmo que a pessoa não tenha votado no primeiro turno, pode participar no segundo , sem nenhuma restrição.",
+      "Na cidade de Orizona, a 130 quilômetros de Goiânia, Maria Albino Costa, de 85 anos, não votou no primeiro turno porque achou difícil ir às urnas com tantos números para anotar ou lembrar. No último dia 4, o eleitor escolheu deputados, senadores, governadores e presidente.",
+      "A aposentada já morou na roça, foi merendeira e empregada doméstica, e diz que não gosta de faltar na eleição porque passou muito tempo sem votar durante a ditadura (1964-1985). Ela também quer ser exemplo para os sete filhos, 22 netos, seis bisnetos e um tataraneto.",
+      "A filha, a professora Sandra Oliveira, de 48 anos, foi a primeira da família a cursar o ensino superior, e conta que sente muito orgulho da trajetória da mãe. Tanto que costuma citá-la em suas aulas na área rural e na região urbana onde já ouviu manifestações machistas de alunos contra o voto feminino:",
+      "“Eu conto histórias de minha mãe e de outras mulheres que não tiveram direitos. A gente precisa garantir nosso espaço”.",
+      "A professora aposentada Maria José Cantarelli, de 80 anos, que mora em Olinda (PE), também não votou no primeiro turno. Aliás, há 12 anos deixou de participar das eleições.",
+      "No entanto, ela conversou em casa com os filhos e com a neta, e chegou à conclusão de que o momento exige abrir uma exceção. Ela se ressente do clima de acirramento emocional nas ruas.",
+      "Ela guardou o título eleitoral no armário e não encontrou mais. No entanto, já baixou o aplicativo e-título para votar no dia 25.",
+      "Maria José disse que guardou, durante toda a vida, os comprovantes eleitorais e que vai voltar a tê-los na carteira. A neta, que também é Maria, tem 19 anos e ficou feliz com a decisão da avó.",
+      "Inspirações para essas avós não faltam, como na casa de Francisca Barroso Monteiro, de 84 anos, que hoje mora na cidade maranhense de Nova Iorque (a 560 quilômetros de São Luís-MA).",
+      "Ela diz que o direito à cidadania possibilitou que ela lutasse para que os 10 filhos frequentassem a escola.",
+      "Ela espera que a eleição garanta representantes que não deixem faltar remédio ou alimentos para crianças ou idosos.",
+      "No Rio de Janeiro, Prazeres Maria da Silva Antunes, de 72 anos, espera que não passe pela dor de cabeça que teve no primeiro turno, quando enfrentou filas longas: “demorou um tempo para começarem a chamar os mais idosos”.",
+      "Também não foi fácil para a aposentada paulista Beatriz Cintra Labaki, de 79 anos, em São Paulo. Ela precisou subir escadas em seu local de votação.",
+      "Uma resolução do Tribunal Superior Eleitoral (TSE) determina que pessoas idosas tenham atendimento prioritário nos locais de votação, sem necessidade de aguardar na fila comum.",
+      "Além disso, devem ser garantidas medidas de acessibilidade que assegurem autonomia e segurança durante o processo de votação.",
+      "Beatriz contou com a ajuda do filho para chegar à sala de aula e à urna. Para escolher seus candidatos, levou em conta a postura em relação aos temas de saúde e educação.",
+      "No dia 25, as pessoas idosas também levarão a memória da importância de votar. Inclusive porque não puderam escolher o presidente por mais de duas décadas.",
+      "A aposentada carioca Suely Mendonça, de 79 anos, diz que se emociona ao caminhar até a seção de votação:",
+      "“É o momento em que estou me sentindo mais participante da vida do país. Sempre estudei na rede pública, do ensino básico ao ensino superior. Teve o golpe militar e eu estava estudando”.",
+      "Ela recorda que os professores não podiam mencionar as letras de música e que os filmes e as peças de teatro eram censuradas.",
+      "“Eu participei das Diretas Já, o pontapé inicial da redemocratização. Eu nunca associei meu voto a um partido. Eu escolhia o candidato pelos compromissos assumidos com a gente e os que tinha lutado contra o regime ditatorial”."
     ]
   },
   {
@@ -267,6 +634,20 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Relatório",
       "El Niño",
       "intensidade"
+    ],
+    "content": [
+      "O El Niño pode ter intensidade sem precedentes e ultrapassar os padrões observados nas últimas quatro décadas, afirmou nesta quarta-feira (21) a diretora da agência meteorológica das Nações Unidas.",
+      "O El Niño deve levar uma onda de calor para algumas regiões e abalar os padrões de chuva, provocando seca severa, enquanto em outras regiões ele pode causar inundações, disse Celeste Saulo, secretária-geral da Organização Meteorológica Mundial.",
+      "O aquecimento global deve ser mais intenso que as projeções anteriores, mesmo no cenário mais otimista, com as temperaturas médias subindo para 1,7 a 1,8 graus Celsius acima dos níveis pré-industriais até meados do século, segundo relatório da ONU divulgado hoje.",
+      "Apesar da rápida expansão das energias renováveis e das políticas climáticas que estão reduzindo as emissões em muitos países, o relatório mostrou que ainda são necessárias reduções “urgentes e rigorosas” para alcançar o melhor cenário possível.",
+      "O relatório do Programa das Nações Unidas para o Meio Ambiente (Pnuma) indicou que as emissões de gases de efeito estufa precisariam cair 18% em relação aos níveis de 2025 até 2030, 45% até 2035 e 69% até 2040. Os planos nacionais atuais reduziriam as emissões em apenas 5% a 8% até 2030 e 11% a 15% até 2035.",
+      "O relatório projetou um aquecimento global de 2,8 graus Celsius até o ano de 2100 sob as políticas atuais, ou 2,6 °C caso os países implementem integralmente os compromissos climáticos existentes. Ambas as estimativas são superiores às projeções do ano passado, refletindo a saída dos Estados Unidos do Acordo de Paris e as avaliações revisadas das emissões históricas.",
+      "Enquanto os países se preparam para a próxima rodada de negociações climáticas na Turquia, a COP31, o secretário-geral da ONU, António Guterres, afirmou que é crucial não desistir dos esforços para conter as emissões que estão causando inundações, incêndios e outros desastres naturais.",
+      "De acordo com o Acordo de Paris de 2015, os países concordaram em tentar manter o aumento médio da temperatura bem abaixo de 2 graus e, preferencialmente, em 1,5°C.",
+      "Como limitar o aquecimento a 1,5°C sem ultrapassagem ou com ultrapassagem limitada não é mais considerado possível, o Pnuma disse que seu novo cenário de ultrapassagem, “mais baixo possível”, oferece cerca de 50% de chance de que as temperaturas possam retornar a 1,5°C ou menos até 2100.",
+      "O relatório indicou ainda que os planos climáticos apresentados desde o ano passado praticamente não alteraram as projeções de aquecimento futuro e que o retorno à meta de 1,5°C dependeria da remoção de carbono em grande escala, cuja viabilidade é incerta .",
+      "*Reportagem adicional de Simon Jessop",
+      "*É proibida a reprodução deste conteúdo."
     ]
   },
   {
@@ -290,6 +671,22 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Serviço Público",
       "javier milei",
       "Argentina"
+    ],
+    "content": [
+      "Às vésperas do segundo turno das eleições gerais , dezenas de entidades representativas de servidores públicos federais divulgaram manifesto para alertar quanto à polaridade de propostas que se apresentam ao país no próximo domingo (25).",
+      "Dois projetos de Estado profundamente distintos estão em disputa: um de esquerda e outro de direita . De acordo com as instituições, as consequências serão decisivas não só para o futuro do serviço público, mas também para as condições de trabalho, os direitos e a valorização de seus servidores.",
+      "O documento, publicado nessa terça-feira (20), avalia que, de um lado, reaparecem propostas de reforma administrativa que, sob o argumento de modernizar o Estado, podem comprometer a estabilidade dos servidores, ampliar a precarização dos vínculos de trabalho e fragilizar a capacidade do Poder Público de atuar com autonomia, continuidade e independência técnica.",
+      "O manifesto também critica a gestão do presidente argentino Javier Milei, embasada na política de redução da máquina administrativa. Decreto assinado nessa terça-feira pelo chefe do Executivo do país andino instituiu plano de demissão voluntária que pode alcançar 21 mil servidores públicos . Desde janeiro de 2023, o governo Milei fechou 77 mil vagas no serviço estatal argentino.",
+      "“A experiência argentina sob a gestão de Javier Milei – marcada por severas medidas de ajuste, cortes no setor público e redução de estruturas estatais – oferece um alerta sobre os custos sociais e institucionais de políticas dessa natureza.\"",
+      "O documento das entidades que atuam em áreas estratégicas do Estado brasileiro cita as perspectivas de congelamento ou redução salarial, restrições ao ingresso de novos servidores e demissões em larga escala, medidas associadas a programas de ajuste fiscal que podem comprometer a prestação de serviços essenciais.",
+      "As entidades de classe do serviço público também apontam como fundamental, o direito à negociação coletiva e à livre organização sindical. Para esses grupos, a interrupção dos canais de diálogo, o enfraquecimento das entidades representativas e as tentativas de restringir a atuação sindical ameaçam conquistas históricas e comprometem a construção de soluções negociadas para os conflitos entre servidores e governo.",
+      "O manifesto ressalta que a experiência recente demonstra que o diálogo institucional pode produzir resultados concretos, ainda que insuficientes, para reparar integralmente as perdas acumuladas pelos servidores.",
+      "“Após anos de restrições e prolongada defasagem remuneratória, o atual governo retomou os processos de negociação com as entidades representativas e promoveu reajustes salariais para o funcionalismo federal, além de reabrir espaços de interlocução sobre condições de trabalho e valorização das carreiras.”",
+      "A carta também compara os modelos de gestão pública dos últimos governos. Segundo o texto, o período anterior, marcado pelo assédio institucional e moral, por conflitos com o funcionalismo e perseguição a servidores, restrições à negociação e iniciativas de reforma administrativa de caráter regressivo, deixou um legado de perdas do poder de compra, desvalorização e insegurança.",
+      "“O período atual, por sua vez, restabeleceu canais de diálogo e negociação, retomou reajustes e reconheceu a importância dos servidores para o funcionamento do Estado. Embora persistam desafios, a diferença entre esses modelos é concreta: de um lado, a redução de estruturas e a compressão de direitos; de outro, a reconstrução da interlocução institucional e a recuperação, ainda parcial, da valorização do serviço público.”",
+      "O manifesto também avalia que propostas de redução de gastos sociais e de cortes no orçamento federal podem comprometer políticas públicas essenciais de transferência de renda, moradia, fornecimento de medicamentos e de incentivo educacional.",
+      "As entidades destacam que defender o serviço público é atuar a favor da democracia, da capacidade do Estado de formular e executar políticas públicas de os direitos da população",
+      "O manifesto é assinado pelas seguintes entidades de classe:"
     ]
   },
   {
@@ -312,6 +709,13 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Plano Brasil Soberano",
       "Diário Oficial da União",
       "Exportação"
+    ],
+    "content": [
+      "O governo federal abriu crédito extraordinário no valor de R$ 6,49 bilhões para financiar pessoas físicas e empresas exportadoras de bens e serviços que fazem parte do Plano Brasil Soberano .",
+      "A autorização faz parte da Medida Provisória nº 1.397 , publicada nesta quarta-feira (21) no Diário Oficial da União .",
+      "De acordo o texto, os recursos ficarão sob responsabilidade do Fundo de Garantia à Exportação , vinculado ao Ministério da Fazenda.",
+      "O Plano Brasil Soberano é uma das medidas de apoio do governo brasileiro às empresas, aos exportadores e trabalhadores afetados pelas sobretaxas impostas pelos Estados Unidos .",
+      "Por se tratar de crédito extraordinário, a medida tem como fundamento os artigos 62 e 167, parágrafo 3º, da Constituição Federal ."
     ]
   },
   {
@@ -356,6 +760,16 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Congresso",
       "Brasil",
       "Notícias"
+    ],
+    "content": [
+      "Fábio Macedo: limite atual não sofreu atualização monetária relevante em mais de 20 anos",
+      "O Projeto de Lei 2081/26 eleva de R$ 35 mil para R$ 70 mil o limite de isenção do Imposto de Renda (IR) sobre o ganho de capital na alienação de bens e direitos de pequeno valor. O texto mantém o atual limite de R$ 20 mil para a isenção do IR sobre ganhos com ações negociadas no mercado de balcão.",
+      "Além disso, a proposta determina que esses dois limites sejam atualizados anualmente pelo Índice Geral de Preços do Mercado (IGP-M), apurado pela Fundação Getulio Vargas (FGV).",
+      "Em análise na Câmara dos Deputados, o texto altera a Lei 9.250/95 , que trata do IR das pessoas físicas. Na alienação de diversos bens ou direitos da mesma natureza, deverá ser considerado o valor total do conjunto negociado no mês.",
+      "Na justificativa que acompanha o projeto, o deputado Fábio Macedo (Pode-MA) afirma que o limite atual de R$ 35 mil não passa por revisão desde 2005. Segundo ele, o valor “não sofreu atualização monetária relevante em mais de 20 anos e encontra-se claramente defasado em relação à inflação acumulada no período”.",
+      "O projeto será analisado, em caráter conclusivo , pelas comissões de Finanças e Tributação; e de Constituição e Justiça e de Cidadania.",
+      "Para virar lei, terá de ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
     ]
   },
   {
@@ -377,6 +791,22 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Congresso",
       "Brasil",
       "Notícias"
+    ],
+    "content": [
+      "Bruno Spada/Câmara dos Deputados",
+      "José Medeiros: milhões de brasileiros ainda convivem com a insegurança alimentar",
+      "O Projeto de Lei 3000/26, em análise na Câmara dos Deputados, cria a Política Nacional de Redução de Perdas e Desperdício de Alimentos.",
+      "Entre os objetivos da proposta estão:",
+      "A política deverá envolver medidas de acompanhamento das perdas e do desperdício de alimentos e estabelecer metas para a redução desses índices.",
+      "As regras serão aplicadas a supermercados, atacadistas, restaurantes, indústria alimentícia, redes de distribuição, setor público, feiras e centrais de abastecimento.",
+      "Pelo projeto, ficam estabelecidas metas nacionais de redução do desperdício:",
+      "O texto também prevê a adoção de mecanismos para facilitar a destinação de alimentos que possam ser aproveitados.",
+      "O projeto cria o Banco Nacional de Alimentos, com a finalidade de intermediar doações, organizar logística, cadastrar entidades, monitorar desperdício e gerar relatórios públicos.",
+      "O autor da proposta, deputado José Medeiros (PL-MT), afirma que o país desperdiça milhões de toneladas de alimentos todos os anos, enquanto milhões de brasileiros ainda enfrentam insegurança alimentar.",
+      "“Reduzir o desperdício é combater a fome, proteger o meio ambiente, reduzir custos, aumentar a eficiência e promover justiça social”, argumenta o parlamentar.",
+      "O projeto será analisado, em caráter conclusivo , pelas comissões de Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural; de Saúde; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania.",
+      "Para virar lei, precisa ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
     ]
   },
   {
@@ -400,6 +830,12 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "estiagem",
       "seca",
       "chuvas"
+    ],
+    "content": [
+      "Ações de defesa civil no país terão reforço de R$ 300 milhões para gestão de riscos e desastres. Medida provisória publicada nesta quarta-feira (21) abre crédito extraordinário em nome do Ministério da Integração e do Desenvolvimento Regional.",
+      "Segundo a MP n° 1.398, os recursos serão aplicados no programa Gestão de Riscos e de Desastres, na ação de Proteção e Defesa Civil.",
+      "A destinação dos recursos ocorre no mês em que estados da Região Norte enfrentam estiagem e queimadas florestais e áreas do Sul e Sudeste são atingidas por tempestades .",
+      "A medida provisórias foi editada com base nos artigos 62 e 167 da Constituição Federal, que permitem a abertura de créditos extraordinários por ato do Executivo em situações consideradas urgentes e relevantes."
     ]
   },
   {
@@ -422,6 +858,17 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Eleições",
       "eleições 2026",
       "Boca de Urna"
+    ],
+    "content": [
+      "Amplamente comuns durante as campanhas eleitorais, alguns comportamentos são proibidos no dia da votação. Neste domingo (25), assim como em todas as eleições, os eleitores não podem pedir votos, distribuir propaganda ou abordar eleitores para influenciar a escolha do candidato.. Essas práticas podem caracterizar o crime de boca de urna.",
+      "A boca de urna ocorre quando há tentativa de convencer o eleitorado a votar em determinado candidato, partido, federação ou coligação no dia da eleição.",
+      "Até o encerramento da votação, a legislação proíbe a aglomeração de pessoas com vestuário padronizado ou portando instrumentos de propaganda, quando isso caracterizar manifestação coletiva.",
+      "A manifestação individual e silenciosa do eleitor sobre a sua preferência política é liberada.",
+      "Ou seja: é permitido votar com itens como bandeiras, broches e adesivos, desde que não haja manifestação coletiva.",
+      "No ambiente digital, a lei considera crime a publicação de novos conteúdos ou o impulsionamento de conteúdos no dia da eleição, por parte dos candidatos. Conteúdos publicados anteriormente, no entanto, podem permanecer disponíveis.",
+      "Quem for pego fazendo boca de urna pode ser punido com detenção de 6 meses a 1 ano, com a possibilidade de substituição pela prestação de serviços à comunidade pelo mesmo período, além de pagamento de multa.",
+      "As irregularidades relacionadas à propaganda eleitoral podem ser comunicadas pelo Pardal, aplicativo da Justiça Eleitoral. A ferramenta permite o envio de denúncias pelo celular, com informação sobre o local, fotos, vídeos e áudios que ajudem na análise da ocorrência.",
+      "O aplicativo está disponível gratuitamente nas lojas Google Play e App Store ."
     ]
   },
   {
@@ -443,6 +890,13 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Política",
       "eleições 2026",
       "Eleições"
+    ],
+    "content": [
+      "Os candidatos à presidência da República cumprem agenda de campanha nesta quarta-feira (21) em Belo Horizonte, Fortaleza e São Paulo. Confira.",
+      "Candidato tem agenda em São Paulo pela manhã. À noite, participa de ato em Fortaleza, a partir das 19h, na Avenida do Contorno.",
+      "Luiz Inácio Lula da Silva (PT)",
+      "Candidato à reeleição participa de caminhada em Belo Horizonte (MG) a partir das 17h.",
+      "A ordem de apresentação da agenda dos candidatos a presidente segue alternância diária."
     ]
   },
   {
@@ -489,6 +943,13 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "TRE-RJ",
       "Segundo Turno",
       "Urnas"
+    ],
+    "content": [
+      "O Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ) realiza sábado (24), véspera do segundo turno das eleições para presidente da República, audiência pública para definir as 43 seções eleitorais cujas urnas eletrônicas passarão por procedimentos de auditoria das eleições gerais. O evento começa às 8h, no plenário do Palácio da Democracia, sede do TRE, no centro da capital.",
+      "Das 43 urnas destinadas à auditoria, 31 passarão pelo Teste de Integridade das Urnas Eletrônicas no domingo (25), durante o horário de votação, na Sala de Sessões do Pleno do Tribunal de Justiça do Rio. Mais duas serão escolhidas entre as que serão instaladas na Fundação Getulio Vargas (FGV) e passarão pelo Teste de Integridade com Biometria.",
+      "Além dessas, outras dez, escolhidas entre todas as seções eleitorais do estado, passarão pelo Teste de Autenticidade dos Sistemas Eleitorais . Nesse procedimento, a verificação é realizada na própria seção eleitoral selecionada, antes do início da votação.",
+      "As etapas de fiscalização do processo eleitoral podem ser acompanhadas por partidos políticos, federações e coligações, além de entidades privadas brasileiras, sem fins lucrativos , com notória atuação em fiscalização e transparência da gestão pública, credenciadas junto ao Tribunal Superior Eleitoral (TSE), além de departamentos de tecnologia da informação de universidades credenciadas.",
+      "Os procedimentos de fiscalização e auditoria do sistema eletrônico de votação estão previstos na Resolução do TSE, de 2021 ."
     ]
   },
   {
@@ -512,6 +973,21 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "armas",
       "armamento",
       "Política"
+    ],
+    "content": [
+      "Agentes da Delegacia Especializada em Armas, Munições e Explosivos (Desarme), com apoio do Exército Brasileiro, desarticularam um esquema criminoso que simulava cursos de formação de sargentos da reserva para falsificar documentos militares e permitir a compra irregular de armas de fogo.",
+      "Na ação, dois homens foram presos e um terceiro continua foragido. Cinco pistolas e um fuzil foram apreendidos, além de dezenas de documentos falsificados.",
+      "As investigações apontaram que o grupo organizava falsos cursos preparatórios, com aulas presenciais e aplicação de provas, para dar aparência de legalidade à formação dos participantes.",
+      "Ao final, eram fornecidas carteiras de identidade militar e autorizações de compra de armamentos com assinaturas falsificadas de oficiais do Exército. Os documentos eram utilizados para adquirir armas em estabelecimentos comerciais credenciados.",
+      "Os criminosos também falsificavam Certificados de Registro de Arma de Fogo (CRAF) , necessários para a retirada do armamento das lojas de venda de armas.",
+      "A investigação identificou a compra de cinco armas, avaliadas em aproximadamente R$ 50 mil, entre elas quatro pistolas calibre .40, uma pistola 9 mm e um fuzil calibre 5,56 mm.",
+      "Parte do armamento ainda estava nos estabelecimentos comerciais quando o esquema foi descoberto, o que permitiu impedir a entrega aos compradores.",
+      "As apurações começaram há dois meses, após a prisão em flagrante de um homem que adquiriu uma pistola utilizando documentação falsa.",
+      "A partir desse caso, os agentes identificaram outras compras realizadas com documentos que apresentavam o mesmo padrão de falsificação.",
+      "O Exército Brasileiro confirmou que os documentos e as autorizações de aquisição de armas eram falsos.",
+      "Além da primeira prisão em flagrante, outros dois criminosos foram presos durante a ação.",
+      "As investigações prosseguem para identificar os responsáveis pela organização dos cursos, pela produção dos documentos falsificados e outros possíveis envolvidos.",
+      "Além dos mandados de prisão temporária expedidos, a Justiça do Rio determinou que as cinco armas apreendidas poderão ser destinadas ao uso da Polícia Civil."
     ]
   },
   {
@@ -533,6 +1009,25 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Congresso",
       "Brasil",
       "Notícias"
+    ],
+    "content": [
+      "Vinicius Loures/Câmara dos Deputados",
+      "José Priante: objetivo é proteger o consumidor e dar mais transparência ao mercado",
+      "O Projeto de Lei 2713/26, em análise na Câmara dos Deputados, estabelece regras de composição, rotulagem e comercialização para produtos derivados de açaí no país.",
+      "O texto fixa os teores mínimos de polpa para que alimentos, bebidas e sobremesas possam utilizar a denominação \"açaí\" no rótulo ou na publicidade.",
+      "Pela proposta, somente poderá utilizar a palavra \"açaí\" em destaque principal o produto que contiver, no mínimo, 30% de polpa da fruta em sua composição total e polpa com ao menos 14% de sólidos totais.",
+      "Alimentos que não atingirem esses critérios deverão adotar nome compatível com sua fórmula, sendo proibido usar \"açaí\" como designação principal.",
+      "O projeto também fixa teores específicos de polpa por categoria de produto:",
+      "Além disso, as embalagens deverão trazer na parte frontal o aviso destacado: \"Contém __ % de polpa de açaí\", sendo vedado o uso de imagens ou frases que induzam o consumidor a erro.",
+      "As empresas terão 12 meses, a partir da futura lei, para se adequar às novas regras.",
+      "O autor da proposta, deputado José Priante (MDB-PA), afirma que a falta de padronização acaba levando o consumidor a comprar produtos compostos principalmente por xaropes e corantes em vez de açaí.",
+      "\"Propomos normas semelhantes às aplicadas aos derivados de cacau, como o chocolate, assegurando mais proteção e transparência ao mercado\", comenta o parlamentar.",
+      "O projeto será analisado, em caráter conclusivo , pelas comissões de",
+      "Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural; de",
+      "Indústria, Comércio e Serviços; de Defesa do Consumidor; e de",
+      "Constituição e Justiça e de Cidadania.",
+      "Para virar lei, o texto precisa ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
     ]
   },
   {
@@ -556,29 +1051,12 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Operação gabarito",
       "Rio de Janeiro",
       "Fraude"
-    ]
-  },
-  {
-    "id": "ebc-1705969",
-    "title": "Eleitores do Acre escolhem entre Mailza Assis e Alan Rick para governo",
-    "summary": "Os candidatos Mailza Assis (PP) e Alan Rick (Republicanos) vão disputar o segundo turno no Acre no próximo domingo (25). Mailza terminou o primeiro turno na frente, com 49,76% dos votos válidos (218.760 votos) e Rick ficou em segundo, com 32,27% (141.859 votos).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitores-do-acre-voltam-urnas-no-domingo-para-escolher-entre-mailza-assis-e-alan-rick-para%20governar-estado",
-    "publishedAt": "21/10/2026 às 08:00",
-    "category": "Eleições",
-    "ingestedAt": "21/10/2026 às 09:02",
-    "imageUrl": "https://imagens.ebc.com.br/_j6nXPhKY4HiJ4IYUNO-_jReN7k=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/governoac.jpg?itok=tvMKNvyJ",
-    "imageCaption": "Eleitores do Acre escolhem entre Mailza Assis e Alan Rick para governo",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Eleitores do Acre escolhem entre Mailza Assis e Alan Rick para governo",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "2 Turno",
-      "governador",
-      "Acre"
+    ],
+    "content": [
+      "A Polícia Federal (PF) faz, nesta quarta-feira (21), operação para reprimir possíveis fraudes cometidas por candidatos de um concurso público para a Universidade Federal do Rio de Janeiro (UFRJ). A Operação Gabarito cumpre 13 mandados de busca e apreensão, expedidos pela 2ª Vara Federal Criminal do Rio, em três bairros da zona oeste da capital fluminense.",
+      "A PF iniciou a investigação depois de receber notícia-crime encaminhada pela própria empresa organizadora do concurso público para cargos de técnico administrativo em educação da UFRJ. A Selecon, organizadora do processo seletivo, constatou a presença de um padrão de respostas suspeito entre as provas de diversos candidatos.",
+      "A suspeita é que tenha havido um esquema coletivo dos candidatos para fraudar os resultados e beneficiar alguns concorrentes. De acordo com a PF, investigados poderão responder pelo crime de fraude em certame de interesse público.",
+      "O concurso teve o edital foi lançado em dezembro de 2025, para preencher 243 vagas para cargos administrativos de nível médio e superior na instituição federal. As provas, objetivas e discursivas, foram realizadas no início de março deste ano."
     ]
   },
   {
@@ -602,6 +1080,43 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "2 Turno",
       "governador",
       "Distrito Federal"
+    ],
+    "content": [
+      "Celina Leão (PP) e Leandro Grass (PT) voltam a se enfrentar no segundo turno das eleições, neste domingo (25), pela disputa do governo distrital .",
+      "No primeiro turno, Celina terminou na frente, com 49,93% dos votos válidos (825.530 votos) e Leandro Grass (PT) ficou em segundo, com 34,47% (569.930 votos).",
+      "O total de eleitores aptos a votar no Distrito Federal é 2.253.132. Desses, 54% são mulheres e 46%, homens. Entre os eleitores que declararam cor/raça, 49,17% são pessoas pardas; 38,02%, brancas; 11,71%, pretas; 0,89%, amarelas; e 0,22%, indígenas.",
+      "Natural de Goiânia (GO), Celina Leão tem 49 anos e é a atual governadora do Distrito Federal. Assumiu definitivamente o cargo após a renúncia de Ibaneis Rocha. Antes disso, foi deputada distrital e deputada federal.",
+      "Leandro Grass é natural de Brasília (DF), tem 41 anos e é professor e sociólogo. Foi deputado distrital entre 2019 e 2022. Disputou o governo do DF em 2022 e terminou em segundo lugar. Presidiu o Instituto do Patrimônio Histórico e Artístico Nacional (Iphan) entre 2023 e 2026."
+    ]
+  },
+  {
+    "id": "ebc-1705969",
+    "title": "Eleitores do Acre escolhem entre Mailza Assis e Alan Rick para governo",
+    "summary": "Os candidatos Mailza Assis (PP) e Alan Rick (Republicanos) vão disputar o segundo turno no Acre no próximo domingo (25). Mailza terminou o primeiro turno na frente, com 49,76% dos votos válidos (218.760 votos) e Rick ficou em segundo, com 32,27% (141.859 votos).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitores-do-acre-voltam-urnas-no-domingo-para-escolher-entre-mailza-assis-e-alan-rick-para%20governar-estado",
+    "publishedAt": "21/10/2026 às 08:00",
+    "category": "Eleições",
+    "ingestedAt": "21/10/2026 às 09:02",
+    "imageUrl": "https://imagens.ebc.com.br/_j6nXPhKY4HiJ4IYUNO-_jReN7k=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/governoac.jpg?itok=tvMKNvyJ",
+    "imageCaption": "Eleitores do Acre escolhem entre Mailza Assis e Alan Rick para governo",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Eleitores do Acre escolhem entre Mailza Assis e Alan Rick para governo",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "2 Turno",
+      "governador",
+      "Acre"
+    ],
+    "content": [
+      "Os candidatos Mailza Assis (PP) e Alan Rick (Republicanos) vão disputar o segundo turno no Acre no próximo domingo (25).",
+      "Mailza terminou o primeiro turno na frente, com 49,76% dos votos válidos (218.760 votos) e Rick ficou em segundo, com 32,27% (141.859 votos).",
+      "No estado, 614.375 eleitores estão aptos a votar. Desse total, 52% são mulheres e 48%, homens. Entre os eleitores que declararam cor/raça, 72,28% são pessoas pardas; 14,53%, brancas; 8,29%, pretas; 4,34%, indígenas; e 0,89%, amarelas.",
+      "Atual governadora do Acre, Mailza Assis é natural de Mundo Novo (MS) e tem 49 anos. Chegou ao cargo após a renúncia de Gladson Cameli, de quem era vice. Foi eleita em 2014 para o Senado como primeira suplente na chapa de Cameli e assumiu como titular do mandato em 2018. Em 2022, foi eleita vice-governadora na chapa de Cameli e assumiu o governo em abril, com a renúncia do governador para concorrer ao Senado.",
+      "Natural de Rio Branco (AC), Alan Rick tem 49 anos e é formado em Gestão Pública com pós-graduação em Jornalismo Político. Foi jornalista e apresentador de rádio e televisão antes de entrar para a política. Foi deputado federal por dois mandatos e é senador pelo Acre desde 2023."
     ]
   },
   {
@@ -625,6 +1140,13 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "2 Turno",
       "governador",
       "Amazonas"
+    ],
+    "content": [
+      "Omar Aziz (PSD) e Professora Maria do Carmo (PL) vão disputar o segundo turno da eleição para governador do Amazonas .",
+      "No primeiro turno, Aziz ficou na frente, com 40,63% dos votos válidos (841.846 votos) e Maria do Carmo ficou em segundo, com 24,49% (507.335 votos).",
+      "No estado, 2.801.182 eleitores estão aptos a votar. Desse total, 51% são mulheres e 49% homens. Entre os eleitores que declararam cor/raça, 75,93% são pessoas pardas; 10,53%, brancas; 9,27%, indígenas; 3,81%, pretas; e 0,46%, amarelas.",
+      "Natural de Garça (SP), Omar Aziz tem 68 anos e é engenheiro civil. Atual senador pelo Amazonas, Aziz já foi deputado estadual, vice-prefeito de Manaus, vice-governador e governador do estado. Está no segundo mandato no Senado. Recentemente, foi o relator da Proposta de Emenda à Constituição (PEC) que aprovou o fim da escala de trabalho 6x1.",
+      "Maria do Carmo é natural de Manaus (AM), tem 66 anos e é formada em Ciências Contábeis e Direito. Empresária, contadora, advogada e educadora, já disputou uma vaga no Senado como suplente, em 2022. Foi candidata a vice-prefeita de Manaus, em 2024."
     ]
   },
   {
@@ -667,6 +1189,19 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "outubro",
       "Caixa",
       "NIS de finais 3 a 0"
+    ],
+    "content": [
+      "A Caixa Econômica Federal paga nesta quarta-feira (20) a parcela de outubro do Bolsa Família aos beneficiários com Número de Inscrição Social (NIS) de final 3 a 0. Neste mês, 19,3 milhões de família foram beneficiadas, com o valor médio do benefício em R$ 782,92.",
+      "Por causa do aumento nos benefícios, o valor da folha de pagamentos aumentou de R$ 13 bilhões em setembro para R$ 15 bilhões em outubro.",
+      "Os moradores de 194 municípios de sete estados receberam o crédito na segunda-feira (19), independentemente do número final do NIS. O pagamento unificado beneficiou localidades em situação de emergência ou em estado de calamidade pública nos seguintes estados: Acre (22), Amazonas (3), Paraíba (31), Paraná (10), Rio Grande do Norte (111), Roraima (6), São Paulo (8) e Sergipe (3).",
+      "A lista dos municípios com pagamento unificado está disponível aqui .",
+      "No modelo tradicional do Bolsa Família, o pagamento ocorre nos últimos dez dias úteis de cada mês. No entanto, por causa do fenômeno climático El Niño, o governo concentrou os dias de pagamento em três dias por mês até dezembro.",
+      "Os beneficiários com NIS terminado em 1 receberam os pagamentos nesta segunda-feira (19). Na terça-feira (20), foi a vez de quem tem NIS terminado em 2. O calendário foi unificado na quarta-feira (21), com o pagamento, na mesma data, aos beneficiários com NIS terminado em 3, 4, 5, 6, 7, 8, 9 e 0.",
+      "O beneficiário poderá consultar informações sobre as datas de pagamento, o valor do benefício e a composição das parcelas no aplicativo Caixa Tem, usado para acompanhar as contas poupança digitais do banco.",
+      "Com o reajuste anunciado em setembro, que entrou em vigor em outubro, o valor mínimo corresponde a R$ 691. Além do benefício mínimo, há o pagamento de três adicionais. O Benefício Variável Familiar Nutriz paga seis parcelas de R$ 58 a mães de bebês de até seis meses de idade, para garantir a alimentação da criança. O Bolsa Família também paga um acréscimo de R$ 58 a famílias com gestantes e filhos de 7 a 18 anos e outro, de R$ 173, a famílias com crianças de até 6 anos.",
+      "Além do benefício integral, há o pagamento da regra de proteção. Em vigor desde junho de 2023, essa regra permite que famílias cujos membros consigam emprego e melhorem a renda recebam 50% do benefício a que teriam direito por até dois anos, desde que cada integrante receba o equivalente a até meio salário mínimo.",
+      "Desde junho do ano passado, o tempo de permanência na regra de proteção foi reduzido de dois para um ano. No entanto, quem entrou na regra até maio de 2025 continua a receber metade do benefício por dois anos.",
+      "Desde 2024, os beneficiários do Bolsa Família não têm mais o desconto do Seguro Defeso. A mudança foi estabelecida pela Lei 14.601/2023 , que resgatou o Programa Bolsa Família (PBF). O Seguro Defeso é pago a pessoas que sobrevivem exclusivamente da pesca artesanal e que não podem exercer a atividade durante o período da piracema (reprodução dos peixes)."
     ]
   },
   {
@@ -690,6 +1225,26 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Médico",
       "Sistema Único de Saúde",
       "SUS"
+    ],
+    "content": [
+      "Uma avaliação das unidades de terapia intensiva (UTIs) no Brasil feita por profissionais da área revela distância na percepção sobre a qualidade de serviços públicos e privados. Na maioria das vezes, as notas positivas são duas vezes maiores em unidades privadas do que nas públicas. Já as notas negativas chegam a ser até quatro vezes maiores em unidades públicas do que nas privadas.",
+      "Ao todo, 2.338 médicos que atuam na assistência de alta complexidade foram ouvidos dentro do Inquérito Nacional sobre a Força de Trabalho Médica nas UTIs Brasileiras, realizado pela Associação de Medicina Intensiva Brasileira (Amib), com o apoio do Conselho Federal de Medicina (CFM).",
+      "Os profissionais responderam a um questionário e deram notas de 0 a 5 para itens considerados essenciais ao funcionamento das unidades, como infraestrutura, disponibilidade de leitos e medicamentos, nível de especialização da equipe, fluxos de paciente, protocolos, entre outros.",
+      "Em nota, a Amib destacou que, analisadas em bloco, as menções ajudam a visualizar os problemas que afetam o atendimento a partir da ótica de quem é responsável pelo cuidado de pacientes graves.",
+      "Para a associação, os resultados reforçam a necessidade de políticas públicas de saúde que tratem a estruturação das UTIs como prioridade em múltiplos aspectos, não apenas como expansão do número de leitos .",
+      "A entidade informou que pretende levar o diagnóstico a gestores públicos e privados, bem como a autoridades de áreas de fiscalização e controle, com o intuito de defender o atendimento às recomendações feitas pelo inquérito.",
+      "“Eventuais mudanças terão impacto em 43.901 leitos de UTI distribuídos pelo país, sendo 34.927 destinados a adultos e 8.974 à pediatria e neonatologia”, destacou a Amib.",
+      "Os dados mostram que apenas 22,7% dos médicos entrevistados consideram que a rede de UTIs do Sistema Único de Saúde (SUS) tem disponibilidade totalmente adequada de medicamentos essenciais ao manejo dos pacientes .",
+      "O índice sobe para 57,7% quando analisados serviços particulares ou vinculados a planos de saúde.",
+      "Por outro lado, quando analisadas as avaliações negativas, a situação da oferta de medicamentos nos serviços da rede pública, por exemplo, foi considerada como inadequada ou totalmente inadequada por 16,1% dos médicos. No setor privado, o percentual cai para 3,8%.",
+      "A tendência se mantém na avaliação sobre a suficiência de leitos, em que 24,1% dos entrevistados atribuíram nota máxima aos serviços públicos de UTI. Já em relação a unidades privadas ou de planos de saúde, a avaliação favorável sobe para 51,4%.",
+      "No caso específico de disponibilidade e acesso a protocolos de atendimento e de conduta clínica, a rede SUS recebeu nota máxima de 23,1% dos que participaram do inquérito, enquanto o setor privado recebeu avaliação superior de 40,2% dos profissionais ouvidos.",
+      "Pela perspectiva das notas mais baixas (0, 1 e 2), 32,6% dos médicos avaliaram a disponibilidade de leitos no SUS ruim e 27,4% atribuíram as notas mínimas aos protocolos de atendimento.",
+      "Na rede privada, as avaliações mínimas foram dadas por 7,7% e 14,3% dos médicos, respectivamente.",
+      "O padrão se repetiu em 12 dos 13 aspectos avaliados por profissionais que atuam em UTIs no Brasil. A única exceção, em que a percepção dos entrevistados foi bastante próxima independentemente do segmento em que prestam serviços (público ou privado), foi em relação às tarefas administrativas e burocráticas.",
+      "A pesquisa também identificou disparidade na percepção sobre a presença de equipe multiprofissional especializada: 39,2% dos médicos avaliaram esse item com nota máxima no setor privado, contra 23% no setor público, enquanto as notas mínimas foram atribuídas por 24,8% dos médicos para o setor público e por 13,8% para o privado.",
+      "Quanto à percepção sobre presença de enfermeiros com formação específica em terapia intensiva, a proporção positiva foi de 25,1% para o privado e 16,9% para o público.",
+      "Já a negativa alcançou 37,2% para os serviços do SUS e 26,4% para os serviços particulares ou de planos."
     ]
   },
   {
@@ -736,6 +1291,44 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Boca Juniors",
       "Vasco",
       "semifinais"
+    ],
+    "content": [
+      "É verdade que o passado recente dos encontros entre Boca Juniors e o futebol brasileiro tem sido mais positivo para o lado de cá. O que não significa que a fama do tradicional clube argentino nesse tipo de confronto deva ser desprezada. O Vasco entrou para a estatística ao ver terminar o sonho de ir à final da Copa Sul-Americana.",
+      "O confronto finalizado na noite dessa terça-feira (20), com vitória do Boca por 3 a 1 em um Maracanã lotado, foi a 19ª classificação dos hermanos em 27 duelos eliminatórios - finais inclusas - contra rivais do Brasil. O aproveitamento é impressionante: 70,4%.",
+      "Nos últimos anos, os times brasileiros até conseguiram diminuir essa diferença para o Boca. De 2021 para cá, Santos, Atlético-MG, Corinthians, Cruzeiro e Fluminense - este em uma final de Libertadores - levaram a melhor em mata-matas contra os argentinos. Eles, inclusive, não ganhavam um jogo em território brasileiro desde 2010, quando bateram o Internacional por 1 a 0, no Beira-Rio, em Porto Alegre.",
+      "Nesta Sul-Americana, porém, o Cruzmaltino já é a segunda vítima brasileira do Boca. Nas quartas de final, eles superaram o São Paulo. Após vencerem na Bombonera, em Buenos Aires, por 1 a 0, os argentinos foram à capital paulista e seguraram o 1 a 1 no Morumbis para assegurar a classificação.",
+      "O adversário na decisão pode ser mais um brasileiro. Nesta quarta-feira (21), às 19h (horário de Brasília), o Atlético-MG enfrenta o Montevideo City Torque no Centenário, principal estádio da capital uruguaia. Na semana passada, o Galo venceu por 3 a 0 na Arena MRV, em Belo Horizonte, conquistando uma importante vantagem. Os mineiros podem até perder por dois gols de diferença que, ainda assim, vão à final.",
+      "O cenário no qual o Vasco foi eliminado torna a queda ainda mais dolorida. A equipe tinha vencido o jogo de ida, na Bombonera, por 1 a 0, uma semana antes, tornando-se apenas o oitavo time brasileiro a superar o rival na casa deles em partidas oficiais.",
+      "O problema é que algumas das vitórias mais marcantes do Boca em mata-matas ocorreram justamente no Brasil. Em 2003, pelas oitavas de final da Libertadores, recuperou-se da inesperada derrota por 1 a 0 para o Paysandu na Argentina com um 4 a 2 no Mangueirão, em Belém. No mesmo ano, fez a festa no Morumbi ao vencer o Santos por 3 a 1 na grande final.",
+      "Quatro anos depois, não tomou conhecimento do Grêmio, fazendo 2 a 0 no Olímpico, em Porto Alegre para assegurar outra vez o título do principal torneio do continente. A noite de terça é mais uma daquelas para manter viva a chama desse Boca que, independentemente da fase, \"aterroriza\" o futebol brasileiro.",
+      "A realização da partida no Maracanã foi alvo de longa disputa judicial entre Vasco e o consórcio formado por Flamengo e Fluminense, responsável pela administração do estádio. Foram três semanas com idas e vindas e ameaça da Confederação Sul-Americana de Futebol (Conmebol) de transferir o jogo para o Paraguai.",
+      "O torcedor que se empolgou com a vitória nos bastidores, porém, levou um balde de água fria logo aos quatro minutos do primeiro tempo. O lateral Lautaro Blanco cobrou escanteio pela esquerda e o zagueiro Lautaro Di Lollo, de cabeça, abriu o marcador para o Boca. A vantagem obtida pelo Vasco na Argentina já não existia mais.",
+      "Aos 33, ficou pior. O zagueiro Alan Saldívia afastou mal a bola no círculo central e Sebastian Villa, de primeira, lançou o também atacante Miguel Merentiel às costas da marcação cruzmaltina. O camisa 16 do Boca finalizou na saída do goleiro Léo Jardim e ampliou para os argentinos, que passaram à frente na soma dos placares.",
+      "Na volta do intervalo, o Boca acumulou erros em contra-ataques e as substituições do técnico Pedro Emanuel surtiram efeito no Vasco. As entradas dos atacantes Marino Hinestroza e Brenner nas vagas de David e Adson, e do lateral Puma Rodríguez no lugar de Paulo Henrique, deram mais qualidade ao setor ofensivo cruzmaltino.",
+      "A recompensa veio aos 20 minutos. A partir de um desarme do zagueiro Robert Renan, a bola chegou no lateral Cuiabano, que cruzou pela esquerda. Saindo da outra ponta, Puma apareceu na área e bateu forte, no canto do goleiro Álvaro Montero.",
+      "O momento era do Gigante da Colina. A maioria dos cerca 66 mil presentes no Maracanã cantava que o Vasco era \"o time da virada\". Os torcedores, porém, não contavam que um chute de fora da área do volante Leandro Paredes, com força e efeito, no meio do gol, surpreenderia Léo Jardim. A falha do goleiro acabaria decretando a eliminação do time da casa."
+    ]
+  },
+  {
+    "id": "ibge-48336",
+    "title": "IBGE e Embaixada do Brasil na China discutem cooperação em datificação e inteligência artificial",
+    "summary": "O presidente do IBGE, Marcio Pochmann, e o diretor do Centro de Documentação e Disseminação de Informações (CDDI) do IBGE, José Daniel Castro, reuniram-se nesta quarta-feira (21), em Pequim, com o embaixador do Brasil na China, Marcos Galvão.",
+    "source": "IBGE",
+    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
+    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48336-ibge-e-embaixada-do-brasil-na-china-discutem-cooperacao-em-datificacao-e-inteligencia-artificial.html",
+    "publishedAt": "21/10/2026 às 02:03",
+    "category": "Brasil",
+    "ingestedAt": "21/10/2026 às 14:58",
+    "imageUrl": "https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/ibge/2026_10/reuniao-ibge-embaixada-brasil-china.jpg",
+    "imageCaption": "IBGE e Embaixada do Brasil na China discutem cooperação em datificação e inteligência artificial",
+    "imageCredit": "Agência IBGE Notícias",
+    "imageAlt": "IBGE e Embaixada do Brasil na China discutem cooperação em datificação e inteligência artificial",
+    "author": "Agência IBGE Notícias",
+    "tags": [
+      "ibge",
+      "Notícia",
+      "Brasil",
+      "Estatísticas"
     ]
   },
   {
@@ -757,6 +1350,16 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Economia",
       "Mega-Sena",
       "Loteria"
+    ],
+    "content": [
+      "Ninguém acertou as seis dezenas da Mega-Sena do Concurso 3.072, que foram sorteadas nesta terça-feira (20).",
+      "O prêmio acumulou e está estimado em R$ 200 milhões para o próximo sorteio.",
+      "Os números sorteados são: 02 - 06 - 09 - 16 - 31 - 40",
+      "140 apostas acertaram cinco dezenas e irão receber R$ 38.295,72 cada",
+      "9.261 apostas acertaram quatro dezenas e irão receber R$ 954,26 cada",
+      "O próximo concurso acontece na quinta-feira (22).",
+      "A aposta simples, com seis dezenas, custa R$ 6.",
+      "​Entre os dias 26 e 30 de outubro de 2026, acontecerá a Mega Semana da Mega Sena. A ação promoverá cinco sorteios consecutivos correspondentes aos concursos 3076, 3077, 3078, 3079 e 3080."
     ]
   },
   {
@@ -849,6 +1452,21 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Copa do Brasil Feminina",
       "internacional",
       "semifinais"
+    ],
+    "content": [
+      "A Copa do Brasil Feminina conheceu, na noite desta terça-feira (20), os dois primeiros times classificados para as semifinais. O Internacional avançou nos pênaltis após novo empate com o Atlético-MG - desta vez sem gols, na Arena MRV. Já o Red Bull Bragantino fez valer a vantagem do jogo de ida e deixou para trás a Ferroviária, mesmo com a derrota por 3 a 2 no Estádio Cícero de Souza Marques, em Bragança Paulista (SP).",
+      "Na última quarta-feira (14), Gurias Coloradas e Vingadoras ficaram no 1 a 1 no Beira-Rio, em Porto Alegre. No jogo desta terça (20), em Belo Horizonte, a melhor chance durante o tempo normal foi uma cabeçada da zagueira Débora, que a goleira Maike Weber desviou para a trave, aos três minutos do segundo tempo, evitando o gol do time gaúcho.",
+      "Nas penalidades, o Atlético-MG começou melhor, com a meia Kaiuska acertando a primeira conversão e a atacante Sole Jaimes batendo para fora. Na terceira série de cobranças, a zagueira Giovanna Barraca chutou ao lado da meta colorada e Débora igualou a disputa.",
+      "Na sequência, a volante Laura Maria acertou o travessão e Bianca Martins converteu, colocando o Inter à frente. A também zagueira Karen Cristina manteve o Galo vivo no confronto, mas a atacante Caty não desperdiçou a quinta e última cobrança das gaúchas, que venceram por 4 a 3 e comemoraram a vaga inédita nas semifinais.",
+      "Mais cedo nesta terça (20), a classificação das Bragantinas foi decidida graças a vitória da última segunda-feira (12), por 2 a 0, na Arena da Fonte Luminosa, em Araraquara (SP). Na soma dos placares dos jogos de ida e volta, deu Massa Bruta por 4 a 3.",
+      "A Ferroviária, que tinha de ganhar por três ou mais gols no tempo normal, aproveitou um erro defensivo para abrir o placar em Bragança Paulista (SP). Aos 11 minutos, a volante Maressa interceptou o tiro de meta cobrado pela zagueira Maressa e acionou Fátima Dutra. Da meia-lua, a lateral finalizou no canto esquerdo da goleira Karol Alves.",
+      "O empate das anfitriãs levou apenas dois minutos para sair. Aos 13, a lateral Tamires avançou pela esquerda e encontrou Mylena na intermediária. A meia carregou a bola até a entrada da área e chutou no canto esquerdo da goleira Luciana.",
+      "As visitantes voltaram a frente no primeiro minuto da etapa final, novamente com Fátima Dutra. A lateral cobrou falta na área pela esquerda, a bola passou por toda a defesa do Massa Bruta, quicou no gramado quase em cima da linha e surpreendeu Karol Alves, entrando direto no gol.",
+      "A resposta das Bragantinas, mais uma vez, não tardou. Aos dez, a atacante Dos Santos cortou o lançamento da meia Rafa Mineira pela esquerda, mas a tentativa de recuo para a zagueira Luana não funcionou. A atacante Duda Rodrigues aproveitou para concluir na saída de Luciana. A goleira ainda tocou na bola, mas não evitou o empate.",
+      "Dos Santos acabou se redimindo aos 28 minutos, cruzando pela esquerda para a atacante Rhaissa, de cabeça, fazer o terceiro da Ferroviária. As Guerreiras Grenás pressionaram, mas o gol que levaria o duelo aos pênaltis não saiu. Melhor para o Massa Bruta, que chega pela primeira vez às semifinais da Copa do Brasil.",
+      "O terceiro classificado sai do duelo entre São Paulo e Bahia, que jogam nesta quarta-feira (19), às 19h (horário de Brasília), no Brinco de Ouro da Princesa, em Campinas (SP). As Mulheres de Aço têm a vantagem do empate por terem vencido a partida de ida, na última sexta-feira (16), por 2 a 1 no Batistão, em Aracaju.",
+      "A última vaga será decidida no clássico entre Fluminense e Flamengo, que se reencontram no Luso-Brasileiro na quinta-feira (22), às 19h. Uma semana antes, também no Rio de Janeiro, as Tricolores ganharam por 2 a 1 e passam de fase até mesmo em caso de empate.",
+      "Os confrontos das semifinais serão definidos em sorteio marcado para sexta-feira (23), às 15h, na sede da Confederação Brasileira de Futebol (CBF), no Rio de Janeiro. Na ocasião, também serão definidos os mandos para os jogos de ida e volta."
     ]
   },
   {
@@ -871,6 +1489,20 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições 2026",
       "TSE",
       "Nunes Marques"
+    ],
+    "content": [
+      "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, disse nesta terça-feira (20) que a Corte não participou das alterações de locais de votação para o segundo turno das eleições, no próximo domingo (25).",
+      "Segundo Nunes Marques, a mudança é de responsabilidade dos TREs nos estados e ocorre por problemas registrados durante o primeiro turno, como danos estruturais em escolas e desabamentos em razão das chuvas.",
+      "Durante a abertura de sessão desta noite, o ministro explicou que a diferença entre o número de mudanças de locais ocorreu porque o sistema eletrônico usado para comunicar as alterações estava desatualizado.",
+      "No início desta semana, o site do TSE indicava que cerca de 4 mil seções seriam alteradas para o segundo turno. Conforme os dados foram atualizados, caíram para 102 locais de votação em todo o país que seriam alterados. O número de seções ainda não foi atualizado.",
+      "A inconsistência de dados foi sanada após o TSE enviar um ofício aos tribunais regionais eleitorais (TREs) para pedir, por escrito, a atualização imediata das informações.",
+      "Até o momento, as mudanças em locais de votação ocorrerão nos seguintes estados: Mato Grosso do Sul (1 local); Sergipe (1); Amapá (1); Rio de Janeiro (1); Amazonas (3); Pernambuco (3); Rondônia (3); Mato Grosso (1); Bahia (3); Paraíba (4); Espírito Santo (4); São Paulo (4); Ceará (6); Rio Grande do Sul (7); Paraná (9); Maranhão (13); Pará (11); Piauí (4) e Minas Gerais (17).",
+      "O Distrito Federal e os estados do Acre, Goiás, Roraima, Santa Catarina, Alagoas e Tocantins não tiveram alterações nos locais de votação.",
+      "Para verificar se houve mudança no local de votação, o eleitor pode acessar o aplicativo E-título , Autoatendimento eleitoral ou ChatVote .",
+      "Mesmo que o eleitor tenha consultado o local de votação com antecedência, ele deve verificar novamente a informação no dia da eleição , no domingo (25), antes de sair de casa.",
+      "Outra dica é votar pela manhã, para ter mais tempo de se deslocar caso a seção eleitoral tenha mudado de lugar.",
+      "Nos últimos dias, têm circulado diversas mensagens em grupos de WhatsApp ou nas redes sociais com links não oficiais sobre locais de votação que não são confiáveis.",
+      "O eleitor não deve consultar o local de votação em links que não sejam os oficiais da Justiça Eleitoral."
     ]
   },
   {
@@ -892,6 +1524,17 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Justiça",
       "eleições 2026",
       "Brasil"
+    ],
+    "content": [
+      "O ministro Marco Aurélio Belizze, do Tribunal Superior Eleitoral (TSE), se reuniu nesta terça-feira (20) com representantes da Meta e das campanhas dos candidatos à Presidência da República Luiz Inácio Lula da Silva (PT) e Flávio Bolsonaro (PL).",
+      "A reunião foi solicitada pela empresa após a decisão do TSE que proibiu a Meta de restringir a entrega de postagens que envolvem os candidatos .",
+      "Durante o encontro, o ministro reforçou que a transparência e igualdade entre os candidatos deve ser garantida pela empresa, que é responsável pelas plataformas Facebook, Instagram e WhatsApp.",
+      "Mais cedo, em manifestação enviada ao TSE, a Meta negou dar tratamento desigual entre as candidaturas .",
+      "Na semana passada, o plenário virtual do tribunal manteve, por unanimidade, a decisão individual do ministro Belizze que proibiu a restrição de postagens sobre os presidenciáveis.",
+      "A decisão foi proferida após a campanha de Lula informar ao TSE que comandos para geração de imagens de inteligência artificial não permitiam a criação de conteúdos sobre o candidato à reeleição. Contudo, a criação de imagens relacionadas ao candidato Flávio Bolsonaro estava liberada.",
+      "Pela decisão do TSE, o Facebook, uma das plataformas operadas pela Meta, deve abster-se de aplicar medidas de redução de distribuição, exclusão de recomendação e restrição de buscas.",
+      "Após o PT denunciar as falhas, a Meta declarou que a recomendação de candidatos foi proibida, conforme determinação do TSE. A plataforma também informou que tomou medidas adicionais para restringir as recomendações.",
+      "“Em cumprimento com as regras eleitorais do Brasil, nós proibimos temporariamente a recomendação de candidatos ou a geração de imagens deles. Tomamos medidas adicionais para que comandos usando apenas o primeiro nome dos candidatos e seu número nas urnas também não produzam imagens”, afirmou a empresa."
     ]
   },
   {
@@ -913,141 +1556,25 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Congresso",
       "Brasil",
       "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1705998",
-    "title": "Quase 90% de conteúdos virais sobre saúde são falsos, diz Agência Lupa",
-    "summary": "Primeira agência a trabalhar com checagem de informações no Brasil, a Lupa acaba de lançar um relatório que aponta que 87,3% de conteúdos virais sobre saúde, analisados entre março de 2017 e junho deste ano, eram falsos.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/quase-90-de-conteudos-virais-sobre-saude-sao-falsos-diz-agencia-lupa",
-    "publishedAt": "20/10/2026 às 20:31",
-    "category": "Política",
-    "ingestedAt": "20/10/2026 às 21:26",
-    "imageUrl": "https://imagens.ebc.com.br/CP9HmKyAod3t5GnjriOAoqlsZm4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/_dsc7260.jpg?itok=OXH0Korb",
-    "imageCaption": "Quase 90% de conteúdos virais sobre saúde são falsos, diz Agência Lupa",
-    "imageCredit": "Pedro Rafael Vilela - Repórter da Agência Brasil",
-    "imageAlt": "Quase 90% de conteúdos virais sobre saúde são falsos, diz Agência Lupa",
-    "author": "Pedro Rafael Vilela - Repórter da Agência Brasil",
-    "tags": [
-      "Saúde",
-      "Agência Lupa",
-      "desinformação",
-      "conteúdos falsos",
-      "covid-19"
-    ]
-  },
-  {
-    "id": "ebc-1705995",
-    "title": "AGU busca recuperar R$ 190 milhões de integrantes do PCC e do CV",
-    "summary": "A Advocacia-Geral da União (AGU) ajuizou quatro ações civis, nesta terça-feira (20), para recuperar bens, no valor de R$ 190,3 milhões, de integrantes do Primeiro Comando da Capital (PCC) e do Comando Vermelho.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/agu-busca-recuperar-r-190-milhoes-de-integrantes-do-pcc-e-do-cv",
-    "publishedAt": "20/10/2026 às 20:07",
-    "category": "Justiça",
-    "ingestedAt": "20/10/2026 às 21:26",
-    "imageUrl": "https://imagens.ebc.com.br/0kxmJEeFfyIsRg_WE6wFMTjRiTE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/dji_0993.jpg?itok=JppHg2-a",
-    "imageCaption": "AGU busca recuperar R$ 190 milhões de integrantes do PCC e do CV",
-    "imageCredit": "Bruno Bocchini - Repórter da Agência Brasil",
-    "imageAlt": "AGU busca recuperar R$ 190 milhões de integrantes do PCC e do CV",
-    "author": "Bruno Bocchini - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Comando Vermelho",
-      "PCC",
-      "AGU"
-    ]
-  },
-  {
-    "id": "ebc-1705992",
-    "title": "Supervisão parental nas redes deve ser reforçada, diz diretora da ANPD",
-    "summary": "A diretora da Agência Nacional de Proteção de Dados (ANPD), Miriam Wimmer, defendeu, nesta terça-feira (20), que os pais de crianças e adolescentes reforcem o uso dos mecanismos de supervisão parental nas plataformas de tecnologia, inclusive nas redes sociais.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/supervisao-parental-nas-redes-deve-ser-reforcada-diz-diretora-da-anpd",
-    "publishedAt": "20/10/2026 às 19:48",
-    "category": "Política",
-    "ingestedAt": "20/10/2026 às 21:26",
-    "imageUrl": "https://imagens.ebc.com.br/97h2wNiDUlUgwewI1eHBtigOxUQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/01/28/_mg_5844_0.jpg?itok=3ZNL7Nfc",
-    "imageCaption": "Supervisão parental nas redes deve ser reforçada, diz diretora da ANPD",
-    "imageCredit": "Luiz Claudio Ferreira - Repórter da Agência Brasil",
-    "imageAlt": "Supervisão parental nas redes deve ser reforçada, diz diretora da ANPD",
-    "author": "Luiz Claudio Ferreira - Repórter da Agência Brasil",
-    "tags": [
-      "Direitos Humanos",
-      "ECA Digital",
-      "ANPD",
-      "Crianças e Adolescentes",
-      "Internet"
-    ]
-  },
-  {
-    "id": "ebc-1705991",
-    "title": "Dólar cai para R$ 5,01 com exterior e expectativa eleitoral no Brasil",
-    "summary": "O dólar aproximou-se de R$ 5, e a bolsa superou os 208 mil pontos nesta terça-feira (20). O desempenho positivo dos ativos brasileiros foi impulsionado pela desvalorização da moeda norte-americana no exterior, pelo fluxo de investimentos estrangeiros e pelo cenário eleitoral.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/dolar-cai-para-r-501-com-exterior-e-expectativa-eleitoral-no-brasil",
-    "publishedAt": "20/10/2026 às 19:34",
-    "category": "Economia",
-    "ingestedAt": "20/10/2026 às 21:26",
-    "imageUrl": "https://imagens.ebc.com.br/6cBKvd2Gn_bpUzjMP8ZFsNjqBWI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/dolar_moeda_0803221211.jpg?itok=39fSIBWo",
-    "imageCaption": "Dólar cai para R$ 5,01 com exterior e expectativa eleitoral no Brasil",
-    "imageCredit": "Wellton Máximo – Repórter da Agência Brasil*",
-    "imageAlt": "Dólar cai para R$ 5,01 com exterior e expectativa eleitoral no Brasil",
-    "author": "Wellton Máximo – Repórter da Agência Brasil*",
-    "tags": [
-      "Economia",
-      "Dólar",
-      "Ibovespa",
-      "Bolsa de Valores",
-      "petróleo"
-    ]
-  },
-  {
-    "id": "camara-1312573-eleitores-nao-podem-ser-presos",
-    "title": "Eleitores não podem ser presos a partir desta terça-feira",
-    "summary": "Há exceções, como a prisão por flagrante delito.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1312573-eleitores-nao-podem-ser-presos-a-partir-desta-terca-feira",
-    "publishedAt": "20/10/2026 às 19:23",
-    "category": "Congresso",
-    "ingestedAt": "20/10/2026 às 21:26",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2024/12/img20140729174151637113-768x513.jpg",
-    "imageCaption": "Essa \"imunidade\" vale até o dia 27 e está prevista em lei. O objetivo é evitar que o cidadão seja impedido de exercer o direito ao voto",
-    "imageCredit": "Rafael Neddermeyer/Fotos Públicas",
-    "imageAlt": "Política - Eleições - título eleitoral voto eleições urna",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ]
-  },
-  {
-    "id": "ebc-1705989",
-    "title": "Governo do RJ deverá adquirir câmeras para policiais em março de 2027",
-    "summary": "O governo do estado do Rio de Janeiro pretende concluir o processo de licitação e contratar novas câmeras corporais para uso pelas forças de segurança do estado, em março de 2027.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/governo-do-rj-devera-adquirir-cameras-para-policiais-em-marco-de-2027",
-    "publishedAt": "20/10/2026 às 19:19",
-    "category": "Justiça",
-    "ingestedAt": "20/10/2026 às 21:26",
-    "imageUrl": "https://imagens.ebc.com.br/EunbdNCwlMS77Keol4lU0tyzu2E=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/10/28/2025-10-28t154639z_743868207_rc23lhasao1q_rtrmadp_3_brazil-violence.jpg?itok=pRwIotOI",
-    "imageCaption": "Governo do RJ deverá adquirir câmeras para policiais em março de 2027",
-    "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
-    "imageAlt": "Governo do RJ deverá adquirir câmeras para policiais em março de 2027",
-    "author": "Douglas Corrêa - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "câmeras corporais",
-      "Operação Contenção",
-      "Rio de Janeiro",
-      "MPRJ"
+    ],
+    "content": [
+      "Marina Ramos/Câmara dos Deputados",
+      "Hugo Motta, presidente da Câmara dos Deputados",
+      "O presidente da Câmara dos Deputados, Hugo Motta (Republicanos-PB), afirmou que o fortalecimento das instituições ocorre por meio do diálogo, do respeito às competências de cada Poder e da busca por convergências.",
+      "\"Nada mais importante que recordar que instituições fortes não surgem fortuitamente. Constroem-se com diálogo, com respeito às competências de cada Poder e com a disposição de buscar convergências, mesmo, e sobretudo, quando o debate é difícil\", afirmou.",
+      "As declarações foram feitas na noite desta terça-feira (20), em Brasília, durante a abertura do 29º Congresso Internacional de Direito Constitucional do Instituto Brasileiro de Ensino, Desenvolvimento e Pesquisa (IDP).",
+      "Motta destacou que \"uma Constituição se mantém viva quando acompanha as mudanças do país pela via do debate democrático\". \"A Câmara dos Deputados tem ajudado a construir esse caminho se debruçando sobre temas de grande impacto na vida dos brasileiros\", declarou.",
+      "O presidente da Câmara ressaltou a atuação do Parlamento na discussão de temas relacionados ao desenvolvimento econômico, à proteção social e à segurança pública. Ele afirmou que a Câmara tem buscado construir soluções para essas questões, mesmo diante do calendário eleitoral.",
+      "O parlamentar destacou a aprovação do marco legal de combate ao crime organizado, denominado Lei Raul Jungmann, e as discussões sobre inteligência artificial, soberania de dados, direitos fundamentais na sociedade digital e reforma tributária.",
+      "O presidente da Câmara citou a proposta de redução da jornada de trabalho e de encerramento da escala 6x1. Segundo ele, a construção do texto envolveu a escuta de mais de 3 mil pessoas, entre trabalhadores, especialistas, representantes da sociedade civil e do setor produtivo.",
+      "\"A emenda vai beneficiar milhões de brasileiros, homens e mulheres que acordam antes do amanhecer, atravessam cidades inteiras e dedicam grande parte de seus dias ao trabalho. Porque conciliar família, saúde, estudo e tudo o mais que a vida exige não cabe em apenas um dia de descanso\", defendeu.",
+      "Motta também mencionou a aprovação da atualização do teto de faturamento do microempreendedor individual (MEI) e o perdão de dívidas de quase 3 milhões de microempreendedores.",
+      "\"As duas medidas representam justiça econômica. Significa reconhecer a realidade de quem é MEI, oferecer melhores condições para o crescimento dos negócios e ampliar as oportunidades de geração de emprego e renda\", disse.",
+      "Acordo Mercosul-União Europeia",
+      "Outra aprovação destacada por Motta foi a do acordo provisório de comércio entre o Mercosul e a União Europeia, depois de décadas de negociação.",
+      "Ele citou ainda a regulamentação da política de minerais críticos, o Estatuto Digital da Criança e do Adolescente (ECA Digital) e o Redata, voltado à atração de investimentos em centros de dados, computação em nuvem e inteligência artificial.",
+      "Sobre a regulamentação da inteligência artificial, ele afirmou que o tema permanece em discussão em uma comissão especial da Câmara e que será retomado como prioridade após o período eleitoral.",
+      "Hugo Motta também fez referência ao segundo turno das eleições, que ocorre no próximo domingo (25). \"Para nós brasileiros, é uma felicidade independente do resultado: defender o Estado democrático de direito é uma obrigação de todos nós\", afirmou."
     ]
   },
   {
@@ -1095,28 +1622,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
-    "id": "ibge-48324",
-    "title": "IBGE visita Bolsa de Dados de Xangai em agenda internacional",
-    "summary": "Em 10 de outubro, o presidente do Instituto Brasileiro de Geografia e Estatística (IBGE), Marcio Pochmann, e o diretor do Centro de Documentação e Disseminação de Informações (CDDI), José Daniel Castro, visitaram a Bolsa de Dados de Xangai, na China.",
-    "source": "IBGE",
-    "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
-    "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48324-ibge-visita-bolsa-de-dados-de-xangai-em-agenda-internacional.html",
-    "publishedAt": "19/10/2026 às 05:22",
-    "category": "Brasil",
-    "ingestedAt": "20/10/2026 às 08:04",
-    "imageUrl": "https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/ibge/2026_10/visita-ibge-banco-xangai-019.jpg",
-    "imageCaption": "IBGE visita Bolsa de Dados de Xangai em agenda internacional",
-    "imageCredit": "Agência IBGE Notícias",
-    "imageAlt": "IBGE visita Bolsa de Dados de Xangai em agenda internacional",
-    "author": "Agência IBGE Notícias",
-    "tags": [
-      "ibge",
-      "Notícia",
-      "Brasil",
-      "Estatísticas"
-    ]
-  },
-  {
     "id": "bcb-21280-bc-passa-a-divulgar-mensalment",
     "title": "BC passa a divulgar mensalmente indicadores de reajustes salariais negociados",
     "summary": "Dados mostram forte relação entre reajustes pactuados e inflação passada. Estudo mostra que ganhos reais são mais frequentes em períodos de baixa taxa de desocupação.",
@@ -1135,6 +1640,14 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Banco Central",
       "Economia",
       "Política Monetária"
+    ],
+    "content": [
+      "Os reajustes salariais negociados por meio das convenções coletivas de trabalho passaram a contar com um novo conjunto de indicadores divulgados mensalmente pelo Banco Central (BC). Construídas a partir das informações registradas no Sistema de Negociações Coletivas de Trabalho (Mediador), do Ministério do Trabalho e Emprego, as séries ampliam o monitoramento das condições do mercado de trabalho e de sua relação com a dinâmica inflacionária. As informações estão em um boxe do Relatório de Política Monetária de setembro de 2026 e na Nota técnica 60​ , ambos disponíveis no site do BC.",
+      "​Os indicadores reúnem informações sobre reajustes nominais e reais, participação das convenções com aumentos acima, abaixo ou iguais à inflação e quantidade de instrumentos coletivos utilizados nos cálculos.",
+      "“Os indicadores construídos a partir das convenções coletivas oferecem uma visão abrangente dos reajustes negociados no setor privado formal. Os resultados mostram que a inflação passada continua sendo uma referência importante nas negociações e ajudam a avaliar como as condições do mercado de trabalho influenciam a dinâmica salarial no país”, afirmou Ricardo Sabbadini, Chefe do Departamento Econômico (Depec) do BC.",
+      "A nova base permite acompanhar com maior precisão o comportamento das negociações salariais no setor privado formal. De acordo com estudo do BC, publicado como boxe do Relatório de Política Monetária de setembro de 2026, os reajustes pactuados apresentam elevada aderência à inflação passada, medida pelo Índice Nacional de Preços ao Consumidor (INPC). Embora não exista obrigação legal de reposição integral da inflação, os dados indicam que a variação dos preços continua sendo uma referência central para empregadores e trabalhadores durante as negociações coletivas.",
+      "A análise também evidencia que os resultados das negociações variam conforme as condições do mercado de trabalho. Entre 2012 e 2014 e novamente após 2023, períodos marcados por taxas de desocupação relativamente baixas, aumentou a participação de convenções com reajustes superiores à inflação. Os dados permitem ainda acompanhar potenciais diferenças entre setores econômicos. De forma geral, agropecuária, indústria, construção, comércio e serviços apresentaram trajetórias semelhantes ao longo do período analisado.",
+      "A divulgação regular dessas estatísticas amplia o conjunto de informações disponíveis para a análise do mercado de trabalho e de seus reflexos sobre a inflação, oferecendo à sociedade uma nova ferramenta para acompanhar a evolução dos salários negociados no país."
     ]
   },
   {
@@ -1154,26 +1667,13 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Nordeste",
       "Geopolítica",
       "Regiões"
-    ]
-  },
-  {
-    "id": "eleicoes-2026-tse-apuracao-primeiro-turno",
-    "title": "TSE conclui 100% da totalização: Flávio Bolsonaro e Lula disputarão o 2º turno",
-    "summary": "Com 125,2 milhões de votos válidos nominais, Tribunal Superior Eleitoral confirma votação e convoca eleitores para o segundo turno no último domingo de outubro.",
-    "source": "Redação Sociedade Ativa",
-    "sourceUrl": "https://sociedadeativa.github.io/",
-    "articleUrl": "https://sociedadeativa.github.io/",
-    "publishedAt": "05/10/2026 às 08:30",
-    "category": "Eleições",
-    "ingestedAt": "05/10/2026 às 08:30",
-    "updatedAt": "05/10/2026 às 10:15",
-    "author": "Redação Sociedade Ativa / Cobertura Especial",
-    "tags": [
-      "TSE",
-      "Eleições 2026",
-      "Segundo Turno",
-      "Apuração",
-      "Presidência"
+    ],
+    "content": [
+      "O mapeamento regional dos dados consolidados pelo Tribunal Superior Eleitoral revela uma nítida clivagem geográfica no comportamento do eleitorado brasileiro no primeiro turno das eleições presidenciais de 2026.",
+      "O candidato Flávio Bolsonaro (PL) consolidou ampla vantagem em três macrorregiões do país: Sul, Sudeste e Centro-Oeste, vencendo em 14 unidades federativas além do Distrito Federal. Os maiores colégios eleitorais do país — São Paulo, Minas Gerais e Rio de Janeiro — registraram vitória do candidato liberal.",
+      "Por sua vez, o presidente Luiz Inácio Lula da Silva (PT) garantiu expressiva liderança em todos os nove estados da Região Nordeste, mantendo a tradicional força histórica da legenda no semiárido e capitais nordestinas, além de alcançar a vitória em quatro estados da Região Norte.",
+      "A análise dos municípios com mais de 200 mil eleitores aponta forte polarização nas regiões metropolitanas, com alta densidade de comparecimento e redução expressiva na margem de votos destinados às candidaturas de terceira via.",
+      "Para o segundo turno, os comandos de campanha concentram as atenções nas capitais do Sudeste e nos estados de transição demográfica, onde a transferência de votos dos candidatos eliminados e o resgate de abstenções serão determinantes para o resultado final."
     ]
   },
   {
@@ -1196,6 +1696,15 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Economia",
       "Política Monetária",
       "Câmbio"
+    ],
+    "content": [
+      "Com o objetivo de ampliar a transparência na divulgação de dados de atuação no mercado de câmbio​, o Banco Central (BC) passará a apresentar, na página de Política Cambial do seu site, o histórico de estoque e o cronograma de vencimentos das operações de Swap Cambial e de Linha com Recompra, dois dos instrumentos disponíveis para assegurar o regular funcionamento do mercado de câmbio. A medida não altera o formato de divulgação dos leilões de câmbio, somente reorganiza informações já presentes no Portal de Dados Abertos do BC, oferecendo ao público uma forma direta de visualização.",
+      "Clique para acessar a página de Política Cambial.​",
+      "O Swap Cambial funciona como uma proteção financeira no mercado futuro, trocando a rentabilidade em dólar pela taxa Selic, sem alterar as reservas internacionais. Já a Linha com Recompra fornece dólares físicos diretamente no mercado à vista com o compromisso de recomprá-los no futuro, restabelecendo temporariamente a liquidez em moeda estrangeira das reservas do país.",
+      "A iniciativa traz avanços no acesso e na visualização dos dados e das informações. Se antes os usuários contavam com a tabela de vencimentos do Swap Cambial, agora, a Linha com Recompra passa a ter um espelho de tabela equivalente. As duas modalidades ganham cronogramas atualizados e uma ferramenta gráfica com histórico de estoques de dez anos, permitindo baixar dados e imagens em diferentes formatos.",
+      "Como suporte a essa modernização, a autoridade monetária incorporou ao Sistema Gerenciador de Séries Temporais (SGS) três novas séries de dados diários. Trata-se do acompanhamento de estoque de Linhas com Recompra (código 29722), valor nocional de Swap Cambial (código 29723) e número de contratos de Swap Cambial (código 29724).",
+      "\"Ao consolidar e divulgar novas séries temporais relacionadas à Política Cambial, o BC simplifica o acesso à informação e reafirma seu compromisso com a transparência e a estabilidade econômica\", afirmou Nilton David, Diretor de Política Monetária.",
+      "Com a modernização na apresentação de dados sobre atuação no mercado de câmbio​, o BC assegura maior acessibilidade a estas informações, conferindo maior transparência na condução da política cambial."
     ]
   },
   {
@@ -1217,6 +1726,44 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Banco Central",
       "Economia",
       "Política Monetária"
+    ],
+    "content": [
+      "O Banco Central aprovou uma nova rodada de atualizações no Regulamento do Pix com o objetivo de aperfeiçoar funcionalidades, fortalecer mecanismos de segurança e ajustar procedimentos operacionais à evolução do ecossistema de pagamentos instantâneos. As alterações foram consolidadas na Resolução BCB 587, publicada em 18 de setembro, e refletem demandas identificadas ao longo da operação do sistema e nas interações com participantes do mercado.",
+      "“As alterações aprovadas atualizam o Regulamento do Pix para acompanhar a evolução dos modelos de negócio e das necessidades dos usuários. As medidas ampliam possibilidades de uso e contribuem para que o arranjo continue oferecendo uma experiência simples, eficiente e confiável para toda a sociedade”, destacou Ricardo Teixeira Leite Mourão, Chefe do Departamento de Competição e de Estrutura do Mercado Financeiro (Decem) do BC.​",
+      "Nesse escopo, a ampliação das possibilidades de uso do Pix Automático está entre as principais novidades. A partir de 1º de julho de 2027, a funcionalidade poderá ser utilizada em contas-salário para a realização de pagamentos recorrentes autorizados pelo cliente. A medida alinha o produto às regras recentemente estabelecidas para débitos automáticos interbancários e amplia a conveniência para os usuários desse tipo de conta, preservadas as restrições já existentes para recebimento de recursos, transferências e outras modalidades de pagamento, por meio do Pix.",
+      "A norma também disciplina a chamada cobrança híbrida, modalidade que reúne em um mesmo documento o código de barras do boleto e o QR Code do Pix Cobrança. Embora essa solução já venha sendo utilizada por algumas instituições, o novo regulamento estabelece critérios específicos para garantir a convivência segura entre os dois instrumentos de pagamento e prevenir liquidações indevidas ou em duplicidade. Entre as medidas previstas estão regras para cancelamento automático do Pix Cobrança após o pagamento do boleto e vice-versa. Ou seja, quando o Pix Cobrança for pago, a instituição deve cancelar o boleto. Além disso, houve definição de responsabilidades para os participantes envolvidos na operação em caso de falhas operacionais.",
+      "Outro aperfeiçoamento permite que o BC dispense a participação obrigatória no Pix de determinadas instituições com mais de quinhentas mil contas transacionais ativas, quando características específicas de seus clientes ou modelos de negócio não justificarem o acesso à infraestrutura do arranjo. A medida busca conferir maior proporcionalidade regulatória sem comprometer a eficiência do sistema.",
+      "As mudanças contemplam ainda aprimoramentos nos processos de adesão e permanência de participantes. O regulamento passa a prever, por exemplo, anulação de aprovações obtidas com informações falsas ou omissões relevantes, novos procedimentos para instituições submetidas à liquidação extrajudicial, desligamento imediato de participantes que sofreram a penalidade de exclusão do arranjo e ajustes relacionados à saída ordenada de participantes. Também foram reforçadas exigências voltadas à transparência e à comunicação com os usuários.",
+      "No campo da segurança, a atualização incorpora mecanismos destinados a reforçar a confiabilidade do ecossistema. Entre as medidas adotadas destacam-se o aprimoramento dos procedimentos relacionados ao registro de marcações de fundada suspeita de fraude no Diretório de Identificadores de Contas Transacionais (DICT), a obrigatoriedade de comunicação ao usuário sobre realização de marcação, informando a data do registro e a possibilidade de revisão da medida, bem como a exigência de cancelamento da marcação quando, após análise, não subsistirem elementos que justifiquem a suspeita.",
+      "Assim, o participante que aceitar uma notificação de infração ou que registrar uma marcação de fundada suspeita de fraude passa a ser expressamente o responsável pela respectiva marcação, inclusive por seu eventual cancelamento.",
+      "As medidas se somam a outras iniciativas recentes do BC para fortalecer a integridade e a resiliência do Pix, diante do crescimento contínuo de sua utilização pela população e pelas empresas."
+    ]
+  },
+  {
+    "id": "eleicoes-2026-tse-apuracao-primeiro-turno",
+    "title": "TSE conclui 100% da totalização: Flávio Bolsonaro e Lula disputarão o 2º turno",
+    "summary": "Com 125,2 milhões de votos válidos nominais, Tribunal Superior Eleitoral confirma votação e convoca eleitores para o segundo turno no último domingo de outubro.",
+    "source": "Redação Sociedade Ativa",
+    "sourceUrl": "https://sociedadeativa.github.io/",
+    "articleUrl": "https://sociedadeativa.github.io/",
+    "publishedAt": "05/10/2026 às 08:30",
+    "category": "Eleições",
+    "ingestedAt": "05/10/2026 às 08:30",
+    "updatedAt": "05/10/2026 às 10:15",
+    "author": "Redação Sociedade Ativa / Cobertura Especial",
+    "tags": [
+      "TSE",
+      "Eleições 2026",
+      "Segundo Turno",
+      "Apuração",
+      "Presidência"
+    ],
+    "content": [
+      "O Tribunal Superior Eleitoral (TSE) concluiu oficialmente a totalização de 100% das urnas eletrônicas em todo o território nacional e no exterior, confirmando a realização de segundo turno entre os dois candidatos mais votados à Presidência da República.",
+      "Flávio Bolsonaro (PL) encerrou a apuração na liderança com 60.910.742 votos nominais, correspondendo a 48,63% dos sufrágios válidos. Luiz Inácio Lula da Silva (PT) obteve 54.898.347 votos nominais, totalizando 43,83% dos votos válidos, sacramentando a disputa final para o pleito de 25 de outubro.",
+      "Na sequência da totalização homologada pela Justiça Eleitoral, Aldo Cury obteve 4.020.155 votos (3,21%), seguido por Delegado Santos com 3.011.890 votos (2,41%), Ronaldo Caiado com 1.391.020 votos (1,11%) e Romeu Zema com 1.021.050 votos (0,81%).",
+      "O total de eleitores que compareceram às seções eleitorais alcançou 131.540.320 cidadãos. Os votos brancos somaram 2.842.100 (2,16%) e os votos nulos totalizaram 3.445.016 (2,62%), com abstenção oficial registrada de 18,34% do colégio eleitoral.",
+      "A equipe técnica da Corte Eleitoral reforçou a segurança, integridade e celeridade do processo eletrônico de votação, convocando todo o eleitorado a comparecer às urnas no próximo dia 25 de outubro para o exercício da soberania popular."
     ]
   }
 ];

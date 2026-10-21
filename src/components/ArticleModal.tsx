@@ -109,10 +109,20 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
           </figure>
         )}
 
-        {/* Resumo em Destaque */}
-        <p className="text-sm sm:text-base font-semibold text-slate-700 mb-5 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-200/80">
-          {article.summary}
-        </p>
+        {/* Resumo ou Síntese Oficial */}
+        <div className="mb-5 bg-slate-50 p-4 rounded-xl border border-slate-200/80">
+          <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">
+            <ShieldCheck className="w-3.5 h-3.5 text-blue-700" />
+            <span>
+              {article.content && article.content.length > 0
+                ? "Resumo do Fato"
+                : "Nota de Síntese Factual Oficial"}
+            </span>
+          </div>
+          <p className="text-sm sm:text-base font-semibold text-slate-700 leading-relaxed">
+            {article.summary}
+          </p>
+        </div>
 
         {/* Informações de Autoria e Publicação */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-500 pb-4 mb-5 border-b border-slate-200">
@@ -154,7 +164,7 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
           </div>
         </div>
 
-        {/* Conteúdo Completo (quando disponível) */}
+        {/* Conteúdo Completo (quando disponível) ou Transparência de Súmula */}
         {article.content && article.content.length > 0 ? (
           <div className="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed mb-6 font-serif">
             {article.content.map((paragraph, idx) => (
@@ -162,8 +172,14 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
             ))}
           </div>
         ) : (
-          <div className="text-xs text-slate-500 italic mb-6 bg-slate-50 p-3 rounded-lg border border-slate-200/60">
-            Esta é uma súmula factual oficial distribuída por <strong>{article.source}</strong>. Para acessar a íntegra dos anexos, fotos ou documentos oficiais, utilize o link de acesso direto abaixo.
+          <div className="text-xs text-slate-600 bg-blue-50/60 p-4 rounded-xl border border-blue-200/80 mb-6 leading-relaxed space-y-1.5">
+            <div className="flex items-center gap-1.5 font-bold text-blue-900 uppercase tracking-wider text-[11px]">
+              <ShieldCheck className="w-4 h-4 text-blue-700" />
+              <span>Diretriz Editorial de Transparência</span>
+            </div>
+            <p>
+              Esta publicação é uma súmula factual oficial distribuída por <strong>{article.source}</strong>. Para acessar a íntegra dos anexos, fotos ou documentos oficiais, utilize o link de acesso direto abaixo.
+            </p>
           </div>
         )}
 

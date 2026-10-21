@@ -19,9 +19,13 @@ import {
 
 interface NewsSectionProps {
   articles?: NewsItem[];
+  onOpenArticleDetails?: (article: NewsItem) => void;
 }
 
-export const NewsSection: React.FC<NewsSectionProps> = ({ articles }) => {
+export const NewsSection: React.FC<NewsSectionProps> = ({
+  articles,
+  onOpenArticleDetails,
+}) => {
   const {
     filteredArticles,
     selectedCategory,
@@ -158,7 +162,13 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ articles }) => {
                   key={article.id}
                   article={article}
                   isFeatured={isFeatured}
-                  onOpenDetails={(item) => setActiveArticle(item)}
+                  onOpenDetails={(item) => {
+                    if (onOpenArticleDetails) {
+                      onOpenArticleDetails(item);
+                    } else {
+                      setActiveArticle(item);
+                    }
+                  }}
                 />
               );
             })}
@@ -231,9 +241,20 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ articles }) => {
                 </figure>
               )}
 
-              <p className="text-sm sm:text-base font-semibold text-slate-700 mb-5 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-200/80">
-                {activeArticle.summary}
-              </p>
+              {/* Resumo ou Síntese Factual */}
+              <div className="mb-5 bg-slate-50 p-4 rounded-xl border border-slate-200/80">
+                <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">
+                  <ShieldCheck className="w-3.5 h-3.5 text-blue-700" />
+                  <span>
+                    {activeArticle.content && activeArticle.content.length > 0
+                      ? "Resumo do Fato"
+                      : "Nota de Síntese Factual Oficial"}
+                  </span>
+                </div>
+                <p className="text-sm sm:text-base font-semibold text-slate-700 leading-relaxed">
+                  {activeArticle.summary}
+                </p>
+              </div>
 
               {/* Informações de Autoria e Publicação */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-500 pb-4 mb-5 border-b border-slate-200">
@@ -273,12 +294,22 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ articles }) => {
                 </div>
               </div>
 
-              {/* Parágrafos do Conteúdo ou Resumo Detalhado */}
-              {activeArticle.content && activeArticle.content.length > 0 && (
-                <div className="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed mb-6">
+              {/* Parágrafos do Conteúdo ou Diretriz de Transparência de Súmula */}
+              {activeArticle.content && activeArticle.content.length > 0 ? (
+                <div className="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed mb-6 font-serif">
                   {activeArticle.content.map((p, idx) => (
                     <p key={idx}>{p}</p>
                   ))}
+                </div>
+              ) : (
+                <div className="text-xs text-slate-600 bg-blue-50/60 p-4 rounded-xl border border-blue-200/80 mb-6 leading-relaxed space-y-1.5">
+                  <div className="flex items-center gap-1.5 font-bold text-blue-900 uppercase tracking-wider text-[11px]">
+                    <ShieldCheck className="w-4 h-4 text-blue-700" />
+                    <span>Diretriz Editorial de Transparência</span>
+                  </div>
+                  <p>
+                    Esta publicação é uma súmula factual oficial distribuída por <strong>{activeArticle.source}</strong>. Para consultar a apuração integral com tabelas, notas técnicas ou anexos documentais, acesse a matéria original pelo link abaixo.
+                  </p>
                 </div>
               )}
 

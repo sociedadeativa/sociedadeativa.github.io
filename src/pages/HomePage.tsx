@@ -197,7 +197,10 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* 8. Seção de Notícias e Análises Jornalísticas */}
       <div id="cobertura-noticias">
-        <NewsSection articles={articles} />
+        <NewsSection
+          articles={articles}
+          onOpenArticleDetails={onOpenArticleDetails}
+        />
       </div>
 
       {/* 9. Preview do Caderno de Esportes */}
