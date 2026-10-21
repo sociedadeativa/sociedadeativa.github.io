@@ -9,17 +9,17 @@ interface NewsCardProps {
   onOpenDetails: (article: NewsItem) => void;
 }
 
-const CATEGORY_STYLES: Record<NewsCategory, { kicker: string; bg: string; border: string }> = {
-  Política: { kicker: "text-red-700", bg: "bg-red-50", border: "border-red-200" },
-  Eleições: { kicker: "text-blue-700", bg: "bg-blue-50", border: "border-blue-200" },
-  Governo: { kicker: "text-slate-700", bg: "bg-slate-50", border: "border-slate-200" },
-  Congresso: { kicker: "text-amber-800", bg: "bg-amber-50", border: "border-amber-200" },
-  Justiça: { kicker: "text-purple-700", bg: "bg-purple-50", border: "border-purple-200" },
-  Economia: { kicker: "text-emerald-700", bg: "bg-emerald-50", border: "border-emerald-200" },
-  Brasil: { kicker: "text-cyan-800", bg: "bg-cyan-50", border: "border-cyan-200" },
-  Mundo: { kicker: "text-slate-700", bg: "bg-slate-50", border: "border-slate-200" },
-  Esportes: { kicker: "text-emerald-700", bg: "bg-emerald-50", border: "border-emerald-200" },
-  Tecnologia: { kicker: "text-indigo-700", bg: "bg-indigo-50", border: "border-indigo-200" },
+const CATEGORY_STYLES: Record<NewsCategory, { bg: string; border: string }> = {
+  Política: { bg: "bg-rose-50/80", border: "border-rose-200/70" },
+  Eleições: { bg: "bg-blue-50/80", border: "border-blue-200/70" },
+  Governo: { bg: "bg-slate-100", border: "border-slate-200/80" },
+  Congresso: { bg: "bg-amber-50/80", border: "border-amber-200/70" },
+  Justiça: { bg: "bg-indigo-50/80", border: "border-indigo-200/70" },
+  Economia: { bg: "bg-emerald-50/80", border: "border-emerald-200/70" },
+  Brasil: { bg: "bg-cyan-50/80", border: "border-cyan-200/70" },
+  Mundo: { bg: "bg-stone-100", border: "border-stone-200/80" },
+  Esportes: { bg: "bg-emerald-50/80", border: "border-emerald-200/70" },
+  Tecnologia: { bg: "bg-sky-50/80", border: "border-sky-200/70" },
 };
 
 export const NewsCard: React.FC<NewsCardProps> = ({
@@ -58,10 +58,12 @@ export const NewsCard: React.FC<NewsCardProps> = ({
           </div>
         )}
 
-        {/* Cabeçalho do Card: Kicker Tipográfico Não-Enclausurado (Zero-Pill Discipline) */}
+        {/* Cabeçalho do Card: Badge Padronizado com Cores Sutis e Tipografia Navy Consistente */}
         <div className="flex items-center justify-between gap-2 mb-2.5">
           <div className="flex items-center gap-2 text-xs">
-            <span className={`font-bold uppercase tracking-wider text-[11px] ${catStyle.kicker}`}>
+            <span
+              className={`inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold tracking-wider uppercase border text-slate-900 ${catStyle.bg} ${catStyle.border}`}
+            >
               {article.category}
             </span>
 

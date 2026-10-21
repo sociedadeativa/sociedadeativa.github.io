@@ -73,8 +73,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
         {/* Cabeçalho Editorial da Seção */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
           <div>
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-800 mb-1.5">
-              <span className="w-2 h-2 rounded-full bg-blue-700 animate-pulse" />
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-900 mb-1.5">
               <span>Curadoria & Jornalismo Público</span>
             </div>
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-slate-900">

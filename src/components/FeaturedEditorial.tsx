@@ -84,6 +84,26 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
     }
   }
 
+  // Mapa de estilos sutis para badges com tipografia navy consistente (text-slate-900)
+  const categoryBadgeMap: Record<string, { bg: string; border: string }> = {
+    Eleições: { bg: "bg-blue-50/80", border: "border-blue-200/70" },
+    Economia: { bg: "bg-emerald-50/80", border: "border-emerald-200/70" },
+    Política: { bg: "bg-rose-50/80", border: "border-rose-200/70" },
+    Congresso: { bg: "bg-amber-50/80", border: "border-amber-200/70" },
+    Justiça: { bg: "bg-indigo-50/80", border: "border-indigo-200/70" },
+    Governo: { bg: "bg-slate-100", border: "border-slate-200/80" },
+    Brasil: { bg: "bg-cyan-50/80", border: "border-cyan-200/70" },
+    Mundo: { bg: "bg-stone-100", border: "border-stone-200/80" },
+    Esportes: { bg: "bg-emerald-50/80", border: "border-emerald-200/70" },
+    Tecnologia: { bg: "bg-sky-50/80", border: "border-sky-200/70" },
+  };
+
+  const getCategoryBadgeClass = (category: string, isSmall = false) => {
+    const badge = categoryBadgeMap[category] || { bg: "bg-slate-100", border: "border-slate-200/80" };
+    const size = isSmall ? "text-[10px]" : "text-[11px]";
+    return `inline-flex items-center px-2 py-0.5 rounded ${size} font-bold tracking-wider uppercase border text-slate-900 ${badge.bg} ${badge.border}`;
+  };
+
   return (
     <section className="py-8 sm:py-10 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,17 +146,17 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
           </div>
         </div>
 
-        {/* Grade Editorial Principal: Lead Story + Destaques Secundários + Radar */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
-          {/* Coluna 1 & 2: Lead Story (7 colunas no desktop) */}
+        {/* Grade Editorial Principal: Lead Story + Destaques Secundários Separados */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+          {/* Coluna Principal: Matéria Líder com Imagem Horizontal e Destaque Editorial */}
           {leadArticle && (
-            <div className="lg:col-span-7 flex flex-col justify-between">
+            <div className="md:col-span-7 flex flex-col justify-between">
               <article
                 onClick={() => onOpenArticleDetails(leadArticle)}
                 className="group cursor-pointer flex flex-col h-full"
               >
-                {/* Imagem Editorial de Alta Definição */}
-                <div className="relative rounded-2xl overflow-hidden mb-5 bg-slate-100 aspect-16/9 shadow-xs border border-slate-200/80">
+                {/* Imagem Editorial de Alta Definição (Horizontal Lead-Story Image com enquadramento 16:9) */}
+                <div className="relative rounded-2xl overflow-hidden mb-5 bg-slate-100 aspect-[16/9] shadow-xs border border-slate-200/80">
                   <img
                     src={leadImageSrc}
                     alt={leadImageAlt}
@@ -145,34 +165,34 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                     referrerPolicy="no-referrer"
                     onError={() => setLeadImageError(true)}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
-                  <div className="absolute bottom-3 left-4 right-4 text-white text-[11px] font-medium flex items-center justify-between">
-                    <span className="opacity-90">{leadImageCaption}</span>
-                    <span className="hidden sm:inline bg-black/40 backdrop-blur-xs px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent" />
+                  <div className="absolute bottom-3 left-4 right-4 text-white text-[11px] font-medium flex items-center justify-between gap-2">
+                    <span className="opacity-90 truncate">{leadImageCaption}</span>
+                    <span className="shrink-0 hidden sm:inline bg-black/40 backdrop-blur-xs px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">
                       {isUsingOriginalPhoto ? "Fotojornalismo" : "Institucional"}
                     </span>
                   </div>
                 </div>
 
-                {/* Metadados e Kicker Editorial */}
-                <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-2.5">
-                  <span className="text-red-700 font-bold uppercase tracking-wider text-[11px]">
+                {/* Metadados e Kicker Editorial Padronizado (Cores Sutis + Tipografia Navy) */}
+                <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-500 mb-2.5">
+                  <span className={getCategoryBadgeClass(leadArticle.category)}>
                     {leadArticle.category}
                   </span>
-                  <span aria-hidden="true">·</span>
-                  <span>{leadArticle.source}</span>
-                  <span aria-hidden="true">·</span>
+                  <span className="text-slate-300" aria-hidden="true">·</span>
+                  <span className="text-slate-700 font-medium">{leadArticle.source}</span>
+                  <span className="text-slate-300" aria-hidden="true">·</span>
                   <span>{leadArticle.publishedAt}</span>
                   {leadArticle.readTime && (
                     <>
-                      <span aria-hidden="true">·</span>
+                      <span className="text-slate-300" aria-hidden="true">·</span>
                       <span>{leadArticle.readTime}</span>
                     </>
                   )}
                 </div>
 
-                {/* Manchete Principal */}
-                <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 leading-tight group-hover:text-blue-900 transition-colors mb-3 text-balance">
+                {/* Manchete Principal (Dominant Visual Anchor) */}
+                <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 leading-[1.18] group-hover:text-blue-900 transition-colors mb-3 text-balance">
                   {leadArticle.title}
                 </h1>
 
@@ -189,45 +209,40 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
             </div>
           )}
 
-          {/* Coluna 3: Destaques Secundários e Radar Brasil (5 colunas no desktop) */}
-          <div className="lg:col-span-5 flex flex-col justify-between divide-y divide-slate-100">
-            {/* Bloco de Notícias Secundárias */}
-            <div className="space-y-6 pb-6">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-900">
-                  Destaques Editoriais
-                </span>
+          {/* Coluna Separada: Destaques Secundários e Radar Cívico */}
+          <div className="md:col-span-5 flex flex-col justify-between pt-8 border-t border-slate-200 md:pt-0 md:border-t-0 md:border-l md:border-slate-200 md:pl-6 lg:pl-8 xl:pl-10">
+            {/* Bloco de Notícias Secundárias com Hierarquia Visual Clara */}
+            <div className="space-y-4 pb-6">
+              <div className="flex items-center justify-between pb-3 border-b border-slate-200">
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-3.5 bg-blue-900 rounded-xs" />
+                  <span className="font-heading text-xs font-black uppercase tracking-wider text-slate-900">
+                    Destaques Editoriais
+                  </span>
+                </div>
                 <PortalLink
                   route="noticias"
-                  className="text-xs font-semibold text-blue-700 hover:text-blue-900"
+                  className="text-xs font-semibold text-blue-900 hover:text-blue-700 flex items-center gap-1 transition-colors"
                 >
-                  Ver todas as notícias &rarr;
+                  <span>Ver todas</span>
+                  <span aria-hidden="true">&rarr;</span>
                 </PortalLink>
               </div>
 
-              {secondaryArticles.map((art, idx) => {
-                const categoryColorMap: Record<string, string> = {
-                  Eleições: "text-blue-700",
-                  Economia: "text-emerald-700",
-                  Política: "text-red-700",
-                  Congresso: "text-amber-800",
-                  Justiça: "text-purple-700",
-                };
-                const catColor = categoryColorMap[art.category] || "text-slate-700";
-
-                return (
+              <div className="divide-y divide-slate-100">
+                {secondaryArticles.map((art) => (
                   <article
                     key={art.id}
                     onClick={() => onOpenArticleDetails(art)}
-                    className="group cursor-pointer"
+                    className="group cursor-pointer py-4 first:pt-1 last:pb-0"
                   >
-                    <div className="flex items-center gap-2 text-[11px] text-slate-500 mb-1.5 font-medium">
-                      <span className={`font-bold uppercase tracking-wider ${catColor}`}>
+                    <div className="flex flex-wrap items-center gap-2 text-[11px] text-slate-500 mb-1.5 font-medium">
+                      <span className={getCategoryBadgeClass(art.category, true)}>
                         {art.category}
                       </span>
-                      <span aria-hidden="true">·</span>
-                      <span>{art.source}</span>
-                      <span aria-hidden="true">·</span>
+                      <span className="text-slate-300" aria-hidden="true">·</span>
+                      <span className="text-slate-700 font-medium">{art.source}</span>
+                      <span className="text-slate-300" aria-hidden="true">·</span>
                       <span>{art.publishedAt.split(" às ")[0]}</span>
                     </div>
 
@@ -239,16 +254,16 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                       {art.summary}
                     </p>
                   </article>
-                );
-              })}
+                ))}
+              </div>
             </div>
 
             {/* Radar Cívico / Boletim em Tempo Real */}
-            <div className="pt-6">
+            <div className="pt-6 border-t border-slate-100">
               <div className="bg-slate-50 rounded-2xl p-4 sm:p-5 border border-slate-200/80">
                 <div className="flex items-center justify-between mb-3">
                   <span className="font-heading text-xs font-black uppercase tracking-wider text-slate-900 flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-blue-700" />
+                    <Sparkles className="w-3.5 h-3.5 text-blue-900" />
                     <span>Radar Cívico · Despachos Oficiais</span>
                   </span>
                   <span className="text-[10px] font-mono text-slate-500 font-bold">
@@ -263,7 +278,7 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                       onClick={() => onOpenArticleDetails(item)}
                       className="group cursor-pointer hover:text-blue-900 transition-colors flex items-start gap-2"
                     >
-                      <span className="text-blue-600 font-bold shrink-0 mt-0.5">•</span>
+                      <span className="text-blue-900 font-bold shrink-0 mt-0.5">•</span>
                       <div className="min-w-0">
                         <span className="text-slate-800 font-medium group-hover:text-blue-900 leading-snug line-clamp-2">
                           {item.title}

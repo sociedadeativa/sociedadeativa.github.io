@@ -50,7 +50,7 @@ const SportsNewsCard: React.FC<{
         )}
 
         <div className="flex items-center justify-between gap-2 text-xs text-slate-500 mb-2">
-          <span className="font-bold uppercase tracking-wider text-emerald-700">
+          <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold tracking-wider uppercase border bg-emerald-50/80 border-emerald-200/70 text-slate-900">
             {article.category || "Esportes"}
           </span>
           <span className="flex items-center gap-1 text-[11px]">
