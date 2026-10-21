@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert';
+import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -323,6 +324,20 @@ console.log('\n[TEST 5] Defesa ativa contra falhas de rede e preservação do da
     const contentAfterFailure = fs.readFileSync(JSON_OUTPUT_PATH, 'utf8');
     assert.strictEqual(contentAfterFailure, initialContent, 'O arquivo em disco não pode ser alterado durante falha');
     console.log('  [PASS] 1. Falha de rede capturada e tratada com preservação estrita do dataset existente.');
+
+    // Confirma que a invocação via CLI encerra com código 1 em caso de falha preservada
+    const scriptPath = path.resolve(rootDir, 'scripts', 'update-election-second-round-data.mjs');
+    const cliRes = spawnSync(
+      process.execPath,
+      [
+        '--import',
+        'data:text/javascript,globalThis.fetch=()=>Promise.reject(new Error("Falha simulada de conectividade"));',
+        scriptPath
+      ],
+      { encoding: 'utf8' }
+    );
+    assert.strictEqual(cliRes.status, 1, 'Invocação CLI deve encerrar com código de saída 1 quando houver falha');
+    console.log('  [PASS] 2. Ponto de entrada CLI encerra com status 1 sob falha de rede preservando dataset.');
   } finally {
     global.fetch = originalFetch;
   }

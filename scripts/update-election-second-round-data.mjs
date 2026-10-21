@@ -434,8 +434,13 @@ export const SECOND_ROUND_DATA: SecondRoundTotalization = ${JSON.stringify(parse
 
 // Execução se chamado diretamente via CLI
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  await updateElectionSecondRoundData().catch((err) => {
+  try {
+    const result = await updateElectionSecondRoundData();
+    if (!result || result.success === false) {
+      process.exit(1);
+    }
+  } catch (err) {
     console.error('Falha fatal de execução:', err);
     process.exit(1);
-  });
+  }
 }
