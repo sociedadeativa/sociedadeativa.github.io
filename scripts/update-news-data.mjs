@@ -269,15 +269,16 @@ export function cleanSummary(raw, maxLen = MAX_SUMMARY_LENGTH) {
   // Remove pontuação solta residual
   text = text.replace(/[\s,;:!?-]+$/, '').trim();
 
-  // 4. Protege abreviações brasileiras para não quebrar sentenças indevidamente
+  // 4. Protege números com ponto (ex: 3.071, 1.499) e abreviações brasileiras para não quebrar sentenças indevidamente
   const abbrevProtected = text
+    .replace(/(\d+)\.(\d+)/g, '$1__TEMP_NUM_DOT__$2')
     .replace(/R\$\s*/g, 'R$__TEMP_SPACE__')
     .replace(/\b(art|nº|n°|dr|dra|sr|sra|prof|profa|gov|min|des|dep|sen|ex|etc|pág|p|vol|cap|inc|par|fls|jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez)\.\s*/gi, (m) => m.replace('.', '__TEMP_DOT__'));
 
   const sentenceMatches = abbrevProtected.match(/[^.!?]+(?:[.!?]+["”’\)]*|$)/g) || [abbrevProtected];
   const sentences = [];
   for (let s of sentenceMatches) {
-    s = s.replace(/__TEMP_DOT__/g, '.').replace(/R\$__TEMP_SPACE__/g, 'R$ ').trim();
+    s = s.replace(/__TEMP_DOT__/g, '.').replace(/__TEMP_NUM_DOT__/g, '.').replace(/R\$__TEMP_SPACE__/g, 'R$ ').trim();
     if (s.length > 0) {
       sentences.push(s);
     }

@@ -137,21 +137,22 @@ function cleanSummary(raw, maxLen = 280) {
   // Remove pontuação solta residual
   text = text.replace(/[\s,;:!?-]+$/, '').trim();
 
-  // 4. Protege abreviações brasileiras para não quebrar sentenças indevidamente
+  // 4. Protege números com ponto (ex: 3.071, 1.499) e abreviações brasileiras para não quebrar sentenças indevidamente
   const abbrevProtected = text
+    .replace(/(\d+)\.(\d+)/g, '$1__TEMP_NUM_DOT__$2')
     .replace(/R\$\s*/g, 'R$__TEMP_SPACE__')
     .replace(/\b(art|nº|n°|dr|dra|sr|sra|prof|profa|gov|min|des|dep|sen|ex|etc|pág|p|vol|cap|inc|par|fls|jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez)\.\s*/gi, (m) => m.replace('.', '__TEMP_DOT__'));
 
   const sentenceMatches = abbrevProtected.match(/[^.!?]+(?:[.!?]+["”’\)]*|$)/g) || [abbrevProtected];
   const sentences = [];
   for (let s of sentenceMatches) {
-    s = s.replace(/__TEMP_DOT__/g, '.').replace(/R\$__TEMP_SPACE__/g, 'R$ ').trim();
+    s = s.replace(/__TEMP_DOT__/g, '.').replace(/__TEMP_NUM_DOT__/g, '.').replace(/R\$__TEMP_SPACE__/g, 'R$ ').trim();
     if (s.length > 0) {
       sentences.push(s);
     }
   }
 
-  // 5. Acumula sentenças completas que caibam no limite
+  // 5. Acumula sentenças completas que caibam no limite estrito
   let accumulated = '';
   for (const s of sentences) {
     const isTerminated = /[.!?]["”’\)]*$/.test(s);
@@ -165,15 +166,46 @@ function cleanSummary(raw, maxLen = 280) {
     }
   }
 
+  // Fallback quando a primeira sentença sozinha excede maxLen
   if (!accumulated && sentences.length > 0) {
-    accumulated = sentences[0];
+    let first = sentences[0].trim();
+    if (first.length > maxLen) {
+      let sliced = first.slice(0, maxLen - 1);
+      const lastSpace = sliced.lastIndexOf(' ');
+      if (lastSpace > 0) {
+        sliced = sliced.slice(0, lastSpace);
+      }
+      sliced = sliced.replace(/[\s,;:!?-]+$/, '');
+      for (const pat of danglingPatterns) {
+        if (pat.test(sliced)) {
+          sliced = sliced.replace(pat, '').trim();
+        }
+      }
+      sliced = sliced.replace(/[\s,;:!?-]+$/, '');
+      if (sliced.length > maxLen - 1) {
+        sliced = sliced.slice(0, maxLen - 1).replace(/[\s,;:!?-]+$/, '');
+      }
+      accumulated = sliced;
+    } else {
+      accumulated = first;
+    }
   }
 
   accumulated = accumulated.trim().replace(/[\s,;:!?-]+$/, '');
 
-  // Garante terminação pontuada oficial da oração
+  // Garante terminação pontuada oficial da oração se couber no limite estrito
   if (!/[.!?]["”’\)]*$/.test(accumulated)) {
-    accumulated += '.';
+    if (accumulated.length + 1 <= maxLen) {
+      accumulated += '.';
+    }
+  }
+
+  // Garantia absoluta de que o resumo nunca excederá maxLen sob nenhuma circunstância
+  if (accumulated.length > maxLen) {
+    accumulated = accumulated.slice(0, maxLen).replace(/[\s,;:!?-]+$/, '');
+    if (!/[.!?]["”’\)]*$/.test(accumulated) && accumulated.length + 1 <= maxLen) {
+      accumulated += '.';
+    }
   }
 
   return accumulated;
@@ -181,21 +213,39 @@ function cleanSummary(raw, maxLen = 280) {
 
 function formatMetaDescription(summary) {
   if (!summary) return 'Sociedade Ativa — Notícias e dados do Brasil.';
-  if (summary.length <= 155) return summary;
+  if (summary.length <= 155 && /[.!?]["”’\)]*$/.test(summary.trim())) return summary.trim();
 
   // Prefere a primeira sentença completa se couber em até 155 caracteres
   const firstSentenceMatch = summary.match(/^([^.!?]+[.!?]["”’\)]*)/);
-  if (firstSentenceMatch && firstSentenceMatch[1].length <= 155) {
+  if (firstSentenceMatch && firstSentenceMatch[1].trim().length <= 155) {
     return firstSentenceMatch[1].trim();
   }
 
   // Truncamento em limite de palavra sem deixar conectivos ou pontas soltas
-  let sliced = summary.slice(0, 152);
+  let sliced = summary.slice(0, 154);
   const lastSpace = sliced.lastIndexOf(' ');
-  if (lastSpace > 100) {
+  if (lastSpace > 80) {
     sliced = sliced.slice(0, lastSpace);
   }
-  sliced = sliced.replace(/[\s,;:!?-]+$/, '');
+  sliced = sliced.trim().replace(/[\s,;:!?-]+$/, '');
+  const danglingPatterns = [
+    /\s+(?:na|no|nas|nos|de|da|do|das|dos|em|para|por|com|e|ou|que|o|a|os|as|um|uma|uns|umas|se|ao|aos|à|às|sobre|após|pelo|pela|pelos|pelas)\s*$/i,
+    /\s+(?:veiculação|veiculacao|distribuição|distribuicao|intermediação|intermediacao|operação|operacao)\s+de\s*$/i
+  ];
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (const pat of danglingPatterns) {
+      if (pat.test(sliced)) {
+        sliced = sliced.replace(pat, '').trim();
+        changed = true;
+      }
+    }
+  }
+  sliced = sliced.replace(/[\s,;:!?-]+$/, '').trim();
+  if (!/[.!?]["”’\)]*$/.test(sliced) && sliced.length + 1 <= 155) {
+    sliced += '.';
+  }
   return sliced;
 }
 
