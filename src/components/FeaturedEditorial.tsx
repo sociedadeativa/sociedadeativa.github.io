@@ -171,7 +171,7 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                   {/* Legenda e Crédito da Foto com tipografia ampliada e contraste absoluto */}
                   <div className="absolute bottom-0 inset-x-0 p-3 sm:px-4 sm:py-3 text-white flex items-center justify-between gap-3">
                     <div className="min-w-0 flex-1">
-                      <p className="text-xs sm:text-[13px] font-medium text-white leading-snug line-clamp-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)] tracking-normal">
+                      <p className="text-xs sm:text-[13px] font-medium text-white leading-snug line-clamp-2 sm:line-clamp-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)] tracking-normal break-words">
                         {leadImageCaption}
                       </p>
                     </div>
@@ -182,7 +182,7 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                 </div>
 
                 {/* Metadados e Kicker Editorial Padronizado (Cores Sutis + Tipografia Navy) */}
-                <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-500 mb-2">
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs font-semibold text-slate-500 mb-2">
                   <span className={getCategoryBadgeClass(leadArticle.category)}>
                     {leadArticle.category}
                   </span>
@@ -208,9 +208,9 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                   {leadArticle.summary}
                 </p>
 
-                <div className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-blue-900 group-hover:text-blue-700 transition-colors pt-2 border-t border-slate-100 sm:border-0 sm:pt-0">
+                <div className="inline-flex flex-wrap items-center gap-1.5 text-xs sm:text-sm font-bold text-blue-900 group-hover:text-blue-700 transition-colors pt-2.5 border-t border-slate-100 sm:border-0 sm:pt-0 leading-normal">
                   <span>Ler cobertura completa e dados da totalização</span>
-                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <ArrowUpRight className="w-4 h-4 shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </div>
               </article>
             </div>
@@ -268,12 +268,14 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
             {/* Radar Cívico / Boletim em Tempo Real com Linha do Tempo Vertical Sutil */}
             <div className="pt-2">
               <div className="bg-slate-50 rounded-2xl p-4 sm:p-5 border border-slate-200/80">
-                <div className="flex items-center justify-between mb-3.5 pb-2.5 border-b border-slate-200/60">
-                  <span className="font-heading text-xs font-black uppercase tracking-wider text-slate-900 flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-blue-900" />
-                    <span>Radar Cívico · Despachos Oficiais</span>
+                <div className="flex items-center justify-between gap-2 mb-3.5 pb-2.5 border-b border-slate-200/60 min-w-0">
+                  <span className="font-heading text-xs font-black uppercase tracking-wider text-slate-900 flex items-center gap-1.5 min-w-0">
+                    <Sparkles className="w-3.5 h-3.5 text-blue-900 shrink-0" />
+                    <span className="truncate">
+                      Radar Cívico <span className="hidden min-[390px]:inline">· Despachos Oficiais</span>
+                    </span>
                   </span>
-                  <span className="text-[10px] font-mono text-slate-500 font-bold bg-white px-2 py-0.5 rounded border border-slate-200/70">
+                  <span className="text-[10px] font-mono text-slate-500 font-bold bg-white px-2 py-0.5 rounded border border-slate-200/70 shrink-0">
                     Hoje
                   </span>
                 </div>

@@ -325,7 +325,7 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
             <span>Dados Oficiais Verificados · Fontes primárias públicas</span>
           </div>
-          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0 text-xs font-sans text-slate-400 w-full sm:w-auto justify-center sm:justify-end overflow-x-auto scrollbar-none py-0.5">
+          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0 text-xs font-sans text-slate-400 w-full sm:w-auto justify-start sm:justify-end overflow-x-auto scrollbar-none py-0.5">
             <PortalLink
               route="sobre"
               className="text-slate-300 hover:text-white transition-colors font-medium text-[11px] sm:text-xs whitespace-nowrap"
@@ -361,14 +361,14 @@ export const Header: React.FC<HeaderProps> = ({
             className="flex flex-col items-center justify-center text-center group focus-visible:outline-2 focus-visible:outline-blue-700 rounded-lg p-1 max-w-[calc(100%-110px)] sm:max-w-none"
             title="Sociedade Ativa — Página Inicial"
           >
-            <div className="flex items-center justify-center gap-2.5 sm:gap-3">
+            <div className="flex items-center justify-center gap-2 sm:gap-3">
               <div
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-blue-900 text-white flex items-center justify-center font-heading font-black text-xs sm:text-sm tracking-widest shadow-xs shrink-0 select-none border border-blue-950 group-hover:bg-blue-800 transition-colors"
+                className="w-7 h-7 sm:w-9 sm:h-9 rounded-xl bg-blue-900 text-white flex items-center justify-center font-heading font-black text-xs sm:text-sm tracking-widest shadow-xs shrink-0 select-none border border-blue-950 group-hover:bg-blue-800 transition-colors"
                 aria-label="Sociedade Ativa Logotipo"
               >
                 SA
               </div>
-              <span className="font-heading text-xl sm:text-2xl md:text-3xl font-black tracking-tight text-slate-950 uppercase leading-none">
+              <span className="font-heading text-lg sm:text-2xl md:text-3xl font-black tracking-tight text-slate-950 uppercase leading-none whitespace-nowrap">
                 Sociedade Ativa
               </span>
             </div>
