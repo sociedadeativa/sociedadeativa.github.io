@@ -1,11 +1,11 @@
 /**
- * Dataset e estruturas de apoio para a seção de Clima & Meteorologia do portal Sociedade Ativa.
+ * Dataset, cliente de API e estruturas de apoio para a seção de Clima & Meteorologia do portal Sociedade Ativa.
  * 
- * ATENÇÃO EDITORIAL: Todos os valores, temperaturas, índices e alertas meteorológicos contidos
- * ou gerados por este módulo são estritamente para DEMONSTRAÇÃO E TESTE DE INTERFACE (DADOS FICTÍCIOS).
+ * Integração em tempo real com a API Open-Meteo para previsão horária, diária, busca mundial com geocodificação e monitoramento atmosférico.
  */
 
 export const DEMO_WEATHER_NOTICE = "DEMONSTRAÇÃO — DADOS FICTÍCIOS";
+export const LIVE_WEATHER_SOURCE = "Open-Meteo API";
 
 export type WeatherConditionKey =
   | "ensolarado"
@@ -25,12 +25,13 @@ export interface CityLocation {
   stateOrRegion: string;
   country: string;
   countryCode: string;
-  regionType: "capital_brasil" | "interior_brasil" | "capital_mundial" | "metropole_mundial";
+  regionType?: "capital_brasil" | "interior_brasil" | "capital_mundial" | "metropole_mundial";
   latitude?: number;
   longitude?: number;
+  timezone?: string;
   disambiguation?: string;
-  baseTemp: number; // Temperatura base de referência para simulação realista (°C)
-  climateZone: "tropical" | "subtropical" | "semiarido" | "equatorial" | "temperado" | "mediterraneo" | "continental";
+  baseTemp?: number;
+  climateZone?: "tropical" | "subtropical" | "semiarido" | "equatorial" | "temperado" | "mediterraneo" | "continental";
 }
 
 export interface WeatherConditionDetails {
@@ -94,18 +95,36 @@ export interface CityWeatherData {
     windGustKmH: number;
     uvIndex: number;
     uvLevel: "Baixo" | "Moderado" | "Alto" | "Muito Alto" | "Extremo";
-    airQualityIndex: number;
-    airQualityLevel: "Excelente" | "Boa" | "Moderada" | "Ruim";
+    airQualityIndex: number | null;
+    airQualityLevel: "Excelente" | "Boa" | "Moderada" | "Ruim" | "Indisponível";
     pressureHpa: number;
     visibilityKm: number;
     dewPointC: number;
     sunriseTime: string;
     sunsetTime: string;
     updatedAt: string;
+    dataSource?: string;
+    timezone?: string;
   };
   forecast7Days: DayForecast[];
   hourly: HourlyForecast[];
   alerts: WeatherAlert[];
+  isStale?: boolean;
+  staleMessage?: string;
+  fetchedAtTimestamp?: number;
+}
+
+export interface MacroRegionItem {
+  region: string;
+  capitalRef: string;
+  capitalId: string;
+  latitude: number;
+  longitude: number;
+  temp: number;
+  humidity?: number;
+  condition: WeatherConditionKey;
+  conditionLabel: string;
+  summary: string;
 }
 
 // Dicionário de condições climáticas para renderização consistente
@@ -202,6 +221,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "Brasil",
     countryCode: "BR",
     regionType: "capital_brasil",
+    latitude: -15.7797,
+    longitude: -47.9297,
+    timezone: "America/Sao_Paulo",
     disambiguation: "Distrito Federal, Brasil — Centro-Oeste",
     baseTemp: 26,
     climateZone: "tropical",
@@ -213,6 +235,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "Brasil",
     countryCode: "BR",
     regionType: "capital_brasil",
+    latitude: -23.5475,
+    longitude: -46.6361,
+    timezone: "America/Sao_Paulo",
     disambiguation: "São Paulo (SP), Brasil — Região Metropolitana",
     baseTemp: 24,
     climateZone: "subtropical",
@@ -224,6 +249,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "Brasil",
     countryCode: "BR",
     regionType: "capital_brasil",
+    latitude: -22.9068,
+    longitude: -43.1729,
+    timezone: "America/Sao_Paulo",
     disambiguation: "Rio de Janeiro (RJ), Brasil — Região Metropolitana",
     baseTemp: 29,
     climateZone: "tropical",
@@ -235,6 +263,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "Brasil",
     countryCode: "BR",
     regionType: "capital_brasil",
+    latitude: -19.9208,
+    longitude: -43.9378,
+    timezone: "America/Sao_Paulo",
     disambiguation: "Minas Gerais (MG), Brasil — Região Central",
     baseTemp: 25,
     climateZone: "tropical",
@@ -246,6 +277,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "Brasil",
     countryCode: "BR",
     regionType: "capital_brasil",
+    latitude: -12.9714,
+    longitude: -38.5014,
+    timezone: "America/Bahia",
     disambiguation: "Bahia (BA), Brasil — Litoral Nordestino",
     baseTemp: 28,
     climateZone: "tropical",
@@ -257,6 +291,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "Brasil",
     countryCode: "BR",
     regionType: "capital_brasil",
+    latitude: -3.7172,
+    longitude: -38.5433,
+    timezone: "America/Fortaleza",
     disambiguation: "Ceará (CE), Brasil — Litoral Norte",
     baseTemp: 30,
     climateZone: "tropical",
@@ -268,6 +305,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "Brasil",
     countryCode: "BR",
     regionType: "capital_brasil",
+    latitude: -25.4284,
+    longitude: -49.2733,
+    timezone: "America/Sao_Paulo",
     disambiguation: "Paraná (PR), Brasil — Primeiro Planalto",
     baseTemp: 19,
     climateZone: "subtropical",
@@ -279,6 +319,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "Brasil",
     countryCode: "BR",
     regionType: "capital_brasil",
+    latitude: -30.0331,
+    longitude: -51.23,
+    timezone: "America/Sao_Paulo",
     disambiguation: "Rio Grande do Sul (RS), Brasil — Região Metropolitana",
     baseTemp: 22,
     climateZone: "subtropical",
@@ -290,6 +333,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "Brasil",
     countryCode: "BR",
     regionType: "capital_brasil",
+    latitude: -8.0539,
+    longitude: -34.8811,
+    timezone: "America/Recife",
     disambiguation: "Pernambuco (PE), Brasil — Zona da Mata",
     baseTemp: 29,
     climateZone: "tropical",
@@ -301,6 +347,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "Brasil",
     countryCode: "BR",
     regionType: "capital_brasil",
+    latitude: -3.1019,
+    longitude: -60.025,
+    timezone: "America/Manaus",
     disambiguation: "Amazonas (AM), Brasil — Bacia Amazônica",
     baseTemp: 32,
     climateZone: "equatorial",
@@ -624,6 +673,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "Argentina",
     countryCode: "AR",
     regionType: "capital_mundial",
+    latitude: -34.6132,
+    longitude: -58.3772,
+    timezone: "America/Argentina/Buenos_Aires",
     disambiguation: "CABA, Argentina — Rio da Prata",
     baseTemp: 19,
     climateZone: "subtropical",
@@ -679,6 +731,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "Estados Unidos",
     countryCode: "US",
     regionType: "metropole_mundial",
+    latitude: 40.7128,
+    longitude: -74.006,
+    timezone: "America/New_York",
     disambiguation: "Nova York (NY), Estados Unidos — Costa Leste",
     baseTemp: 16,
     climateZone: "temperado",
@@ -734,6 +789,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "Portugal",
     countryCode: "PT",
     regionType: "capital_mundial",
+    latitude: 38.7167,
+    longitude: -9.1333,
+    timezone: "Europe/Lisbon",
     disambiguation: "Estremadura, Portugal — Foz do Tejo",
     baseTemp: 22,
     climateZone: "mediterraneo",
@@ -767,6 +825,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "França",
     countryCode: "FR",
     regionType: "capital_mundial",
+    latitude: 48.8534,
+    longitude: 2.3488,
+    timezone: "Europe/Paris",
     disambiguation: "Île-de-France, França — Rio Sena",
     baseTemp: 17,
     climateZone: "temperado",
@@ -833,6 +894,9 @@ export const WORLD_CITIES: CityLocation[] = [
     country: "Japão",
     countryCode: "JP",
     regionType: "capital_mundial",
+    latitude: 35.6895,
+    longitude: 139.6917,
+    timezone: "Asia/Tokyo",
     disambiguation: "Kanto, Japão — Baía de Tóquio",
     baseTemp: 20,
     climateZone: "subtropical",
@@ -893,7 +957,7 @@ export function generateCityWeather(city: CityLocation): CityWeatherData {
   }
   const posHash = Math.abs(hash);
 
-  const baseTemp = city.baseTemp;
+  const baseTemp = city.baseTemp ?? 22;
   const tempOffset = (posHash % 7) - 3;
   const currentTemp = Math.round((baseTemp + tempOffset) * 10) / 10;
   const feelsLikeOffset = (posHash % 3) - 1;
@@ -1131,8 +1195,436 @@ export function createDynamicCity(cityName: string, disambiguationHint?: string)
     regionType: "metropole_mundial",
     disambiguation: disambiguationHint
       ? `${cleanName} (${disambiguationHint})`
-      : `${cleanName} — Localidade global simulada`,
+      : `${cleanName} — Localidade global`,
     baseTemp: 22,
     climateZone: "temperado",
   };
+}
+
+// ============================================================================
+// INTEGRAÇÃO EM TEMPO REAL: OPEN-METEO API & GEOCODING
+// ============================================================================
+
+/**
+ * Mapeia os códigos WMO Weather Interpretation Codes (0-99) da OMM para
+ * as chaves e rótulos de condição climática em português do portal Sociedade Ativa.
+ */
+export function mapWmoCodeToCondition(code: number): {
+  key: WeatherConditionKey;
+  label: string;
+} {
+  switch (code) {
+    case 0:
+      return { key: "ensolarado", label: "Céu Limpo" };
+    case 1:
+      return { key: "ensolarado", label: "Predomínio de Sol" };
+    case 2:
+      return { key: "parcialmente_nublado", label: "Parcialmente Nublado" };
+    case 3:
+      return { key: "nublado", label: "Nublado" };
+    case 45:
+    case 48:
+      return { key: "neblina", label: "Nevoeiro / Neblina" };
+    case 51:
+      return { key: "chuva_leve", label: "Garoa Fraca" };
+    case 53:
+      return { key: "chuva_leve", label: "Garoa Moderada" };
+    case 55:
+      return { key: "chuva_leve", label: "Garoa Densa" };
+    case 56:
+    case 57:
+      return { key: "chuva_leve", label: "Garoa Gélida" };
+    case 61:
+      return { key: "chuva_leve", label: "Chuva Fraca" };
+    case 63:
+      return { key: "chuva_moderada", label: "Chuva Moderada" };
+    case 65:
+      return { key: "chuva_forte", label: "Chuva Forte" };
+    case 66:
+    case 67:
+      return { key: "chuva_forte", label: "Chuva Congelante" };
+    case 71:
+      return { key: "neve", label: "Neve Leve" };
+    case 73:
+      return { key: "neve", label: "Neve Moderada" };
+    case 75:
+      return { key: "neve", label: "Neve Intensa" };
+    case 77:
+      return { key: "neve", label: "Grãos de Neve" };
+    case 80:
+      return { key: "chuva_moderada", label: "Pancadas de Chuva Leves" };
+    case 81:
+      return { key: "chuva_moderada", label: "Pancadas de Chuva Moderadas" };
+    case 82:
+      return { key: "chuva_forte", label: "Pancadas de Chuva Fortes" };
+    case 85:
+    case 86:
+      return { key: "neve", label: "Aguaceiros de Neve" };
+    case 95:
+      return { key: "tempestade", label: "Tempestade com Trovoadas" };
+    case 96:
+    case 99:
+      return { key: "tempestade", label: "Tempestade com Granizo" };
+    default:
+      return { key: "parcialmente_nublado", label: "Parcialmente Nublado" };
+  }
+}
+
+/**
+ * Converte graus de direção do vento (0-360) em rosa dos ventos em português.
+ */
+export function degreesToCompass(deg: number): string {
+  const directions = ["N", "NE", "L", "SE", "S", "SO", "O", "NO"];
+  const index = Math.round(((deg % 360) / 45)) % 8;
+  return directions[index];
+}
+
+/**
+ * Classifica o nível de risco do índice ultravioleta (UV).
+ */
+export function getUvLevel(uv: number): "Baixo" | "Moderado" | "Alto" | "Muito Alto" | "Extremo" {
+  if (uv < 3) return "Baixo";
+  if (uv < 6) return "Moderado";
+  if (uv < 8) return "Alto";
+  if (uv < 11) return "Muito Alto";
+  return "Extremo";
+}
+
+/**
+ * Classifica a qualidade do ar com base no European Air Quality Index (EAQI).
+ */
+export function getAirQualityLevel(
+  aqi: number | null
+): "Excelente" | "Boa" | "Moderada" | "Ruim" | "Indisponível" {
+  if (aqi === null || typeof aqi !== "number" || isNaN(aqi)) return "Indisponível";
+  if (aqi <= 20) return "Excelente";
+  if (aqi <= 40) return "Boa";
+  if (aqi <= 60) return "Moderada";
+  return "Ruim";
+}
+
+/**
+ * Consulta a Open-Meteo Geocoding API para busca mundial de cidades com desambiguação regional.
+ */
+export async function searchOpenMeteoCities(
+  query: string,
+  signal?: AbortSignal
+): Promise<CityLocation[]> {
+  const clean = query.trim();
+  if (clean.length < 2) return [];
+
+  const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(
+    clean
+  )}&count=10&language=pt&format=json`;
+
+  const response = await fetch(url, { signal });
+  if (!response.ok) {
+    throw new Error(`Falha na API de Geocodificação Open-Meteo (Status: ${response.status})`);
+  }
+
+  const data = await response.json();
+  if (!data.results || !Array.isArray(data.results)) {
+    return [];
+  }
+
+  return data.results.map((r: any): CityLocation => {
+    const adminParts = [r.admin1, r.country].filter(Boolean);
+    const disambiguation = adminParts.join(", ");
+    const isBrazil = (r.country_code || "").toUpperCase() === "BR";
+    const isCapital = r.feature_code === "PPLC";
+
+    return {
+      id: `om-${r.id}`,
+      name: r.name,
+      stateOrRegion: r.admin1 || r.country || "Região",
+      country: r.country || (isBrazil ? "Brasil" : ""),
+      countryCode: (r.country_code || "GL").toUpperCase(),
+      regionType: isBrazil
+        ? isCapital
+          ? "capital_brasil"
+          : "interior_brasil"
+        : isCapital
+        ? "capital_mundial"
+        : "metropole_mundial",
+      latitude: r.latitude,
+      longitude: r.longitude,
+      timezone: r.timezone || "auto",
+      disambiguation: disambiguation ? `${disambiguation}` : undefined,
+    };
+  });
+}
+
+/**
+ * Consulta as condições atuais, previsão horária de 24h e estendida de 7 dias via Open-Meteo Forecast API.
+ */
+export async function fetchRealCityWeather(
+  city: CityLocation,
+  signal?: AbortSignal
+): Promise<CityWeatherData> {
+  let targetLat = city.latitude;
+  let targetLon = city.longitude;
+  let targetTimezone = city.timezone || "auto";
+
+  // Se a cidade não tiver coordenadas prévias, resolve via geocodificação
+  if (typeof targetLat !== "number" || typeof targetLon !== "number") {
+    const geocodeResults = await searchOpenMeteoCities(city.name, signal);
+    if (!geocodeResults.length) {
+      throw new Error(`Localidade "${city.name}" não encontrada na base geográfica Open-Meteo.`);
+    }
+    const match = geocodeResults.find(
+      (g) =>
+        g.countryCode.toUpperCase() === city.countryCode.toUpperCase() ||
+        g.stateOrRegion.toLowerCase().includes(city.stateOrRegion.toLowerCase())
+    ) || geocodeResults[0];
+
+    targetLat = match.latitude;
+    targetLon = match.longitude;
+    targetTimezone = match.timezone || targetTimezone;
+  }
+
+  if (typeof targetLat !== "number" || typeof targetLon !== "number") {
+    throw new Error(`Coordenadas geográficas inválidas para "${city.name}".`);
+  }
+
+  const forecastUrl = `https://api.open-meteo.com/v1/forecast?latitude=${targetLat}&longitude=${targetLon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,surface_pressure,wind_speed_10m,wind_direction_10m,wind_gusts_10m,dew_point_2m,visibility&hourly=temperature_2m,precipitation_probability,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset,uv_index_max,precipitation_sum,precipitation_probability_max,wind_speed_10m_max&timezone=${encodeURIComponent(
+    targetTimezone
+  )}&forecast_days=7`;
+
+  const airQualityUrl = `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${targetLat}&longitude=${targetLon}&current=european_aqi,us_aqi&timezone=${encodeURIComponent(
+    targetTimezone
+  )}`;
+
+  // Executa chamadas à previsão e qualidade do ar em paralelo com tolerância à falha
+  const [forecastRes, airRes] = await Promise.all([
+    fetch(forecastUrl, { signal }),
+    fetch(airQualityUrl, { signal }).catch(() => null),
+  ]);
+
+  if (!forecastRes.ok) {
+    throw new Error(`Falha na API de Previsão Open-Meteo (Status: ${forecastRes.status})`);
+  }
+
+  const forecastData = await forecastRes.json();
+  const current = forecastData.current;
+  const daily = forecastData.daily;
+  const hourly = forecastData.hourly;
+
+  if (!current || !daily || !hourly) {
+    throw new Error("Resposta da API de meteorologia com estrutura incompleta.");
+  }
+
+  // Qualidade do ar da API Open-Meteo Air Quality (EAQI)
+  let aqi: number | null = null;
+  if (airRes && airRes.ok) {
+    try {
+      const airData = await airRes.json();
+      if (typeof airData?.current?.european_aqi === "number" && !isNaN(airData.current.european_aqi)) {
+        aqi = Math.round(airData.current.european_aqi);
+      }
+    } catch {
+      // Falha ao obter qualidade do ar: mantém aqi como null (indisponível)
+    }
+  }
+
+  // Formatação de data e hora no fuso horário da localidade
+  const resolvedTimezone = forecastData.timezone || targetTimezone;
+  const now = new Date();
+  const formattedDate = new Intl.DateTimeFormat("pt-BR", {
+    timeZone: resolvedTimezone === "auto" ? "America/Sao_Paulo" : resolvedTimezone,
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(now);
+
+  const conditionMapped = mapWmoCodeToCondition(current.weather_code ?? 0);
+  const currentTemp = Math.round((current.temperature_2m ?? 20) * 10) / 10;
+  const feelsLike = Math.round((current.apparent_temperature ?? currentTemp) * 10) / 10;
+  const tempMin = daily.temperature_2m_min?.[0] !== undefined ? Math.round(daily.temperature_2m_min[0] * 10) / 10 : currentTemp - 4;
+  const tempMax = daily.temperature_2m_max?.[0] !== undefined ? Math.round(daily.temperature_2m_max[0] * 10) / 10 : currentTemp + 4;
+  const humidity = Math.round(current.relative_humidity_2m ?? 50);
+  const windSpeed = Math.round(current.wind_speed_10m ?? 10);
+  const windDir = degreesToCompass(current.wind_direction_10m ?? 0);
+  const windGust = Math.round(current.wind_gusts_10m ?? windSpeed * 1.3);
+  const uv = daily.uv_index_max?.[0] !== undefined ? Math.round(daily.uv_index_max[0]) : 4;
+  const uvLevel = getUvLevel(uv);
+  const aqiLevel = getAirQualityLevel(aqi);
+  const pressure = Math.round(current.surface_pressure ?? 1013);
+  const visibility = current.visibility ? Math.round((current.visibility / 1000) * 10) / 10 : 10;
+  const dewPoint = current.dew_point_2m !== undefined ? Math.round(current.dew_point_2m * 10) / 10 : Math.round((currentTemp - ((100 - humidity) / 5)) * 10) / 10;
+  const sunriseTime = daily.sunrise?.[0] ? daily.sunrise[0].slice(11, 16) : "05:45";
+  const sunsetTime = daily.sunset?.[0] ? daily.sunset[0].slice(11, 16) : "18:15";
+
+  // Previsão de 7 dias
+  const daysOfWeekPt = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+  const forecast7Days: DayForecast[] = (daily.time || []).slice(0, 7).map((dStr: string, idx: number) => {
+    const dObj = new Date(`${dStr}T12:00:00`);
+    const dayOfWeek = idx === 0 ? "Hoje" : daysOfWeekPt[dObj.getDay()];
+    const dateFormatted = `${String(dObj.getDate()).padStart(2, "0")}/${String(dObj.getMonth() + 1).padStart(2, "0")}`;
+    const code = daily.weather_code?.[idx] ?? 0;
+    const cond = mapWmoCodeToCondition(code);
+
+    return {
+      dayOfWeek,
+      dateStr: dateFormatted,
+      condition: cond.key,
+      conditionLabel: cond.label,
+      tempMin: Math.round((daily.temperature_2m_min?.[idx] ?? currentTemp) * 10) / 10,
+      tempMax: Math.round((daily.temperature_2m_max?.[idx] ?? currentTemp) * 10) / 10,
+      rainProbability: Math.round(daily.precipitation_probability_max?.[idx] ?? 0),
+      rainVolumeMm: Math.round((daily.precipitation_sum?.[idx] ?? 0) * 10) / 10,
+      windSpeedKmH: Math.round(daily.wind_speed_10m_max?.[idx] ?? 10),
+      uvIndex: Math.round(daily.uv_index_max?.[idx] ?? 4),
+    };
+  });
+
+  // Previsão horária para as próximas 24 horas
+  const hourlyTimes: string[] = hourly.time || [];
+  const currentIsoHour = now.toISOString().slice(0, 13); // "YYYY-MM-DDTHH"
+  let startIndex = hourlyTimes.findIndex((t: string) => t >= currentIsoHour);
+  if (startIndex === -1) startIndex = 0;
+
+  const hourlyForecast: HourlyForecast[] = hourlyTimes
+    .slice(startIndex, startIndex + 24)
+    .map((tStr: string, offset: number) => {
+      const idx = startIndex + offset;
+      const hourPart = tStr.slice(11, 16);
+      const code = hourly.weather_code?.[idx] ?? 0;
+      const cond = mapWmoCodeToCondition(code);
+
+      return {
+        timeStr: hourPart,
+        temp: Math.round(hourly.temperature_2m?.[idx] ?? currentTemp),
+        condition: cond.key,
+        conditionLabel: cond.label,
+        rainProbability: Math.round(hourly.precipitation_probability?.[idx] ?? 0),
+      };
+    });
+
+  const updatedCity: CityLocation = {
+    ...city,
+    latitude: targetLat,
+    longitude: targetLon,
+    timezone: resolvedTimezone,
+  };
+
+  return {
+    city: updatedCity,
+    current: {
+      tempC: currentTemp,
+      feelsLikeC: feelsLike,
+      tempMinC: tempMin,
+      tempMaxC: tempMax,
+      condition: conditionMapped.key,
+      conditionLabel: conditionMapped.label,
+      humidityPercent: humidity,
+      windSpeedKmH: windSpeed,
+      windDirection: windDir,
+      windGustKmH: windGust,
+      uvIndex: uv,
+      uvLevel,
+      airQualityIndex: aqi,
+      airQualityLevel: aqiLevel,
+      pressureHpa: pressure,
+      visibilityKm: visibility,
+      dewPointC: dewPoint,
+      sunriseTime,
+      sunsetTime,
+      updatedAt: `${formattedDate} (${resolvedTimezone})`,
+      dataSource: LIVE_WEATHER_SOURCE,
+      timezone: resolvedTimezone,
+    },
+    forecast7Days,
+    hourly: hourlyForecast,
+    alerts: [], // Alertas oficiais exigem fonte governamental verificada; nunca simular avisos fictícios.
+    fetchedAtTimestamp: Date.now(),
+  };
+}
+
+/**
+ * Consulta em lote as condições em tempo real das 5 capitais de referência das Macro-Regiões do Brasil.
+ */
+export async function fetchMacroRegionsPanorama(signal?: AbortSignal): Promise<MacroRegionItem[]> {
+  const regionsConfig = [
+    {
+      region: "Região Norte",
+      capitalRef: "Manaus",
+      capitalId: "manaus-am-br",
+      latitude: -3.1019,
+      longitude: -60.025,
+      defaultSummary: "Bacia Amazônica e umidade tropical de floresta.",
+    },
+    {
+      region: "Região Nordeste",
+      capitalRef: "Salvador",
+      capitalId: "salvador-ba-br",
+      latitude: -12.9714,
+      longitude: -38.5014,
+      defaultSummary: "Litoral nordestino e circulação de ventos alísios.",
+    },
+    {
+      region: "Centro-Oeste",
+      capitalRef: "Brasília",
+      capitalId: "brasilia-df-br",
+      latitude: -15.7797,
+      longitude: -47.9297,
+      defaultSummary: "Planalto Central com ampla radiação solar.",
+    },
+    {
+      region: "Região Sudeste",
+      capitalRef: "São Paulo",
+      capitalId: "sao-paulo-sp-br",
+      latitude: -23.5475,
+      longitude: -46.6361,
+      defaultSummary: "Região Metropolitana e ventos marítimos.",
+    },
+    {
+      region: "Região Sul",
+      capitalRef: "Porto Alegre",
+      capitalId: "porto-alegre-rs-br",
+      latitude: -30.0331,
+      longitude: -51.23,
+      defaultSummary: "Clima subtropical e dinâmica de frentes polares.",
+    },
+  ];
+
+  const lats = regionsConfig.map((r) => r.latitude).join(",");
+  const lons = regionsConfig.map((r) => r.longitude).join(",");
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${lats}&longitude=${lons}&current=temperature_2m,relative_humidity_2m,weather_code&timezone=auto`;
+
+  const response = await fetch(url, { signal });
+  if (!response.ok) {
+    throw new Error(`Falha no panorama regional Open-Meteo (Status: ${response.status})`);
+  }
+
+  const data = await response.json();
+  if (!Array.isArray(data)) {
+    throw new Error("Formato de resposta inesperado para consulta em lote de macro-regiões.");
+  }
+
+  return regionsConfig.map((config, idx) => {
+    const cur = data[idx]?.current;
+    const temp = cur?.temperature_2m !== undefined ? Math.round(cur.temperature_2m) : 24;
+    const humidity = cur?.relative_humidity_2m !== undefined ? Math.round(cur.relative_humidity_2m) : undefined;
+    const code = cur?.weather_code ?? 0;
+    const cond = mapWmoCodeToCondition(code);
+
+    const summary = humidity
+      ? `${cond.label}, umidade relativa em ${humidity}%.`
+      : `${cond.label}. ${config.defaultSummary}`;
+
+    return {
+      region: config.region,
+      capitalRef: config.capitalRef,
+      capitalId: config.capitalId,
+      latitude: config.latitude,
+      longitude: config.longitude,
+      temp,
+      humidity,
+      condition: cond.key,
+      conditionLabel: cond.label,
+      summary,
+    };
+  });
 }
