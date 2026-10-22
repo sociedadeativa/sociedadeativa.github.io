@@ -25,9 +25,10 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
   const PINNED_LEAD_ARTICLE_ID: string | null = null;
   const [leadImageError, setLeadImageError] = useState(false);
 
-  // Garante ordenação cronológica decrescente estrita (mais recente primeiro) e ausência de duplicatas
+  // Utiliza a ordenação cronológica já garantida por useNews / newsService sem reprocessamento duplicado no mount
   const validArticles = useMemo(() => {
-    return sortNewsItems(deduplicateNewsItems(Array.isArray(articles) ? articles : []));
+    if (!Array.isArray(articles) || articles.length === 0) return [];
+    return articles;
   }, [articles]);
 
   // Encontra artigo principal (Lead): prioriza fixação intencional, depois o mais recente (articles[0])

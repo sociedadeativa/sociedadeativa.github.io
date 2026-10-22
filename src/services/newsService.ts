@@ -318,55 +318,124 @@ export function sortNewsItems(items: NewsItem[]): NewsItem[] {
   });
 }
 
-/**
- * Busca de notícias com fallback automático para os dados embutidos.
- * Aplica cache-busting para garantir que novas versões de public/data/newsData.json
- * sejam baixadas imediatamente pelo navegador sem ficar presas no cache HTTP do CDN.
- */
-export async function fetchNewsItems(): Promise<NewsItem[]> {
-  const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
-  const cacheBuster = `_t=${Date.now()}`;
-  const candidateUrls = [
-    ...(origin ? [`${origin}/data/newsData.json?${cacheBuster}`] : []),
-    `/data/newsData.json?${cacheBuster}`,
-    `../../data/newsData.json?${cacheBuster}`,
-    `../data/newsData.json?${cacheBuster}`,
-    `./data/newsData.json?${cacheBuster}`,
-    `data/newsData.json?${cacheBuster}`,
-    `https://sociedadeativa.github.io/data/newsData.json?${cacheBuster}`,
-  ];
+// Cache em memória para o acervo completo e deduplicação de requisições em voo
+let inFlightFetch: Promise<NewsItem[]> | null = null;
+let cachedFullArticles: NewsItem[] | null = null;
 
-  for (const url of candidateUrls) {
-    try {
-      const response = await fetch(url, {
-        headers: { Accept: "application/json" },
-        cache: "no-cache",
-      });
-      if (response.ok) {
-        const contentType = response.headers.get("content-type") || "";
-        if (contentType.includes("application/json") || contentType.includes("text/json")) {
-          const data = await response.json();
-          if (Array.isArray(data) && data.length > 0) {
-            const normalized = data.map((item, idx) => normalizeNewsItem(item, idx));
-            return sortNewsItems(deduplicateNewsItems(normalized));
-          }
-        } else {
-          const text = await response.text();
-          if (text.trim().startsWith("[")) {
-            const data = JSON.parse(text);
-            if (Array.isArray(data) && data.length > 0) {
-              const normalized = data.map((item, idx) => normalizeNewsItem(item, idx));
-              return sortNewsItems(deduplicateNewsItems(normalized));
+/**
+ * Retorna os artigos em cache de memória se já foram carregados, ou null.
+ */
+export function getCachedNews(): NewsItem[] | null {
+  return cachedFullArticles;
+}
+
+/**
+ * Limpa o cache em memória (utilizado em suítes de teste).
+ */
+export function clearNewsCache(): void {
+  cachedFullArticles = null;
+  inFlightFetch = null;
+}
+
+/**
+ * Busca o acervo completo de notícias com conteúdo integral de forma assíncrona.
+ * Deduplica requisições concorrentes em voo para evitar tráfego de rede duplicado,
+ * e armazena o resultado em memória.
+ */
+export async function fetchNewsItems(forceRefresh = false): Promise<NewsItem[]> {
+  if (cachedFullArticles && !forceRefresh) {
+    return cachedFullArticles;
+  }
+
+  if (inFlightFetch && !forceRefresh) {
+    return inFlightFetch;
+  }
+
+  inFlightFetch = (async () => {
+    const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
+    const cacheBuster = `_t=${Date.now()}`;
+    const candidateUrls = [
+      ...(origin ? [`${origin}/data/newsData.json?${cacheBuster}`] : []),
+      `/data/newsData.json?${cacheBuster}`,
+      `../../data/newsData.json?${cacheBuster}`,
+      `../data/newsData.json?${cacheBuster}`,
+      `./data/newsData.json?${cacheBuster}`,
+      `data/newsData.json?${cacheBuster}`,
+      `https://sociedadeativa.github.io/data/newsData.json?${cacheBuster}`,
+    ];
+
+    for (const url of candidateUrls) {
+      try {
+        const response = await fetch(url, {
+          headers: { Accept: "application/json" },
+          cache: "no-cache",
+        });
+        if (response.ok) {
+          const contentType = response.headers.get("content-type") || "";
+          let data: any = null;
+          if (contentType.includes("application/json") || contentType.includes("text/json")) {
+            data = await response.json();
+          } else {
+            const text = await response.text();
+            if (text.trim().startsWith("[")) {
+              data = JSON.parse(text);
             }
           }
+          if (Array.isArray(data) && data.length > 0) {
+            const normalized = data.map((item, idx) => normalizeNewsItem(item, idx));
+            const sorted = sortNewsItems(deduplicateNewsItems(normalized));
+            cachedFullArticles = sorted;
+            return sorted;
+          }
         }
+      } catch {
+        // Tenta a próxima URL candidata
       }
-    } catch {
-      // Tenta a próxima URL candidata
+    }
+
+    // Se o fetch falhar e já temos dados em cache, retorne o cache existente
+    if (cachedFullArticles && cachedFullArticles.length > 0) {
+      return cachedFullArticles;
+    }
+
+    // Fallback garantido para dados estáticos compilados pré-normalizados (O(1) sem duplicar processamento)
+    return OFFICIAL_NEWS_ARTICLES;
+  })();
+
+  try {
+    return await inFlightFetch;
+  } finally {
+    inFlightFetch = null;
+  }
+}
+
+/**
+ * Obtém um artigo específico com conteúdo integral garantido.
+ * Prioriza o cache em memória e o bundle crítico, ou carrega o acervo completo assincronamente.
+ */
+export async function getFullArticleById(id: string): Promise<NewsItem | null> {
+  if (!id) return null;
+
+  // 1. Verifica cache em memória
+  if (cachedFullArticles) {
+    const found = cachedFullArticles.find((a) => a.id === id);
+    if (found && found.content && found.content.length > 0) {
+      return found;
     }
   }
 
-  // Fallback garantido para dados estáticos compilados
-  const fallback = OFFICIAL_NEWS_ARTICLES.map((item, idx) => normalizeNewsItem(item, idx));
-  return sortNewsItems(deduplicateNewsItems(fallback));
+  // 2. Verifica bundle crítico (matérias líderes já têm conteúdo completo)
+  const critical = OFFICIAL_NEWS_ARTICLES.find((a) => a.id === id);
+  if (critical && critical.content && critical.content.length > 0) {
+    return critical;
+  }
+
+  // 3. Carrega acervo completo assincronamente
+  try {
+    const fullItems = await fetchNewsItems();
+    return fullItems.find((a) => a.id === id) || critical || null;
+  } catch {
+    return critical || null;
+  }
 }
+

@@ -3,7 +3,7 @@ import { NewsItem, NewsCategory } from "../types/news";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { getArticleUrl, navigateToArticle } from "../utils/router";
 import { PortalLink } from "../components/PortalLink";
-import { isValidImageUrl } from "../services/newsService";
+import { isValidImageUrl, getFullArticleById } from "../services/newsService";
 import {
   Calendar,
   Clock,
@@ -48,10 +48,36 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
 }) => {
   const [copied, setCopied] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [dynamicContent, setDynamicContent] = useState<string[] | null>(
+    article?.content && article.content.length > 0 ? article.content : null
+  );
 
   useEffect(() => {
     setImageError(false);
   }, [article?.id, article?.imageUrl]);
+
+  // Carrega o conteúdo integral assincronamente para matérias cujo texto completo foi deferido
+  useEffect(() => {
+    if (article?.content && article.content.length > 0) {
+      setDynamicContent(article.content);
+    } else if (article?.id) {
+      let isMounted = true;
+      getFullArticleById(article.id)
+        .then((full) => {
+          if (isMounted && full?.content && full.content.length > 0) {
+            setDynamicContent(full.content);
+          }
+        })
+        .catch(() => {
+          // Mantém súmula oficial e link de fonte com resiliência total
+        });
+      return () => {
+        isMounted = false;
+      };
+    }
+  }, [article?.id, article?.content]);
+
+  const activeContent = dynamicContent || (article?.content && article.content.length > 0 ? article.content : null);
 
   const catStyle = CATEGORY_STYLES[article.category] || CATEGORY_STYLES["Política"];
   const isSociedadeAtiva =
@@ -201,7 +227,7 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
             <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5 flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-blue-700" />
               <span>
-                {article.content && article.content.length > 0
+                {activeContent && activeContent.length > 0
                   ? "Resumo do Fato"
                   : "Nota de Síntese Factual Oficial"}
               </span>
@@ -288,10 +314,10 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
 
         {/* Corpo do Conteúdo Autorizado */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8 shadow-xs">
-          {article.content && article.content.length > 0 ? (
+          {activeContent && activeContent.length > 0 ? (
             /* Artigos proprietários ou com texto estruturado */
             <div className="space-y-5 text-sm sm:text-base text-slate-800 leading-relaxed font-serif">
-              {article.content.map((paragraph, idx) => (
+              {activeContent.map((paragraph, idx) => (
                 <p key={idx}>{paragraph}</p>
               ))}
             </div>

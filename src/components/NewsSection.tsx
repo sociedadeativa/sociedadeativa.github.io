@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NewsItem, NewsCategory, NEWS_CATEGORIES } from "../types/news";
-import { isValidImageUrl } from "../services/newsService";
+import { isValidImageUrl, getFullArticleById } from "../services/newsService";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { NewsCard } from "./NewsCard";
 import { useNews } from "../hooks/useNews";
@@ -39,10 +39,27 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
 
   const [copied, setCopied] = useState(false);
   const [modalImageError, setModalImageError] = useState(false);
+  const [dynamicContent, setDynamicContent] = useState<string[] | null>(null);
 
   useEffect(() => {
     setModalImageError(false);
-  }, [activeArticle?.id, activeArticle?.imageUrl]);
+    setDynamicContent(activeArticle?.content && activeArticle.content.length > 0 ? activeArticle.content : null);
+    if (activeArticle && (!activeArticle.content || activeArticle.content.length === 0)) {
+      let isMounted = true;
+      getFullArticleById(activeArticle.id)
+        .then((full) => {
+          if (isMounted && full?.content && full.content.length > 0) {
+            setDynamicContent(full.content);
+          }
+        })
+        .catch(() => {});
+      return () => {
+        isMounted = false;
+      };
+    }
+  }, [activeArticle?.id, activeArticle?.imageUrl, activeArticle?.content]);
+
+  const activeContent = dynamicContent || (activeArticle?.content && activeArticle.content.length > 0 ? activeArticle.content : null);
 
   const categories = ["Todas", ...NEWS_CATEGORIES];
 
@@ -283,7 +300,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
                 <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-blue-700" />
                   <span>
-                    {activeArticle.content && activeArticle.content.length > 0
+                    {activeContent && activeContent.length > 0
                       ? "Resumo do Fato"
                       : "Nota de Síntese Factual Oficial"}
                   </span>
@@ -332,9 +349,9 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
               </div>
 
               {/* Parágrafos do Conteúdo ou Diretriz de Transparência de Súmula */}
-              {activeArticle.content && activeArticle.content.length > 0 ? (
+              {activeContent && activeContent.length > 0 ? (
                 <div className="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed mb-6 font-serif">
-                  {activeArticle.content.map((p, idx) => (
+                  {activeContent.map((p, idx) => (
                     <p key={idx}>{p}</p>
                   ))}
                 </div>

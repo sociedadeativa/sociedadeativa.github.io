@@ -131,19 +131,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Kayo Magalhães/Câmara dos Deputados",
-      "Dr. Daniel Soranz: descarte inadequado de materiais traz risco sanitário",
-      "O Projeto de Lei 1674/26 cria um sistema nacional de logística reversa e de conscientização para o descarte de agulhas, seringas, lancetas e outros materiais perfurocortantes usados em tratamentos médicos em domicílio.",
-      "A medida abrange fabricantes, importadores, distribuidores, comerciantes e consumidores.",
-      "Pelo texto em análise na Câmara dos Deputados, esses resíduos não poderão ser jogados no lixo comum, na rede de esgoto ou em vias públicas.",
-      "O descarte deverá ocorrer nos pontos de coleta de resíduos de serviços de saúde ou em recipientes adequados em locais com grande circulação de pessoas, como shoppings.",
-      "Segundo o autor da proposta, deputado Dr. Daniel Soranz (PSD-RJ), o crescimento de tratamentos domiciliares que exigem injeções contínuas – como o controle do diabetes e o uso de \"canetas emagrecedoras\" – provocou um salto na quantidade de resíduos de saúde.",
-      "“O descarte inadequado desses materiais representa um risco sanitário e ambiental grave, expondo coletores de lixo, catadores, animais e a população em geral a acidentes”, afirma o parlamentar.",
-      "O projeto será analisado, em caráter conclusivo , pelas comissões de Meio Ambiente e Desenvolvimento Sustentável; de Saúde; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania.",
-      "Para virar lei, o texto terá de ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706189",
@@ -167,22 +155,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "recessão",
       "Economia"
     ],
-    "content": [
-      "A economia da Argentina registrou uma queda de -1,74% em agosto deste ano, se comparado com o mesmo mês de 2025. O resultado leva especialistas a apontarem um risco de recessão no país vizinho.",
-      "Em relação a julho deste ano, a atividade econômica da 2ª maior economia da América do Sul cresceu 0,1%.",
-      "Este é o segundo mês consecutivo que os números apresentam retração. Em julho de 2026, houve uma queda de -2,8% em relação a julho de 2025 e redução de -1,5% em relação a junho.",
-      "Os dados são do Instituto Nacional de Estatística e Censos ( Indec ) da Argentina, instituição oficial responsável por medir os indicadores sociais e econômicos do país.",
-      "No acumulado de 2026 terminado em agosto, a economia argentina cresceu 1,2%, ante um crescimento de 1,7% registrado no acumulado do ano terminado em julho.",
-      "A economista Clara Brenck, professora adjunta no Departamento de Economia da Universidade Federal de Minas Gerais (UFMG), explicou à Agência Brasil que a Argentina pode estar entrando em uma recessão econômica.",
-      "As atividades que mais contribuíram para derrubar a economia argentina em agosto deste ano foram, principalmente, o setor de pesca (-15,7%); intermediação financeira (-3,8%); comércio atacadista, varejista e reparações (-3,5%), indústria manufatureira (-3,2%); transportes e comunicações (-2,9%); e construção (-2,5%).",
-      "Por outro lado, contribuíram para elevar a economia da Argentina os setores de mineração e petróleo (+11,1); eletricidade, gás e água (+4,3); e hotéis e restaurantes (+3,1%).",
-      "A professora Ana Brenck, que também é pesquisadora do Centro de Pesquisa em Macroeconomia das Desigualdades da Faculdade de Economia da Universidade de São Paulo (Made/USP), disse que são os setores de petróleo, gás e mineração o que tem “segurado que essa recessão não fosse pior”.",
-      "Ana Paula cita as quedas dos setores industriais e comerciais como preocupantes por empregarem mais trabalhadores. Ela avalia que as políticas de corte de gastos do presidente Javier Milei contribuíram para esse cenário.",
-      "Para especialista, o dado mais positivo foi o crescimento do setor hoteleiro “no sentido de segurar a queda do desemprego, mas, claro, é um setor também que tem um peso muito pequeno comparado com os outros”.",
-      "O ministro da Economia da Argentina, Luis Caputo, destacou o crescimento de 0,1% em agosto se comparado com julho. “Com essa dinâmica, o indicador tendência-ciclo se posicionou 6,6% acima do nível de dezembro de 2023”, explicou em uma rede social.",
-      "Caputo acrescentou ainda os dados das exportações agroindustriais de setembro, que teriam alcançado um máximo histórico do mês.",
-      "“Nos primeiros 9 meses do ano, as exportações da agroindústria somaram US$ 43.206 milhões de dólares, crescendo 13% em relação ao mesmo período de 2025 e registrando também um recorde histórico em volume”, comemorou o ministro."
-    ]
+    "content": []
   },
   {
     "id": "camara-1312670-projeto-cria-tarifa-social-de-",
@@ -204,21 +177,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Renato Araújo/Câmara dos Deputados",
-      "Rubens Pereira Júnior: regra atual penaliza os moradores de regiões mais quentes",
-      "O Projeto de Lei 1527/26 institui a Tarifa Social Regionalizada de Energia Elétrica (TSRE). A proposta define o limite de consumo com desconto na conta de luz para famílias de baixa renda conforme o clima e as condições econômicas de cada região. A proposta está em análise na Câmara dos Deputados.",
-      "O texto altera o modelo atual, que adota um limite nacional único para os inscritos no Cadastro Único para Programas Sociais ( CadÚnico ). Hoje, a legislação garante isenção total para consumo de até 80 quilowatts-hora (kWh) por mês.",
-      "Para o autor, deputado Rubens Pereira Júnior (PT-MA), a regra atual penaliza os moradores de regiões mais quentes. “A família de baixa renda que vive em Teresina, com 38°C médios no verão e necessidade real de refrigeração, consome muito mais do que 80 kWh por mês sem qualquer desperdício\", relatou.",
-      "\"O teto nacional uniforme penaliza essa família duplamente: ela paga a tarifa mais cara e consome além do limite subsidiado por imposição do clima, não por escolha”, complementou o deputado.",
-      "Para calcular qual será o limite de desconto aplicado a cada localidade, a proposta cria o Índice Composto Regional (ICR). Esse indicador será atualizado e publicado anualmente pelo Ministério de Minas e Energia e pela Agência Nacional de Energia Elétrica (Aneel), em parceria com o Instituto Brasileiro de Geografia e Estatística ( IBGE ).",
-      "A fórmula do índice será baseada em três fatores principais:",
-      "O projeto cria também um fundo de compensação financeira (com recursos federais e estaduais) para cobrir a diferença tarifária das distribuidoras de energia.",
-      "Para ter acesso ao dinheiro, as concessionárias serão obrigadas a cumprir metas, como investir na instalação de medidores inteligentes, promover a regularização de ligações clandestinas e atuar em conjunto com a segurança pública e a assistência social para combater o furto de energia elétrica.",
-      "O projeto tramita em caráter conclusivo e será analisado pelas comissões de Minas e Energia; de Previdência, Assistência Social, Infância, Adolescência e Família; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania.",
-      "Para virar lei, precisa ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706183",
@@ -242,26 +201,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "bioeconomia",
       "negócios"
     ],
-    "content": [
-      "A Pan-Amazônia, região que engloba nove países da América do Sul, tem pelo menos 232 políticas, programas e instrumentos públicos relacionados à bioeconomia. Segundo analistas, esse potencial produtivo esbarra na falta de integração entre governos, nas dificuldades de acesso ao crédito e em obstáculos à implementação efetiva dos negócios.",
-      "Para facilitar a articulação entre os países, a Rede Pan-Amazônica pela Bioeconomia lança nesta quinta-feira (22) o Radar Bioecon , plataforma que reúne informações sobre instrumentos públicos voltados a atividades econômicas baseadas na biodiversidade da região.",
-      "A ferramenta será apresentada durante a 17ª Conferência das Nações Unidas sobre Diversidade Biológica (COP17), em Yerevan, na Armênia.",
-      "O levantamento abrange nove países e territórios: Bolívia, Brasil, Colômbia, Equador, Guiana, Guiana Francesa, Peru, Suriname e Venezuela.",
-      "O mapeamento inclui desde estratégias nacionais de bioeconomia até mecanismos de crédito, compras públicas, incentivos à produção e instrumentos de apoio a empreendimentos comunitários.",
-      "A plataforma permite consultar e comparar essas iniciativas, com o objetivo de identificar experiências que possam ser compartilhadas e oportunidades de cooperação regional.",
-      "O potencial econômico da bioeconomia amazônica já aparece em atividades ligadas à floresta em pé e aos conhecimentos locais. Na Amazônia Legal brasileira, apenas 13 produtos da sociobiodiversidade contribuem com pelo menos R$ 12 bilhões anuais para o Produto Interno Bruto (PIB), segundo o estudo Nova Economia da Amazônia, liderado pelo WRI Brasil. Entre os exemplos, estão o açaí e a castanha.",
-      "Segundo Juliana Simões, co-líder do Grupo de Trabalho de Políticas Públicas da Rede Pan-Amazônica pela Bioeconomia e especialista em políticas públicas e bioeconomia na organização The Nature Conservancy (TNC) Brasil, é necessário garantir que os recursos e programas cheguem a cooperativas, associações e empreendimentos locais.",
-      "O levantamento identificou que as iniciativas estão distribuídas entre diferentes órgãos governamentais e nem sempre são classificadas como políticas de bioeconomia.",
-      "Conforme o país, aparecem sob denominações como biocomércio, bionegócios, empreendedorismo verde ou economias indígenas e comunitárias.",
-      "No Brasil, entre os instrumentos destacados estão o Programa Nacional de Alimentação Escolar (Pnae) e o Programa de Aquisição de Alimentos (PAA) , que abrem mercados para produtores locais. Também está a Política de Garantia de Preços Mínimos para os Produtos da Sociobiodiversidade (PGPMBio), que estabelece preços mínimos para 17 produtos extrativistas e busca reduzir oscilações na renda dos produtores.",
-      "Na Colômbia, o mapeamento aponta mecanismos de apoio a negócios sustentáveis. No Equador, foram identificadas iniciativas de crédito para cooperativas e empreendimentos comunitários.",
-      "Para Bruno Castro Lacerda, co-líder do grupo de trabalho da Rede Pan-Amazônica pela Bioeconomia e consultor em bioeconomia para a conservação na organização Conservação Internacional, a comparação entre as políticas ajuda a identificar lacunas e experiências que podem inspirar outros países.",
-      "“Essa visão regional é importante para fortalecer a cooperação entre os países e construir políticas que tenham continuidade no longo prazo, contribuindo para consolidar a bioeconomia como uma agenda estratégica de desenvolvimento”, afirma.",
-      "O acesso a recursos financeiros é outro obstáculo apontado pelo levantamento. Um estudo da Rede Pan-Amazônica pela Bioeconomia mapeou 141 mecanismos de financiamento voltados à bioeconomia na região. Desse total, apenas 8,5% atendem à sociobiodiversidade.",
-      "Embora existam fundos climáticos, linhas de crédito e programas de incentivo, exigências de garantias e procedimentos burocráticos dificultam o acesso de cooperativas, associações e empreendimentos comunitários.",
-      "O relatório defende a adaptação desses instrumentos às características da produção amazônica e uma maior integração entre políticas econômicas, produtivas e ambientais.",
-      "O Radar Bioecon foi desenvolvido pelo Grupo de Trabalho de Políticas Públicas da Rede Pan-Amazônica pela Bioeconomia. Os usuários poderão sugerir novas políticas ou atualizações dos registros existentes, que passarão por um processo de curadoria. A iniciativa é apresentada como a primeira etapa de um trabalho destinado a identificar lacunas de implementação e oportunidades de integração regional."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706182",
@@ -285,17 +225,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Bahia",
       "Segurança Pública"
     ],
-    "content": [
-      "O tribunal do Júri da Comarca de Salvador condenou Sérgio Ferreira de Jesus a 23 anos e nove meses de prisão por seu envolvimento no assassinato da líder quilombola e ialorixá Maria Bernadete Pacífico Moreira, a Mãe Bernadete. Ele é o quarto condenado por envolvimento com o crime.",
-      "A condenação, nesta quarta-feira (21), foi pelo crime de homicídio qualificado, por motivo torpe, emprego de meio cruel, impossibilidade de defesa da vítima e uso proibido de arma de fogo.",
-      "Segundo a acusação, o condenado atuou no planejamento do assassinato, indicando a melhor rota até o local do crime, além de ter ficado com o celular de Mãe Bernadete, que foi levado.",
-      "Os outros réus já condenados são: Arielson da Conceição dos Santos – pena de 40 anos, 5 meses e 22 dias de reclusão; Josevan Dionísio dos Santos, conhecido como BZ ou Buzuin – 28 anos de reclusão; e Marílio dos Santos – 29 anos e 9 meses. Marílio, no entanto, faleceu dois dias após o julgamento.",
-      "Mãe Bernadete foi assassinada em 17 de agosto de 2023 no Quilombo Pitanga dos Palmares, em Simões Filho, na Bahia. Os assassinos entraram na casa em que ela estava com os netos e dispararam 25 vezes.",
-      "Segundo a promotoria, o motivo foi a atuação da líder quilombola contra a expansão do tráfico de drogas na comunidade.",
-      "Mãe Bernadete foi uma ialorixá e líder comunitária respeitada internacionalmente pela luta por direitos dos povos quilombolas. Foi secretária de Políticas de Promoção da Igualdade Racial de Simões Filho.",
-      "Havia anos que a líder denunciava que recebia ameaças de morte.",
-      "Desde 2017 Mãe Bernadete também lutava por justiça pelo assassinato do próprio filho, Flávio Gabriel Pacífico dos Santos, o Binho do Quilombo. Até hoje o crime não foi esclarecido."
-    ]
+    "content": []
   },
   {
     "id": "camara-1311996-projeto-limita-doacoes-eleitor",
@@ -317,16 +247,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Kayo Magalhães / Câmara dos Deputados",
-      "Chico Alencar: regra atual privilegia candidatos com acesso a doadores de alta renda",
-      "O Projeto de Lei 1596/26 estabelece que as doações e contribuições feitas por pessoas físicas a campanhas eleitorais não poderão ultrapassar o valor de dez salários mínimos (atualmente, R$ 16.210). O texto está em análise na Câmara dos Deputados.",
-      "Pela proposta, a nova regra será aplicada cumulativamente ao limite, já previsto na Lei das Eleições , de 10% dos rendimentos brutos do doador.",
-      "Segundo o autor, deputado Chico Alencar (Psol-RJ), a norma atual “acaba por privilegiar candidatos com acesso a doadores de altíssima renda – que podem realizar doações milionárias –, perpetuando desigualdades no sistema político”.",
-      "O projeto será analisado pela Comissão de Constituição e Justiça e de Cidadania. Depois, seguirá para votação no Plenário.",
-      "Para virar lei, terá de ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706181",
@@ -350,18 +271,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "stf",
       "TSE"
     ],
-    "content": [
-      "A Defensoria Pública da União (DPU) acionou o Supremo Tribunal Federal (STF) para tentar assegurar o direito das eleitoras e eleitores de todo o Brasil ao transporte público gratuito no segundo turno das eleições para presidente da República e governadores, onde houver..",
-      "Instituição responsável por promover e defender, perante a Justiça, os direitos individuais e coletivos, sobretudo dos menos privilegiados, a DPU pediu à Corte uma liminar de abrangência nacional que obrigue o poder público a, no próximo domingo (25), assegurar o transporte público municipal e intermunicipal gratuitamente .",
-      "A DPU também solicitou ao STF que determine aos entes públicos responsáveis por prestar ou conceder a terceiros a prestação do serviço de transporte que adotem as providências necessárias para que não haja redução de frota ou de viagens no dia da votação.",
-      "No pedido, a instituição solicita inclusive que, nas localidades onde não houver sistema de transporte público regular, os órgãos públicos responsáveis sejam compelidos a usar veículos públicos a fim de assegurar o deslocamento sem custos dos eleitores até os locais de votação. E que os horários e itinerários sejam divulgados em até 24 horas.",
-      "Em nota, a DPU informou que decidiu recorrer ao STF após analisar os resultados de uma consulta que fez a 3.518 dos 5.570 municípios brasileiros, dos quais 78 declararam que ou não ofereceram transporte público gratuito no primeiro turno ou que o sistema operou com frequência inferior à dos dias úteis.",
-      "Ainda segundo a DPU, algumas prefeituras alegaram não ter prestado o serviço atendendo a determinações da própria Justiça Eleitoral. Isso apesar da obrigatoriedade do poder público, em dias de eleição, garantir o passe livre em viagens municipais e intermunicipais já ter sido validada pelo STF e detalhada pelo Tribunal Superior Eleitoral (TSE), por meio da Resolução nº 23.751 , de fevereiro deste ano.",
-      "Para a DPU, a falta de transporte gratuito ameaça transformar o voto em um direito condicionado à renda e ao local de moradia . A instituição sustenta que garantir o deslocamento dos eleitores é uma condição material para assegurar a igualdade de participação política, principalmente para indígenas, comunidades tradicionais e moradores de áreas rurais, “onde as longas distâncias e a ausência de linhas regulares podem impedir o acesso às urnas”.",
-      "Na quarta-feira (21), a ministra Cármen Lúcia, do STF, cobrou do TSE uma resposta sobre as normas de gratuidade no transporte público em linhas interestaduais, que conectam cidades vizinhas, embora de estados diferentes.",
-      "Cármen Lúcia estabeleceu um prazo de 48 horas para o TSE dar as informações.",
-      "A provocação da ministra foi motivada por uma ação da coligação Brasil Pronto Para Mais, de apoio ao candidato à Presidência Luiz Inácio Lula da Silva. Na ação, a coligação pede ao STF que determine a oferta gratuita de transporte interestadual já neste segundo turno."
-    ]
+    "content": []
   },
   {
     "id": "camara-1313155-motta-diz-que-lei-antifaccao-c",
@@ -383,14 +293,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Kayo Magalhães/Câmara dos Deputados",
-      "Hugo Motta, presidente da Câmara",
-      "O presidente da Câmara dos Deputados, Hugo Motta (Republicanos-PB), afirmou, em suas redes sociais, que a Lei Antifacção , aprovada pelo Congresso no início deste ano, está saindo do papel.",
-      "Ele explicou que o governo federal aplicou a lei, em vigor desde março deste ano, para pedir à Justiça o confisco de R$ 190 milhões em bens ligados ao PCC e ao CV. São imóveis, aeronaves, carros de luxo e empresas, sem precisar esperar por uma condenação criminal.",
-      "“É assim que se combate facção: tirando o dinheiro delas”, afirmou por meio de suas redes sociais. “Lutamos muito pela aprovação da Lei Antifacção na Câmara. Foram semanas de diálogo, ajustes e 370 votos a favor do Brasil”, lembrou.",
-      "Motta destacou ainda que, como presidente da Câmara, deu prioridade à segurança pública tendo amplo apoio no Parlamento mesmo diante de um País polarizado. “É por isso que conseguimos avançar com a aprovação de mais de 40 propostas, de todos os campos políticos, para ampliar o combate à criminalidade”, disse."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706179",
@@ -413,19 +316,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Receita Federal",
       "IPCA"
     ],
-    "content": [
-      "A arrecadação das receitas federais somou R$ 239,4 bilhões em setembro, informou nesta quinta-feira (22) a Receita Federal . O valor representa crescimento real de 5,62%, descontada a inflação pelo Índice Nacional de Preços ao Consumidor Amplo (IPCA) , na comparação com setembro de 2025.",
-      "De janeiro a setembro, a arrecadação alcançou R$ 2,351 trilhões, com alta real de 6,97% em relação ao mesmo período do ano passado.",
-      "As receitas administradas pela Receita Federal totalizaram R$ 231,4 bilhões em setembro, com crescimento real de 5,03%. Nos nove primeiros meses do ano, a arrecadação dessas receitas chegou a R$ 2,25 trilhões, alta real de 6,89%.",
-      "Segundo a Receita, o resultado foi impulsionado principalmente pelo aumento da arrecadação da contribuição previdenciária, do PIS/Cofins, do Imposto de Renda Retido na Fonte (IRRF) sobre rendimentos de capital e do recolhimento de Imposto sobre a Renda das Pessoas Jurídicas (IRPJ) e Contribuição Social sobre o Lucro Líquido (CSLL). O órgão também destacou a arrecadação do Imposto de Exportação sobre óleo bruto.",
-      "A arrecadação previdenciária somou R$ 64,6 bilhões em setembro, com alta real de 6,18%. O resultado refletiu os aumentos reais observados de 1,72% da massa salarial em agosto de 2026 (na comparação com o mesmo mês do ano anterior), bem como de 7,42% na arrecadação do Simples Nacional previdenciário em setembro de 2026 em relação a setembro de 2025.",
-      "Deve-se ainda ao crescimento de 14,88% no montante das compensações tributárias com débitos de receita previdenciária em relação a setembro de 2025.",
-      "“Houve, também, a reoneração escalonada da contribuição patronal dos municípios e da folha de pagamentos”, complementou a Receita.",
-      "Os tributos incidentes sobre as importações arrecadaram R$ 13,3 bilhões no mês, com alta real de 21,07%, influenciados pelo crescimento das importações e pelo aumento das alíquotas efetivas de tributos e com o decréscimo de 4,15% na taxa média de câmbio.",
-      "O IRRF sobre rendimentos de capital somou R$ 12,06 bilhões em setembro, com alta real de 9,68%, impulsionado pelo aumento da arrecadação sobre aplicações de renda fixa e pela tributação de dividendos.",
-      "No acumulado do ano, a arrecadação da Previdência alcançou R$ 575,9 bilhões, com alta real de 5,16%. Já o IRPJ e a CSLL arrecadaram R$ 444,2 bilhões, com alta de 5,76%.",
-      "O IRRF sobre rendimentos de capital arrecadou R$ 131,15 bilhões entre janeiro e setembro, com alta real de 17,57%. No mesmo período, o PIS/Pasep e a Cofins somaram R$ 466,55 bilhões – aumento real de 4,1%."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706177",
@@ -449,15 +340,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "amazon",
       "Accu-Check Active"
     ],
-    "content": [
-      "A Agência Nacional de Vigilância Sanitária (Anvisa) proibiu a venda de tiras de glicemia da marca Accu-Check Active na plataforma Amazon.",
-      "Os produtos, segundo a agência, são falsificados e não podem ser distribuídos, importados nem utilizados.",
-      "A resolução foi publicada nesta quinta-feira (22) no Diário Oficial da União.",
-      "Em nota, a Anvisa informou que a Roche Diabetes Care Brasil Ltda., responsável pelo produto Accu-Chek Active, identificou no mercado tiras reagentes com características divergentes das originais em dois anúncios na Amazon.",
-      "“Além da ausência da embalagem externa original, os itens traziam a restrição de comercialização descrita em inglês ONLY FOR GOVERNMENT TENDER (destinado exclusivamente a licitações governamentais).”",
-      "Confira, a seguir, os produtos proibidos e os respectivos anúncios:",
-      "A Agência Brasil tenta contato com a Amazon para ouvir o posicionamento da empresa e mantém este espaço aberto para incluí-lo."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706175",
@@ -480,18 +363,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Medicina",
       "Eleições"
     ],
-    "content": [
-      "Os candidatos que fizeram a reaplicação do Exame Nacional de Avaliação da Formação Médica (Enamed) 2026 podem apresentar recurso contra o gabarito preliminar até 23h59 desta quinta-feira (22).",
-      "O gabarito foi divulgado na terça-feira pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep), na página oficial do Enamed .",
-      "Para contestar as respostas preliminares, o participante deverá acessar o Sistema Enamed do Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep), com login da plataforma Gov.br.",
-      "Posteriormente, os recursos serão analisados e os resultados serão disponibilizados pelo Inep, acompanhados dos motivos de deferimento ou indeferimento apresentados pela Banca de Análise de Recursos do Gabarito Preliminar.",
-      "Em caso de anulação de item, a pontuação correspondente será atribuída a todos os participantes, inclusive aos que não tenham interposto recurso.",
-      "A reaplicação do Enamed ocorreu no último domingo (18) para candidatos que faltaram à aplicação regular do exame porque foram comprovadamente afetados por problemas logísticos no dia regular da prova, 13 de setembro, ou que estavam com alguma doença infectocontagiosa lista no edital , como sarampo, rubéola, ou covid-19.",
-      "Segundo o edital específico com as regras e o cronograma relativo à reaplicação do Enamed, o Inep estabelece que, após o período de interposição de recursos (20 a 22 de outubro), as versões definitivas do gabarito oficial e do resultado da prova objetiva serão publicados no dia 4 de dezembro.",
-      "Criado pelo Ministério da Educação, o Enamed tem duas funções principais: avaliar a formação dos estudantes de medicina no Brasil e servir de critério para processos seletivos de residência médica de acesso direto, como no processo unificado do Exame Nacional de Residências (Enare).",
-      "O exame será aplicado obrigatoriamente a cada seis meses, a partir de 2027, a todos os estudantes concluintes de cursos de medicina no Brasil.",
-      "Há uma semana, em 15 de outubro, a Câmara dos Deputados aprovou a Medida Provisória (MP) 1370/26 , que torna obrigatória a aprovação do Enamed para obter o registro profissional de médicos e exercer a profissão de médico no Brasil."
-    ]
+    "content": []
   },
   {
     "id": "camara-1313045-contribuicao-sobre-bens-e-serv",
@@ -513,25 +385,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "O Senado deverá definir o percentual da CBS para o ano que vem",
-      "A partir de primeiro de janeiro de 2027, a Contribuição sobre Bens e Serviços (CBS) entrará em vigor em substituição ao PIS , à Cofins e ao Imposto sobre Produtos Industrializados ( IPI ). A contribuição federal foi criada com a reforma tributária e vinha sendo aplicada em fase de testes .",
-      "A reforma fixou uma alíquota máxima para a soma da CBS e do Imposto sobre Bens e Serviços (IBS). Este último será cobrado por estados e municípios em substituição ao Imposto sobre a Circulação de Mercadorias e Serviços ( ICMS ) e ao Imposto sobre Serviços ( ISS ).",
-      "A alíquota máxima será de 26,5%. O Senado deverá definir o percentual da CBS para 2027.",
-      "A Receita Federal entregou ao Tribunal de Contas da União ( TCU ), em setembro, uma proposta de cálculo da alíquota da CBS. O tribunal tem até o fim deste mês para homologar a proposta e enviá-la ao Senado. E o Senado terá até 15 de dezembro para editar uma resolução com a alíquota oficial.",
-      "Cashback e tributação do consumo",
-      "Com a CBS, as famílias inscritas no Cadastro Único para Programas Sociais do Governo Federal ( CadÚnico ) terão direito à devolução ( cashback ) de parte do imposto pago em produtos e serviços essenciais.",
-      "Em 2027, o IBS também entrará em fase de testes.",
-      "Os dois impostos serão cobrados no produto final. Assim, a tributação do consumo ocorrerá apenas no destino das mercadorias, e não na origem.",
-      "Nos produtos industriais, isso será garantido por um mecanismo chamado split payment , que dará ao comprador crédito imediato correspondente ao valor do imposto pago ao fornecedor.",
-      "O deputado Reginaldo Lopes (PT-MG) afirma que, com esse novo sistema de débito e crédito, desoneram-se as etapas de produção, o que permite à indústria brasileira voltar a ser competitiva.",
-      "“Vai permitir que o Brasil deixe, a médio prazo, de ser uma economia primário-exportadora, que, em vez de fazer ketchup, exporta o tomate; em vez de fazer um café em cápsulas, exporta o café in natura; em vez de fazer um aço, industrializar as terras raras, fazer micromineração, nanomineração e fertilizantes nitrogenados para a agricultura, fica exportando minério\", exemplificou.",
-      "Lopes acredita que a simplicidade do sistema pode reduzir a sonegação, as fraudes e a inadimplência. Ele argumenta que, quando mais contribuintes pagam os impostos devidos, a carga tributária pode ser distribuída de forma mais ampla.",
-      "\"Isso vai permitir, então, reduzir cada vez mais a carga tributária, que a gente chama alíquota padrão e está limitada a 26,5%. Tenho esperança de chegar na casa de 22% depois do quinto ano da reforma tributária”, disse.",
-      "Para o advogado tributarista Erich Endrillo, a manutenção da carga tributária dependerá da definição das alíquotas dos novos impostos. Segundo ele, o setor de serviços poderá ter um aumento da carga tributária.",
-      "“Se forem obedecidas as diretrizes, acredito que o Brasil entrará em um ciclo muito bom de crescimento. Mas isso vai depender de como serão as alíquotas e todo o tratamento dado a esse sistema a longo prazo”, destacou.",
-      "Nos próximos dias, o governo deve enviar ao Congresso Nacional um projeto sobre as alíquotas do novo Imposto Seletivo (IS). O tributo será aplicado a produtos prejudiciais à saúde ou ao meio ambiente, como bebidas alcoólicas. Nesse caso, o Imposto Seletivo também terá a função de substituir parte do que é arrecadado com o IPI."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706170",
@@ -555,15 +409,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Propaganda Eleitoral",
       "Encerramento"
     ],
-    "content": [
-      "A três dias do segundo turno das eleições, termina nesta quinta-feira (22) o prazo para que candidatos façam comícios e atividades de campanha. Também é o último dia para a circulação paga ou impulsionada de propaganda eleitoral na internet.",
-      "De hoje até 24 horas depois do fim do pleito, ficam vedadas a publicação e a republicação de novos conteúdos produzidos ou alterados por inteligência artificial ou tecnologia equivalente, que use imagem, voz ou manifestação de candidatos ou pessoas públicas.",
-      "Até o próximo sábado (24), o Tribunal Superior Eleitoral (TSE) ainda poderá divulgar comunicados, boletins e instruções ao eleitorado, em até dez minutos diários requisitados às emissoras de rádio e de televisão. Parte desse tempo pode ser cedido aos tribunais regionais eleitorais.",
-      "No próximo domingo (25), os brasileiros deverão ir às urnas das 8h às 17h, para eleger o próximo presidente da República.",
-      "Eleitores do Acre, Amazonas, Distrito Federal, Espírito Santo, Rio Grande do Norte e Tocantins definem ainda o próximo governador ou governadora. Nesses locais, a ordem de votação na urna é: governador e depois presidente.",
-      "Além disso, seis cidades brasileiras terão eleições suplementares para prefeito. Nesses municípios, os eleitores votam primeiro em presidente, depois em prefeito.",
-      "O TSE recomenda consultar previamente o local de votação no site do tribunal ou no aplicativo e-Título , e que os eleitores levem uma colinha com o número dos candidatos, anotados em papel. É proibido entrar com celular na cabine de votação."
-    ]
+    "content": []
   },
   {
     "id": "camara-1313047-camara-e-senado-fazem-cobertur",
@@ -581,19 +427,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Eleições 2026",
       "Brasil"
     ],
-    "content": [
-      "Os veículos de comunicação da Câmara dos Deputados e do Senado Federal fazem, neste domingo (25), a cobertura integrada do segundo turno das eleições de 2026. A programação terá boletins informativos de hora em hora, das 8 às 13 horas. Às 14 horas, começa a transmissão, que seguirá até o fim da apuração.",
-      "Mais de 30 emissoras legislativas de TV e rádio de diferentes regiões do país participam da cobertura.",
-      "Ao longo do dia, o público acompanhará a movimentação dos eleitores, o andamento da votação e, depois, a apuração dos votos, com a divulgação dos resultados oficiais da Justiça Eleitoral.",
-      "A produção reunirá equipes das emissoras de rádio e TV da Câmara e do Senado, das redes sociais das duas Casas e das emissoras parceiras. Esse conteúdo será transmitido ao vivo aqui no Portal da Câmara na internet.",
-      "A transmissão terá entrevistas, análises e participações ao vivo a partir do Tribunal Superior Eleitoral (TSE), de tribunais regionais eleitorais, das redações e das emissoras parceiras.",
-      "Na transmissão que começa às 14 horas, especialistas e consultores do Senado e da Câmara explicarão o funcionamento do processo eleitoral, contextualizarão os resultados e analisarão o cenário político.",
-      "Segundo a coordenadora de Jornalismo da TV Câmara, Keila Santana, o diferencial do trabalho das emissoras parceiras é oferecer cobertura jornalística a partir de instituições em que o povo tem participação política ativa.",
-      "\"As emissoras parceiras dos estados e dos municípios, junto com a Câmara e o Senado, trazem essa perspectiva que as outras emissoras não trazem: é por meio do Poder Legislativo que a sociedade mais interage com a política, já que aqui estão seus representantes”, disse.",
-      "A cobertura do segundo turno dará continuidade ao trabalho conjunto realizado pelas duas Casas no primeiro turno, em 4 de outubro. Na ocasião, 54 emissoras legislativas participaram da programação especial, que durou mais de 14 horas ao vivo, sem interrupções.",
-      "De acordo com a diretora de redes sociais da Câmara, Ginny Morais, as publicações nas redes sociais feitas no domingo da eleição (4) e na segunda-feira (5) alcançaram mais de 12 milhões de pessoas, o maior do ano. Segundo ela, a integração ampliou o alcance da comunicação do Congresso com o público.",
-      "\"A gente agregou um meio para chegar mais perto do cidadão. Todas as entrevistas, toda a transmissão ao vivo que foi feita pela Rádio, pelas TVs Câmara e Senado, foi também repercutida nas redes sociais. Instagram, Facebook, X, YouTube, WhatsApp, Telegram, tudo isso deu maior amplitude a uma cobertura que já é tradicionalmente feita”, avaliou."
-    ]
+    "content": []
   },
   {
     "id": "camara-1313062-projeto-amplia-protecao-a-pess",
@@ -615,19 +449,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Kayo Magalhães / Câmara dos Deputados",
-      "Aureo Ribeiro é o autor do projeto de lei",
-      "O Projeto de Lei 5538/26 inclui, entre as diretrizes da Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista, a inserção no mercado de trabalho, a atenção integral à saúde mental e a prevenção do suicídio.",
-      "O texto em análise na Câmara dos Deputados altera a Lei Berenice Piana e batiza a futura norma de Lei Fernanda Fialho, em homenagem à ativista que destacou os desafios de mulheres com diagnóstico tardio de autismo e da maternidade atípica.",
-      "Para o autor da proposta, o deputado Aureo Ribeiro (Solidariedade-RJ), as políticas públicas ainda se concentram na infância. “Quando o autista chega à adolescência e à vida adulta, a oferta de atenção específica torna-se escassa”, disse ele na justificativa do projeto.",
-      "Canais adaptados e capacitação",
-      "O texto prevê adaptações na comunicação e no acolhimento dos canais de apoio emocional. Entre elas estão o atendimento por texto ou chat, como alternativa à ligação de voz, e a assistência a quem estiver em situação de sobrecarga sensorial.",
-      "O projeto determina a capacitação de equipes de saúde e de assistência social e a intensificação de campanhas educativas entre 10 de setembro (Dia Mundial de Prevenção do Suicídio) e 10 de outubro (Dia Mundial da Saúde Mental).",
-      "Conforme a proposta, as ações serão promovidas por meio de cooperação entre União, estados, Distrito Federal e municípios, em articulação com a Política Nacional de Prevenção da Automutilação e do Suicídio, prevista na Lei 13.819/19 .",
-      "Com a aprovação do regime de urgência , o projeto poderá ser analisado diretamente pelo Plenário, sem passar antes pelas comissões temáticas. Para virar lei, o texto terá de ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706168",
@@ -651,17 +473,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "câncer de pulmão",
       "Política"
     ],
-    "content": [
-      "A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou novo medicamento para o tratamento do câncer de pulmão. O Emrelis (telisotuzumabe vedotina) é indicado para pacientes adultos com câncer de pulmão de células não pequenas (CPCNP) com as seguintes características: não escamoso, localmente avançado ou metastático, com receptor do fator de crescimento epidérmico tipo selvagem, com alta superexpressão da proteína c-Met e que receberam terapia sistêmica previamente.",
-      "Em nota, a Anvisa destacou que o medicamento foi desenvolvido para reconhecer e se ligar seletivamente à proteína c-Met presente na superfície das células tumorais, permitindo a internalização do complexo e a liberação intracelular da monometilauristatina E, resultando em morte celular direcionada.",
-      "De acordo com a agência, a aprovação do Emrelis foi fundamentada sobretudo em resultados de um estudo conduzido em pacientes previamente tratados com CPCNP. O medicamento demonstrou taxa de resposta objetiva de 29,2% na população total avaliada. Entre os pacientes com alta superexpressão de c-Met, foi observada taxa de resposta de 34,5%, “associada a respostas duradouras e benefício clínico relevante em um cenário terapêutico com opções limitadas”.",
-      "Ainda segundo a Anvisa, o câncer de pulmão figura como uma das principais causas de mortalidade pela doença no mundo. O CPCNP representa aproximadamente 85% dos casos, sendo que cerca de 70% correspondem ao subtipo não escamoso, alvo da medicação aprovada.",
-      "A Anvisa também aprovou o registro do medicamento Poherdy (pertuzumabe), indicado para o tratamento de câncer de mama metastático e para câncer de mama em estágio inicial.",
-      "No caso da doença metastática, o uso é indicado em combinação com trastuzumabe e docetaxel, voltado para pacientes com câncer de mama HER2-positivo metastático ou localmente recorrente não operável, que não tenham recebido tratamento prévio com medicamentos anti-HER2 ou quimioterapia.",
-      "Já para pacientes com câncer de mama inicial, a indicação é o uso combinado com trastuzumabe e quimioterapia, para os seguintes casos:",
-      "tratamento neoadjuvante (antes da cirurgia) de pacientes com câncer de mama HER2-positivo localmente avançado, inflamatório ou em estágio inicial, com elevado risco de recorrência como parte de um esquema terapêutico completo para o câncer de mama inicial.",
-      "tratamento adjuvante (após a cirurgia) de pacientes com câncer de mama HER2-positivo em estágio inicial, com elevado risco de recorrência."
-    ]
+    "content": []
   },
   {
     "id": "camara-1311955-projeto-proibe-exibicao-de-anu",
@@ -683,19 +495,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Plataformas não poderão exigir a exibição de anúncios para liberar conteúdos pagos",
-      "O Projeto de Lei 1474/26 proíbe a exibição de anúncios em planos pagos de serviços de streaming. O texto está em análise na Câmara dos Deputados.",
-      "Conforme a proposta, a proibição valerá para assinaturas e compras unitárias que exijam pagamento do consumidor. O texto impede anúncios antes, durante ou depois da reprodução do conteúdo contratado.",
-      "“Cobrar pela assinatura e ainda impor publicidade obrigatória caracteriza cobrança dupla sobre o mesmo serviço, transferindo ao consumidor o ônus de um modelo de negócios cuja sustentação já se dá pelo pagamento individual”, afirma o autor da proposta, deputado suplente Luciano Alves (PR), atualmente fora do exercício do mandato.",
-      "Planos gratuitos e penalidades",
-      "O projeto de lei também proíbe banners, pop-ups e mensagens promocionais na interface exclusiva do assinante. Além disso, as plataformas não poderão exigir a exibição de anúncios para liberar conteúdos pagos.",
-      "Por outro lado, as empresas poderão manter planos gratuitos com anúncios. Essas modalidades não poderão restringir os direitos dos consumidores que optarem por planos pagos sem publicidade.",
-      "O descumprimento das futuras regras sujeitará as plataformas às penalidades previstas no Código de Defesa do Consumidor, como multa e suspensão da oferta. Pelo texto, as empresas terão 120 dias para se adequarem às regras.",
-      "O projeto será analisado, em caráter conclusivo , pelas comissões de Comunicação; de Defesa do Consumidor; e de Constituição e Justiça e de Cidadania.",
-      "Para virar lei, terá de ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706167",
@@ -719,17 +519,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "erva",
       "Política"
     ],
-    "content": [
-      "A Agência Nacional de Vigilância Sanitária (Anvisa) emitiu alerta para reforçar a proibição do uso do suplemento alimentar ashwagandha no Brasil. A erva asiática tem sido indicada, principalmente pela rede social TikTok, para relaxamento e alívio dos sintomas da perimenopausa.",
-      "Em nota, a Anvisa citou o caso de uma mulher britânica que teve falência do fígado, paradas cardíacas e sérios danos cerebrais após o uso do produto e reforçou que o suplemento não tem registro no Brasil.",
-      "A agência destacou que suplementos alimentares figuram como alternativa para complementar a alimentação e podem ser úteis para pessoas que precisam melhorar o consumo de algum nutriente ou praticar atividades físicas intensas.",
-      "“É terminantemente proibido vincular o uso desses produtos a alegações de cura, tratamento e prevenção de doenças.”",
-      "A Resolução da Diretoria Colegiada nº 243/2018 define que suplementos alimentares devem ser feitos com substâncias autorizadas e podem conter aditivos e ingredientes de uso tradicional em alimentos, adicionados ao produto para dar sabor, cor e aroma, entre outras funções.",
-      "São produtos para consumo via oral em formas de comprimido, cápsula, pastilha, pó e barra, destinados a suplementar a alimentação de pessoas saudáveis com nutrientes, substâncias bioativas, enzimas ou probióticos. “Nem todas as pessoas precisam utilizar esses produtos”, alertou a Anvisa.",
-      "“Essa decisão deve ser avaliada com a ajuda de profissionais de saúde qualificados e envolve diversos fatores, incluindo a condição atual de saúde, a qualidade da alimentação e a prática de atividade física. Se houver necessidade de suplementar, cabe aos profissionais de saúde a orientação sobre o tipo de suplemento, a quantidade, quando e como tomar.”",
-      "De acordo com a agência, a maior parte dos perigos associados ao consumo de suplementos alimentares está ligada a produtos irregulares – seja pela presença de substâncias não avaliadas pelos órgãos reguladores ou por falhas nas condições de fabricação.",
-      "Os riscos, entretanto, não se restringem a produtos clandestinos. Segundo a Anvisa, itens devidamente legalizados também podem prejudicar a saúde quando consumidos em desacordo com as necessidades do paciente e as instruções de uso."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706164",
@@ -751,13 +541,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições 2026",
       "Eleições"
     ],
-    "content": [
-      "A três dias do segundo turno das eleições gerais, confira a agenda de campanha dos candidatos à presidência da República nesta quinta-feira (22):",
-      "Luiz Inácio Lula da Silva (PT)",
-      "O candidato à reeleição grava propaganda eleitoral durante o dia e, às 19h, participa de live no YouTube com transmissão pelo canal do deputado André Janones.",
-      "Sem agenda pública durante o dia, candidato faz live no YouTube às 19h, com transmissão pelo canal TV Celular Flávio Bolsonaro.",
-      "A ordem de apresentação da agenda dos candidatos a presidente segue alternância diária."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706130",
@@ -781,50 +565,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Lula",
       "planos de governo"
     ],
-    "content": [
-      "Os direitos humanos são uma área que, historicamente, diferenciam de maneira significativa os candidatos que disputam o segundo turno das eleições presidenciais em 2026: o atual presidente Luiz Inácio Lula da Silva (PT) e o senador Flávio Bolsonaro (PL).",
-      "Enquanto Lula ascendeu politicamente no fim dos anos 1970, fazendo o enfrentamento à ditadura militar e às graves violações de direitos humanos do regime, Flávio Bolsonaro é herdeiro político de seu pai, Jair Bolsonaro, um notório defensor da ditadura e admirador do coronel Carlos Brilhante Ustra, apontado pela Comissão Nacional da Verdade como responsável por diversos crimes no período ditatorial, incluindo torturas e mortes.",
-      "Os planos de governo dos dois candidatos também refletem suas diferenças. Enquanto Flávio aposta na defesa de direitos endurecendo as penas de quem comete crimes, Lula foca mais na garantia de direitos pelo fortalecimento de políticas públicas e o combate ao crime organizado por meio da asfixia financeira das facções.",
-      "Para comparar as propostas relacionadas aos Direitos Humanos do Plano de Governo de cada candidato, a diretora executiva da organização não governamental Conectas Direitos Humanos, Camila Asano, recomenda que a a eleitora e o eleitor pesquisem o que cada candidato já fez ou tem feito ocupando cargos públicos.",
-      "Ela ressalta que há elementos concretos dos dois candidatos para se avaliar e não só propostas futuras.",
-      "“Por exemplo, a posição deles sobre facilitar ou controlar o acesso a armas, lembrando que mais armas circulando aumentam as chances delas pararem, de forma legal ou ilegal, nas mãos do crime organizado ou até mesmo de agressores que cometem feminicídio.”",
-      "Em 2019, projeto de lei apresentado durante o governo de Jair Bolsonaro propôs alterações no Estatuto do Desarmamento. O texto, apoiado por Flávio Bolsonaro, elimina a exigência de identificação dos cartuchos, inclusive os destinados às forças policiais.",
-      "Flávio tem sido questionado justamente por ter advogado em favor de um policial acusado de, em 2021, matar a menina Ana Clara, de cinco anos, durante uma operação policial no Rio.",
-      "Uma das grandes preocupações da população hoje é a violência, tema que envolve vários aspectos de direitos humanos, conforme explicou a diretora da Conectas.",
-      "“Vemos com extrema preocupação as proposições relacionadas à segurança pública que têm apelo populista e parecem mais como frases de efeito para cortes nas redes do que políticas públicas”.",
-      "Segundo a entidade, uma proposta deve ser baseada em evidências e estatística, devem mirar a superação dos fatores que beneficiam a criminalidade. “Ao contrário do que muitos candidatos de extrema-direita pelo mundo afora querem fazer parecer, o endurecimento de penas não é o que efetivamente combate o crime. É algo já provado por estudos feitos em todo o mundo”, aponta Camila Asano.",
-      "“Propostas que vão na contramão disso, como redução da maioridade penal ou a simples construção de presídios, fazem parte do plano de governo do candidato Flávio Bolsonaro”, mencionou a especialista. Segundo ela, o Brasil já prende muito, tem mais de 900 mil pessoas presas, e ainda assim os índices de criminalidade no país seguem alarmantes.",
-      "A Conectas ressalta que o uso de inteligência e o desmonte financeiro de facções é o que realmente combate o crime organizado, dentre outras ações mais estruturais. “As operações policiais matam a esmo nas favelas e fazem crianças perderem aula e idosos perderem suas consultas médicas”, lembra.",
-      "O plano de governo de Lula, segundo a especialista, aborda a segurança pública trazendo algumas medidas preventivas e de cidadania, para além das medidas de combate direto ao crime. “O plano fala da implementação das metas do Pena Justa, o estímulo ao uso de câmeras corporais pelos agentes de segurança e ao fortalecimento dos mecanismos de controle interno e externo da polícia”, elencou Camila.",
-      "“Mas, no geral, elas foram apresentadas sem aprofundamento. Por exemplo, a criação de um Ministério de Segurança Pública precisa ser detalhada para entendermos, por exemplo, se isso não gerará problemas na integração de dados”, ponderou.",
-      "O Pena Justa foi lançado em fevereiro de 2025 com mais de 300 metas a serem cumpridas até 2027, sob coordenação do Conselho Nacional de Justiça (CNJ). O plano trata de temas como eliminação da superlotação prisional e garantia de condições básicas de higiene, saúde, acesso à água e alimentação; e ampliação da oferta de estudo e trabalho para pessoas encarceradas e criação de oportunidades para egressos.",
-      "Ela acrescentou que um ponto de atenção no plano do candidato Lula é a necessidade de um maior detalhamento sobre as garantias voltadas para os povos indígenas. “Uma descrição mais aprofundada de como o atual presidente, se reeleito, garantiria a demarcação e desintrusão de terras indígenas e a proteção aos seus territórios e modos de vida, como está escrito no documento.”",
-      "As propostas na área de direitos humanos do candidato do PL, Flávio Bolsonaro, estão presentes em seu plano de governo, denominado Para o Brasil Vencer o Atraso, e pode ser lido, na íntegra, aqui .",
-      "O programa de governo, no que tange ao Combate ao Feminicídio e Proteção à Mulher, propõe uma política de tolerância zero para o feminicídio, estabelecendo que os agressores com medida protetiva serão monitorados por tornozeleiras eletrônicas e que assassinos e agressores cumprirão a pena de forma integral.",
-      "O texto prevê também a criação de uma plataforma de serviços de acolhimento, saúde, orientação jurídica e financeira por aplicativo. O documento prevê ainda garantir acesso universal a creches para dar suporte às mulheres. Na falta de vagas, a família receberá um voucher-creche para acesso à rede privada. O texto não informa o valor do voucher.",
-      "No tópico da Modernização e Integração dos Canais de Denúncia de Violência contra a Mulher, o texto prevê a unificação das ferramentas do Ligue 180, delegacias virtuais, botão de emergência e a assistente virtual (ClarIA) em uma plataforma única.",
-      "A respeito da Capacitação e Ensino Gratuito para Mulheres, o candidato propõe a instituição da iniciativa \"Escola Brasil por Elas\", programa de formação profissional e ensino gratuito focado em áreas tecnológicas, gestão de negócios e empreendedorismo, desenvolvido em parceria com o Sistema S e a iniciativa privada.",
-      "No campo da Garantia da Segurança Pública, o programa de governo propõe a criação de um sistema nacional de reconhecimento facial integrado a bancos de dados criminais com a instalação de câmeras de vigilância em portos, aeroportos e vias públicas. O documento prevê também fim da progressão de regime para crimes hediondos, o agravamento de penas para roubo, furto e receptação de celulares.",
-      "O programa propõe também a implementação da castração química. O texto prevê a aprovação de legislação e a aplicação da medida punitiva para indivíduos condenados por estupro ou abusos sexuais contra mulheres, crianças e adolescentes.",
-      "Sobre a Redução da Maioridade Penal, o candidato propõe o apoio e a sanção para a redução da maioridade penal de 18 para 16 anos, prevendo ainda a punição de jovens a partir dos 14 anos que cometerem infrações graves, como estupro, tráfico de drogas, tortura e homicídio.",
-      "O documento prevê ainda a criação do Complexo Federal de Segurança Máxima, chamado TREVA. Junto aos atuais cinco presídios, o complexo seria composto por mais cinco novas unidades de segurança máxima no modelo de El Salvador, com restrições e monitoramento de visitas. O candidato pretende ainda criar 500 mil novas vagas na rede prisional em parceria com os estados.",
-      "Também é citado o aumento de penas para furto e receptação de celulares. O plano de governo propõe o enquadramento rígido dessas condutas, determinando a quadruplicação da pena inicial para quem furtar ou revender aparelhos obtidos por meio de atividade criminosa.",
-      "Em relação à Assistência e Direitos das Vítimas de Crimes, o candidato propõe que os recursos hoje direcionados às famílias de detentos sejam redirecionados às famílias das vítimas de crimes.",
-      "Quanto aos Povos Indígenas e Quilombolas, o programa de governo propõe conferir às comunidades tradicionais autonomia para decidir sobre as atividades produtivas em suas terras, garantindo, segundo o texto, desenvolvimento sustentável, o cumprimento das regras ambientais e a previsão de indenizações ou compensações financeiras em casos de restrição de uso.",
-      "As propostas do candidato Luiz Inácio Lula da Silva (PT) para os Direitos Humanos estão presentes em quase todos os itens do seu programa de governo, chamado Programa de Transformação do Brasil: Um país soberano, democrático, desenvolvido, sustentável e criativo, apresentado ao Tribunal Superior Eleitoral (TSE) e disponível, na íntegra, aqui .",
-      "Em relação aos Direitos dos Povos e Comunidades Tradicionais, o texto propõe a garantia de direitos territoriais para indígenas, quilombolas e ribeirinhos, com ações para demarcação e desintrusão de terras, além da proteção de suas culturas e modos de vida. Segundo o documento, são previstos também a implantação plena da Universidade Indígena, criada em 2026, e um modelo de atenção diferenciada à saúde indígena, com participação ativa dos próprios povos originários em sua gestão.",
-      "No que tange aos Direitos das Mulheres, o texto prevê a expansão das políticas de combate ao machismo, sexismo e feminicídio, utilizando a manutenção do Pacto de Enfrentamento ao Feminicídio como guia estratégico. Além disso, o documento estabelece que serão fortalecidos o monitoramento de agressores e a capacitação das forças de segurança. Segundo o plano, serão asseguradas ainda políticas que apoiem a inserção das mulheres em diversas atividades laborais e o cumprimento da Lei de Igualdade Salarial entre homens e mulheres.",
-      "Quanto aos Direitos da População LGBTQIAP+, o programa de governo propõe o planejamento de políticas públicas inclusivas que considerem as dimensões de gênero, identidade, orientação sexual, aspectos étnico-raciais e de classe social. Segundo o documento, serão fortalecidas as ações de combate às discriminações racial, étnica, de classe, ao capacitismo e contra a população LGBTQIAP+ no acesso ao trabalho decente e na segurança pública.",
-      "No tópico dos Direitos da Criança e do Adolescente, o texto prevê a ampliação da proteção à infância por meio de benefícios especiais do Bolsa Família, expansão da educação em tempo integral, investimentos na construção de creches, proibição do uso de celular nas escolas e aplicação do Estatuto da Criança e do Adolescente (ECA) digital. O plano estabelece que serão intensificadas as ações de enfrentamento à pobreza infantil e de erradicação do trabalho infantil em todas as suas formas.",
-      "Em relação a Migrantes, Refugiados e Apátridas, o candidato propõe a implementação plena da Política Nacional de Migrações, Refúgio e Apatridia (PNMRA). O documento destaca que serão garantidos o acolhimento digno, o combate à xenofobia e o ampliação do acesso a serviços públicos e direitos fundamentais.",
-      "No âmbito dos Direitos Trabalhistas, Erradicação do Trabalho Escravo e Jornada, o programa prevê o combate rigoroso ao trabalho análogo ao escravo, ao trabalho infantil e à precarização laboral, incluindo a garantia de proteção previdenciária e trabalhista para quem atua em plataformas digitais. Segundo o documento, o candidato fará a defesa da aprovação do fim da escala 6x1 e a redução da jornada de trabalho para 40 horas semanais sem redução salarial.",
-      "A respeito das Ações Afirmativas (Cotas) e Enfrentamento às Desigualdades Étnico-Raciais, o plano propõe a manutenção e o aperfeiçoamento das cotas no ensino superior e em concursos públicos, com especial atenção à inclusão de quilombolas. O texto prevê a aceleração da Política Nacional de Equidade e Educação Escolar Quilombola (PNEERQ), a ampliação de campi quilombo em Institutos Federais e a continuidade da titulação de territórios quilombolas, além de desapropriações por interesse social.",
-      "Em relação à Política de Habitação e Redução da Pobreza, o texto prevê a expansão do programa Minha Casa Minha Vida para todas as faixas de renda e preservando seu foco nas famílias de mais baixa renda. Segundo o documento, haverá continuidade de investimento em urbanização de favelas (programa Periferia Viva) e destinação de imóveis da União (Imóvel da Gente) para habitação social, além de regularização fundiária em ambos os programas.",
-      "O plano de governo cita ainda o fomento às lavanderias públicas, cozinhas solidárias e aos restaurantes populares, no âmbito da Política Nacional de Cuidados. O objetivo é garantir equipamentos públicos que ampliem os cuidados indiretos e comunitários.",
-      "Sobre o Combate a Ilegalidades e Gestão do Sistema Prisional, o candidato propõe atuar no sistema penitenciário com foco na garantia de direitos, redução da reincidência e combate ao crime organizado, além do apoio à modernização das penitenciárias estaduais. O texto prevê o cumprimento das metas do Plano Pena Justa e a instituição do Pacto Nacional de Execução Penal, fortalecendo a governança e estabelecendo padrões nacionais de gestão carcerária.",
-      "Em relação ao Uso de Câmeras Corporais na Atuação Policial, o documento estabelece o incentivo ao uso do equipamento pelas forças de segurança pública, acompanhado da definição de diretrizes nacionais para a gestão das imagens. Segundo o texto, haverá também incentivo ao fortalecimento dos mecanismos de controle interno e externo da atividade policial.",
-      "No que refere à Reestruturação das Polícias, o programa prevê a valorização e qualificação dos agentes, como forma de fortalecer a atuação policial, assegurar o uso legítimo da força e ampliar a confiança da população nas instituições. Haverá ainda estímulo ao modelo de policiamento de proximidade junto aos estados e municípios. O texto prevê a criação do Ministério da Segurança Pública para coordenar a execução das políticas nacionais de segurança pública e a prevenção da violência no país."
-    ]
+    "content": []
   },
   {
     "id": "camara-1311927-projeto-cria-programa-para-pro",
@@ -846,24 +587,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Kayo Magalhães/Câmara dos Deputados",
-      "Duda Ramos: cães e gatos possuem alta sensibilidade auditiva e podem entrar em pânico",
-      "Proposta em análise na Câmara dos Deputados cria um programa nacional para prevenir fugas, acidentes, lesões e situações de estresse e sofrimento de animais domésticos causados por ruídos intensos, como queima de fogos de artifício e aglomerações.",
-      "O chamado Programa Nacional Pet Seguro em Grandes Eventos e Datas de Elevada Sensibilidade Sonora está previsto no Projeto de Lei 2990/26, do deputado Duda Ramos (Pode-RR).",
-      "O texto lista, entre as datas de elevada sensibilidade sonora, celebrações de Ano-novo, festas juninas e jogos da seleção brasileira na Copa do Mundo, por exemplo.",
-      "Duda Ramos observa que cães e gatos possuem sensibilidade auditiva superior à dos humanos e que estampidos e ruídos repentinos podem desencadear reações severas de pânico e desorientação.",
-      "“O objetivo do projeto é preparar tutores, instituições e comunidades para reduzir situações de sofrimento e evitar consequências que poderiam ser mitigadas por meio de informação, planejamento e coordenação”, afirma o parlamentar.",
-      "Ele ressalta, ainda, que a iniciativa “não pretende restringir manifestações culturais, esportivas ou comemorativas” e que “não se trata de proibir festas”.",
-      "Para alcançar os objetivos do programa, a proposta estabelece a criação dos seguintes instrumentos de atuação conjunta:",
-      "O texto determina também que as campanhas educativas sobre guarda responsável, primeiros socorros e impactos de ruídos deverão ocorrer prioritariamente nos 30 dias que antecedem as datas comemorativas ou eventos esportivos.",
-      "O projeto estabelece prioridade no atendimento e nas ações para:",
-      "Além disso, fixa princípios de equidade territorial, com destaque às peculiaridades logísticas da Amazônia Legal , direcionando ações prioritárias para comunidades indígenas, ribeirinhas, localidades isoladas e regiões de fronteira.",
-      "Para monitorar os resultados, a proposta prevê a elaboração do Relatório Nacional de Proteção Animal em Grandes Eventos, que reunirá dados estatísticos sobre desaparecimentos, resgates e avaliação das campanhas.",
-      "O projeto será analisado em caráter conclusivo pelas comissões de Meio Ambiente e Desenvolvimento Sustentável; e de Constituição e Justiça e de Cidadania.",
-      "Para virar lei, o texto precisa ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706158",
@@ -887,19 +611,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Previsão do Tempo",
       "Política"
     ],
-    "content": [
-      "Uma área de baixa pressão entre o norte da Argentina, o oeste do Paraguai e o sul da Bolívia aumenta as condições para a ocorrência de tempestades em todo o leste do país, nesta quinta-feira (22). As informações são do Instituto Nacional de Meteorologia (Inmet).",
-      "Na Região Norte, chove com trovoadas isoladas no Acre, em Rondônia e nas regiões sul e oeste do Amazonas, onde há um aviso amarelo de perigo potencial para tempestades. Pode chover de forma isolada em Roraima, no sul do Pará e no oeste do Tocantins.",
-      "Nas capitais, a temperatura mínima será de 23 graus Celsius (°C) em Rio Branco, e a máxima de 37°C em Palmas.",
-      "No Centro-Oeste do país, está vigente um aviso amarelo de perigo potencial para tempestades em Mato Grosso do Sul, principalmente na região da fronteira com o Paraguai e divisa com o Paraná, no sul de Goiás e nas regiões noroeste e sul de Mato Grosso. Na região central de Goiás e no Distrito Federal, também ocorrem chuvas isoladas.",
-      "A temperatura entre as capitais varia da mínima de 20°C, em Brasília, até a máxima de 36°C, em Cuiabá.",
-      "No Sudeste brasileiro, um aviso amarelo de perigo potencial alerta para tempestades em São Paulo, no Triangulo Mineiro, sul e centro de Minas Gerais. No Rio de Janeiro, Espírito Santo e nordeste de Minas Gerais chove de forma isolada.",
-      "A temperatura mínima nas capitais será de 17°C em Belo Horizonte, e a máxima chegará a 28°C também na capital mineira.",
-      "Na Região Sul, um aviso amarelo de perigo potencial alerta para tempestades em toda a região.",
-      "A temperatura mínima será de 12°C em Curitiba, e a máxima, entre as capitais, chegará a 24°C em Porto Alegre.",
-      "No Nordeste do país, um aviso amarelo de perigo potencial alerta para baixa umidade relativa do ar no leste do Maranhão, no Piauí, no centro-sul do Ceará, no sudoeste do Rio Grande do Norte, no oeste da Paraíba, no centro e oeste de Pernambuco e no noroeste da Bahia. Há possibilidade de chuvas isoladas em toda a faixa litorânea.",
-      "Nas capitais, a temperatura mínima será de 22°C em Recife, e a máxima chegará a 39°C em Teresina."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706156",
@@ -923,19 +635,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "protestos ilegítimos",
       "proibição"
     ],
-    "content": [
-      "O presidente francês, Emmanuel Macron, anunciou nesta quinta-feira (22) a proibição, nos próximos dias, de ações de protesto avaliadas como “ilegítimas”. O anúncio foi feito após reunião com representantes dos serviços de informações e ministros.",
-      "Para as manifestações organizadas por estruturas como os sindicatos vão ser definidos trajetos alternativos. O objetivo, segundo o governo, é proteger os estabelecimentos comerciais.",
-      "Em breve declaração, à qual dedicou pouco de mais de três minutos, o chefe de Estado francês citou grupos de extrema-esquerda “sediciosos” (indivíduos que incitam atos de rebelião), que as autoridades acreditam estar na base dos desacatos, roubos e furtos ocorridos no último sábado (17) em diferentes cidades do país.",
-      "Macron classificou os grupos de “ultraesquerda de extrema periculosidade”, acusando-os de pretender “derrubar a República”.",
-      "A menos de 48 horas de nova mobilização na França, o governo procura atenuar a pressão acentuada pelo cenário de confrontos urbanos de 17 de outubro. “Firmeza” é a palavra mais ouvida nos corredores do poder em Paris.",
-      "Nos últimos dias, o primeiro-ministro francês, Sébastien Lecornu, apelou aos partidos para que escolham “entre a violência e a República”, isolando nas críticas o partido de extrema-esquerda A França Insubmissa, de Jean-Luc Mélenchon . Lecornu convocou os partidos, prometendo “transparência” sobre as “dificuldades encontradas” na resposta aos acontecimentos de sábado.",
-      "Diante do balanço sobre roubos, furtos e estragos em cerca de 3 mil lojas, no último fim de semana, os comerciantes temem o que possa acontecer no sábado . “A preocupação é máxima”, resumiu Pierre Bosche, presidente da Confederação dos Comerciantes da França, em declarações à agência France-Presse.",
-      "As autoridades prometem dispositivo policial em larga escala para o próximo sábado, com recurso a veículos blindados e a várias unidades de elite.",
-      "Nas palavras de Macron, “a mão não deve tremer no topo do Estado”.",
-      "O recolher obrigatório voltou a ser imposto na noite dessa quarta-feira (21) em diferentes cidades, já tendo sido detidas pelo menos 174 pessoas.",
-      "* É proibida a reprodução deste conteúdo ."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706152",
@@ -959,16 +659,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "tempestades",
       "diário oficial"
     ],
-    "content": [
-      "A Secretaria Nacional de Proteção e Defesa Civil reconheceu nesta quinta-feira (22) situação de emergência em sete municípios atingidos por tempestades na Região Sul .",
-      "A Portaria nº 3.646 cita cidades do Paraná, Rio Grande do Sul e Santa Catarina que registraram ocorrências no final de setembro e início de outubro.",
-      "No Paraná, o reconhecimento alcança Altamira do Paraná e Santa Terezinha de Itaipu, municípios afetados por vendavais.",
-      "No Rio Grande do Sul, também houve reconhecimento de emergência por vendaval em Alto Alegre. As cidades gaúchas de Bom Jesus, Formigueiro e Veranópolis registraram chuvas intensas.",
-      "Em Santa Catarina, a situação de emergência foi reconhecida em Arabutã, em razão da ocorrência de granizo.",
-      "O Instituto Nacional de Meteorologia (Inmet) emitiu alertas de perigo para chuvas e tempestades na Região Sul durante praticamente todo este mês, até o momento.",
-      "Estado Município Desastre",
-      "Santa Terezinha de Itaipu"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1705977",
@@ -992,13 +683,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "governador",
       "Espírito Santo"
     ],
-    "content": [
-      "Neste domingo (25), os 2,9 milhões de eleitores do Espírito Santo retornam às urnas para votar para governador .",
-      "Disputam o cargo Lorenzo Pazolini (Republicanos) e Ricardo Ferraço (MDB).",
-      "No primeiro turno, Pazolini ficou em primeiro lugar, com 49,65% dos votos válidos, ou 1.048.633 votos. Ferraço ficou em segundo, com 34,06%, equivalente a 719.397 votos.",
-      "Pazolini foi prefeito de Vitória por dois mandatos. Em 2026, deixou o comando municipal para disputar o governo do Espírito Santo. Natural de Vitória, tem 44 anos, já foi deputado estadual e é delegado de polícia.",
-      "Natural de Cachoeiro de Itapemirim (ES), Ferraço tem 63 anos e assumiu o cargo de governador em abril de 2026, após a renúncia de Renato Casagrande, que saiu do governo para disputar uma vaga no Senado. Foi vereador, deputado estadual, deputado federal, senador e vice-governador."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1705980",
@@ -1022,13 +707,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "governador",
       "Tocantins"
     ],
-    "content": [
-      "Neste domingo (25), os 1.182.307 eleitores do Tocantins retornam às urnas para escolher o novo governador .",
-      "Disputam o cargo Professora Dorinha (União) e Vicentinho Júnior (PSDB).",
-      "No primeiro turno, Dorinha ficou em primeiro lugar, com 45,52% dos votos válidos, ou 386.260 votos. Vicentinho ficou em segundo, com 43,94%, equivalente a 372.848 votos.",
-      "Maria Auxiliadora Seabra Rezende, a Professora Dorinha, é senadora pelo Tocantins. Foi deputada federal por três mandatos e secretária estadual de Educação do estado entre 1998 e 2009. Tem 62 anos e é natural de Goiânia (GO).",
-      "Vicentinho Júnior está em seu terceiro mandato como deputado federal pelo Tocantins. Empresário, também já atuou como secretário estadual no governo de Wanderley Barbosa, que comanda o estado atualmente. Tem 41 anos e também é natural de Goiânia (GO)."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1705979",
@@ -1052,13 +731,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "governador",
       "Rio Grande do Norte"
     ],
-    "content": [
-      "Os 2,6 milhões de eleitores do Rio Grande do Norte retornam às urnas neste domingo (25) para escolher o novo governador .",
-      "Disputam o cargo Allyson Bezerra (União) e Cadu de Lula (PT).",
-      "No primeiro turno, a disputa foi apertada. Allyson ficou em primeiro lugar, com 36,94% dos votos válidos, ou 799.809 votos. Cadu de Lula ficou em segundo, com 36,16%, equivalente a 718.300 votos.",
-      "Ex-prefeito de Mossoró, Allyson tem 34 anos, é engenheiro civil e servidor público federal. Foi deputado estadual e eleito prefeito de Mossoró, sua cidade natal, em 2021, e reeleito em 2024. Deixou a prefeitura neste ano para disputar o governo do estado.",
-      "Carlos Eduardo Xavier é auditor fiscal de carreira e foi secretário estadual da Fazenda no governo de Fátima Bezerra (PT-RN). Aos 48 anos, disputa pela primeira vez um cargo eletivo."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706151",
@@ -1082,15 +755,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Cirurgia",
       "Câncer"
     ],
-    "content": [
-      "O papa Leão XIV não precisará de mais nenhum tratamento após ter sido submetido a uma cirurgia de câncer de pulmão na semana passada. A informação foi dada por seus médicos nessa quarta-feira (21), indicando que o tumor não havia se espalhado.",
-      "O anúncio foi feito no momento em que ainda não estava claro se o papa, nascido nos Estados Unidos, seguiria adiante com a viagem planejada ao Uruguai, à Argentina e ao Peru, marcada para o período de 6 a 17 de novembro.",
-      "O pontífice, de 71 anos, passou por uma cirurgia em 13 de outubro para a remoção do lobo inferior do pulmão direito e foi diagnosticado com adenocarcinoma pulmonar, a forma mais comum de câncer de pulmão.",
-      "Exames histológicos finais e análises de biologia molecular do tecido removido confirmaram o diagnóstico, com a doença permanecendo localizada, afirmaram os médicos em comunicado divulgado pelo Vaticano .",
-      "Leão recebeu alta do hospital no sábado (17) e está retomando gradualmente suas atividades. Ontem, ele voltou à Praça de São Pedro para sua audiência semanal com os peregrinos.",
-      "Margaritora afirmou, na semana passada, que não havia “nenhuma razão clínica” que impedisse o papa de viajar para a América do Sul, mas o secretário de Estado do Vaticano indicou que o pontífice talvez precise ajustar o ritmo de sua agenda para facilitar a recuperação.",
-      "*É proibida a reprodução deste conteúdo."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706150",
@@ -1113,17 +778,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Concerto",
       "Política"
     ],
-    "content": [
-      "O novo concerto da temporada 2026 da Orquestra Filarmônica de Goiás é atração da Rádio MEC nesta quinta-feira (22), ao vivo, às 20h. Conduzido pelo maestro Neil Thomson, diretor artístico da Filarmônica, e pelo regente convidado Jean Louis Steuerman, o espetáculo inédito da série “ Natureza e Sons ” ocorre no Teatro Rio Vermelho, em Goiânia.",
-      "Como solistas, o concerto terá a participação de dois convidados de destaque no cenário erudito: o maestro e pianista Jean Louis Steuerman e o violinista Carmelo de Los Santos. O repertório escolhido transita por diferentes períodos históricos da música clássica.",
-      "Apresentado por Pedro Pontes na Rádio MEC , o programa começa com o “ Concerto para Piano nº 7 ”, de Johann Sebastian Bach, obra do período barroco originalmente composta para cravo e cordas. Depois, será apresentado o “ Concerto para Violino e Orquestra ”, do compositor brasileiro Ronaldo Miranda, peça contemporânea que explora novas sonoridades orquestrais. O repertório inclui ainda a “ Sinfonia nº 4, Op. 98 ”, de Johannes Brahms, uma das principais obras do período romântico.",
-      "Com o tema “ Natureza e Sons ”, a temporada de 2026 da Orquestra Filarmônica de Goiás explora a vitalidade da natureza e como ela inspirou composições de diversas gerações e escolas musicais ao redor do mundo. As apresentações levam o público a se conectar com a humanidade e com o meio ambiente.",
-      "Fundada em 2012, a Orquestra Filarmônica de Goiás é conhecida por sua versatilidade e excelência artística. Foi criada como instrumento de difusão de obras musicais, escritas especificamente para orquestra de câmara, formada por músicos da antiga Orquestra de Câmara Goyazes.",
-      "O grupo tem se destacado em apresentações tanto no Brasil quanto no exterior, sob o comando do britânico Neil Thomson, com um repertório que abrange desde o barroco até a música contemporânea. Seus projetos de gravação revelam um olhar diferente para o repertório, em especial o nacional: depois de gravar peças pouco ouvidas de Guerra-Peixe, a filarmônica se dedicou ao registro integral das sinfonias de Claudio Santoro.",
-      "Conhecida de norte a sul do país como \" A Rádio de Música Clássica do Brasi l\", a Rádio MEC é consagrada pelo público por sua vocação direcionada à música de concerto. A tradicional estação dedica 80% de sua programação à música clássica e leva ao ar compositores brasileiros e internacionais de todos os tempos.",
-      "A Rádio MEC oferece aos ouvintes a experiência de acompanhar repertórios segmentados, composições originais e produções qualificadas. Ainda há espaço também para faixas de jazz e música popular brasileira, combinação que garante a conquista de novos públicos e agrada a audiência cativa.",
-      "Os ouvintes têm participação garantida e podem colaborar com sugestões para a programação. O público pode interagir pelas redes sociais e pelo WhatsApp . Para isso, basta que os interessados enviem mensagens de texto para o número (21) 99710-0537."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706149",
@@ -1147,18 +802,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Lula",
       "Eleições"
     ],
-    "content": [
-      "Os candidatos a presidente cumpriram agenda de campanha nesta quarta-feira (21) em Belo Horizonte, Fortaleza e São Paulo.",
-      "O candidato Flávio Bolsonaro (PL) participou de um evento em Guarulhos (SP) pela manhã ao lado do governador Tarcísio de Freitas (Republicanos).",
-      "Flávio Bolsonaro informou nesta quarta-feira (21) ao Tribunal Superior Eleitoral (TSE) que autoriza o levantamento de seus sigilos bancário, fiscal e telefônico dos últimos 20 anos, desde que o candidato à reeleição Luiz Inácio Lula da Silva (PT) amplie o alcance do levantamento de seus sigilos .",
-      "No início da noite, ele esteve em um ato público em Fortaleza (CE), na Avenida do Contorno.",
-      "O candidato Luiz Inácio Lula da Silva (PT) teve agenda de campanha em Belo Horizonte. Lá, Lula defendeu a ampliação do programa Pé-de-Meia aos universitários e a tarifa zero no transporte público nos fins de semana.",
-      "Lula também reiterou sua disposição em abrir seu sigilo bancário, e de sua família, desde que seu adversário fizesse o mesmo. Para o petista, Flávio Bolsonaro está “trucando”, em alusão ao jogo de cartas.",
-      "“Eu, nesta semana, pedi para o Flávio abrir o sigilo. Hoje, ele inventou um monte de mentira e trucou seis. Eu vou meter um nove na cara dele amanhã. Ele não tem nenhuma carta boa, só tem mentira. Ele vai saber o que é um campeão de truco que aprendeu a jogar com o povo mineiro”, disse o candidato à reeleição.",
-      "Após Flávio afirmar que aceitaria a proposta desde que Lula ampliasse o alcance do levantamento de seus sigilos, que deveria incluir na quebra de sigilo os dados de Marco Aurélio Santana Ribeiro, ex-chefe de gabinete do presidente, a coordenação da campanha de Lula afirmou que o presidente aceitaria as condições do candidato do PL e marcou para amanhã (22), às 11h, no Tribunal Superior Eleitoral (TSE), a entrega formal do compromisso à Justiça.",
-      "Em Brasília, o grupo Cristãos pela Democracia fez um ato em apoio ao candidato Lula, que reuniu evangélicos, católicos e espíritas para falarem sobre política. O pastor e deputado Henrique Vieira (PSOL-RJ) disse que o grupo surgiu pela percepção de que a democracia está em risco e que o objetivo é defender os ensinamentos cristãos, mas sem usar as igrejas para atividades partidárias. Outros participantes defenderam que a proposta do candidato é da “vida em abundância”, “com direito à saúde, à moradia, à educação e à dignidade humana”.",
-      "* Colaborou Iara Balduino, de Brasília"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706148",
@@ -1181,14 +825,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Lula",
       "Flávio Bolsonaro"
     ],
-    "content": [
-      "A campanha do candidato à reeleição Luiz Inácio Lula da Silva (PT) protocolou nesta quarta-feira (21) no Tribunal Superior Eleitoral (TSE) uma ação de investigação eleitoral para cassar o registro da candidatura da chapa formada pelo candidato Flávio Bolsonaro (PL) e o candidato a vice-presidente Alfredo Gaspar (PL).",
-      "Os advogados da campanha acusam a chapa adversária de cometer abuso de poder econômico e uso indevidos dos meios de comunicação.",
-      "A campanha alega que a candidatura de Flávio foi beneficiada por direcionamento de postagens nas redes sociais, enquanto os conteúdos referentes a Lula foram restringidos pelas plataformas da Meta.",
-      "Na ação, os advogados também alegam que, durante a campanha, a geração de imagens de inteligência artificial não permitiu a criação de conteúdos sobre Lula. Contudo, a criação de imagens relacionadas ao candidato Flávio Bolsonaro estava liberada.",
-      "A Meta nega qualquer tipo benefício a candidaturas.",
-      "O processo foi distribuído para o ministro Ricardo Villas Bôas Curva. Não há prazo para decisão do relator."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706146",
@@ -1212,17 +849,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "redes sociais",
       "Eleições"
     ],
-    "content": [
-      "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, determinou nesta quarta-feira (21) a suspensão de 20 postagens ilegais nas redes sociais contra o candidato à reeleição Luiz Inácio Lula da Silva (PT)",
-      "O ministro atendeu ao pedido da campanha de Lula, que alegou a ação estruturada de parlamentares que apoiam o candidato Flávio Bolsonaro (PL) para compartilhamento de deepfake, a criação de conteúdo artificial para prejudicar candidatos.",
-      "A decisão do presidente atinge postagens de Flávio e dos deputados federais Gustavo Gayer (PL-GO), Mario Frias (PL-SP) e Gilvan da Federal (PL-ES). Todos foram proibidos de replicarem as mensagens novamente.",
-      "A ação citou postagens irregulares de 32 perfis nas redes sociais, que possuem 1,4 milhão de seguidores e 23,8 mil publicações.",
-      "Ao defender a retirada das postagens, a campanha de Lula disse que postagens anônimas produzem percepção de rejeição generalizada a Lula, fato que não corresponde à realidade.",
-      "O uso indevido de inteligência artificial durante a campanha já está em debate no TSE.",
-      "Na semana passada, o tribunal proibiu a Meta de restringir a entrega de postagens que envolvem os candidatos Lula e Flávio.",
-      "A decisão foi proferida após a campanha de Lula informar ao TSE que comandos para geração de imagens de inteligência artificial não permitiam a criação de conteúdos sobre o candidato à reeleição. Contudo, a criação de imagens relacionadas ao candidato Flávio Bolsonaro estava liberada.",
-      "Pela decisão do TSE, o Facebook, uma das plataformas operadas pela Meta, deve abster-se de aplicar medidas de redução de distribuição, exclusão de recomendação e restrição de buscas."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706141",
@@ -1246,22 +873,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Rebeca Andrade",
       "Flávia Saraiva"
     ],
-    "content": [
-      "A seleção brasileira terminou em quinto lugar na final por equipes do Mundial de Ginástica Artística, que reúne as maiores potências da modalidade em Roterdã (Países Baixos). Nesta quarta-feira (21), o quinteto amarelinho liderado pelas medalhistas olímpicas Rebeca Andrade e Flávia Saraiva somou 159.730 pontos, após apresentações com raras falhas e nenhuma queda.",
-      "O topo do pódio ficou com a China (165.764), que há 20 anos não vencia a competição e quebrou a hegemonia dos Estados Unidos. Após sete títulos mundiais, as norte-americanas ( 165.531) ficaram com a prata. O Japão (164.063) levou o bronze, 60 anos depois de subir ao pódio mundial pela primeira vez. Além das medalhas, os três países asseguraram vagas na Olimpíada de Los Angeles (LA 2028). A quarta colocação ficou com a França (161.130).",
-      "Classificadas para a final em 8º e último lugar na última segunda (19), quando totalizaram 159,131, as brasileiras foram as únicas entre as finalistas que melhoraram o somatório, subindo da 8ª para a 5ª posição . Além de Rebeca e Flavinha, a equipe Amarelinha conta com Lorrane Oliveira, Thais Fidelis, Sophia Wesiberg e Gabriela Bouças (reserva).",
-      "A melhor perfomance do Brasil na final foi no salto, com somatório 41.433. Primeira no aparelho, Flavinha levou nota 13.000, após dar um passo para trás na aterrissagem. Na sequência, a estreante Sophia Weisberg, de apenas 16 anos, brilhou ao executar com precisão uma dupla pirueta, que havia tentando sem êxito no qualificatório. Caçula da equipe, Sophia anotou 14.033. Por fim, Rebeca Andrade executou movimentos perfeitos ao saltar e aterrissou com precisão, cravando nota 14.400.",
-      "Bronze olímpico em Paris 2024, a seleção feminina totalizou hoje 40.532 na trave, 39.132 nas paralelas assimétricas e 38.633 no solo.",
-      "O Brasil ainda tem chances de subir ao pódio. Na próxima sexta (23), Flavinha e Lorrane Oliveira disputarão a final do individual geral. No dia seguinte, Rebeca vai brigar pelo pódio no salto. Por fim, no domingo (25), Flavinha competirá a final da trave.",
-      "14h30 às 17h - Final do individual geral masculino",
-      "14h30 às 17h - Final do individual geral feminino",
-      "9h às 13h - Finais por aparelhos (primeiro dia)",
-      "Masculino: solo, cavalo com alças e argolas",
-      "Feminino: salto e barras assimétricas",
-      "10h às 14h - Finais por aparelhos (segundo dia)",
-      "Masculino: salto, barras paralelas e barra fixa",
-      "Feminino: trave de equilíbrio e solo"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706134",
@@ -1285,31 +897,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Desenrola",
       "Desenrola 30"
     ],
-    "content": [
-      "As instituições financeiras poderão apresentar até R$ 90 bilhões em dívidas antigas a serem renegociadas na primeira etapa do Desenrola 3.0, disse nesta quarta-feira (21) o ministro da Fazenda, Dario Durigan. Segundo ele, o edital de chamamento dos bancos e de outras instituições será publicado nesta quinta-feira (22), dando início ao processo de habilitação de bancos e fundos interessados em vender carteiras de crédito à União.",
-      "Apesar do volume previsto, o custo máximo estimado para a compra de todo esse montante seria de R$ 9 bilhões, considerando o desconto mínimo de 90% exigido pelo programa.",
-      "As instituições terão cinco dias úteis para informar o volume de débitos que pretendem oferecer. A etapa, no entanto, não é uma convocação para que os consumidores renegociem suas dívidas, mas um procedimento para medir o interesse dos credores e o volume de dívidas por faixas de renda.",
-      "“Estamos fazendo uma chamada aos bancos para que eles se organizem e apresentem o exato volume pelas diferentes faixas dos credores. Nessa chamada de interesse vamos permitir que várias faixas de renda sejam apresentadas, mas nosso foco são faixas de renda menores”, afirmou Durigan.",
-      "O chamamento público será destinado a bancos, instituições financeiras e fundos de investimento em direitos creditórios (FIDCs). Para participar da etapa seguinte, os credores deverão apresentar carteiras de dívidas que atendam aos critérios do programa e aceitar as condições mínimas de desconto.",
-      "O procedimento será dividido em etapas:",
-      "Segundo o ministro, o governo pretende estruturar a disputa para favorecer devedores de menor renda e microempreendedores individuais (MEIs). No entanto, caso o volume de dívidas de baixa renda seja menor que o previsto, o governo poderá comprar mais dívidas de alta renda.",
-      "A estimativa inicial é que os credores apresentem até R$ 90 bilhões em dívidas. Como o programa exige deságio mínimo de 90%, a União pagaria, no máximo, 10% do valor nominal das carteiras adquiridas.",
-      "Na hipótese de compra de todo o montante estimado, o desembolso seria de até R$ 9 bilhões.",
-      "“Se, no limite, esses R$ 90 bilhões de dívidas forem ofertados, de partida a gente saberia que no máximo consumiriam R$ 9 bilhões para a gente adquirir tudo”, disse o secretário executivo do Ministério da Fazenda, Rogério Ceron.",
-      "O governo, porém, não necessariamente comprará todas as carteiras apresentadas. A intenção é estabelecer um orçamento para o leilão e estimular a concorrência entre os credores, o que pode resultar em descontos superiores ao mínimo exigido.",
-      "“A depender do que a gente receber nessas carteiras que os bancos e as instituições financeiras tenham, a gente pode exigir desconto de 93%, 95% no leilão. E aí, no leilão, a depender de como correr o leilão, eu posso conseguir descontos ainda maiores”, disse Durigan.",
-      "O Desenrola 3.0 foi criado por medida provisória assinada pelo presidente Luiz Inácio Lula da Silva em setembro. O programa prevê a compra, pela União, de carteiras de crédito com dívidas antigas para viabilizar a renegociação dos débitos com os consumidores.",
-      "Entre as condições previstas estão:",
-      "No lançamento da iniciativa, o governo estimou que o volume total de dívidas elegíveis poderia chegar a R$ 150 bilhões, com desembolso de aproximadamente R$ 15 bilhões. A previsão de R$ 90 bilhões divulgada agora corresponde à expectativa inicial de dívidas que os credores poderão apresentar na primeira chamada.",
-      "Após o leilão, as dívidas adquiridas pelo governo poderão ser renegociadas com os devedores, com repasse dos descontos obtidos na compra das carteiras.",
-      "O consumidor poderá quitar o débito à vista ou parcelar o pagamento, conforme as condições a serem estabelecidas. No caso do parcelamento, haverá cobrança de juros.",
-      "Os prazos, as taxas e as demais condições operacionais ainda dependem de definições do Conselho Monetário Nacional (CMN) e da regulamentação aplicável.",
-      "Neste momento, os consumidores não precisam procurar os bancos para participar da etapa de chamamento. O governo ainda deverá divulgar as regras e os procedimentos para o acesso às renegociações.",
-      "Questionado sobre a continuidade do programa independentemente do resultado das eleições presidenciais, Durigan afirmou que a iniciativa tem caráter permanente de política pública.",
-      "O ministro também criticou sugestões de congelamento temporário de dívidas de pessoas físicas e empresas, que classificou como “uma espécie de calote generalizado no sistema financeiro”.",
-      "Segundo Durigan, o governo pretende manter o Desenrola 3.0 como uma política de Estado para enfrentar o endividamento e facilitar a recuperação do acesso ao crédito.",
-      "A próxima etapa será a análise das carteiras apresentadas pelos credores. Somente depois desse levantamento a Fazenda deverá definir o volume de dívidas a ser efetivamente adquirido e as condições do leilão."
-    ]
+    "content": []
   },
   {
     "id": "camara-1312672-projeto-cria-rede-de-desenvolv",
@@ -1331,21 +919,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Esportes",
       "Brasil"
     ],
-    "content": [
-      "Renato Araújo / Câmara dos Deputados",
-      "Laura Carneiro, autora da proposta",
-      "O Projeto de Lei 3491/26 institui a Rede de Desenvolvimento do Esporte como mecanismo de articulação entre governos e diferentes setores para fomentar a prática esportiva e a atividade física no país. A proposta prevê a integração de ações e equipamentos esportivos com políticas públicas de áreas como saúde, educação, cultura e assistência social.",
-      "A rede será organizada a partir de estruturas chamadas de redes locais, que reunirão equipamentos e pessoas envolvidos na promoção do esporte e da atividade física em cada território. A coordenação ficará a cargo da União, com a participação dos integrantes do Sistema Nacional do Esporte e de outros órgãos e entidades públicas, conforme regulamentação.",
-      "O texto define os núcleos catalisadores, preferencialmente equipamentos esportivos, como referências locais responsáveis por coordenar as redes, disseminar orientações e encaminhar informações ao Ministério do Esporte.",
-      "A proposta também prevê a atuação de agentes de mobilização, remunerados ou voluntários, preferencialmente moradores dos próprios territórios. Eles deverão divulgar práticas esportivas e atividades físicas e apoiar o fortalecimento e o acompanhamento das redes locais.",
-      "Entre as diretrizes da política estão o reconhecimento do esporte como direito social e dever do Estado, a promoção da qualidade de vida e da inclusão social, a redução das desigualdades e a participação da sociedade na gestão das ações.",
-      "A rede terá como objetivos ampliar a oferta de equipamentos e atividades esportivas, valorizar práticas tradicionais e características de cada localidade e integrar o esporte a políticas voltadas à igualdade racial e de gênero e à inclusão de pessoas com deficiência.",
-      "O projeto também prevê o uso de evidências para planejar, monitorar e avaliar as ações, além da identificação e divulgação de boas práticas na promoção do esporte e da atividade física. A implementação poderá envolver parcerias entre órgãos e entidades públicas e privadas.",
-      "A autora do projeto, deputada Laura Carneiro (PSD-RJ), afirma que a intenção é consolidar a rede como política pública permanente e fortalecer a articulação entre as iniciativas esportivas e outras áreas.",
-      "Segundo a deputada, a organização territorial da rede “favorece a identificação de suas necessidades e potencialidades e amplia a efetividade das políticas voltadas à democratização do acesso ao esporte”.",
-      "O projeto, que tramita em caráter conclusivo , será analisado pelas comissões do Esporte; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania da Câmara dos Deputados. Para virar lei, é preciso passar também pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706135",
@@ -1369,17 +943,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Flávio Bolsonaro",
       "sigilo bancário"
     ],
-    "content": [
-      "A coordenação da campanha de Luiz Inácio Lula da Silva à reeleição afirmou que o candidato do PT aceitou as condições de seu adversário, Flávio Bolsonaro (PL), para quebra do sigilo bancário e telefônico dele e de seus parentes. A informação foi dada pelo coordenador da campanha do petista, Camilo Santana.",
-      "“Todas as condicionantes que ele [Flávio] colocou, a resposta do presidente é que ele não se opõe a absolutamente nada do que ele está propondo. Contanto que ele também cumpra e abra tudo que está no pedido protocolado junto ao TSE.”",
-      "Camilo afirmou que estará no Tribunal Superior Eleitoral (TSE) nesta quinta-feira (22), às 11h, para protocolar a resposta de Lula. E deu esse mesmo dia e horário como prazo para Flávio abrir seu sigilo bancário e telefônico e de seus parentes.",
-      "“É o prazo que ele vai ter para estar lá e abrir todo seu sigilo bancário e telefônico. Não pode deixar pra depois da eleição. O prazo é amanhã”, disse Camilo. O segundo turno está marcado para o próximo domingo (25).",
-      "Lula fez o desafio a Flávio durante o debate entre os dois no último domingo (18) , e se comprometeu a abrir seu sigilo bancário e telefônico, bem como de sua esposa e filhos, desde que o adversário fizesse o mesmo. A ideia de Lula é revelar “quem é honesto e quem é ladrão”.",
-      "Ontem (20), o candidato do PT foi ao TSE, apresentou um requerimento autorizando a divulgação dos dados e aguardou o posicionamento do adversário.",
-      "Hoje, Flávio afirmou que aceitaria a proposta desde que Lula ampliasse o alcance do levantamento de seus sigilos . Segundo ele, Lula deveria incluir na quebra de sigilo os dados de Marco Aurélio Santana Ribeiro, ex-chefe de gabinete do presidente.",
-      "O candidato do PL também exigiu que Lula tornasse público os registros de entrada da empresária Roberta Luchsinger no Palácio do Planalto, e quebrasse os sigilos de José Ferreira da Silva, o Frei Chico, irmão de Lula, entre outras condições. Segundo Camilo, todas as condições foram aceitas por Lula.",
-      "“Se ele não deve nada, ele deveria ter aceito o desafio do presidente Lula naquele domingo”, disse o coordenador da campanha petista."
-    ]
+    "content": []
   },
   {
     "id": "camara-1309865-projeto-cria-programa-nacional",
@@ -1401,26 +965,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Kayo Magalhães / Câmara dos Deputados",
-      "Deputado Roberto Duarte, autor do projeto",
-      "O Projeto de Lei 3194/26 cria o Programa Nacional de Infraestrutura, Salvaguarda e Beneficiamento da Pesca Artesanal Continental (Propesca-Infra).",
-      "A proposta também cria a Guia Eletrônica de Transporte de Pescado Artesanal (GTPA), estabelece regras para entrepostos municipais de pescado, cria o Selo Sanitário Simplificado da Pesca Artesanal (SSA-PA) e institui um mecanismo de lastro de crédito para a atividade.",
-      "O projeto altera a Lei 11.959/09 , que trata da Política Nacional de Desenvolvimento Sustentável da Aquicultura e da Pesca. Entre as medidas previstas estão ações voltadas à infraestrutura da pesca artesanal, à identificação e ao transporte do pescado e à comercialização da produção.",
-      "O Propesca-Infra deverá apoiar a implantação, a recuperação e a modernização de estruturas utilizadas pela pesca artesanal continental. A proposta prevê a atuação em municípios e comunidades que desenvolvem essa atividade.",
-      "O programa também estabelece diretrizes relacionadas à proteção da atividade pesqueira artesanal e à melhoria das condições de beneficiamento e comercialização do pescado.",
-      "O projeto cria a Guia Eletrônica de Transporte de Pescado Artesanal (GTPA). O documento deverá ser utilizado para identificar e acompanhar o transporte da produção. A proposta prevê a utilização de meio eletrônico para o registro das informações relacionadas à origem, ao transporte e à comercialização do pescado.",
-      "O texto também dispõe sobre a criação de entrepostos municipais de pescado. Esses espaços deverão apoiar atividades de recebimento, armazenamento, beneficiamento e comercialização da produção da pesca artesanal.",
-      "A proposta estabelece ainda regras para a organização desses entrepostos e para a sua utilização pelos pescadores artesanais.",
-      "Selo sanitário simplificado",
-      "O projeto cria o Selo Sanitário Simplificado da Pesca Artesanal (SSA-PA), destinado aos produtos da pesca artesanal. A proposta estabelece um regime simplificado de registro e inspeção sanitária para esses produtos, com regras específicas para a atividade artesanal.",
-      "O texto também prevê medidas relacionadas à aquisição de pescado produzido pela pesca artesanal para programas públicos, incluindo o Programa Nacional de Alimentação Escolar (Pnae) e o Programa de Aquisição de Alimentos (PAA).",
-      "O autor do projeto, deputado Roberto Duarte (Republicanos-AC), afirmou que a proposta oferece ao pescador artesanal continental do Norte do Brasil o que o Estado lhe deve há décadas:",
-      "“Infraestrutura municipal de cadeia fria, instrumento documental moderno autoemitido que assegura a livre circulação do pescado, regime sanitário compatível com a realidade amazônica, identificação digital unificada, mecanismo financeiro de lastro de crédito que combate o atravessador e reserva concreta de 30% do percentual da agricultura familiar nas aquisições públicas\", observou.",
-      "O projeto foi encaminhado para as comissões de Viação e Transportes; Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural; Finanças e Tributação; e Constituição e Justiça e de Cidadania.",
-      "A proposta tramita em caráter conclusivo . Para virar lei, o texto precisa ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706127",
@@ -1444,35 +989,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "perdão de dívidas",
       "Pix MEI"
     ],
-    "content": [
-      "Sancionada nesta quarta-feira (21) pelo presidente Luiz Inácio Lula da Silva, a Lei Complementar 238/2026 , que estabelece novas regras para os microempreendedores individuais (MEI), estabelece o perdão de dívidas tributárias com a União. A legislação também aumenta gradualmente o limite de faturamento anual e amplia a possibilidade de contratação de funcionários.",
-      "Batizado de Prospera MEI, o pacote inclui ainda medidas para facilitar a participação de pequenos negócios em compras públicas . Parte das mudanças, porém, só começa a valer em 2027.",
-      "Além da lei, Lula assinou o decreto que dispensa os MEI da obrigatoriedade de emitir nota fiscal nas vendas de produtos e na prestação de serviços a pessoas físicas. A norma também prevê a dispensa para os chamados nanoempreendedores, conforme as condições estabelecidas na regulamentação.",
-      "Entre as principais medidas estão:",
-      "A lei prevê a remissão de débitos tributários federais abrangidos pela medida, constituídos até 13 de outubro de 2026. O benefício inclui o valor das contribuições previdenciárias em atraso, além de multas, juros e encargos relacionados.",
-      "A estimativa divulgada pelo governo é de que cerca de 3,6 milhões de microempreendedores sejam beneficiados.",
-      "Para manter o benefício, o MEI deverá:",
-      "A medida está prevista para entrar em vigor em 1º de janeiro de 2027. O perdão não significa devolução de valores que já tenham sido pagos.",
-      "O limite anual do MEI, atualmente em R$ 81 mil, será ampliado em duas etapas. A mudança busca permitir que os empreendedores aumentem suas receitas sem precisar deixar imediatamente o regime simplificado por ultrapassar o teto atual.",
-      "Os novos limites passam a valer nas datas previstas pela lei. O enquadramento continuará condicionado ao cumprimento dos demais requisitos exigidos para ser MEI.",
-      "A legislação amplia para até dois empregados o limite de contratação nas atividades abrangidas pela nova regra. Os trabalhadores deverão receber, no mínimo, um salário mínimo ou o piso salarial da categoria profissional.",
-      "A ampliação não deve ser interpretada como uma autorização irrestrita para todos os MEI: é necessário observar quais atividades estão contempladas e as condições específicas previstas na legislação.",
-      "O presidente Lula também assinou nesta quarta-feira o decreto que dispensa o MEI da emissão de nota fiscal nas vendas de produtos e na prestação de serviços destinados a pessoas físicas, conforme as condições da norma.",
-      "A medida também contempla os nanoempreendedores , categoria prevista no contexto da reforma tributária, que poderá reunir pessoas com faturamento anual de até R$ 40,5 mil.",
-      "Para esse público, a regulamentação prevê dispensa de abertura de Cadastro Nacional de Pessoa Jurídica (CNPJ) e de emissão de nota fiscal nas vendas a pessoas físicas, respeitados os requisitos aplicáveis.",
-      "A dispensa não deve ser confundida com uma autorização geral para deixar de emitir documentos fiscais em qualquer operação. As exigências para transações com empresas e órgãos públicos devem ser observadas conforme as regras aplicáveis.",
-      "O pacote também prevê uma frente de renegociação de débitos com instituições financeiras, em iniciativa associada ao Desenrola 3.0.",
-      "A proposta é realizar leilões a partir de novembro, com participação de bancos privados. As instituições deverão oferecer descontos mínimos de 90% sobre os saldos devedores para participar da operação, conforme as condições anunciadas pelo governo.",
-      "A expectativa oficial é alcançar cerca de 1,6 milhão de MEI inadimplentes. A compra ou renegociação das dívidas bancárias é uma medida diferente do perdão de débitos tributários com a União e depende das regras específicas da operação.",
-      "O pacote anunciado inclui a previsão de um auxílio de até R$ 5 mil para investimento na estruturação de pequenos negócios, chamado de Pix MEI.",
-      "A proposta prevê recursos entre 2027 e 2030, com prioridade para mulheres empreendedoras e MEI com faturamento anual de até R$ 40,5 mil. O dinheiro deverá ser aplicado na aquisição de bens que contribuam para o desenvolvimento produtivo da atividade.",
-      "A iniciativa também prevê orientação e assistência aos beneficiários, com apoio de parceiros como o Sebrae.",
-      "A previsão de recursos, no entanto, não significa que o dinheiro esteja disponível para saque imediato. O acesso dependerá da implementação do programa e das regras operacionais a serem estabelecidas.",
-      "A lei também amplia as possibilidades de participação dos MEI em contratações governamentais e prevê mecanismos para facilitar o acesso às compras públicas.",
-      "A iniciativa busca aproximar pequenos empreendedores dos órgãos públicos compradores, inclusive por meio de plataformas como o Contrata+Brasil .",
-      "Os limites financeiros e os procedimentos aplicáveis variam conforme a modalidade de contratação. Por isso, o empreendedor deverá consultar os editais e as regras vigentes antes de apresentar uma proposta.",
-      "A aplicação de cada benefício depende das condições previstas na lei, no decreto e nas regulamentações específicas. O empreendedor deve acompanhar os canais oficiais do governo, como o Serviço de Apoio às Micro e Pequenas Empresas (Sebrae), para verificar os procedimentos de acesso e a data efetiva de cada medida."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706128",
@@ -1496,26 +1013,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Justiça Eleitoral",
       "local de votação"
     ],
-    "content": [
-      "Uma leitura equivocada dos dados levou a Justiça Eleitoral a informar, no último sábado (17), que 4.352 seções eleitorais teriam mudado de local entre o primeiro e o segundo turno da eleição deste ano.",
-      "O presidente do Colégio de Presidentes dos Tribunais Regionais Eleitorais (Coptrel), desembargador Carlos Roberto Silva, explicou nesta quarta-feira (21), à Agência Brasil, que os dados foram erradamente comparados com os da eleição de 2024. Segundo a assessoria de imprensa do TSE, houve uma falha dos Tribunais Regionais Eleitorais (TREs) ao alimentar o sistema da Justiça.",
-      "A Justiça Eleitoral atualizou para 343 o número de seções eleitorais que tiveram seu local modificado entre o primeiro e o segundo turno das eleições , que ocorrerá no próximo domingo (25). Na terça-feira (20), o sistema registrava 441 seções que teriam mudado de local, quantidade que caiu novamente na atualização desta quarta.",
-      "Como novas mudanças podem ocorrer até o dia da votação no próximo domingo (25), a Justiça Eleitoral recomenda que o eleitor confira o local de votar antes de sair para ir à urna .",
-      "O eleitor deve conferir o local de votação apenas nos canais oficiais da Justiça Eleitoral , seja no botão “onde votar” do aplicativo e-Título, ou nos portais do Tribunal Superior Eleitoral (TSE) e dos TREs. Um dos canais é por meio deste link , clicando no botão “Onde votar”.",
-      "Ao abrir a sessão plenária do TSE na terça-feira, o presidente do Tribunal, ministro Kássio Nunes Marques, explicou que o sistema inicia a primeira semana após o primeiro turno com o mesmo número de mudanças ocorridas desde a eleição de 2024.",
-      "\"Há uma necessidade de revisitação de toda a situação anterior ao primeiro turno. Então, ele [o número] vem, muito provavelmente, e é o que está acontecendo, caindo\", disse.",
-      "Marques pontuou que, enquanto o sistema ELO, usado para sistematizar os dados estatísticos da Justiça Eleitoral, ainda indicava 38 locais de votação alterados em Minas Gerais, o TRE estadual calculava apenas 17 endereços modificados.",
-      "\"No caso do Piauí, no sistema ELO, constam 18, mas o TRE já nos comunicou que apenas quatro locais de votação foram alterados\", acrescentou.",
-      "As mudanças nos locais de votação são definidas pelos juízes de cada cartório eleitoral . Esse juiz informa ao TRE a necessidade de mudança, seja por problemas climáticos ou de estrutura dos prédios. Em seguida, o TRE repassa o dado ao TSE pelo sistema ELO.",
-      "Kássio Nunes Marques disse ainda que os dados atuais representam uma redução, em 2026, de 85% no número de urnas alteradas entre o primeiro e o segundo turnos, se comparado com a eleição de 2022.",
-      "O presidente do TRE de Santa Catarina, Carlos Roberto Silva, explicou que mudanças em locais de votação fazem parte da rotina da Justiça Eleitoral, ocorrendo todos os anos.",
-      "\"Os juízes eleitorais divulgam, por todos os meios de comunicação, quando isso acontece e colocam avisos nos locais antigos, onde houve a mudança. Há sempre uma faixa avisando o novo local. Não há prejuízo aos eleitores, não há nenhuma situação de insegurança, é rotina\", afirmou.",
-      "O desembargador acrescentou que todos os meios de comunicação locais são avisados quando há uma mudança.",
-      "\"Além de colocar os avisos, o rádio fica divulgando constantemente. É um aviso muito efetivo, de uma forma que não há notícias de que eleitores tenham deixado de votar porque houve, eventualmente, essa alteração, que, repito, é uma rotina em todas as eleições\", completou o desembargador.",
-      "O presidente do TRE catarinense acrescentou que a tendência é que ocorra o mínimo de novas alterações de locais até o próximo domingo.",
-      "\"Alterações [ainda] são possíveis. Imagine que, nos próximos dias, em algumas regiões do Brasil, ocorra uma chuva de granizo intensa que estrague o telhado de uma escola. É possível, mas em casos muito excepcionais\", completou.",
-      "Nos últimos dias, têm circulado diversas mensagens em grupos de WhatsApp ou nas redes sociais com links não oficiais sobre locais de votação que não são confiáveis . O eleitor não deve consultar o local de votação em links que não sejam os oficiais da Justiça Eleitoral."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706121",
@@ -1539,13 +1037,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Flávio Bolsonaro",
       "Lula"
     ],
-    "content": [
-      "O candidato à Presidência da República Flávio Bolsonaro (PL) informou nesta quarta-feira (21) ao Tribunal Superior Eleitoral (TSE) que autoriza o levantamento de seus sigilos bancário, fiscal e telefônico dos últimos 20 anos, desde que o candidato à reeleição Luiz Inácio Lula da Silva (PT) amplie o alcance do levantamento de seus sigilos.",
-      "Para divulgar suas informações financeiras, o candidato do PL quer que Lula também divulgue os dados de Marco Aurélio Santana Ribeiro, ex-chefe de gabinete do presidente, os registros de entrada da empresária Roberta Luchsinger no Palácio do Planalto, os sigilos de José Ferreira da Silva, o Frei Chico, irmão de Lula, entre outras condições.",
-      "A manifestação de Flávio foi encaminhada ao TSE um dia após Lula autorizar a divulgação de seus dados pessoais, desde que seu adversário também faça o mesmo.",
-      "Segundo o candidato do PL, o pedido de Lula é uma \"verdadeira aberração jurídica\". Para Flávio, o candidato à reeleição poderia divulgar seus extratos sem enviar o caso ao TSE.",
-      "As petições de Flávio e Lula foram encaminhadas ao ministro André Mendonça, relator do caso."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706122",
@@ -1569,15 +1061,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "finalistas",
       "Carlinha"
     ],
-    "content": [
-      "Três jogadoras disputam a categoria Melhor Goleira da temporada no futebol feminino brasileiro no Prêmio TV Brasil Petrobras Para Elas. As finalistas, anunciadas nesta quarta-feira (21), são Yanne (Bahia), Carlinha (São Paulo) e Sandy (América-MG).",
-      "Yanne se destacou na histórica campanha do Bahia no Campeonato Brasileiro deste ano. Além de grandes defesas durante a competição, ela foi decisiva na classificação das Mulheres de Aço às semifinais, salvando dois pênaltis - um deles no tempo normal - nos jogos diante do Palmeiras, pelas quartas de final. A goleira de 23 anos, que é natural de Salvador, foi recompensada com a primeira convocação da carreira à seleção brasileira principal.",
-      "Campeã brasileira pelo São Paulo, Carlinha foi de vilã a heroína na final contra o Corinthians, defendendo o pênalti que garantiu o título ao Tricolor. Aos 29 anos, a paulistana é a jogadora que mais vezes defendeu as Soberanas (232 jogos). Além disso, faz parte do elenco desde 2019, na retomada do projeto são-paulino. Estreou pela Amarelinha na vitória sobre a Argentina por 3 a 1, no último dia 10 de outubro, no Beira-Rio, em Porto Alegre.",
-      "Sandy, por sua vez, é a grande responsável pela permanência do América-MG na primeira divisão do Brasileirão. A mineira nascida em Mariana, de 26 anos, assumiu a titularidade na terceira rodada, retornou ao banco na 10ª e voltou ao time três jogos depois. Entre todas as goleiras, é quem teve maior nota (7.57) no Sofascore, site especializado em estatísticas do futebol, além de ser a segunda com maior média de defesas por jogo (6.08).",
-      "As atletas foram escolhidas em votação realizada por representantes dos clubes da elite do futebol feminino nacional: a capitã, o(a) treinador(a) e o(a) dirigente responsável pela modalidade. Conforme o regulamento da premiação, os votos não poderiam ser direcionados a integrantes da própria agremiação.",
-      "Os finalistas das diferentes categorias vêm sendo revelados desde a última segunda (19) nos veículos da Empresa Brasil de Comunicação (EBC) . Além das que concorrem ao troféu de melhor goleira, também foram anunciadas os mais votadas ao prêmio de Jogadora Revelação e Melhor Treinador(a). Os vencedores serão conhecidos em cerimônia no Museu do Futebol, em São Paulo, no próximo dia 15 de novembro.",
-      "As demais categorias a serem reconhecidas no Prêmio TV Brasil Petrobras Para Elas são: Melhor Jogadora, Artilheira, Gol Mais Bonito, Melhor Departamento de Futebol Feminino e Seleção da Temporada. Há, também, a categoria Futebol Feminino Contra o Feminicídio, que destaca o clube que melhor promoveu ações de enfrentamento à violência contra a mulher."
-    ]
+    "content": []
   },
   {
     "id": "camara-1307688-projeto-atualiza-lei-do-crime-",
@@ -1599,19 +1083,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Kayo Magalhães / Câmara dos Deputados",
-      "Cabo Gilberto Silva: mudança ajusta a lei ao surgimento de novas ferramentas tecnológicas usadas para assediar vítimas",
-      "O Projeto de Lei 1931/26 altera o Código Penal para especificar as condutas que caracterizam o crime de perseguição ( stalking ). A proposta em análise na Câmara dos Deputados estabelece, de forma expressa, que o crime engloba atos de vigilância, monitoramento, aproximação ou contato insistente não consentido, inclusive por meios digitais ou tecnológicos.",
-      "Pelo texto, a perseguição fica configurada quando a conduta for capaz de ameaçar a integridade física ou psicológica da vítima, restringir sua capacidade de locomoção ou violar de forma relevante sua liberdade ou privacidade.",
-      "O texto também introduz o conceito de atos reiterados, exigindo que a prática ocorra de forma contínua ou sistemática. Para isso, deverão ser avaliadas a proximidade no tempo entre os episódios, a intensidade do comportamento e o impacto concreto provocado na vida da vítima.",
-      "Fica mantida a pena atual de reclusão de seis meses a dois anos e multa, com aumento de metade da pena se o crime for cometido contra crianças, adolescentes, idosos, mulheres em contexto de violência de gênero, ou com uso de arma ou a participação de duas ou mais pessoas.",
-      "O autor da proposta, deputado Cabo Gilberto Silva (PL-PB), argumenta que a mudança ajusta a lei ao surgimento de novas ferramentas tecnológicas usadas para assediar vítimas.",
-      "\"Ao estabelecer parâmetros objetivos sobre o que caracteriza a continuidade e o impacto da conduta, o projeto reduz dúvidas de interpretação, evitando a impunidade e a banalização do tipo penal”, diz o autor.",
-      "A proposta será analisada pela Comissão de Constituição e Justiça e de Cidadania. Depois, segue para votação do Plenário.",
-      "Para virar lei, o texto precisa ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "camara-1312650-projeto-estabelece-regras-de-s",
@@ -1633,23 +1105,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Cleia Viana / Câmara dos Deputados",
-      "Marcos Tavares: proposta contribui para construção de ambientes de trabalho mais saudáveis",
-      "O Projeto de Lei 3404/26 altera a Consolidação das Leis do Trabalho (CLT) para criar medidas específicas de proteção à saúde, à segurança e à ergonomia dos trabalhadores da indústria têxtil.",
-      "A proposta, em análise na Câmara dos Deputados, é de autoria do deputado Marcos Tavares (PDT-RJ).",
-      "As novas regras estabelecem que os empregadores deverão adotar ações permanentes de prevenção de riscos e fornecer gratuitamente equipamentos de proteção individual, em perfeito estado de conservação e funcionamento, sem afastar a obrigação de aplicar medidas coletivas de controle.",
-      "O texto prevê a obrigatoriedade de adequações ergonômicas nos locais de trabalho. Entre as exigências estão:",
-      "Os estabelecimentos também deverão promover:",
-      "O projeto assegura ainda aos trabalhadores o direito à realização dos exames ocupacionais previstos na legislação trabalhista.",
-      "De acordo com Marcos Tavares, a legislação precisa se adequar às características do setor, que reúne milhões de funcionários sujeitos a fatores de risco como ruído, poeira de fibras e esforço repetitivo.",
-      "“A proposta contribui para a redução do adoecimento, o aumento da produtividade, a valorização dos profissionais e a construção de ambientes mais seguros, saudáveis e compatíveis com os princípios constitucionais da proteção ao trabalhador\", diz o parlamentar.",
-      "A fiscalização do cumprimento das normas seguirá os procedimentos habituais da inspeção do trabalho.",
-      "O descumprimento das regras sujeitará os infratores às penalidades previstas na CLT, além de eventuais sanções civis, administrativas e penais.",
-      "A proposta será analisada, em caráter conclusivo , pelas seguintes comissões:",
-      "Para virar lei, o texto precisa ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1799001",
@@ -1670,7 +1126,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Vôlei",
       "Esportes",
       "Brasil"
-    ]
+    ],
+    "content": []
   },
   {
     "id": "ibge-48339",
@@ -1692,7 +1149,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Notícia",
       "Brasil",
       "Estatísticas"
-    ]
+    ],
+    "content": []
   },
   {
     "id": "ibge-48336",
@@ -1714,7 +1172,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Notícia",
       "Brasil",
       "Estatísticas"
-    ]
+    ],
+    "content": []
   },
   {
     "id": "ibge-48325",
@@ -1736,7 +1195,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Notícia",
       "Brasil",
       "Estatísticas"
-    ]
+    ],
+    "content": []
   },
   {
     "id": "bcb-21280-bc-passa-a-divulgar-mensalment",
@@ -1758,14 +1218,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Economia",
       "Política Monetária"
     ],
-    "content": [
-      "Os reajustes salariais negociados por meio das convenções coletivas de trabalho passaram a contar com um novo conjunto de indicadores divulgados mensalmente pelo Banco Central (BC). Construídas a partir das informações registradas no Sistema de Negociações Coletivas de Trabalho (Mediador), do Ministério do Trabalho e Emprego, as séries ampliam o monitoramento das condições do mercado de trabalho e de sua relação com a dinâmica inflacionária. As informações estão em um boxe do Relatório de Política Monetária de setembro de 2026 e na Nota técnica 60​ , ambos disponíveis no site do BC.",
-      "​Os indicadores reúnem informações sobre reajustes nominais e reais, participação das convenções com aumentos acima, abaixo ou iguais à inflação e quantidade de instrumentos coletivos utilizados nos cálculos.",
-      "“Os indicadores construídos a partir das convenções coletivas oferecem uma visão abrangente dos reajustes negociados no setor privado formal. Os resultados mostram que a inflação passada continua sendo uma referência importante nas negociações e ajudam a avaliar como as condições do mercado de trabalho influenciam a dinâmica salarial no país”, afirmou Ricardo Sabbadini, Chefe do Departamento Econômico (Depec) do BC.",
-      "A nova base permite acompanhar com maior precisão o comportamento das negociações salariais no setor privado formal. De acordo com estudo do BC, publicado como boxe do Relatório de Política Monetária de setembro de 2026, os reajustes pactuados apresentam elevada aderência à inflação passada, medida pelo Índice Nacional de Preços ao Consumidor (INPC). Embora não exista obrigação legal de reposição integral da inflação, os dados indicam que a variação dos preços continua sendo uma referência central para empregadores e trabalhadores durante as negociações coletivas.",
-      "A análise também evidencia que os resultados das negociações variam conforme as condições do mercado de trabalho. Entre 2012 e 2014 e novamente após 2023, períodos marcados por taxas de desocupação relativamente baixas, aumentou a participação de convenções com reajustes superiores à inflação. Os dados permitem ainda acompanhar potenciais diferenças entre setores econômicos. De forma geral, agropecuária, indústria, construção, comércio e serviços apresentaram trajetórias semelhantes ao longo do período analisado.",
-      "A divulgação regular dessas estatísticas amplia o conjunto de informações disponíveis para a análise do mercado de trabalho e de seus reflexos sobre a inflação, oferecendo à sociedade uma nova ferramenta para acompanhar a evolução dos salários negociados no país."
-    ]
+    "content": []
   },
   {
     "id": "eleicoes-2026-mapa-regional-votacao",
@@ -1785,13 +1238,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Geopolítica",
       "Regiões"
     ],
-    "content": [
-      "O mapeamento regional dos dados consolidados pelo Tribunal Superior Eleitoral revela uma nítida clivagem geográfica no comportamento do eleitorado brasileiro no primeiro turno das eleições presidenciais de 2026.",
-      "O candidato Flávio Bolsonaro (PL) consolidou ampla vantagem em três macrorregiões do país: Sul, Sudeste e Centro-Oeste, vencendo em 14 unidades federativas além do Distrito Federal. Os maiores colégios eleitorais do país — São Paulo, Minas Gerais e Rio de Janeiro — registraram vitória do candidato liberal.",
-      "Por sua vez, o presidente Luiz Inácio Lula da Silva (PT) garantiu expressiva liderança em todos os nove estados da Região Nordeste, mantendo a tradicional força histórica da legenda no semiárido e capitais nordestinas, além de alcançar a vitória em quatro estados da Região Norte.",
-      "A análise dos municípios com mais de 200 mil eleitores aponta forte polarização nas regiões metropolitanas, com alta densidade de comparecimento e redução expressiva na margem de votos destinados às candidaturas de terceira via.",
-      "Para o segundo turno, os comandos de campanha concentram as atenções nas capitais do Sudeste e nos estados de transição demográfica, onde a transferência de votos dos candidatos eliminados e o resgate de abstenções serão determinantes para o resultado final."
-    ]
+    "content": []
   },
   {
     "id": "bcb-21279-bc-moderniza-apresentacao-de-d",
@@ -1814,15 +1261,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Política Monetária",
       "Câmbio"
     ],
-    "content": [
-      "Com o objetivo de ampliar a transparência na divulgação de dados de atuação no mercado de câmbio​, o Banco Central (BC) passará a apresentar, na página de Política Cambial do seu site, o histórico de estoque e o cronograma de vencimentos das operações de Swap Cambial e de Linha com Recompra, dois dos instrumentos disponíveis para assegurar o regular funcionamento do mercado de câmbio. A medida não altera o formato de divulgação dos leilões de câmbio, somente reorganiza informações já presentes no Portal de Dados Abertos do BC, oferecendo ao público uma forma direta de visualização.",
-      "Clique para acessar a página de Política Cambial.​",
-      "O Swap Cambial funciona como uma proteção financeira no mercado futuro, trocando a rentabilidade em dólar pela taxa Selic, sem alterar as reservas internacionais. Já a Linha com Recompra fornece dólares físicos diretamente no mercado à vista com o compromisso de recomprá-los no futuro, restabelecendo temporariamente a liquidez em moeda estrangeira das reservas do país.",
-      "A iniciativa traz avanços no acesso e na visualização dos dados e das informações. Se antes os usuários contavam com a tabela de vencimentos do Swap Cambial, agora, a Linha com Recompra passa a ter um espelho de tabela equivalente. As duas modalidades ganham cronogramas atualizados e uma ferramenta gráfica com histórico de estoques de dez anos, permitindo baixar dados e imagens em diferentes formatos.",
-      "Como suporte a essa modernização, a autoridade monetária incorporou ao Sistema Gerenciador de Séries Temporais (SGS) três novas séries de dados diários. Trata-se do acompanhamento de estoque de Linhas com Recompra (código 29722), valor nocional de Swap Cambial (código 29723) e número de contratos de Swap Cambial (código 29724).",
-      "\"Ao consolidar e divulgar novas séries temporais relacionadas à Política Cambial, o BC simplifica o acesso à informação e reafirma seu compromisso com a transparência e a estabilidade econômica\", afirmou Nilton David, Diretor de Política Monetária.",
-      "Com a modernização na apresentação de dados sobre atuação no mercado de câmbio​, o BC assegura maior acessibilidade a estas informações, conferindo maior transparência na condução da política cambial."
-    ]
+    "content": []
   },
   {
     "id": "bcb-21278-pix-amplia-funcionalidades-e-r",
@@ -1844,17 +1283,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Economia",
       "Política Monetária"
     ],
-    "content": [
-      "O Banco Central aprovou uma nova rodada de atualizações no Regulamento do Pix com o objetivo de aperfeiçoar funcionalidades, fortalecer mecanismos de segurança e ajustar procedimentos operacionais à evolução do ecossistema de pagamentos instantâneos. As alterações foram consolidadas na Resolução BCB 587, publicada em 18 de setembro, e refletem demandas identificadas ao longo da operação do sistema e nas interações com participantes do mercado.",
-      "“As alterações aprovadas atualizam o Regulamento do Pix para acompanhar a evolução dos modelos de negócio e das necessidades dos usuários. As medidas ampliam possibilidades de uso e contribuem para que o arranjo continue oferecendo uma experiência simples, eficiente e confiável para toda a sociedade”, destacou Ricardo Teixeira Leite Mourão, Chefe do Departamento de Competição e de Estrutura do Mercado Financeiro (Decem) do BC.​",
-      "Nesse escopo, a ampliação das possibilidades de uso do Pix Automático está entre as principais novidades. A partir de 1º de julho de 2027, a funcionalidade poderá ser utilizada em contas-salário para a realização de pagamentos recorrentes autorizados pelo cliente. A medida alinha o produto às regras recentemente estabelecidas para débitos automáticos interbancários e amplia a conveniência para os usuários desse tipo de conta, preservadas as restrições já existentes para recebimento de recursos, transferências e outras modalidades de pagamento, por meio do Pix.",
-      "A norma também disciplina a chamada cobrança híbrida, modalidade que reúne em um mesmo documento o código de barras do boleto e o QR Code do Pix Cobrança. Embora essa solução já venha sendo utilizada por algumas instituições, o novo regulamento estabelece critérios específicos para garantir a convivência segura entre os dois instrumentos de pagamento e prevenir liquidações indevidas ou em duplicidade. Entre as medidas previstas estão regras para cancelamento automático do Pix Cobrança após o pagamento do boleto e vice-versa. Ou seja, quando o Pix Cobrança for pago, a instituição deve cancelar o boleto. Além disso, houve definição de responsabilidades para os participantes envolvidos na operação em caso de falhas operacionais.",
-      "Outro aperfeiçoamento permite que o BC dispense a participação obrigatória no Pix de determinadas instituições com mais de quinhentas mil contas transacionais ativas, quando características específicas de seus clientes ou modelos de negócio não justificarem o acesso à infraestrutura do arranjo. A medida busca conferir maior proporcionalidade regulatória sem comprometer a eficiência do sistema.",
-      "As mudanças contemplam ainda aprimoramentos nos processos de adesão e permanência de participantes. O regulamento passa a prever, por exemplo, anulação de aprovações obtidas com informações falsas ou omissões relevantes, novos procedimentos para instituições submetidas à liquidação extrajudicial, desligamento imediato de participantes que sofreram a penalidade de exclusão do arranjo e ajustes relacionados à saída ordenada de participantes. Também foram reforçadas exigências voltadas à transparência e à comunicação com os usuários.",
-      "No campo da segurança, a atualização incorpora mecanismos destinados a reforçar a confiabilidade do ecossistema. Entre as medidas adotadas destacam-se o aprimoramento dos procedimentos relacionados ao registro de marcações de fundada suspeita de fraude no Diretório de Identificadores de Contas Transacionais (DICT), a obrigatoriedade de comunicação ao usuário sobre realização de marcação, informando a data do registro e a possibilidade de revisão da medida, bem como a exigência de cancelamento da marcação quando, após análise, não subsistirem elementos que justifiquem a suspeita.",
-      "Assim, o participante que aceitar uma notificação de infração ou que registrar uma marcação de fundada suspeita de fraude passa a ser expressamente o responsável pela respectiva marcação, inclusive por seu eventual cancelamento.",
-      "As medidas se somam a outras iniciativas recentes do BC para fortalecer a integridade e a resiliência do Pix, diante do crescimento contínuo de sua utilização pela população e pelas empresas."
-    ]
+    "content": []
   },
   {
     "id": "eleicoes-2026-tse-apuracao-primeiro-turno",
@@ -1875,12 +1304,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Apuração",
       "Presidência"
     ],
-    "content": [
-      "O Tribunal Superior Eleitoral (TSE) concluiu oficialmente a totalização de 100% das urnas eletrônicas em todo o território nacional e no exterior, confirmando a realização de segundo turno entre os dois candidatos mais votados à Presidência da República.",
-      "Flávio Bolsonaro (PL) encerrou a apuração na liderança com 60.910.742 votos nominais, correspondendo a 48,63% dos sufrágios válidos. Luiz Inácio Lula da Silva (PT) obteve 54.898.347 votos nominais, totalizando 43,83% dos votos válidos, sacramentando a disputa final para o pleito de 25 de outubro.",
-      "Na sequência da totalização homologada pela Justiça Eleitoral, Aldo Cury obteve 4.020.155 votos (3,21%), seguido por Delegado Santos com 3.011.890 votos (2,41%), Ronaldo Caiado com 1.391.020 votos (1,11%) e Romeu Zema com 1.021.050 votos (0,81%).",
-      "O total de eleitores que compareceram às seções eleitorais alcançou 131.540.320 cidadãos. Os votos brancos somaram 2.842.100 (2,16%) e os votos nulos totalizaram 3.445.016 (2,62%), com abstenção oficial registrada de 18,34% do colégio eleitoral.",
-      "A equipe técnica da Corte Eleitoral reforçou a segurança, integridade e celeridade do processo eletrônico de votação, convocando todo o eleitorado a comparecer às urnas no próximo dia 25 de outubro para o exercício da soberania popular."
-    ]
+    "content": []
   }
 ];

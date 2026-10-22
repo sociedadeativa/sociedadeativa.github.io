@@ -1,11 +1,8 @@
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import { NewsItem } from "../types/news";
 import {
   fetchNewsItems,
   filterNewsItems,
-  normalizeNewsItem,
-  sortNewsItems,
-  deduplicateNewsItems,
 } from "../services/newsService";
 
 interface UseNewsOptions {
@@ -13,11 +10,10 @@ interface UseNewsOptions {
 }
 
 export function useNews(options?: UseNewsOptions) {
+  // Inicialização O(1) direta a partir dos dados pré-normalizados e ordenados
   const [articles, setArticles] = useState<NewsItem[]>(() => {
     if (options?.initialArticles && options.initialArticles.length > 0) {
-      return sortNewsItems(
-        deduplicateNewsItems(options.initialArticles.map((a, idx) => normalizeNewsItem(a, idx)))
-      );
+      return options.initialArticles;
     }
     return [];
   });
@@ -28,42 +24,33 @@ export function useNews(options?: UseNewsOptions) {
   const [selectedSource, setSelectedSource] = useState<string>("Todas");
   const [activeArticle, setActiveArticle] = useState<NewsItem | null>(null);
 
-  // Sincroniza sempre que a prop initialArticles mudar (ex: após o fetch do App.tsx)
+  // Sincroniza apenas se initialArticles for explicitamente alterado após a montagem inicial
+  const prevInitialRef = useRef(options?.initialArticles);
   useEffect(() => {
-    if (options?.initialArticles && options.initialArticles.length > 0) {
-      const incoming = sortNewsItems(
-        deduplicateNewsItems(options.initialArticles.map((a, idx) => normalizeNewsItem(a, idx)))
-      );
-      setArticles((prev) => {
-        if (
-          prev.length === incoming.length &&
-          prev[0]?.id === incoming[0]?.id &&
-          prev[0]?.publishedAt === incoming[0]?.publishedAt
-        ) {
-          return prev;
-        }
-        return incoming;
-      });
+    if (options?.initialArticles && options.initialArticles !== prevInitialRef.current) {
+      prevInitialRef.current = options.initialArticles;
+      setArticles(options.initialArticles);
     }
   }, [options?.initialArticles]);
 
-  const loadData = useCallback(async () => {
+  const loadData = useCallback(async (isRefresh = false) => {
     setLoading(true);
     setError(null);
     try {
-      const items = await fetchNewsItems();
+      const items = await fetchNewsItems(isRefresh);
       if (Array.isArray(items) && items.length > 0) {
         setArticles(items);
       }
     } catch (err: any) {
       setError(err?.message || "Não foi possível sincronizar as notícias da fonte oficial.");
+      // Preserva os artigos existentes em articles para evitar tela em branco
     } finally {
       setLoading(false);
     }
   }, []);
 
   useEffect(() => {
-    // Sincroniza sempre o acervo completo de artigos a partir de data/newsData.json
+    // Sincroniza o acervo completo de forma assíncrona sem bloquear a renderização inicial
     loadData();
   }, [loadData]);
 
@@ -96,6 +83,7 @@ export function useNews(options?: UseNewsOptions) {
     sources,
     activeArticle,
     setActiveArticle,
-    refreshNews: loadData,
+    refreshNews: () => loadData(true),
   };
 }
+

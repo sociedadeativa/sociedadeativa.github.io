@@ -221,7 +221,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         (a.category as string) === "Esportes" ||
         a.tags?.some((t) => ["Esportes", "Futebol"].includes(t))
     );
-    return sortNewsItems(deduplicateNewsItems(filtered));
+    return filtered;
   }, [articles]);
 
   return (

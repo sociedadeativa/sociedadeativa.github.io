@@ -1519,12 +1519,19 @@ async function main() {
     }
   }
 
-  // 8. Gravação do arquivo JSON e sincronização estrita com src/data/newsData.ts para paridade de dados
+  // 8. Gravação do arquivo JSON e sincronização com src/data/newsData.ts para bundle crítico otimizado
   const serialized = JSON.stringify(finalDataset, null, 2) + '\n';
   fs.writeFileSync(NEWS_DATA_PATH, serialized, 'utf8');
 
   const TS_NEWS_PATH = path.join(rootDir, 'src', 'data', 'newsData.ts');
-  const tsContent = `import { NewsItem, NewsCategory } from "../types/news";\n\nexport type { NewsItem, NewsCategory };\nexport type NewsArticle = NewsItem;\n\nexport const OFFICIAL_NEWS_ARTICLES: NewsItem[] = ${JSON.stringify(finalDataset, null, 2)};\n`;
+  // Mantém os primeiros artigos líderes com conteúdo completo para a dobra crítica inicial (LCP)
+  // e os demais com metadados essenciais pré-normalizados (content: []) para minimizar o JavaScript inicial
+  const criticalDataset = finalDataset.map((item, idx) => {
+    if (idx < 3) return item;
+    const { content, ...rest } = item;
+    return { ...rest, content: [] };
+  });
+  const tsContent = `import { NewsItem, NewsCategory } from "../types/news";\n\nexport type { NewsItem, NewsCategory };\nexport type NewsArticle = NewsItem;\n\nexport const OFFICIAL_NEWS_ARTICLES: NewsItem[] = ${JSON.stringify(criticalDataset, null, 2)};\n`;
   fs.writeFileSync(TS_NEWS_PATH, tsContent, 'utf8');
 
   // 9. Relatório de Execução Consolidado
