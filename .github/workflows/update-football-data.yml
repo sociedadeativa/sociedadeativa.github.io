@@ -1,0 +1,79 @@
+name: Update Official Football Serie A Data
+
+on:
+  schedule:
+    # Horário Oficial de Brasília (BRT = UTC-3):
+    # Agendamento conservador (2 execuções diárias = 4 requisições/dia, mantendo uso < 5% da cota gratuita de 100 req/dia):
+    # 09:00 UTC -> 06:00 BRT (consolidação matutina pós-rodada noturna)
+    # 21:00 UTC -> 18:00 BRT (acompanhamento de encerramento vespertino)
+    - cron: '0 9,21 * * *'
+  workflow_dispatch:
+    inputs:
+      season:
+        description: 'Temporada do Brasileirão Série A (ex: 2024, 2025, 2026)'
+        required: false
+        default: '2024'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "football-data-update"
+  cancel-in-progress: false
+
+jobs:
+  update-football-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Ingest and Validate Brasileirão Série A Data
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          FOOTBALL_SEASON: ${{ inputs.season || '2024' }}
+        run: node scripts/update-football-serie-a.mjs
+
+      - name: Validate Generated Dataset Integrity
+        run: |
+          if [ ! -s "public/data/footballSerieA.json" ]; then
+            echo "ERRO CRÍTICO: public/data/footballSerieA.json não foi gerado ou está vazio!"
+            exit 1
+          fi
+          node -e '
+            const fs = require("fs");
+            const data = JSON.parse(fs.readFileSync("public/data/footballSerieA.json", "utf8"));
+            if (!data.isReal || data.leagueId !== 71) {
+              console.error("Validação falhou: metadata da liga inválido");
+              process.exit(1);
+            }
+            if (!Array.isArray(data.standings) || data.standings.length < 20) {
+              console.error("Validação falhou: número de clubes na tabela da Série A inferior a 20");
+              process.exit(1);
+            }
+            console.log(`Validação aprovada: ${data.standings.length} clubes na tabela e ${data.matches.length} partidas registradas.`);
+          '
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/footballSerieA.json
+          if git diff --staged --quiet; then
+            echo "Nenhuma alteração detectada nos dados da Série A. Nada a comitar."
+          else
+            git commit -m "Automated: update Brasileirão Série A data [skip ci]"
+            git push origin main
+            echo "Dados do Brasileirão Série A sincronizados com sucesso."
+          fi

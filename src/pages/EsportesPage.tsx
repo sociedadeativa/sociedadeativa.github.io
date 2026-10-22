@@ -17,6 +17,7 @@ import {
   Info,
   Medal,
   ExternalLink,
+  RefreshCw,
 } from "lucide-react";
 import {
   DEMO_NOTICE,
@@ -30,12 +31,18 @@ import {
 
 interface EsportesPageProps {
   articles?: NewsItem[];
+  isLoading?: boolean;
+  error?: string | null;
   onOpenArticleDetails?: (article: NewsItem) => void;
+  onRetry?: () => void;
 }
 
 export const EsportesPage: React.FC<EsportesPageProps> = ({
   articles = [],
+  isLoading = false,
+  error = null,
   onOpenArticleDetails,
+  onRetry,
 }) => {
   const [selectedTournament, setSelectedTournament] = useState<string>("todos");
   const [matchStatusFilter, setMatchStatusFilter] = useState<"todos" | "ao_vivo" | "encerrado" | "proximos">("todos");
@@ -44,14 +51,37 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
   // Filtra e ordena cronologicamente notícias reais do dataset sobre esportes/futebol
   const realSportsArticles = useMemo(() => {
     if (!Array.isArray(articles)) return [];
-    const filtered = articles.filter(
-      (a) =>
-        (a.category as string) === "Esportes" ||
-        a.tags?.some((t) => ["Esportes", "Futebol", "Copa Libertadores", "Fluminense", "Palmeiras"].includes(t)) ||
-        a.title.toLowerCase().includes("libertadores") ||
-        a.title.toLowerCase().includes("fluminense") ||
-        a.title.toLowerCase().includes("futebol")
-    );
+    const filtered = articles.filter((a) => {
+      // 1. Categoria oficial Esportes
+      if ((a.category as string) === "Esportes") return true;
+
+      // 2. Tags esportivas
+      if (
+        a.tags?.some((t) =>
+          /esporte|futebol|libertadores|brasileirão|brasileirao|vôlei|volei|ginástica|ginastica|copa/i.test(t)
+        )
+      ) {
+        return true;
+      }
+
+      // 3. Termos esportivos no título ou resumo
+      const content = `${a.title || ""} ${a.summary || ""}`.toLowerCase();
+      if (
+        /esporte|futebol|libertadores|fluminense|palmeiras|flamengo|corinthians|brasileirão|brasileirao|vôlei|volei|ginástica|ginastica|mundial de ginástica|campeonato brasileiro/i.test(
+          content
+        )
+      ) {
+        return true;
+      }
+
+      // 4. URL canônica da editoria de esportes
+      if (a.articleUrl && a.articleUrl.toLowerCase().includes("/esportes/")) {
+        return true;
+      }
+
+      return false;
+    });
+
     return sortNewsItems(deduplicateNewsItems(filtered));
   }, [articles]);
 
@@ -363,8 +393,52 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                 </span>
               </div>
 
-              {/* Notícias Oficiais Apuradas do Acervo */}
-              {realSportsArticles.length > 0 ? (
+              {/* Estado 1: Carregamento */}
+              {isLoading && realSportsArticles.length === 0 ? (
+                <div className="mb-6 bg-slate-50 border border-slate-200 rounded-xl p-4 sm:p-5">
+                  <div className="flex items-center gap-2 pb-2.5 mb-3 border-b border-slate-200">
+                    <Radio className="w-4 h-4 text-emerald-700 animate-pulse" />
+                    <span className="text-xs font-bold text-slate-700">Carregando notícias oficiais de esportes...</span>
+                  </div>
+                  <div className="space-y-4">
+                    {[1, 2, 3].map((n) => (
+                      <div key={n} className="animate-pulse flex flex-col sm:flex-row gap-4">
+                        <div className="sm:w-44 sm:h-28 w-full h-36 bg-slate-200 rounded-xl shrink-0" />
+                        <div className="flex-1 space-y-2 py-1">
+                          <div className="h-4 bg-slate-200 rounded w-1/4" />
+                          <div className="h-5 bg-slate-200 rounded w-3/4" />
+                          <div className="h-3 bg-slate-200 rounded w-full" />
+                          <div className="h-3 bg-slate-200 rounded w-2/3" />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : error && realSportsArticles.length === 0 ? (
+                /* Estado 2: Falha na fonte oficial */
+                <div className="mb-6 rounded-xl border border-rose-200 bg-rose-50/70 p-5 text-center">
+                  <div className="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center mx-auto mb-2 text-rose-600">
+                    <AlertTriangle className="w-5 h-5" />
+                  </div>
+                  <h3 className="font-heading font-bold text-sm text-rose-950 mb-1">
+                    Falha ao carregar notícias esportivas
+                  </h3>
+                  <p className="text-xs text-rose-800 max-w-md mx-auto mb-3">
+                    {error || "Não foi possível obter as reportagens da fonte oficial no momento. Verifique sua conexão."}
+                  </p>
+                  {onRetry && (
+                    <button
+                      type="button"
+                      onClick={onRetry}
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-rose-700 hover:bg-rose-800 text-white text-xs font-bold transition-colors cursor-pointer shadow-2xs"
+                    >
+                      <RefreshCw className="w-3.5 h-3.5" />
+                      <span>Tentar novamente</span>
+                    </button>
+                  )}
+                </div>
+              ) : realSportsArticles.length > 0 ? (
+                /* Estado 3: Sucesso com Notícias Oficiais Apuradas do Acervo */
                 <div className="mb-6 bg-emerald-50/60 border border-emerald-200 rounded-xl p-4 sm:p-5">
                   <div className="flex items-center justify-between gap-2 pb-2.5 mb-3 border-b border-emerald-200/70">
                     <div className="flex items-center gap-2 text-xs font-bold text-emerald-900">
@@ -378,11 +452,26 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
 
                   <div className="space-y-4 divide-y divide-emerald-200/60">
                     {realSportsArticles.map((art, idx) => (
-                      <div
+                      <article
                         key={art.id}
-                        className={`flex flex-col sm:flex-row sm:items-center justify-between gap-4 ${idx > 0 ? "pt-4" : ""}`}
+                        className={`flex flex-col sm:flex-row items-start justify-between gap-4 ${idx > 0 ? "pt-4" : ""}`}
                       >
-                        <div className="flex-1">
+                        {/* Imagem Editorial Oficial (quando disponível) */}
+                        {art.imageUrl && (
+                          <div className="sm:w-44 sm:h-28 w-full h-44 rounded-xl overflow-hidden bg-slate-100 border border-slate-200/80 shrink-0 relative group">
+                            <img
+                              src={art.imageUrl}
+                              alt={art.imageAlt || art.title}
+                              loading="lazy"
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              onError={(e) => {
+                                (e.currentTarget.parentElement as HTMLElement).style.display = "none";
+                              }}
+                            />
+                          </div>
+                        )}
+
+                        <div className="flex-1 min-w-0">
                           <div className="flex flex-wrap items-center gap-2 mb-1.5">
                             <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100/80 px-2 py-0.5 rounded border border-emerald-200">
                               {art.category || "Esportes"}
@@ -394,6 +483,7 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                           </div>
                           <h3 className="font-heading font-black text-base text-slate-900 hover:text-emerald-700 transition-colors">
                             <button
+                              type="button"
                               onClick={() => onOpenArticleDetails && onOpenArticleDetails(art)}
                               className="text-left cursor-pointer hover:underline"
                             >
@@ -422,27 +512,41 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                           </div>
                         </div>
 
-                        <div className="shrink-0 flex sm:flex-col items-center sm:items-end gap-2">
+                        <div className="shrink-0 flex sm:flex-col items-center sm:items-end gap-2 self-end sm:self-center">
                           <button
+                            type="button"
                             onClick={() => onOpenArticleDetails && onOpenArticleDetails(art)}
-                            className="px-3.5 py-1.5 rounded-lg bg-emerald-700 text-white text-xs font-bold hover:bg-emerald-800 transition-colors cursor-pointer shadow-2xs"
+                            className="px-3.5 py-1.5 rounded-lg bg-emerald-700 text-white text-xs font-bold hover:bg-emerald-800 transition-colors cursor-pointer shadow-2xs whitespace-nowrap"
                           >
                             Ler Reportagem &rarr;
                           </button>
                         </div>
-                      </div>
+                      </article>
                     ))}
                   </div>
                 </div>
               ) : (
-                <div className="mb-6 rounded-xl border border-dashed border-slate-200 bg-slate-50/60 p-4 sm:p-5 text-center">
-                  <div className="flex items-center justify-center gap-2 text-xs font-bold text-slate-600 mb-1">
-                    <Radio className="w-4 h-4 text-slate-400" />
-                    <span>Nenhuma matéria oficial de esportes no momento</span>
+                /* Estado 4: Ausência de Notícias */
+                <div className="mb-6 rounded-xl border border-dashed border-slate-200 bg-slate-50/60 p-5 text-center">
+                  <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center mx-auto mb-2 text-slate-400">
+                    <Radio className="w-5 h-5" />
                   </div>
-                  <p className="text-xs text-slate-500 max-w-lg mx-auto">
+                  <h3 className="font-heading font-bold text-sm text-slate-800 mb-1">
+                    Nenhuma matéria oficial de esportes no momento
+                  </h3>
+                  <p className="text-xs text-slate-500 max-w-lg mx-auto mb-2">
                     Novas reportagens esportivas apuradas pela Agência Brasil e fontes públicas serão sincronizadas e listadas aqui automaticamente.
                   </p>
+                  {onRetry && (
+                    <button
+                      type="button"
+                      onClick={onRetry}
+                      className="mt-2 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold transition-colors cursor-pointer shadow-2xs"
+                    >
+                      <RefreshCw className="w-3.5 h-3.5" />
+                      <span>Verificar atualizações</span>
+                    </button>
+                  )}
                 </div>
               )}
 

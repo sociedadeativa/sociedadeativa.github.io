@@ -36,6 +36,12 @@ export function normalizeCategory(cat: string | undefined): NewsCategory {
   if (lower.includes("mundo") || lower.includes("internac") || lower.includes("global") || lower.includes("diploma")) {
     return "Mundo";
   }
+  if (lower.includes("esport") || lower.includes("futebol") || lower.includes("atlet") || lower.includes("campeonato")) {
+    return "Esportes";
+  }
+  if (lower.includes("tecnolog") || lower.includes("ciênc") || lower.includes("inova")) {
+    return "Tecnologia";
+  }
   if (lower.includes("polít") || lower.includes("polit")) {
     return "Política";
   }

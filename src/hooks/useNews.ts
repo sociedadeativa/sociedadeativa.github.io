@@ -22,6 +22,7 @@ export function useNews(options?: UseNewsOptions) {
     return [];
   });
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("Todas");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedSource, setSelectedSource] = useState<string>("Todas");
@@ -48,13 +49,14 @@ export function useNews(options?: UseNewsOptions) {
 
   const loadData = useCallback(async () => {
     setLoading(true);
+    setError(null);
     try {
       const items = await fetchNewsItems();
       if (Array.isArray(items) && items.length > 0) {
         setArticles(items);
       }
-    } catch {
-      // Falha silenciosa: mantém dados existentes
+    } catch (err: any) {
+      setError(err?.message || "Não foi possível sincronizar as notícias da fonte oficial.");
     } finally {
       setLoading(false);
     }
@@ -84,6 +86,7 @@ export function useNews(options?: UseNewsOptions) {
     articles,
     filteredArticles,
     loading,
+    error,
     selectedCategory,
     setSelectedCategory,
     searchQuery,

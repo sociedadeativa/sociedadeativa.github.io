@@ -44,7 +44,7 @@ export default function App() {
   const { currentRoute, articleId, goTo, goToArticle } = usePortalRoute();
 
   // Hooks de Dados (Notícias e Indicadores Econômicos Oficiais)
-  const { articles } = useNews({ initialArticles: OFFICIAL_NEWS_ARTICLES });
+  const { articles, loading: isNewsLoading, error: newsError, refreshNews } = useNews({ initialArticles: OFFICIAL_NEWS_ARTICLES });
   const { indicators } = useEconomy();
 
   // Atualização customizada via JSON do TSE
@@ -139,6 +139,9 @@ export default function App() {
         {currentRoute === "esportes" && (
           <EsportesPage
             articles={articles}
+            isLoading={isNewsLoading}
+            error={newsError}
+            onRetry={refreshNews}
             onOpenArticleDetails={(art) => goToArticle(art.id)}
           />
         )}
