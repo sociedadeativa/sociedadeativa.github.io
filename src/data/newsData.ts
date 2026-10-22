@@ -5,6 +5,219 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706251",
+    "title": "Mendonça diz que Flávio e Lula podem divulgar sigilos",
+    "summary": "O ministro André Mendonça, do Tribunal Superior Eleitoral (TSE), decidiu nesta quinta-feira (22) que as campanhas de Luiz Inácio Lula da Silva (PT) e Flávio Bolsonaro (PL) podem divulgar seus sigilos bancários, fiscal e telefônico, conforme acordo assinado entre os candidatos.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/mendonca-diz-que-flavio-e-lula-podem-divulgar-sigilos",
+    "publishedAt": "22/10/2026 às 18:53",
+    "category": "Justiça",
+    "ingestedAt": "22/10/2026 às 19:01",
+    "imageUrl": "https://imagens.ebc.com.br/Pkh0ccdLTbr4TlGANDhx23COeek=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/18/sem_titulo_1.jpg?itok=WGMsot7n",
+    "imageCaption": "Mendonça diz que Flávio e Lula podem divulgar sigilos",
+    "imageCredit": "André Richter - Repórter da Agência Brasil",
+    "imageAlt": "Mendonça diz que Flávio e Lula podem divulgar sigilos",
+    "author": "André Richter - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "André Mendonça",
+      "TSE",
+      "eleições 2026"
+    ],
+    "content": [
+      "O ministro André Mendonça, do Tribunal Superior Eleitoral (TSE), decidiu nesta quinta-feira (22) que as campanhas de Luiz Inácio Lula da Silva (PT) e Flávio Bolsonaro (PL) podem divulgar seus sigilos bancários, fiscal e telefônico, conforme acordo assinado entre os candidatos.",
+      "Na decisão, o ministro afirmou que não cabe interferência da Justiça Eleitoral no caso e que os próprios candidatos podem revelar seus dados ao público.",
+      "\"Ainda assim, para que não reste dúvida, reafirma-se que os candidatos e pessoas físicas e jurídicas a que se referiram estão autorizadas a divulgar, por ato próprio, como e quando entenderem pertinentes, os dados de que são titulares\", afirmou."
+    ]
+  },
+  {
+    "id": "ebc-1706248",
+    "title": "Caixa Loterias anuncia antecipação de sorteios para sábado",
+    "summary": "A Caixa Loterias anunciou a antecipação para sábado (24) dos sorteios previstos para o domingo (25), dia do segundo turno das eleições. Com isso, os apostadores terão até 20h de sábado para fazer seus jogos em concursos como Mega-Sena, Lotofácil, Quina, Milionária e Timemania.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/caixa-loterias-anuncia-antecipacao-de-sorteios-para-sabado",
+    "publishedAt": "22/10/2026 às 18:23",
+    "category": "Eleições",
+    "ingestedAt": "22/10/2026 às 19:01",
+    "imageUrl": "https://imagens.ebc.com.br/kctx9xttGhGHyxTGpZxaC7xDm2I=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/992441-df_30122015dsc_2978a-.jpg?itok=O5qw1M-W",
+    "imageCaption": "Caixa Loterias anuncia antecipação de sorteios para sábado",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Caixa Loterias anuncia antecipação de sorteios para sábado",
+    "author": "Agência Brasil",
+    "tags": [
+      "Geral",
+      "Mega-Sena",
+      "loterias",
+      "Caixa",
+      "sorteios"
+    ],
+    "content": [
+      "A Caixa Loterias anunciou a antecipação para sábado (24) dos sorteios previstos para o domingo (25), dia do segundo turno das eleições.",
+      "Com isso, os apostadores terão até 20h de sábado para fazer seus jogos em concursos como Mega-Sena, Lotofácil, Quina, Milionária e Timemania.",
+      "A venda de cotas de Bolão Caixa continuará disponível até as 20h45, exclusivamente pelo App Loterias Caixa e pelo portal Loterias Caixa .",
+      "O sorteio será feito no sábado, às 21h, com transmissão ao vivo pelos canais oficiais das Loterias Caixa.",
+      "No Bolão Caixa, o apostador pode comprar cotas de bolões organizados pelas lotéricas. As cotas também podem ser compradas no portal Loterias Caixa ou pelo App Loterias Caixa.",
+      "Há pagamento de tarifa de serviço adicional de 35% do valor da cota na compra pela internet. Para os bolões organizados pelas lotéricas, pode haver cobrança dessa tarifa até o limite de 35%.",
+      "Entre os dias 26 e 30 de outubro de 2026, acontecerá a Mega Semana da Mega Sena. A ação promoverá cinco sorteios consecutivos correspondentes aos concursos 3076, 3077, 3078, 3079 e 3080.",
+      "A modalidade, em caráter especial, terá sorteios de segunda a sexta-feira, substituindo o calendário regular de concursos, realizado às terças-feiras, quintas-feiras e domingos."
+    ]
+  },
+  {
+    "id": "ebc-1706247",
+    "title": "Brasil no Mundo, na TV Brasil, analisa protestos na Europa",
+    "summary": "A escalada dos protestos na França e em outros países europeus, em meio à insatisfação com o custo de vida, é um dos destaques do programa Brasil no Mundo desta quinta-feira (22), às 22h30, na TV Brasil .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-10/brasil-no-mundo-na-tv-brasil-analisa-protestos-na-europa",
+    "publishedAt": "22/10/2026 às 18:16",
+    "category": "Política",
+    "ingestedAt": "22/10/2026 às 19:01",
+    "imageUrl": "https://imagens.ebc.com.br/FZKNAWkJaW3jBDAud-R96jIpBV8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/26/brasil-no-mundo-2.jpg?itok=HC_5Lpj6",
+    "imageCaption": "Brasil no Mundo, na TV Brasil, analisa protestos na Europa",
+    "imageCredit": "EBC",
+    "imageAlt": "Brasil no Mundo, na TV Brasil, analisa protestos na Europa",
+    "author": "EBC",
+    "tags": [
+      "Cultura",
+      "TV Brasil",
+      "Brasil no mundo",
+      "EBC",
+      "Política"
+    ],
+    "content": [
+      "A escalada dos protestos na França e em outros países europeus, em meio à insatisfação com o custo de vida, é um dos destaques do programa Brasil no Mundo desta quinta-feira (22), às 22h30, na TV Brasil . Nesta edição, os jornalistas Cristina Serra, Jamil Chade e Yan Boechat recebem Eduardo Heleno, doutor em Ciência Política, jornalista e professor da Universidade Federal Fluminense (UFF), para analisar o cenário de mobilizações sociais e seus desdobramentos políticos e econômicos.",
+      "O programa também discute os impactos das guerras no Oriente Médio e na Ucrânia sobre a economia internacional, além das pressões do presidente dos Estados Unidos, Donald Trump, sobre o governo ucraniano. Outro tema é o agravamento das tensões entre os Houthis e a Arábia Saudita pelo controle de rotas estratégicas na região.",
+      "A edição aborda ainda as eleições parlamentares em Israel e seus possíveis desdobramentos para o cenário político do país e para as relações internacionais.",
+      "O Brasil no Mundo se dedica a discutir, com profundidade e clareza, os grandes acontecimentos internacionais que moldam a política, a economia e a vida cotidiana. Conduzido por Cristina Serra, Jamil Chade e Yan Boechat, o programa combina análises de contexto, explicações acessíveis e entrevistas com especialistas que ajudam a compreender os reflexos do cenário global no Brasil.",
+      "Cristina Serra atua como jornalista há cerca de 40 anos, tendo trabalhado na Globo por 26 anos, inclusive como correspondente em Nova York. O jornalista Jamil Chade trabalha há duas décadas como correspondente de diversos veículos na sede europeia da Organização das Nações Unidas, em Genebra, período em que contribuiu com BBC , CNN , Guardian e veículos brasileiros. Yan Boechat cobre conflitos internacionais há 20 anos para diversos veículos, como Folha de S.Paulo e O Estado de S. Paulo . Também realizou reportagens na África, no Oriente Médio, na Rússia e na América Latina.",
+      "A atração já recebeu personalidades como a ministra Marina Silva; o embaixador André Corrêa do Lago, presidente da COP30; o geógrafo Elias Jabbour; e a economista Juliana Furno.",
+      "Acompanhe a programação da TV Brasil pelo canal aberto, TV por assinatura e parabólica. Sintonize: https://tvbrasil.ebc.com.br/comosintonizar.",
+      "Seus programas favoritos estão no TV Brasil Play , pelo site http://tvbrasilplay.com.br ou pelo aplicativo no smartphone. O app pode ser baixado gratuitamente e está disponível para Android e iOS. Assista também pela WebTV: https://tvbrasil.ebc.com.br/webtv.",
+      "Brasil no Mundo – quinta-feira (22), às 22h30, na TV Brasil",
+      "TV Brasil na internet e nas redes sociais"
+    ]
+  },
+  {
+    "id": "ebc-1706246",
+    "title": "Previsão de superávit no Orçamento de 2027 está mantida, diz Durigan",
+    "summary": "A previsão de superávit primário no Orçamento de 2027 está mantida, mesmo após o anúncio recente de medidas com impacto nas contas públicas, disse nesta quinta-feira (22) o ministro da Fazenda, Dario Durigan.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/previsao-de-superavit-no-orcamento-de-2027-esta-mantida-diz-durigan",
+    "publishedAt": "22/10/2026 às 17:59",
+    "category": "Economia",
+    "ingestedAt": "22/10/2026 às 19:01",
+    "imageUrl": "https://imagens.ebc.com.br/nr8-BvDXcHmbGQHTKtRy4mTd24g=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/05/21/55284099217_86d7fe9192_o.jpg?itok=k5HXbOam",
+    "imageCaption": "Previsão de superávit no Orçamento de 2027 está mantida, diz Durigan",
+    "imageCredit": "Wellton Máximo - Repórter da Agência Brasil",
+    "imageAlt": "Previsão de superávit no Orçamento de 2027 está mantida, diz Durigan",
+    "author": "Wellton Máximo - Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "Ministério da Fazenda",
+      "Dario Durigan",
+      "Orçamento de 2027",
+      "Superávit Primário"
+    ],
+    "content": []
+  },
+  {
+    "id": "camara-1307916-projeto-padroniza-termos-sobre",
+    "title": "Projeto padroniza termos sobre saúde da mulher e maternidade em documentos federais",
+    "summary": "A Câmara dos Deputados discute o assunto.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1307916-projeto-padroniza-termos-sobre-saude-da-mulher-e-maternidade-em-documentos-federais",
+    "publishedAt": "22/10/2026 às 17:23",
+    "category": "Congresso",
+    "ingestedAt": "22/10/2026 às 19:01",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260901150237150-768x473.jpeg",
+    "imageCaption": "Capitão Alden, autor do projeto",
+    "imageCredit": "Renato Araújo / Câmara dos Deputados",
+    "imageAlt": "Votação de requerimentos. Dep. Capitão Alden (PL - BA)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706244",
+    "title": "Indígenas do Vale do Javari terão transporte gratuito no 2º turno",
+    "summary": "O Tribunal Regional Eleitoral do Amazonas (TRE-AM) informou nesta quinta-feira (22) que os representantes da Terra Indígena Vale do Javari confirmaram a regularização do transporte gratuito dos eleitores, bem como o necessário apoio logístico à operação, no próximo domingo.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/indigenas-do-vale-do-javari-terao-transporte-gratuito-no-2o-turno",
+    "publishedAt": "22/10/2026 às 17:14",
+    "category": "Justiça",
+    "ingestedAt": "22/10/2026 às 19:01",
+    "imageUrl": "https://imagens.ebc.com.br/yCGUUuUo4E7KeOuPT4vLRO44XIY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/porto-atalaia-do-norte_mcamgo_abr_280220231818-2.jpg?itok=qOBvS5ZA",
+    "imageCaption": "Indígenas do Vale do Javari terão transporte gratuito no 2º turno",
+    "imageCredit": "Agência Brasil *",
+    "imageAlt": "Indígenas do Vale do Javari terão transporte gratuito no 2º turno",
+    "author": "Agência Brasil *",
+    "tags": [
+      "Justiça",
+      "eleições 2026",
+      "Vale do Javari",
+      "transporte de eleitores",
+      "TRE-AM"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706242",
+    "title": "Prêmio TV Brasil Petrobras Para Elas: as 3 melhores laterais-direitas",
+    "summary": "O chamado \"Trio de Ferro Paulistano\" domina as finalistas do Prêmio TV Brasil Petrobras Para Elas na categoria Melhor Lateral-Direita. Os nomes revelados nesta quinta-feira (22) são Bruna Calderan (São Paulo), Gi Fernandes (Corinthians) e Fe Palermo (Palmeiras).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/premio-tv-brasil-petrobras-para-elas-3-melhores-laterais-direitas",
+    "publishedAt": "22/10/2026 às 17:10",
+    "category": "Esportes",
+    "ingestedAt": "22/10/2026 às 19:01",
+    "imageUrl": "https://imagens.ebc.com.br/fWvS7N374xPFywlCJrBOvtrvgVw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/22/foto-montagem-categoria-lateral-direita.png?itok=8TaC3eM3",
+    "imageCaption": "Prêmio TV Brasil Petrobras Para Elas: as 3 melhores laterais-direitas",
+    "imageCredit": "Lincoln Chaves - Repórter da EBC",
+    "imageAlt": "Prêmio TV Brasil Petrobras Para Elas: as 3 melhores laterais-direitas",
+    "author": "Lincoln Chaves - Repórter da EBC",
+    "tags": [
+      "Esportes",
+      "finalistas",
+      "zagueira",
+      "categoria",
+      "Bruna Calderan"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706236",
+    "title": "Presidente do TSE pede à Meta relatório sobre canal Exército do Lula",
+    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, concedeu nesta quinta-feira (22) prazo de 24 horas para Meta apresentar um relatório técnico sobre o funcionamento do canal Exército do Lula , criado no WhatsApp para postagens de apoios.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/presidente-do-tse-pede-meta-relatorio-sobre-canal-exercito-do-lula",
+    "publishedAt": "22/10/2026 às 16:25",
+    "category": "Justiça",
+    "ingestedAt": "22/10/2026 às 19:01",
+    "imageUrl": "https://imagens.ebc.com.br/r4K2hTJm7BEurjcd3uwMzMZd6R0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/13/img_1837_copy.jpg?itok=6xow0WAs",
+    "imageCaption": "Presidente do TSE pede à Meta relatório sobre canal Exército do Lula",
+    "imageCredit": "André Richter - Repórter da Agência Brasil",
+    "imageAlt": "Presidente do TSE pede à Meta relatório sobre canal Exército do Lula",
+    "author": "André Richter - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "eleições 2026",
+      "TSE",
+      "Kassio Nunes Marques",
+      "Exército do Lula"
+    ],
+    "content": []
+  },
+  {
     "id": "camara-1310139-proposta-cria-marco-legal-para",
     "title": "Proposta cria marco legal para o Programa de Garantia de Preços para a Agricultura Familiar",
     "summary": "Projeto transforma regras atuais em lei e estabelece critérios de desconto em financiamentos do Pronaf quando o preço de mercado cair.",
@@ -24,21 +237,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Pablo Valadares/Câmara dos Deputados",
-      "Deputado Pezenti: proposição busca fortalecer o programa por meio de base legal específica",
-      "O Projeto de Lei 3039/26 institui em lei federal o Programa de Garantia de Preços para a Agricultura Familiar (PGPAF). A medida visa proteger a renda dos produtores rurais enquadrados no Programa Nacional de Fortalecimento da Agricultura Familiar (Pronaf) e assegurar a sustentabilidade econômica da produção no campo.",
-      "Criado originalmente e regulamentado pelo Decreto 5.996/06 , o programa garante aos agricultores um bônus de desconto no pagamento de financiamentos rurais de custeio ou investimento. O desconto é concedido quando o preço de venda do produto no mercado fica abaixo do preço de garantia fixado para a cultura.",
-      "“A proposição busca fortalecer o PGPAF por meio de base legal específica, conferindo-lhe maior segurança jurídica, estabilidade institucional e legitimidade democrática”, explica o autor do projeto, deputado Pezenti (MDB-SC).",
-      "Conforme o texto, o preço de garantia de cada produto será calculado com base no seu custo variável de produção, podendo variar em até 10% para mais ou para menos, sem ficar abaixo do preço mínimo oficial definido pelo governo federal.",
-      "Uma das novidades da proposta é permitir que o comitê gestor do programa defina valores mínimos de bônus por hectare financiado, variando conforme o produto e a modalidade de crédito. Segundo Pezenti, essa medida corrige uma limitação do modelo atual, que aplica limites por CPF sem considerar o tamanho da área cultivada.",
-      "“O PGPAF consolidou-se, ao longo de quase duas décadas, como um dos mais relevantes instrumentos de proteção de renda da agricultura familiar brasileira”, reforça o autor. Ele acrescenta que o projeto transforma o programa em “um instrumento mais moderno, eficiente e alinhado às melhores práticas de política agrícola”.",
-      "A Companhia Nacional de Abastecimento (Conab) prestará apoio técnico no levantamento dos custos de produção e na apuração dos preços de mercado. As regras operacionais e limites de desconto caberão ao Conselho Monetário Nacional (CMN).",
-      "A concessão do bônus será condicionada à disponibilidade orçamentária da União. Em caso de insuficiência de recursos, terão prioridade no atendimento os agricultores de menor renda, as regiões de maior vulnerabilidade socioeconômica e os cultivos essenciais à segurança alimentar.",
-      "O projeto tramita em caráter conclusivo e será analisado pelas seguintes comissões da Câmara:",
-      "Para virar lei, o texto precisa ser aprovado pelos deputados e pelos senadores.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "camara-1310222-projeto-exige-que-hospitais-di",
@@ -60,17 +259,31 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Bruno Spada/Câmara dos Deputados",
-      "Deputado Ribeiro Neto, autor do projeto",
-      "O Projeto de Lei 1432/26 torna obrigatória a afixação de informações sobre canais oficiais de denúncia de violência, maus-tratos e abandono de pessoas idosas em estabelecimentos de saúde públicos e privados.",
-      "O texto está em análise na Câmara dos Deputados. O material deverá apresentar os principais canais de denúncia (telefônicos e digitais), orientações para registro de queixas e mensagens de conscientização sobre a proteção da pessoa idosa.",
-      "Os avisos deverão ser instalados em locais visíveis e de grande circulação, como recepções, salas de espera e áreas de atendimento. O descumprimento sujeitará a unidade de saúde a sanções administrativas previstas em regulamento.",
-      "O projeto busca estimular as denúncias, ampliar a conscientização e fortalecer a rede de proteção à pessoa idosa. Para o autor, deputado Ribeiro Neto (Solidariedade-MA), os serviços de saúde têm papel estratégico no enfrentamento ao problema.",
-      "“A violência contra a pessoa idosa, incluindo o abandono e os maus-tratos, constitui grave violação de direitos humanos, frequentemente invisibilizada pela subnotificação”, escreveu o parlamentar na justificativa da proposta.",
-      "O projeto será analisado em caráter conclusivo pelas comissões de Saúde; de Defesa dos Direitos da Pessoa Idosa; e de Constituição e Justiça e de Cidadania. Para virar lei, terá de ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
+  },
+  {
+    "id": "ebc-1706234",
+    "title": "Polícia Civil investiga distribuidora de bebidas em Guarulhos (SP)",
+    "summary": "Policiais civis de São Paulo cumpriram nesta quinta-feira (22) um mandado de busca e apreensão, em Guarulhos, contra uma distribuidora de bebidas suspeita de fornecimento de produtos falsificados.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/policia-civil-investiga-distribuidora-de-bebidas-em-guarulhos-sp",
+    "publishedAt": "22/10/2026 às 16:13",
+    "category": "Política",
+    "ingestedAt": "22/10/2026 às 19:01",
+    "imageUrl": "https://imagens.ebc.com.br/rBUb5izX-G02gYeeHIjRUhtayPg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/07/31/policia-civil-sao-paulo.jpg?itok=iY96SZr2",
+    "imageCaption": "Polícia Civil investiga distribuidora de bebidas em Guarulhos (SP)",
+    "imageCredit": "Matheus Crobelatti*",
+    "imageAlt": "Polícia Civil investiga distribuidora de bebidas em Guarulhos (SP)",
+    "author": "Matheus Crobelatti*",
+    "tags": [
+      "Geral",
+      "polícia civil",
+      "São Paulo",
+      "Guarulhos",
+      "Política"
+    ],
+    "content": []
   },
   {
     "id": "camara-1313178-projeto-de-lei-amplia-oferta-d",
@@ -92,19 +305,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Kayo Magalhães / Câmara dos Deputados",
-      "Cabo Gilberto Silva: aumento da expectativa de vida impõe novos desafios à saúde pública",
-      "O Projeto de Lei 3779/26, em análise na Câmara dos Deputados, altera o Estatuto da Pessoa Idosa para estabelecer diretrizes voltadas ao fortalecimento da assistência geriátrica no Sistema Único de Saúde (SUS). Regiões com menor oferta de médicos terão prioridade.",
-      "Pelo texto, o poder público:",
-      "A proposta, de autoria do deputado Cabo Gilberto Silva (PL-PB), prevê ainda o apoio técnico e financeiro da União a estados, Distrito Federal e municípios para expandir o atendimento especializado.",
-      "Outra medida é o fortalecimento da integração entre a atenção primária à saúde e a atenção especializada, com o objetivo de assegurar o acesso das pessoas idosas ao médico geriatra.",
-      "Cabo Gilberto Silva especifica que as diretrizes não criam direito individual ao atendimento exclusivo por médico geriatra nem alteram a organização administrativa do SUS, atuando como um balizador legal para ações permanentes do Estado.",
-      "“ O crescimento contínuo da população idosa impõe novos desafios à organização da rede pública de saúde”, justifica o parlamentar. “A medida contribui para reduzir desigualdades regionais e promover atendimento mais qualificado.”",
-      "O projeto será analisado, em caráter conclusivo , pelas seguintes comissões:",
-      "Para virar lei, o texto precisa ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706230",
@@ -147,9 +348,9 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "author": "Alex Rodrigues – Repórter da Agência Brasil",
     "tags": [
       "Política",
-      "transporte público",
-      "mobilidade urbana",
-      "segundo turno",
+      "Transporte Público",
+      "Mobilidade Urbana",
+      "Segundo Turno",
       "eleições 2026"
     ],
     "content": []
@@ -871,197 +1072,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "content": []
   },
   {
-    "id": "ebc-1706156",
-    "title": "Governo francês anuncia proibição de protestos considerados ilegítimos",
-    "summary": "O presidente francês, Emmanuel Macron, anunciou nesta quinta-feira (22) a proibição, nos próximos dias, de ações de protesto avaliadas como “ilegítimas”. O anúncio foi feito após reunião com representantes dos serviços de informações e ministros.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/presidente-anuncia-proibicao-de-protestos-ilegitimos",
-    "publishedAt": "22/10/2026 às 08:32",
-    "category": "Governo",
-    "ingestedAt": "22/10/2026 às 11:29",
-    "imageUrl": "https://imagens.ebc.com.br/bT6sF2P2wCUTfyQfjFIPtAt3fOw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/21/2026-10-21t100728z_1180730329_rc2l7oajms37_rtrmadp_3_gulf-france-qatar.jpg?itok=wHUnNaY4",
-    "imageCaption": "Governo francês anuncia proibição de protestos considerados ilegítimos",
-    "imageCredit": "RTP*",
-    "imageAlt": "Governo francês anuncia proibição de protestos considerados ilegítimos",
-    "author": "RTP*",
-    "tags": [
-      "Internacional",
-      "França",
-      "Emmanuel Macron",
-      "protestos ilegítimos",
-      "proibição"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706152",
-    "title": "Chuvas: Defesa Civil decreta situação de emergência em cidades do Sul",
-    "summary": "A Secretaria Nacional de Proteção e Defesa Civil reconheceu nesta quinta-feira (22) situação de emergência em sete municípios atingidos por tempestades na Região Sul .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/chuvas-defesa-civil-decreta-situacao-de-emergencia-em-cidades-do-sul",
-    "publishedAt": "22/10/2026 às 08:30",
-    "category": "Política",
-    "ingestedAt": "22/10/2026 às 11:29",
-    "imageUrl": "https://imagens.ebc.com.br/PLWE5wUVKwH45cyYn8YCk_5aRIg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/22/whatsappimage20260921at11.00.131789999303484_foto.jpeg?itok=WNGHpNnI",
-    "imageCaption": "Chuvas: Defesa Civil decreta situação de emergência em cidades do Sul",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Chuvas: Defesa Civil decreta situação de emergência em cidades do Sul",
-    "author": "Agência Brasil",
-    "tags": [
-      "Geral",
-      "meteorologia",
-      "Defesa Civil",
-      "tempestades",
-      "diário oficial"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1705977",
-    "title": "Eleitores do ES definem disputa para governo entre Ferraço e Pazolini",
-    "summary": "Neste domingo (25), os 2,9 milhões de eleitores do Espírito Santo retornam às urnas para votar para governador . Disputam o cargo Lorenzo Pazolini (Republicanos) e Ricardo Ferraço (MDB). Espírito Santo terá 2º turno entre Lorenzo Pazolini e Ricardo Ferraço.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitores-do-es-definem-disputa-para-governo-entre-ferraco-e-pazolini",
-    "publishedAt": "22/10/2026 às 08:00",
-    "category": "Eleições",
-    "ingestedAt": "22/10/2026 às 09:03",
-    "imageUrl": "https://imagens.ebc.com.br/koT-umKNKL2PJAxJdl5eOYXm_yA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/governoes.jpg?itok=HN2zMkO0",
-    "imageCaption": "Eleitores do ES definem disputa para governo entre Ferraço e Pazolini",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Eleitores do ES definem disputa para governo entre Ferraço e Pazolini",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "2 turno",
-      "governador",
-      "Espírito Santo"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1705979",
-    "title": "RN: eleitores vão escolher entre Allyson e Cadu de Lula para governo",
-    "summary": "Os 2,6 milhões de eleitores do Rio Grande do Norte retornam às urnas neste domingo (25) para escolher o novo governador . Disputam o cargo Allyson Bezerra (União) e Cadu de Lula (PT). Allyson e Cadu de Lula vão disputar o 2º turno para governador do RN .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/rn-eleitores-vao-escolher-entre-allyson-e-cadu-de-lula-para-governo",
-    "publishedAt": "22/10/2026 às 08:00",
-    "category": "Eleições",
-    "ingestedAt": "22/10/2026 às 09:03",
-    "imageUrl": "https://imagens.ebc.com.br/8ySOBVLC5jGFR9ZVkfTHUjPDPiI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/governorn.jpg?itok=3SHKT8aW",
-    "imageCaption": "RN: eleitores vão escolher entre Allyson e Cadu de Lula para governo",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "RN: eleitores vão escolher entre Allyson e Cadu de Lula para governo",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "2 Turno",
-      "governador",
-      "Rio Grande do Norte"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1705980",
-    "title": "TO: eleitores escolherão entre Professora Dorinha e Vicentinho Júnior",
-    "summary": "Neste domingo (25), os 1.182. 307 eleitores do Tocantins retornam às urnas para escolher o novo governador . Disputam o cargo Professora Dorinha (União) e Vicentinho Júnior (PSDB). Dorinha e Vicentinho Junior vão disputar o 2° turno no Tocantins.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitores-escolherao-entre-professora-dorinha-e-vicentinho-junior",
-    "publishedAt": "22/10/2026 às 08:00",
-    "category": "Eleições",
-    "ingestedAt": "22/10/2026 às 09:03",
-    "imageUrl": "https://imagens.ebc.com.br/Dw15ZfvhlPtzNefTpeYbBX5xVD0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/govtoc.jpg?itok=lw1X3n-0",
-    "imageCaption": "TO: eleitores escolherão entre Professora Dorinha e Vicentinho Júnior",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "TO: eleitores escolherão entre Professora Dorinha e Vicentinho Júnior",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "2 turno",
-      "governador",
-      "Tocantins"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706151",
-    "title": "Papa não precisará de mais tratamento contra o câncer, dizem médicos",
-    "summary": "O papa Leão XIV não precisará de mais nenhum tratamento após ter sido submetido a uma cirurgia de câncer de pulmão na semana passada. A informação foi dada por seus médicos nessa quarta-feira (21), indicando que o tumor não havia se espalhado.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/papa-nao-precisara-de-mais-tratamento-contra-o-cancer-dizem-medicos",
-    "publishedAt": "22/10/2026 às 07:28",
-    "category": "Política",
-    "ingestedAt": "22/10/2026 às 09:03",
-    "imageUrl": "https://imagens.ebc.com.br/2TASVOvW0Wn0yp20IX_IZbcx_4U=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/13/2026-10-13t180543z_1_lynxmpem9c1p8_rtroptp_4_pope-health.jpg?itok=RQIIQCIO",
-    "imageCaption": "Papa não precisará de mais tratamento contra o câncer, dizem médicos",
-    "imageCredit": "Alvise Armellini - Repórter da Reuters*",
-    "imageAlt": "Papa não precisará de mais tratamento contra o câncer, dizem médicos",
-    "author": "Alvise Armellini - Repórter da Reuters*",
-    "tags": [
-      "Internacional",
-      "Papa Leão XIV",
-      "Recuperação",
-      "Cirurgia",
-      "Câncer"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706150",
-    "title": "Rádio MEC transmite ao vivo concerto da Orquestra Filarmônica de Goiás",
-    "summary": "O novo concerto da temporada 2026 da Orquestra Filarmônica de Goiás é atração da Rádio MEC nesta quinta-feira (22), ao vivo, às 20h.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-10/radio-mec-transmite-ao-vivo-concerto-da-orquestra-filarmonica-de-goias",
-    "publishedAt": "22/10/2026 às 07:02",
-    "category": "Política",
-    "ingestedAt": "22/10/2026 às 09:03",
-    "imageUrl": "https://imagens.ebc.com.br/GiZ00HTV5vBA7m6gOjFNQIgRDVo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/12/orquestra_filarmonica_de_goias_-_divulgacao_-_radio_mec_1.jpg?itok=GGpXcopA",
-    "imageCaption": "Rádio MEC transmite ao vivo concerto da Orquestra Filarmônica de Goiás",
-    "imageCredit": "Rádio MEC",
-    "imageAlt": "Rádio MEC transmite ao vivo concerto da Orquestra Filarmônica de Goiás",
-    "author": "Rádio MEC",
-    "tags": [
-      "Cultura",
-      "Rádio MEC",
-      "Concerto",
-      "Política"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706149",
-    "title": "Flávio faz campanha em São Paulo; Lula teve ato em Belo Horizonte",
-    "summary": "Os candidatos a presidente cumpriram agenda de campanha nesta quarta-feira (21) em Belo Horizonte, Fortaleza e São Paulo. O candidato Flávio Bolsonaro (PL) participou de um evento em Guarulhos (SP) pela manhã ao lado do governador Tarcísio de Freitas (Republicanos).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/flavio-faz-campanha-em-sao-paulo-lula-teve-ato-em-belo-horizonte",
-    "publishedAt": "21/10/2026 às 22:45",
-    "category": "Eleições",
-    "ingestedAt": "22/10/2026 às 06:29",
-    "imageUrl": "https://imagens.ebc.com.br/Qjn25j4kWuBB0OOSqVFyv-s7K54=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/18/banner_agenda_-_1170x700.png?itok=KJR_nOUL",
-    "imageCaption": "Flávio faz campanha em São Paulo; Lula teve ato em Belo Horizonte",
-    "imageCredit": "Marcelo Brandão – Repórter da Agência Brasil",
-    "imageAlt": "Flávio faz campanha em São Paulo; Lula teve ato em Belo Horizonte",
-    "author": "Marcelo Brandão – Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Flávio Bolsonaro",
-      "Lula",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
     "id": "ebc-1706141",
     "title": "Brasil fica em 5º lugar na final por equipes do Mundial de Ginástica",
     "summary": "A seleção brasileira terminou em quinto lugar na final por equipes do Mundial de Ginástica Artística, que reúne as maiores potências da modalidade em Roterdã (Países Baixos).",
@@ -1106,28 +1116,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Temporada",
       "Finalistas",
       "Carlinha"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1799001",
-    "title": "Brasil conquista título no circuito mundial de vôlei de praia",
-    "summary": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-conquista-titulo-volei-praia",
-    "publishedAt": "21/10/2026 às 13:35",
-    "category": "Esportes",
-    "ingestedAt": "21/10/2026 às 13:40",
-    "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-volei.jpg",
-    "imageCaption": "Brasil conquista título no circuito mundial de vôlei de praia",
-    "imageCredit": "Pedro Ramos/Agência Brasil",
-    "imageAlt": "Brasil conquista título no circuito mundial de vôlei de praia",
-    "author": "Pedro Ramos/Agência Brasil",
-    "tags": [
-      "Vôlei",
-      "Esportes",
-      "Brasil"
     ],
     "content": []
   },
