@@ -5,6 +5,200 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "camara-1311927-projeto-cria-programa-para-pro",
+    "title": "Projeto cria programa para proteger animais em aglomerações e ruídos intensos",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311927-projeto-cria-programa-para-proteger-animais-em-aglomeracoes-e-ruidos-intensos",
+    "publishedAt": "22/10/2026 às 08:46",
+    "category": "Congresso",
+    "ingestedAt": "22/10/2026 às 09:03",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260203191618474-1-768x473.jpg",
+    "imageCaption": "Duda Ramos: cães e gatos possuem alta sensibilidade auditiva e podem entrar em pânico",
+    "imageCredit": "Kayo Magalhães/Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Duda Ramos (MDB - RR)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Kayo Magalhães/Câmara dos Deputados",
+      "Duda Ramos: cães e gatos possuem alta sensibilidade auditiva e podem entrar em pânico",
+      "Proposta em análise na Câmara dos Deputados cria um programa nacional para prevenir fugas, acidentes, lesões e situações de estresse e sofrimento de animais domésticos causados por ruídos intensos, como queima de fogos de artifício e aglomerações.",
+      "O chamado Programa Nacional Pet Seguro em Grandes Eventos e Datas de Elevada Sensibilidade Sonora está previsto no Projeto de Lei 2990/26, do deputado Duda Ramos (Pode-RR).",
+      "O texto lista, entre as datas de elevada sensibilidade sonora, celebrações de Ano-novo, festas juninas e jogos da seleção brasileira na Copa do Mundo, por exemplo.",
+      "Duda Ramos observa que cães e gatos possuem sensibilidade auditiva superior à dos humanos e que estampidos e ruídos repentinos podem desencadear reações severas de pânico e desorientação.",
+      "“O objetivo do projeto é preparar tutores, instituições e comunidades para reduzir situações de sofrimento e evitar consequências que poderiam ser mitigadas por meio de informação, planejamento e coordenação”, afirma o parlamentar.",
+      "Ele ressalta, ainda, que a iniciativa “não pretende restringir manifestações culturais, esportivas ou comemorativas” e que “não se trata de proibir festas”.",
+      "Para alcançar os objetivos do programa, a proposta estabelece a criação dos seguintes instrumentos de atuação conjunta:",
+      "O texto determina também que as campanhas educativas sobre guarda responsável, primeiros socorros e impactos de ruídos deverão ocorrer prioritariamente nos 30 dias que antecedem as datas comemorativas ou eventos esportivos.",
+      "O projeto estabelece prioridade no atendimento e nas ações para:",
+      "Além disso, fixa princípios de equidade territorial, com destaque às peculiaridades logísticas da Amazônia Legal , direcionando ações prioritárias para comunidades indígenas, ribeirinhas, localidades isoladas e regiões de fronteira.",
+      "Para monitorar os resultados, a proposta prevê a elaboração do Relatório Nacional de Proteção Animal em Grandes Eventos, que reunirá dados estatísticos sobre desaparecimentos, resgates e avaliação das campanhas.",
+      "O projeto será analisado em caráter conclusivo pelas comissões de Meio Ambiente e Desenvolvimento Sustentável; e de Constituição e Justiça e de Cidadania.",
+      "Para virar lei, o texto precisa ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
+    ]
+  },
+  {
+    "id": "ebc-1705980",
+    "title": "TO: eleitores escolherão entre Professora Dorinha e Vicentinho Júnior",
+    "summary": "Neste domingo (25), os 1.182. 307 eleitores do Tocantins retornam às urnas para escolher o novo governador . Disputam o cargo Professora Dorinha (União) e Vicentinho Júnior (PSDB). Dorinha e Vicentinho Junior vão disputar o 2° turno no Tocantins.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitores-escolherao-entre-professora-dorinha-e-vicentinho-junior",
+    "publishedAt": "22/10/2026 às 08:00",
+    "category": "Eleições",
+    "ingestedAt": "22/10/2026 às 09:03",
+    "imageUrl": "https://imagens.ebc.com.br/Dw15ZfvhlPtzNefTpeYbBX5xVD0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/govtoc.jpg?itok=lw1X3n-0",
+    "imageCaption": "TO: eleitores escolherão entre Professora Dorinha e Vicentinho Júnior",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "TO: eleitores escolherão entre Professora Dorinha e Vicentinho Júnior",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "2 turno",
+      "governador",
+      "Tocantins"
+    ],
+    "content": [
+      "Neste domingo (25), os 1.182.307 eleitores do Tocantins retornam às urnas para escolher o novo governador .",
+      "Disputam o cargo Professora Dorinha (União) e Vicentinho Júnior (PSDB).",
+      "No primeiro turno, Dorinha ficou em primeiro lugar, com 45,52% dos votos válidos, ou 386.260 votos. Vicentinho ficou em segundo, com 43,94%, equivalente a 372.848 votos.",
+      "Maria Auxiliadora Seabra Rezende, a Professora Dorinha, é senadora pelo Tocantins. Foi deputada federal por três mandatos e secretária estadual de Educação do estado entre 1998 e 2009. Tem 62 anos e é natural de Goiânia (GO).",
+      "Vicentinho Júnior está em seu terceiro mandato como deputado federal pelo Tocantins. Empresário, também já atuou como secretário estadual no governo de Wanderley Barbosa, que comanda o estado atualmente. Tem 41 anos e também é natural de Goiânia (GO)."
+    ]
+  },
+  {
+    "id": "ebc-1705977",
+    "title": "Eleitores do ES definem disputa para governo entre Ferraço e Pazolini",
+    "summary": "Neste domingo (25), os 2,9 milhões de eleitores do Espírito Santo retornam às urnas para votar para governador . Disputam o cargo Lorenzo Pazolini (Republicanos) e Ricardo Ferraço (MDB). Espírito Santo terá 2º turno entre Lorenzo Pazolini e Ricardo Ferraço.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitores-do-es-definem-disputa-para-governo-entre-ferraco-e-pazolini",
+    "publishedAt": "22/10/2026 às 08:00",
+    "category": "Eleições",
+    "ingestedAt": "22/10/2026 às 09:03",
+    "imageUrl": "https://imagens.ebc.com.br/koT-umKNKL2PJAxJdl5eOYXm_yA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/governoes.jpg?itok=HN2zMkO0",
+    "imageCaption": "Eleitores do ES definem disputa para governo entre Ferraço e Pazolini",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Eleitores do ES definem disputa para governo entre Ferraço e Pazolini",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "2 Turno",
+      "governador",
+      "Espírito Santo"
+    ],
+    "content": [
+      "Neste domingo (25), os 2,9 milhões de eleitores do Espírito Santo retornam às urnas para votar para governador .",
+      "Disputam o cargo Lorenzo Pazolini (Republicanos) e Ricardo Ferraço (MDB).",
+      "No primeiro turno, Pazolini ficou em primeiro lugar, com 49,65% dos votos válidos, ou 1.048.633 votos. Ferraço ficou em segundo, com 34,06%, equivalente a 719.397 votos.",
+      "Pazolini foi prefeito de Vitória por dois mandatos. Em 2026, deixou o comando municipal para disputar o governo do Espírito Santo. Natural de Vitória, tem 44 anos, já foi deputado estadual e é delegado de polícia.",
+      "Natural de Cachoeiro de Itapemirim (ES), Ferraço tem 63 anos e assumiu o cargo de governador em abril de 2026, após a renúncia de Renato Casagrande, que saiu do governo para disputar uma vaga no Senado. Foi vereador, deputado estadual, deputado federal, senador e vice-governador."
+    ]
+  },
+  {
+    "id": "ebc-1705979",
+    "title": "RN: eleitores vão escolher entre Allyson e Cadu de Lula para governo",
+    "summary": "Os 2,6 milhões de eleitores do Rio Grande do Norte retornam às urnas neste domingo (25) para escolher o novo governador . Disputam o cargo Allyson Bezerra (União) e Cadu de Lula (PT). Allyson e Cadu de Lula vão disputar o 2º turno para governador do RN .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/rn-eleitores-vao-escolher-entre-allyson-e-cadu-de-lula-para-governo",
+    "publishedAt": "22/10/2026 às 08:00",
+    "category": "Eleições",
+    "ingestedAt": "22/10/2026 às 09:03",
+    "imageUrl": "https://imagens.ebc.com.br/8ySOBVLC5jGFR9ZVkfTHUjPDPiI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/governorn.jpg?itok=3SHKT8aW",
+    "imageCaption": "RN: eleitores vão escolher entre Allyson e Cadu de Lula para governo",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "RN: eleitores vão escolher entre Allyson e Cadu de Lula para governo",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "2 Turno",
+      "governador",
+      "Rio Grande do Norte"
+    ],
+    "content": [
+      "Os 2,6 milhões de eleitores do Rio Grande do Norte retornam às urnas neste domingo (25) para escolher o novo governador .",
+      "Disputam o cargo Allyson Bezerra (União) e Cadu de Lula (PT).",
+      "No primeiro turno, a disputa foi apertada. Allyson ficou em primeiro lugar, com 36,94% dos votos válidos, ou 799.809 votos. Cadu de Lula ficou em segundo, com 36,16%, equivalente a 718.300 votos.",
+      "Ex-prefeito de Mossoró, Allyson tem 34 anos, é engenheiro civil e servidor público federal. Foi deputado estadual e eleito prefeito de Mossoró, sua cidade natal, em 2021, e reeleito em 2024. Deixou a prefeitura neste ano para disputar o governo do estado.",
+      "Carlos Eduardo Xavier é auditor fiscal de carreira e foi secretário estadual da Fazenda no governo de Fátima Bezerra (PT-RN). Aos 48 anos, disputa pela primeira vez um cargo eletivo."
+    ]
+  },
+  {
+    "id": "ebc-1706151",
+    "title": "Papa não precisará de mais tratamento contra o câncer, dizem médicos",
+    "summary": "O papa Leão XIV não precisará de mais nenhum tratamento após ter sido submetido a uma cirurgia de câncer de pulmão na semana passada. A informação foi dada por seus médicos nessa quarta-feira (21), indicando que o tumor não havia se espalhado.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/papa-nao-precisara-de-mais-tratamento-contra-o-cancer-dizem-medicos",
+    "publishedAt": "22/10/2026 às 07:28",
+    "category": "Política",
+    "ingestedAt": "22/10/2026 às 09:03",
+    "imageUrl": "https://imagens.ebc.com.br/2TASVOvW0Wn0yp20IX_IZbcx_4U=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/13/2026-10-13t180543z_1_lynxmpem9c1p8_rtroptp_4_pope-health.jpg?itok=RQIIQCIO",
+    "imageCaption": "Papa não precisará de mais tratamento contra o câncer, dizem médicos",
+    "imageCredit": "Alvise Armellini - Repórter da Reuters*",
+    "imageAlt": "Papa não precisará de mais tratamento contra o câncer, dizem médicos",
+    "author": "Alvise Armellini - Repórter da Reuters*",
+    "tags": [
+      "Internacional",
+      "Papa Leão XIV",
+      "Recuperação",
+      "Cirurgia",
+      "Câncer"
+    ],
+    "content": [
+      "O papa Leão XIV não precisará de mais nenhum tratamento após ter sido submetido a uma cirurgia de câncer de pulmão na semana passada. A informação foi dada por seus médicos nessa quarta-feira (21), indicando que o tumor não havia se espalhado.",
+      "O anúncio foi feito no momento em que ainda não estava claro se o papa, nascido nos Estados Unidos, seguiria adiante com a viagem planejada ao Uruguai, à Argentina e ao Peru, marcada para o período de 6 a 17 de novembro.",
+      "O pontífice, de 71 anos, passou por uma cirurgia em 13 de outubro para a remoção do lobo inferior do pulmão direito e foi diagnosticado com adenocarcinoma pulmonar, a forma mais comum de câncer de pulmão.",
+      "Exames histológicos finais e análises de biologia molecular do tecido removido confirmaram o diagnóstico, com a doença permanecendo localizada, afirmaram os médicos em comunicado divulgado pelo Vaticano .",
+      "Leão recebeu alta do hospital no sábado (17) e está retomando gradualmente suas atividades. Ontem, ele voltou à Praça de São Pedro para sua audiência semanal com os peregrinos.",
+      "Margaritora afirmou, na semana passada, que não havia “nenhuma razão clínica” que impedisse o papa de viajar para a América do Sul, mas o secretário de Estado do Vaticano indicou que o pontífice talvez precise ajustar o ritmo de sua agenda para facilitar a recuperação.",
+      "*É proibida a reprodução deste conteúdo."
+    ]
+  },
+  {
+    "id": "ebc-1706150",
+    "title": "Rádio MEC transmite ao vivo concerto da Orquestra Filarmônica de Goiás",
+    "summary": "O novo concerto da temporada 2026 da Orquestra Filarmônica de Goiás é atração da Rádio MEC nesta quinta-feira (22), ao vivo, às 20h.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-10/radio-mec-transmite-ao-vivo-concerto-da-orquestra-filarmonica-de-goias",
+    "publishedAt": "22/10/2026 às 07:02",
+    "category": "Política",
+    "ingestedAt": "22/10/2026 às 09:03",
+    "imageUrl": "https://imagens.ebc.com.br/GiZ00HTV5vBA7m6gOjFNQIgRDVo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/12/orquestra_filarmonica_de_goias_-_divulgacao_-_radio_mec_1.jpg?itok=GGpXcopA",
+    "imageCaption": "Rádio MEC transmite ao vivo concerto da Orquestra Filarmônica de Goiás",
+    "imageCredit": "Rádio MEC",
+    "imageAlt": "Rádio MEC transmite ao vivo concerto da Orquestra Filarmônica de Goiás",
+    "author": "Rádio MEC",
+    "tags": [
+      "Cultura",
+      "Rádio MEC",
+      "Concerto",
+      "Política"
+    ],
+    "content": [
+      "O novo concerto da temporada 2026 da Orquestra Filarmônica de Goiás é atração da Rádio MEC nesta quinta-feira (22), ao vivo, às 20h. Conduzido pelo maestro Neil Thomson, diretor artístico da Filarmônica, e pelo regente convidado Jean Louis Steuerman, o espetáculo inédito da série “ Natureza e Sons ” ocorre no Teatro Rio Vermelho, em Goiânia.",
+      "Como solistas, o concerto terá a participação de dois convidados de destaque no cenário erudito: o maestro e pianista Jean Louis Steuerman e o violinista Carmelo de Los Santos. O repertório escolhido transita por diferentes períodos históricos da música clássica.",
+      "Apresentado por Pedro Pontes na Rádio MEC , o programa começa com o “ Concerto para Piano nº 7 ”, de Johann Sebastian Bach, obra do período barroco originalmente composta para cravo e cordas. Depois, será apresentado o “ Concerto para Violino e Orquestra ”, do compositor brasileiro Ronaldo Miranda, peça contemporânea que explora novas sonoridades orquestrais. O repertório inclui ainda a “ Sinfonia nº 4, Op. 98 ”, de Johannes Brahms, uma das principais obras do período romântico.",
+      "Com o tema “ Natureza e Sons ”, a temporada de 2026 da Orquestra Filarmônica de Goiás explora a vitalidade da natureza e como ela inspirou composições de diversas gerações e escolas musicais ao redor do mundo. As apresentações levam o público a se conectar com a humanidade e com o meio ambiente.",
+      "Fundada em 2012, a Orquestra Filarmônica de Goiás é conhecida por sua versatilidade e excelência artística. Foi criada como instrumento de difusão de obras musicais, escritas especificamente para orquestra de câmara, formada por músicos da antiga Orquestra de Câmara Goyazes.",
+      "O grupo tem se destacado em apresentações tanto no Brasil quanto no exterior, sob o comando do britânico Neil Thomson, com um repertório que abrange desde o barroco até a música contemporânea. Seus projetos de gravação revelam um olhar diferente para o repertório, em especial o nacional: depois de gravar peças pouco ouvidas de Guerra-Peixe, a filarmônica se dedicou ao registro integral das sinfonias de Claudio Santoro.",
+      "Conhecida de norte a sul do país como \" A Rádio de Música Clássica do Brasi l\", a Rádio MEC é consagrada pelo público por sua vocação direcionada à música de concerto. A tradicional estação dedica 80% de sua programação à música clássica e leva ao ar compositores brasileiros e internacionais de todos os tempos.",
+      "A Rádio MEC oferece aos ouvintes a experiência de acompanhar repertórios segmentados, composições originais e produções qualificadas. Ainda há espaço também para faixas de jazz e música popular brasileira, combinação que garante a conquista de novos públicos e agrada a audiência cativa.",
+      "Os ouvintes têm participação garantida e podem colaborar com sugestões para a programação. O público pode interagir pelas redes sociais e pelo WhatsApp . Para isso, basta que os interessados enviem mensagens de texto para o número (21) 99710-0537."
+    ]
+  },
+  {
     "id": "ebc-1706149",
     "title": "Flávio faz campanha em São Paulo; Lula teve ato em Belo Horizonte",
     "summary": "Os candidatos a presidente cumpriram agenda de campanha nesta quarta-feira (21) em Belo Horizonte, Fortaleza e São Paulo. O candidato Flávio Bolsonaro (PL) participou de um evento em Guarulhos (SP) pela manhã ao lado do governador Tarcísio de Freitas (Republicanos).",
@@ -1479,188 +1673,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "audiência geral",
       "Vaticano",
       "Política"
-    ]
-  },
-  {
-    "id": "camara-1309937-projeto-dobra-limite-de-isenca",
-    "title": "Projeto dobra limite de isenção de Imposto de Renda na venda de bens de pequeno valor",
-    "summary": "Para virar lei, a proposta precisa ser aprovada pela Câmara e pelo Senado.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1309937-projeto-dobra-limite-de-isencao-de-imposto-de-renda-na-venda-de-bens-de-pequeno-valor",
-    "publishedAt": "21/10/2026 às 10:10",
-    "category": "Congresso",
-    "ingestedAt": "21/10/2026 às 11:28",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2023/03/52676818587-044ad0d917-k-768x512.jpg",
-    "imageCaption": "Fábio Macedo: limite atual não sofreu atualização monetária relevante em mais de 20 anos",
-    "imageCredit": "Divulgação",
-    "imageAlt": "Deputado Fábio Macedo (Podemos-MA) fala no Plenário da Câmara dos Deputados",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Fábio Macedo: limite atual não sofreu atualização monetária relevante em mais de 20 anos",
-      "O Projeto de Lei 2081/26 eleva de R$ 35 mil para R$ 70 mil o limite de isenção do Imposto de Renda (IR) sobre o ganho de capital na alienação de bens e direitos de pequeno valor. O texto mantém o atual limite de R$ 20 mil para a isenção do IR sobre ganhos com ações negociadas no mercado de balcão.",
-      "Além disso, a proposta determina que esses dois limites sejam atualizados anualmente pelo Índice Geral de Preços do Mercado (IGP-M), apurado pela Fundação Getulio Vargas (FGV).",
-      "Em análise na Câmara dos Deputados, o texto altera a Lei 9.250/95 , que trata do IR das pessoas físicas. Na alienação de diversos bens ou direitos da mesma natureza, deverá ser considerado o valor total do conjunto negociado no mês.",
-      "Na justificativa que acompanha o projeto, o deputado Fábio Macedo (Pode-MA) afirma que o limite atual de R$ 35 mil não passa por revisão desde 2005. Segundo ele, o valor “não sofreu atualização monetária relevante em mais de 20 anos e encontra-se claramente defasado em relação à inflação acumulada no período”.",
-      "O projeto será analisado, em caráter conclusivo , pelas comissões de Finanças e Tributação; e de Constituição e Justiça e de Cidadania.",
-      "Para virar lei, terá de ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
-  },
-  {
-    "id": "camara-1310206-projeto-cria-politica-nacional",
-    "title": "Projeto cria política nacional para reduzir perdas e desperdício de alimentos",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310206-projeto-cria-politica-nacional-para-reduzir-perdas-e-desperdicio-de-alimentos",
-    "publishedAt": "21/10/2026 às 09:25",
-    "category": "Congresso",
-    "ingestedAt": "21/10/2026 às 11:28",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260521170434667-1-768x473.jpg",
-    "imageCaption": "José Medeiros: milhões de brasileiros ainda convivem com a insegurança alimentar",
-    "imageCredit": "Bruno Spada/Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. José Medeiros (PL-MT)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Bruno Spada/Câmara dos Deputados",
-      "José Medeiros: milhões de brasileiros ainda convivem com a insegurança alimentar",
-      "O Projeto de Lei 3000/26, em análise na Câmara dos Deputados, cria a Política Nacional de Redução de Perdas e Desperdício de Alimentos.",
-      "Entre os objetivos da proposta estão:",
-      "A política deverá envolver medidas de acompanhamento das perdas e do desperdício de alimentos e estabelecer metas para a redução desses índices.",
-      "As regras serão aplicadas a supermercados, atacadistas, restaurantes, indústria alimentícia, redes de distribuição, setor público, feiras e centrais de abastecimento.",
-      "Pelo projeto, ficam estabelecidas metas nacionais de redução do desperdício:",
-      "O texto também prevê a adoção de mecanismos para facilitar a destinação de alimentos que possam ser aproveitados.",
-      "O projeto cria o Banco Nacional de Alimentos, com a finalidade de intermediar doações, organizar logística, cadastrar entidades, monitorar desperdício e gerar relatórios públicos.",
-      "O autor da proposta, deputado José Medeiros (PL-MT), afirma que o país desperdiça milhões de toneladas de alimentos todos os anos, enquanto milhões de brasileiros ainda enfrentam insegurança alimentar.",
-      "“Reduzir o desperdício é combater a fome, proteger o meio ambiente, reduzir custos, aumentar a eficiência e promover justiça social”, argumenta o parlamentar.",
-      "O projeto será analisado, em caráter conclusivo , pelas comissões de Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural; de Saúde; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania.",
-      "Para virar lei, precisa ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
-  },
-  {
-    "id": "ebc-1706022",
-    "title": "Defesa Civil recebe R$ 300 milhões em crédito extraordinário",
-    "summary": "Ações de defesa civil no país terão reforço de R$ 300 milhões para gestão de riscos e desastres. Medida provisória publicada nesta quarta-feira (21) abre crédito extraordinário em nome do Ministério da Integração e do Desenvolvimento Regional.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/defesa-civil-recebe-r-300-milhoes-em-credito-extraordinario",
-    "publishedAt": "21/10/2026 às 09:07",
-    "category": "Política",
-    "ingestedAt": "21/10/2026 às 11:28",
-    "imageUrl": "https://imagens.ebc.com.br/rB8hTwxNjCNawxrDU0okfjTLuU8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/23/_rbr5563ta_10_1.jpg?itok=9rJShxMe",
-    "imageCaption": "Defesa Civil recebe R$ 300 milhões em crédito extraordinário",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Defesa Civil recebe R$ 300 milhões em crédito extraordinário",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "Defesa Civil",
-      "estiagem",
-      "seca",
-      "chuvas"
-    ],
-    "content": [
-      "Ações de defesa civil no país terão reforço de R$ 300 milhões para gestão de riscos e desastres. Medida provisória publicada nesta quarta-feira (21) abre crédito extraordinário em nome do Ministério da Integração e do Desenvolvimento Regional.",
-      "Segundo a MP n° 1.398, os recursos serão aplicados no programa Gestão de Riscos e de Desastres, na ação de Proteção e Defesa Civil.",
-      "A destinação dos recursos ocorre no mês em que estados da Região Norte enfrentam estiagem e queimadas florestais e áreas do Sul e Sudeste são atingidas por tempestades .",
-      "A medida provisórias foi editada com base nos artigos 62 e 167 da Constituição Federal, que permitem a abertura de créditos extraordinários por ato do Executivo em situações consideradas urgentes e relevantes."
-    ]
-  },
-  {
-    "id": "ebc-1705949",
-    "title": "Pedir votos e fazer propaganda: saiba o que é proibido no dia de votar",
-    "summary": "Amplamente comuns durante as campanhas eleitorais, alguns comportamentos são proibidos no dia da votação.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/pedir-votos-e-fazer-propaganda-saiba-o-que-e-proibido-no-dia-de-votar",
-    "publishedAt": "21/10/2026 às 08:43",
-    "category": "Eleições",
-    "ingestedAt": "21/10/2026 às 09:02",
-    "imageUrl": "https://imagens.ebc.com.br/YcG5Svzxov4UEoWjhlJq1I6yn2A=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/0d4a2307.jpg?itok=vsGjCx4v",
-    "imageCaption": "Pedir votos e fazer propaganda: saiba o que é proibido no dia de votar",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Pedir votos e fazer propaganda: saiba o que é proibido no dia de votar",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições",
-      "eleições 2026",
-      "boca de urna",
-      "Eleições"
-    ],
-    "content": [
-      "Amplamente comuns durante as campanhas eleitorais, alguns comportamentos são proibidos no dia da votação. Neste domingo (25), assim como em todas as eleições, os eleitores não podem pedir votos, distribuir propaganda ou abordar eleitores para influenciar a escolha do candidato.. Essas práticas podem caracterizar o crime de boca de urna.",
-      "A boca de urna ocorre quando há tentativa de convencer o eleitorado a votar em determinado candidato, partido, federação ou coligação no dia da eleição.",
-      "Até o encerramento da votação, a legislação proíbe a aglomeração de pessoas com vestuário padronizado ou portando instrumentos de propaganda, quando isso caracterizar manifestação coletiva.",
-      "A manifestação individual e silenciosa do eleitor sobre a sua preferência política é liberada.",
-      "Ou seja: é permitido votar com itens como bandeiras, broches e adesivos, desde que não haja manifestação coletiva.",
-      "No ambiente digital, a lei considera crime a publicação de novos conteúdos ou o impulsionamento de conteúdos no dia da eleição, por parte dos candidatos. Conteúdos publicados anteriormente, no entanto, podem permanecer disponíveis.",
-      "Quem for pego fazendo boca de urna pode ser punido com detenção de 6 meses a 1 ano, com a possibilidade de substituição pela prestação de serviços à comunidade pelo mesmo período, além de pagamento de multa.",
-      "As irregularidades relacionadas à propaganda eleitoral podem ser comunicadas pelo Pardal, aplicativo da Justiça Eleitoral. A ferramenta permite o envio de denúncias pelo celular, com informação sobre o local, fotos, vídeos e áudios que ajudem na análise da ocorrência.",
-      "O aplicativo está disponível gratuitamente nas lojas Google Play e App Store ."
-    ]
-  },
-  {
-    "id": "ebc-1706020",
-    "title": "Confira a agenda dos presidenciáveis nesta quarta-feira (21)",
-    "summary": "Os candidatos à presidência da República cumprem agenda de campanha nesta quarta-feira (21) em Belo Horizonte, Fortaleza e São Paulo. Confira. Flávio Bolsonaro (PL) Candidato tem agenda em São Paulo pela manhã.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/confira-agenda-dos-presidenciaveis-nesta-quarta-feira-21",
-    "publishedAt": "21/10/2026 às 08:38",
-    "category": "Eleições",
-    "ingestedAt": "21/10/2026 às 09:02",
-    "imageUrl": "https://imagens.ebc.com.br/Qjn25j4kWuBB0OOSqVFyv-s7K54=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/18/banner_agenda_-_1170x700.png?itok=KJR_nOUL",
-    "imageCaption": "Confira a agenda dos presidenciáveis nesta quarta-feira (21)",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Confira a agenda dos presidenciáveis nesta quarta-feira (21)",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Eleições"
-    ],
-    "content": [
-      "Os candidatos à presidência da República cumprem agenda de campanha nesta quarta-feira (21) em Belo Horizonte, Fortaleza e São Paulo. Confira.",
-      "Candidato tem agenda em São Paulo pela manhã. À noite, participa de ato em Fortaleza, a partir das 19h, na Avenida do Contorno.",
-      "Luiz Inácio Lula da Silva (PT)",
-      "Candidato à reeleição participa de caminhada em Belo Horizonte (MG) a partir das 17h.",
-      "A ordem de apresentação da agenda dos candidatos a presidente segue alternância diária."
-    ]
-  },
-  {
-    "id": "ebc-1706019",
-    "title": "Chuvas voltam a ganhar força na maior parte do país",
-    "summary": "A formação de uma área de baixa pressão entre o norte da Argentina, o oeste do Paraguai e o sul da Bolívia favorece o retorno das chuvas e tempestades ao Sul do Brasil, nesta quarta-feira (21).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/chuvas-voltam-ganhar-forca-na-maior-parte-do-pais",
-    "publishedAt": "21/10/2026 às 08:33",
-    "category": "Política",
-    "ingestedAt": "21/10/2026 às 11:28",
-    "imageUrl": "https://imagens.ebc.com.br/RvWhbQmiGuSsVhzWXPdB-QChaAM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/04/22/chuvabelem0426.jpg?itok=nYomOk6m",
-    "imageCaption": "Chuvas voltam a ganhar força na maior parte do país",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Chuvas voltam a ganhar força na maior parte do país",
-    "author": "Agência Brasil",
-    "tags": [
-      "Meio Ambiente",
-      "meteorologia",
-      "Previsão do Tempo",
-      "Inmet",
-      "Chuvas"
     ]
   },
   {
