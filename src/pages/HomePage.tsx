@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { ElectionDataSet } from "../data/electionData";
 import { NewsItem } from "../types/news";
+import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { FeaturedEditorial } from "../components/FeaturedEditorial";
 import { NationalBanner } from "../components/NationalBanner";
 import { BrazilMap } from "../components/BrazilMap";
@@ -30,6 +31,10 @@ const SportsNewsCard: React.FC<{
   onOpenArticleDetails: (article: NewsItem) => void;
 }> = ({ article, onOpenArticleDetails }) => {
   const [imageError, setImageError] = useState(false);
+  const fallbackSrc = EDITORIAL_IMAGES.congresso.src;
+  const isUsingFallback = imageError && Boolean(article.imageUrl);
+  const activeSrc = isUsingFallback ? fallbackSrc : article.imageUrl;
+  const activeAlt = isUsingFallback ? EDITORIAL_IMAGES.congresso.alt : (article.imageAlt || article.title);
 
   return (
     <article
@@ -37,15 +42,21 @@ const SportsNewsCard: React.FC<{
       className="group bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between hover:border-emerald-300 hover:shadow-md transition-all duration-200 cursor-pointer"
     >
       <div>
-        {article.imageUrl && !imageError && isValidImageUrl(article.imageUrl) && (
+        {article.imageUrl && (
           <div className="mb-3.5 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 aspect-[16/9] relative">
             <img
-              src={article.imageUrl}
-              alt={article.imageAlt || article.title}
+              src={activeSrc}
+              alt={activeAlt}
               className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
               loading="lazy"
+              referrerPolicy="no-referrer"
               onError={() => setImageError(true)}
             />
+            {isUsingFallback && (
+              <span className="absolute bottom-1.5 right-1.5 text-[9px] font-bold text-white bg-slate-950/80 px-1.5 py-0.5 rounded backdrop-blur-xs">
+                Acervo Oficial
+              </span>
+            )}
           </div>
         )}
 

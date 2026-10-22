@@ -165,6 +165,7 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                     alt={leadImageAlt}
                     className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
                     loading="eager"
+                    fetchPriority="high"
                     referrerPolicy="no-referrer"
                     onError={() => setLeadImageError(true)}
                   />

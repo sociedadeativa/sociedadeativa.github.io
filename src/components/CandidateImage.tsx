@@ -12,6 +12,7 @@ interface CandidateImageProps {
   size?: "sm" | "md" | "lg" | "xl";
   showAttributionBadge?: boolean;
   attribution?: string;
+  loading?: "lazy" | "eager";
 }
 
 /**
@@ -70,6 +71,7 @@ export const CandidateImage: React.FC<CandidateImageProps> = ({
   size = "md",
   showAttributionBadge = false,
   attribution,
+  loading = "lazy",
 }) => {
   const candidateUrls = resolvePhotoPath(src);
   const [currentUrlIndex, setCurrentUrlIndex] = useState(0);
@@ -164,6 +166,8 @@ export const CandidateImage: React.FC<CandidateImageProps> = ({
         src={activeSrc}
         alt={alt}
         decoding="async"
+        loading={loading}
+        referrerPolicy="no-referrer"
         onLoad={() => setIsLoaded(true)}
         onError={handleImageError}
         className={`w-full h-full object-cover object-top transition-opacity duration-200 ${

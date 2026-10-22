@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NewsItem, NewsCategory } from "../types/news";
+import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { getArticleUrl } from "../utils/router";
 import { Calendar, ExternalLink, Sparkles } from "lucide-react";
 
@@ -31,6 +32,23 @@ export const NewsCard: React.FC<NewsCardProps> = ({
   const catStyle = CATEGORY_STYLES[article.category] || CATEGORY_STYLES["Política"];
   const isSociedadeAtiva = article.source.includes("Sociedade Ativa");
 
+  const categoryFallbackMap: Record<string, typeof EDITORIAL_IMAGES.congresso> = {
+    Eleições: EDITORIAL_IMAGES.urna,
+    Economia: EDITORIAL_IMAGES.economia,
+    Brasil: EDITORIAL_IMAGES.dadosPublicos,
+    Congresso: EDITORIAL_IMAGES.congresso,
+    Política: EDITORIAL_IMAGES.congresso,
+    Governo: EDITORIAL_IMAGES.congresso,
+    Justiça: EDITORIAL_IMAGES.congresso,
+    Mundo: EDITORIAL_IMAGES.congresso,
+    Esportes: EDITORIAL_IMAGES.congresso,
+    Tecnologia: EDITORIAL_IMAGES.dadosPublicos,
+  };
+  const institutionalFallback = categoryFallbackMap[article.category] || EDITORIAL_IMAGES.congresso;
+  const isUsingFallback = Boolean(imageError && article.imageUrl);
+  const imageSrc = isUsingFallback ? institutionalFallback.src : article.imageUrl;
+  const imageAlt = isUsingFallback ? institutionalFallback.alt : (article.imageAlt || article.title);
+
   useEffect(() => {
     setImageError(false);
   }, [article?.id, article?.imageUrl]);
@@ -45,16 +63,22 @@ export const NewsCard: React.FC<NewsCardProps> = ({
       }`}
     >
       <div>
-        {/* Imagem Editorial Oficial (quando disponível e válida) */}
-        {article.imageUrl && !imageError && (
+        {/* Imagem Editorial Oficial (quando disponível ou fallback institucional) */}
+        {article.imageUrl && (
           <div className="mb-3 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 aspect-[16/9] relative">
             <img
-              src={article.imageUrl}
-              alt={article.imageAlt || article.title}
+              src={imageSrc}
+              alt={imageAlt}
               className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
               loading="lazy"
+              referrerPolicy="no-referrer"
               onError={() => setImageError(true)}
             />
+            {isUsingFallback && (
+              <span className="absolute bottom-1.5 right-1.5 text-[9px] font-bold text-white bg-slate-950/80 px-1.5 py-0.5 rounded backdrop-blur-xs">
+                Acervo Oficial
+              </span>
+            )}
           </div>
         )}
 

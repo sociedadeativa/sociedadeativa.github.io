@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NewsItem } from "../types/news";
+import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { isValidImageUrl } from "../services/newsService";
 import { X, Calendar, Clock, Share2, Check, ExternalLink, ShieldCheck, Tag } from "lucide-react";
 
@@ -39,9 +40,26 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
     article.source?.includes("Sociedade Ativa") ||
     article.author?.includes("Sociedade Ativa");
 
+  const categoryFallbackMap: Record<string, typeof EDITORIAL_IMAGES.congresso> = {
+    Eleições: EDITORIAL_IMAGES.urna,
+    Economia: EDITORIAL_IMAGES.economia,
+    Brasil: EDITORIAL_IMAGES.dadosPublicos,
+    Congresso: EDITORIAL_IMAGES.congresso,
+    Política: EDITORIAL_IMAGES.congresso,
+    Governo: EDITORIAL_IMAGES.congresso,
+    Justiça: EDITORIAL_IMAGES.congresso,
+    Mundo: EDITORIAL_IMAGES.congresso,
+    Esportes: EDITORIAL_IMAGES.congresso,
+    Tecnologia: EDITORIAL_IMAGES.dadosPublicos,
+  };
+  const institutionalFallback = categoryFallbackMap[article.category] || EDITORIAL_IMAGES.congresso;
   const hasValidImage = Boolean(
     article.imageUrl && isValidImageUrl(article.imageUrl) && !imageError
   );
+  const displayImageSrc = hasValidImage ? article.imageUrl! : institutionalFallback.src;
+  const displayImageAlt = hasValidImage ? (article.imageAlt || article.title) : institutionalFallback.alt;
+  const displayCaption = hasValidImage ? (article.imageCaption || article.title) : institutionalFallback.caption;
+  const displayCredit = hasValidImage ? article.imageCredit : "Acervo Institucional";
 
   return (
     <div
@@ -87,26 +105,32 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
           {article.title}
         </h2>
 
-        {/* Imagem Editorial Oficial Verificada */}
-        {hasValidImage && (
+        {/* Imagem Editorial Oficial Verificada ou Acervo Institucional */}
+        {(article.imageUrl || imageError) && (
           <figure className="mb-4 rounded-2xl overflow-hidden border border-slate-200 bg-slate-50">
-            <img
-              src={article.imageUrl}
-              alt={article.imageAlt || article.title}
-              className="w-full max-h-[300px] object-cover"
-              loading="lazy"
-              onError={() => setImageError(true)}
-            />
-            {(article.imageCaption || article.imageCredit) && (
-              <figcaption className="p-2.5 text-[10px] sm:text-[11px] text-slate-500 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-2 flex-wrap">
-                <span>{article.imageCaption || article.title}</span>
-                {article.imageCredit && (
-                  <span className="font-semibold text-slate-700">
-                    Foto: {article.imageCredit}
-                  </span>
-                )}
-              </figcaption>
-            )}
+            <div className="w-full aspect-[16/9] sm:aspect-[2/1] overflow-hidden bg-slate-100 relative">
+              <img
+                src={displayImageSrc}
+                alt={displayImageAlt}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                referrerPolicy="no-referrer"
+                onError={() => setImageError(true)}
+              />
+              {!hasValidImage && (
+                <span className="absolute bottom-1.5 right-1.5 text-[9px] font-bold text-white bg-slate-950/80 px-1.5 py-0.5 rounded backdrop-blur-xs">
+                  Acervo Oficial
+                </span>
+              )}
+            </div>
+            <figcaption className="p-2.5 text-[10px] sm:text-[11px] text-slate-500 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-2 flex-wrap">
+              <span>{displayCaption}</span>
+              {displayCredit && (
+                <span className="font-semibold text-slate-700">
+                  {displayCredit.startsWith("Foto:") ? displayCredit : `Foto: ${displayCredit}`}
+                </span>
+              )}
+            </figcaption>
           </figure>
         )}
 

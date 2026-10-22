@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NewsItem, NewsCategory } from "../types/news";
+import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { getArticleUrl, navigateToArticle } from "../utils/router";
 import { PortalLink } from "../components/PortalLink";
 import { isValidImageUrl } from "../services/newsService";
@@ -56,6 +57,25 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
   const isSociedadeAtiva =
     article.source?.includes("Sociedade Ativa") ||
     article.author?.includes("Sociedade Ativa");
+
+  const categoryFallbackMap: Record<string, typeof EDITORIAL_IMAGES.congresso> = {
+    Eleições: EDITORIAL_IMAGES.urna,
+    Economia: EDITORIAL_IMAGES.economia,
+    Brasil: EDITORIAL_IMAGES.dadosPublicos,
+    Congresso: EDITORIAL_IMAGES.congresso,
+    Política: EDITORIAL_IMAGES.congresso,
+    Governo: EDITORIAL_IMAGES.congresso,
+    Justiça: EDITORIAL_IMAGES.congresso,
+    Mundo: EDITORIAL_IMAGES.congresso,
+    Esportes: EDITORIAL_IMAGES.congresso,
+    Tecnologia: EDITORIAL_IMAGES.dadosPublicos,
+  };
+  const institutionalFallback = categoryFallbackMap[article.category] || EDITORIAL_IMAGES.congresso;
+  const hasValidOriginal = Boolean(article.imageUrl && isValidImageUrl(article.imageUrl) && !imageError);
+  const heroImageSrc = hasValidOriginal ? article.imageUrl! : institutionalFallback.src;
+  const heroImageAlt = hasValidOriginal ? (article.imageAlt || article.title) : institutionalFallback.alt;
+  const heroImageCaption = hasValidOriginal ? (article.imageCaption || article.title) : institutionalFallback.caption;
+  const heroImageCredit = hasValidOriginal ? article.imageCredit : "Acervo Institucional Sociedade Ativa";
 
   // Atualiza título, meta description e canonical dinamicamente no cliente
   useEffect(() => {
@@ -236,25 +256,31 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
         </header>
 
         {/* Imagem Oficial com Atribuição Transparente */}
-        {article.imageUrl && isValidImageUrl(article.imageUrl) && !imageError && (
-          <figure className="mb-8 rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-2xs">
+        <figure className="mb-8 rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-2xs">
+          <div className="aspect-[16/9] sm:aspect-[21/9] w-full overflow-hidden bg-slate-100 relative">
             <img
-              src={article.imageUrl}
-              alt={article.imageAlt || article.title}
-              className="w-full max-h-[480px] object-cover"
+              src={heroImageSrc}
+              alt={heroImageAlt}
+              className="w-full h-full object-cover"
               loading="eager"
+              referrerPolicy="no-referrer"
               onError={() => setImageError(true)}
             />
-            <figcaption className="p-3 text-xs text-slate-600 bg-white border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-1 leading-relaxed">
-              <span>{article.imageCaption || article.title}</span>
-              {article.imageCredit && (
-                <span className="font-semibold text-slate-500 shrink-0">
-                  {article.imageCredit}
-                </span>
-              )}
-            </figcaption>
-          </figure>
-        )}
+            {!hasValidOriginal && (
+              <span className="absolute bottom-2 right-2 text-[10px] font-bold text-white bg-slate-950/85 px-2 py-0.5 rounded backdrop-blur-xs">
+                Acervo Oficial
+              </span>
+            )}
+          </div>
+          <figcaption className="p-3 text-xs text-slate-600 bg-white border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-1 leading-relaxed">
+            <span>{heroImageCaption}</span>
+            {heroImageCredit && (
+              <span className="font-semibold text-slate-500 shrink-0">
+                {heroImageCredit.startsWith("Foto:") ? heroImageCredit : `Foto: ${heroImageCredit}`}
+              </span>
+            )}
+          </figcaption>
+        </figure>
 
         {/* Corpo do Conteúdo Autorizado */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8 shadow-xs">
