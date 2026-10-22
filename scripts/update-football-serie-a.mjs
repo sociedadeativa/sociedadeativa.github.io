@@ -4,17 +4,18 @@
  * Script de Ingestão e Validação dos Dados Oficiais do Brasileirão Série A
  * Portal Sociedade Ativa — Cobertura Esportiva Oficial
  *
- * Fonte: API-Football v3 (https://v3.football.api-sports.io)
- * Liga: 71 (Brasileirão Série A - Brasil)
+ * Fonte: football-data.org v4 API (https://api.football-data.org/v4/)
+ * Competição: BSA (Campeonato Brasileiro Série A)
  *
  * Diretrizes de Segurança e Confiabilidade:
- * 1. A chave da API deve ser provida estritamente via variável de ambiente API_FOOTBALL_KEY.
- *    Nunca é exposta em logs, arquivos públicos ou bundle do cliente.
- * 2. Validação rigorosa dos dados recebidos (20 clubes, integridade numérica e campos obrigatórios).
- * 3. Se a API falhar, estourar quota ou retornar erro, o dataset anterior é preservado intacto.
- * 4. O script encerra com código de saída 1 (não-zero) em caso de falha, evitando que o pipeline
+ * 1. O token da API deve ser provido estritamente via variável de ambiente FOOTBALL_DATA_TOKEN.
+ *    Nunca é exposto em logs, arquivos públicos ou bundle do cliente.
+ * 2. Autenticação via cabeçalho HTTP X-Auth-Token.
+ * 3. Validação rigorosa dos dados recebidos (20 clubes, integridade numérica e campos obrigatórios).
+ * 4. Se a API falhar, estourar quota ou retornar erro, o dataset anterior é preservado intacto.
+ * 5. O script encerra com código de saída 1 (não-zero) em caso de falha, evitando que o pipeline
  *    do GitHub Actions reporte sucesso indevido (prevenção de silent failure).
- * 5. Nunca inventa placares, resultados ou classificações sintéticas.
+ * 6. Nunca inventa placares, resultados ou classificações sintéticas.
  */
 
 import fs from 'node:fs';
@@ -25,22 +26,24 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
-export const DEFAULT_LEAGUE_ID = 71; // Brasileirão Série A
-export const DEFAULT_SEASON = process.env.FOOTBALL_SEASON || '2024';
-export const API_BASE_URL = process.env.API_FOOTBALL_BASE_URL || 'https://v3.football.api-sports.io';
+export const DEFAULT_COMPETITION_CODE = process.env.COMPETITION_CODE || 'BSA'; // Brasileirão Série A
+export const DEFAULT_LEAGUE_ID = 2013; // ID da Série A no football-data.org
+export const DEFAULT_SEASON = process.env.FOOTBALL_SEASON || undefined;
+export const API_BASE_URL = process.env.FOOTBALL_DATA_BASE_URL || 'https://api.football-data.org/v4';
 export const OUTPUT_JSON_PATH = path.join(rootDir, 'public', 'data', 'footballSerieA.json');
 
 const FETCH_TIMEOUT_MS = 12000;
 
 /**
- * Utilitário seguro para requisições à API-Football com timeout e headers protegidos
+ * Utilitário seguro para requisições à football-data.org com timeout e token protegido
  */
-export async function makeApiFootballRequest(endpoint, apiKey, customFetch = fetch) {
-  if (!apiKey || typeof apiKey !== 'string' || apiKey.trim() === '') {
-    throw new Error('Chave da API-Football não configurada (variável API_FOOTBALL_KEY ausente ou vazia).');
+export async function makeFootballDataRequest(endpoint, apiToken, customFetch = fetch) {
+  if (!apiToken || typeof apiToken !== 'string' || apiToken.trim() === '') {
+    throw new Error('Token do football-data.org não configurado (variável FOOTBALL_DATA_TOKEN ausente ou vazia).');
   }
 
-  const url = `${API_BASE_URL.replace(/\/$/, '')}/${endpoint.replace(/^\//, '')}`;
+  const cleanEndpoint = endpoint.replace(/^\//, '');
+  const url = `${API_BASE_URL.replace(/\/$/, '')}/${cleanEndpoint}`;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
 
@@ -48,7 +51,7 @@ export async function makeApiFootballRequest(endpoint, apiKey, customFetch = fet
     const res = await customFetch(url, {
       signal: controller.signal,
       headers: {
-        'x-apisports-key': apiKey.trim(),
+        'X-Auth-Token': apiToken.trim(),
         'Accept': 'application/json',
         'User-Agent': 'SociedadeAtiva-Bot/1.0 (+https://sociedadeativa.github.io/)',
       },
@@ -57,21 +60,23 @@ export async function makeApiFootballRequest(endpoint, apiKey, customFetch = fet
     clearTimeout(timer);
 
     if (!res.ok) {
-      throw new Error(`API-Football respondeu com status HTTP ${res.status} (${res.statusText}) ao consultar ${endpoint}.`);
+      let errorDetail = '';
+      try {
+        const errorJson = await res.json();
+        if (errorJson?.message) {
+          errorDetail = `: ${errorJson.message}`;
+        }
+      } catch {
+        // Se a resposta de erro não for JSON, prossegue com statusText
+      }
+      throw new Error(`football-data.org respondeu com status HTTP ${res.status} (${res.statusText})${errorDetail} ao consultar ${cleanEndpoint}.`);
     }
 
     const payload = await res.json();
 
-    // A API-Football pode retornar HTTP 200 com erros no payload JSON
-    if (payload.errors) {
-      if (Array.isArray(payload.errors) && payload.errors.length > 0) {
-        throw new Error(`Erro retornado pela API-Football: ${payload.errors.join('; ')}`);
-      } else if (typeof payload.errors === 'object' && Object.keys(payload.errors).length > 0) {
-        const errorDetails = Object.entries(payload.errors)
-          .map(([k, v]) => `${k}: ${v}`)
-          .join('; ');
-        throw new Error(`Erro retornado pela API-Football: ${errorDetails}`);
-      }
+    // Verificação de eventuais erros no payload da football-data.org
+    if (payload.errorCode && payload.message) {
+      throw new Error(`Erro retornado pela API football-data.org (${payload.errorCode}): ${payload.message}`);
     }
 
     return payload;
@@ -81,116 +86,129 @@ export async function makeApiFootballRequest(endpoint, apiKey, customFetch = fet
   }
 }
 
+// Alias de retrocompatibilidade
+export const makeApiFootballRequest = makeFootballDataRequest;
+
 /**
- * Validação da estrutura de resposta de classificação (Standings)
+ * Validação da estrutura de resposta de classificação (Standings) do football-data.org
  */
 export function validateStandingsResponse(data) {
   if (!data || typeof data !== 'object') {
     throw new Error('Payload de classificação inválido ou vazio.');
   }
 
-  if (!Array.isArray(data.response) || data.response.length === 0) {
-    throw new Error('A API-Football não retornou nenhuma liga no array de resposta.');
+  if (!Array.isArray(data.standings) || data.standings.length === 0) {
+    throw new Error('A API football-data.org não retornou nenhuma tabela no array de classificação.');
   }
 
-  const leagueData = data.response[0]?.league;
-  if (!leagueData || !Array.isArray(leagueData.standings) || leagueData.standings.length === 0) {
-    throw new Error('Estrutura de classificação (standings) ausente na resposta da liga.');
+  // Localiza a tabela TOTAL (classificação consolidada do campeonato)
+  const totalStanding = data.standings.find((s) => s.type === 'TOTAL') || data.standings[0];
+  if (!totalStanding || !Array.isArray(totalStanding.table)) {
+    throw new Error('Estrutura de tabela (table) ausente na classificação da competição.');
   }
 
-  const standingsList = leagueData.standings[0];
-  if (!Array.isArray(standingsList) || standingsList.length < 20) {
-    throw new Error(`Classificação incompleta do Brasileirão Série A: esperado 20 clubes, recebido ${standingsList?.length ?? 0}.`);
+  const table = totalStanding.table;
+  if (table.length < 20) {
+    throw new Error(`Classificação incompleta do Brasileirão Série A: esperado 20 clubes, recebido ${table.length}.`);
   }
 
-  for (const row of standingsList) {
-    if (typeof row.rank !== 'number' || !row.team?.name) {
-      throw new Error('Entrada da tabela de classificação sem rank ou nome de clube válido.');
+  for (const row of table) {
+    if (typeof row.position !== 'number' || !row.team?.name) {
+      throw new Error('Entrada da tabela de classificação sem position ou nome de clube válido.');
     }
-    if (typeof row.points !== 'number' || typeof row.all?.played !== 'number') {
+    if (typeof row.points !== 'number' || typeof row.playedGames !== 'number') {
       throw new Error(`Dados estatísticos ausentes para o clube ${row.team?.name || 'desconhecido'}.`);
     }
   }
 
-  return standingsList;
+  return table;
 }
 
 /**
- * Validação da estrutura de partidas (Fixtures)
+ * Validação da estrutura de partidas (Matches) do football-data.org
  */
-export function validateFixturesResponse(data) {
+export function validateMatchesResponse(data) {
   if (!data || typeof data !== 'object') {
     throw new Error('Payload de partidas inválido ou vazio.');
   }
 
-  if (!Array.isArray(data.response)) {
-    throw new Error('Estrutura de partidas inválida: campo "response" deve ser um array.');
+  if (!Array.isArray(data.matches)) {
+    throw new Error('Estrutura de partidas inválida: campo "matches" deve ser um array.');
   }
 
-  for (const item of data.response) {
-    if (!item.fixture?.id || !item.teams?.home?.name || !item.teams?.away?.name) {
+  for (const item of data.matches) {
+    if (!item.id || !item.homeTeam?.name || !item.awayTeam?.name) {
       throw new Error('Partida retornada com dados obrigatórios ausentes (id ou equipes).');
     }
   }
 
-  return data.response;
+  return data.matches;
 }
 
+// Alias de retrocompatibilidade
+export const validateFixturesResponse = validateMatchesResponse;
+
 /**
- * Converte classificação da API-Football para o formato StandingRow do Sociedade Ativa
+ * Converte classificação do football-data.org para o formato StandingRow do Sociedade Ativa
  */
-export function mapStandingsToStandingRows(standingsList) {
-  return standingsList.map((item) => {
-    const played = item.all?.played ?? 0;
+export function mapStandingsToStandingRows(tableList) {
+  return tableList.map((item) => {
+    const played = item.playedGames ?? 0;
     const points = item.points ?? 0;
     const maxPoints = played * 3;
     const percentage = maxPoints > 0 ? `${((points / maxPoints) * 100).toFixed(1)}%` : '0.0%';
 
     // Mapeamento de forma: W -> V (Vitória), D -> E (Empate), L -> D (Derrota)
-    const rawForm = (item.form || '').slice(-5).split('');
-    const form = rawForm.map((char) => {
-      if (char === 'W') return 'V';
-      if (char === 'D') return 'E';
-      if (char === 'L') return 'D';
+    // O football-data.org pode enviar "W,W,D,L,W" ou "WWDLD"
+    let rawFormChars = [];
+    if (typeof item.form === 'string') {
+      if (item.form.includes(',')) {
+        rawFormChars = item.form.split(',').map((s) => s.trim()).filter(Boolean);
+      } else {
+        rawFormChars = item.form.split('');
+      }
+    }
+    const form = rawFormChars.slice(-5).map((char) => {
+      const upper = char.toUpperCase();
+      if (upper === 'W') return 'V';
+      if (upper === 'D') return 'E';
+      if (upper === 'L') return 'D';
       return 'E';
     });
 
-    // Mapeamento de zona de classificação do Brasileirão
+    // Mapeamento oficial de zonas da tabela do Brasileirão Série A:
+    // 1-4: Fase de Grupos da Libertadores
+    // 5-6: Fase Preliminar da Libertadores
+    // 7-12: Copa Sul-Americana
+    // 13-16: Permanência / Sem vaga internacional
+    // 17-20: Rebaixamento para Série B
     let zone = 'meio';
-    const rank = item.rank;
-    const desc = (item.description || '').toLowerCase();
-
-    if (rank >= 1 && rank <= 4) {
+    const pos = item.position;
+    if (pos >= 1 && pos <= 4) {
       zone = 'libertadores_direta';
-    } else if (rank >= 5 && rank <= 6) {
+    } else if (pos >= 5 && pos <= 6) {
       zone = 'pre_libertadores';
-    } else if (rank >= 7 && rank <= 12) {
+    } else if (pos >= 7 && pos <= 12) {
       zone = 'sulamericana';
-    } else if (rank >= 17 && rank <= 20) {
-      zone = 'rebaixamento';
-    } else if (desc.includes('libertadores') && desc.includes('group')) {
-      zone = 'libertadores_direta';
-    } else if (desc.includes('libertadores')) {
-      zone = 'pre_libertadores';
-    } else if (desc.includes('sul-americana') || desc.includes('sudamericana')) {
-      zone = 'sulamericana';
-    } else if (desc.includes('relegation')) {
+    } else if (pos >= 17 && pos <= 20) {
       zone = 'rebaixamento';
     }
 
     return {
-      position: item.rank,
-      club: item.team.name,
-      clubLogo: item.team.logo,
+      position: item.position,
+      club: item.team.shortName || item.team.name,
+      officialName: item.team.name,
+      clubLogo: item.team.crest || undefined,
       teamId: item.team.id,
+      tla: item.team.tla,
       points: item.points,
       played,
-      won: item.all?.win ?? 0,
-      drawn: item.all?.draw ?? 0,
-      lost: item.all?.lose ?? 0,
-      goalsFor: item.all?.goals?.for ?? 0,
-      goalsAgainst: item.all?.goals?.against ?? 0,
-      goalDiff: item.goalsDiff ?? (item.all?.goals?.for ?? 0) - (item.all?.goals?.against ?? 0),
+      won: item.won ?? 0,
+      drawn: item.draw ?? 0,
+      lost: item.lost ?? 0,
+      goalsFor: item.goalsFor ?? 0,
+      goalsAgainst: item.goalsAgainst ?? 0,
+      goalDiff: item.goalDifference ?? (item.goalsFor ?? 0) - (item.goalsAgainst ?? 0),
       percentage,
       form,
       zone,
@@ -199,14 +217,14 @@ export function mapStandingsToStandingRows(standingsList) {
 }
 
 /**
- * Converte partidas da API-Football para o formato MatchScore do Sociedade Ativa
+ * Converte partidas do football-data.org para o formato MatchScore do Sociedade Ativa
  */
-export function mapFixturesToMatches(fixturesList) {
-  const LIVE_STATUSES = ['1H', '2H', 'HT', 'ET', 'P', 'LIVE'];
-  const FINISHED_STATUSES = ['FT', 'AET', 'PEN'];
+export function mapMatchesToMatchScores(matchesList) {
+  const LIVE_STATUSES = ['IN_PLAY', 'PAUSED', 'LIVE'];
+  const FINISHED_STATUSES = ['FINISHED', 'AWARDED'];
 
-  return fixturesList.map((fix) => {
-    const rawStatus = fix.fixture?.status?.short || 'NS';
+  return matchesList.map((match) => {
+    const rawStatus = match.status || 'SCHEDULED';
     let status = 'agendado';
     if (LIVE_STATUSES.includes(rawStatus)) {
       status = 'ao_vivo';
@@ -214,73 +232,103 @@ export function mapFixturesToMatches(fixturesList) {
       status = 'encerrado';
     }
 
-    const elapsed = fix.fixture?.status?.elapsed;
-    const minute = elapsed ? `${elapsed}'` : undefined;
-
-    // Formatação de data/hora no horário de Brasília (UTC-3)
+    // Formatação de data/hora no fuso oficial de Brasília (America/Sao_Paulo)
     let dateStr = 'Data a definir';
     let timeStr = '--:--';
-    if (fix.fixture?.date) {
+    if (match.utcDate) {
       try {
-        const d = new Date(fix.fixture.date);
+        const d = new Date(match.utcDate);
         const optionsDate = { timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', year: 'numeric' };
         const optionsTime = { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit' };
         dateStr = new Intl.DateTimeFormat('pt-BR', optionsDate).format(d);
         timeStr = new Intl.DateTimeFormat('pt-BR', optionsTime).format(d);
       } catch {
-        dateStr = fix.fixture.date.slice(0, 10);
+        dateStr = match.utcDate.slice(0, 10);
       }
     }
 
+    const homeScore = typeof match.score?.fullTime?.home === 'number' ? match.score.fullTime.home : undefined;
+    const awayScore = typeof match.score?.fullTime?.away === 'number' ? match.score.fullTime.away : undefined;
+
+    const roundName = match.matchday ? `${match.matchday}ª Rodada` : 'Brasileirão Série A';
+
+    const homeName = match.homeTeam?.shortName || match.homeTeam?.name || 'Mandante';
+    const awayName = match.awayTeam?.shortName || match.awayTeam?.name || 'Visitante';
+
     return {
-      id: `apifootball-${fix.fixture.id}`,
-      fixtureId: fix.fixture.id,
+      id: `footballdata-${match.id}`,
+      fixtureId: match.id,
       tournamentId: 'brasileirao-a',
       tournamentName: 'Brasileirão Série A',
-      phase: fix.league?.round || 'Brasileirão Série A',
+      phase: roundName,
       status,
-      minute,
+      minute: status === 'ao_vivo' ? 'Ao vivo' : undefined,
       homeTeam: {
-        id: fix.teams?.home?.id,
-        name: fix.teams?.home?.name || 'Mandante',
-        shortName: fix.teams?.home?.name || 'Mandante',
-        score: typeof fix.goals?.home === 'number' ? fix.goals.home : undefined,
-        logo: fix.teams?.home?.logo,
-        initials: (fix.teams?.home?.name || 'MDT').slice(0, 3).toUpperCase(),
+        id: match.homeTeam?.id,
+        name: homeName,
+        shortName: homeName,
+        score: homeScore,
+        logo: match.homeTeam?.crest || undefined,
+        initials: match.homeTeam?.tla || homeName.slice(0, 3).toUpperCase(),
         color: 'bg-slate-800 text-white',
       },
       awayTeam: {
-        id: fix.teams?.away?.id,
-        name: fix.teams?.away?.name || 'Visitante',
-        shortName: fix.teams?.away?.name || 'Visitante',
-        score: typeof fix.goals?.away === 'number' ? fix.goals.away : undefined,
-        logo: fix.teams?.away?.logo,
-        initials: (fix.teams?.away?.name || 'VST').slice(0, 3).toUpperCase(),
+        id: match.awayTeam?.id,
+        name: awayName,
+        shortName: awayName,
+        score: awayScore,
+        logo: match.awayTeam?.crest || undefined,
+        initials: match.awayTeam?.tla || awayName.slice(0, 3).toUpperCase(),
         color: 'bg-slate-700 text-white',
       },
       date: dateStr,
       time: timeStr,
-      venue: fix.fixture?.venue?.name || 'Estádio a definir',
-      city: fix.fixture?.venue?.city || 'Brasil',
+      venue: 'Estádio a definir',
+      city: 'Brasil',
       broadcast: 'Transmissão Oficial',
-      roundOrLeg: fix.league?.round || 'Rodada Oficial',
-      disclaimer: 'Dados Oficiais API-Football',
+      roundOrLeg: roundName,
+      disclaimer: 'Dados Oficiais football-data.org',
     };
   });
 }
 
+// Alias de retrocompatibilidade
+export const mapFixturesToMatches = mapMatchesToMatchScores;
+
 /**
- * Função principal de execução e atualização dos dados do Brasileirão Série A
+ * Extrai e valida o ano da temporada a partir do payload retornado pela API football-data.org,
+ * ou utiliza o override explícito caso informado.
+ */
+export function resolveSeasonFromApiResponse(standingsPayload, explicitSeason) {
+  if (explicitSeason && String(explicitSeason).trim() !== '') {
+    return String(explicitSeason).trim();
+  }
+  if (standingsPayload?.filters?.season) {
+    return String(standingsPayload.filters.season).trim();
+  }
+  if (standingsPayload?.season?.startDate) {
+    const startYear = new Date(standingsPayload.season.startDate).getUTCFullYear();
+    if (!isNaN(startYear)) {
+      return String(startYear);
+    }
+  }
+  return String(new Date().getFullYear());
+}
+
+/**
+ * Função principal de execução e atualização dos dados do Brasileirão Série A via football-data.org
  */
 export async function updateFootballSerieAData(options = {}) {
-  const apiKey = options.apiKey ?? process.env.API_FOOTBALL_KEY;
-  const leagueId = options.leagueId ?? DEFAULT_LEAGUE_ID;
-  const season = options.season ?? DEFAULT_SEASON;
+  const apiToken = options.apiToken ?? options.apiKey ?? process.env.FOOTBALL_DATA_TOKEN;
+  const competitionCode = options.competitionCode ?? options.leagueCode ?? DEFAULT_COMPETITION_CODE;
+  const explicitSeason = options.season ?? process.env.FOOTBALL_SEASON ?? DEFAULT_SEASON;
   const customFetch = options.customFetch ?? fetch;
   const outputPath = options.outputPath ?? OUTPUT_JSON_PATH;
 
+  const seasonLog = explicitSeason ? `TEMPORADA ${explicitSeason} (OVERRIDE)` : 'TEMPORADA ATUAL (PADRÃO)';
   console.log('='.repeat(75));
-  console.log(`ATUALIZAÇÃO DE DADOS OFICIAIS — BRASILEIRÃO SÉRIE A (LIGA ${leagueId}, TEMPORADA ${season})`);
+  console.log(`ATUALIZAÇÃO DE DADOS OFICIAIS — BRASILEIRÃO SÉRIE A (${competitionCode}, ${seasonLog})`);
+  console.log(`Fonte: football-data.org v4 API`);
   console.log('='.repeat(75));
 
   // 1. Tenta carregar dataset pré-existente para preservação defensiva em caso de falha
@@ -296,35 +344,49 @@ export async function updateFootballSerieAData(options = {}) {
   }
 
   try {
-    // 2. Consulta à API-Football: Classificação
-    console.log(`\n[1/2] Consultando classificação oficial (standings?league=${leagueId}&season=${season})...`);
-    const standingsRaw = await makeApiFootballRequest(
-      `standings?league=${leagueId}&season=${season}`,
-      apiKey,
+    // 2. Consulta à football-data.org: Classificação da Série A
+    // Se explicitSeason estiver definido, busca com ?season=...; caso contrário, consulta a temporada atual da API
+    const standingsQuery = explicitSeason ? `?season=${encodeURIComponent(explicitSeason)}` : '';
+    const standingsEndpoint = `competitions/${competitionCode}/standings${standingsQuery}`;
+    console.log(`\n[1/2] Consultando classificação oficial (/${standingsEndpoint})...`);
+
+    const standingsRaw = await makeFootballDataRequest(
+      standingsEndpoint,
+      apiToken,
       customFetch
     );
-    const validatedStandings = validateStandingsResponse(standingsRaw);
-    const mappedStandings = mapStandingsToStandingRows(validatedStandings);
+    const validatedTable = validateStandingsResponse(standingsRaw);
+    const mappedStandings = mapStandingsToStandingRows(validatedTable);
     console.log(`  ✓ Classificação validada com sucesso: ${mappedStandings.length} clubes estruturados.`);
 
-    // 3. Consulta à API-Football: Partidas (recupera calendário da temporada da Série A)
-    console.log(`\n[2/2] Consultando partidas da Série A (fixtures?league=${leagueId}&season=${season})...`);
-    const fixturesRaw = await makeApiFootballRequest(
-      `fixtures?league=${leagueId}&season=${season}`,
-      apiKey,
+    // Determina a temporada representada na API para uso consistente em partidas e metadata
+    const resolvedSeason = resolveSeasonFromApiResponse(standingsRaw, explicitSeason);
+    console.log(`  ℹ Temporada apurada: ${resolvedSeason} (origem: ${explicitSeason ? 'override' : 'football-data.org metadata'})`);
+
+    // 3. Consulta à football-data.org: Partidas da temporada da Série A
+    // Utiliza a mesma temporada apurada da classificação para consistência total
+    const matchesQuery = `?season=${encodeURIComponent(resolvedSeason)}`;
+    const matchesEndpoint = `competitions/${competitionCode}/matches${matchesQuery}`;
+    console.log(`\n[2/2] Consultando partidas da Série A (/${matchesEndpoint})...`);
+
+    const matchesRaw = await makeFootballDataRequest(
+      matchesEndpoint,
+      apiToken,
       customFetch
     );
-    const validatedFixtures = validateFixturesResponse(fixturesRaw);
-    const mappedMatches = mapFixturesToMatches(validatedFixtures);
+    const validatedMatches = validateMatchesResponse(matchesRaw);
+    const mappedMatches = mapMatchesToMatchScores(validatedMatches);
     console.log(`  ✓ Partidas validadas com sucesso: ${mappedMatches.length} confrontos mapeados.`);
 
     // 4. Montagem do payload consolidado
     const nowIso = new Date().toISOString();
     const finalPayload = {
-      leagueId,
-      leagueName: 'Brasileirão Série A',
-      season,
-      source: 'API-Football (v3.football.api-sports.io)',
+      competitionCode,
+      competitionId: standingsRaw.competition?.id ?? DEFAULT_LEAGUE_ID,
+      leagueId: standingsRaw.competition?.id ?? DEFAULT_LEAGUE_ID, // compatibilidade
+      leagueName: standingsRaw.competition?.name ?? 'Brasileirão Série A',
+      season: resolvedSeason,
+      source: 'football-data.org (v4 API)',
       isReal: true,
       lastUpdated: nowIso,
       standings: mappedStandings,

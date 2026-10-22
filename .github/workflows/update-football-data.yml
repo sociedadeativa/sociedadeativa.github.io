@@ -10,9 +10,9 @@ on:
   workflow_dispatch:
     inputs:
       season:
-        description: 'Temporada do Brasileirão Série A (ex: 2024, 2025, 2026)'
+        description: 'Temporada do Brasileirão Série A (opcional, ex: 2025; padrão: temporada atual)'
         required: false
-        default: '2024'
+        default: ''
 
 permissions:
   contents: write
@@ -41,8 +41,9 @@ jobs:
 
       - name: Ingest and Validate Brasileirão Série A Data
         env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
-          FOOTBALL_SEASON: ${{ inputs.season || '2024' }}
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+          FOOTBALL_SEASON: ${{ inputs.season || '' }}
+          COMPETITION_CODE: 'BSA'
         run: node scripts/update-football-serie-a.mjs
 
       - name: Validate Generated Dataset Integrity
@@ -54,8 +55,8 @@ jobs:
           node -e '
             const fs = require("fs");
             const data = JSON.parse(fs.readFileSync("public/data/footballSerieA.json", "utf8"));
-            if (!data.isReal || data.leagueId !== 71) {
-              console.error("Validação falhou: metadata da liga inválido");
+            if (!data.isReal || (data.competitionCode !== "BSA" && data.leagueId !== 2013)) {
+              console.error("Validação falhou: metadata da competição inválido");
               process.exit(1);
             }
             if (!Array.isArray(data.standings) || data.standings.length < 20) {
