@@ -68,9 +68,9 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
               </span>
             </div>
 
-            <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 leading-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 leading-tight">
               {dataset.title}
-            </h1>
+            </h2>
             <p className="mt-1.5 text-base sm:text-xl font-heading font-semibold text-slate-600">
               {dataset.subtitle}
             </p>

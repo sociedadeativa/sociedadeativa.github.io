@@ -339,10 +339,13 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
               </span>
             )}
           </div>
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+          <div role="tablist" aria-label="Competições esportivas" className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
             <button
+              role="tab"
+              aria-selected={selectedTournament === "todos"}
+              aria-label="Exibir todas as competições"
               onClick={() => setSelectedTournament("todos")}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all border ${
+              className={`min-h-[36px] px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all border flex items-center justify-center ${
                 selectedTournament === "todos"
                   ? "bg-slate-900 text-white border-slate-900 shadow-xs"
                   : "bg-white text-slate-700 border-slate-300 hover:bg-slate-100"
@@ -353,8 +356,11 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
             {TOURNAMENTS.map((t) => (
               <button
                 key={t.id}
+                role="tab"
+                aria-selected={selectedTournament === t.id}
+                aria-label={`Filtrar por competição: ${t.name}`}
                 onClick={() => setSelectedTournament(t.id)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all border flex items-center gap-1.5 ${
+                className={`min-h-[36px] px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all border flex items-center gap-1.5 ${
                   selectedTournament === t.id
                     ? "bg-emerald-700 text-white border-emerald-700 shadow-xs"
                     : "bg-white text-slate-700 border-slate-300 hover:bg-slate-100"
@@ -418,18 +424,24 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                 </div>
 
                 {/* Filtro de Status das Partidas */}
-                <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg text-xs font-semibold">
+                <div role="tablist" aria-label="Status das partidas" className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg text-xs font-semibold">
                   <button
+                    role="tab"
+                    aria-selected={matchStatusFilter === "todos"}
+                    aria-label="Filtrar todas as partidas"
                     onClick={() => setMatchStatusFilter("todos")}
-                    className={`px-2.5 py-1 rounded-md transition-colors ${
+                    className={`min-h-[34px] px-2.5 py-1 rounded-md transition-colors flex items-center justify-center ${
                       matchStatusFilter === "todos" ? "bg-white text-slate-950 shadow-2xs font-bold" : "text-slate-600 hover:text-slate-900"
                     }`}
                   >
                     Todos
                   </button>
                   <button
+                    role="tab"
+                    aria-selected={matchStatusFilter === "ao_vivo"}
+                    aria-label="Filtrar partidas ao vivo"
                     onClick={() => setMatchStatusFilter("ao_vivo")}
-                    className={`px-2.5 py-1 rounded-md transition-colors flex items-center gap-1 ${
+                    className={`min-h-[34px] px-2.5 py-1 rounded-md transition-colors flex items-center justify-center gap-1 ${
                       matchStatusFilter === "ao_vivo" ? "bg-rose-600 text-white shadow-2xs font-bold" : "text-slate-600 hover:text-slate-900"
                     }`}
                   >
@@ -437,16 +449,22 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                     Ao Vivo
                   </button>
                   <button
+                    role="tab"
+                    aria-selected={matchStatusFilter === "encerrado"}
+                    aria-label="Filtrar partidas encerradas"
                     onClick={() => setMatchStatusFilter("encerrado")}
-                    className={`px-2.5 py-1 rounded-md transition-colors ${
+                    className={`min-h-[34px] px-2.5 py-1 rounded-md transition-colors flex items-center justify-center ${
                       matchStatusFilter === "encerrado" ? "bg-white text-slate-950 shadow-2xs font-bold" : "text-slate-600 hover:text-slate-900"
                     }`}
                   >
                     Encerrados
                   </button>
                   <button
+                    role="tab"
+                    aria-selected={matchStatusFilter === "proximos"}
+                    aria-label="Filtrar próximas partidas agendadas"
                     onClick={() => setMatchStatusFilter("proximos")}
-                    className={`px-2.5 py-1 rounded-md transition-colors ${
+                    className={`min-h-[34px] px-2.5 py-1 rounded-md transition-colors flex items-center justify-center ${
                       matchStatusFilter === "proximos" ? "bg-white text-slate-950 shadow-2xs font-bold" : "text-slate-600 hover:text-slate-900"
                     }`}
                   >
@@ -487,7 +505,7 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                       type="button"
                       onClick={handlePrevRound}
                       disabled={serieARounds.indexOf(selectedRound) <= 0 || selectedRound === "todas"}
-                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors text-xs font-bold cursor-pointer"
+                      className="inline-flex items-center justify-center gap-1 px-3 py-1.5 min-h-[36px] rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors text-xs font-bold cursor-pointer"
                       title="Rodada anterior"
                       aria-label="Rodada anterior"
                     >
@@ -501,7 +519,7 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                         serieARounds.indexOf(selectedRound) >= serieARounds.length - 1 ||
                         selectedRound === "todas"
                       }
-                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors text-xs font-bold cursor-pointer"
+                      className="inline-flex items-center justify-center gap-1 px-3 py-1.5 min-h-[36px] rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors text-xs font-bold cursor-pointer"
                       title="Próxima rodada"
                       aria-label="Próxima rodada"
                     >

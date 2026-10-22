@@ -152,8 +152,9 @@ export const HomePage: React.FC<HomePageProps> = ({
                   </strong>
                   <button
                     onClick={() => onSelectCandidateFilter(null)}
-                    className="ml-1 text-slate-500 hover:text-slate-900 font-black cursor-pointer text-sm"
+                    className="ml-1 min-h-[28px] min-w-[28px] inline-flex items-center justify-center rounded-md text-slate-500 hover:text-slate-900 hover:bg-slate-200 transition-colors font-black cursor-pointer text-sm"
                     title="Remover filtro"
+                    aria-label="Remover filtro de candidato"
                   >
                     &times;
                   </button>

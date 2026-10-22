@@ -451,6 +451,7 @@ export const BrazilMap: React.FC<BrazilMapProps> = ({
                   setIsSearchOpen(true);
                 }}
                 onFocus={() => setIsSearchOpen(true)}
+                aria-label="Buscar estado no mapa interativo"
                 className="w-full text-xs bg-transparent text-slate-900 placeholder:text-slate-400 focus:outline-none font-medium truncate"
               />
             </div>
@@ -513,14 +514,17 @@ export const BrazilMap: React.FC<BrazilMapProps> = ({
           </div>
 
           {/* Abas de Regiões Brasileiras (Telas Médias e Grandes) */}
-          <div className="hidden lg:flex items-center bg-white/95 backdrop-blur-md rounded-xl p-1 border border-slate-200 shadow-xs text-xs">
+          <div role="tablist" aria-label="Filtro de regiões do Brasil" className="hidden lg:flex items-center bg-white/95 backdrop-blur-md rounded-xl p-1 border border-slate-200 shadow-xs text-xs">
             {Object.entries(REGION_PRESETS).map(([key, item]) => {
               const isActive = activeRegion === key;
               return (
                 <button
                   key={key}
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-label={`Aproximar mapa na região ${item.label}`}
                   onClick={() => handleRegionSelect(key)}
-                  className={`px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer whitespace-nowrap text-xs ${
+                  className={`min-h-[36px] px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer whitespace-nowrap text-xs flex items-center justify-center ${
                     isActive
                       ? "bg-slate-900 text-white shadow-xs"
                       : "text-slate-600 hover:text-slate-950 hover:bg-slate-50"
@@ -533,12 +537,12 @@ export const BrazilMap: React.FC<BrazilMapProps> = ({
           </div>
         </div>
 
-        {/* Direita: Botões de Zoom e Tela Cheia (Mínimo 40px para conforto de toque no mobile) */}
+        {/* Direita: Botões de Zoom e Tela Cheia (Mínimo 44px para padrão ergonômico de toque no mobile) */}
         <div className="flex items-center gap-1.5 pointer-events-auto shrink-0">
           <div className="flex items-center bg-white/95 backdrop-blur-md rounded-xl border border-slate-200 shadow-xs p-1 text-slate-700">
             <button
               onClick={handleZoomIn}
-              className="min-h-[40px] min-w-[40px] flex items-center justify-center hover:bg-slate-100 active:bg-slate-200 rounded-lg transition-colors cursor-pointer text-slate-700 hover:text-slate-950"
+              className="min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-slate-100 active:bg-slate-200 rounded-lg transition-colors cursor-pointer text-slate-700 hover:text-slate-950"
               title="Aproximar visualização (+)"
               aria-label="Aproximar mapa"
             >
@@ -546,7 +550,7 @@ export const BrazilMap: React.FC<BrazilMapProps> = ({
             </button>
             <button
               onClick={handleZoomOut}
-              className="min-h-[40px] min-w-[40px] flex items-center justify-center hover:bg-slate-100 active:bg-slate-200 rounded-lg transition-colors cursor-pointer text-slate-700 hover:text-slate-950"
+              className="min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-slate-100 active:bg-slate-200 rounded-lg transition-colors cursor-pointer text-slate-700 hover:text-slate-950"
               title="Afastar visualização (-)"
               aria-label="Afastar mapa"
             >
@@ -554,7 +558,7 @@ export const BrazilMap: React.FC<BrazilMapProps> = ({
             </button>
             <button
               onClick={handleReset}
-              className={`min-h-[40px] min-w-[40px] flex items-center justify-center hover:bg-slate-100 active:bg-slate-200 rounded-lg transition-colors cursor-pointer ${
+              className={`min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-slate-100 active:bg-slate-200 rounded-lg transition-colors cursor-pointer ${
                 zoom !== 1 || pan.x !== 0 || pan.y !== 0
                   ? "text-blue-700 font-bold bg-blue-50/80"
                   : "text-slate-700 hover:text-slate-950"
@@ -566,7 +570,7 @@ export const BrazilMap: React.FC<BrazilMapProps> = ({
             </button>
             <button
               onClick={toggleFullscreen}
-              className="min-h-[40px] min-w-[40px] flex items-center justify-center hover:bg-slate-100 active:bg-slate-200 rounded-lg transition-colors cursor-pointer text-slate-700 hover:text-slate-950"
+              className="min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-slate-100 active:bg-slate-200 rounded-lg transition-colors cursor-pointer text-slate-700 hover:text-slate-950"
               title={isFullscreen ? "Sair da tela cheia" : "Modo tela cheia"}
               aria-label="Alternar tela cheia"
             >
@@ -937,7 +941,7 @@ export const BrazilMap: React.FC<BrazilMapProps> = ({
       {!isMobileLegendOpen && (
         <button
           onClick={() => setIsMobileLegendOpen(true)}
-          className="sm:hidden absolute bottom-3 left-3 z-20 flex items-center gap-1.5 bg-white/95 backdrop-blur-md px-3 py-2 rounded-xl border border-slate-200 shadow-md text-xs font-bold text-slate-800 cursor-pointer active:bg-slate-100"
+          className="sm:hidden absolute bottom-3 left-3 z-20 min-h-[44px] flex items-center gap-1.5 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-slate-200 shadow-md text-xs font-bold text-slate-800 cursor-pointer active:bg-slate-100"
           aria-label="Abrir legenda e filtros por candidato"
         >
           <Layers className="w-3.5 h-3.5 text-slate-600" />
@@ -961,14 +965,15 @@ export const BrazilMap: React.FC<BrazilMapProps> = ({
             {candidateFilter && (
               <button
                 onClick={() => onSelectCandidateFilter(null)}
-                className="text-[10px] text-blue-700 underline hover:text-blue-900 cursor-pointer font-bold"
+                aria-label="Remover filtro de candidato no mapa"
+                className="text-[10px] text-blue-700 underline hover:text-blue-900 cursor-pointer font-bold min-h-[28px] inline-flex items-center"
               >
                 Limpar filtro
               </button>
             )}
             <button
               onClick={() => setIsMobileLegendOpen(false)}
-              className="sm:hidden p-1 text-slate-400 hover:text-slate-700 active:bg-slate-100 rounded-lg cursor-pointer"
+              className="sm:hidden min-h-[44px] min-w-[44px] flex items-center justify-center text-slate-400 hover:text-slate-700 active:bg-slate-100 rounded-lg cursor-pointer"
               title="Recolher legenda"
               aria-label="Recolher legenda"
             >

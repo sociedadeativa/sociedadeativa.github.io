@@ -548,10 +548,13 @@ export const BolsaSection: React.FC = () => {
       <div className="space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200">
           {/* Navegação entre Abas de Rankings */}
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
+          <div role="tablist" aria-label="Rankings de ações da B3" className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
             <button
+              role="tab"
+              aria-selected={activeTab === "mostTraded"}
+              aria-label={`Ver ações mais negociadas na B3 (${mostTraded.length} ativos)`}
               onClick={() => setActiveTab("mostTraded")}
-              className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
+              className={`min-h-[40px] px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
                 activeTab === "mostTraded"
                   ? "bg-slate-900 text-white shadow-xs"
                   : "bg-slate-100 hover:bg-slate-200 text-slate-700"
@@ -562,8 +565,11 @@ export const BolsaSection: React.FC = () => {
             </button>
 
             <button
+              role="tab"
+              aria-selected={activeTab === "gainers"}
+              aria-label={`Ver maiores altas do pregão na B3 (${gainers.length} ativos)`}
               onClick={() => setActiveTab("gainers")}
-              className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
+              className={`min-h-[40px] px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
                 activeTab === "gainers"
                   ? "bg-slate-900 text-white shadow-xs"
                   : "bg-slate-100 hover:bg-slate-200 text-slate-700"
@@ -574,8 +580,11 @@ export const BolsaSection: React.FC = () => {
             </button>
 
             <button
+              role="tab"
+              aria-selected={activeTab === "decliners"}
+              aria-label={`Ver maiores baixas do pregão na B3 (${decliners.length} ativos)`}
               onClick={() => setActiveTab("decliners")}
-              className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
+              className={`min-h-[40px] px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
                 activeTab === "decliners"
                   ? "bg-slate-900 text-white shadow-xs"
                   : "bg-slate-100 hover:bg-slate-200 text-slate-700"

@@ -235,18 +235,21 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
 
             {/* Campo de Busca Rápida de Notícias de Tecnologia */}
             <div className="relative max-w-xs w-full">
-              <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+              <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
               <input
                 type="text"
                 placeholder="Buscar termos em tecnologia..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-8 pr-3 py-1.5 text-xs bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 placeholder-slate-400"
+                aria-label="Buscar termos e notícias em tecnologia"
+                className="w-full pl-8 pr-8 py-1.5 text-xs bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 placeholder-slate-400"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs font-bold"
+                  className="absolute right-1 top-1/2 -translate-y-1/2 min-h-[32px] min-w-[32px] flex items-center justify-center text-slate-400 hover:text-slate-600 text-xs font-bold rounded-md cursor-pointer"
+                  title="Limpar busca"
+                  aria-label="Limpar busca de tecnologia"
                 >
                   &times;
                 </button>
@@ -255,15 +258,18 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
           </div>
 
           {/* Abas de Tópicos Responsivas */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
+          <div role="tablist" aria-label="Áreas tecnológicas" className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
             {TECH_TOPICS.map((topic) => {
               const Icon = topic.icon;
               const isActive = selectedTopic === topic.id;
               return (
                 <button
                   key={topic.id}
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-label={`Filtrar por área tecnológica: ${topic.label}`}
                   onClick={() => setSelectedTopic(topic.id)}
-                  className={`p-3 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
+                  className={`p-3 min-h-[44px] rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
                     isActive
                       ? "bg-indigo-900 text-white border-indigo-900 shadow-xs"
                       : "bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50"

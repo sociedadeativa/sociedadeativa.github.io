@@ -147,6 +147,9 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
         </div>
 
         {/* Grade Editorial Principal: Lead Story + Destaques Secundários Separados */}
+        {!leadArticle && (
+          <h1 className="sr-only">Sociedade Ativa — Cobertura Editorial e Jornalismo de Dados do Brasil</h1>
+        )}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-start">
           {/* Coluna Principal: Matéria Líder com Imagem Horizontal e Destaque Editorial */}
           {leadArticle && (

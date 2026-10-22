@@ -22,6 +22,7 @@ export const MethodologyModal: React.FC<MethodologyModalProps> = ({
           onClick={onClose}
           className="absolute top-4 right-4 min-h-[44px] min-w-[44px] flex items-center justify-center text-stone-500 hover:text-stone-900 rounded-xl hover:bg-stone-100 active:bg-stone-200 transition-colors cursor-pointer"
           title="Fechar"
+          aria-label="Fechar modal de metodologia eleitoral"
         >
           <X className="w-5 h-5" />
         </button>

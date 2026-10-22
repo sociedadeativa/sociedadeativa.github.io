@@ -101,6 +101,9 @@ export const EconomySection: React.FC = () => {
                       ? "bg-slate-900 text-white shadow-xs"
                       : "bg-slate-100 hover:bg-slate-200 text-slate-700"
                   }`}
+                  role="tab"
+                  aria-selected={selectedCategory === cat}
+                  aria-label={`Filtrar indicadores pela categoria ${cat}`}
                 >
                   {cat}
                 </button>
@@ -110,12 +113,15 @@ export const EconomySection: React.FC = () => {
             {/* Busca e Filtro de Fonte */}
             <div className="flex items-center gap-2">
               {/* Filtro por Fonte */}
-              <div className="flex items-center bg-slate-100 p-0.5 rounded-xl border border-slate-200/80 text-xs">
+              <div role="tablist" aria-label="Filtrar por instituição emissora" className="flex items-center bg-slate-100 p-0.5 rounded-xl border border-slate-200/80 text-xs">
                 {(["Todas", "IBGE", "Banco Central do Brasil"] as (OfficialAgency | "Todas")[]).map((src) => (
                   <button
                     key={src}
+                    role="tab"
+                    aria-selected={selectedSource === src}
+                    aria-label={`Filtrar indicadores pela fonte oficial ${src}`}
                     onClick={() => setSelectedSource(src)}
-                    className={`px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer whitespace-nowrap ${
+                    className={`min-h-[32px] px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer whitespace-nowrap flex items-center justify-center ${
                       selectedSource === src
                         ? "bg-white text-slate-900 shadow-2xs"
                         : "text-slate-600 hover:text-slate-900"
@@ -128,13 +134,14 @@ export const EconomySection: React.FC = () => {
 
               {/* Campo de Busca */}
               <div className="relative flex-1 sm:w-60">
-                <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
                 <input
                   type="text"
                   placeholder="Buscar indicador..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-slate-800 placeholder-slate-400"
+                  aria-label="Buscar indicador econômico oficial"
+                  className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 transition-all text-slate-800 placeholder-slate-400"
                 />
               </div>
             </div>

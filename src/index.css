@@ -34,6 +34,36 @@
   }
 }
 
+/* Global Keyboard Focus Visibility (A11y Priority 1) */
+@layer base {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible,
+  [role="button"]:focus-visible,
+  [role="tab"]:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+  }
+
+  /* High contrast focus ring on dark surfaces */
+  .bg-slate-900 a:focus-visible,
+  .bg-slate-900 button:focus-visible,
+  .bg-slate-900 input:focus-visible,
+  .bg-slate-950 a:focus-visible,
+  .bg-slate-950 button:focus-visible,
+  .bg-slate-950 input:focus-visible,
+  .bg-slate-950 select:focus-visible,
+  .bg-slate-900 select:focus-visible,
+  .bg-slate-900 [role="button"]:focus-visible,
+  .bg-slate-950 [role="button"]:focus-visible {
+    outline: 2px solid #60a5fa;
+    outline-offset: 2px;
+  }
+}
+
 /* Brazil SVG Map Styling */
 .brazil-state-path {
   transition: transform 0.15s ease-out, fill 0.25s ease-out, stroke 0.15s ease-out, filter 0.15s ease-out;
@@ -49,6 +79,23 @@
   stroke: #ffffff !important;
   stroke-width: 2.4px !important;
   filter: brightness(1.18) drop-shadow(0 6px 16px rgba(0, 0, 0, 0.38));
+}
+
+.brazil-state-path:focus-visible {
+  stroke: #0284c7 !important;
+  stroke-width: 3.2px !important;
+  filter: drop-shadow(0 0 8px rgba(2, 132, 199, 0.95)) brightness(1.18) !important;
+  outline: none;
+}
+
+g[role="button"]:focus-visible {
+  outline: 2px solid #0284c7;
+  outline-offset: 2px;
+}
+
+g[role="button"]:focus-visible rect {
+  stroke: #0284c7 !important;
+  stroke-width: 2.2px !important;
 }
 
 /* Custom smooth scrollbars */

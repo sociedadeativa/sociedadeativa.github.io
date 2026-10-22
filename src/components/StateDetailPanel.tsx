@@ -85,7 +85,7 @@ export const StateDetailPanel: React.FC<StateDetailPanelProps> = ({
             <div className="flex items-center gap-1.5">
               <button
                 onClick={() => onSelectState(prevUf)}
-                className="min-h-[40px] min-w-[40px] flex items-center justify-center rounded-xl hover:bg-slate-200 active:bg-slate-300 text-slate-700 transition-colors cursor-pointer"
+                className="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-xl hover:bg-slate-200 active:bg-slate-300 text-slate-700 transition-colors cursor-pointer"
                 title={`Estado anterior (${prevUf})`}
                 aria-label={`Ver estado anterior: ${prevUf}`}
               >
@@ -93,7 +93,7 @@ export const StateDetailPanel: React.FC<StateDetailPanelProps> = ({
               </button>
               <button
                 onClick={() => onSelectState(nextUf)}
-                className="min-h-[40px] min-w-[40px] flex items-center justify-center rounded-xl hover:bg-slate-200 active:bg-slate-300 text-slate-700 transition-colors cursor-pointer"
+                className="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-xl hover:bg-slate-200 active:bg-slate-300 text-slate-700 transition-colors cursor-pointer"
                 title={`Próximo estado (${nextUf})`}
                 aria-label={`Ver próximo estado: ${nextUf}`}
               >
@@ -102,7 +102,7 @@ export const StateDetailPanel: React.FC<StateDetailPanelProps> = ({
               <div className="h-5 w-px bg-slate-300 mx-0.5" />
               <button
                 onClick={onClose}
-                className="min-h-[40px] min-w-[40px] flex items-center justify-center rounded-xl hover:bg-slate-200 active:bg-slate-300 text-slate-700 transition-colors cursor-pointer"
+                className="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-xl hover:bg-slate-200 active:bg-slate-300 text-slate-700 transition-colors cursor-pointer"
                 title="Fechar painel"
                 aria-label="Fechar painel de detalhes do estado"
               >

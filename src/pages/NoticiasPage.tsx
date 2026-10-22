@@ -79,13 +79,15 @@ export const NoticiasPage: React.FC<NoticiasPageProps> = ({
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Pesquisar por assunto, palavra-chave ou órgão..."
-                className="w-full pl-9 pr-8 py-2 rounded-xl text-xs sm:text-sm bg-slate-50 border border-slate-200 focus:bg-white focus:border-slate-400 focus:ring-2 focus:ring-slate-900/10 outline-none text-slate-800 transition-all placeholder:text-slate-400"
+                aria-label="Pesquisar notícias oficiais por assunto ou órgão"
+                className="w-full pl-9 pr-9 py-2 rounded-xl text-xs sm:text-sm bg-slate-50 border border-slate-200 focus:bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus-visible:outline-hidden text-slate-800 transition-all placeholder:text-slate-400"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 p-0.5"
+                  className="absolute right-1 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 min-h-[32px] min-w-[32px] flex items-center justify-center rounded-lg cursor-pointer"
                   title="Limpar busca"
+                  aria-label="Limpar busca de notícias"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -94,13 +96,15 @@ export const NoticiasPage: React.FC<NoticiasPageProps> = ({
 
             {/* Seletor de Agência / Fonte Oficial */}
             <div className="flex items-center gap-2 w-full sm:w-auto">
-              <span className="text-xs font-semibold text-slate-500 whitespace-nowrap">
+              <label htmlFor="select-fonte-oficial-noticias" className="text-xs font-semibold text-slate-500 whitespace-nowrap">
                 Fonte:
-              </span>
+              </label>
               <select
+                id="select-fonte-oficial-noticias"
                 value={selectedSource}
                 onChange={(e) => setSelectedSource(e.target.value)}
-                className="w-full sm:w-auto text-xs py-2 px-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-800 font-medium focus:border-slate-400 outline-none cursor-pointer"
+                aria-label="Filtrar notícias por fonte ou agência oficial"
+                className="w-full sm:w-auto text-xs py-2 px-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-800 font-medium focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 outline-hidden cursor-pointer"
               >
                 {sources.map((src) => (
                   <option key={src} value={src}>
@@ -112,14 +116,17 @@ export const NoticiasPage: React.FC<NoticiasPageProps> = ({
           </div>
 
           {/* Abas de Categorias Editoriais (Botões Interativos) */}
-          <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-none pt-2 border-t border-slate-100">
+          <div role="tablist" aria-label="Categorias editoriais de notícias" className="flex items-center gap-1.5 overflow-x-auto scrollbar-none pt-2 border-t border-slate-100">
             {categories.map((cat) => {
               const isSelected = selectedCategory === cat;
               return (
                 <button
                   key={cat}
+                  role="tab"
+                  aria-selected={isSelected}
+                  aria-label={`Filtrar notícias pela categoria ${cat}`}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap cursor-pointer shrink-0 ${
+                  className={`min-h-[34px] px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap cursor-pointer shrink-0 flex items-center justify-center ${
                     isSelected
                       ? "bg-slate-900 text-white shadow-xs"
                       : "bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900"

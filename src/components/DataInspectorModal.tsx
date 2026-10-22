@@ -91,6 +91,7 @@ export const DataInspectorModal: React.FC<DataInspectorModalProps> = ({
           onClick={onClose}
           className="absolute top-4 right-4 min-h-[44px] min-w-[44px] flex items-center justify-center text-slate-500 hover:text-slate-900 rounded-xl hover:bg-slate-100 active:bg-slate-200 transition-colors cursor-pointer"
           title="Fechar"
+          aria-label="Fechar modal de inspeção de dados"
         >
           <X className="w-5 h-5" />
         </button>
@@ -141,6 +142,7 @@ export const DataInspectorModal: React.FC<DataInspectorModalProps> = ({
                 type="file"
                 accept=".json"
                 onChange={handleFileUpload}
+                aria-label="Importar arquivo JSON de dados eleitorais"
                 className="hidden"
               />
             </label>
@@ -187,6 +189,7 @@ export const DataInspectorModal: React.FC<DataInspectorModalProps> = ({
             <textarea
               value={jsonText}
               onChange={(e) => setJsonText(e.target.value)}
+              aria-label="Editor de código JSON dos dados eleitorais"
               className="w-full h-full bg-transparent text-emerald-400 font-mono text-[11px] focus:outline-none resize-none leading-relaxed"
               spellCheck={false}
             />

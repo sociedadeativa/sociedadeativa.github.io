@@ -168,8 +168,9 @@ export const CandidateResultsView: React.FC<CandidateResultsViewProps> = ({
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
-                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-700 cursor-pointer font-bold px-1"
+                className="absolute right-1 top-1/2 -translate-y-1/2 min-h-[32px] min-w-[32px] flex items-center justify-center text-xs text-slate-400 hover:text-slate-700 cursor-pointer font-bold rounded-lg"
                 title="Limpar busca"
+                aria-label="Limpar pesquisa de candidatos"
               >
                 ✕
               </button>
@@ -186,6 +187,7 @@ export const CandidateResultsView: React.FC<CandidateResultsViewProps> = ({
               id="select-ordenacao-candidatos"
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value as SortOption)}
+              aria-label="Ordenar candidatos por critério de votação"
               className="text-xs font-semibold text-slate-800 bg-slate-50 border border-slate-200 rounded-xl px-2.5 py-2 focus:outline-none focus:ring-2 focus:ring-blue-700/20 cursor-pointer"
             >
               <option value="votes-desc">Total de Votos (Maior para menor)</option>
@@ -197,7 +199,7 @@ export const CandidateResultsView: React.FC<CandidateResultsViewProps> = ({
         </div>
 
         {/* Filtro por Partido (Abas / Pílulas discretas) */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+        <div role="tablist" aria-label="Filtrar candidatos por agremiação partidária" className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
           <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mr-1 shrink-0 flex items-center gap-1">
             <Filter className="w-3 h-3 text-slate-400" />
             Partido:
@@ -208,8 +210,11 @@ export const CandidateResultsView: React.FC<CandidateResultsViewProps> = ({
             return (
               <button
                 key={party}
+                role="tab"
+                aria-selected={isActive}
+                aria-label={`Filtrar candidatos por ${label}`}
                 onClick={() => setPartyFilter(party)}
-                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap ${
+                className={`min-h-[34px] px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center justify-center ${
                   isActive
                     ? "bg-slate-900 text-white shadow-xs"
                     : "bg-slate-100 hover:bg-slate-200 text-slate-700"

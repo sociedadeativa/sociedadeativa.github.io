@@ -489,6 +489,7 @@ export const ClimaPage: React.FC<ClimaPageProps> = ({
                   }}
                   onFocus={() => setIsSearchOpen(true)}
                   placeholder="Pesquise qualquer cidade do Brasil ou do mundo (ex: São Paulo, Paris, Santiago, Curitiba, Nova York, Roma...)"
+                  aria-label="Pesquisar previsão do tempo por cidade ou região"
                   className="w-full pl-11 pr-24 py-3.5 bg-white border border-slate-300 rounded-2xl shadow-xs text-sm sm:text-base text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-600 focus:border-sky-600 transition-all font-medium"
                 />
                 <div className="absolute right-2 flex items-center gap-1">
@@ -499,15 +500,16 @@ export const ClimaPage: React.FC<ClimaPageProps> = ({
                         setSearchQuery("");
                         setGeocodedSuggestions([]);
                       }}
-                      className="p-1.5 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer"
+                      className="min-h-[36px] min-w-[36px] flex items-center justify-center text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer"
                       title="Limpar campo de pesquisa"
+                      aria-label="Limpar campo de pesquisa"
                     >
                       <X className="w-4 h-4" />
                     </button>
                   )}
                   <button
                     type="submit"
-                    className="px-3.5 py-2 bg-sky-700 hover:bg-sky-800 text-white text-xs font-bold rounded-xl transition-colors cursor-pointer shadow-2xs"
+                    className="min-h-[36px] px-3.5 py-2 bg-sky-700 hover:bg-sky-800 text-white text-xs font-bold rounded-xl transition-colors cursor-pointer shadow-2xs flex items-center justify-center"
                   >
                     Buscar
                   </button>

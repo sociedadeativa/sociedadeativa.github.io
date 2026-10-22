@@ -171,17 +171,21 @@ export const StateTable: React.FC<StateTableProps> = ({
               placeholder="Filtrar por estado ou sigla (ex: São Paulo, SP, Minas)..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-9 pr-3 py-2 text-xs bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-500 text-slate-900 placeholder:text-slate-400 font-medium"
+              aria-label="Filtrar estados por nome ou sigla"
+              className="w-full pl-9 pr-3 py-2 text-xs bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 text-slate-900 placeholder:text-slate-400 font-medium"
             />
           </div>
 
           {/* Filtros por Vencedor e Região */}
           <div className="flex flex-wrap items-center gap-2 text-xs">
             {/* Filtro por Vencedor */}
-            <div className="flex items-center gap-1 bg-white p-1 rounded-xl border border-slate-200 shadow-2xs overflow-x-auto max-w-full">
+            <div role="tablist" aria-label="Filtrar estados por resultado de apuração" className="flex items-center gap-1 bg-white p-1 rounded-xl border border-slate-200 shadow-2xs overflow-x-auto max-w-full">
               <button
+                role="tab"
+                aria-selected={selectedWinnerFilter === "all"}
+                aria-label="Exibir todos os estados"
                 onClick={() => setSelectedWinnerFilter("all")}
-                className={`min-h-[40px] px-3 py-2 rounded-lg transition-colors cursor-pointer text-xs font-bold whitespace-nowrap active:bg-slate-200 ${
+                className={`min-h-[44px] px-3.5 py-2 rounded-lg transition-colors cursor-pointer text-xs font-bold whitespace-nowrap active:bg-slate-200 flex items-center justify-center ${
                   selectedWinnerFilter === "all"
                     ? "bg-slate-900 text-white"
                     : "text-slate-600 hover:text-slate-950"
@@ -190,8 +194,11 @@ export const StateTable: React.FC<StateTableProps> = ({
                 Todos
               </button>
               <button
+                role="tab"
+                aria-selected={selectedWinnerFilter === "flavio"}
+                aria-label="Filtrar estados com vitória de Flávio Bolsonaro"
                 onClick={() => setSelectedWinnerFilter("flavio")}
-                className={`min-h-[40px] px-3 py-2 rounded-lg transition-colors cursor-pointer text-xs font-bold whitespace-nowrap active:bg-blue-100 ${
+                className={`min-h-[44px] px-3.5 py-2 rounded-lg transition-colors cursor-pointer text-xs font-bold whitespace-nowrap active:bg-blue-100 flex items-center justify-center ${
                   selectedWinnerFilter === "flavio"
                     ? "bg-blue-700 text-white"
                     : "text-blue-700 hover:bg-blue-50"
@@ -200,8 +207,11 @@ export const StateTable: React.FC<StateTableProps> = ({
                 Vitória Flávio Bolsonaro
               </button>
               <button
+                role="tab"
+                aria-selected={selectedWinnerFilter === "lula"}
+                aria-label="Filtrar estados com vitória de Lula"
                 onClick={() => setSelectedWinnerFilter("lula")}
-                className={`min-h-[40px] px-3 py-2 rounded-lg transition-colors cursor-pointer text-xs font-bold whitespace-nowrap active:bg-red-100 ${
+                className={`min-h-[44px] px-3.5 py-2 rounded-lg transition-colors cursor-pointer text-xs font-bold whitespace-nowrap active:bg-red-100 flex items-center justify-center ${
                   selectedWinnerFilter === "lula"
                     ? "bg-red-600 text-white"
                     : "text-red-700 hover:bg-red-50"
@@ -212,15 +222,18 @@ export const StateTable: React.FC<StateTableProps> = ({
             </div>
 
             {/* Filtro por Região */}
-            <div className="flex items-center gap-1 overflow-x-auto text-xs py-0.5 max-w-full">
+            <div role="tablist" aria-label="Filtrar tabela por região geográfica" className="flex items-center gap-1 overflow-x-auto text-xs py-0.5 max-w-full">
               {["all", "Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"].map(
                 (reg) => {
                   const isActive = selectedRegion === reg;
                   return (
                     <button
                       key={reg}
+                      role="tab"
+                      aria-selected={isActive}
+                      aria-label={`Filtrar por ${reg === "all" ? "todas as regiões" : `região ${reg}`}`}
                       onClick={() => setSelectedRegion(reg)}
-                      className={`min-h-[40px] px-3 py-2 rounded-xl transition-colors cursor-pointer whitespace-nowrap text-xs font-bold active:bg-slate-200 ${
+                      className={`min-h-[44px] px-3.5 py-2 rounded-xl transition-colors cursor-pointer whitespace-nowrap text-xs font-bold active:bg-slate-200 flex items-center justify-center ${
                         isActive
                           ? "bg-slate-900 text-white shadow-xs"
                           : "bg-white text-slate-600 hover:text-slate-950 border border-slate-200"
