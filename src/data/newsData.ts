@@ -5,6 +5,320 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "camara-1310139-proposta-cria-marco-legal-para",
+    "title": "Proposta cria marco legal para o Programa de Garantia de Preços para a Agricultura Familiar",
+    "summary": "Projeto transforma regras atuais em lei e estabelece critérios de desconto em financiamentos do Pronaf quando o preço de mercado cair.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1310139-proposta-cria-marco-legal-para-o-programa-de-garantia-de-precos-para-a-agricultura-familiar",
+    "publishedAt": "22/10/2026 às 16:17",
+    "category": "Congresso",
+    "ingestedAt": "22/10/2026 às 16:27",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20251014162322396-768x473.jpg",
+    "imageCaption": "Deputado Pezenti: proposição busca fortalecer o programa por meio de base legal específica",
+    "imageCredit": "Pablo Valadares/Câmara dos Deputados",
+    "imageAlt": "Audiência Pública - Debater o acesso ao crédito rural. Dep. Pezenti (MDB-SC)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Pablo Valadares/Câmara dos Deputados",
+      "Deputado Pezenti: proposição busca fortalecer o programa por meio de base legal específica",
+      "O Projeto de Lei 3039/26 institui em lei federal o Programa de Garantia de Preços para a Agricultura Familiar (PGPAF). A medida visa proteger a renda dos produtores rurais enquadrados no Programa Nacional de Fortalecimento da Agricultura Familiar (Pronaf) e assegurar a sustentabilidade econômica da produção no campo.",
+      "Criado originalmente e regulamentado pelo Decreto 5.996/06 , o programa garante aos agricultores um bônus de desconto no pagamento de financiamentos rurais de custeio ou investimento. O desconto é concedido quando o preço de venda do produto no mercado fica abaixo do preço de garantia fixado para a cultura.",
+      "“A proposição busca fortalecer o PGPAF por meio de base legal específica, conferindo-lhe maior segurança jurídica, estabilidade institucional e legitimidade democrática”, explica o autor do projeto, deputado Pezenti (MDB-SC).",
+      "Conforme o texto, o preço de garantia de cada produto será calculado com base no seu custo variável de produção, podendo variar em até 10% para mais ou para menos, sem ficar abaixo do preço mínimo oficial definido pelo governo federal.",
+      "Uma das novidades da proposta é permitir que o comitê gestor do programa defina valores mínimos de bônus por hectare financiado, variando conforme o produto e a modalidade de crédito. Segundo Pezenti, essa medida corrige uma limitação do modelo atual, que aplica limites por CPF sem considerar o tamanho da área cultivada.",
+      "“O PGPAF consolidou-se, ao longo de quase duas décadas, como um dos mais relevantes instrumentos de proteção de renda da agricultura familiar brasileira”, reforça o autor. Ele acrescenta que o projeto transforma o programa em “um instrumento mais moderno, eficiente e alinhado às melhores práticas de política agrícola”.",
+      "A Companhia Nacional de Abastecimento (Conab) prestará apoio técnico no levantamento dos custos de produção e na apuração dos preços de mercado. As regras operacionais e limites de desconto caberão ao Conselho Monetário Nacional (CMN).",
+      "A concessão do bônus será condicionada à disponibilidade orçamentária da União. Em caso de insuficiência de recursos, terão prioridade no atendimento os agricultores de menor renda, as regiões de maior vulnerabilidade socioeconômica e os cultivos essenciais à segurança alimentar.",
+      "O projeto tramita em caráter conclusivo e será analisado pelas seguintes comissões da Câmara:",
+      "Para virar lei, o texto precisa ser aprovado pelos deputados e pelos senadores.",
+      "Saiba mais sobre a tramitação de projetos de lei"
+    ]
+  },
+  {
+    "id": "camara-1310222-projeto-exige-que-hospitais-di",
+    "title": "Projeto exige que hospitais divulguem canais de denúncia contra violência a pessoas idosas",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1310222-projeto-exige-que-hospitais-divulguem-canais-de-denuncia-contra-violencia-a-pessoas-idosas",
+    "publishedAt": "22/10/2026 às 16:15",
+    "category": "Congresso",
+    "ingestedAt": "22/10/2026 às 16:27",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260602175730908-1-768x473.jpg",
+    "imageCaption": "Deputado Ribeiro Neto, autor do projeto",
+    "imageCredit": "Bruno Spada/Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Ribeiro Neto (SOLIDARIEDADE - MA)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Bruno Spada/Câmara dos Deputados",
+      "Deputado Ribeiro Neto, autor do projeto",
+      "O Projeto de Lei 1432/26 torna obrigatória a afixação de informações sobre canais oficiais de denúncia de violência, maus-tratos e abandono de pessoas idosas em estabelecimentos de saúde públicos e privados.",
+      "O texto está em análise na Câmara dos Deputados. O material deverá apresentar os principais canais de denúncia (telefônicos e digitais), orientações para registro de queixas e mensagens de conscientização sobre a proteção da pessoa idosa.",
+      "Os avisos deverão ser instalados em locais visíveis e de grande circulação, como recepções, salas de espera e áreas de atendimento. O descumprimento sujeitará a unidade de saúde a sanções administrativas previstas em regulamento.",
+      "O projeto busca estimular as denúncias, ampliar a conscientização e fortalecer a rede de proteção à pessoa idosa. Para o autor, deputado Ribeiro Neto (Solidariedade-MA), os serviços de saúde têm papel estratégico no enfrentamento ao problema.",
+      "“A violência contra a pessoa idosa, incluindo o abandono e os maus-tratos, constitui grave violação de direitos humanos, frequentemente invisibilizada pela subnotificação”, escreveu o parlamentar na justificativa da proposta.",
+      "O projeto será analisado em caráter conclusivo pelas comissões de Saúde; de Defesa dos Direitos da Pessoa Idosa; e de Constituição e Justiça e de Cidadania. Para virar lei, terá de ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
+    ]
+  },
+  {
+    "id": "camara-1313178-projeto-de-lei-amplia-oferta-d",
+    "title": "Projeto de lei amplia oferta de geriatras no SUS",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313178-projeto-de-lei-amplia-oferta-de-geriatras-no-sus",
+    "publishedAt": "22/10/2026 às 15:42",
+    "category": "Congresso",
+    "ingestedAt": "22/10/2026 às 16:27",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260708174040766-768x473.jpg",
+    "imageCaption": "Cabo Gilberto Silva: aumento da expectativa de vida impõe novos desafios à saúde pública",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Cabo Gilberto Silva (PL - PB)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Kayo Magalhães / Câmara dos Deputados",
+      "Cabo Gilberto Silva: aumento da expectativa de vida impõe novos desafios à saúde pública",
+      "O Projeto de Lei 3779/26, em análise na Câmara dos Deputados, altera o Estatuto da Pessoa Idosa para estabelecer diretrizes voltadas ao fortalecimento da assistência geriátrica no Sistema Único de Saúde (SUS). Regiões com menor oferta de médicos terão prioridade.",
+      "Pelo texto, o poder público:",
+      "A proposta, de autoria do deputado Cabo Gilberto Silva (PL-PB), prevê ainda o apoio técnico e financeiro da União a estados, Distrito Federal e municípios para expandir o atendimento especializado.",
+      "Outra medida é o fortalecimento da integração entre a atenção primária à saúde e a atenção especializada, com o objetivo de assegurar o acesso das pessoas idosas ao médico geriatra.",
+      "Cabo Gilberto Silva especifica que as diretrizes não criam direito individual ao atendimento exclusivo por médico geriatra nem alteram a organização administrativa do SUS, atuando como um balizador legal para ações permanentes do Estado.",
+      "“ O crescimento contínuo da população idosa impõe novos desafios à organização da rede pública de saúde”, justifica o parlamentar. “A medida contribui para reduzir desigualdades regionais e promover atendimento mais qualificado.”",
+      "O projeto será analisado, em caráter conclusivo , pelas seguintes comissões:",
+      "Para virar lei, o texto precisa ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
+    ]
+  },
+  {
+    "id": "ebc-1706230",
+    "title": "Campanha de Lula apresenta acordo com Flávio para abrir sigilos",
+    "summary": "O senador Camilo Santana (PT-CE) apresentou nesta quinta-feira (22) um termo assinado pelos candidatos à Presidência da República Luiz Inácio Lula da Silva e Flávio Bolsonaro, em que autorizam a abertura do sigilo bancário, fiscal e telefônico de ambos, ainda nesta quinta, até.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/campanha-de-lula-apresenta-acordo-com-flavio-para-abrir-sigilos",
+    "publishedAt": "22/10/2026 às 15:33",
+    "category": "Eleições",
+    "ingestedAt": "22/10/2026 às 16:27",
+    "imageUrl": "https://imagens.ebc.com.br/Pkh0ccdLTbr4TlGANDhx23COeek=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/18/sem_titulo_1.jpg?itok=WGMsot7n",
+    "imageCaption": "Campanha de Lula apresenta acordo com Flávio para abrir sigilos",
+    "imageCredit": "Felipe Pontes - repórter da Agência Brasil",
+    "imageAlt": "Campanha de Lula apresenta acordo com Flávio para abrir sigilos",
+    "author": "Felipe Pontes - repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "TSE",
+      "sigilo bancário",
+      "Lula"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706202",
+    "title": "Prefeituras e estados devem garantir transporte gratuito no 2° turno",
+    "summary": "Mais de 158,7 milhões de eleitoras e eleitores vão às urnas, neste domingo (25), em todo o país, para decidir quem presidirá o Brasil de 2027 a 2030.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleicoes-prefeituras-estados-devem-garantir-transporte-gratuito-no-segundo-turno",
+    "publishedAt": "22/10/2026 às 15:21",
+    "category": "Eleições",
+    "ingestedAt": "22/10/2026 às 16:27",
+    "imageUrl": "https://imagens.ebc.com.br/JLAA18GEefVpf7Vg04kQTxpuljY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/05/pzzb3808.jpg?itok=CCc6KlCa",
+    "imageCaption": "Prefeituras e estados devem garantir transporte gratuito no 2° turno",
+    "imageCredit": "Alex Rodrigues – Repórter da Agência Brasil",
+    "imageAlt": "Prefeituras e estados devem garantir transporte gratuito no 2° turno",
+    "author": "Alex Rodrigues – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "transporte público",
+      "mobilidade urbana",
+      "segundo turno",
+      "eleições 2026"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706201",
+    "title": "Doença de Newcastle: protocolos sanitários são cumpridos em SC",
+    "summary": "O Ministério da Agricultura e Pecuária informou que foi concluído o despovoamento sanitário do estabelecimento comercial de criação de perus de corte no município de Nova Itaberaba , em Santa Catarina, onde foi identificado um foco da doença de Newcastle .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/doenca-de-newcastle-protocolos-sanitarios-sao-cumpridos-em-sc",
+    "publishedAt": "22/10/2026 às 15:21",
+    "category": "Governo",
+    "ingestedAt": "22/10/2026 às 16:27",
+    "imageUrl": "https://imagens.ebc.com.br/XyxbQZQr-QvRunVKrG5AFxjzQmE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/05/27/0d7a4285_0.jpg?itok=sgt4__fT",
+    "imageCaption": "Doença de Newcastle: protocolos sanitários são cumpridos em SC",
+    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
+    "imageAlt": "Doença de Newcastle: protocolos sanitários são cumpridos em SC",
+    "author": "Paula Laboissière – Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "doença de Newcastle",
+      "Ministério da Agricultura",
+      "emergência zoosanitária",
+      "Peru"
+    ],
+    "content": []
+  },
+  {
+    "id": "camara-1313023-projeto-proibe-plataformas-de-",
+    "title": "Projeto proíbe plataformas de induzir uso compulsivo e manipular usuários",
+    "summary": "O texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313023-projeto-proibe-plataformas-de-induzir-uso-compulsivo-e-manipular-usuarios",
+    "publishedAt": "22/10/2026 às 15:10",
+    "category": "Congresso",
+    "ingestedAt": "22/10/2026 às 16:27",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260527180356967-768x473.jpg",
+    "imageCaption": "Natália Bonavides: proposta também busca coibir o uso opaco de dados pessoais para distorcer o debate público e o processo eleitoral",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Discussão e Votação de propostas legislativas. Dep. Natália Bonavides (PT - RN)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706200",
+    "title": "BPC evitou 571 mil mortes e 13 milhões de internações em 30 anos",
+    "summary": "O Benefício de Prestação Continuada (BPC), auxílio pago pelo governo federal a idosos com mais de 65 anos e pessoas com deficiência em situação de pobreza, evitou, em 30 anos, 571 mil mortes e 13 milhões de internações hospitalares pelo Sistema Único de Saúde (SUS).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/bpc-evitou-571-mil-mortes-e-13-milhoes-de-internacoes-em-30-anos",
+    "publishedAt": "22/10/2026 às 14:53",
+    "category": "Governo",
+    "ingestedAt": "22/10/2026 às 16:27",
+    "imageUrl": "https://imagens.ebc.com.br/cSl0BT1QwBsgC_q1wj57nPjSlwk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/mcamg_abr_280918_6635_1.jpg?itok=y7Vic1kh",
+    "imageCaption": "BPC evitou 571 mil mortes e 13 milhões de internações em 30 anos",
+    "imageCredit": "Iara Balduino - repórter da Agência Brasil",
+    "imageAlt": "BPC evitou 571 mil mortes e 13 milhões de internações em 30 anos",
+    "author": "Iara Balduino - repórter da Agência Brasil",
+    "tags": [
+      "Direitos Humanos",
+      "BPC",
+      "idosos",
+      "pessoas com deficiência",
+      "baixa renda"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706199",
+    "title": "Estudo aponta atividade humana nas emissões de carbono na Amazônia",
+    "summary": "Um estudo que pesquisou 15 anos de medições do fluxo de dióxido de carbono (CO₂) e monóxido de carbono (CO) na Amazônia apontou que as emissões são causadas principalmente por atividades humanas, como desmatamento e queimadas .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/estudo-aponta-atividade-humana-nas-emissoes-de-carbono-na-amazonia",
+    "publishedAt": "22/10/2026 às 14:38",
+    "category": "Política",
+    "ingestedAt": "22/10/2026 às 16:27",
+    "imageUrl": "https://imagens.ebc.com.br/aD9Lf9lpRB5dfXRREx7CZv-cF5g=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/13/img_1107-4_1.jpg?itok=s8lvZls9",
+    "imageCaption": "Estudo aponta atividade humana nas emissões de carbono na Amazônia",
+    "imageCredit": "Fabíola Sinimbú - Repórter da Agência Brasil",
+    "imageAlt": "Estudo aponta atividade humana nas emissões de carbono na Amazônia",
+    "author": "Fabíola Sinimbú - Repórter da Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "Amazônia",
+      "Dióxido de Carbono",
+      "Monóxido de Carbono",
+      "Queimadas"
+    ],
+    "content": []
+  },
+  {
+    "id": "camara-1312670-projeto-cria-tarifa-social-de-",
+    "title": "Projeto cria Tarifa Social de Energia Elétrica com descontos calculados por região",
+    "summary": "A proposta está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1312670-projeto-cria-tarifa-social-de-energia-eletrica-com-descontos-calculados-por-regiao",
+    "publishedAt": "22/10/2026 às 12:41",
+    "category": "Congresso",
+    "ingestedAt": "22/10/2026 às 14:04",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260408112311080-768x473.jpeg",
+    "imageCaption": "Rubens Pereira Júnior: regra atual penaliza os moradores de regiões mais quentes",
+    "imageCredit": "Renato Araújo/Câmara dos Deputados",
+    "imageAlt": "Deputado Rubens Pereira Júnior (PT-MA) fala em comissão da Câmara dos Deputados",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706184",
+    "title": "Agência Brasil e TV Brasil recebem Prêmio Vladimir Herzog",
+    "summary": "O fotógrafo Tomaz Silva, da Agência Brasil , e a equipe do programa Caminhos da Reportagem , da TV Brasil , receberam nesta semana o Prêmio Jornalístico Vladimir Herzog de Anistia e Direitos Humanos. Os veículos integram a Empresa Brasil de Comunicação ( EBC ).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/agencia-brasil-e-tv-brasil-recebem-premio-vladimir-herzog",
+    "publishedAt": "22/10/2026 às 14:22",
+    "category": "Política",
+    "ingestedAt": "22/10/2026 às 16:27",
+    "imageUrl": "https://imagens.ebc.com.br/odU79xtefim3Wm2oa4jvAl7zAA8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/20/_int4546.jpg.jpeg?itok=fmjQ0RAb",
+    "imageCaption": "Agência Brasil e TV Brasil recebem Prêmio Vladimir Herzog",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Agência Brasil e TV Brasil recebem Prêmio Vladimir Herzog",
+    "author": "Agência Brasil",
+    "tags": [
+      "Direitos Humanos",
+      "TV Brasil",
+      "caminhos da reportagem",
+      "Agência Brasil",
+      "EBC"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706198",
+    "title": "Aberta inscrição para seleção de professor elaborador do Enade 2027",
+    "summary": "Os professores da educação superior de todo o país interessados em ser colaboradores do Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) para elaborar e revisar itens/questões do Exame Nacional de Desempenho dos Estudantes (Enade) 2027 podem.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/aberta-inscricao-para-selecao-de-professor-elaborador-do-enade-2027",
+    "publishedAt": "22/10/2026 às 14:17",
+    "category": "Política",
+    "ingestedAt": "22/10/2026 às 16:27",
+    "imageUrl": "https://imagens.ebc.com.br/s9nvJzrToGhTb_fJS32_DAlKgfw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/alunos_enem_ensin_tecnico_unb.jpg?itok=aKPdvOVe",
+    "imageCaption": "Aberta inscrição para seleção de professor elaborador do Enade 2027",
+    "imageCredit": "Daniella Almeida - Repórter da Agência Brasil",
+    "imageAlt": "Aberta inscrição para seleção de professor elaborador do Enade 2027",
+    "author": "Daniella Almeida - Repórter da Agência Brasil",
+    "tags": [
+      "Educação",
+      "Enade 2027",
+      "Inep",
+      "professores",
+      "Política"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706195",
     "title": "Vote Segura mostra boas práticas de políticas de segurança a mulheres",
     "summary": "A Rede Justiça Criminal lançou a campanha Vote Segura , voltada prioritariamente à segurança das mulheres. No ano passado, canais oficiais registraram 1.571 vítimas de feminicídio no país.",
@@ -26,13 +340,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "violência contra a mulher",
       "Eleições"
     ],
-    "content": [
-      "A Rede Justiça Criminal lançou a campanha Vote Segura , voltada prioritariamente à segurança das mulheres. No ano passado, canais oficiais registraram 1.571 vítimas de feminicídio no país. Significa que ao menos quatro mulheres foram assassinadas por dia por motivação relacionada ao gênero. Para cada feminicídio consumado, outros três foram tentados.",
-      "A campanha Vote Segura elaborou um guia com um conjunto de boas práticas legislativas para orientar a formulação de programas de mandato, projetos de lei, atividades de fiscalização e articulação política.",
-      "O objetivo é qualificar o debate público e subsidiar candidaturas ao Congresso Nacional comprometidas com a redução da violência contra o público feminino. As mulheres representam 51,5% da população brasileira de 213,4 milhões de habitantes.",
-      "O guia reúne 11 recomendações para os próximos parlamentares eleitos:",
-      "A coordenadora executiva da Rede Justiça Criminal, Janine Salles de Carvalho, destaca que as mulheres brasileiras estão com medo, e com razão. Elas mudam suas rotinas , compartilham a localização em tempo real quando saem à noite, preocupam-se com a própria segurança."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706196",
@@ -56,24 +364,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Flávio Bolsonaro",
       "Debate"
     ],
-    "content": [
-      "Quem acompanhar o debate presidencial entre Luiz Inácio Lula da Silva e Flávio Bolsonaro, nesta sexta-feira (23), poderá conferir, em tempo real, a checagem de informações apresentadas pelos candidatos durante o confronto, que vai ao ar às 21h20, na emissora Globo.",
-      "A proposta é permitir que o público acompanhe análises e contextualizações de dados à medida que as declarações forem feitas, ampliando o acesso a informações verificadas na reta final da campanha eleitoral.",
-      "Uma das iniciativas foi organizada por jornalistas, pesquisadores e entidades ligadas à comunicação e ao enfrentamento da desinformação.",
-      "Segundo os organizadores, profissionais e instituições parceiras atuarão em uma sala virtual de checagem para analisar afirmações feitas pelos candidatos ao longo do debate.",
-      "Participam da mobilização a Federação Nacional dos Jornalistas (Fenaj), a Rede Nacional de Combate à Desinformação (RNCD), a Sociedade Brasileira de Estudos Interdisciplinares da Comunicação (Intercom), a Associação Brasileira de Pesquisadores em Jornalismo (SBPJor) e a AletheiaFact.org.",
-      "A iniciativa reúne também entidades como a Associação Brasileira de Pesquisadores de História da Mídia (Alcar), a Socicom, a COAR Notícias e o Coletivo Bereia.",
-      "As checagens serão transmitidas ao vivo pelos canais do YouTube da Fenaj e da RNCD :",
-      "- Canal da Fenaj: https://www.youtube.com/@FENAJoficial",
-      "- Canal da RNCD: https://www.youtube.com/@RNCDBRASIL",
-      "De acordo com os organizadores, a proposta é complementar o trabalho desenvolvido por agências especializadas de checagem de fatos. A presidenta da FENAJ, Samira de Castro, afirmou que a iniciativa busca contribuir para o exercício consciente do direito ao voto em um ambiente marcado pela intensa circulação de conteúdos nas redes sociais.",
-      "A criadora da RNCD, Ana Regina Rêgo, disse que a proposta pretende aproximar a checagem do momento em que as declarações são feitas e chegam ao público. Segundo ela, a iniciativa busca ampliar o acesso da população à informação confiável durante o debate para que os eleitores possam avaliar as falas dos candidatos de forma consciente.",
-      "Já a presidenta da Intercom, Iluska Coutinho, afirmou que a comunicação e a pesquisa científica têm papel importante na defesa da democracia e no enfrentamento à desinformação.",
-      "A iniciativa foi anunciada após o debate presidencial promovido pela Band no último domingo (18).",
-      "Em nota divulgada após o confronto, a FENAJ criticou o formato do programa e avaliou que provocações e ataques prejudicaram o esclarecimento dos eleitores.",
-      "Para a entidade, “o jornalismo não pode ser refém da lógica do espetáculo, da audiência a qualquer preço ou das estratégias de candidatos que desprezam o diálogo democrático”.",
-      "A federação acrescentou que, “quando perguntas não são respondidas, afirmações falsas deixam de ser confrontadas e argumentos são substituídos por encenações, quem perde é a população brasileira”."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706192",
@@ -97,19 +388,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "primeiro caso humano",
       "morte"
     ],
-    "content": [
-      "A França registrou, nesta quinta-feira (22), o primeiro caso humano do vírus Shamonda, normalmente encontrado em animais de criação, em um paciente que morreu posteriormente. As autoridades informaram que, neste momento, não há risco para a população em geral.",
-      "Transmitido por mosquitos e mais comumente encontrado em bovinos, o vírus Shamonda também já foi detectado em cavalos, alpacas, ovelhas e cabras, informou a Organização Mundial de Saúde Animal (WOAH, na sigla em inglês).",
-      "O ECDC está em contato com autoridades francesas e parceiros europeus para investigar as possíveis implicações para a saúde pública.",
-      "O anúncio francês indicou que a hipótese principal é que o paciente tenha sido infectado no leste da França, onde o vírus circulou entre animais nesta primavera e verão.",
-      "O ECDC informou que o paciente morreu no início de outubro e lembrou que a vítima vinha recebendo tratamento para uma doença grave que a tornava mais suscetível à infecção do que a população em geral.",
-      "Atualmente, não há vacinas comercialmente disponíveis contra o vírus Shamonda, informou a WOAH.",
-      "Identificado na Nigéria em meados da década de 1960, o vírus Shamonda foi confirmado pela primeira vez na Europa no final de julho, após testes genômicos em bovinos doentes no sul da Alemanha, na Suíça e no leste da França.",
-      "Um relatório do boletim semanal de vigilância sanitária animal da França indicou que o vírus também havia sido detectado na Áustria, Bélgica, Irlanda, Itália, em Liechtenstein, Luxemburgo, na Holanda, em Portugal, na Eslovênia, Espanha e na ilha de Jersey, no Reino Unido.",
-      "Um estudo feito em nove fazendas leiteiras francesas constatou que a produção de leite caiu em até 75% nos rebanhos afetados.",
-      "*( Reportagem adicional de Makini Brice e Jennifer Rigby )",
-      "*É proibida a reprodução deste conteúdo"
-    ]
+    "content": []
   },
   {
     "id": "camara-1313039-projeto-cria-sistema-de-descar",
@@ -154,28 +433,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Javeir Milei",
       "recessão",
       "Economia"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1312670-projeto-cria-tarifa-social-de-",
-    "title": "Projeto cria Tarifa Social de Energia Elétrica com descontos calculados por região",
-    "summary": "A proposta está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1312670-projeto-cria-tarifa-social-de-energia-eletrica-com-descontos-calculados-por-regiao",
-    "publishedAt": "22/10/2026 às 12:41",
-    "category": "Congresso",
-    "ingestedAt": "22/10/2026 às 14:04",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260408112311080-768x473.jpeg",
-    "imageCaption": "Rubens Pereira Júnior: regra atual penaliza os moradores de regiões mais quentes",
-    "imageCredit": "Renato Araújo/Câmara dos Deputados",
-    "imageAlt": "Deputado Rubens Pereira Júnior (PT-MA) fala em comissão da Câmara dos Deputados",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
     ],
     "content": []
   },
@@ -343,6 +600,28 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "content": []
   },
   {
+    "id": "camara-1313045-contribuicao-sobre-bens-e-serv",
+    "title": "Contribuição sobre Bens e Serviços entra em vigor em 2027 e novas regulamentações serão enviadas ao Congresso",
+    "summary": "A contribuição foi criada pela reforma tributária para substituir o PIS, a Cofins e o IPI.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313045-contribuicao-sobre-bens-e-servicos-entra-em-vigor-em-2027-e-novas-regulamentacoes-serao-enviadas-ao-congresso",
+    "publishedAt": "22/10/2026 às 11:18",
+    "category": "Congresso",
+    "ingestedAt": "22/10/2026 às 11:29",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20230424110822774-768x512.jpg",
+    "imageCaption": "O Senado deverá definir o percentual da CBS para o ano que vem",
+    "imageCredit": "Depositphotos",
+    "imageAlt": "Economia - tributos - reforma tributária",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706175",
     "title": "Enamed: termina hoje prazo para recurso contra gabarito preliminar",
     "summary": "Os candidatos que fizeram a reaplicação do Exame Nacional de Avaliação da Formação Médica (Enamed) 2026 podem apresentar recurso contra o gabarito preliminar até 23h59 desta quinta-feira (22).",
@@ -366,48 +645,26 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "content": []
   },
   {
-    "id": "camara-1313045-contribuicao-sobre-bens-e-serv",
-    "title": "Contribuição sobre Bens e Serviços entra em vigor em 2027 e novas regulamentações serão enviadas ao Congresso",
-    "summary": "A contribuição foi criada pela reforma tributária para substituir o PIS, a Cofins e o IPI.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1313045-contribuicao-sobre-bens-e-servicos-entra-em-vigor-em-2027-e-novas-regulamentacoes-serao-enviadas-ao-congresso",
-    "publishedAt": "22/10/2026 às 11:18",
-    "category": "Congresso",
-    "ingestedAt": "22/10/2026 às 11:29",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20230424110822774-768x512.jpg",
-    "imageCaption": "O Senado deverá definir o percentual da CBS para o ano que vem",
-    "imageCredit": "Depositphotos",
-    "imageAlt": "Economia - tributos - reforma tributária",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
     "id": "ebc-1706170",
-    "title": "Termina hoje prazo para realização de comícios e ações de campanha",
+    "title": "Termina hoje prazo para realizar comícios e anúncios pagos de campanha",
     "summary": "A três dias do segundo turno das eleições, termina nesta quinta-feira (22) o prazo para que candidatos façam comícios e atividades de campanha. Também é o último dia para a circulação paga ou impulsionada de propaganda eleitoral na internet.",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/termina-hoje-prazo-para-realizacao-de-comicios-e-acoes-de-campanha",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/termina-hoje-prazo-para-realizar-comicios-e-anuncios-pagos-de-campanha",
     "publishedAt": "22/10/2026 às 10:29",
     "category": "Justiça",
-    "ingestedAt": "22/10/2026 às 11:29",
+    "ingestedAt": "22/10/2026 às 16:27",
     "imageUrl": "https://imagens.ebc.com.br/gk7wNJ9mM_6pJXBzvliS3apc_Jk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/01/tre_sc_santinhos_0.jpeg?itok=uUAdCY-T",
-    "imageCaption": "Termina hoje prazo para realização de comícios e ações de campanha",
+    "imageCaption": "Termina hoje prazo para realizar comícios e anúncios pagos de campanha",
     "imageCredit": "Priscila Thereso - Repórter da Rádio Nacional",
-    "imageAlt": "Termina hoje prazo para realização de comícios e ações de campanha",
+    "imageAlt": "Termina hoje prazo para realizar comícios e anúncios pagos de campanha",
     "author": "Priscila Thereso - Repórter da Rádio Nacional",
     "tags": [
       "Justiça",
       "eleições 2026",
       "TSE",
-      "Propaganda Eleitoral",
-      "Encerramento"
+      "propaganda eleitoral",
+      "encerramento"
     ],
     "content": []
   },
@@ -452,6 +709,28 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "content": []
   },
   {
+    "id": "camara-1311955-projeto-proibe-exibicao-de-anu",
+    "title": "Projeto proíbe exibição de anúncios em planos pagos de streaming",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311955-projeto-proibe-exibicao-de-anuncios-em-planos-pagos-de-streaming",
+    "publishedAt": "22/10/2026 às 09:48",
+    "category": "Congresso",
+    "ingestedAt": "22/10/2026 às 11:29",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20220628132851556-768x512.jpg",
+    "imageCaption": "Plataformas não poderão exigir a exibição de anúncios para liberar conteúdos pagos",
+    "imageCredit": "Depositphotos",
+    "imageAlt": "Comunicação - Geral - plataforma de streaming - TV sob demanda",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706168",
     "title": "Anvisa aprova novo medicamento para câncer de pulmão avançado",
     "summary": "A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou novo medicamento para o tratamento do câncer de pulmão.",
@@ -472,28 +751,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "medicamento",
       "câncer de pulmão",
       "Política"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1311955-projeto-proibe-exibicao-de-anu",
-    "title": "Projeto proíbe exibição de anúncios em planos pagos de streaming",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311955-projeto-proibe-exibicao-de-anuncios-em-planos-pagos-de-streaming",
-    "publishedAt": "22/10/2026 às 09:48",
-    "category": "Congresso",
-    "ingestedAt": "22/10/2026 às 11:29",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20220628132851556-768x512.jpg",
-    "imageCaption": "Plataformas não poderão exigir a exibição de anúncios para liberar conteúdos pagos",
-    "imageCredit": "Depositphotos",
-    "imageAlt": "Comunicação - Geral - plataforma de streaming - TV sob demanda",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
     ],
     "content": []
   },
@@ -679,33 +936,9 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Política",
       "eleições 2026",
-      "2 Turno",
-      "governador",
-      "Espírito Santo"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1705980",
-    "title": "TO: eleitores escolherão entre Professora Dorinha e Vicentinho Júnior",
-    "summary": "Neste domingo (25), os 1.182. 307 eleitores do Tocantins retornam às urnas para escolher o novo governador . Disputam o cargo Professora Dorinha (União) e Vicentinho Júnior (PSDB). Dorinha e Vicentinho Junior vão disputar o 2° turno no Tocantins.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitores-escolherao-entre-professora-dorinha-e-vicentinho-junior",
-    "publishedAt": "22/10/2026 às 08:00",
-    "category": "Eleições",
-    "ingestedAt": "22/10/2026 às 09:03",
-    "imageUrl": "https://imagens.ebc.com.br/Dw15ZfvhlPtzNefTpeYbBX5xVD0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/govtoc.jpg?itok=lw1X3n-0",
-    "imageCaption": "TO: eleitores escolherão entre Professora Dorinha e Vicentinho Júnior",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "TO: eleitores escolherão entre Professora Dorinha e Vicentinho Júnior",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
       "2 turno",
       "governador",
-      "Tocantins"
+      "Espírito Santo"
     ],
     "content": []
   },
@@ -730,6 +963,30 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "2 Turno",
       "governador",
       "Rio Grande do Norte"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1705980",
+    "title": "TO: eleitores escolherão entre Professora Dorinha e Vicentinho Júnior",
+    "summary": "Neste domingo (25), os 1.182. 307 eleitores do Tocantins retornam às urnas para escolher o novo governador . Disputam o cargo Professora Dorinha (União) e Vicentinho Júnior (PSDB). Dorinha e Vicentinho Junior vão disputar o 2° turno no Tocantins.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitores-escolherao-entre-professora-dorinha-e-vicentinho-junior",
+    "publishedAt": "22/10/2026 às 08:00",
+    "category": "Eleições",
+    "ingestedAt": "22/10/2026 às 09:03",
+    "imageUrl": "https://imagens.ebc.com.br/Dw15ZfvhlPtzNefTpeYbBX5xVD0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/govtoc.jpg?itok=lw1X3n-0",
+    "imageCaption": "TO: eleitores escolherão entre Professora Dorinha e Vicentinho Júnior",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "TO: eleitores escolherão entre Professora Dorinha e Vicentinho Júnior",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "2 turno",
+      "governador",
+      "Tocantins"
     ],
     "content": []
   },
@@ -805,53 +1062,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "content": []
   },
   {
-    "id": "ebc-1706148",
-    "title": "Campanha de Lula entra com ação no TSE para cassar chapa de Flávio",
-    "summary": "A campanha do candidato à reeleição Luiz Inácio Lula da Silva (PT) protocolou nesta quarta-feira (21) no Tribunal Superior Eleitoral (TSE) uma ação de investigação eleitoral para cassar o registro da candidatura da chapa formada pelo candidato Flávio Bolsonaro (PL) e.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/campanha-de-lula-entra-com-acao-no-tse-para-cassar-chapa-de-flavio",
-    "publishedAt": "21/10/2026 às 22:20",
-    "category": "Justiça",
-    "ingestedAt": "22/10/2026 às 06:29",
-    "imageUrl": "https://imagens.ebc.com.br/d9fEeCPDjkqvb5-sDLGv6gO7hN0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/17/dji_20260716174410_0332_d.jpg?itok=Cr2Ypqkl",
-    "imageCaption": "Campanha de Lula entra com ação no TSE para cassar chapa de Flávio",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Campanha de Lula entra com ação no TSE para cassar chapa de Flávio",
-    "author": "Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Lula",
-      "Flávio Bolsonaro"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706146",
-    "title": "Nunes Marques suspende postagens ilegais contra campanha de Lula",
-    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, determinou nesta quarta-feira (21) a suspensão de 20 postagens ilegais nas redes sociais contra o candidato à reeleição Luiz Inácio Lula da Silva (PT) O ministro atendeu ao pedido da campanha.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/nunes-marques-suspende-postagens-ilegais-contra-campanha-de-lula",
-    "publishedAt": "21/10/2026 às 21:39",
-    "category": "Eleições",
-    "ingestedAt": "22/10/2026 às 06:29",
-    "imageUrl": "https://imagens.ebc.com.br/wFGusZmQFh0Dfmt20v8FpilQfa0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/17/tse_lanca_campanha_para_estimular_participacao_da_populacao_nas_eleicoes02.jpg?itok=dy_xlwpR",
-    "imageCaption": "Nunes Marques suspende postagens ilegais contra campanha de Lula",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Nunes Marques suspende postagens ilegais contra campanha de Lula",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "TSE",
-      "redes sociais",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
     "id": "ebc-1706141",
     "title": "Brasil fica em 5º lugar na final por equipes do Mundial de Ginástica",
     "summary": "A seleção brasileira terminou em quinto lugar na final por equipes do Mundial de Ginástica Artística, que reúne as maiores potências da modalidade em Roterdã (Países Baixos).",
@@ -876,170 +1086,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "content": []
   },
   {
-    "id": "ebc-1706134",
-    "title": "Ministro prevê renegociação de R$ 90 bi em 3ª fase do Desenrola",
-    "summary": "As instituições financeiras poderão apresentar até R$ 90 bilhões em dívidas antigas a serem renegociadas na primeira etapa do Desenrola 3.0, disse nesta quarta-feira (21) o ministro da Fazenda, Dario Durigan.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/ministro-preve-renegociacao-de-r-90-bi-em-3a-fase-do-desenrola",
-    "publishedAt": "21/10/2026 às 20:07",
-    "category": "Economia",
-    "ingestedAt": "21/10/2026 às 21:27",
-    "imageUrl": "https://imagens.ebc.com.br/jI-3ooqLJE3qMdJFPBpPa8hXo_k=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/13/pzzb7371.jpg?itok=SNszzvqn",
-    "imageCaption": "Ministro prevê renegociação de R$ 90 bi em 3ª fase do Desenrola",
-    "imageCredit": "Wellton Máximo - Repórter da Agência Brasil",
-    "imageAlt": "Ministro prevê renegociação de R$ 90 bi em 3ª fase do Desenrola",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "Ministério da Fazenda",
-      "Dario Durigan",
-      "Desenrola",
-      "Desenrola 30"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1312672-projeto-cria-rede-de-desenvolv",
-    "title": "Projeto cria Rede de Desenvolvimento do Esporte",
-    "summary": "A Câmara dos Deputados analisa a proposta.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1312672-projeto-cria-rede-de-desenvolvimento-do-esporte",
-    "publishedAt": "21/10/2026 às 19:47",
-    "category": "Congresso",
-    "ingestedAt": "21/10/2026 às 21:27",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260902154538773-1-768x473.jpeg",
-    "imageCaption": "Laura Carneiro, autora da proposta",
-    "imageCredit": "Renato Araújo / Câmara dos Deputados",
-    "imageAlt": "Discussão e votação do parecer do Relator. Dep. Laura Carneiro (PSD - RJ).",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Esportes",
-      "Brasil"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706135",
-    "title": "Lula aceita proposta de Flávio para quebra de sigilo bancário",
-    "summary": "A coordenação da campanha de Luiz Inácio Lula da Silva à reeleição afirmou que o candidato do PT aceitou as condições de seu adversário, Flávio Bolsonaro (PL), para quebra do sigilo bancário e telefônico dele e de seus parentes.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/lula-aceita-proposta-de-flavio-para-quebra-de-sigilo-bancario",
-    "publishedAt": "21/10/2026 às 19:45",
-    "category": "Eleições",
-    "ingestedAt": "21/10/2026 às 21:27",
-    "imageUrl": "https://imagens.ebc.com.br/XvcUOlkBSUIkFPJV-v-1zZ1zbCg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/06/2026-10-06t224238z_1659914881_rc2yxnat2hbo_rtrmadp_3_brazil-election.jpg?itok=1YODewEq",
-    "imageCaption": "Lula aceita proposta de Flávio para quebra de sigilo bancário",
-    "imageCredit": "Marcelo Brandão - Repórter da Agência Brasil",
-    "imageAlt": "Lula aceita proposta de Flávio para quebra de sigilo bancário",
-    "author": "Marcelo Brandão - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Lula",
-      "Flávio Bolsonaro",
-      "sigilo bancário"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1309865-projeto-cria-programa-nacional",
-    "title": "Projeto cria programa nacional para fortalecer a pesca artesanal continental",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1309865-projeto-cria-programa-nacional-para-fortalecer-a-pesca-artesanal-continental",
-    "publishedAt": "21/10/2026 às 18:21",
-    "category": "Congresso",
-    "ingestedAt": "21/10/2026 às 21:27",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260303153557971-768x473.jpg",
-    "imageCaption": "Deputado Roberto Duarte, autor do projeto",
-    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Roberto Duarte (REPUBLICANOS - AC)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706127",
-    "title": "Perdão de dívidas e novo teto do MEI: entenda o que muda",
-    "summary": "Sancionada nesta quarta-feira (21) pelo presidente Luiz Inácio Lula da Silva, a Lei Complementar 238/2026 , que estabelece novas regras para os microempreendedores individuais (MEI), estabelece o perdão de dívidas tributárias com a União.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/perdao-de-dividas-e-novo-teto-do-mei-entenda-o-que-muda",
-    "publishedAt": "21/10/2026 às 18:17",
-    "category": "Economia",
-    "ingestedAt": "21/10/2026 às 21:27",
-    "imageUrl": "https://imagens.ebc.com.br/C6vODAzVtXqCzMwqpzhC9SNJ8mQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/21/sem_titulo-2.jpg?itok=b-5Pl0FL",
-    "imageCaption": "Perdão de dívidas e novo teto do MEI: entenda o que muda",
-    "imageCredit": "Wellton Máximo - Repórter da Agência Brasil",
-    "imageAlt": "Perdão de dívidas e novo teto do MEI: entenda o que muda",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "Lula",
-      "MEI",
-      "perdão de dívidas",
-      "Pix MEI"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706128",
-    "title": "TSE: informação de que 4 mil seções mudaram de lugar estava incorreta",
-    "summary": "Uma leitura equivocada dos dados levou a Justiça Eleitoral a informar, no último sábado (17), que 4.352 seções eleitorais teriam mudado de local entre o primeiro e o segundo turno da eleição deste ano.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tse-informacao-de-que-4-mil-secoes-mudaram-de-lugar-estava-incorreta",
-    "publishedAt": "21/10/2026 às 18:16",
-    "category": "Eleições",
-    "ingestedAt": "21/10/2026 às 21:27",
-    "imageUrl": "https://imagens.ebc.com.br/PngFBNYokEz5eKpu43pZXHNJzJE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/_d6a9867_2.jpg?itok=6a2g3jvC",
-    "imageCaption": "TSE: informação de que 4 mil seções mudaram de lugar estava incorreta",
-    "imageCredit": "Lucas Pordeus León - repórter da Agência Brasil",
-    "imageAlt": "TSE: informação de que 4 mil seções mudaram de lugar estava incorreta",
-    "author": "Lucas Pordeus León - repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "TSE",
-      "Justiça Eleitoral",
-      "local de votação"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706121",
-    "title": "Flávio Bolsonaro impõe condições para liberar sigilos",
-    "summary": "O candidato à Presidência da República Flávio Bolsonaro (PL) informou nesta quarta-feira (21) ao Tribunal Superior Eleitoral (TSE) que autoriza o levantamento de seus sigilos bancário, fiscal e telefônico dos últimos 20 anos, desde que o candidato à reeleição Luiz Inácio Lula.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/flavio-bolsonaro-impoe-condicoes-para-liberar-sigilos",
-    "publishedAt": "21/10/2026 às 17:52",
-    "category": "Eleições",
-    "ingestedAt": "21/10/2026 às 21:27",
-    "imageUrl": "https://imagens.ebc.com.br/BJV5gDWQKaK2qlIMGooQRDQ8DPQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/0d4a2404.jpg?itok=VnyAn3lg",
-    "imageCaption": "Flávio Bolsonaro impõe condições para liberar sigilos",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Flávio Bolsonaro impõe condições para liberar sigilos",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "TSE",
-      "Flávio Bolsonaro",
-      "Lula"
-    ],
-    "content": []
-  },
-  {
     "id": "ebc-1706122",
     "title": "Prêmio TV Brasil Petrobras Para Elas anuncia finalistas entre goleiras",
     "summary": "Três jogadoras disputam a categoria Melhor Goleira da temporada no futebol feminino brasileiro no Prêmio TV Brasil Petrobras Para Elas. As finalistas, anunciadas nesta quarta-feira (21), são Yanne (Bahia), Carlinha (São Paulo) e Sandy (América-MG).",
@@ -1057,53 +1103,9 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Esportes",
       "melhor goleira",
-      "temporada",
-      "finalistas",
+      "Temporada",
+      "Finalistas",
       "Carlinha"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1307688-projeto-atualiza-lei-do-crime-",
-    "title": "Projeto atualiza lei do crime de perseguição para detalhar condutas digitais",
-    "summary": "Para virar lei, o texto precisa ser aprovado pela Câmara e pelo Senado.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1307688-projeto-atualiza-lei-do-crime-de-perseguicao-para-detalhar-condutas-digitais",
-    "publishedAt": "21/10/2026 às 17:35",
-    "category": "Congresso",
-    "ingestedAt": "21/10/2026 às 21:27",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260708174040766-768x473.jpg",
-    "imageCaption": "Cabo Gilberto Silva: mudança ajusta a lei ao surgimento de novas ferramentas tecnológicas usadas para assediar vítimas",
-    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
-    "imageAlt": "Deputado Cabo Gilberto Silva (PL-PB) fala no Plenário da Câmara dos Deputados",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1312650-projeto-estabelece-regras-de-s",
-    "title": "Projeto estabelece regras de saúde e ergonomia para trabalhadores do setor têxtil",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1312650-projeto-estabelece-regras-de-saude-e-ergonomia-para-trabalhadores-do-setor-textil",
-    "publishedAt": "21/10/2026 às 17:19",
-    "category": "Congresso",
-    "ingestedAt": "21/10/2026 às 21:27",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20230810121126626-768x513.jpg",
-    "imageCaption": "Marcos Tavares: proposta contribui para construção de ambientes de trabalho mais saudáveis",
-    "imageCredit": "Cleia Viana / Câmara dos Deputados",
-    "imageAlt": "Prêmio \"Comenda Incentivadores do Esporte\". Dep. Marcos TavaresPDT - RJ",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
     ],
     "content": []
   },
