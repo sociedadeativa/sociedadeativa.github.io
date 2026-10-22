@@ -41,6 +41,39 @@ import {
   SPORTS_EDITORIAL_NEWS,
   MatchScore,
 } from "../data/sportsData";
+import { EDITORIAL_IMAGES } from "../assets/editorialImages";
+
+interface SportsArticleThumbProps {
+  src: string;
+  alt: string;
+}
+
+const SportsArticleThumb: React.FC<SportsArticleThumbProps> = ({ src, alt }) => {
+  const [hasError, setHasError] = useState(false);
+  const displaySrc = hasError ? EDITORIAL_IMAGES.congresso.src : src;
+  const displayAlt = hasError ? EDITORIAL_IMAGES.congresso.alt : alt;
+
+  return (
+    <div className="sm:w-44 sm:h-28 w-full h-44 rounded-xl overflow-hidden bg-slate-100 border border-slate-200/80 shrink-0 relative group">
+      <img
+        src={displaySrc}
+        alt={displayAlt}
+        width={320}
+        height={180}
+        loading="lazy"
+        decoding="async"
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        onError={() => setHasError(true)}
+        referrerPolicy="no-referrer"
+      />
+      {hasError && (
+        <span className="absolute bottom-1 right-1 text-[9px] font-semibold bg-slate-900/80 text-white px-1.5 py-0.5 rounded backdrop-blur-xs">
+          Acervo Oficial
+        </span>
+      )}
+    </div>
+  );
+};
 
 interface EsportesPageProps {
   articles?: NewsItem[];
@@ -789,17 +822,10 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                       >
                         {/* Imagem Editorial Oficial (quando disponível) */}
                         {art.imageUrl && (
-                          <div className="sm:w-44 sm:h-28 w-full h-44 rounded-xl overflow-hidden bg-slate-100 border border-slate-200/80 shrink-0 relative group">
-                            <img
-                              src={art.imageUrl}
-                              alt={art.imageAlt || art.title}
-                              loading="lazy"
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                              onError={(e) => {
-                                (e.currentTarget.parentElement as HTMLElement).style.display = "none";
-                              }}
-                            />
-                          </div>
+                          <SportsArticleThumb
+                            src={art.imageUrl}
+                            alt={art.imageAlt || art.title}
+                          />
                         )}
 
                         <div className="flex-1 min-w-0">

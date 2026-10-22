@@ -112,8 +112,11 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
               <img
                 src={displayImageSrc}
                 alt={displayImageAlt}
+                width={800}
+                height={450}
                 className="w-full h-full object-cover"
                 loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
                 onError={() => setImageError(true)}
               />

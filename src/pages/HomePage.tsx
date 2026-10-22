@@ -18,6 +18,9 @@ import { sortNewsItems, deduplicateNewsItems, isValidImageUrl } from "../service
 interface HomePageProps {
   dataset: ElectionDataSet;
   articles: NewsItem[];
+  isLoading?: boolean;
+  error?: string | null;
+  onRetry?: () => void;
   selectedStateUf: string | null;
   candidateFilter: string | null;
   onSelectState: (uf: string | null) => void;
@@ -47,8 +50,11 @@ const SportsNewsCard: React.FC<{
             <img
               src={activeSrc}
               alt={activeAlt}
+              width={640}
+              height={360}
               className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
               loading="lazy"
+              decoding="async"
               referrerPolicy="no-referrer"
               onError={() => setImageError(true)}
             />
@@ -95,6 +101,9 @@ const SportsNewsCard: React.FC<{
 export const HomePage: React.FC<HomePageProps> = ({
   dataset,
   articles,
+  isLoading = false,
+  error = null,
+  onRetry,
   selectedStateUf,
   candidateFilter,
   onSelectState,
@@ -121,6 +130,9 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* 1. Destaques Editoriais do Portal (Salience Tier 1 & 2 + Radar Cívico) */}
       <FeaturedEditorial
         articles={articles}
+        isLoading={isLoading}
+        error={error}
+        onRetry={onRetry}
         onOpenArticleDetails={onOpenArticleDetails}
       />
 

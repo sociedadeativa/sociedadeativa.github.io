@@ -4,15 +4,21 @@ import { NewsCard } from "../components/NewsCard";
 import { useNews } from "../hooks/useNews";
 import { AdBanner } from "../components/AdBanner";
 import { PortalLink } from "../components/PortalLink";
-import { Newspaper, Search, X, Filter, ExternalLink, Calendar } from "lucide-react";
+import { Newspaper, Search, X, Filter, ExternalLink, Calendar, AlertTriangle, RefreshCw } from "lucide-react";
 
 interface NoticiasPageProps {
   initialArticles: NewsItem[];
+  isLoading?: boolean;
+  error?: string | null;
+  onRetry?: () => void;
   onOpenArticleDetails: (article: NewsItem) => void;
 }
 
 export const NoticiasPage: React.FC<NoticiasPageProps> = ({
   initialArticles,
+  isLoading = false,
+  error = null,
+  onRetry,
   onOpenArticleDetails,
 }) => {
   const {
@@ -24,8 +30,10 @@ export const NoticiasPage: React.FC<NoticiasPageProps> = ({
     selectedSource,
     setSelectedSource,
     sources,
-    loading,
+    loading: hookLoading,
   } = useNews({ initialArticles });
+
+  const isPageLoading = isLoading || hookLoading;
 
   const categories = ["Todas", ...NEWS_CATEGORIES];
 
@@ -150,9 +158,40 @@ export const NoticiasPage: React.FC<NoticiasPageProps> = ({
             </span>
           </div>
 
-          {loading ? (
-            <div className="text-center py-16 bg-white rounded-2xl border border-slate-200 text-slate-500">
-              Carregando matérias oficiais...
+          {isPageLoading ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-pulse" aria-label="Carregando matérias">
+              {[1, 2, 3, 4, 5, 6].map((n) => (
+                <div key={n} className="bg-white rounded-2xl border border-slate-200 overflow-hidden p-4 space-y-3">
+                  <div className="aspect-16/9 bg-slate-200 rounded-xl" />
+                  <div className="h-4 bg-slate-200 rounded w-1/3" />
+                  <div className="h-6 bg-slate-200 rounded w-5/6" />
+                  <div className="h-3 bg-slate-200 rounded w-full" />
+                </div>
+              ))}
+            </div>
+          ) : !isPageLoading && error && initialArticles.length === 0 ? (
+            <div className="text-center py-16 bg-white rounded-2xl border border-amber-200 p-8 space-y-4">
+              <div className="w-12 h-12 mx-auto rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700">
+                <AlertTriangle className="w-6 h-6" />
+              </div>
+              <div className="max-w-md mx-auto">
+                <h3 className="font-heading font-bold text-slate-900 text-base">
+                  Não foi possível carregar as notícias
+                </h3>
+                <p className="text-xs text-slate-600 mt-1">
+                  {error || "Erro de conexão com as agências públicas de comunicação."}
+                </p>
+              </div>
+              {onRetry && (
+                <button
+                  type="button"
+                  onClick={onRetry}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition-colors cursor-pointer"
+                >
+                  <RefreshCw className="w-3.5 h-3.5" />
+                  <span>Tentar novamente</span>
+                </button>
+              )}
             </div>
           ) : filteredArticles.length === 0 ? (
             <div className="text-center py-16 bg-white rounded-2xl border border-slate-200 text-slate-500 space-y-2">

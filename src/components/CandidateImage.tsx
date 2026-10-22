@@ -115,6 +115,14 @@ export const CandidateImage: React.FC<CandidateImageProps> = ({
     xl: "w-full h-full text-lg",
   }[size];
 
+  const dimensionsMap: Record<"sm" | "md" | "lg" | "xl", { w: number; h: number }> = {
+    sm: { w: 40, h: 48 },
+    md: { w: 80, h: 96 },
+    lg: { w: 128, h: 160 },
+    xl: { w: 240, h: 300 },
+  };
+  const dim = dimensionsMap[size] || dimensionsMap.md;
+
   // Se houver erro ou não houver src, renderiza o fallback neutro
   if (!src || imageError || candidateUrls.length === 0) {
     return (
@@ -165,6 +173,8 @@ export const CandidateImage: React.FC<CandidateImageProps> = ({
         }}
         src={activeSrc}
         alt={alt}
+        width={dim.w}
+        height={dim.h}
         decoding="async"
         loading={loading}
         referrerPolicy="no-referrer"

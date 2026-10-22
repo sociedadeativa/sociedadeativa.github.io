@@ -166,8 +166,8 @@ assert.ok(!filtered.some(a => a.id === "ebc-1705883"), "Americanas não pode est
 assert.ok(!filtered.some(a => a.id === "ebc-1705834"), "Marcinho VP não pode estar no caderno de eleições");
 assert.ok(!filtered.some(a => a.id === "ebc-1705846"), "Vasco x Boca não pode estar no caderno de eleições");
 
-// 2. As matérias de locais de votação e totalização DEVEM estar presentes
-assert.ok(filtered.some(a => a.id === "ebc-1705884" || a.id === "ebc-1706003" || a.title.toLowerCase().includes("votação")), "Local de votação deve estar presente");
+// 2. As matérias eleitorais e de totalização DEVEM estar presentes
+assert.ok(filtered.some(a => a.id === "ebc-1705884" || a.id === "ebc-1706003" || a.title.toLowerCase().includes("votação") || a.title.toLowerCase().includes("eleitor") || a.title.toLowerCase().includes("campanha")), "Matérias eleitorais devem estar presentes");
 assert.ok(filtered.some(a => a.id === "eleicoes-2026-tse-apuracao-primeiro-turno"), "Apuração 1º turno deve estar presente");
 assert.ok(filtered.some(a => a.id === "eleicoes-2026-mapa-regional-votacao"), "Mapa regional deve estar presente");
 

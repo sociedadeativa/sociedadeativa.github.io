@@ -77,6 +77,9 @@ export default function App() {
           <HomePage
             dataset={currentDataset}
             articles={articles}
+            isLoading={isNewsLoading}
+            error={newsError}
+            onRetry={refreshNews}
             selectedStateUf={selectedStateUf}
             candidateFilter={candidateFilter}
             onSelectState={(uf) => setSelectedStateUf(uf)}
@@ -89,6 +92,9 @@ export default function App() {
         {currentRoute === "politica" && (
           <PoliticaPage
             articles={articles}
+            isLoading={isNewsLoading}
+            error={newsError}
+            onRetry={refreshNews}
             onOpenArticleDetails={(art) => goToArticle(art.id)}
           />
         )}
@@ -132,6 +138,9 @@ export default function App() {
         {currentRoute === "noticias" && (
           <NoticiasPage
             initialArticles={articles}
+            isLoading={isNewsLoading}
+            error={newsError}
+            onRetry={refreshNews}
             onOpenArticleDetails={(art) => goToArticle(art.id)}
           />
         )}

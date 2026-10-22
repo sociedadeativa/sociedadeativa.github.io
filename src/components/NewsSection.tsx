@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NewsItem, NewsCategory, NEWS_CATEGORIES } from "../types/news";
 import { isValidImageUrl } from "../services/newsService";
+import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { NewsCard } from "./NewsCard";
 import { useNews } from "../hooks/useNews";
 import { AdBanner } from "./AdBanner";
@@ -222,28 +223,60 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
                 {activeArticle.title}
               </h2>
 
-              {/* Imagem Editorial Oficial Verificada */}
-              {activeArticle.imageUrl && isValidImageUrl(activeArticle.imageUrl) && !modalImageError && (
-                <figure className="mb-4 rounded-2xl overflow-hidden border border-slate-200 bg-slate-50">
-                  <img
-                    src={activeArticle.imageUrl}
-                    alt={activeArticle.imageAlt || activeArticle.title}
-                    className="w-full max-h-[300px] object-cover"
-                    loading="lazy"
-                    onError={() => setModalImageError(true)}
-                  />
-                  {(activeArticle.imageCaption || activeArticle.imageCredit) && (
+              {/* Imagem Editorial Oficial Verificada ou Acervo Institucional */}
+              {(activeArticle.imageUrl || modalImageError) && (() => {
+                const categoryFallbackMap: Record<string, typeof EDITORIAL_IMAGES.congresso> = {
+                  Eleições: EDITORIAL_IMAGES.urna,
+                  Economia: EDITORIAL_IMAGES.economia,
+                  Brasil: EDITORIAL_IMAGES.dadosPublicos,
+                  Congresso: EDITORIAL_IMAGES.congresso,
+                  Política: EDITORIAL_IMAGES.congresso,
+                  Governo: EDITORIAL_IMAGES.congresso,
+                  Justiça: EDITORIAL_IMAGES.congresso,
+                  Mundo: EDITORIAL_IMAGES.congresso,
+                  Esportes: EDITORIAL_IMAGES.congresso,
+                  Tecnologia: EDITORIAL_IMAGES.dadosPublicos,
+                };
+                const institutionalFallback = categoryFallbackMap[activeArticle.category] || EDITORIAL_IMAGES.congresso;
+                const hasValidImage = Boolean(
+                  activeArticle.imageUrl && isValidImageUrl(activeArticle.imageUrl) && !modalImageError
+                );
+                const displayImageSrc = hasValidImage ? activeArticle.imageUrl! : institutionalFallback.src;
+                const displayImageAlt = hasValidImage ? (activeArticle.imageAlt || activeArticle.title) : institutionalFallback.alt;
+                const displayCaption = hasValidImage ? (activeArticle.imageCaption || activeArticle.title) : institutionalFallback.caption;
+                const displayCredit = hasValidImage ? activeArticle.imageCredit : "Acervo Institucional";
+
+                return (
+                  <figure className="mb-4 rounded-2xl overflow-hidden border border-slate-200 bg-slate-50">
+                    <div className="w-full aspect-[16/9] sm:aspect-[2/1] overflow-hidden bg-slate-100 relative">
+                      <img
+                        src={displayImageSrc}
+                        alt={displayImageAlt}
+                        width={800}
+                        height={450}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                        onError={() => setModalImageError(true)}
+                      />
+                      {!hasValidImage && (
+                        <span className="absolute bottom-1.5 right-1.5 text-[9px] font-bold text-white bg-slate-950/80 px-1.5 py-0.5 rounded backdrop-blur-xs">
+                          Acervo Oficial
+                        </span>
+                      )}
+                    </div>
                     <figcaption className="p-2.5 text-[10px] sm:text-[11px] text-slate-500 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-2 flex-wrap">
-                      <span>{activeArticle.imageCaption || activeArticle.title}</span>
-                      {activeArticle.imageCredit && (
+                      <span>{displayCaption}</span>
+                      {displayCredit && (
                         <span className="font-semibold text-slate-700">
-                          Foto: {activeArticle.imageCredit}
+                          {displayCredit.startsWith("Foto:") ? displayCredit : `Foto: ${displayCredit}`}
                         </span>
                       )}
                     </figcaption>
-                  )}
-                </figure>
-              )}
+                  </figure>
+                );
+              })()}
 
               {/* Resumo ou Síntese Factual */}
               <div className="mb-5 bg-slate-50 p-4 rounded-xl border border-slate-200/80">

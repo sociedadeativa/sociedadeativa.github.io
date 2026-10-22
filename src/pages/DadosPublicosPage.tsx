@@ -95,8 +95,11 @@ export const DadosPublicosPage: React.FC<DadosPublicosPageProps> = ({
                 <img
                   src={EDITORIAL_IMAGES.dadosPublicos.src}
                   alt={EDITORIAL_IMAGES.dadosPublicos.alt}
+                  width={640}
+                  height={360}
+                  decoding="async"
+                  loading="lazy"
                   className="w-full h-full object-cover"
-                  loading="eager"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />

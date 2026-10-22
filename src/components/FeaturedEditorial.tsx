@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { NewsItem } from "../types/news";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
-import { Clock, Calendar, ArrowUpRight, Sparkles } from "lucide-react";
+import { Clock, Calendar, ArrowUpRight, Sparkles, AlertTriangle, RefreshCw, Radio } from "lucide-react";
 import { PortalLink } from "./PortalLink";
 import { PortalRoute } from "../utils/router";
 import { sortNewsItems, deduplicateNewsItems, isValidImageUrl } from "../services/newsService";
@@ -9,11 +9,17 @@ import { sortNewsItems, deduplicateNewsItems, isValidImageUrl } from "../service
 interface FeaturedEditorialProps {
   articles: NewsItem[];
   onOpenArticleDetails: (article: NewsItem) => void;
+  isLoading?: boolean;
+  error?: string | null;
+  onRetry?: () => void;
 }
 
 export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
   articles,
   onOpenArticleDetails,
+  isLoading = false,
+  error = null,
+  onRetry,
 }) => {
   // Configuração editorial: definir ID de artigo para fixar manualmente, ou null para seleção dinâmica automática
   const PINNED_LEAD_ARTICLE_ID: string | null = null;
@@ -146,13 +152,111 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
           </div>
         </div>
 
-        {/* Grade Editorial Principal: Lead Story + Destaques Secundários Separados */}
-        {!leadArticle && (
-          <h1 className="sr-only">Sociedade Ativa — Cobertura Editorial e Jornalismo de Dados do Brasil</h1>
+        {/* Estado 1: Carregando (Skeleton editorial preservando a geometria 7:5) */}
+        {isLoading && !leadArticle && (
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-start animate-pulse" aria-busy="true" aria-label="Carregando matérias editoriais">
+            {/* Coluna Principal Skeleton */}
+            <div className="md:col-span-7 flex flex-col">
+              <div className="rounded-2xl overflow-hidden mb-4 bg-slate-200 aspect-[16/9] border border-slate-200 flex items-center justify-center text-slate-400">
+                <Radio className="w-8 h-8 opacity-40 animate-pulse" />
+              </div>
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-20 h-4 bg-slate-200 rounded" />
+                <div className="w-24 h-4 bg-slate-200 rounded" />
+              </div>
+              <div className="h-8 bg-slate-200 rounded-md w-11/12 mb-2" />
+              <div className="h-8 bg-slate-200 rounded-md w-4/5 mb-3" />
+              <div className="h-4 bg-slate-200 rounded w-full mb-1.5" />
+              <div className="h-4 bg-slate-200 rounded w-3/4 mb-4" />
+              <div className="w-48 h-5 bg-slate-200 rounded" />
+            </div>
+
+            {/* Coluna Secundária Skeleton */}
+            <div className="md:col-span-5 flex flex-col pt-8 border-t border-slate-200 md:pt-0 md:border-t-0 md:border-l md:border-slate-200 md:pl-6 lg:pl-8 xl:pl-10 space-y-6">
+              <div>
+                <div className="flex items-center justify-between pb-3 border-b border-slate-200">
+                  <div className="w-32 h-4 bg-slate-200 rounded" />
+                  <div className="w-16 h-4 bg-slate-200 rounded" />
+                </div>
+                <div className="divide-y divide-slate-100">
+                  {[1, 2, 3].map((n) => (
+                    <div key={n} className="py-3.5 space-y-2">
+                      <div className="w-24 h-3 bg-slate-200 rounded" />
+                      <div className="h-4 bg-slate-200 rounded w-11/12" />
+                      <div className="h-3 bg-slate-200 rounded w-full" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Radar Skeleton */}
+              <div className="pt-2">
+                <div className="bg-slate-50 rounded-2xl p-4 sm:p-5 border border-slate-200">
+                  <div className="w-28 h-4 bg-slate-200 rounded mb-3" />
+                  <div className="space-y-3">
+                    {[1, 2, 3].map((n) => (
+                      <div key={n} className="space-y-1.5">
+                        <div className="w-20 h-2.5 bg-slate-200 rounded" />
+                        <div className="h-3 bg-slate-200 rounded w-5/6" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         )}
+
+        {/* Estado 2: Erro ao Carregar Notícias */}
+        {error && !leadArticle && (
+          <div className="rounded-2xl border-2 border-rose-200 bg-rose-50/70 p-6 sm:p-8 text-center my-4">
+            <AlertTriangle className="w-10 h-10 text-rose-600 mx-auto mb-3" />
+            <h2 className="font-heading text-lg sm:text-xl font-black text-rose-950 mb-1">
+              Não foi possível carregar os destaques editoriais
+            </h2>
+            <p className="text-xs sm:text-sm text-rose-900 max-w-lg mx-auto leading-relaxed mb-4">
+              {error || "Ocorreu uma instabilidade na consulta às fontes públicas de notícias oficiais."}
+            </p>
+            {onRetry && (
+              <button
+                type="button"
+                onClick={onRetry}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-rose-700 hover:bg-rose-800 text-white text-xs font-bold transition-colors cursor-pointer shadow-xs"
+              >
+                <RefreshCw className="w-3.5 h-3.5" />
+                <span>Tentar novamente</span>
+              </button>
+            )}
+          </div>
+        )}
+
+        {/* Estado 3: Lista Vazia sem Erro */}
+        {!isLoading && !error && !leadArticle && (
+          <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 p-8 text-center my-4">
+            <Radio className="w-10 h-10 text-slate-400 mx-auto mb-3" />
+            <h2 className="font-heading text-lg font-bold text-slate-800 mb-1">
+              Nenhuma matéria editorial disponível no momento
+            </h2>
+            <p className="text-xs text-slate-500 max-w-md mx-auto leading-relaxed mb-4">
+              Novas matérias apuradas pelas agências oficiais públicas do Estado serão sincronizadas automaticamente.
+            </p>
+            {onRetry && (
+              <button
+                type="button"
+                onClick={onRetry}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition-colors cursor-pointer"
+              >
+                <RefreshCw className="w-3.5 h-3.5" />
+                <span>Atualizar acervo</span>
+              </button>
+            )}
+          </div>
+        )}
+
+        {/* Grade Editorial Principal: Lead Story + Destaques Secundários Separados */}
+        {leadArticle && (
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-start">
           {/* Coluna Principal: Matéria Líder com Imagem Horizontal e Destaque Editorial */}
-          {leadArticle && (
             <div className="md:col-span-7 flex flex-col">
               <article
                 onClick={() => onOpenArticleDetails(leadArticle)}
@@ -163,9 +267,12 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                   <img
                     src={leadImageSrc}
                     alt={leadImageAlt}
+                    width={1280}
+                    height={720}
                     className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
                     loading="eager"
                     fetchPriority="high"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                     onError={() => setLeadImageError(true)}
                   />
@@ -218,7 +325,6 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                 </div>
               </article>
             </div>
-          )}
 
           {/* Coluna Separada: Destaques Secundários e Radar Cívico */}
           <div className="md:col-span-5 flex flex-col pt-8 border-t border-slate-200 md:pt-0 md:border-t-0 md:border-l md:border-slate-200 md:pl-6 lg:pl-8 xl:pl-10 space-y-6">
@@ -342,6 +448,7 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
             </div>
           </div>
         </div>
+        )}
       </div>
     </section>
   );

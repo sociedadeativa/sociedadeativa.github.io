@@ -261,8 +261,12 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
             <img
               src={heroImageSrc}
               alt={heroImageAlt}
+              width={1280}
+              height={720}
               className="w-full h-full object-cover"
               loading="eager"
+              fetchPriority="high"
+              decoding="async"
               referrerPolicy="no-referrer"
               onError={() => setImageError(true)}
             />

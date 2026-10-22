@@ -69,8 +69,11 @@ export const NewsCard: React.FC<NewsCardProps> = ({
             <img
               src={imageSrc}
               alt={imageAlt}
+              width={640}
+              height={360}
               className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
               loading="lazy"
+              decoding="async"
               referrerPolicy="no-referrer"
               onError={() => setImageError(true)}
             />

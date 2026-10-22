@@ -1,20 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { NewsItem } from "../types/news";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
+import { isValidImageUrl } from "../services/newsService";
 import { NewsCard } from "../components/NewsCard";
 import { PortalLink } from "../components/PortalLink";
 import { AdBanner } from "../components/AdBanner";
-import { Landmark, ArrowRight, ShieldCheck, Scale, FileText } from "lucide-react";
+import { Landmark, ArrowRight, ShieldCheck, Scale, FileText, AlertTriangle, RefreshCw, Radio } from "lucide-react";
 
 interface PoliticaPageProps {
   articles: NewsItem[];
+  isLoading?: boolean;
+  error?: string | null;
+  onRetry?: () => void;
   onOpenArticleDetails: (article: NewsItem) => void;
 }
 
 export const PoliticaPage: React.FC<PoliticaPageProps> = ({
   articles,
+  isLoading = false,
+  error = null,
+  onRetry,
   onOpenArticleDetails,
 }) => {
+  const [leadImageError, setLeadImageError] = useState(false);
+
   // Filtra matérias do caderno de política, congresso, governo e justiça
   const politicaArticles = articles.filter((a) =>
     ["Política", "Congresso", "Governo", "Justiça"].includes(a.category)
@@ -25,6 +34,15 @@ export const PoliticaPage: React.FC<PoliticaPageProps> = ({
     politicaArticles[0];
 
   const secondaryArticles = politicaArticles.filter((a) => a.id !== mainArticle?.id);
+
+  const hasValidMainImage = Boolean(
+    mainArticle?.imageUrl && isValidImageUrl(mainArticle.imageUrl) && !leadImageError
+  );
+  const mainImageSrc = hasValidMainImage ? mainArticle.imageUrl! : EDITORIAL_IMAGES.congresso.src;
+  const mainImageAlt = hasValidMainImage ? (mainArticle.imageAlt || mainArticle.title) : EDITORIAL_IMAGES.congresso.alt;
+  const mainImageCaption = hasValidMainImage
+    ? (mainArticle.imageCaption || (mainArticle.imageCredit ? `Foto: ${mainArticle.imageCredit}` : mainArticle.title))
+    : EDITORIAL_IMAGES.congresso.caption;
 
   return (
     <div className="py-8 sm:py-12 bg-[#F8FAFC]">
@@ -66,22 +84,86 @@ export const PoliticaPage: React.FC<PoliticaPageProps> = ({
           </div>
         </div>
 
+        {/* Estado de Carregamento */}
+        {isLoading && (
+          <div className="space-y-10 mb-10" aria-label="Carregando matérias de política">
+            <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden p-6 sm:p-8 animate-pulse">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+                <div className="lg:col-span-7">
+                  <div className="aspect-16/9 bg-slate-200 rounded-2xl" />
+                </div>
+                <div className="lg:col-span-5 space-y-4">
+                  <div className="h-4 bg-slate-200 rounded w-1/3" />
+                  <div className="h-8 bg-slate-200 rounded w-4/5" />
+                  <div className="h-4 bg-slate-200 rounded w-full" />
+                  <div className="h-4 bg-slate-200 rounded w-2/3" />
+                  <div className="h-9 bg-slate-200 rounded w-36" />
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Estado de Erro */}
+        {!isLoading && error && politicaArticles.length === 0 && (
+          <div className="mb-10 p-8 bg-white rounded-3xl border border-amber-200 text-center space-y-4">
+            <div className="w-12 h-12 mx-auto rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700">
+              <AlertTriangle className="w-6 h-6" />
+            </div>
+            <div className="max-w-md mx-auto">
+              <h2 className="font-heading text-lg font-bold text-slate-900">
+                Não foi possível carregar os despachos de política
+              </h2>
+              <p className="text-xs text-slate-600 mt-1">
+                {error || "Erro de conexão com as agências públicas de notícias."}
+              </p>
+            </div>
+            {onRetry && (
+              <button
+                type="button"
+                onClick={onRetry}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition-colors cursor-pointer"
+              >
+                <RefreshCw className="w-3.5 h-3.5" />
+                <span>Tentar novamente</span>
+              </button>
+            )}
+          </div>
+        )}
+
+        {/* Estado Vazio */}
+        {!isLoading && !error && politicaArticles.length === 0 && (
+          <div className="mb-10 p-12 bg-white rounded-3xl border border-slate-200 text-center">
+            <p className="font-heading font-bold text-slate-800 text-base">
+              Nenhuma matéria de política disponível no momento.
+            </p>
+            <p className="text-xs text-slate-500 mt-1">
+              Novas publicações serão integradas conforme atualização dos diários oficiais.
+            </p>
+          </div>
+        )}
+
         {/* Destaque Principal do Caderno de Política */}
-        {mainArticle && (
+        {!isLoading && mainArticle && (
           <div className="mb-10 bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xs">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 p-6 sm:p-8 items-center">
               <div className="lg:col-span-7">
                 <div className="relative rounded-2xl overflow-hidden aspect-16/9 bg-slate-100 border border-slate-200/80">
                   <img
-                    src={EDITORIAL_IMAGES.congresso.src}
-                    alt={EDITORIAL_IMAGES.congresso.alt}
-                    className="w-full h-full object-cover"
+                    src={mainImageSrc}
+                    alt={mainImageAlt}
+                    width={1280}
+                    height={720}
+                    decoding="async"
                     loading="eager"
+                    fetchPriority="high"
+                    onError={() => setLeadImageError(true)}
                     referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
                   <div className="absolute bottom-3 left-4 right-4 text-white text-xs font-medium">
-                    {EDITORIAL_IMAGES.congresso.caption}
+                    {mainImageCaption}
                   </div>
                 </div>
               </div>
