@@ -6,6 +6,12 @@ import {
   fetchFootballSerieAData,
   formatBrazilDateTime,
   FootballSerieAPayload,
+  countLiveMatches,
+  filterMatchesByStatus,
+  filterMatchesByTournament,
+  getAvailableRounds,
+  getCurrentRound,
+  sortMatchesForDisplay,
 } from "../services/footballService";
 import {
   Trophy,
@@ -16,6 +22,7 @@ import {
   Activity,
   Tv,
   Radio,
+  ChevronLeft,
   ChevronRight,
   Filter,
   AlertTriangle,
@@ -53,6 +60,7 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
   const [selectedTournament, setSelectedTournament] = useState<string>("todos");
   const [matchStatusFilter, setMatchStatusFilter] = useState<"todos" | "ao_vivo" | "encerrado" | "proximos">("todos");
   const [standingsTab, setStandingsTab] = useState<"serie-a" | "serie-b">("serie-a");
+  const [selectedRound, setSelectedRound] = useState<string>("");
 
   // Estado dos dados oficiais do Brasileirão Série A (football-data.org v4)
   const [serieAData, setSerieAData] = useState<FootballSerieAPayload | null>(null);
@@ -105,6 +113,37 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
       });
   };
 
+  // Lista de rodadas disponíveis da Série A a partir dos dados oficiais da API
+  const serieARounds = useMemo(() => {
+    return getAvailableRounds(serieAData?.matches || []);
+  }, [serieAData]);
+
+  // Rodada atual da temporada obtida a partir da classificação e partidas oficiais
+  const currentSeasonRound = useMemo(() => {
+    return getCurrentRound(serieAData?.matches || [], serieAData?.standings);
+  }, [serieAData]);
+
+  // Inicializa a rodada selecionada com a rodada atual oficial quando os dados forem carregados
+  useEffect(() => {
+    if (currentSeasonRound && (!selectedRound || !serieARounds.includes(selectedRound))) {
+      setSelectedRound(currentSeasonRound);
+    }
+  }, [currentSeasonRound, serieARounds, selectedRound]);
+
+  const handlePrevRound = () => {
+    const currentIndex = serieARounds.indexOf(selectedRound);
+    if (currentIndex > 0) {
+      setSelectedRound(serieARounds[currentIndex - 1]);
+    }
+  };
+
+  const handleNextRound = () => {
+    const currentIndex = serieARounds.indexOf(selectedRound);
+    if (currentIndex >= 0 && currentIndex < serieARounds.length - 1) {
+      setSelectedRound(serieARounds[currentIndex + 1]);
+    }
+  };
+
   // Filtra e ordena cronologicamente notícias reais do dataset sobre esportes/futebol
   const realSportsArticles = useMemo(() => {
     if (!Array.isArray(articles)) return [];
@@ -142,28 +181,52 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
     return sortNewsItems(deduplicateNewsItems(filtered));
   }, [articles]);
 
-  // Lista unificada de partidas: partidas reais da Série A quando disponíveis, e outras competições demonstrativas
+  // Partidas da Série A para a rodada em foco (ou todas se selecionado "todas")
+  const activeSerieAMatches = useMemo(() => {
+    const all = serieAData?.matches || [];
+    if (!selectedRound || selectedRound === "todas") {
+      return all;
+    }
+    return all.filter((m) => m.roundOrLeg === selectedRound || m.phase === selectedRound);
+  }, [serieAData, selectedRound]);
+
+  // Lista de partidas disponíveis para o campeonato selecionado
   const availableMatches = useMemo(() => {
     const otherTournamentMatches = MATCHES_DATA.filter((m) => m.tournamentId !== "brasileirao-a");
-    const realSerieAMatches = serieAData?.matches || [];
-    return [...realSerieAMatches, ...otherTournamentMatches];
-  }, [serieAData]);
+    const realMatches = serieAData?.matches || [];
 
-  const filteredMatches = useMemo(() => {
-    return availableMatches.filter((m) => {
-      if (selectedTournament !== "todos" && m.tournamentId !== selectedTournament) {
-        return false;
-      }
-      if (matchStatusFilter === "ao_vivo") return m.status === "ao_vivo";
-      if (matchStatusFilter === "encerrado") return m.status === "encerrado";
-      if (matchStatusFilter === "proximos") return m.status === "hoje" || m.status === "amanha" || m.status === "agendado";
-      return true;
-    });
-  }, [availableMatches, selectedTournament, matchStatusFilter]);
+    if (selectedTournament === "brasileirao-a") {
+      // Quando selecionado especificamente Brasileirão Série A:
+      // Exibe apenas as partidas reais da Série A na rodada selecionada
+      return activeSerieAMatches;
+    }
 
+    if (selectedTournament !== "todos") {
+      // Outro campeonato específico (ex: libertadores, copa-do-brasil)
+      return otherTournamentMatches.filter((m) => m.tournamentId === selectedTournament);
+    }
+
+    // Todas as competições ("todos"):
+    // Inclui partidas das outras competições e a rodada atual da Série A
+    const serieARoundMatches = currentSeasonRound
+      ? realMatches.filter((m) => m.roundOrLeg === currentSeasonRound || m.phase === currentSeasonRound)
+      : realMatches.slice(0, 10);
+
+    return [...otherTournamentMatches, ...serieARoundMatches];
+  }, [serieAData, selectedTournament, activeSerieAMatches, currentSeasonRound]);
+
+  // Contagem de partidas AO VIVO restrita ao contexto do campeonato ativo
+  // Derivada estritamente do status oficial ("ao_vivo")
   const liveCount = useMemo(() => {
-    return availableMatches.filter((m) => m.status === "ao_vivo").length;
+    return countLiveMatches(availableMatches);
   }, [availableMatches]);
+
+  // Partidas filtradas pelo status ("todos", "ao_vivo", "encerrado", "proximos")
+  // e ordenadas para priorizar partidas em andamento
+  const filteredMatches = useMemo(() => {
+    const byStatus = filterMatchesByStatus(availableMatches, matchStatusFilter);
+    return sortMatchesForDisplay(byStatus);
+  }, [availableMatches, matchStatusFilter]);
 
   return (
     <div className="py-8 sm:py-12 bg-[#F8FAFC]">
@@ -392,6 +455,63 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                 </div>
               </div>
 
+              {/* Barra de Seleção / Navegação de Rodada da Série A */}
+              {selectedTournament === "brasileirao-a" && serieARounds.length > 0 && (
+                <div className="flex flex-wrap items-center justify-between gap-2 py-2.5 px-3.5 mt-3 bg-slate-50 border border-slate-200/90 rounded-xl">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                      Rodada:
+                    </span>
+                    <select
+                      value={selectedRound}
+                      onChange={(e) => setSelectedRound(e.target.value)}
+                      aria-label="Selecionar rodada do Brasileirão Série A"
+                      className="bg-white border border-slate-300 rounded-lg px-2.5 py-1 text-xs font-black text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer shadow-2xs"
+                    >
+                      {serieARounds.map((r) => (
+                        <option key={r} value={r}>
+                          {r} {r === currentSeasonRound ? "· Rodada Atual" : ""}
+                        </option>
+                      ))}
+                      <option value="todas">Todas as 38 Rodadas</option>
+                    </select>
+                    {selectedRound === currentSeasonRound && (
+                      <span className="text-[10px] font-bold text-emerald-800 bg-emerald-100 border border-emerald-200 px-2 py-0.5 rounded-full">
+                        Em Andamento
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex items-center gap-1.5">
+                    <button
+                      type="button"
+                      onClick={handlePrevRound}
+                      disabled={serieARounds.indexOf(selectedRound) <= 0 || selectedRound === "todas"}
+                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors text-xs font-bold cursor-pointer"
+                      title="Rodada anterior"
+                      aria-label="Rodada anterior"
+                    >
+                      <ChevronLeft className="w-3.5 h-3.5" />
+                      <span className="hidden sm:inline">Anterior</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleNextRound}
+                      disabled={
+                        serieARounds.indexOf(selectedRound) >= serieARounds.length - 1 ||
+                        selectedRound === "todas"
+                      }
+                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors text-xs font-bold cursor-pointer"
+                      title="Próxima rodada"
+                      aria-label="Próxima rodada"
+                    >
+                      <span className="hidden sm:inline">Próxima</span>
+                      <ChevronRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              )}
+
               {/* Lista de Partidas */}
               <div className="divide-y divide-slate-100 mt-2">
                 {selectedTournament === "brasileirao-a" && isSerieALoading ? (
@@ -420,7 +540,39 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                   </div>
                 ) : filteredMatches.length === 0 ? (
                   <div className="py-12 text-center text-slate-500 text-sm">
-                    Nenhuma partida encontrada para os filtros selecionados.
+                    {matchStatusFilter === "ao_vivo" ? (
+                      <div className="max-w-md mx-auto">
+                        <p className="font-bold text-slate-800 text-sm mb-1">
+                          Nenhum jogo ao vivo no momento
+                        </p>
+                        <p className="text-xs text-slate-500">
+                          {selectedTournament === "brasileirao-a"
+                            ? "Não há partidas em andamento para o Brasileirão Série A no momento."
+                            : "Nenhuma partida em andamento nas competições monitoradas."}
+                        </p>
+                      </div>
+                    ) : matchStatusFilter === "proximos" && selectedTournament === "brasileirao-a" && selectedRound !== "todas" ? (
+                      <div className="max-w-md mx-auto">
+                        <p className="font-bold text-slate-800 text-sm mb-1">
+                          Todas as partidas da {selectedRound} já foram encerradas
+                        </p>
+                        <p className="text-xs text-slate-500 mb-3">
+                          Navegue para a próxima rodada para visualizar os confrontos agendados.
+                        </p>
+                        {serieARounds.indexOf(selectedRound) < serieARounds.length - 1 && (
+                          <button
+                            type="button"
+                            onClick={handleNextRound}
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold transition-colors cursor-pointer"
+                          >
+                            <span>Ir para a próxima rodada</span>
+                            <ChevronRight className="w-3.5 h-3.5" />
+                          </button>
+                        )}
+                      </div>
+                    ) : (
+                      <p>Nenhuma partida encontrada para os filtros selecionados.</p>
+                    )}
                   </div>
                 ) : (
                   filteredMatches.map((match) => {

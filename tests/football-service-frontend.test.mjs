@@ -15,6 +15,12 @@ import {
   validateFootballSerieAPayload,
   formatBrazilDateTime,
   fetchFootballSerieAData,
+  countLiveMatches,
+  filterMatchesByStatus,
+  filterMatchesByTournament,
+  getAvailableRounds,
+  getCurrentRound,
+  sortMatchesForDisplay,
 } from "../src/services/footballService.ts";
 
 console.log("===========================================================================");
@@ -178,8 +184,109 @@ async function runTests() {
   assert.strictEqual(result.matches[0].homeTeam.name, "Botafogo");
   console.log("  [PASS] 1. Fetch de dados oficiais resolvido com sucesso.");
 
+  // ---------------------------------------------------------------------------
+  // TESTE 8: Derivação de Contagem Ao Vivo Exclusivamente por Status Oficial
+  // ---------------------------------------------------------------------------
+  console.log("\n[TESTE 8] Contagem de partidas ao vivo derivada exclusivamente do status 'ao_vivo'");
+  const sampleMatches = [
+    { id: "m1", tournamentId: "brasileirao-a", status: "encerrado", phase: "31ª Rodada", roundOrLeg: "31ª Rodada" },
+    { id: "m2", tournamentId: "brasileirao-a", status: "encerrado", phase: "31ª Rodada", roundOrLeg: "31ª Rodada" },
+    { id: "m3", tournamentId: "brasileirao-a", status: "agendado", phase: "32ª Rodada", roundOrLeg: "32ª Rodada" },
+    { id: "m4", tournamentId: "brasileirao-a", status: "ao_vivo", phase: "31ª Rodada", roundOrLeg: "31ª Rodada" },
+    { id: "m5", tournamentId: "libertadores", status: "ao_vivo", phase: "Semifinal", roundOrLeg: "Ida" },
+  ];
+
+  // Partidas sem ao vivo
+  const noLiveMatches = sampleMatches.filter((m) => m.status !== "ao_vivo");
+  assert.strictEqual(countLiveMatches(noLiveMatches), 0, "Partidas encerradas ou agendadas nunca devem incrementar contagem ao vivo");
+
+  // Partidas com ao vivo
+  assert.strictEqual(countLiveMatches(sampleMatches), 2, "Apenas partidas com status 'ao_vivo' devem ser computadas");
+  console.log("  [PASS] 1. Partidas encerradas e agendadas não incrementam contagem ao vivo; somente status oficial 'ao_vivo' é contabilizado.");
+
+  // ---------------------------------------------------------------------------
+  // TESTE 9: Escopo Contextual de Jogos Ao Vivo por Torneio (Série A sem falsos positivos)
+  // ---------------------------------------------------------------------------
+  console.log("\n[TESTE 9] Escopo contextual de jogos ao vivo por torneio selecionado");
+  const mixedMatches = [
+    { id: "sa-1", tournamentId: "brasileirao-a", status: "encerrado", phase: "31ª Rodada", roundOrLeg: "31ª Rodada" },
+    { id: "sa-2", tournamentId: "brasileirao-a", status: "agendado", phase: "32ª Rodada", roundOrLeg: "32ª Rodada" },
+    { id: "lib-1", tournamentId: "libertadores", status: "ao_vivo", phase: "Semifinal", roundOrLeg: "Ida" },
+    { id: "cdb-1", tournamentId: "copa-do-brasil", status: "ao_vivo", phase: "Semifinal", roundOrLeg: "Volta" },
+  ];
+
+  const serieAMatchesOnly = filterMatchesByTournament(mixedMatches, "brasileirao-a");
+  assert.strictEqual(serieAMatchesOnly.length, 2);
+  assert.strictEqual(countLiveMatches(serieAMatchesOnly), 0, "Série A deve ter 0 jogos ao vivo quando todos forem encerrados ou agendados");
+
+  const allTournamentLive = countLiveMatches(mixedMatches);
+  assert.strictEqual(allTournamentLive, 2, "Em 'todos', a contagem total de ao vivo deve incluir os torneios participantes");
+  console.log("  [PASS] 1. Brasileirão Série A não exibe contagem de ao vivo originada de outras competições.");
+
+  // ---------------------------------------------------------------------------
+  // TESTE 10: Isolamento Estrito dos Filtros de Status (ao_vivo, encerrado, proximos)
+  // ---------------------------------------------------------------------------
+  console.log("\n[TESTE 10] Isolamento rigoroso dos filtros de status de partidas");
+  const testPool = [
+    { id: "1", status: "ao_vivo" },
+    { id: "2", status: "encerrado" },
+    { id: "3", status: "encerrado" },
+    { id: "4", status: "agendado" },
+    { id: "5", status: "hoje" },
+    { id: "6", status: "amanha" },
+  ];
+
+  const liveOnly = filterMatchesByStatus(testPool, "ao_vivo");
+  assert.strictEqual(liveOnly.length, 1);
+  assert.ok(liveOnly.every((m) => m.status === "ao_vivo"));
+
+  const finishedOnly = filterMatchesByStatus(testPool, "encerrado");
+  assert.strictEqual(finishedOnly.length, 2);
+  assert.ok(finishedOnly.every((m) => m.status === "encerrado"));
+
+  const upcomingOnly = filterMatchesByStatus(testPool, "proximos");
+  assert.strictEqual(upcomingOnly.length, 3);
+  assert.ok(upcomingOnly.every((m) => m.status === "agendado" || m.status === "hoje" || m.status === "amanha"));
+
+  const allFiltered = filterMatchesByStatus(testPool, "todos");
+  assert.strictEqual(allFiltered.length, 6);
+  console.log("  [PASS] 1. Cada filtro de status retorna unicamente as partidas correspondentes ao seu estado.");
+
+  // ---------------------------------------------------------------------------
+  // TESTE 11: Mapeamento de Rodadas e Determinação da Rodada Atual a Partir dos Dados
+  // ---------------------------------------------------------------------------
+  console.log("\n[TESTE 11] Mapeamento de rodadas e sincronização com jogos disputados da tabela");
+  const multiRoundMatches = [
+    { id: "r1-1", phase: "1ª Rodada", roundOrLeg: "1ª Rodada", status: "encerrado" },
+    { id: "r1-2", phase: "1ª Rodada", roundOrLeg: "1ª Rodada", status: "encerrado" },
+    { id: "r31-1", phase: "31ª Rodada", roundOrLeg: "31ª Rodada", status: "encerrado" },
+    { id: "r31-2", phase: "31ª Rodada", roundOrLeg: "31ª Rodada", status: "encerrado" },
+    { id: "r32-1", phase: "32ª Rodada", roundOrLeg: "32ª Rodada", status: "agendado" },
+    { id: "r32-2", phase: "32ª Rodada", roundOrLeg: "32ª Rodada", status: "agendado" },
+  ];
+
+  const rounds = getAvailableRounds(multiRoundMatches);
+  assert.deepStrictEqual(rounds, ["1ª Rodada", "31ª Rodada", "32ª Rodada"]);
+
+  // Com tabela indicando 31 jogos disputados
+  const mockStandings31 = [{ club: "Flamengo", played: 31 }, { club: "Palmeiras", played: 31 }];
+  const currentRound = getCurrentRound(multiRoundMatches, mockStandings31);
+  assert.strictEqual(currentRound, "31ª Rodada", "Quando a tabela indica 31 jogos disputados, a rodada atual deve ser '31ª Rodada', e não '1ª Rodada'");
+
+  // Ordenação com prioridade para jogos ao vivo
+  const unsorted = [
+    { id: "fin", status: "encerrado" },
+    { id: "live", status: "ao_vivo" },
+    { id: "sched", status: "agendado" },
+  ];
+  const sorted = sortMatchesForDisplay(unsorted);
+  assert.strictEqual(sorted[0].id, "live", "Partida ao vivo deve ter prioridade máxima de exibição");
+  assert.strictEqual(sorted[1].id, "sched", "Partida agendada deve anteceder partidas encerradas");
+  assert.strictEqual(sorted[2].id, "fin", "Partida encerrada deve vir após as partidas em andamento/agendadas");
+  console.log("  [PASS] 1. Rodadas mapeadas com fidelidade à API; rodada atual sincronizada com 31 jogos disputados.");
+
   console.log("\n===========================================================================");
-  console.log("TODOS OS 7 TESTES DO SERVIÇO FOOTBALL DO FRONTEND PASSARAM COM SUCESSO!");
+  console.log("TODOS OS 11 TESTES DO SERVIÇO FOOTBALL DO FRONTEND PASSARAM COM SUCESSO!");
   console.log("===========================================================================");
 }
 
@@ -187,3 +294,4 @@ runTests().catch((err) => {
   console.error("FALHA NOS TESTES:", err);
   process.exit(1);
 });
+

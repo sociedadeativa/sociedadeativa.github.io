@@ -167,3 +167,138 @@ export async function fetchFootballSerieAData(
   const rawJson = await response.json();
   return validateFootballSerieAPayload(rawJson);
 }
+
+/**
+ * Contabiliza partidas genuinamente ao vivo a partir do status oficial da API.
+ * Não infere status a partir de horário de início nem dados sintéticos.
+ */
+export function countLiveMatches(matches: MatchScore[]): number {
+  if (!Array.isArray(matches)) return 0;
+  return matches.filter((m) => m && m.status === "ao_vivo").length;
+}
+
+/**
+ * Filtra partidas estritamente pelo status selecionado:
+ * - "ao_vivo": apenas partidas com status === "ao_vivo"
+ * - "encerrado": apenas partidas com status === "encerrado"
+ * - "proximos": apenas partidas com status === "agendado" | "hoje" | "amanha"
+ * - "todos": todas as partidas
+ */
+export function filterMatchesByStatus(
+  matches: MatchScore[],
+  statusFilter: "todos" | "ao_vivo" | "encerrado" | "proximos"
+): MatchScore[] {
+  if (!Array.isArray(matches)) return [];
+  switch (statusFilter) {
+    case "ao_vivo":
+      return matches.filter((m) => m && m.status === "ao_vivo");
+    case "encerrado":
+      return matches.filter((m) => m && m.status === "encerrado");
+    case "proximos":
+      return matches.filter(
+        (m) => m && (m.status === "agendado" || m.status === "hoje" || m.status === "amanha")
+      );
+    case "todos":
+    default:
+      return matches;
+  }
+}
+
+/**
+ * Filtra partidas por identificador de torneio
+ */
+export function filterMatchesByTournament(
+  matches: MatchScore[],
+  tournamentId: string
+): MatchScore[] {
+  if (!Array.isArray(matches)) return [];
+  if (!tournamentId || tournamentId === "todos") return matches;
+  return matches.filter((m) => m && m.tournamentId === tournamentId);
+}
+
+/**
+ * Extrai a lista ordenada de rodadas presentes nas partidas (sem duplicações).
+ * Preserva o texto exato fornecido pela API.
+ */
+export function getAvailableRounds(matches: MatchScore[]): string[] {
+  if (!Array.isArray(matches)) return [];
+  const seen = new Set<string>();
+  const rounds: string[] = [];
+  for (const m of matches) {
+    const roundName = m.roundOrLeg || m.phase;
+    if (roundName && !seen.has(roundName)) {
+      seen.add(roundName);
+      rounds.push(roundName);
+    }
+  }
+  return rounds;
+}
+
+/**
+ * Determina a rodada atual ou mais relevante do campeonato a partir dos dados oficiais.
+ * Não inventa rodadas: utiliza estritamente os campos e status fornecidos pela API.
+ */
+export function getCurrentRound(
+  matches: MatchScore[],
+  standings?: StandingRow[]
+): string {
+  if (!Array.isArray(matches) || matches.length === 0) return "";
+
+  // 1. Se houver partida ao vivo, a rodada dela é a rodada ativa
+  const liveMatch = matches.find((m) => m && m.status === "ao_vivo");
+  if (liveMatch) {
+    const r = liveMatch.roundOrLeg || liveMatch.phase;
+    if (r) return r;
+  }
+
+  // 2. Se houver tabela de classificação oficial com contagem de jogos disputados
+  if (Array.isArray(standings) && standings.length > 0) {
+    const maxPlayed = Math.max(...standings.map((s) => s.played || 0));
+    if (maxPlayed > 0) {
+      const candidateRound = `${maxPlayed}ª Rodada`;
+      const exists = matches.some(
+        (m) => m && (m.roundOrLeg === candidateRound || m.phase === candidateRound)
+      );
+      if (exists) return candidateRound;
+    }
+  }
+
+  // 3. Caso contrário, localiza a rodada da última partida encerrada
+  const finished = matches.filter((m) => m && m.status === "encerrado");
+  if (finished.length > 0) {
+    const lastFinished = finished[finished.length - 1];
+    const r = lastFinished.roundOrLeg || lastFinished.phase;
+    if (r) return r;
+  }
+
+  // 4. Ou a rodada da primeira partida agendada
+  const scheduled = matches.filter(
+    (m) => m && (m.status === "agendado" || m.status === "hoje" || m.status === "amanha")
+  );
+  if (scheduled.length > 0) {
+    const firstScheduled = scheduled[0];
+    const r = firstScheduled.roundOrLeg || firstScheduled.phase;
+    if (r) return r;
+  }
+
+  return matches[0]?.roundOrLeg || matches[0]?.phase || "";
+}
+
+/**
+ * Ordena partidas para exibição intuitiva:
+ * 1. Partidas ao vivo (status === "ao_vivo")
+ * 2. Partidas de hoje / amanhã / agendadas
+ * 3. Partidas encerradas
+ */
+export function sortMatchesForDisplay(matches: MatchScore[]): MatchScore[] {
+  if (!Array.isArray(matches)) return [];
+  const getPriority = (status?: string) => {
+    if (status === "ao_vivo") return 0;
+    if (status === "hoje") return 1;
+    if (status === "amanha") return 2;
+    if (status === "agendado") return 3;
+    if (status === "encerrado") return 4;
+    return 5;
+  };
+  return [...matches].sort((a, b) => getPriority(a.status) - getPriority(b.status));
+}
