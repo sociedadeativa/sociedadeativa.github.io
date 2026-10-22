@@ -1,7 +1,12 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { NewsItem } from "../types/news";
 import { PortalLink } from "../components/PortalLink";
 import { sortNewsItems, deduplicateNewsItems } from "../services/newsService";
+import {
+  fetchFootballSerieAData,
+  formatBrazilDateTime,
+  FootballSerieAPayload,
+} from "../services/footballService";
 import {
   Trophy,
   Calendar,
@@ -18,6 +23,7 @@ import {
   Medal,
   ExternalLink,
   RefreshCw,
+  CheckCircle2,
 } from "lucide-react";
 import {
   DEMO_NOTICE,
@@ -47,6 +53,57 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
   const [selectedTournament, setSelectedTournament] = useState<string>("todos");
   const [matchStatusFilter, setMatchStatusFilter] = useState<"todos" | "ao_vivo" | "encerrado" | "proximos">("todos");
   const [standingsTab, setStandingsTab] = useState<"serie-a" | "serie-b">("serie-a");
+
+  // Estado dos dados oficiais do Brasileirão Série A (football-data.org v4)
+  const [serieAData, setSerieAData] = useState<FootballSerieAPayload | null>(null);
+  const [isSerieALoading, setIsSerieALoading] = useState<boolean>(true);
+  const [serieAError, setSerieAError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    setIsSerieALoading(true);
+    setSerieAError(null);
+
+    fetchFootballSerieAData()
+      .then((data) => {
+        if (isMounted) {
+          setSerieAData(data);
+          setIsSerieALoading(false);
+        }
+      })
+      .catch((err) => {
+        if (isMounted) {
+          setSerieAError(
+            err instanceof Error
+              ? err.message
+              : "Dados oficiais do Brasileirão Série A indisponíveis no momento."
+          );
+          setIsSerieALoading(false);
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const handleRetrySerieA = () => {
+    setIsSerieALoading(true);
+    setSerieAError(null);
+    fetchFootballSerieAData()
+      .then((data) => {
+        setSerieAData(data);
+        setIsSerieALoading(false);
+      })
+      .catch((err) => {
+        setSerieAError(
+          err instanceof Error
+            ? err.message
+            : "Falha ao carregar dados do Brasileirão Série A."
+        );
+        setIsSerieALoading(false);
+      });
+  };
 
   // Filtra e ordena cronologicamente notícias reais do dataset sobre esportes/futebol
   const realSportsArticles = useMemo(() => {
@@ -85,18 +142,28 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
     return sortNewsItems(deduplicateNewsItems(filtered));
   }, [articles]);
 
-  // Filtro de partidas
-  const filteredMatches = MATCHES_DATA.filter((m) => {
-    if (selectedTournament !== "todos" && m.tournamentId !== selectedTournament) {
-      return false;
-    }
-    if (matchStatusFilter === "ao_vivo") return m.status === "ao_vivo";
-    if (matchStatusFilter === "encerrado") return m.status === "encerrado";
-    if (matchStatusFilter === "proximos") return m.status === "hoje" || m.status === "amanha" || m.status === "agendado";
-    return true;
-  });
+  // Lista unificada de partidas: partidas reais da Série A quando disponíveis, e outras competições demonstrativas
+  const availableMatches = useMemo(() => {
+    const otherTournamentMatches = MATCHES_DATA.filter((m) => m.tournamentId !== "brasileirao-a");
+    const realSerieAMatches = serieAData?.matches || [];
+    return [...realSerieAMatches, ...otherTournamentMatches];
+  }, [serieAData]);
 
-  const liveCount = MATCHES_DATA.filter((m) => m.status === "ao_vivo").length;
+  const filteredMatches = useMemo(() => {
+    return availableMatches.filter((m) => {
+      if (selectedTournament !== "todos" && m.tournamentId !== selectedTournament) {
+        return false;
+      }
+      if (matchStatusFilter === "ao_vivo") return m.status === "ao_vivo";
+      if (matchStatusFilter === "encerrado") return m.status === "encerrado";
+      if (matchStatusFilter === "proximos") return m.status === "hoje" || m.status === "amanha" || m.status === "agendado";
+      return true;
+    });
+  }, [availableMatches, selectedTournament, matchStatusFilter]);
+
+  const liveCount = useMemo(() => {
+    return availableMatches.filter((m) => m.status === "ao_vivo").length;
+  }, [availableMatches]);
 
   return (
     <div className="py-8 sm:py-12 bg-[#F8FAFC]">
@@ -108,7 +175,7 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
             <div className="p-2 bg-amber-200/80 rounded-lg text-amber-900 shrink-0 mt-0.5">
               <AlertTriangle className="w-5 h-5" />
             </div>
-            <div>
+            <div className="flex-1">
               <div className="flex flex-wrap items-center gap-2 mb-1">
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-black bg-amber-600 text-white tracking-wide uppercase">
                   {DEMO_NOTICE}
@@ -116,10 +183,24 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                 <span className="text-xs font-bold text-amber-900">
                   Estrutura Visual &amp; Protótipo de Cobertura Esportiva
                 </span>
+                {serieAData && (
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-900 border border-emerald-300">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                    Brasileirão Série A com Dados Reais
+                  </span>
+                )}
               </div>
               <p className="text-xs sm:text-sm text-amber-950/90 leading-relaxed">
-                Esta seção é um ambiente demonstrativo da nova editoria de esportes do <strong>Sociedade Ativa</strong>.
-                Todos os <strong>placares ao vivo, resultados, tabelas de classificação, estatísticas e datas</strong> apresentados como demonstração são <strong>dados simulados</strong> para validação de interface e <strong>NÃO</strong> representam resultados oficiais, transmissões em andamento ou eventos esportivos em tempo real.
+                {serieAData ? (
+                  <>
+                    O <strong>Brasileirão Série A</strong> está conectado a <strong>dados oficiais reais</strong> fornecidos por <strong>{serieAData.source}</strong> (última sincronização em {formatBrazilDateTime(serieAData.lastUpdated)}). As demais competições (Série B, Copa do Brasil, Libertadores, Champions League) e placares simulados permanecem em ambiente de demonstração com dados ilustrativos.
+                  </>
+                ) : (
+                  <>
+                    Esta seção é um ambiente demonstrativo da nova editoria de esportes do <strong>Sociedade Ativa</strong>.
+                    Todos os <strong>placares ao vivo, resultados, tabelas de classificação, estatísticas e datas</strong> apresentados como demonstração são <strong>dados simulados</strong> para validação de interface e <strong>NÃO</strong> representam resultados oficiais, transmissões em andamento ou eventos esportivos em tempo real.
+                  </>
+                )}
               </p>
             </div>
           </div>
@@ -175,9 +256,25 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
               <Filter className="w-3.5 h-3.5" />
               <span>Filtrar por Competição:</span>
             </div>
-            <span className="text-[11px] font-semibold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-sm">
-              {DEMO_NOTICE}
-            </span>
+            {selectedTournament === "brasileirao-a" ? (
+              serieAData ? (
+                <span className="text-[11px] font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-sm border border-emerald-200">
+                  Dados Reais · football-data.org
+                </span>
+              ) : isSerieALoading ? (
+                <span className="text-[11px] font-semibold text-slate-700 bg-slate-100 px-2 py-0.5 rounded-sm">
+                  Carregando Série A...
+                </span>
+              ) : (
+                <span className="text-[11px] font-semibold text-rose-800 bg-rose-100 px-2 py-0.5 rounded-sm border border-rose-200">
+                  Dados Indisponíveis
+                </span>
+              )
+            ) : (
+              <span className="text-[11px] font-semibold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-sm">
+                {DEMO_NOTICE}
+              </span>
+            )}
           </div>
           <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
             <button
@@ -201,6 +298,9 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                 }`}
               >
                 <span>{t.name}</span>
+                {t.id === "brasileirao-a" && serieAData && (
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0" title="Dados Reais Ativos" />
+                )}
               </button>
             ))}
           </div>
@@ -219,18 +319,38 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                       <Activity className="w-5 h-5 text-emerald-600" />
                       <span>Jogos &amp; Placares</span>
                     </h2>
-                    <span className="text-[10px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">
-                      {DEMO_NOTICE}
-                    </span>
+                    {selectedTournament === "brasileirao-a" ? (
+                      serieAData ? (
+                        <span className="text-[10px] font-bold text-emerald-800 bg-emerald-100 border border-emerald-200 px-2 py-0.5 rounded">
+                          Dados Reais · {serieAData.source}
+                        </span>
+                      ) : isSerieALoading ? (
+                        <span className="text-[10px] font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">
+                          Carregando Série A...
+                        </span>
+                      ) : (
+                        <span className="text-[10px] font-bold text-rose-800 bg-rose-100 border border-rose-200 px-2 py-0.5 rounded">
+                          Indisponível
+                        </span>
+                      )
+                    ) : (
+                      <span className="text-[10px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">
+                        {DEMO_NOTICE}
+                      </span>
+                    )}
                     {liveCount > 0 && (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300">
-                        <span className="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
-                        {liveCount} Simulação Ao Vivo
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold bg-rose-100 text-rose-900 border border-rose-300">
+                        <span className="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>
+                        {liveCount} {liveCount === 1 ? "Jogo Ao Vivo" : "Jogos Ao Vivo"}
                       </span>
                     )}
                   </div>
                   <p className="text-xs text-slate-500 mt-0.5">
-                    Ambiente demonstrativo de acompanhamento de partidas com dados e placares simulados
+                    {selectedTournament === "brasileirao-a"
+                      ? serieAData
+                        ? `Partidas oficiais do Campeonato Brasileiro Série A. Sincronizado em: ${formatBrazilDateTime(serieAData.lastUpdated)}`
+                        : "Partidas oficiais do Campeonato Brasileiro Série A."
+                      : "Acompanhamento esportivo com suporte a dados oficiais para a Série A e demonstração para demais competições"}
                   </p>
                 </div>
 
@@ -274,104 +394,145 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
 
               {/* Lista de Partidas */}
               <div className="divide-y divide-slate-100 mt-2">
-                {filteredMatches.length === 0 ? (
+                {selectedTournament === "brasileirao-a" && isSerieALoading ? (
+                  <div className="py-12 text-center">
+                    <div className="w-8 h-8 border-3 border-emerald-600 border-t-transparent rounded-full animate-spin mx-auto mb-3" />
+                    <p className="text-xs font-bold text-slate-700">Carregando partidas oficiais do Brasileirão Série A...</p>
+                    <p className="text-[11px] text-slate-500 mt-1">Consultando dataset sincronizado via football-data.org</p>
+                  </div>
+                ) : selectedTournament === "brasileirao-a" && (serieAError || !serieAData) ? (
+                  <div className="py-10 px-4 text-center bg-rose-50/60 rounded-xl border border-rose-200">
+                    <AlertTriangle className="w-8 h-8 text-rose-600 mx-auto mb-2" />
+                    <h3 className="text-sm font-black text-rose-950 mb-1">
+                      Partidas do Brasileirão Série A indisponíveis
+                    </h3>
+                    <p className="text-xs text-rose-800 max-w-md mx-auto mb-3">
+                      {serieAError || "O dataset oficial ainda não foi gerado ou está temporariamente inacessível. O portal Sociedade Ativa não apresenta dados simulados para a Série A."}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={handleRetrySerieA}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-rose-700 hover:bg-rose-800 text-white text-xs font-bold transition-colors cursor-pointer"
+                    >
+                      <RefreshCw className="w-3.5 h-3.5" />
+                      <span>Tentar carregar novamente</span>
+                    </button>
+                  </div>
+                ) : filteredMatches.length === 0 ? (
                   <div className="py-12 text-center text-slate-500 text-sm">
-                    Nenhuma partida simulada encontrada para os filtros selecionados.
+                    Nenhuma partida encontrada para os filtros selecionados.
                   </div>
                 ) : (
-                  filteredMatches.map((match) => (
-                    <div key={match.id} className="py-4 hover:bg-slate-50/60 rounded-xl px-2 transition-colors">
-                      {/* Metadados da Partida */}
-                      <div className="flex flex-wrap items-center justify-between text-xs text-slate-500 mb-2 gap-2">
-                        <div className="flex items-center gap-2">
-                          <span className="font-bold text-slate-800">{match.tournamentName}</span>
-                          <span className="text-slate-300">&middot;</span>
-                          <span>{match.phase}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-[10px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded">
-                            {match.disclaimer}
-                          </span>
-                          {match.status === "ao_vivo" ? (
-                            <span className="inline-flex items-center gap-1 font-bold text-amber-900 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 text-xs">
-                              <span className="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
-                              {match.minute || "Simulado"} (Demonstração)
-                            </span>
-                          ) : match.status === "encerrado" ? (
-                            <span className="font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded-md">
-                              Encerrado
-                            </span>
-                          ) : (
-                            <span className="font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md">
-                              {match.date} &middot; {match.time}
-                            </span>
-                          )}
-                        </div>
-                      </div>
+                  filteredMatches.map((match) => {
+                    const isRealMatch = match.tournamentId === "brasileirao-a" && serieAData?.isReal;
 
-                      {/* Placar dos Clubes */}
-                      <div className="grid grid-cols-12 items-center gap-2 my-2">
-                        {/* Mandante */}
-                        <div className="col-span-5 flex items-center justify-end gap-2.5">
-                          <span className="font-heading font-black text-sm sm:text-base text-slate-900 text-right truncate">
-                            {match.homeTeam.name}
-                          </span>
-                          <span className={`w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-black shrink-0 shadow-2xs ${match.homeTeam.color}`}>
-                            {match.homeTeam.initials}
-                          </span>
-                        </div>
-
-                        {/* Placar Central */}
-                        <div className="col-span-2 text-center flex items-center justify-center">
-                          {match.status === "ao_vivo" || match.status === "encerrado" ? (
-                            <div className="flex items-center gap-2 px-3 py-1 bg-slate-900 text-white rounded-lg font-mono font-black text-lg sm:text-xl shadow-2xs">
-                              <span>{match.homeTeam.score ?? 0}</span>
-                              <span className="text-slate-400 font-normal">x</span>
-                              <span>{match.awayTeam.score ?? 0}</span>
-                            </div>
-                          ) : (
-                            <div className="text-center">
-                              <span className="font-mono font-bold text-xs sm:text-sm text-slate-700 bg-slate-100 px-2.5 py-1 rounded-md">
-                                {match.time}
+                    return (
+                      <div key={match.id} className="py-4 hover:bg-slate-50/60 rounded-xl px-2 transition-colors">
+                        {/* Metadados da Partida */}
+                        <div className="flex flex-wrap items-center justify-between text-xs text-slate-500 mb-2 gap-2">
+                          <div className="flex items-center gap-2">
+                            <span className="font-bold text-slate-800">{match.tournamentName}</span>
+                            <span className="text-slate-300">&middot;</span>
+                            <span>{match.phase}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            {isRealMatch ? (
+                              <span className="text-[10px] font-bold text-emerald-800 bg-emerald-100 border border-emerald-200 px-1.5 py-0.5 rounded">
+                                Oficial · football-data.org
                               </span>
-                            </div>
-                          )}
+                            ) : (
+                              <span className="text-[10px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded">
+                                {match.disclaimer}
+                              </span>
+                            )}
+                            {match.status === "ao_vivo" ? (
+                              isRealMatch ? (
+                                <span className="inline-flex items-center gap-1 font-bold text-rose-900 bg-rose-50 px-2 py-0.5 rounded border border-rose-200 text-xs">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>
+                                  {match.minute || "Ao vivo"}
+                                </span>
+                              ) : (
+                                <span className="inline-flex items-center gap-1 font-bold text-amber-900 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 text-xs">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
+                                  {match.minute || "Simulado"} (Demonstração)
+                                </span>
+                              )
+                            ) : match.status === "encerrado" ? (
+                              <span className="font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded-md">
+                                Encerrado
+                              </span>
+                            ) : (
+                              <span className="font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md">
+                                {match.date} &middot; {match.time}
+                              </span>
+                            )}
+                          </div>
                         </div>
 
-                        {/* Visitante */}
-                        <div className="col-span-5 flex items-center justify-start gap-2.5">
-                          <span className={`w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-black shrink-0 shadow-2xs ${match.awayTeam.color}`}>
-                            {match.awayTeam.initials}
-                          </span>
-                          <span className="font-heading font-black text-sm sm:text-base text-slate-900 truncate">
-                            {match.awayTeam.name}
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Detalhes do Local, Transmissão e Eventos */}
-                      <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap items-center justify-between text-[11px] text-slate-500 gap-2">
-                        <div className="flex items-center gap-2">
-                          <span className="truncate">{match.venue} ({match.city})</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-slate-600 font-medium">
-                          <Tv className="w-3 h-3 text-slate-400" />
-                          <span className="truncate">{match.broadcast}</span>
-                        </div>
-                      </div>
-
-                      {/* Eventos Chave Simulados */}
-                      {match.keyEvents && match.keyEvents.length > 0 && (
-                        <div className="mt-2 flex flex-wrap gap-1.5">
-                          {match.keyEvents.map((ev, idx) => (
-                            <span key={idx} className="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-mono">
-                              {ev}
+                        {/* Placar dos Clubes */}
+                        <div className="grid grid-cols-12 items-center gap-2 my-2">
+                          {/* Mandante */}
+                          <div className="col-span-5 flex items-center justify-end gap-2.5">
+                            <span className="font-heading font-black text-sm sm:text-base text-slate-900 text-right truncate">
+                              {match.homeTeam.name}
                             </span>
-                          ))}
+                            <span className={`w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-black shrink-0 shadow-2xs ${match.homeTeam.color || "bg-slate-800 text-white"}`}>
+                              {match.homeTeam.initials}
+                            </span>
+                          </div>
+
+                          {/* Placar Central */}
+                          <div className="col-span-2 text-center flex items-center justify-center">
+                            {match.status === "ao_vivo" || match.status === "encerrado" ? (
+                              <div className="flex items-center gap-2 px-3 py-1 bg-slate-900 text-white rounded-lg font-mono font-black text-lg sm:text-xl shadow-2xs">
+                                <span>{typeof match.homeTeam.score === "number" ? match.homeTeam.score : "-"}</span>
+                                <span className="text-slate-400 font-normal">x</span>
+                                <span>{typeof match.awayTeam.score === "number" ? match.awayTeam.score : "-"}</span>
+                              </div>
+                            ) : (
+                              <div className="text-center">
+                                <span className="font-mono font-bold text-xs sm:text-sm text-slate-700 bg-slate-100 px-2.5 py-1 rounded-md">
+                                  {match.time}
+                                </span>
+                              </div>
+                            )}
+                          </div>
+
+                          {/* Visitante */}
+                          <div className="col-span-5 flex items-center justify-start gap-2.5">
+                            <span className={`w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-black shrink-0 shadow-2xs ${match.awayTeam.color || "bg-slate-700 text-white"}`}>
+                              {match.awayTeam.initials}
+                            </span>
+                            <span className="font-heading font-black text-sm sm:text-base text-slate-900 truncate">
+                              {match.awayTeam.name}
+                            </span>
+                          </div>
                         </div>
-                      )}
-                    </div>
-                  ))
+
+                        {/* Detalhes do Local, Transmissão e Eventos */}
+                        <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap items-center justify-between text-[11px] text-slate-500 gap-2">
+                          <div className="flex items-center gap-2">
+                            <span className="truncate">{match.venue} ({match.city})</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-slate-600 font-medium">
+                            <Tv className="w-3 h-3 text-slate-400" />
+                            <span className="truncate">{match.broadcast}</span>
+                          </div>
+                        </div>
+
+                        {/* Eventos Chave */}
+                        {match.keyEvents && match.keyEvents.length > 0 && (
+                          <div className="mt-2 flex flex-wrap gap-1.5">
+                            {match.keyEvents.map((ev, idx) => (
+                              <span key={idx} className="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-mono">
+                                {ev}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })
                 )}
               </div>
             </div>
@@ -592,25 +753,48 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                     <Medal className="w-5 h-5 text-amber-600" />
                     <span>Tabela de Classificação</span>
                   </h2>
-                  <span className="text-[10px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded">
-                    {DEMO_NOTICE}
-                  </span>
+                  {standingsTab === "serie-a" ? (
+                    serieAData ? (
+                      <span className="text-[10px] font-bold text-emerald-800 bg-emerald-100 border border-emerald-200 px-1.5 py-0.5 rounded">
+                        Dados Reais · {serieAData.season}
+                      </span>
+                    ) : isSerieALoading ? (
+                      <span className="text-[10px] font-bold text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded">
+                        Carregando...
+                      </span>
+                    ) : (
+                      <span className="text-[10px] font-bold text-rose-800 bg-rose-100 border border-rose-200 px-1.5 py-0.5 rounded">
+                        Indisponível
+                      </span>
+                    )
+                  ) : (
+                    <span className="text-[10px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded">
+                      {DEMO_NOTICE}
+                    </span>
+                  )}
                 </div>
-                <p className="text-[11px] text-slate-500">
-                  Classificação simulada dos clubes brasileiros na temporada 2026
+                <p className="text-[11px] text-slate-500 leading-relaxed">
+                  {standingsTab === "serie-a"
+                    ? serieAData
+                      ? `Classificação oficial do Brasileirão Série A (${serieAData.season}). Fonte: football-data.org · Atualizado: ${formatBrazilDateTime(serieAData.lastUpdated)}`
+                      : "Classificação oficial do Campeonato Brasileiro Série A (dados oficiais da API football-data.org)."
+                    : "Classificação simulada dos clubes brasileiros na temporada 2026"}
                 </p>
 
                 {/* Abas Série A / Série B */}
                 <div className="flex items-center gap-1.5 mt-3 bg-slate-100 p-1 rounded-lg text-xs font-bold">
                   <button
                     onClick={() => setStandingsTab("serie-a")}
-                    className={`flex-1 py-1.5 rounded-md text-center transition-all ${
+                    className={`flex-1 py-1.5 rounded-md text-center transition-all flex items-center justify-center gap-1.5 ${
                       standingsTab === "serie-a"
                         ? "bg-white text-slate-950 shadow-2xs"
                         : "text-slate-600 hover:text-slate-950"
                     }`}
                   >
-                    Brasileirão Série A
+                    <span>Brasileirão Série A</span>
+                    {serieAData && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" title="Dados reais ativos" />
+                    )}
                   </button>
                   <button
                     onClick={() => setStandingsTab("serie-b")}
@@ -626,60 +810,86 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
               </div>
 
               {/* Tabela de Classificação Responsiva */}
-              <div className="overflow-x-auto">
-                <table className="w-full text-xs text-left">
-                  <thead>
-                    <tr className="border-b border-slate-200 text-[10px] font-black uppercase text-slate-500">
-                      <th className="py-2 px-1 text-center w-6">#</th>
-                      <th className="py-2 px-1">Clube</th>
-                      <th className="py-2 px-1 text-center font-bold text-slate-900">P</th>
-                      <th className="py-2 px-1 text-center">J</th>
-                      <th className="py-2 px-1 text-center">V</th>
-                      <th className="py-2 px-1 text-center">SG</th>
-                      <th className="py-2 px-1 text-center hidden sm:table-cell">%</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100">
-                    {(standingsTab === "serie-a" ? STANDINGS_SERIE_A : STANDINGS_SERIE_B).map((row) => (
-                      <tr key={row.club} className="hover:bg-slate-50 transition-colors">
-                        <td className="py-1.5 px-1 text-center font-bold">
-                          <span
-                            className={`inline-block w-5 h-5 rounded-full text-center leading-5 text-[10px] font-black text-white ${
-                              row.zone === "libertadores_direta"
-                                ? "bg-blue-600"
-                                : row.zone === "pre_libertadores"
-                                ? "bg-sky-500"
-                                : row.zone === "sulamericana"
-                                ? "bg-emerald-600"
-                                : row.zone === "acesso"
-                                ? "bg-blue-700"
-                                : row.zone === "rebaixamento"
-                                ? "bg-rose-600"
-                                : "bg-slate-300 text-slate-800"
-                            }`}
-                          >
-                            {row.position}
-                          </span>
-                        </td>
-                        <td className="py-1.5 px-1 font-semibold text-slate-900 truncate max-w-[110px]">
-                          {row.club}
-                        </td>
-                        <td className="py-1.5 px-1 text-center font-black text-slate-950 bg-slate-50/80">
-                          {row.points}
-                        </td>
-                        <td className="py-1.5 px-1 text-center text-slate-600">{row.played}</td>
-                        <td className="py-1.5 px-1 text-center text-slate-600">{row.won}</td>
-                        <td className="py-1.5 px-1 text-center font-mono text-[11px] text-slate-600">
-                          {row.goalDiff > 0 ? `+${row.goalDiff}` : row.goalDiff}
-                        </td>
-                        <td className="py-1.5 px-1 text-center font-mono text-[10px] text-slate-500 hidden sm:table-cell">
-                          {row.percentage}
-                        </td>
+              {standingsTab === "serie-a" && isSerieALoading ? (
+                <div className="py-12 text-center">
+                  <div className="w-7 h-7 border-3 border-emerald-600 border-t-transparent rounded-full animate-spin mx-auto mb-2" />
+                  <p className="text-xs font-bold text-slate-700">Carregando classificação oficial da Série A...</p>
+                  <p className="text-[10px] text-slate-500 mt-0.5">Sincronizando tabela oficial via football-data.org</p>
+                </div>
+              ) : standingsTab === "serie-a" && (serieAError || !serieAData) ? (
+                <div className="py-6 px-3 text-center bg-rose-50/60 rounded-xl border border-rose-200 my-2">
+                  <AlertTriangle className="w-7 h-7 text-rose-600 mx-auto mb-2" />
+                  <h4 className="text-xs font-black text-rose-950 mb-1">
+                    Tabela da Série A indisponível
+                  </h4>
+                  <p className="text-[11px] text-rose-800 mb-3 leading-relaxed">
+                    {serieAError || "O dataset oficial ainda não foi gerado ou está temporariamente inacessível. O portal Sociedade Ativa não apresenta dados simulados para a Série A."}
+                  </p>
+                  <button
+                    type="button"
+                    onClick={handleRetrySerieA}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-rose-700 hover:bg-rose-800 text-white text-xs font-bold transition-colors cursor-pointer"
+                  >
+                    <RefreshCw className="w-3.5 h-3.5" />
+                    <span>Tentar carregar novamente</span>
+                  </button>
+                </div>
+              ) : (
+                <div className="overflow-x-auto">
+                  <table className="w-full text-xs text-left">
+                    <thead>
+                      <tr className="border-b border-slate-200 text-[10px] font-black uppercase text-slate-500">
+                        <th className="py-2 px-1 text-center w-6">#</th>
+                        <th className="py-2 px-1">Clube</th>
+                        <th className="py-2 px-1 text-center font-bold text-slate-900">P</th>
+                        <th className="py-2 px-1 text-center">J</th>
+                        <th className="py-2 px-1 text-center">V</th>
+                        <th className="py-2 px-1 text-center">SG</th>
+                        <th className="py-2 px-1 text-center hidden sm:table-cell">%</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                      {(standingsTab === "serie-a" ? serieAData!.standings : STANDINGS_SERIE_B).map((row) => (
+                        <tr key={row.club} className="hover:bg-slate-50 transition-colors">
+                          <td className="py-1.5 px-1 text-center font-bold">
+                            <span
+                              className={`inline-block w-5 h-5 rounded-full text-center leading-5 text-[10px] font-black text-white ${
+                                row.zone === "libertadores_direta"
+                                  ? "bg-blue-600"
+                                  : row.zone === "pre_libertadores"
+                                  ? "bg-sky-500"
+                                  : row.zone === "sulamericana"
+                                  ? "bg-emerald-600"
+                                  : row.zone === "acesso"
+                                  ? "bg-blue-700"
+                                  : row.zone === "rebaixamento"
+                                  ? "bg-rose-600"
+                                  : "bg-slate-300 text-slate-800"
+                              }`}
+                            >
+                              {row.position}
+                            </span>
+                          </td>
+                          <td className="py-1.5 px-1 font-semibold text-slate-900 truncate max-w-[110px]">
+                            {row.club}
+                          </td>
+                          <td className="py-1.5 px-1 text-center font-black text-slate-950 bg-slate-50/80">
+                            {row.points}
+                          </td>
+                          <td className="py-1.5 px-1 text-center text-slate-600">{row.played}</td>
+                          <td className="py-1.5 px-1 text-center text-slate-600">{row.won}</td>
+                          <td className="py-1.5 px-1 text-center font-mono text-[11px] text-slate-600">
+                            {row.goalDiff > 0 ? `+${row.goalDiff}` : row.goalDiff}
+                          </td>
+                          <td className="py-1.5 px-1 text-center font-mono text-[10px] text-slate-500 hidden sm:table-cell">
+                            {row.percentage}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
 
               {/* Legenda de Zonas */}
               <div className="mt-3 pt-3 border-t border-slate-100 text-[10px] text-slate-600 space-y-1">
@@ -727,11 +937,20 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                 Arquitetura de Cobertura Esportiva
               </h3>
               <p className="text-xs text-slate-300 leading-relaxed mb-3">
-                O portal <strong>Sociedade Ativa</strong> disponibiliza este caderno como demonstração funcional de dados desportivos.
-                A cobertura completa contemplará integrações com feeds de futebol do Brasileirão Série A/B, CBF, CONMEBOL e federações estaduais.
+                O portal <strong>Sociedade Ativa</strong> disponibiliza este caderno com integração de dados oficiais para o <strong>Brasileirão Série A</strong> via API football-data.org v4.
+                As demais competições e placares ainda não integrados permanecem como protótipo demonstrativo com dados simulados identificados.
               </p>
-              <div className="pt-3 border-t border-slate-800 text-[11px] text-slate-400">
-                <span className="text-amber-300 font-bold">{DEMO_NOTICE}</span> · Atualização periódica de dados simulados.
+              <div className="pt-3 border-t border-slate-800 text-[11px] text-slate-400 space-y-1">
+                {serieAData ? (
+                  <div className="text-emerald-400 font-semibold flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    <span>Série A Oficial: {formatBrazilDateTime(serieAData.lastUpdated)} (Fonte: {serieAData.source})</span>
+                  </div>
+                ) : (
+                  <div className="text-slate-400">
+                    <span className="text-amber-300 font-bold">{DEMO_NOTICE}</span> · Atualização periódica de dados esportivos.
+                  </div>
+                )}
               </div>
             </div>
           </div>
