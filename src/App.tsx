@@ -10,8 +10,10 @@ import { NewsItem } from "./types/news";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
+// Página Inicial carregada diretamente para pintura imediata da dobra LCP sem waterfall
+import { HomePage } from "./pages/HomePage";
+
 // Páginas Dedicadas do Portal com Divisão em Chunks (Route-Level Code Splitting)
-const HomePage = lazy(() => import("./pages/HomePage").then((m) => ({ default: m.HomePage })));
 const PoliticaPage = lazy(() => import("./pages/PoliticaPage").then((m) => ({ default: m.PoliticaPage })));
 const EleicoesPage = lazy(() => import("./pages/EleicoesPage").then((m) => ({ default: m.EleicoesPage })));
 const EconomiaPage = lazy(() => import("./pages/EconomiaPage").then((m) => ({ default: m.EconomiaPage })));

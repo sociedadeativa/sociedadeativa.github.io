@@ -12,7 +12,7 @@ console.log("TEST SUITE: PERFORMANCE, CODE SPLITTING & BUNDLE SIZE AUDIT");
 console.log("======================================================================");
 
 // --- TEST 1: Route-Level Code Splitting in App.tsx ---
-console.log("\n[TEST 1] Route-Level Code Splitting in App.tsx");
+console.log("\n[TEST 1] Route-Level Code Splitting & Critical LCP Path in App.tsx");
 const appPath = path.join(rootDir, "src", "App.tsx");
 const appContent = fs.readFileSync(appPath, "utf-8");
 
@@ -21,8 +21,14 @@ assert.ok(
   "App.tsx must use React.lazy and Suspense for route code splitting"
 );
 
+// HomePage must be imported directly to eliminate LCP waterfall
+assert.ok(
+  appContent.includes('import { HomePage } from "./pages/HomePage";'),
+  "App.tsx must import HomePage directly to ensure zero waterfall delay for the LCP viewport"
+);
+
+// All 11 secondary routes must be code-split and lazy-loaded
 const expectedLazyPages = [
-  "HomePage",
   "PoliticaPage",
   "EleicoesPage",
   "EconomiaPage",
@@ -46,7 +52,7 @@ assert.ok(
   appContent.includes("<Suspense fallback="),
   "App.tsx main content must be wrapped in Suspense with accessible fallback"
 );
-console.log(`  [PASS] All ${expectedLazyPages.length} portal pages are code-split using React.lazy and Suspense.`);
+console.log(`  [PASS] HomePage is eagerly mounted for instant LCP while all ${expectedLazyPages.length} secondary pages are code-split.`);
 
 // --- TEST 2: On-Demand Modals and Inspectors ---
 console.log("\n[TEST 2] On-Demand Loading for Modals & Heavy Panels");
@@ -112,6 +118,42 @@ assert.ok(
 );
 console.log("  [PASS] Main editorial image preserves LCP priority without non-critical images competing.");
 
+// --- TEST 4B: Critical Resource Discovery Path & Asset Optimization ---
+console.log("\n[TEST 4B] index.html Critical Discovery & Asset Compression");
+const indexHtmlPath = path.join(rootDir, "index.html");
+const indexHtmlContent = fs.readFileSync(indexHtmlPath, "utf-8");
+
+assert.ok(
+  indexHtmlContent.includes('rel="preload" as="image"') && indexHtmlContent.includes('fetchpriority="high"'),
+  "index.html must preload the LCP lead image"
+);
+assert.ok(
+  indexHtmlContent.includes('media="print" onload="this.media=\'all\'"') || indexHtmlContent.includes('rel="preload" as="style"'),
+  "index.html must load Google Fonts without blocking initial render"
+);
+assert.ok(
+  indexHtmlContent.includes('crossorigin') && indexHtmlContent.includes('fonts.gstatic.com'),
+  "index.html preconnect to fonts.gstatic.com must include crossorigin attribute"
+);
+
+// Check that the 4 fallback images are compressed (< 250 kB each)
+const imagesDir = path.join(rootDir, "src", "assets", "images");
+const fallbackFiles = [
+  "editorial_congresso_brasilia_1791575832620.jpg",
+  "editorial_urna_eleicoes_1791575843949.jpg",
+  "editorial_economia_brasil_1791575854174.jpg",
+  "editorial_dados_publicos_1791575864014.jpg",
+];
+for (const imgName of fallbackFiles) {
+  const stat = fs.statSync(path.join(imagesDir, imgName));
+  const sizeKb = stat.size / 1024;
+  assert.ok(
+    sizeKb < 250,
+    `Fallback image ${imgName} must be under 250 kB (measured ${sizeKb.toFixed(1)} kB)`
+  );
+}
+console.log("  [PASS] index.html LCP preload, non-blocking fonts, and compressed assets verified.");
+
 // --- TEST 5: Production Bundle Measurements & Chunks ---
 console.log("\n[TEST 5] Production Bundle & Chunks Audit");
 const distAssetsDir = path.join(rootDir, "dist", "assets");
@@ -126,10 +168,10 @@ const mainBundleSizeKb = mainBundleStat.size / 1024;
 
 console.log(`  Measured main entry bundle: ${mainBundle} = ${mainBundleSizeKb.toFixed(2)} kB`);
 
-// The un-split baseline was 2,052 kB. It should now be well under 150 kB!
+// The un-split baseline was 2,052 kB. It should now be well under 200 kB!
 assert.ok(
-  mainBundleSizeKb < 150,
-  `Main entry bundle must be under 150 kB (measured ${mainBundleSizeKb.toFixed(2)} kB, baseline was 2052 kB)`
+  mainBundleSizeKb < 200,
+  `Main entry bundle must be under 200 kB (measured ${mainBundleSizeKb.toFixed(2)} kB, baseline was 2052 kB)`
 );
 
 // Verify isolated BrazilMap chunk exists
@@ -140,7 +182,7 @@ assert.ok(mapChunk, "BrazilMap should be code-split into an isolated chunk");
 const reactChunk = assetFiles.find((f) => f.startsWith("vendor-react-") && f.endsWith(".js"));
 assert.ok(reactChunk, "vendor-react should be separated for optimal browser caching");
 
-console.log(`  [PASS] Main bundle size reduced from 2,052.03 kB to ${mainBundleSizeKb.toFixed(2)} kB (>95% reduction).`);
+console.log(`  [PASS] Main bundle size reduced from 2,052.03 kB to ${mainBundleSizeKb.toFixed(2)} kB (>90% reduction).`);
 console.log("\n======================================================================");
 console.log("ALL 5 PERFORMANCE & CODE SPLITTING AUDIT TESTS PASSED SUCCESSFULLY!");
 console.log("======================================================================\n");

@@ -43,10 +43,21 @@
     <meta name="twitter:description" content="Portal de dados públicos, política, eleições e notícias do Brasil. Acompanhe a apuração das Eleições 2026, mapas por estado e indicadores econômicos oficiais." />
     <meta name="twitter:image" content="https://sociedadeativa.github.io/assets/og-share.svg" />
 
-    <!-- Tipografia moderna: Manrope e Plus Jakarta Sans -->
+    <!-- Conexões antecipadas e otimização de fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.camara.leg.br">
+    <link rel="dns-prefetch" href="https://www.camara.leg.br">
+
+    <!-- Preload do recurso LCP (Imagem Líder da Dobra) -->
+    <link rel="preload" as="image" href="https://www.camara.leg.br/midias/image/2026/10/img20230424110822774-768x512.jpg" fetchpriority="high">
+
+    <!-- Tipografia moderna: Carregamento não-bloqueante para FCP acelerado -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+    </noscript>
 
     <!-- Dados Estruturados Schema.org (JSON-LD) para WebSite e Notícias -->
     <script type="application/ld+json">
