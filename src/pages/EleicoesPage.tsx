@@ -1,15 +1,22 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { ElectionDataSet } from "../data/electionData";
 import { NewsItem } from "../types/news";
 import { NationalBanner } from "../components/NationalBanner";
 import { CandidateResultsView } from "../components/CandidateResultsView";
-import { RegionalCharts } from "../components/RegionalCharts";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { NewsCard } from "../components/NewsCard";
 import { PortalLink } from "../components/PortalLink";
 import { AdBanner } from "../components/AdBanner";
 import { isElectionArticle } from "../utils/electionNewsFilter";
 import { SecondRoundBanner } from "../components/SecondRoundBanner";
+
+const RegionalCharts = lazy(() => import("../components/RegionalCharts").then((m) => ({ default: m.RegionalCharts })));
+
+const RegionalChartsSkeleton: React.FC = () => (
+  <div className="w-full py-8 animate-pulse" aria-busy="true" aria-label="Carregando gráficos regionais">
+    <div className="h-64 bg-slate-100 rounded-3xl border border-slate-200" />
+  </div>
+);
 import {
   Vote,
   ShieldCheck,
@@ -426,9 +433,11 @@ export const EleicoesPage: React.FC<EleicoesPageProps> = ({
           </div>
         </div>
 
-        {/* 3. Gráficos Comparativos Regionais */}
+        {/* 3. Gráficos Comparativos Regionais (Carregamento Sob Demanda) */}
         <div className="mb-12">
-          <RegionalCharts dataset={dataset} />
+          <Suspense fallback={<RegionalChartsSkeleton />}>
+            <RegionalCharts dataset={dataset} />
+          </Suspense>
         </div>
 
         {/* 4. Notícias e Resoluções sobre o Processo Eleitoral */}

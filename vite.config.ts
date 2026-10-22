@@ -6,7 +6,11 @@ import { resolve } from 'path';
 
 const rootDir = fileURLToPath(new URL('.', import.meta.url));
 
-export default defineConfig(() => {
+export default defineConfig(({ command }) => {
+  if (command === 'build') {
+    process.env.NODE_ENV = 'production';
+  }
+
   return {
     base: './',
     plugins: [react(), tailwindcss()],
@@ -16,6 +20,7 @@ export default defineConfig(() => {
       },
     },
     build: {
+      chunkSizeWarningLimit: 800,
       rollupOptions: {
         input: {
           main: resolve(rootDir, 'index.html'),
@@ -30,6 +35,18 @@ export default defineConfig(() => {
           clima: resolve(rootDir, 'clima/index.html'),
           sobre: resolve(rootDir, 'sobre/index.html'),
           notFound: resolve(rootDir, '404.html'),
+        },
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('react-dom') || id.includes('react/') || id.includes('scheduler')) {
+                return 'vendor-react';
+              }
+              if (id.includes('lucide-react')) {
+                return 'vendor-lucide';
+              }
+            }
+          },
         },
       },
     },

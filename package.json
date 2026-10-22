@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build && node scripts/generate-article-pages.mjs && node scripts/validate-build.mjs",
+    "build": "NODE_ENV=production vite build && node scripts/generate-article-pages.mjs && node scripts/validate-build.mjs",
     "generate-articles": "node scripts/generate-article-pages.mjs",
     "update-economy": "node scripts/update-economic-data.mjs",
     "update-news": "node scripts/update-news-data.mjs",
@@ -13,7 +13,7 @@
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
-    "test": "node tests/news-pipeline-controlled.test.mjs && node tests/election-news-filter.test.mjs && node tests/election-second-round-pipeline.test.mjs && node tests/technology-section.test.mjs && node tests/image-reliability-and-states.test.mjs"
+    "test": "node tests/news-pipeline-controlled.test.mjs && node tests/election-news-filter.test.mjs && node tests/election-second-round-pipeline.test.mjs && node tests/technology-section.test.mjs && node tests/image-reliability-and-states.test.mjs && node tests/performance-and-bundle-audit.test.mjs"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

@@ -1,19 +1,51 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, Suspense, lazy } from "react";
 import { ElectionDataSet } from "../data/electionData";
 import { NewsItem } from "../types/news";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { FeaturedEditorial } from "../components/FeaturedEditorial";
 import { NationalBanner } from "../components/NationalBanner";
-import { BrazilMap } from "../components/BrazilMap";
-import { RegionalCharts } from "../components/RegionalCharts";
 import { NewsSection } from "../components/NewsSection";
 import { EconomySection } from "../components/EconomySection";
 import { BolsaSection } from "../components/BolsaSection";
-import { StateTable } from "../components/StateTable";
 import { AdBanner } from "../components/AdBanner";
 import { PortalLink } from "../components/PortalLink";
 import { ArrowRight, MapPin, Trophy, Clock } from "lucide-react";
 import { sortNewsItems, deduplicateNewsItems, isValidImageUrl } from "../services/newsService";
+
+// Componentes Pesados Abaixo da Dobra com Carregamento Sob Demanda
+const BrazilMap = lazy(() => import("../components/BrazilMap").then((m) => ({ default: m.BrazilMap })));
+const RegionalCharts = lazy(() => import("../components/RegionalCharts").then((m) => ({ default: m.RegionalCharts })));
+const StateTable = lazy(() => import("../components/StateTable").then((m) => ({ default: m.StateTable })));
+
+const BrazilMapSkeleton: React.FC = () => (
+  <div
+    className="w-full bg-slate-50 border border-slate-200 rounded-3xl p-8 flex flex-col items-center justify-center min-h-[500px] animate-pulse text-center"
+    aria-busy="true"
+    aria-label="Carregando mapa interativo oficial"
+  >
+    <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 mb-3">
+      <MapPin className="w-6 h-6" />
+    </div>
+    <span className="font-heading font-black text-slate-800 text-base mb-1">
+      Carregando mapa interativo oficial...
+    </span>
+    <span className="text-xs text-slate-500 max-w-sm">
+      Carregando geometria vetorial das 27 Unidades da Federação e dados eleitorais.
+    </span>
+  </div>
+);
+
+const RegionalChartsSkeleton: React.FC = () => (
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-pulse" aria-busy="true" aria-label="Carregando gráficos regionais">
+    <div className="h-64 bg-slate-100 rounded-3xl border border-slate-200" />
+  </div>
+);
+
+const StateTableSkeleton: React.FC = () => (
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-pulse" aria-busy="true" aria-label="Carregando tabela de estados">
+    <div className="h-96 bg-slate-100 rounded-3xl border border-slate-200" />
+  </div>
+);
 
 interface HomePageProps {
   dataset: ElectionDataSet;
@@ -194,19 +226,23 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
           </div>
 
-          {/* Componente do Mapa SVG com Controles */}
-          <BrazilMap
-            dataset={dataset}
-            selectedStateUf={selectedStateUf}
-            onSelectState={(uf) => onSelectState(uf)}
-            candidateFilter={candidateFilter}
-            onSelectCandidateFilter={onSelectCandidateFilter}
-          />
+          {/* Componente do Mapa SVG com Controles (Carregamento Sob Demanda) */}
+          <Suspense fallback={<BrazilMapSkeleton />}>
+            <BrazilMap
+              dataset={dataset}
+              selectedStateUf={selectedStateUf}
+              onSelectState={(uf) => onSelectState(uf)}
+              candidateFilter={candidateFilter}
+              onSelectCandidateFilter={onSelectCandidateFilter}
+            />
+          </Suspense>
         </div>
       </section>
 
-      {/* 5. Gráficos Comparativos Regionais e Estados Decisivos */}
-      <RegionalCharts dataset={dataset} />
+      {/* 5. Gráficos Comparativos Regionais e Estados Decisivos (Carregamento Sob Demanda) */}
+      <Suspense fallback={<RegionalChartsSkeleton />}>
+        <RegionalCharts dataset={dataset} />
+      </Suspense>
 
       {/* 6. Seção de Economia: Indicadores Oficiais IBGE e Banco Central + Bolsa de Valores (B3) */}
       <div id="indicadores-economia">
@@ -303,13 +339,15 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
-      {/* 10. Tabela Geral de Resultados por Estado (26 Estados + DF) */}
+      {/* 10. Tabela Geral de Resultados por Estado (26 Estados + DF - Carregamento Sob Demanda) */}
       <div id="tabela-apuracao-estados">
-        <StateTable
-          dataset={dataset}
-          selectedStateUf={selectedStateUf}
-          onSelectState={(uf) => onSelectState(uf)}
-        />
+        <Suspense fallback={<StateTableSkeleton />}>
+          <StateTable
+            dataset={dataset}
+            selectedStateUf={selectedStateUf}
+            onSelectState={(uf) => onSelectState(uf)}
+          />
+        </Suspense>
       </div>
     </div>
   );
