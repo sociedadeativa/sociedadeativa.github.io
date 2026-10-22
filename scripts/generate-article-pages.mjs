@@ -634,8 +634,207 @@ function main() {
 
   console.log(`Sucesso: ${generatedCount} páginas individuais de notícias geradas em dist/noticias/[id]/index.html`);
 
+  // Injeta o LCP image preload dinâmico na homepage gerada (dist/index.html)
+  injectHomepageLcpPreload(articles, DIST_DIR);
+
   // Gera o sitemap.xml atualizado incluindo seções canônicas e todos os artigos
   generateSitemap(generatedArticles);
+}
+
+// Helpers para seleção de matéria líder idêntica ao FeaturedEditorial.tsx
+export function parseNewsDateToTimestamp(dateStr) {
+  if (!dateStr || typeof dateStr !== 'string') return 0;
+  const trimmed = dateStr.trim();
+  if (!trimmed || trimmed === 'Data não informada' || trimmed === 'Hoje') return 0;
+
+  const brAsPattern = /^(\d{1,2})\/(\d{1,2})\/(\d{4})(?:\s+às\s+(\d{1,2}):(\d{2})(?::(\d{2}))?)?$/i;
+  const matchAs = trimmed.match(brAsPattern);
+  if (matchAs) {
+    const day = parseInt(matchAs[1], 10);
+    const month = parseInt(matchAs[2], 10) - 1;
+    const year = parseInt(matchAs[3], 10);
+    const hours = matchAs[4] !== undefined ? parseInt(matchAs[4], 10) : 0;
+    const minutes = matchAs[5] !== undefined ? parseInt(matchAs[5], 10) : 0;
+    const seconds = matchAs[6] !== undefined ? parseInt(matchAs[6], 10) : 0;
+    return Date.UTC(year, month, day, hours + 3, minutes, seconds);
+  }
+
+  const brSpacePattern = /^(\d{1,2})\/(\d{1,2})\/(\d{4})(?:\s+(\d{1,2}):(\d{2})(?::(\d{2}))?)?$/;
+  const matchSpace = trimmed.match(brSpacePattern);
+  if (matchSpace) {
+    const day = parseInt(matchSpace[1], 10);
+    const month = parseInt(matchSpace[2], 10) - 1;
+    const year = parseInt(matchSpace[3], 10);
+    const hours = matchSpace[4] !== undefined ? parseInt(matchSpace[4], 10) : 0;
+    const minutes = matchSpace[5] !== undefined ? parseInt(matchSpace[5], 10) : 0;
+    const seconds = matchSpace[6] !== undefined ? parseInt(matchSpace[6], 10) : 0;
+    return Date.UTC(year, month, day, hours + 3, minutes, seconds);
+  }
+
+  const isoPattern = /^(\d{4})-(\d{2})-(\d{2})(?:[T\s](\d{2}):(\d{2})(?::(\d{2}))?(?:\.\d+)?(Z|[+-]\d{2}:?\d{2})?)?$/i;
+  const matchIso = trimmed.match(isoPattern);
+  if (matchIso) {
+    const year = parseInt(matchIso[1], 10);
+    const month = parseInt(matchIso[2], 10) - 1;
+    const day = parseInt(matchIso[3], 10);
+    const hours = matchIso[4] !== undefined ? parseInt(matchIso[4], 10) : 0;
+    const minutes = matchIso[5] !== undefined ? parseInt(matchIso[5], 10) : 0;
+    const seconds = matchIso[6] !== undefined ? parseInt(matchIso[6], 10) : 0;
+    const tz = matchIso[7];
+    if (!tz) {
+      return Date.UTC(year, month, day, hours + 3, minutes, seconds);
+    }
+  }
+
+  const parsed = new Date(trimmed);
+  const time = parsed.getTime();
+  return isNaN(time) ? 0 : time;
+}
+
+export function deduplicateNewsItems(items) {
+  if (!Array.isArray(items)) return [];
+  const seenIds = new Set();
+  const seenUrls = new Set();
+  const result = [];
+
+  for (const item of items) {
+    if (!item || !item.id) continue;
+    if (seenIds.has(item.id)) continue;
+
+    const isInternalGenericUrl =
+      !item.articleUrl ||
+      item.articleUrl === 'https://sociedadeativa.github.io/' ||
+      item.articleUrl === 'https://sociedadeativa.github.io/noticias/' ||
+      item.articleUrl === 'https://sociedadeativa.github.io/eleicoes/';
+
+    if (!isInternalGenericUrl && seenUrls.has(item.articleUrl.toLowerCase())) {
+      continue;
+    }
+
+    seenIds.add(item.id);
+    if (!isInternalGenericUrl) {
+      seenUrls.add(item.articleUrl.toLowerCase());
+    }
+    result.push(item);
+  }
+  return result;
+}
+
+export function sortNewsItems(items) {
+  if (!Array.isArray(items)) return [];
+  return [...items].sort((a, b) => {
+    const timeA = parseNewsDateToTimestamp(a.publishedAt);
+    const timeB = parseNewsDateToTimestamp(b.publishedAt);
+    if (timeB !== timeA) {
+      return timeB - timeA;
+    }
+    const ingA = parseNewsDateToTimestamp(a.ingestedAt);
+    const ingB = parseNewsDateToTimestamp(b.ingestedAt);
+    if (ingB !== ingA) {
+      return ingB - ingA;
+    }
+    return 0;
+  });
+}
+
+export function isValidImageUrl(url) {
+  if (!url || typeof url !== 'string') return false;
+  const trimmed = url.trim();
+  if (!trimmed.startsWith('https://') && !trimmed.startsWith('http://') && !trimmed.startsWith('/')) {
+    return false;
+  }
+  if (/\.(aspx|php|html?|jsp)(\?.*)?$/i.test(trimmed)) return false;
+  if (/(\.gif|ebc\.png|pixel|beacon|spacer|1x1|tracking)/i.test(trimmed)) return false;
+  if (/(logo-agenciabrasil|favicon|banner-default|placeholder)/i.test(trimmed)) return false;
+
+  const isImageExt = /\.(jpe?g|png|webp|avif)(\?.*)?$/i.test(trimmed);
+  const isKnownImagePath = /(\/thumbnails\/image\/|\/midias\/image\/|\/noticias-img\/|\/images\/agenciadenoticias\/)/i.test(trimmed);
+
+  return isImageExt || isKnownImagePath;
+}
+
+export function getInstitutionalFallbackAsset(category, distDir = DIST_DIR) {
+  const map = {
+    Eleições: 'editorial_urna_eleicoes',
+    Economia: 'editorial_economia_brasil',
+    Brasil: 'editorial_dados_publicos',
+    Congresso: 'editorial_congresso_brasilia',
+    Política: 'editorial_congresso_brasilia',
+    Governo: 'editorial_congresso_brasilia',
+    Justiça: 'editorial_congresso_brasilia',
+    Mundo: 'editorial_congresso_brasilia',
+  };
+  const prefix = map[category] || 'editorial_congresso_brasilia';
+  const assetsDir = path.join(distDir, 'assets');
+  if (fs.existsSync(assetsDir)) {
+    const files = fs.readdirSync(assetsDir);
+    const match = files.find((f) => f.startsWith(prefix) && f.endsWith('.jpg'));
+    if (match) {
+      return `./assets/${match}`;
+    }
+  }
+  return null;
+}
+
+export function getLeadArticleImageUrl(articles, distDir = DIST_DIR) {
+  if (!Array.isArray(articles) || articles.length === 0) return null;
+
+  // Lógica de seleção estritamente idêntica a FeaturedEditorial.tsx
+  const PINNED_LEAD_ARTICLE_ID = null;
+  const validArticles = sortNewsItems(deduplicateNewsItems(articles));
+  const pinnedArticle = PINNED_LEAD_ARTICLE_ID
+    ? validArticles.find((a) => a.id === PINNED_LEAD_ARTICLE_ID)
+    : null;
+  const leadArticle = pinnedArticle || validArticles[0] || null;
+  if (!leadArticle) return null;
+
+  const hasValidArticleImage = Boolean(
+    leadArticle.imageUrl && isValidImageUrl(leadArticle.imageUrl)
+  );
+
+  if (hasValidArticleImage) {
+    return leadArticle.imageUrl.trim();
+  }
+
+  return getInstitutionalFallbackAsset(leadArticle.category, distDir);
+}
+
+export function injectHomepageLcpPreload(articles, distDir = DIST_DIR) {
+  const indexHtmlPath = path.join(distDir, 'index.html');
+  if (!fs.existsSync(indexHtmlPath)) {
+    console.warn(`[Aviso] ${indexHtmlPath} não existe para injeção de LCP preload.`);
+    return null;
+  }
+
+  let html = fs.readFileSync(indexHtmlPath, 'utf8');
+
+  // Remove com segurança qualquer preload de imagem LCP anterior para prevenir duplicatas e evitar URLs obsoletas
+  html = html.replace(/\s*<!--\s*LCP:\s*Pré-carregamento dinâmico.*?-->\s*/gi, '\n');
+  html = html.replace(/\s*<link\s+rel=["']preload["']\s+as=["']image["'][^>]*>\s*/gi, '\n');
+
+  const leadImageSrc = getLeadArticleImageUrl(articles, distDir);
+
+  if (leadImageSrc) {
+    const preloadTag = `    <!-- LCP: Pré-carregamento dinâmico da imagem líder editorial para acelerar a renderização mobile -->\n    <link rel="preload" as="image" href="${leadImageSrc}" fetchpriority="high">`;
+
+    // Injeta na seção <head> logo após dns-prefetch ou antes dos scripts
+    if (html.includes('<link rel="dns-prefetch" href="https://imagens.ebc.com.br">')) {
+      html = html.replace(
+        '<link rel="dns-prefetch" href="https://imagens.ebc.com.br">',
+        `<link rel="dns-prefetch" href="https://imagens.ebc.com.br">\n${preloadTag}`
+      );
+    } else if (html.includes('</head>')) {
+      html = html.replace('</head>', `${preloadTag}\n  </head>`);
+    }
+
+    fs.writeFileSync(indexHtmlPath, html, 'utf8');
+    console.log(`Sucesso: dist/index.html atualizado com LCP image preload dinâmico: ${leadImageSrc}`);
+    return leadImageSrc;
+  } else {
+    fs.writeFileSync(indexHtmlPath, html, 'utf8');
+    console.log('dist/index.html verificado: nenhuma imagem de lead válida para preloading (tag omitida com segurança).');
+    return null;
+  }
 }
 
 main();

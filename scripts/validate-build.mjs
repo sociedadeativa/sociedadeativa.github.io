@@ -435,6 +435,27 @@ for (const filePath of requiredHtmlFiles) {
   }
 }
 
+// 5. Validação do LCP Image Preload dinâmico em dist/index.html
+const indexHtmlContent = fs.readFileSync('dist/index.html', 'utf8');
+const preloadMatches = [...indexHtmlContent.matchAll(/<link\s+rel=["']preload["']\s+as=["']image["'][^>]*>/gi)];
+if (preloadMatches.length > 1) {
+  console.error(`ERROR: dist/index.html contém múltiplas tags de preload de imagem (${preloadMatches.length})!`);
+  process.exit(1);
+}
+if (preloadMatches.length === 1) {
+  const preloadTag = preloadMatches[0][0];
+  const hrefMatch = preloadTag.match(/href=["']([^"']+)["']/);
+  if (!hrefMatch || !hrefMatch[1].trim()) {
+    console.error('ERROR: Tag de preload de imagem em dist/index.html sem atributo href válido!');
+    process.exit(1);
+  }
+  if (!preloadTag.includes('fetchpriority="high"')) {
+    console.error('ERROR: Tag de preload de imagem em dist/index.html deve conter fetchpriority="high"!');
+    process.exit(1);
+  }
+  console.log(`LCP Preload validado em dist/index.html: ${hrefMatch[1]}`);
+}
+
 // Validação e auditoria estrita de prontidão de produção para todas as páginas de notícias
 if (fs.existsSync('dist/noticias')) {
   const newsData = JSON.parse(fs.readFileSync('dist/data/newsData.json', 'utf8'));
