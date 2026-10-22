@@ -135,5 +135,5 @@ export const SECOND_ROUND_DATA: SecondRoundTotalization = {
     }
   ],
   "statusLabel": "Aguardando apuração oficial",
-  "lastUpdated": "2026-10-21T12:36:00.304Z"
+  "lastUpdated": "2026-10-22T12:36:25.345Z"
 };
