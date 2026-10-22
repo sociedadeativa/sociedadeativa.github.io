@@ -5,6 +5,106 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706149",
+    "title": "Flávio faz campanha em São Paulo; Lula teve ato em Belo Horizonte",
+    "summary": "Os candidatos a presidente cumpriram agenda de campanha nesta quarta-feira (21) em Belo Horizonte, Fortaleza e São Paulo. O candidato Flávio Bolsonaro (PL) participou de um evento em Guarulhos (SP) pela manhã ao lado do governador Tarcísio de Freitas (Republicanos).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/flavio-faz-campanha-em-sao-paulo-lula-teve-ato-em-belo-horizonte",
+    "publishedAt": "21/10/2026 às 22:45",
+    "category": "Eleições",
+    "ingestedAt": "22/10/2026 às 06:29",
+    "imageUrl": "https://imagens.ebc.com.br/Qjn25j4kWuBB0OOSqVFyv-s7K54=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/18/banner_agenda_-_1170x700.png?itok=KJR_nOUL",
+    "imageCaption": "Flávio faz campanha em São Paulo; Lula teve ato em Belo Horizonte",
+    "imageCredit": "Marcelo Brandão – Repórter da Agência Brasil",
+    "imageAlt": "Flávio faz campanha em São Paulo; Lula teve ato em Belo Horizonte",
+    "author": "Marcelo Brandão – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Flávio Bolsonaro",
+      "Lula",
+      "Eleições"
+    ],
+    "content": [
+      "Os candidatos a presidente cumpriram agenda de campanha nesta quarta-feira (21) em Belo Horizonte, Fortaleza e São Paulo.",
+      "O candidato Flávio Bolsonaro (PL) participou de um evento em Guarulhos (SP) pela manhã ao lado do governador Tarcísio de Freitas (Republicanos).",
+      "Flávio Bolsonaro informou nesta quarta-feira (21) ao Tribunal Superior Eleitoral (TSE) que autoriza o levantamento de seus sigilos bancário, fiscal e telefônico dos últimos 20 anos, desde que o candidato à reeleição Luiz Inácio Lula da Silva (PT) amplie o alcance do levantamento de seus sigilos .",
+      "No início da noite, ele esteve em um ato público em Fortaleza (CE), na Avenida do Contorno.",
+      "O candidato Luiz Inácio Lula da Silva (PT) teve agenda de campanha em Belo Horizonte. Lá, Lula defendeu a ampliação do programa Pé-de-Meia aos universitários e a tarifa zero no transporte público nos fins de semana.",
+      "Lula também reiterou sua disposição em abrir seu sigilo bancário, e de sua família, desde que seu adversário fizesse o mesmo. Para o petista, Flávio Bolsonaro está “trucando”, em alusão ao jogo de cartas.",
+      "“Eu, nesta semana, pedi para o Flávio abrir o sigilo. Hoje, ele inventou um monte de mentira e trucou seis. Eu vou meter um nove na cara dele amanhã. Ele não tem nenhuma carta boa, só tem mentira. Ele vai saber o que é um campeão de truco que aprendeu a jogar com o povo mineiro”, disse o candidato à reeleição.",
+      "Após Flávio afirmar que aceitaria a proposta desde que Lula ampliasse o alcance do levantamento de seus sigilos, que deveria incluir na quebra de sigilo os dados de Marco Aurélio Santana Ribeiro, ex-chefe de gabinete do presidente, a coordenação da campanha de Lula afirmou que o presidente aceitaria as condições do candidato do PL e marcou para amanhã (22), às 11h, no Tribunal Superior Eleitoral (TSE), a entrega formal do compromisso à Justiça.",
+      "Em Brasília, o grupo Cristãos pela Democracia fez um ato em apoio ao candidato Lula, que reuniu evangélicos, católicos e espíritas para falarem sobre política. O pastor e deputado Henrique Vieira (PSOL-RJ) disse que o grupo surgiu pela percepção de que a democracia está em risco e que o objetivo é defender os ensinamentos cristãos, mas sem usar as igrejas para atividades partidárias. Outros participantes defenderam que a proposta do candidato é da “vida em abundância”, “com direito à saúde, à moradia, à educação e à dignidade humana”.",
+      "* Colaborou Iara Balduino, de Brasília"
+    ]
+  },
+  {
+    "id": "ebc-1706148",
+    "title": "Campanha de Lula entra com ação no TSE para cassar chapa de Flávio",
+    "summary": "A campanha do candidato à reeleição Luiz Inácio Lula da Silva (PT) protocolou nesta quarta-feira (21) no Tribunal Superior Eleitoral (TSE) uma ação de investigação eleitoral para cassar o registro da candidatura da chapa formada pelo candidato Flávio Bolsonaro (PL) e.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/campanha-de-lula-entra-com-acao-no-tse-para-cassar-chapa-de-flavio",
+    "publishedAt": "21/10/2026 às 22:20",
+    "category": "Eleições",
+    "ingestedAt": "22/10/2026 às 06:29",
+    "imageUrl": "https://imagens.ebc.com.br/d9fEeCPDjkqvb5-sDLGv6gO7hN0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/17/dji_20260716174410_0332_d.jpg?itok=Cr2Ypqkl",
+    "imageCaption": "Campanha de Lula entra com ação no TSE para cassar chapa de Flávio",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Campanha de Lula entra com ação no TSE para cassar chapa de Flávio",
+    "author": "Agência Brasil",
+    "tags": [
+      "Justiça",
+      "eleições 2026",
+      "Lula",
+      "Flávio Bolsonaro",
+      "Eleições"
+    ],
+    "content": [
+      "A campanha do candidato à reeleição Luiz Inácio Lula da Silva (PT) protocolou nesta quarta-feira (21) no Tribunal Superior Eleitoral (TSE) uma ação de investigação eleitoral para cassar o registro da candidatura da chapa formada pelo candidato Flávio Bolsonaro (PL) e o candidato a vice-presidente Alfredo Gaspar (PL).",
+      "Os advogados da campanha acusam a chapa adversária de cometer abuso de poder econômico e uso indevidos dos meios de comunicação.",
+      "A campanha alega que a candidatura de Flávio foi beneficiada por direcionamento de postagens nas redes sociais, enquanto os conteúdos referentes a Lula foram restringidos pelas plataformas da Meta.",
+      "Na ação, os advogados também alegam que, durante a campanha, a geração de imagens de inteligência artificial não permitiu a criação de conteúdos sobre Lula. Contudo, a criação de imagens relacionadas ao candidato Flávio Bolsonaro estava liberada.",
+      "A Meta nega qualquer tipo benefício a candidaturas.",
+      "O processo foi distribuído para o ministro Ricardo Villas Bôas Curva. Não há prazo para decisão do relator."
+    ]
+  },
+  {
+    "id": "ebc-1706146",
+    "title": "Nunes Marques suspende postagens ilegais contra campanha de Lula",
+    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, determinou nesta quarta-feira (21) a suspensão de 20 postagens ilegais nas redes sociais contra o candidato à reeleição Luiz Inácio Lula da Silva (PT) O ministro atendeu ao pedido da campanha.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/nunes-marques-suspende-postagens-ilegais-contra-campanha-de-lula",
+    "publishedAt": "21/10/2026 às 21:39",
+    "category": "Eleições",
+    "ingestedAt": "22/10/2026 às 06:29",
+    "imageUrl": "https://imagens.ebc.com.br/wFGusZmQFh0Dfmt20v8FpilQfa0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/17/tse_lanca_campanha_para_estimular_participacao_da_populacao_nas_eleicoes02.jpg?itok=dy_xlwpR",
+    "imageCaption": "Nunes Marques suspende postagens ilegais contra campanha de Lula",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Nunes Marques suspende postagens ilegais contra campanha de Lula",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "TSE",
+      "redes sociais",
+      "Eleições"
+    ],
+    "content": [
+      "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, determinou nesta quarta-feira (21) a suspensão de 20 postagens ilegais nas redes sociais contra o candidato à reeleição Luiz Inácio Lula da Silva (PT)",
+      "O ministro atendeu ao pedido da campanha de Lula, que alegou a ação estruturada de parlamentares que apoiam o candidato Flávio Bolsonaro (PL) para compartilhamento de deepfake, a criação de conteúdo artificial para prejudicar candidatos.",
+      "A decisão do presidente atinge postagens de Flávio e dos deputados federais Gustavo Gayer (PL-GO), Mario Frias (PL-SP) e Gilvan da Federal (PL-ES). Todos foram proibidos de replicarem as mensagens novamente.",
+      "A ação citou postagens irregulares de 32 perfis nas redes sociais, que possuem 1,4 milhão de seguidores e 23,8 mil publicações.",
+      "Ao defender a retirada das postagens, a campanha de Lula disse que postagens anônimas produzem percepção de rejeição generalizada a Lula, fato que não corresponde à realidade.",
+      "O uso indevido de inteligência artificial durante a campanha já está em debate no TSE.",
+      "Na semana passada, o tribunal proibiu a Meta de restringir a entrega de postagens que envolvem os candidatos Lula e Flávio.",
+      "A decisão foi proferida após a campanha de Lula informar ao TSE que comandos para geração de imagens de inteligência artificial não permitiam a criação de conteúdos sobre o candidato à reeleição. Contudo, a criação de imagens relacionadas ao candidato Flávio Bolsonaro estava liberada.",
+      "Pela decisão do TSE, o Facebook, uma das plataformas operadas pela Meta, deve abster-se de aplicar medidas de redução de distribuição, exclusão de recomendação e restrição de buscas."
+    ]
+  },
+  {
     "id": "ebc-1706141",
     "title": "Brasil fica em 5º lugar na final por equipes do Mundial de Ginástica",
     "summary": "A seleção brasileira terminou em quinto lugar na final por equipes do Mundial de Ginástica Artística, que reúne as maiores potências da modalidade em Roterdã (Países Baixos).",
@@ -1561,114 +1661,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Previsão do Tempo",
       "Inmet",
       "Chuvas"
-    ]
-  },
-  {
-    "id": "ebc-1706012",
-    "title": "TRE-RJ define urnas que serão auditadas no segundo turno",
-    "summary": "O Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ) realiza sábado (24), véspera do segundo turno das eleições para presidente da República, audiência pública para definir as 43 seções eleitorais cujas urnas eletrônicas passarão por procedimentos de auditoria das eleições.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tre-rj-define-urnas-que-serao-auditadas-no-segundo-turno",
-    "publishedAt": "21/10/2026 às 08:28",
-    "category": "Justiça",
-    "ingestedAt": "21/10/2026 às 09:02",
-    "imageUrl": "https://imagens.ebc.com.br/Bdhg06DkRmZCM9dtRKLkHLKryrE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/21/pzzb8385.jpg?itok=C3Xogkhc",
-    "imageCaption": "TRE-RJ define urnas que serão auditadas no segundo turno",
-    "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
-    "imageAlt": "TRE-RJ define urnas que serão auditadas no segundo turno",
-    "author": "Douglas Corrêa - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "TRE-RJ",
-      "Segundo Turno",
-      "Urnas"
-    ],
-    "content": [
-      "O Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ) realiza sábado (24), véspera do segundo turno das eleições para presidente da República, audiência pública para definir as 43 seções eleitorais cujas urnas eletrônicas passarão por procedimentos de auditoria das eleições gerais. O evento começa às 8h, no plenário do Palácio da Democracia, sede do TRE, no centro da capital.",
-      "Das 43 urnas destinadas à auditoria, 31 passarão pelo Teste de Integridade das Urnas Eletrônicas no domingo (25), durante o horário de votação, na Sala de Sessões do Pleno do Tribunal de Justiça do Rio. Mais duas serão escolhidas entre as que serão instaladas na Fundação Getulio Vargas (FGV) e passarão pelo Teste de Integridade com Biometria.",
-      "Além dessas, outras dez, escolhidas entre todas as seções eleitorais do estado, passarão pelo Teste de Autenticidade dos Sistemas Eleitorais . Nesse procedimento, a verificação é realizada na própria seção eleitoral selecionada, antes do início da votação.",
-      "As etapas de fiscalização do processo eleitoral podem ser acompanhadas por partidos políticos, federações e coligações, além de entidades privadas brasileiras, sem fins lucrativos , com notória atuação em fiscalização e transparência da gestão pública, credenciadas junto ao Tribunal Superior Eleitoral (TSE), além de departamentos de tecnologia da informação de universidades credenciadas.",
-      "Os procedimentos de fiscalização e auditoria do sistema eletrônico de votação estão previstos na Resolução do TSE, de 2021 ."
-    ]
-  },
-  {
-    "id": "ebc-1706018",
-    "title": "Curso falso para sargentos da reserva era usado para compra de armas",
-    "summary": "Agentes da Delegacia Especializada em Armas, Munições e Explosivos (Desarme), com apoio do Exército Brasileiro, desarticularam um esquema criminoso que simulava cursos de formação de sargentos da reserva para falsificar documentos militares e permitir a compra irregular.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/curso-falso-para-sargentos-da-reserva-era-usado-para-compra-de-armas",
-    "publishedAt": "21/10/2026 às 08:22",
-    "category": "Política",
-    "ingestedAt": "21/10/2026 às 09:02",
-    "imageUrl": "https://imagens.ebc.com.br/8Tii1Yd9YzMQ8YT7_c-eXulbj5w=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/02/adobestock_329141086.jpeg?itok=0naNmvJS",
-    "imageCaption": "Curso falso para sargentos da reserva era usado para compra de armas",
-    "imageCredit": "Douglas Corrêa – Repórter da Agência Brasil",
-    "imageAlt": "Curso falso para sargentos da reserva era usado para compra de armas",
-    "author": "Douglas Corrêa – Repórter da Agência Brasil",
-    "tags": [
-      "Geral",
-      "Rio de Janeiro",
-      "armas",
-      "armamento",
-      "Política"
-    ],
-    "content": [
-      "Agentes da Delegacia Especializada em Armas, Munições e Explosivos (Desarme), com apoio do Exército Brasileiro, desarticularam um esquema criminoso que simulava cursos de formação de sargentos da reserva para falsificar documentos militares e permitir a compra irregular de armas de fogo.",
-      "Na ação, dois homens foram presos e um terceiro continua foragido. Cinco pistolas e um fuzil foram apreendidos, além de dezenas de documentos falsificados.",
-      "As investigações apontaram que o grupo organizava falsos cursos preparatórios, com aulas presenciais e aplicação de provas, para dar aparência de legalidade à formação dos participantes.",
-      "Ao final, eram fornecidas carteiras de identidade militar e autorizações de compra de armamentos com assinaturas falsificadas de oficiais do Exército. Os documentos eram utilizados para adquirir armas em estabelecimentos comerciais credenciados.",
-      "Os criminosos também falsificavam Certificados de Registro de Arma de Fogo (CRAF) , necessários para a retirada do armamento das lojas de venda de armas.",
-      "A investigação identificou a compra de cinco armas, avaliadas em aproximadamente R$ 50 mil, entre elas quatro pistolas calibre .40, uma pistola 9 mm e um fuzil calibre 5,56 mm.",
-      "Parte do armamento ainda estava nos estabelecimentos comerciais quando o esquema foi descoberto, o que permitiu impedir a entrega aos compradores.",
-      "As apurações começaram há dois meses, após a prisão em flagrante de um homem que adquiriu uma pistola utilizando documentação falsa.",
-      "A partir desse caso, os agentes identificaram outras compras realizadas com documentos que apresentavam o mesmo padrão de falsificação.",
-      "O Exército Brasileiro confirmou que os documentos e as autorizações de aquisição de armas eram falsos.",
-      "Além da primeira prisão em flagrante, outros dois criminosos foram presos durante a ação.",
-      "As investigações prosseguem para identificar os responsáveis pela organização dos cursos, pela produção dos documentos falsificados e outros possíveis envolvidos.",
-      "Além dos mandados de prisão temporária expedidos, a Justiça do Rio determinou que as cinco armas apreendidas poderão ser destinadas ao uso da Polícia Civil."
-    ]
-  },
-  {
-    "id": "camara-1310017-projeto-fixa-percentual-minimo",
-    "title": "Projeto fixa percentual mínimo de polpa para produtos comercializados como açaí",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310017-projeto-fixa-percentual-minimo-de-polpa-para-produtos-comercializados-como-acai",
-    "publishedAt": "21/10/2026 às 08:19",
-    "category": "Congresso",
-    "ingestedAt": "21/10/2026 às 09:02",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20250814111229157-768x473.jpg",
-    "imageCaption": "José Priante: objetivo é proteger o consumidor e dar mais transparência ao mercado",
-    "imageCredit": "Vinicius Loures/Câmara dos Deputados",
-    "imageAlt": "Audiência Pública - Marco Legal do Transporte Público Coletivo Urbano. Dep. José Priante (MDB-PA)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Vinicius Loures/Câmara dos Deputados",
-      "José Priante: objetivo é proteger o consumidor e dar mais transparência ao mercado",
-      "O Projeto de Lei 2713/26, em análise na Câmara dos Deputados, estabelece regras de composição, rotulagem e comercialização para produtos derivados de açaí no país.",
-      "O texto fixa os teores mínimos de polpa para que alimentos, bebidas e sobremesas possam utilizar a denominação \"açaí\" no rótulo ou na publicidade.",
-      "Pela proposta, somente poderá utilizar a palavra \"açaí\" em destaque principal o produto que contiver, no mínimo, 30% de polpa da fruta em sua composição total e polpa com ao menos 14% de sólidos totais.",
-      "Alimentos que não atingirem esses critérios deverão adotar nome compatível com sua fórmula, sendo proibido usar \"açaí\" como designação principal.",
-      "O projeto também fixa teores específicos de polpa por categoria de produto:",
-      "Além disso, as embalagens deverão trazer na parte frontal o aviso destacado: \"Contém __ % de polpa de açaí\", sendo vedado o uso de imagens ou frases que induzam o consumidor a erro.",
-      "As empresas terão 12 meses, a partir da futura lei, para se adequar às novas regras.",
-      "O autor da proposta, deputado José Priante (MDB-PA), afirma que a falta de padronização acaba levando o consumidor a comprar produtos compostos principalmente por xaropes e corantes em vez de açaí.",
-      "\"Propomos normas semelhantes às aplicadas aos derivados de cacau, como o chocolate, assegurando mais proteção e transparência ao mercado\", comenta o parlamentar.",
-      "O projeto será analisado, em caráter conclusivo , pelas comissões de",
-      "Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural; de",
-      "Indústria, Comércio e Serviços; de Defesa do Consumidor; e de",
-      "Constituição e Justiça e de Cidadania.",
-      "Para virar lei, o texto precisa ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
     ]
   },
   {
