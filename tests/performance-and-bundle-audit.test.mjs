@@ -78,12 +78,28 @@ const homePath = path.join(rootDir, "src", "pages", "HomePage.tsx");
 const homeContent = fs.readFileSync(homePath, "utf-8");
 
 assert.ok(
+  homeContent.includes("const NationalBanner = lazy(") && homeContent.includes("NationalBannerSkeleton"),
+  "HomePage.tsx must lazy-load NationalBanner with NationalBannerSkeleton"
+);
+assert.ok(
   homeContent.includes("const BrazilMap = lazy(") && homeContent.includes("BrazilMapSkeleton"),
   "HomePage.tsx must lazy-load BrazilMap with BrazilMapSkeleton"
 );
 assert.ok(
   homeContent.includes("const RegionalCharts = lazy(") && homeContent.includes("RegionalChartsSkeleton"),
   "HomePage.tsx must lazy-load RegionalCharts with RegionalChartsSkeleton"
+);
+assert.ok(
+  homeContent.includes("const EconomySection = lazy(") && homeContent.includes("EconomySectionSkeleton"),
+  "HomePage.tsx must lazy-load EconomySection with EconomySectionSkeleton"
+);
+assert.ok(
+  homeContent.includes("const BolsaSection = lazy(") && homeContent.includes("BolsaSectionSkeleton"),
+  "HomePage.tsx must lazy-load BolsaSection with BolsaSectionSkeleton"
+);
+assert.ok(
+  homeContent.includes("const NewsSection = lazy(") && homeContent.includes("NewsSectionSkeleton"),
+  "HomePage.tsx must lazy-load NewsSection with NewsSectionSkeleton"
 );
 assert.ok(
   homeContent.includes("const StateTable = lazy(") && homeContent.includes("StateTableSkeleton"),
@@ -96,7 +112,7 @@ assert.ok(
   estadosContent.includes("const BrazilMap = lazy(") && estadosContent.includes("const StateTable = lazy("),
   "EstadosPage.tsx must lazy-load BrazilMap and StateTable"
 );
-console.log("  [PASS] Heavy map geometries, regional charts, and large tables are deferred below the fold.");
+console.log("  [PASS] Below-the-fold sections (NationalBanner, BrazilMap, RegionalCharts, EconomySection, BolsaSection, NewsSection, StateTable) are deferred.");
 
 // --- TEST 4: Editorial Image Priority Integrity ---
 console.log("\n[TEST 4] Editorial Image Priority & Low Priority on Non-Critical Images");
@@ -123,10 +139,18 @@ console.log("\n[TEST 4B] index.html Critical Discovery & Asset Compression");
 const indexHtmlPath = path.join(rootDir, "index.html");
 const indexHtmlContent = fs.readFileSync(indexHtmlPath, "utf-8");
 
+// Must preconnect to verified LCP image origin
 assert.ok(
-  indexHtmlContent.includes('rel="preload" as="image"') && indexHtmlContent.includes('fetchpriority="high"'),
-  "index.html must preload the LCP lead image"
+  indexHtmlContent.includes('rel="preconnect"') && indexHtmlContent.includes('https://imagens.ebc.com.br'),
+  "index.html must preconnect to active LCP image domain (https://imagens.ebc.com.br)"
 );
+
+// Must not retain obsolete Câmara image preload
+assert.ok(
+  !indexHtmlContent.includes('img20230424110822774'),
+  "index.html must not contain obsolete Câmara image preload"
+);
+
 assert.ok(
   indexHtmlContent.includes('media="print" onload="this.media=\'all\'"') || indexHtmlContent.includes('rel="preload" as="style"'),
   "index.html must load Google Fonts without blocking initial render"
@@ -152,7 +176,7 @@ for (const imgName of fallbackFiles) {
     `Fallback image ${imgName} must be under 250 kB (measured ${sizeKb.toFixed(1)} kB)`
   );
 }
-console.log("  [PASS] index.html LCP preload, non-blocking fonts, and compressed assets verified.");
+console.log("  [PASS] index.html active LCP preconnect, non-blocking fonts, and compressed assets verified.");
 
 // --- TEST 5: Production Bundle Measurements & Chunks ---
 console.log("\n[TEST 5] Production Bundle & Chunks Audit");

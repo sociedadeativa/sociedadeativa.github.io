@@ -3,19 +3,86 @@ import { ElectionDataSet } from "../data/electionData";
 import { NewsItem } from "../types/news";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { FeaturedEditorial } from "../components/FeaturedEditorial";
-import { NationalBanner } from "../components/NationalBanner";
-import { NewsSection } from "../components/NewsSection";
-import { EconomySection } from "../components/EconomySection";
-import { BolsaSection } from "../components/BolsaSection";
 import { AdBanner } from "../components/AdBanner";
 import { PortalLink } from "../components/PortalLink";
 import { ArrowRight, MapPin, Trophy, Clock } from "lucide-react";
 import { sortNewsItems, deduplicateNewsItems, isValidImageUrl } from "../services/newsService";
 
-// Componentes Pesados Abaixo da Dobra com Carregamento Sob Demanda
+// Componentes Pesados Abaixo da Dobra com Carregamento Sob Demanda (Code Splitting)
+const NationalBanner = lazy(() => import("../components/NationalBanner").then((m) => ({ default: m.NationalBanner })));
 const BrazilMap = lazy(() => import("../components/BrazilMap").then((m) => ({ default: m.BrazilMap })));
 const RegionalCharts = lazy(() => import("../components/RegionalCharts").then((m) => ({ default: m.RegionalCharts })));
+const EconomySection = lazy(() => import("../components/EconomySection").then((m) => ({ default: m.EconomySection })));
+const BolsaSection = lazy(() => import("../components/BolsaSection").then((m) => ({ default: m.BolsaSection })));
+const NewsSection = lazy(() => import("../components/NewsSection").then((m) => ({ default: m.NewsSection })));
 const StateTable = lazy(() => import("../components/StateTable").then((m) => ({ default: m.StateTable })));
+
+const NationalBannerSkeleton: React.FC = () => (
+  <div
+    className="border-b border-slate-200 bg-white pt-8 pb-10 animate-pulse"
+    aria-busy="true"
+    aria-label="Carregando painel nacional de apuração"
+  >
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="h-5 w-44 bg-slate-200 rounded-md mb-3" />
+      <div className="h-9 w-2/3 max-w-xl bg-slate-200 rounded-lg mb-4" />
+      <div className="h-4 w-1/2 max-w-md bg-slate-200 rounded-md mb-8" />
+      <div className="h-44 bg-slate-100 rounded-2xl mb-8 border border-slate-200" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="h-32 bg-slate-100 rounded-2xl border border-slate-200" />
+        <div className="h-32 bg-slate-100 rounded-2xl border border-slate-200" />
+        <div className="h-32 bg-slate-100 rounded-2xl border border-slate-200" />
+        <div className="h-32 bg-slate-100 rounded-2xl border border-slate-200" />
+      </div>
+    </div>
+  </div>
+);
+
+const EconomySectionSkeleton: React.FC = () => (
+  <div
+    className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200 animate-pulse"
+    aria-busy="true"
+    aria-label="Carregando indicadores econômicos oficiais"
+  >
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="h-5 w-48 bg-slate-200 rounded-md mb-3" />
+      <div className="h-9 w-2/3 max-w-xl bg-slate-200 rounded-lg mb-4" />
+      <div className="h-4 w-1/2 max-w-md bg-slate-200 rounded-md mb-8" />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="h-44 bg-slate-100 rounded-2xl border border-slate-200" />
+        <div className="h-44 bg-slate-100 rounded-2xl border border-slate-200" />
+        <div className="h-44 bg-slate-100 rounded-2xl border border-slate-200" />
+      </div>
+    </div>
+  </div>
+);
+
+const BolsaSectionSkeleton: React.FC = () => (
+  <div
+    className="h-36 bg-slate-100 rounded-2xl border border-slate-200 animate-pulse"
+    aria-busy="true"
+    aria-label="Carregando cotações de mercado e B3"
+  />
+);
+
+const NewsSectionSkeleton: React.FC = () => (
+  <div
+    className="py-14 bg-white border-t border-slate-200 animate-pulse"
+    aria-busy="true"
+    aria-label="Carregando cobertura de notícias"
+  >
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="h-5 w-40 bg-slate-200 rounded-md mb-3" />
+      <div className="h-9 w-2/3 max-w-xl bg-slate-200 rounded-lg mb-4" />
+      <div className="h-4 w-1/2 max-w-md bg-slate-200 rounded-md mb-8" />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="h-64 bg-slate-100 rounded-2xl border border-slate-200" />
+        <div className="h-64 bg-slate-100 rounded-2xl border border-slate-200" />
+        <div className="h-64 bg-slate-100 rounded-2xl border border-slate-200" />
+      </div>
+    </div>
+  </div>
+);
 
 const BrazilMapSkeleton: React.FC = () => (
   <div
@@ -170,12 +237,14 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* 2. Painel Nacional das Eleições 2026 (Apuração 1º Turno) */}
       <div id="eleicoes-nacional">
-        <NationalBanner
-          dataset={dataset}
-          onOpenMethodology={onOpenMethodology}
-          selectedCandidateFilter={candidateFilter}
-          onSelectCandidateFilter={onSelectCandidateFilter}
-        />
+        <Suspense fallback={<NationalBannerSkeleton />}>
+          <NationalBanner
+            dataset={dataset}
+            onOpenMethodology={onOpenMethodology}
+            selectedCandidateFilter={candidateFilter}
+            onSelectCandidateFilter={onSelectCandidateFilter}
+          />
+        </Suspense>
       </div>
 
       {/* 3. Espaço Publicitário Superior */}
@@ -246,9 +315,13 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* 6. Seção de Economia: Indicadores Oficiais IBGE e Banco Central + Bolsa de Valores (B3) */}
       <div id="indicadores-economia">
-        <EconomySection />
+        <Suspense fallback={<EconomySectionSkeleton />}>
+          <EconomySection />
+        </Suspense>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 mb-12">
-          <BolsaSection />
+          <Suspense fallback={<BolsaSectionSkeleton />}>
+            <BolsaSection />
+          </Suspense>
         </div>
       </div>
 
@@ -257,10 +330,12 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* 8. Seção de Notícias e Análises Jornalísticas */}
       <div id="cobertura-noticias">
-        <NewsSection
-          articles={articles}
-          onOpenArticleDetails={onOpenArticleDetails}
-        />
+        <Suspense fallback={<NewsSectionSkeleton />}>
+          <NewsSection
+            articles={articles}
+            onOpenArticleDetails={onOpenArticleDetails}
+          />
+        </Suspense>
       </div>
 
       {/* 9. Preview do Caderno de Esportes */}
