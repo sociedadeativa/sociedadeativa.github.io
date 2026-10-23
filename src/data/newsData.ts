@@ -5,6 +5,176 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706267",
+    "title": "PGR dá parecer contra pedido de acesso a registro de Vorcaro no Senado",
+    "summary": "O procurador-geral da República, Paulo Gonet, enviou nesta quinta-feira (22) ao Supremo Tribunal Federal (STF) parecer contrário ao pedido de acesso a eventuais registros de entrada e saída da advogada Viviane Barci, esposa do ministro Alexandre de Moraes, e do ex-banqueiro.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/pgr-da-parecer-contra-pedido-de-acesso-registro-de-vorcaro-no-senado",
+    "publishedAt": "22/10/2026 às 20:49",
+    "category": "Justiça",
+    "ingestedAt": "22/10/2026 às 21:29",
+    "imageUrl": "https://imagens.ebc.com.br/DKNAltyNBdm8Qovc6fL2b3PamQM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/09/10/10092025-pzzb1872.jpg?itok=lRDGytDD",
+    "imageCaption": "PGR dá parecer contra pedido de acesso a registro de Vorcaro no Senado",
+    "imageCredit": "André Richter - Repórter da Agência Brasil",
+    "imageAlt": "PGR dá parecer contra pedido de acesso a registro de Vorcaro no Senado",
+    "author": "André Richter - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "stf",
+      "PGR",
+      "Luiz Fux",
+      "Alexandre de Moraes"
+    ],
+    "content": [
+      "O procurador-geral da República, Paulo Gonet, enviou nesta quinta-feira (22) ao Supremo Tribunal Federal (STF) parecer contrário ao pedido de acesso a eventuais registros de entrada e saída da advogada Viviane Barci, esposa do ministro Alexandre de Moraes, e do ex-banqueiro Daniel Vorcaro no Senado.",
+      "A manifestação foi incluída no mandado de segurança no qual o vereador de Curitiba Guilherme Kilter (Novo) pede que a Corte obrigue o Senado a fornecer eventuais registros de entrada e saída de Viviane, Vorcaro e outros citados.",
+      "Segundo o parlamentar, os pedidos de acesso aos dados foram negados pela Casa por envolver \"informações de caráter pessoal\".",
+      "Além de Viviane e Vorcaro, o vereador quer acesso a eventuais registros de entrada do empresário Antônio Carlos Camilo Antunes, o Careca do INSS, o empresário Fábio Luís Lula da Silva, filho do presidente Luiz Inácio Lula da Silva, nas dependências da Casa.",
+      "No parecer, o procurador disse que o pedido de acesso deve ser rejeitado porque a jurisprudência do Supremo define que não cabe mandado de segurança, protocolado em nome próprio, para defender direitos coletivos.",
+      "“O impetrante não logrou comprovar violação de direito subjetivo líquido e certo, o que, nos termos da jurisprudência do Supremo Tribunal Federal, afasta sua legitimidade ativa e, por conseguinte, o cabimento do mandado de segurança”, afirmou Gonet.",
+      "O caso é relatado pelo ministro Luiz Fux . Não há data prevista para decisão."
+    ]
+  },
+  {
+    "id": "ebc-1706254",
+    "title": "CMN e BC atualizam regras de segurança e transparência do Open Finance",
+    "summary": "O Conselho Monetário Nacional (CMN) e o Banco Central (BC) aprovaram nesta quinta-feira (22) mudanças nas regras de compartilhamento de dados pelo Open Finance, sistema que permite aos clientes autorizar o compartilhamento de informações financeiras entre instituições.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/cmn-e-bc-atualizam-regras-de-seguranca-e-transparencia-do-open-finance",
+    "publishedAt": "22/10/2026 às 20:03",
+    "category": "Economia",
+    "ingestedAt": "22/10/2026 às 21:29",
+    "imageUrl": "https://imagens.ebc.com.br/4P4kLfGygwh7yN8EJAMIaG0PqTM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/20231025_150203.jpg?itok=55thhM0a",
+    "imageCaption": "CMN e BC atualizam regras de segurança e transparência do Open Finance",
+    "imageCredit": "Wellton Máximo – Repórter da Agência Brasil",
+    "imageAlt": "CMN e BC atualizam regras de segurança e transparência do Open Finance",
+    "author": "Wellton Máximo – Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "open finance",
+      "CMN",
+      "banco central"
+    ],
+    "content": [
+      "O Conselho Monetário Nacional (CMN) e o Banco Central (BC) aprovaram nesta quinta-feira (22) mudanças nas regras de compartilhamento de dados pelo Open Finance, sistema que permite aos clientes autorizar o compartilhamento de informações financeiras entre instituições.",
+      "As alterações reforçam a segurança, ampliam a transparência e estabelecem novas exigências para bancos e demais participantes, com atenção especial às necessidades de pessoas jurídicas, como empresas.",
+      "Aprovadas em resolução conjunta dos dois órgãos, as novas regras buscam esclarecer as responsabilidades das instituições envolvidas, reduzir divergências de interpretação e dar mais controle aos clientes sobre o uso de suas informações.",
+      "Entre as principais mudanças, estão a exigência de consentimento específico para cada empresa parceira, o monitoramento mais rigoroso dessas parcerias e a possibilidade de interromper o compartilhamento de dados diante de riscos à segurança.",
+      "A regulamentação também prepara o sistema para permitir que, em determinadas situações, a autorização para compartilhar dados seja concedida em momentos diferentes por cada instituição envolvida. No caso de empresas, isso poderá facilitar processos que dependem da aprovação de diferentes representantes.",
+      "O Open Finance, ou sistema financeiro aberto, permite que clientes autorizem o compartilhamento de seus dados financeiros entre instituições participantes. O objetivo é facilitar o acesso a serviços e estimular a concorrência entre bancos, fintechs e outras empresas do setor.",
+      "Na prática, uma pessoa ou empresa pode autorizar uma instituição a consultar informações mantidas em outra, conforme as permissões concedidas. Isso pode ajudar na oferta de serviços financeiros mais adequados ao perfil do cliente.",
+      "Num exemplo prático, uma empresa que mantém conta em um banco pode autorizar outra instituição a consultar determinadas informações financeiras para avaliar uma proposta de crédito, sem precisar depender exclusivamente dos dados disponíveis na instituição que fará a oferta.",
+      "O compartilhamento depende de autorização e deve seguir as regras de segurança e privacidade aplicáveis.",
+      "As alterações aprovadas pelo CMN e pelo BC abrangem cinco pontos principais:",
+      "O conjunto de medidas procura deixar mais claro quem pode acessar os dados, em quais condições isso pode ocorrer e quais responsabilidades cabem a cada participante.",
+      "As mudanças também reforçam o papel da alta administração das instituições financeiras na supervisão do Open Finance.",
+      "Diretorias e conselhos de administração deverão ter responsabilidades mais claras em relação ao monitoramento das parcerias, ao cumprimento das normas e à adoção de medidas para prevenir ou corrigir irregularidades.",
+      "Na prática, a segurança do sistema não deverá ficar restrita às equipes técnicas. A governança das instituições também deverá acompanhar os riscos relacionados ao compartilhamento de informações.",
+      "Caso sejam identificados problemas, as instituições deverão adotar providências preventivas ou corretivas, conforme as exigências regulatórias aplicáveis.",
+      "Uma das principais novidades é a preparação para jornadas de consentimento mais flexíveis, especialmente para clientes pessoas jurídicas.",
+      "Atualmente, o compartilhamento de dados envolve instituições que transmitem as informações e instituições que as recebem. As mudanças abrem caminho para que as autorizações necessárias sejam concedidas em momentos diferentes em cada uma delas.",
+      "No caso de empresas, quando aplicável, os consentimentos também poderão ser dados por usuários distintos, de acordo com os processos internos de representação e aprovação.",
+      "1. A empresa inicia o processo: um representante pede um serviço financeiro em uma instituição que deseja consultar dados mantidos em outro banco;",
+      "2. As autorizações são organizadas: os consentimentos necessários podem ser concedidos em momentos diferentes nas instituições envolvidas;",
+      "3. Outros responsáveis participam: quando aplicável, outro usuário autorizado pela empresa poderá realizar uma das etapas de aprovação;",
+      "4. O compartilhamento ocorre: os dados poderão ser compartilhados conforme as autorizações concedidas e as regras de segurança do sistema.",
+      "Esse modelo pode facilitar a utilização do Open Finance por empresas que exigem aprovação de mais de um responsável para movimentações ou decisões financeiras.",
+      "Para pessoas físicas e jurídicas, o principal efeito esperado é o aumento do controle e da transparência sobre o compartilhamento de informações.",
+      "As mudanças também buscam tornar os processos mais claros e previsíveis, sem comprometer a segurança dos dados.",
+      "Em resumo, os clientes poderão se beneficiar de:",
+      "Segundo a proposta regulatória, os aperfeiçoamentos buscam permitir que o Open Finance continue evoluindo sem enfraquecer a proteção dos usuários.",
+      "Ao esclarecer as regras e reforçar a governança, o CMN e o Banco Central pretendem estimular a inovação, ampliar a confiança no compartilhamento de dados e favorecer a concorrência entre instituições financeiras.",
+      "A expectativa é que um ambiente com regras mais claras e mecanismos de segurança mais robustos contribua para modernizar o Sistema Financeiro Nacional e facilitar o desenvolvimento de serviços financeiros, especialmente aqueles voltados às necessidades das empresas.",
+      "Embora o presidente do BC, Gabriel Galípolo, também componha o CMN, as regras foram aprovadas em resolução conjunta dos dois órgãos."
+    ]
+  },
+  {
+    "id": "ebc-1706260",
+    "title": "Fifa anuncia EUA como sede da 1ª Copa do Mundo de Clubes Feminina",
+    "summary": "A Federação Internacional de Futebol (Fifa) confirmou, nesta quinta-feira (22), os Estados Unidos como sede da primeira edição da Copa do Mundo de Clubes Feminina, em 2028. A competição, marcada para ocorrer entre 5 e 30 de janeiro de 2028, terá 19 times.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/fifa-anuncia-eua-como-sede-da-1a-copa-do-mundo-de-clubes-feminina",
+    "publishedAt": "22/10/2026 às 20:03",
+    "category": "Esportes",
+    "ingestedAt": "22/10/2026 às 21:29",
+    "imageUrl": "https://imagens.ebc.com.br/Wxn5nh58XsRXYai6o5JayBOq54w=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/01/31/captura_de_tela_2026-01-31_140742_copy.jpg?itok=HOGT5MFs",
+    "imageCaption": "Fifa anuncia EUA como sede da 1ª Copa do Mundo de Clubes Feminina",
+    "imageCredit": "Lincoln Chaves - Repórter da EBC",
+    "imageAlt": "Fifa anuncia EUA como sede da 1ª Copa do Mundo de Clubes Feminina",
+    "author": "Lincoln Chaves - Repórter da EBC",
+    "tags": [
+      "Esportes",
+      "Fifa",
+      "Estados Unidos",
+      "sede",
+      "Corinthians"
+    ],
+    "content": [
+      "A Federação Internacional de Futebol (Fifa) confirmou, nesta quinta-feira (22), os Estados Unidos como sede da primeira edição da Copa do Mundo de Clubes Feminina, em 2028. A competição, marcada para ocorrer entre 5 e 30 de janeiro de 2028, terá 19 times. O Corinthians, campeão da Libertadores em 2024 e 2025, está garantido.",
+      "A escolha foi definida pelo bureau do Conselho da Fifa, comitê responsável pela tomada de decisões consideradas urgentes pela organização. A criação do evento já havia sido anunciada em dezembro do ano passado, restando, à época, definir onde eles seria.",
+      "O bureau também confirmou a distribuição de vagas à Copa de Clubes Feminina. O modelo leva em conta as temporadas de 2024 a 2027.",
+      "A Confederação Sul-Americana de Futebol (Conmebol) tem direito a três vagas. Como venceu duas das quatro Libertadores do período de classificação, o Corinthians está garantido na competição de 2028. Os outros dois representantes serão os campeões das edições de 2026 e 2027.",
+      "Se o Timão ganhar novamente o torneio continental, as vagas serão atribuídas conforme um ranking de clubes - que ainda será desenvolvido. As Brabas ainda estão na briga pelo título da edição deste ano, assim como Palmeiras e Cruzeiro.",
+      "A União Europeia de Futebol (Uefa) é a confederação com mais representantes no Mundial: seis. Quatro vagas são destinadas aos ganhadores da Liga dos Campeões entre 2024 a 2027. Portanto, Arsenal (Inglaterra) e Barcelona (Espanha) estão dentro. Os outros dois classificados serão definidos via ranking.",
+      "Mais quatro campeões continentais já garantiram lugar na Copa de Clubes Feminina: América (México), Gotham (Estados Unidos), Naegohyang (Coreia do Norte) e Wuhan Jiangda (China).",
+      "Outra decisão anunciada pela Fifa nesta quinta (22) foi a definição do Catar como sede da Copa Intercontinental deste ano. Realizado pela primeira vez em 2024, o torneio que substitui o Campeonato Mundial de Clubes - organizado pela entidade entre 2005 e 2023 - será disputado no país do Oriente Médio pela terceira edição seguida.",
+      "O campeão da Libertadores - que pode ser brasileiro - vai a campo no dia 9 de dezembro, diante do Toluca (México), no Dérbi das Américas, equivalente a uma fase quartas de final, mas que vale taça. O vencedor terá pela frente o Mamelodi Sundowns (África do Sul) três dias depois, na Copa Challenger (semifinal). O ganhador decide o título no dia 16 de dezembro, contra o Paris Saint-Germain (França).",
+      "A edição 2026 da Copa Intercontinental começou em 26 de agosto, com o Al-Ahli (Arábia Saudita) deixando para trás o Auckland (Nova Zelândia). Na fase seguinte, disputada em 19 de setembro, os sauditas foram derrotados pelo Mamelodi, que levou o título da chamada Copa África-Ásia-Pacífico.",
+      "Em 2025, a final do Intercontinental reuniu PSG e Flamengo. As equipes empataram por 1 a 1 no tempo normal, com o volante Jorginho fazendo o gol rubro-negro. Nos pênaltis, o goleiro Matvei Safonov se destacou ao defender quatro cobranças do time brasileiro, garantindo o título aos europeus."
+    ]
+  },
+  {
+    "id": "ebc-1706255",
+    "title": "Seleção feminina de tênis é convocada para Billie Jean King Cup",
+    "summary": "Recém-alçada à liderança da temporada ao lado da canadense Gabriela Dabrowski, a paulista Luisa Stefani está confirmada na equipe brasileira que disputará os playoffs da Billie Jean King Cup, principal torneio entre nações do tênis feminino.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/selecao-feminina-de-tenis-e-convocada-para-billie-jean-king-cup",
+    "publishedAt": "22/10/2026 às 19:44",
+    "category": "Esportes",
+    "ingestedAt": "22/10/2026 às 21:29",
+    "imageUrl": "https://imagens.ebc.com.br/Ayj-Ev7WsuKu0xKkYxi0TtVEU2Y=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/22/convocadas_billie_jean_king_cup.jpg?itok=Ef_L-cqe",
+    "imageCaption": "Seleção feminina de tênis é convocada para Billie Jean King Cup",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Seleção feminina de tênis é convocada para Billie Jean King Cup",
+    "author": "Agência Brasil",
+    "tags": [
+      "Esportes",
+      "Billie Jean King Cup",
+      "convocadas",
+      "Luisa Stefani",
+      "Laura Pigossi"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706253",
+    "title": "Primeiro turno contou com 43% mais eleitores de ao menos 70 anos",
+    "summary": "O número absoluto de eleitores com 70 anos ou mais que foi às urnas no primeiro turno de 2026 aumentou 43% em relação a 2022.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/primeiro-turno-contou-com-43-mais-eleitores-de-ao-menos-70-anos",
+    "publishedAt": "22/10/2026 às 19:23",
+    "category": "Eleições",
+    "ingestedAt": "22/10/2026 às 21:29",
+    "imageUrl": "https://imagens.ebc.com.br/f3h7I39BVIu2LUkI-RElO9FGqI4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/0g0a9919.jpg?itok=SXRUD1R4",
+    "imageCaption": "Primeiro turno contou com 43% mais eleitores de ao menos 70 anos",
+    "imageCredit": "Cristina Índio do Brasil - repórter da Agência Brasil",
+    "imageAlt": "Primeiro turno contou com 43% mais eleitores de ao menos 70 anos",
+    "author": "Cristina Índio do Brasil - repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "idosos",
+      "Justiça Eleitoral",
+      "Movimento Voto 70"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706251",
     "title": "Mendonça diz que Flávio e Lula podem divulgar sigilos",
     "summary": "O ministro André Mendonça, do Tribunal Superior Eleitoral (TSE), decidiu nesta quinta-feira (22) que as campanhas de Luiz Inácio Lula da Silva (PT) e Flávio Bolsonaro (PL) podem divulgar seus sigilos bancários, fiscal e telefônico, conforme acordo assinado entre os candidatos.",
@@ -12,7 +182,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/mendonca-diz-que-flavio-e-lula-podem-divulgar-sigilos",
     "publishedAt": "22/10/2026 às 18:53",
-    "category": "Justiça",
+    "category": "Eleições",
     "ingestedAt": "22/10/2026 às 19:01",
     "imageUrl": "https://imagens.ebc.com.br/Pkh0ccdLTbr4TlGANDhx23COeek=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/18/sem_titulo_1.jpg?itok=WGMsot7n",
     "imageCaption": "Mendonça diz que Flávio e Lula podem divulgar sigilos",
@@ -23,13 +193,10 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Justiça",
       "André Mendonça",
       "TSE",
-      "eleições 2026"
+      "eleições 2026",
+      "Eleições"
     ],
-    "content": [
-      "O ministro André Mendonça, do Tribunal Superior Eleitoral (TSE), decidiu nesta quinta-feira (22) que as campanhas de Luiz Inácio Lula da Silva (PT) e Flávio Bolsonaro (PL) podem divulgar seus sigilos bancários, fiscal e telefônico, conforme acordo assinado entre os candidatos.",
-      "Na decisão, o ministro afirmou que não cabe interferência da Justiça Eleitoral no caso e que os próprios candidatos podem revelar seus dados ao público.",
-      "\"Ainda assim, para que não reste dúvida, reafirma-se que os candidatos e pessoas físicas e jurídicas a que se referiram estão autorizadas a divulgar, por ato próprio, como e quando entenderem pertinentes, os dados de que são titulares\", afirmou."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706248",
@@ -53,16 +220,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Caixa",
       "sorteios"
     ],
-    "content": [
-      "A Caixa Loterias anunciou a antecipação para sábado (24) dos sorteios previstos para o domingo (25), dia do segundo turno das eleições.",
-      "Com isso, os apostadores terão até 20h de sábado para fazer seus jogos em concursos como Mega-Sena, Lotofácil, Quina, Milionária e Timemania.",
-      "A venda de cotas de Bolão Caixa continuará disponível até as 20h45, exclusivamente pelo App Loterias Caixa e pelo portal Loterias Caixa .",
-      "O sorteio será feito no sábado, às 21h, com transmissão ao vivo pelos canais oficiais das Loterias Caixa.",
-      "No Bolão Caixa, o apostador pode comprar cotas de bolões organizados pelas lotéricas. As cotas também podem ser compradas no portal Loterias Caixa ou pelo App Loterias Caixa.",
-      "Há pagamento de tarifa de serviço adicional de 35% do valor da cota na compra pela internet. Para os bolões organizados pelas lotéricas, pode haver cobrança dessa tarifa até o limite de 35%.",
-      "Entre os dias 26 e 30 de outubro de 2026, acontecerá a Mega Semana da Mega Sena. A ação promoverá cinco sorteios consecutivos correspondentes aos concursos 3076, 3077, 3078, 3079 e 3080.",
-      "A modalidade, em caráter especial, terá sorteios de segunda a sexta-feira, substituindo o calendário regular de concursos, realizado às terças-feiras, quintas-feiras e domingos."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706247",
@@ -86,18 +244,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "EBC",
       "Política"
     ],
-    "content": [
-      "A escalada dos protestos na França e em outros países europeus, em meio à insatisfação com o custo de vida, é um dos destaques do programa Brasil no Mundo desta quinta-feira (22), às 22h30, na TV Brasil . Nesta edição, os jornalistas Cristina Serra, Jamil Chade e Yan Boechat recebem Eduardo Heleno, doutor em Ciência Política, jornalista e professor da Universidade Federal Fluminense (UFF), para analisar o cenário de mobilizações sociais e seus desdobramentos políticos e econômicos.",
-      "O programa também discute os impactos das guerras no Oriente Médio e na Ucrânia sobre a economia internacional, além das pressões do presidente dos Estados Unidos, Donald Trump, sobre o governo ucraniano. Outro tema é o agravamento das tensões entre os Houthis e a Arábia Saudita pelo controle de rotas estratégicas na região.",
-      "A edição aborda ainda as eleições parlamentares em Israel e seus possíveis desdobramentos para o cenário político do país e para as relações internacionais.",
-      "O Brasil no Mundo se dedica a discutir, com profundidade e clareza, os grandes acontecimentos internacionais que moldam a política, a economia e a vida cotidiana. Conduzido por Cristina Serra, Jamil Chade e Yan Boechat, o programa combina análises de contexto, explicações acessíveis e entrevistas com especialistas que ajudam a compreender os reflexos do cenário global no Brasil.",
-      "Cristina Serra atua como jornalista há cerca de 40 anos, tendo trabalhado na Globo por 26 anos, inclusive como correspondente em Nova York. O jornalista Jamil Chade trabalha há duas décadas como correspondente de diversos veículos na sede europeia da Organização das Nações Unidas, em Genebra, período em que contribuiu com BBC , CNN , Guardian e veículos brasileiros. Yan Boechat cobre conflitos internacionais há 20 anos para diversos veículos, como Folha de S.Paulo e O Estado de S. Paulo . Também realizou reportagens na África, no Oriente Médio, na Rússia e na América Latina.",
-      "A atração já recebeu personalidades como a ministra Marina Silva; o embaixador André Corrêa do Lago, presidente da COP30; o geógrafo Elias Jabbour; e a economista Juliana Furno.",
-      "Acompanhe a programação da TV Brasil pelo canal aberto, TV por assinatura e parabólica. Sintonize: https://tvbrasil.ebc.com.br/comosintonizar.",
-      "Seus programas favoritos estão no TV Brasil Play , pelo site http://tvbrasilplay.com.br ou pelo aplicativo no smartphone. O app pode ser baixado gratuitamente e está disponível para Android e iOS. Assista também pela WebTV: https://tvbrasil.ebc.com.br/webtv.",
-      "Brasil no Mundo – quinta-feira (22), às 22h30, na TV Brasil",
-      "TV Brasil na internet e nas redes sociais"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706246",
@@ -998,124 +1145,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Política",
       "eleições 2026",
       "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706130",
-    "title": "Direitos Humanos: planos de Lula e Flávio refletem diferença histórica",
-    "summary": "Os direitos humanos são uma área que, historicamente, diferenciam de maneira significativa os candidatos que disputam o segundo turno das eleições presidenciais em 2026: o atual presidente Luiz Inácio Lula da Silva (PT) e o senador Flávio Bolsonaro (PL).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/direitos-humanos-programas-de-lula-e-flavio-refletem-diferencas-histo",
-    "publishedAt": "22/10/2026 às 09:20",
-    "category": "Eleições",
-    "ingestedAt": "22/10/2026 às 11:29",
-    "imageUrl": "https://imagens.ebc.com.br/Eeqas2pT63SW3Q1bSzEAP8YimiM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/_ja_1070.jpg?itok=ekIs6_3S",
-    "imageCaption": "Direitos Humanos: planos de Lula e Flávio refletem diferença histórica",
-    "imageCredit": "Bruno Bocchini e Camila Boehm - repórteres da Agência Brasil",
-    "imageAlt": "Direitos Humanos: planos de Lula e Flávio refletem diferença histórica",
-    "author": "Bruno Bocchini e Camila Boehm - repórteres da Agência Brasil",
-    "tags": [
-      "Direitos Humanos",
-      "eleições 2026",
-      "Flávio Bolsonaro",
-      "Lula",
-      "planos de governo"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1311927-projeto-cria-programa-para-pro",
-    "title": "Projeto cria programa para proteger animais em aglomerações e ruídos intensos",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311927-projeto-cria-programa-para-proteger-animais-em-aglomeracoes-e-ruidos-intensos",
-    "publishedAt": "22/10/2026 às 08:46",
-    "category": "Congresso",
-    "ingestedAt": "22/10/2026 às 09:03",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260203191618474-1-768x473.jpg",
-    "imageCaption": "Duda Ramos: cães e gatos possuem alta sensibilidade auditiva e podem entrar em pânico",
-    "imageCredit": "Kayo Magalhães/Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Duda Ramos (MDB - RR)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706158",
-    "title": "Inmet alerta para tempestades em toda a faixa leste do país",
-    "summary": "Uma área de baixa pressão entre o norte da Argentina, o oeste do Paraguai e o sul da Bolívia aumenta as condições para a ocorrência de tempestades em todo o leste do país, nesta quinta-feira (22). As informações são do Instituto Nacional de Meteorologia (Inmet).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/inmet-alerta-para-tempestades-em-toda-faixa-leste-do-pais",
-    "publishedAt": "22/10/2026 às 08:42",
-    "category": "Política",
-    "ingestedAt": "22/10/2026 às 11:29",
-    "imageUrl": "https://imagens.ebc.com.br/pvvQpGvFjLu9MD__FiyRe3gM0eU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/20/v0030538.jpg?itok=s5aChGd0",
-    "imageCaption": "Inmet alerta para tempestades em toda a faixa leste do país",
-    "imageCredit": "Fabíola Sinimbú – Repórter da Agência Brasil",
-    "imageAlt": "Inmet alerta para tempestades em toda a faixa leste do país",
-    "author": "Fabíola Sinimbú – Repórter da Agência Brasil",
-    "tags": [
-      "Meio Ambiente",
-      "meteorologia",
-      "Inmet",
-      "Previsão do Tempo",
-      "Política"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706141",
-    "title": "Brasil fica em 5º lugar na final por equipes do Mundial de Ginástica",
-    "summary": "A seleção brasileira terminou em quinto lugar na final por equipes do Mundial de Ginástica Artística, que reúne as maiores potências da modalidade em Roterdã (Países Baixos).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-fica-em-5o-lugar-na-final-por-equipes-do-mundial-de-ginastica",
-    "publishedAt": "21/10/2026 às 20:33",
-    "category": "Esportes",
-    "ingestedAt": "21/10/2026 às 21:27",
-    "imageUrl": "https://imagens.ebc.com.br/sRMldsd8ooJS4R7mxBnrVPiW40I=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/21/equipe_feminina_mundial_2026_ginastica_artistica.jpg?itok=yhUSUSym",
-    "imageCaption": "Brasil fica em 5º lugar na final por equipes do Mundial de Ginástica",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Brasil fica em 5º lugar na final por equipes do Mundial de Ginástica",
-    "author": "Agência Brasil",
-    "tags": [
-      "Esportes",
-      "quinto lugar",
-      "disputa por equipes",
-      "Rebeca Andrade",
-      "Flávia Saraiva"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706122",
-    "title": "Prêmio TV Brasil Petrobras Para Elas anuncia finalistas entre goleiras",
-    "summary": "Três jogadoras disputam a categoria Melhor Goleira da temporada no futebol feminino brasileiro no Prêmio TV Brasil Petrobras Para Elas. As finalistas, anunciadas nesta quarta-feira (21), são Yanne (Bahia), Carlinha (São Paulo) e Sandy (América-MG).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/premio-tv-brasil-petrobras-para-elas-anuncia-finalistas-entre-goleiras",
-    "publishedAt": "21/10/2026 às 17:48",
-    "category": "Esportes",
-    "ingestedAt": "21/10/2026 às 21:27",
-    "imageUrl": "https://imagens.ebc.com.br/-rbjPzjZT9i0YQhKxHdOiM0gEMI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/21/foto-montagem.png?itok=TXKD8GXu",
-    "imageCaption": "Prêmio TV Brasil Petrobras Para Elas anuncia finalistas entre goleiras",
-    "imageCredit": "Lincoln Chaves - Repórter da EBC",
-    "imageAlt": "Prêmio TV Brasil Petrobras Para Elas anuncia finalistas entre goleiras",
-    "author": "Lincoln Chaves - Repórter da EBC",
-    "tags": [
-      "Esportes",
-      "melhor goleira",
-      "Temporada",
-      "Finalistas",
-      "Carlinha"
     ],
     "content": []
   },
