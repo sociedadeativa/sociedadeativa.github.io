@@ -35,7 +35,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
     setSearchQuery,
     activeArticle,
     setActiveArticle,
-  } = useNews({ initialArticles: articles });
+  } = useNews({ initialArticles: articles, skipBackgroundSync: true });
 
   const [copied, setCopied] = useState(false);
   const [modalImageError, setModalImageError] = useState(false);

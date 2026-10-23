@@ -31,7 +31,7 @@ export const NoticiasPage: React.FC<NoticiasPageProps> = ({
     setSelectedSource,
     sources,
     loading: hookLoading,
-  } = useNews({ initialArticles });
+  } = useNews({ initialArticles, skipBackgroundSync: true });
 
   const isPageLoading = isLoading || hookLoading;
 
