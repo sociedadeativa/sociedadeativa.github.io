@@ -196,18 +196,28 @@ assert.equal(
 
 console.log("  [PASS] Analytics event queueing before script load & page_view deduplication verified.");
 
-// --- TEST 4: Preservation of Unchanged Critical Systems ---
-console.log("\n[TEST 4] Integrity of Unchanged Systems (LCP Preload, WebP, Dataset)");
+// --- TEST 4: Dynamic LCP Preload Match, High Priority & Referrer Policy ---
+console.log("\n[TEST 4] Dynamic LCP Preload Match, High Priority & Referrer Policy");
 
 const indexHtml = fs.readFileSync(path.join(distDir, "index.html"), "utf8");
+const rawArticles = JSON.parse(fs.readFileSync(path.join(rootDir, "public", "data", "newsData.json"), "utf8"));
+const { getLeadArticleImageUrl } = await import("../scripts/generate-article-pages.mjs");
+const expectedLeadImageUrl = getLeadArticleImageUrl(rawArticles, distDir);
+
+assert.ok(expectedLeadImageUrl, "Expected lead article image URL must resolve");
 assert.ok(
-  indexHtml.includes("real_moeda_dinheiro_mcajr_2904223671.jpg"),
-  "LCP image preload URL must remain exactly preserved"
+  indexHtml.includes(expectedLeadImageUrl),
+  `dist/index.html preload must contain the exact current lead image URL: ${expectedLeadImageUrl}`
 );
 assert.ok(
   indexHtml.includes('fetchpriority="high"'),
   "LCP image preload must maintain fetchpriority='high'"
 );
+assert.ok(
+  indexHtml.includes('referrerpolicy="no-referrer"'),
+  "LCP image preload must contain referrerpolicy='no-referrer' matching FeaturedEditorial.tsx"
+);
+console.log(`  [PASS] dist/index.html preload matches current lead image and includes referrerpolicy="no-referrer"`);
 
 // Limpeza de globais simulados
 delete globalThis.window;

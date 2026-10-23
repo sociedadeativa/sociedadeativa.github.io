@@ -815,7 +815,7 @@ export function injectHomepageLcpPreload(articles, distDir = DIST_DIR) {
   const leadImageSrc = getLeadArticleImageUrl(articles, distDir);
 
   if (leadImageSrc) {
-    const preloadTag = `    <!-- LCP: Pré-carregamento dinâmico da imagem líder editorial para acelerar a renderização mobile -->\n    <link rel="preload" as="image" href="${leadImageSrc}" fetchpriority="high">`;
+    const preloadTag = `    <!-- LCP: Pré-carregamento dinâmico da imagem líder editorial para acelerar a renderização mobile -->\n    <link rel="preload" as="image" href="${leadImageSrc}" fetchpriority="high" referrerpolicy="no-referrer">`;
 
     // Injeta na seção <head> logo após dns-prefetch ou antes dos scripts
     if (html.includes('<link rel="dns-prefetch" href="https://imagens.ebc.com.br">')) {

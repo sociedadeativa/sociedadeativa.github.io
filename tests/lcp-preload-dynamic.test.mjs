@@ -71,6 +71,10 @@ assert.ok(
   preloadTag.includes('fetchpriority="high"'),
   'Preload tag must include fetchpriority="high"'
 );
+assert.ok(
+  preloadTag.includes('referrerpolicy="no-referrer"'),
+  'Preload tag must include referrerpolicy="no-referrer" to match FeaturedEditorial.tsx'
+);
 console.log(`  [PASS] dist/index.html contains exact single preload: ${preloadTag.trim()}`);
 
 // --- TEST 3: Prevenção de Duplicatas em Re-execuções Sucessivas ---

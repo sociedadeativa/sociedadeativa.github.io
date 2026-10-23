@@ -453,6 +453,10 @@ if (preloadMatches.length === 1) {
     console.error('ERROR: Tag de preload de imagem em dist/index.html deve conter fetchpriority="high"!');
     process.exit(1);
   }
+  if (!preloadTag.includes('referrerpolicy="no-referrer"')) {
+    console.error('ERROR: Tag de preload de imagem em dist/index.html deve conter referrerpolicy="no-referrer"!');
+    process.exit(1);
+  }
   console.log(`LCP Preload validado em dist/index.html: ${hrefMatch[1]}`);
 }
 
