@@ -5,6 +5,294 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706282",
+    "title": "Confira a agenda dos presidenciáveis nesta sexta-feira (23)",
+    "summary": "A dois dias das eleições gerais de domingo (25), os candidatos à presidência da República Flávio Bolsonaro e Luiz Inácio Lula da Silva participam de debate na TV Globo, na noite desta sexta-feira (23).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/confira-agenda-dos-presidenciaveis-nesta-sexta-feira-23",
+    "publishedAt": "23/10/2026 às 08:28",
+    "category": "Eleições",
+    "ingestedAt": "23/10/2026 às 09:00",
+    "imageUrl": "https://imagens.ebc.com.br/Qjn25j4kWuBB0OOSqVFyv-s7K54=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/18/banner_agenda_-_1170x700.png?itok=KJR_nOUL",
+    "imageCaption": "Confira a agenda dos presidenciáveis nesta sexta-feira (23)",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Confira a agenda dos presidenciáveis nesta sexta-feira (23)",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Eleições"
+    ],
+    "content": [
+      "A dois dias das eleições gerais de domingo (25), os candidatos à presidência da República Flávio Bolsonaro e Luiz Inácio Lula da Silva participam de debate na TV Globo, na noite desta sexta-feira (23).",
+      "Sem agenda pública durante o dia, candidato participa do último debate televisivo antes do segundo turno, nos estúdios da Rede Globo, no Rio de Janeiro.",
+      "Luiz Inácio Lula da Silva (PT)",
+      "Candidato à reeleição também não tem agenda durante o dia e vai ao Rio para o debate, que tem previsão de início às 21h20.",
+      "A ordem de apresentação da agenda dos candidatos a presidente segue alternância diária."
+    ]
+  },
+  {
+    "id": "camara-1313386-alem-do-segundo-turno-algumas-",
+    "title": "Além do segundo turno, algumas cidades terão eleições suplementares neste domingo",
+    "summary": "Eleição suplementar, geralmente, tem o objetivo de dar solução a alguma eleição que teve problemas anteriormente.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313386-alem-do-segundo-turno-algumas-cidades-terao-eleicoes-suplementares-neste-domingo",
+    "publishedAt": "23/10/2026 às 08:24",
+    "category": "Congresso",
+    "ingestedAt": "23/10/2026 às 09:00",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/foto-eleies-768x512.jpg",
+    "imageCaption": "Brasileiros voltam às urnas neste domingo",
+    "imageCredit": "Paulo Pinto/Agência Brasil",
+    "imageAlt": "São Paulo (SP), 04/10/2026- São Paulo (SP), 04/10/2026- Início das votações na UNIP Vergueiro.Foto: Paulo Pinto/Agência Brasil",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Eleições 2026",
+      "Brasil"
+    ],
+    "content": [
+      "Paulo Pinto/Agência Brasil",
+      "Brasileiros voltam às urnas neste domingo",
+      "Além do segundo turno, haverá eleições suplementares para prefeito e vice-prefeito em sete municípios neste domingo (25). Em outras seis cidades, a população também responderá um plebiscito sobre a redefinição de municípios.",
+      "Os prefeitos serão eleitos em Arroio do Sal (RS), Santana do Itararé (PR), Macedônia (SP), Martinópolis (SP), Narandiba (SP), Itaguaí (RJ) e Goiatins (TO). Os eleitos cumprirão mandato até 31 de dezembro de 2028.",
+      "O cientista político Leandro Gabiati explica que o motivo para esta eleição fora do calendário está no resultado de julgamentos da Justiça Eleitoral. Na maioria dos casos, as chapas eleitas em 2024 foram cassadas por motivos como abuso de poder político e econômico e compra de votos.",
+      "“Uma eleição suplementar basicamente é uma eleição que ocorre fora do cronograma normal. Ela tem o objetivo de dar solução a alguma eleição que teve problemas anteriormente. O objetivo nesse caso é que os municípios tenham autoridades legitimamente eleitas pela população.”",
+      "Em Itaguaí, por exemplo, a eleição suplementar ocorre porque a Justiça Eleitoral barrou a candidatura de Rubem Vieira de Souza, do Podemos, conhecido como Dr. Rubão, por entender que ele estaria concorrendo a um terceiro mandato consecutivo.",
+      "Uma situação de limite territorial de municípios que será decidida domingo é no Paraná. Moradores de Chopinzinho e São João vão opinar sobre a transferência da Comunidade do Alto Mirim. A região, hoje vinculada a Chopinzinho, poderá passar a fazer parte do território de São João.",
+      "O site Resultados , da Justiça Eleitoral, permite acompanhar a apuração dos votos e os índices de comparecimento e abstenção."
+    ]
+  },
+  {
+    "id": "ebc-1706203",
+    "title": "Primeiro governador, depois presidente: saiba qual a ordem de votação",
+    "summary": "Neste domingo (25), os eleitores de todo o país voltam às urnas para o segundo turno das eleições. Em cinco estados e no Distrito Federal, haverá escolha para governador e para presidente da República.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/primeiro-governador-depois-presidente-saiba-qual-ordem-de-votacao",
+    "publishedAt": "23/10/2026 às 08:20",
+    "category": "Eleições",
+    "ingestedAt": "23/10/2026 às 09:00",
+    "imageUrl": "https://imagens.ebc.com.br/DVOmz195PK_MWazBRfl_lvdavyk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/10/27/toms7772-2.jpg?itok=AWil62wy",
+    "imageCaption": "Primeiro governador, depois presidente: saiba qual a ordem de votação",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Primeiro governador, depois presidente: saiba qual a ordem de votação",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "colinha",
+      "Urna Eletrônica",
+      "Ordem de Votação"
+    ],
+    "content": [
+      "Neste domingo (25), os eleitores de todo o país voltam às urnas para o segundo turno das eleições.",
+      "Em cinco estados e no Distrito Federal, haverá escolha para governador e para presidente da República. Nos outros locais, onde o governador já foi eleito no primeiro turno, será preciso apenas escolher o presidente.",
+      "Haverá segundo turno nos seguintes estados:",
+      "Nesses locais, a ordem de votação na urna eletrônica será:",
+      "1 - Governador: digitar os dois números do candidato e confirmar",
+      "2 - Presidente da República: digitar os dois números do candidato e confirmar",
+      "Nos demais estados, a votação será assim:",
+      "1 - Presidente da República: digitar os dois números do candidato e confirmar",
+      "A legislação permite ao eleitor levar uma colinha de papel para a urna, com os números dos candidatos anotados.",
+      "O aparelho celular, no entanto, deve ser entregue aos mesários antes de entrar na cabine de votação. Também não são permitidos equipamentos como smartwatch, máquina fotográfica, filmadora e óculos inteligentes.",
+      "O celular pode ser utilizado para apresentar o e-Título ou outro documento digital aceito pela Justiça Eleitoral durante a identificação na seção eleitoral.",
+      "O objetivo é preservar o sigilo do voto e impedir fraudes ou tentativas de comprovação da escolha feita na urna.",
+      "Quem se recusar a entregar o aparelho poderá ser impedido de votar naquele momento, e o caso poderá ser registrado pela mesa receptora de votos.",
+      "Não se esqueça de levar um documento de identificação com foto .",
+      "O título de eleitor não é obrigatório para votar, mas ajuda a acelerar o processo por indicar a zona e a seção eleitoral. Uma opção é baixar o e-título, aplicativo da Justiça Eleitoral, com a versão digital do título de eleitor.",
+      "Lembre-se de conferir, no dia anterior, o seu local atualizado de votação."
+    ]
+  },
+  {
+    "id": "ebc-1706278",
+    "title": "Diretora é presa por desvio de alimentos em unidade prisional feminina",
+    "summary": "O Ministério Público do Rio de Janeiro (MPRJ) obteve, nesta quinta-feira (22), a conversão da prisão em flagrante em preventiva de Graça Maria Silva de Souza, diretora do Instituto Penal Oscar Stevenson – unidade prisional feminina em Benfica, zona norte do Rio.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/diretora-e-presa-por-desvio-de-alimentos-em-unidade-prisional-feminina",
+    "publishedAt": "23/10/2026 às 08:02",
+    "category": "Justiça",
+    "ingestedAt": "23/10/2026 às 09:00",
+    "imageUrl": "https://imagens.ebc.com.br/GxhT50Hz56Q8FnnN7pg_pCnkHGQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/23/whatsapp-image-2026-10-22-at-09-33-33-3x2-1.jpg?itok=s91b6qGr",
+    "imageCaption": "Diretora é presa por desvio de alimentos em unidade prisional feminina",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Diretora é presa por desvio de alimentos em unidade prisional feminina",
+    "author": "Agência Brasil",
+    "tags": [
+      "Justiça",
+      "Peculato",
+      "desvio de alimentos"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706275",
+    "title": "Entidades estimulam domésticas a denunciar assédio eleitoral",
+    "summary": "A empregada doméstica Leandra Lacerda, 52 anos, recorda que precisou conviver com pressões de patrões durante períodos eleitorais. As mensagens chegaram em diferentes fases de sua trajetória profissional de formas, inclusive, escancaradas.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/entidades-estimulam-domesticas-denunciar-assedio-eleitoral",
+    "publishedAt": "23/10/2026 às 07:51",
+    "category": "Eleições",
+    "ingestedAt": "23/10/2026 às 09:00",
+    "imageUrl": "https://imagens.ebc.com.br/5a3TePhNJGjhgK1Q0QR2wSNidn4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/23/whatsapp_image_2026-10-22_at_09.05.18.jpeg?itok=Akxo1CoK",
+    "imageCaption": "Entidades estimulam domésticas a denunciar assédio eleitoral",
+    "imageCredit": "Luiz Claudio Ferreira - Repórter da Agência Brasil",
+    "imageAlt": "Entidades estimulam domésticas a denunciar assédio eleitoral",
+    "author": "Luiz Claudio Ferreira - Repórter da Agência Brasil",
+    "tags": [
+      "Direitos Humanos",
+      "eleições 2026",
+      "empregadas eleitorais",
+      "Assédio",
+      "Emprego"
+    ],
+    "content": []
+  },
+  {
+    "id": "camara-1312271-projeto-cria-politica-de-saude",
+    "title": "Projeto cria política de saúde mental na educação básica",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1312271-projeto-cria-politica-de-saude-mental-na-educacao-basica",
+    "publishedAt": "23/10/2026 às 07:48",
+    "category": "Congresso",
+    "ingestedAt": "23/10/2026 às 09:00",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261013170200916-768x473.jpg",
+    "imageCaption": "Renata Abreu: redes de ensino estão desamparadas na identificação precoce de sofrimento emocional",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Reunião de Líderes. Dep. Renata Abreu (PODE-SP)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1705982",
+    "title": "Eleitor que pediu voto em trânsito pode consultar local no e-Título",
+    "summary": "O eleitor que solicitou o voto em trânsito para o segundo turno das eleições 2026 deverá votar necessariamente no local para o qual pediu transferência. Não será possível votar na seção original.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitor-que-pediu-voto-em-transito-pode-consultar-local-no-e-titulo",
+    "publishedAt": "23/10/2026 às 07:45",
+    "category": "Eleições",
+    "ingestedAt": "23/10/2026 às 09:00",
+    "imageUrl": "https://imagens.ebc.com.br/U_PXy6jnuNqefHh0JD_zxjCkvbw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/09/03/0d7a0238.jpg?itok=PRL1g000",
+    "imageCaption": "Eleitor que pediu voto em trânsito pode consultar local no e-Título",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Eleitor que pediu voto em trânsito pode consultar local no e-Título",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "Eleições",
+      "eleições 2026",
+      "Voto em Trânsito"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706276",
+    "title": "Eleitores de Itaguaí, no Rio, votam domingo também para prefeito",
+    "summary": "Os mais de 100 mil eleitores de Itaguaí, na região metropolitana do Rio de Janeiro, voltarão às urnas neste domingo (25) para escolher o próximo presidente da República e também o novo prefeito do município.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/eleitores-de-itaguai-no-rio-votam-domingo-tambem-para-prefeito",
+    "publishedAt": "23/10/2026 às 07:45",
+    "category": "Justiça",
+    "ingestedAt": "23/10/2026 às 09:00",
+    "imageUrl": "https://imagens.ebc.com.br/dT533nV8EHShBl3p1JU2w-yACEw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/24/_pin5457.jpg-2.jpg?itok=yCAn7QkH",
+    "imageCaption": "Eleitores de Itaguaí, no Rio, votam domingo também para prefeito",
+    "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
+    "imageAlt": "Eleitores de Itaguaí, no Rio, votam domingo também para prefeito",
+    "author": "Douglas Corrêa - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "eleições 2026",
+      "Votação",
+      "prefeito",
+      "Itaguaí"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706257",
+    "title": "Racismo e intolerância religiosa atravessam debate eleitoral no Brasil",
+    "summary": "O enfrentamento ao racismo e a garantia da liberdade religiosa permanecem como desafios no Brasil que irá às urnas no domingo (25).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/racismo-e-intolerancia-religiosa-atravessam-debate-eleitoral-no-brasil",
+    "publishedAt": "23/10/2026 às 07:31",
+    "category": "Eleições",
+    "ingestedAt": "23/10/2026 às 09:00",
+    "imageUrl": "https://imagens.ebc.com.br/eaJSzUrvNMmZPI4kB7WfmVo3WEw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/_dsc0600.jpg?itok=g9aKi-al",
+    "imageCaption": "Racismo e intolerância religiosa atravessam debate eleitoral no Brasil",
+    "imageCredit": "Isabela Vieira - Repórter da Agência Brasil",
+    "imageAlt": "Racismo e intolerância religiosa atravessam debate eleitoral no Brasil",
+    "author": "Isabela Vieira - Repórter da Agência Brasil",
+    "tags": [
+      "Direitos Humanos",
+      "eleições 2026",
+      "Racismo",
+      "Intolerância Religiosa",
+      "Eleições"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706274",
+    "title": "Libertadores Feminina tem chance de final brasileira pela terceira vez",
+    "summary": "A noite dessa quinta-feira (22) encerrou a fase de grupos da edição deste ano da Libertadores Feminina, que é disputada em Quito (Equador). As quartas de final começam neste sábado (24), com Corinthians e Palmeiras em campo.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/libertadores-feminina-tem-chance-de-final-brasileira-pela-terceira-vez",
+    "publishedAt": "23/10/2026 às 07:02",
+    "category": "Esportes",
+    "ingestedAt": "23/10/2026 às 09:00",
+    "imageUrl": "https://imagens.ebc.com.br/gbDV1-JYXMV3drku95thYCqEKu4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/23/55605342227_a8b735ccdf_o.jpg?itok=nMM31h8_",
+    "imageCaption": "Libertadores Feminina tem chance de final brasileira pela terceira vez",
+    "imageCredit": "Lincoln Chaves - Repórter da EBC",
+    "imageAlt": "Libertadores Feminina tem chance de final brasileira pela terceira vez",
+    "author": "Lincoln Chaves - Repórter da EBC",
+    "tags": [
+      "Esportes",
+      "libertadores feminina",
+      "quartas de final",
+      "Corinthians",
+      "Palmeiras"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706273",
+    "title": "Estudiantes bate Fla e Palmeiras terá revanche pelo tetra da América",
+    "summary": "A final da Libertadores deste ano terá gosto de revanche para o Palmeiras.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/estudiantes-bate-fla-e-palmeiras-tera-revanche-pelo-tetra-da-america",
+    "publishedAt": "23/10/2026 às 06:45",
+    "category": "Esportes",
+    "ingestedAt": "23/10/2026 às 09:00",
+    "imageUrl": "https://imagens.ebc.com.br/Tf2H7R3E3d65IAcINoReecteTN4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/23/2026-10-23t025751z_1701824998_up1eman088eff_rtrmadp_3_soccer-libertadores-fla-esu.jpg?itok=tsUAncwj",
+    "imageCaption": "Estudiantes bate Fla e Palmeiras terá revanche pelo tetra da América",
+    "imageCredit": "Lincoln Chaves - Repórter da EBC",
+    "imageAlt": "Estudiantes bate Fla e Palmeiras terá revanche pelo tetra da América",
+    "author": "Lincoln Chaves - Repórter da EBC",
+    "tags": [
+      "Esportes",
+      "Libertadores",
+      "flamengo",
+      "estudiantes",
+      "semifinal"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706271",
     "title": "Portaria convoca instituições financeiras para 3ª fase do Desenrola",
     "summary": "As instituições financeiras terão cinco dias úteis para a informar ao governo as dívidas que pretendem oferecer para renegociação na primeira etapa do Desenrola 3.0. O Diário Oficial da União publicou, em edição extraordinária, a portaria com o edital de chamamento .",
@@ -24,26 +312,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Desenrola",
       "Brasil"
     ],
-    "content": [
-      "As instituições financeiras terão cinco dias úteis para a informar ao governo as dívidas que pretendem oferecer para renegociação na primeira etapa do Desenrola 3.0. O Diário Oficial da União publicou, em edição extraordinária, a portaria com o edital de chamamento .",
-      "A terceira versão do Desenrola prevê a compra de dívidas pelo governo. Na quarta-feira (21), o ministro da Fazenda, Dario Durigan, estimou em R$ 90 bilhões o volume de dívidas antigas que podem ser apresentadas nesse edital, que dá início ao processo de habilitação de bancos e fundos interessados em vender carteiras de crédito à União.",
-      "Apesar do volume previsto, o custo máximo estimado para a compra de todo esse montante seria de R$ 9 bilhões, considerando o desconto mínimo de 90% exigido pelo programa.",
-      "As instituições terão cinco dias úteis para informar o volume de débitos que pretendem oferecer. A etapa, no entanto, não é uma convocação para que os consumidores renegociem suas dívidas, mas um procedimento para medir o interesse dos credores e o volume de dívidas por faixas de renda.",
-      "O chamamento público será destinado a bancos, instituições financeiras e fundos de investimento em direitos creditórios (FIDCs). Para participar da etapa seguinte, os credores deverão apresentar carteiras de dívidas que atendam aos critérios do programa e aceitar as condições mínimas de desconto.",
-      "O procedimento será dividido em etapas:",
-      "Segundo o ministro, o governo pretende estruturar a disputa para favorecer devedores de menor renda e microempreendedores individuais (MEIs). No entanto, caso o volume de dívidas de baixa renda seja menor que o previsto, o governo poderá comprar mais dívidas de alta renda.",
-      "A estimativa inicial é que os credores apresentem até R$ 90 bilhões em dívidas. Como o programa exige deságio mínimo de 90%, a União pagaria, no máximo, 10% do valor nominal das carteiras adquiridas.",
-      "Na hipótese de compra de todo o montante estimado, o desembolso seria de até R$ 9 bilhões.",
-      "O governo, porém, não necessariamente comprará todas as carteiras apresentadas. A intenção é estabelecer um orçamento para o leilão e estimular a concorrência entre os credores, o que pode resultar em descontos superiores ao mínimo exigido.",
-      "A depender do que o governo receber nas carteiras dos bancos e das instituições financeiras, o governo pode pedir desconto de 93% a 95% no leilão.",
-      "O Desenrola 3.0 foi criado por medida provisória assinada pelo presidente Luiz Inácio Lula da Silva em setembro. O programa prevê a compra, pela União, de carteiras de crédito com dívidas antigas para viabilizar a renegociação dos débitos com os consumidores.",
-      "Entre as condições previstas estão:",
-      "No lançamento da iniciativa, o governo estimou que o volume total de dívidas elegíveis poderia chegar a R$ 150 bilhões, com desembolso de aproximadamente R$ 15 bilhões. A previsão de R$ 90 bilhões divulgada agora corresponde à expectativa inicial de dívidas que os credores poderão apresentar na primeira chamada.",
-      "Após o leilão, as dívidas adquiridas pelo governo poderão ser renegociadas com os devedores, com repasse dos descontos obtidos na compra das carteiras.",
-      "O consumidor poderá quitar o débito à vista ou parcelar o pagamento, conforme as condições a serem estabelecidas. No caso do parcelamento, haverá cobrança de juros.",
-      "Os prazos, as taxas e as demais condições operacionais ainda dependem de definições do Conselho Monetário Nacional (CMN) e da regulamentação aplicável.",
-      "Neste momento, os consumidores não precisam procurar os bancos para participar da etapa de chamamento. O governo ainda deverá divulgar as regras e os procedimentos para o acesso às renegociações."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706268",
@@ -67,16 +336,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Janones",
       "Exército do Lula"
     ],
-    "content": [
-      "O candidato do PT, Luiz Inácio Lula da Silva, passou esta quinta-feira (22) no Palácio da Alvorada se preparando para o debate desta sexta-feira (23), na TV Globo. À noite, ele participou de uma live com o deputado federal André Janones (Rede-MG).",
-      "Na transmissão ao vivo, Lula mandou um recado para todos que não foram votar no primeiro turno porque não quiseram ou porque não gostavam de nenhum dos candidatos. Ele falou, sobretudo, com os mais velhos, que não têm mais obrigação de votar por terem mais de 70 anos.",
-      "“Agora você tem que pensar no Brasil, na sua pátria. No país que você trabalhou 60 anos para construir. Naquele país que você viu nascer seu filho, seu neto. É como se a gente fosse uma árvore, a gente vai ficando mais velho e dando frutos, e esses frutos dão sementes que dão novas árvores. Você é isso, você precisa cuidar das árvores que colocou no mundo”.",
-      "O candidato à reeleição defendeu as políticas sociais e reiterou a promessa de ampliar o programa Pé-de-Meia para os universitários. A versão escolar do programa Pé-de-Meia foi criada em 2024. Trata-se de um incentivo financeiro-educacional pago pelo governo federal para promover a permanência e a conclusão escolar de pessoas matriculadas no ensino médio público.",
-      "Janones conduz um canal no WhatsApp chamado Exército do Lula para organizar uma militância espontânea e aumentar o apoio ao candidato do PT nas redes sociais. O canal já conta com 8,5 milhões de pessoas. Na esteira dessa mobilização, Lula e Janones fizeram a live , ouvindo artistas de várias áreas.",
-      "A atriz Marieta Severo participou da live e também fez um chamamento para que os idosos se motivem a votar no domingo (25), dia do segundo turno das eleições. Ela lembrou que ir votar serve como prova de vida para continuidade do recebimento dos benefícios do Instituto Nacional do Seguro Social (INSS).",
-      "Lula e Janones também conversaram com o cantor Jão, que incentivou os jovens a votar. A live ainda teve as participações da youtuber Nath Finanças, da atriz Camila Pitanga, do apresentador Serginho Groismann e da atriz Leandra Leal.",
-      "O candidato Flávio Bolsonaro (PL) não teve agenda pública de campanha nesta quinta-feira. Estava prevista a realização de uma live no YouTube, mas o candidato não participou."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706269",
@@ -100,22 +360,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Fluminense",
       "Copa do Brasil Feminina"
     ],
-    "content": [
-      "O Flamengo é o quarto e último classificado às semifinais da Copa do Brasil Feminina. Nesta quinta-feira (22), as Meninas da Gávea venceram o clássico contra o Fluminense por 3 a 1 no Estádio Luso-Brasileiro, no Rio de Janeiro.",
-      "O Rubro-Negro precisava vencer por dois gols ou mais de diferença após a derrota por 2 a 1 no jogo de ida, há uma semana, no mesmo local. A equipe tricolor tinha a vantagem do empate.",
-      "Os confrontos das semifinais serão conhecidos por meio de sorteio nesta sexta-feira (23), às 15h (horário de Brasília), na sede da Confederação Brasileira de Futebol (CBF), que fica na Barra da Tijuca, zona oeste do Rio de Janeiro. Na ocasião, também serão definidos os mandos dos jogos de ida e volta.",
-      "Os primeiros 45 minutos do Flamengo foram avassaladores. Aos dez, a volante Ju Ferreira levantou na área pela esquerda, buscando Cristiane. A bola desviou na zagueira Nath Rodrigues e sobrou no pé da atacante, que rolou para a lateral Jucinara chutar forte e abrir o placar.",
-      "Aos 19 minutos, a zagueira Gislaine saiu jogando errado e Djeni aproveitou. A capitã lançou na área, a volante Karina não conseguiu cortar, a bola subiu e a meia Kaylane se antecipou a Nath Rodrigues para tocar na saída da goleira Kemelli e ampliar o marcador.",
-      "As Meninas da Gávea aumentaram a fatura aos 33, com Laysa. Na sequência de uma cobrança de escanteio, a atacante recebeu da zagueira Núbia na meia-lua e finalizou, acertando o cantinho esquerdo de Kemelli.",
-      "Sete minutos depois, um susto. Atingida por uma bolada no rosto, Cristiane desabou no gramado, sentindo o joelho na queda, tendo que sair de campo de maca. Com tontura e sem condições de retornar, a artilheira deu lugar à volante Letícia.",
-      "O Fluminense mudou de postura na volta do intervalo e se lançou ao ataque. Aos 25, a zagueira Sofia - que tinha entrado em campo três minutos antes - foi expulsa após falta sobre a atacante Carioca, deixando o Flamengo com uma a menos.",
-      "Aos 36, Carioca foi derrubada na área pela meia Anna Luiza. Pênalti que Nath Rodrigues converteu. O Tricolor pressionou em busca do segundo gol, que levaria o confronto para as penalidades, mas o Rubro-Negro se segurou e celebrou a classificação.",
-      "Campeão brasileiro há três semanas, o São Paulo deu adeus à Copa do Brasil. Na noite da última quarta-feira (21), as Soberanas foram novamente superadas pelo Bahia, desta vez por 1 a 0, no Brinco de Ouro da Princesa, em Campinas (SP). Na sexta-feira passada (16), as Mulheres de Aço ganharam o jogo de ida no Batistão, em Aracaju, por 2 a 1.",
-      "O gol do triunfo baiano saiu no início do segundo tempo. Aos seis minutos, Wendy Carballo lançou Roqueline na ponta direita. Ela ajeitou de primeira para a também atacante Cássia finalizar e encobrir a goleira Carlinha.",
-      "O Bahia repete a campanha do ano passado, quando também avançou às semifinais. Na ocasião, as tricolores foram derrotadas pela Ferroviária. Em 2026, as Mulheres de Aço também se colocaram entre as quatro melhores no Campeonato Brasileiro, eliminando o Palmeiras nas quartas de final e caindo apenas para o Corinthians.",
-      "Os outros dois classificados foram conhecidos na última terça-feira (20). O Internacional avançou ao vencer o Atlético-MG nos pênaltis, por 4 a 3, após um empate sem gols no tempo normal na Arena MRV, em Belo Horizonte. No primeiro jogo, os times ficaram no 1 a 1 no Beira-Rio, em Porto Alegre.",
-      "Já o Red Bull Bragantino eliminou a Ferroviária, mesmo com a derrota por 3 a 2 no Estádio Cícero de Souza Marques, em Bragança Paulista (SP). As Bragantinas tinham ganhado a ida por 2 a 0 na Arena da Fonte Luminosa, em Araraquara (SP). Com a saída das Guerreiras Grenás, campeãs em 2014, o vencedor da Copa do Brasil deste ano será inédit"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706270",
@@ -190,6 +435,29 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "content": []
   },
   {
+    "id": "ebc-1706254",
+    "title": "CMN e BC atualizam regras de segurança e transparência do Open Finance",
+    "summary": "O Conselho Monetário Nacional (CMN) e o Banco Central (BC) aprovaram nesta quinta-feira (22) mudanças nas regras de compartilhamento de dados pelo Open Finance, sistema que permite aos clientes autorizar o compartilhamento de informações financeiras entre instituições.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/cmn-e-bc-atualizam-regras-de-seguranca-e-transparencia-do-open-finance",
+    "publishedAt": "22/10/2026 às 20:03",
+    "category": "Economia",
+    "ingestedAt": "22/10/2026 às 21:29",
+    "imageUrl": "https://imagens.ebc.com.br/4P4kLfGygwh7yN8EJAMIaG0PqTM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/20231025_150203.jpg?itok=55thhM0a",
+    "imageCaption": "CMN e BC atualizam regras de segurança e transparência do Open Finance",
+    "imageCredit": "Wellton Máximo – Repórter da Agência Brasil",
+    "imageAlt": "CMN e BC atualizam regras de segurança e transparência do Open Finance",
+    "author": "Wellton Máximo – Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "open finance",
+      "CMN",
+      "banco central"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706260",
     "title": "Fifa anuncia EUA como sede da 1ª Copa do Mundo de Clubes Feminina",
     "summary": "A Federação Internacional de Futebol (Fifa) confirmou, nesta quinta-feira (22), os Estados Unidos como sede da primeira edição da Copa do Mundo de Clubes Feminina, em 2028. A competição, marcada para ocorrer entre 5 e 30 de janeiro de 2028, terá 19 times.",
@@ -210,29 +478,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Estados Unidos",
       "sede",
       "Corinthians"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706254",
-    "title": "CMN e BC atualizam regras de segurança e transparência do Open Finance",
-    "summary": "O Conselho Monetário Nacional (CMN) e o Banco Central (BC) aprovaram nesta quinta-feira (22) mudanças nas regras de compartilhamento de dados pelo Open Finance, sistema que permite aos clientes autorizar o compartilhamento de informações financeiras entre instituições.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/cmn-e-bc-atualizam-regras-de-seguranca-e-transparencia-do-open-finance",
-    "publishedAt": "22/10/2026 às 20:03",
-    "category": "Economia",
-    "ingestedAt": "22/10/2026 às 21:29",
-    "imageUrl": "https://imagens.ebc.com.br/4P4kLfGygwh7yN8EJAMIaG0PqTM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/20231025_150203.jpg?itok=55thhM0a",
-    "imageCaption": "CMN e BC atualizam regras de segurança e transparência do Open Finance",
-    "imageCredit": "Wellton Máximo – Repórter da Agência Brasil",
-    "imageAlt": "CMN e BC atualizam regras de segurança e transparência do Open Finance",
-    "author": "Wellton Máximo – Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "open finance",
-      "CMN",
-      "banco central"
     ],
     "content": []
   },
@@ -890,256 +1135,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Javeir Milei",
       "recessão",
       "Economia"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706183",
-    "title": "Plataforma pan-amazônica reúne 232 políticas públicas para bioeconomia",
-    "summary": "A Pan-Amazônia, região que engloba nove países da América do Sul, tem pelo menos 232 políticas, programas e instrumentos públicos relacionados à bioeconomia.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/plataforma-pan-amazonica-reune-232-politicas-publicas-para-bioeconomia",
-    "publishedAt": "22/10/2026 às 12:22",
-    "category": "Política",
-    "ingestedAt": "22/10/2026 às 14:04",
-    "imageUrl": "https://imagens.ebc.com.br/OidBrAVGAg3GakWZ0hAfVMGd2e8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/18/terra_indigena_ti_panara_na_amazonia01.jpg?itok=3KuImfQf",
-    "imageCaption": "Plataforma pan-amazônica reúne 232 políticas públicas para bioeconomia",
-    "imageCredit": "Rafael Cardoso - Repórter da Agência Brasil",
-    "imageAlt": "Plataforma pan-amazônica reúne 232 políticas públicas para bioeconomia",
-    "author": "Rafael Cardoso - Repórter da Agência Brasil",
-    "tags": [
-      "Meio Ambiente",
-      "plataforma",
-      "Pan-Amazônia",
-      "bioeconomia",
-      "negócios"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706182",
-    "title": "Mãe Bernadete: Júri condena quarto acusado a 23 anos de prisão",
-    "summary": "O tribunal do Júri da Comarca de Salvador condenou Sérgio Ferreira de Jesus a 23 anos e nove meses de prisão por seu envolvimento no assassinato da líder quilombola e ialorixá Maria Bernadete Pacífico Moreira, a Mãe Bernadete.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/mae-bernadete-juri-condena-quarto-acusado-23-anos-de-prisao",
-    "publishedAt": "22/10/2026 às 12:13",
-    "category": "Justiça",
-    "ingestedAt": "22/10/2026 às 14:04",
-    "imageUrl": "https://imagens.ebc.com.br/4lI1JjIc7cPDC_ep_BtjIZHyYCg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/08/17/foto_da_casa.jpeg?itok=zeUxj8l7",
-    "imageCaption": "Mãe Bernadete: Júri condena quarto acusado a 23 anos de prisão",
-    "imageCredit": "Felipe Pontes – repórter da Agência Brasil",
-    "imageAlt": "Mãe Bernadete: Júri condena quarto acusado a 23 anos de prisão",
-    "author": "Felipe Pontes – repórter da Agência Brasil",
-    "tags": [
-      "Direitos Humanos",
-      "mãe Bernadete",
-      "Simões Filho",
-      "Bahia",
-      "Segurança Pública"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1311996-projeto-limita-doacoes-eleitor",
-    "title": "Projeto limita doações eleitorais de pessoas físicas a dez salários mínimos",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311996-projeto-limita-doacoes-eleitorais-de-pessoas-fisicas-a-dez-salarios-minimos",
-    "publishedAt": "22/10/2026 às 12:00",
-    "category": "Congresso",
-    "ingestedAt": "22/10/2026 às 14:04",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260901222711906-768x473.jpg",
-    "imageCaption": "Chico Alencar: regra atual privilegia candidatos com acesso a doadores de alta renda",
-    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Chico Alencar (PSOL - RJ)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706181",
-    "title": "Defensoria Pública pede ao STF transporte gratuito no 2º turno",
-    "summary": "A Defensoria Pública da União (DPU) acionou o Supremo Tribunal Federal (STF) para tentar assegurar o direito das eleitoras e eleitores de todo o Brasil ao transporte público gratuito no segundo turno das eleições para presidente da República e governadores, onde houver.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/defensoria-publica-pede-ao-stf-transporte-gratuito-no-2o-turno",
-    "publishedAt": "22/10/2026 às 11:59",
-    "category": "Justiça",
-    "ingestedAt": "22/10/2026 às 14:04",
-    "imageUrl": "https://imagens.ebc.com.br/ZeIxe8nXMLhfKwb_N7ghusimSQA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/transporte_publico_metro-df_metro_fpzzb_abr_1608221602.jpg?itok=FEp2J93v",
-    "imageCaption": "Defensoria Pública pede ao STF transporte gratuito no 2º turno",
-    "imageCredit": "Alex Rodrigues - Repórter da Agência Brasil",
-    "imageAlt": "Defensoria Pública pede ao STF transporte gratuito no 2º turno",
-    "author": "Alex Rodrigues - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "transporte de eleitor",
-      "stf",
-      "TSE"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1313155-motta-diz-que-lei-antifaccao-c",
-    "title": "Motta diz que Lei Antifacção começa a produzir efeitos após pedido de confisco de R$ 190 milhões em bens",
-    "summary": "“É assim que se combate facção: tirando o dinheiro delas”, afirmou por meio de suas redes sociais.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1313155-motta-diz-que-lei-antifaccao-comeca-a-produzir-efeitos-apos-pedido-de-confisco-de-r-190-milhoes-em-bens",
-    "publishedAt": "22/10/2026 às 11:49",
-    "category": "Congresso",
-    "ingestedAt": "22/10/2026 às 14:04",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260903160759889-768x473.jpg",
-    "imageCaption": "Hugo Motta, presidente da Câmara",
-    "imageCredit": "Kayo Magalhães/Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Presidente da Câmara dos Deputados, Hugo Motta (REPUBLICANOS - PB)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706179",
-    "title": "Arrecadação federal cresce 5,62% em setembro e soma R$ 239,4 bilhões",
-    "summary": "A arrecadação das receitas federais somou R$ 239,4 bilhões em setembro, informou nesta quinta-feira (22) a Receita Federal .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/arrecadacao-federal-cresce-562-em-setembro-e-soma-r-2394-bilhoes",
-    "publishedAt": "22/10/2026 às 11:45",
-    "category": "Economia",
-    "ingestedAt": "22/10/2026 às 14:04",
-    "imageUrl": "https://imagens.ebc.com.br/AChhqV_tqYhYSrsNlssVxs30_f4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/real_moedadinheiro_jfcrz_abr_1701220048_1.jpg?itok=x0brd3gH",
-    "imageCaption": "Arrecadação federal cresce 5,62% em setembro e soma R$ 239,4 bilhões",
-    "imageCredit": "Pedro Peduzzi - Repórter da Agência Brasil",
-    "imageAlt": "Arrecadação federal cresce 5,62% em setembro e soma R$ 239,4 bilhões",
-    "author": "Pedro Peduzzi - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "Arrecadação",
-      "Receita Federal",
-      "IPCA"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706177",
-    "title": "Anvisa proíbe venda de teste de glicemia Accu-Check Active na Amazon",
-    "summary": "A Agência Nacional de Vigilância Sanitária (Anvisa) proibiu a venda de tiras de glicemia da marca Accu-Check Active na plataforma Amazon. Os produtos, segundo a agência, são falsificados e não podem ser distribuídos, importados nem utilizados.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/anvisa-proibe-venda-de-teste-de-glicemia-accu-check-active-na-amazon",
-    "publishedAt": "22/10/2026 às 11:37",
-    "category": "Política",
-    "ingestedAt": "22/10/2026 às 14:04",
-    "imageUrl": "https://imagens.ebc.com.br/tkn5b7eywlQk05kVq_9UK5v27lQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/dji_0143.jpg?itok=TaigvrwT",
-    "imageCaption": "Anvisa proíbe venda de teste de glicemia Accu-Check Active na Amazon",
-    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
-    "imageAlt": "Anvisa proíbe venda de teste de glicemia Accu-Check Active na Amazon",
-    "author": "Paula Laboissière – Repórter da Agência Brasil",
-    "tags": [
-      "Saúde",
-      "Anvisa",
-      "diabetes",
-      "amazon",
-      "Accu-Check Active"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1313045-contribuicao-sobre-bens-e-serv",
-    "title": "Contribuição sobre Bens e Serviços entra em vigor em 2027 e novas regulamentações serão enviadas ao Congresso",
-    "summary": "A contribuição foi criada pela reforma tributária para substituir o PIS, a Cofins e o IPI.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1313045-contribuicao-sobre-bens-e-servicos-entra-em-vigor-em-2027-e-novas-regulamentacoes-serao-enviadas-ao-congresso",
-    "publishedAt": "22/10/2026 às 11:18",
-    "category": "Congresso",
-    "ingestedAt": "22/10/2026 às 11:29",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20230424110822774-768x512.jpg",
-    "imageCaption": "O Senado deverá definir o percentual da CBS para o ano que vem",
-    "imageCredit": "Depositphotos",
-    "imageAlt": "Economia - tributos - reforma tributária",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706175",
-    "title": "Enamed: termina hoje prazo para recurso contra gabarito preliminar",
-    "summary": "Os candidatos que fizeram a reaplicação do Exame Nacional de Avaliação da Formação Médica (Enamed) 2026 podem apresentar recurso contra o gabarito preliminar até 23h59 desta quinta-feira (22).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/enamed-termina-hoje-prazo-para-recurso-contra-gabarito-preliminar",
-    "publishedAt": "22/10/2026 às 11:18",
-    "category": "Eleições",
-    "ingestedAt": "22/10/2026 às 14:04",
-    "imageUrl": "https://imagens.ebc.com.br/1bTEEtuAoa28Sp2uC4a_cXt-64Y=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/revalida_mcamgo_abr_100720211818.jpg?itok=FZNt9dfo",
-    "imageCaption": "Enamed: termina hoje prazo para recurso contra gabarito preliminar",
-    "imageCredit": "Daniella Almeida – Repórter da Agência Brasil",
-    "imageAlt": "Enamed: termina hoje prazo para recurso contra gabarito preliminar",
-    "author": "Daniella Almeida – Repórter da Agência Brasil",
-    "tags": [
-      "Educação",
-      "Enamed 2026",
-      "Medicina",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706170",
-    "title": "Termina hoje prazo para realizar comícios e anúncios pagos de campanha",
-    "summary": "A três dias do segundo turno das eleições, termina nesta quinta-feira (22) o prazo para que candidatos façam comícios e atividades de campanha. Também é o último dia para a circulação paga ou impulsionada de propaganda eleitoral na internet.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/termina-hoje-prazo-para-realizar-comicios-e-anuncios-pagos-de-campanha",
-    "publishedAt": "22/10/2026 às 10:29",
-    "category": "Justiça",
-    "ingestedAt": "22/10/2026 às 16:27",
-    "imageUrl": "https://imagens.ebc.com.br/gk7wNJ9mM_6pJXBzvliS3apc_Jk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/01/tre_sc_santinhos_0.jpeg?itok=uUAdCY-T",
-    "imageCaption": "Termina hoje prazo para realizar comícios e anúncios pagos de campanha",
-    "imageCredit": "Priscila Thereso - Repórter da Rádio Nacional",
-    "imageAlt": "Termina hoje prazo para realizar comícios e anúncios pagos de campanha",
-    "author": "Priscila Thereso - Repórter da Rádio Nacional",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "TSE",
-      "propaganda eleitoral",
-      "encerramento"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1313047-camara-e-senado-fazem-cobertur",
-    "title": "Câmara e Senado fazem cobertura integrada do segundo turno das eleições",
-    "summary": "Boletins começam às 8 horas; transmissão ao vivo terá participação de mais de 30 emissoras legislativas.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1313047-camara-e-senado-fazem-cobertura-integrada-do-segundo-turno-das-eleicoes",
-    "publishedAt": "22/10/2026 às 10:23",
-    "category": "Congresso",
-    "ingestedAt": "22/10/2026 às 11:29",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Eleições 2026",
-      "Brasil"
     ],
     "content": []
   },
