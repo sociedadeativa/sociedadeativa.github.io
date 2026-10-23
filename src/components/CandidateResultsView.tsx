@@ -199,31 +199,34 @@ export const CandidateResultsView: React.FC<CandidateResultsViewProps> = ({
         </div>
 
         {/* Filtro por Partido (Abas / Pílulas discretas) */}
-        <div role="tablist" aria-label="Filtrar candidatos por agremiação partidária" className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
-          <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mr-1 shrink-0 flex items-center gap-1">
-            <Filter className="w-3 h-3 text-slate-400" />
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+          <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider mr-1 shrink-0 flex items-center gap-1">
+            <Filter className="w-3 h-3 text-slate-500" />
             Partido:
           </span>
-          {parties.map((party) => {
-            const isActive = partyFilter === party;
-            const label = party === "all" ? "Todos os Partidos" : party;
-            return (
-              <button
-                key={party}
-                role="tab"
-                aria-selected={isActive}
-                aria-label={`Filtrar candidatos por ${label}`}
-                onClick={() => setPartyFilter(party)}
-                className={`min-h-[34px] px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center justify-center ${
-                  isActive
-                    ? "bg-slate-900 text-white shadow-xs"
-                    : "bg-slate-100 hover:bg-slate-200 text-slate-700"
-                }`}
-              >
-                {label}
-              </button>
-            );
-          })}
+          <div role="tablist" aria-label="Filtrar candidatos por agremiação partidária" className="flex items-center gap-1.5">
+            {parties.map((party) => {
+              const isActive = partyFilter === party;
+              const label = party === "all" ? "Todos os Partidos" : party;
+              return (
+                <button
+                  key={party}
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-controls="candidatos-cards-grid"
+                  aria-label={`Filtrar candidatos por ${label}`}
+                  onClick={() => setPartyFilter(party)}
+                  className={`min-h-[34px] px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center justify-center ${
+                    isActive
+                      ? "bg-slate-900 text-white shadow-xs"
+                      : "bg-slate-100 hover:bg-slate-200 text-slate-700"
+                  }`}
+                >
+                  {label}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Aviso de Transparência Cívica e Neutralidade Informativa */}
@@ -236,7 +239,7 @@ export const CandidateResultsView: React.FC<CandidateResultsViewProps> = ({
       </div>
 
       {/* Grade de Cartões Individuais dos Candidatos */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
+      <div id="candidatos-cards-grid" role="region" aria-label="Lista de candidatos à Presidência" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
         {displayedCandidates.map((cand, index) => {
           const isWinner1st = cand.id === "flavio";
           const isRunnerUp1st = cand.id === "lula";

@@ -334,9 +334,9 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
               <div className="flex items-center justify-between pb-3 border-b border-slate-200">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-3.5 bg-blue-900 rounded-xs" />
-                  <span className="font-heading text-xs font-black uppercase tracking-wider text-slate-900">
+                  <h2 className="font-heading text-xs font-black uppercase tracking-wider text-slate-900">
                     Destaques Editoriais
-                  </span>
+                  </h2>
                 </div>
                 <PortalLink
                   route="noticias"
@@ -354,7 +354,7 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                     onClick={() => onOpenArticleDetails(art)}
                     className="group cursor-pointer py-3.5 first:pt-1 last:pb-0"
                   >
-                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] text-slate-500 mb-1.5 font-medium">
+                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] text-slate-600 mb-1.5 font-medium">
                       <span className={getCategoryBadgeClass(art.category, true)}>
                         {art.category}
                       </span>
@@ -380,13 +380,13 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
             <div className="pt-2">
               <div className="bg-slate-50 rounded-2xl p-4 sm:p-5 border border-slate-200/80">
                 <div className="flex items-center justify-between gap-2 mb-3.5 pb-2.5 border-b border-slate-200/60 min-w-0">
-                  <span className="font-heading text-xs font-black uppercase tracking-wider text-slate-900 flex items-center gap-1.5 min-w-0">
+                  <h2 className="font-heading text-xs font-black uppercase tracking-wider text-slate-900 flex items-center gap-1.5 min-w-0">
                     <Sparkles className="w-3.5 h-3.5 text-blue-900 shrink-0" />
                     <span className="truncate">
                       Radar Cívico <span className="hidden min-[390px]:inline">· Despachos Oficiais</span>
                     </span>
-                  </span>
-                  <span className="text-[10px] font-mono text-slate-500 font-bold bg-white px-2 py-0.5 rounded border border-slate-200/70 shrink-0">
+                  </h2>
+                  <span className="text-[10px] font-mono text-slate-600 font-bold bg-white px-2 py-0.5 rounded border border-slate-200/70 shrink-0">
                     Hoje
                   </span>
                 </div>

@@ -13,7 +13,7 @@
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
-    "test": "node tests/news-pipeline-controlled.test.mjs && node tests/election-news-filter.test.mjs && node tests/election-second-round-pipeline.test.mjs && node tests/technology-section.test.mjs && node tests/image-reliability-and-states.test.mjs && node tests/performance-and-bundle-audit.test.mjs && node tests/lcp-preload-dynamic.test.mjs && node tests/news-optimization-p1.test.mjs && node tests/news-initial-sync-optimization.test.mjs && node tests/mobile-performance-ga-css.test.mjs"
+    "test": "node tests/news-pipeline-controlled.test.mjs && node tests/election-news-filter.test.mjs && node tests/election-second-round-pipeline.test.mjs && node tests/technology-section.test.mjs && node tests/image-reliability-and-states.test.mjs && node tests/performance-and-bundle-audit.test.mjs && node tests/lcp-preload-dynamic.test.mjs && node tests/news-optimization-p1.test.mjs && node tests/news-initial-sync-optimization.test.mjs && node tests/mobile-performance-ga-css.test.mjs && node tests/accessibility-audit.test.mjs"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

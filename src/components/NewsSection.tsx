@@ -127,31 +127,34 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
         </div>
 
         {/* Barra de Navegação por Categorias Oficiais */}
-        <div role="tablist" aria-label="Categorias oficiais de notícias" className="flex items-center gap-1.5 overflow-x-auto pb-3 mb-6 text-xs scrollbar-thin scrollbar-thumb-slate-200">
-          <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-bold uppercase text-slate-400 mr-1 shrink-0">
-            <Filter className="w-3 h-3" />
+        <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-6 text-xs">
+          <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-bold uppercase text-slate-600 mr-1 shrink-0">
+            <Filter className="w-3 h-3 text-slate-500" />
             Filtro:
           </span>
 
-          {categories.map((cat) => {
-            const isActive = selectedCategory === cat;
-            return (
-              <button
-                key={cat}
-                role="tab"
-                aria-selected={isActive}
-                aria-label={`Filtrar notícias por ${cat}`}
-                onClick={() => setSelectedCategory(cat)}
-                className={`min-h-[34px] px-3 py-1.5 rounded-xl font-bold transition-all cursor-pointer whitespace-nowrap text-xs shrink-0 flex items-center justify-center ${
-                  isActive
-                    ? "bg-slate-900 text-white shadow-xs"
-                    : "bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200/80"
-                }`}
-              >
-                {cat}
-              </button>
-            );
-          })}
+          <div role="tablist" aria-label="Categorias oficiais de notícias" className="flex items-center gap-1.5 scrollbar-thin scrollbar-thumb-slate-200">
+            {categories.map((cat) => {
+              const isActive = selectedCategory === cat;
+              return (
+                <button
+                  key={cat}
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-controls="news-articles-grid"
+                  aria-label={`Filtrar notícias por ${cat}`}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`min-h-[34px] px-3 py-1.5 rounded-xl font-bold transition-all cursor-pointer whitespace-nowrap text-xs shrink-0 flex items-center justify-center ${
+                    isActive
+                      ? "bg-slate-900 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-700 hover:text-slate-950 hover:bg-slate-200/80"
+                  }`}
+                >
+                  {cat}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Mensagem quando não houver resultados */}
@@ -160,7 +163,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
             <p className="text-sm font-bold text-slate-700">
               Nenhuma notícia encontrada para os critérios selecionados.
             </p>
-            <p className="text-xs text-slate-500 mt-1">
+            <p className="text-xs text-slate-600 mt-1">
               Tente redefinir o termo de pesquisa ou escolher outra categoria.
             </p>
             <button
@@ -175,7 +178,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
           </div>
         ) : (
           /* Grade Responsiva de Cartões de Notícias */
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div id="news-articles-grid" role="region" aria-label="Notícias oficiais filtradas" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredArticles.map((article, idx) => {
               const isFeatured = idx === 0 && selectedCategory === "Todas" && !searchQuery;
 

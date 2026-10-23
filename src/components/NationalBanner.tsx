@@ -104,9 +104,9 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
               2º
             </div>
             <div>
-              <h4 className="font-heading font-extrabold text-slate-900 text-base sm:text-lg">
+              <h3 className="font-heading font-extrabold text-slate-900 text-base sm:text-lg">
                 Segundo Turno Confirmado: Flávio Bolsonaro vs. Lula
-              </h4>
+              </h3>
               <p className="text-xs sm:text-sm text-slate-700 mt-0.5 leading-relaxed">
                 Nenhum dos candidatos alcançou mais de 50% dos votos válidos no 1º turno. Conforme preconiza o Artigo 77 da Constituição Federal, <strong>Flávio Bolsonaro ({formatPercentBR(flavioTotal?.percentage || 47.03)})</strong> e <strong>Lula ({formatPercentBR(lulaTotal?.percentage || 45.16)})</strong> avançam para a votação definitiva no 2º turno.
               </p>

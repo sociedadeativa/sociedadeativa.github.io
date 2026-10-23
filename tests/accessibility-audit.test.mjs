@@ -293,6 +293,216 @@ assert.ok(
 );
 console.log("  [PASS] NationalBanner renders <h2>, eliminating duplicate <h1> on HomePage and EleicoesPage.");
 
+// --- TEST 5: Tab Controls, Parent Tablists, and ARIA Relationships ---
+console.log("\n[TEST 5] Tab Controls, Parent Tablists, and ARIA Relationships Verification");
+
+// 5.1 EconomySection tab controls
+assert.ok(
+  economySectionCode.includes('role="tablist"') &&
+  economySectionCode.includes('aria-label="Categorias de indicadores econômicos"'),
+  "EconomySection category filters must have a tablist container with accessible label"
+);
+assert.ok(
+  economySectionCode.includes('role="tab"') &&
+  economySectionCode.includes('aria-selected=') &&
+  economySectionCode.includes('aria-controls="indicadores-economicos-grid"'),
+  "EconomySection category buttons must have role=tab, aria-selected, and aria-controls"
+);
+assert.ok(
+  economySectionCode.includes('id="indicadores-economicos-grid"') &&
+  economySectionCode.includes('role="region"'),
+  "EconomySection indicators grid must have matching id and role=region"
+);
+console.log("  [PASS] EconomySection tablist and aria-controls relationships verified.");
+
+// 5.2 BolsaSection tab controls
+const bolsaSectionPath = path.join(rootDir, "src", "components", "BolsaSection.tsx");
+const bolsaSectionCode = fs.readFileSync(bolsaSectionPath, "utf-8");
+assert.ok(
+  bolsaSectionCode.includes('role="tablist"') &&
+  bolsaSectionCode.includes('aria-label="Rankings de ações da B3"'),
+  "BolsaSection rankings must have role=tablist with aria-label"
+);
+assert.ok(
+  bolsaSectionCode.includes('role="tab"') &&
+  bolsaSectionCode.includes('aria-controls="painel-rankings-b3"'),
+  "BolsaSection ranking tabs must have role=tab and aria-controls='painel-rankings-b3'"
+);
+assert.ok(
+  bolsaSectionCode.includes('id="painel-rankings-b3"') &&
+  bolsaSectionCode.includes('role="tabpanel"'),
+  "BolsaSection must have container with id='painel-rankings-b3' and role='tabpanel'"
+);
+console.log("  [PASS] BolsaSection tablist and tabpanel relationships verified.");
+
+// 5.3 CandidateResultsView tab controls
+assert.ok(
+  candResultsCode.includes('role="tablist"') &&
+  candResultsCode.includes('aria-label="Filtrar candidatos por agremiação partidária"'),
+  "CandidateResultsView party filters must have role=tablist with aria-label"
+);
+assert.ok(
+  candResultsCode.includes('role="tab"') &&
+  candResultsCode.includes('aria-controls="candidatos-cards-grid"'),
+  "CandidateResultsView party tabs must have role=tab and aria-controls"
+);
+assert.ok(
+  candResultsCode.includes('id="candidatos-cards-grid"') &&
+  candResultsCode.includes('role="region"'),
+  "CandidateResultsView candidate cards container must have id='candidatos-cards-grid' and role='region'"
+);
+console.log("  [PASS] CandidateResultsView tablist and region relationships verified.");
+
+// 5.4 NewsSection tab controls
+assert.ok(
+  newsSectionCode.includes('role="tablist"') &&
+  newsSectionCode.includes('aria-label="Categorias oficiais de notícias"'),
+  "NewsSection category filters must have role=tablist with aria-label"
+);
+assert.ok(
+  newsSectionCode.includes('role="tab"') &&
+  newsSectionCode.includes('aria-controls="news-articles-grid"'),
+  "NewsSection category tabs must have role=tab and aria-controls"
+);
+assert.ok(
+  newsSectionCode.includes('id="news-articles-grid"') &&
+  newsSectionCode.includes('role="region"'),
+  "NewsSection news grid must have id='news-articles-grid' and role='region'"
+);
+console.log("  [PASS] NewsSection tablist and region relationships verified.");
+
+// --- TEST 6: Accessible Text Contrast Compliance ---
+console.log("\n[TEST 6] Accessible Text Contrast Compliance Verification");
+
+// Check that low-contrast text-slate-400 is not used for primary descriptive labels on light surfaces
+assert.ok(
+  !featEditorialCode.includes('text-slate-400 line-clamp-2') &&
+  !featEditorialCode.includes('text-slate-400 mt-1'),
+  "FeaturedEditorial must not use text-slate-400 for article summaries or descriptions"
+);
+assert.ok(
+  featEditorialCode.includes('text-slate-600') || featEditorialCode.includes('text-slate-700'),
+  "FeaturedEditorial must use accessible contrast slate tones (text-slate-600/700) for body text"
+);
+
+// Check that HomePage subheadings and labels maintain accessible contrast
+const homePageCode = fs.readFileSync(path.join(rootDir, "src", "pages", "HomePage.tsx"), "utf-8");
+assert.ok(
+  homePageCode.includes('text-slate-700 mt-1') || homePageCode.includes('text-slate-600 mt-1'),
+  "HomePage section descriptions must use accessible text contrast (text-slate-600/700)"
+);
+console.log("  [PASS] Text contrast compliance across featured editorial and homepage verified.");
+
+// --- TEST 7: Strict Heading Hierarchy (No Skipped Levels) ---
+console.log("\n[TEST 7] Strict Heading Hierarchy Verification");
+
+// 7.1 FeaturedEditorial: h1 (manchete principal) -> h2 (seções) -> h3 (manchetes secundárias)
+const featH2Matches = featEditorialCode.match(/<h2[\s>]/g) || [];
+const featH3Matches = featEditorialCode.match(/<h3[\s>]/g) || [];
+assert.ok(
+  featH2Matches.length >= 2,
+  `FeaturedEditorial must include <h2> for "Destaques Editoriais" and "Radar Cívico" (found: ${featH2Matches.length})`
+);
+assert.ok(
+  featH3Matches.length >= 1,
+  `FeaturedEditorial must include <h3> for secondary news headlines (found: ${featH3Matches.length})`
+);
+assert.ok(
+  !featEditorialCode.includes("<h4"),
+  "FeaturedEditorial must not skip to <h4>"
+);
+console.log("  [PASS] FeaturedEditorial heading hierarchy is strictly h1 -> h2 -> h3.");
+
+// 7.2 NationalBanner: h2 (dataset.title) -> h3 (Segundo Turno & Disputa Presidencial), NO h1, NO h4
+const natH4Matches = nationalBannerCode.match(/<h4[\s>]/g) || [];
+assert.strictEqual(
+  natH4Matches.length,
+  0,
+  `NationalBanner must not contain <h4> tags (found: ${natH4Matches.length})`
+);
+const natH3Matches = nationalBannerCode.match(/<h3[\s>]/g) || [];
+assert.ok(
+  natH3Matches.length >= 2,
+  `NationalBanner must use <h3> for sub-headings (found: ${natH3Matches.length})`
+);
+console.log("  [PASS] NationalBanner heading hierarchy is strictly h2 -> h3 (no <h1>, no <h4>).");
+
+// 7.3 BolsaSection: h2 (Bolsa de Valores) -> h3 (Subseções & Alertas), NO h4
+const bolsaH4Matches = bolsaSectionCode.match(/<h4[\s>]/g) || [];
+assert.strictEqual(
+  bolsaH4Matches.length,
+  0,
+  `BolsaSection must not contain <h4> tags (found: ${bolsaH4Matches.length})`
+);
+const bolsaH3Matches = bolsaSectionCode.match(/<h3[\s>]/g) || [];
+assert.ok(
+  bolsaH3Matches.length >= 2,
+  `BolsaSection must use <h3> for sub-headings and alerts (found: ${bolsaH3Matches.length})`
+);
+console.log("  [PASS] BolsaSection heading hierarchy is strictly h2 -> h3 (no <h4>).");
+
+// --- TEST 8: Deferred BrazilMap Loading & Interactive Fallback on HomePage ---
+console.log("\n[TEST 8] Deferred BrazilMap Loading & Interactive Fallback on HomePage Verification");
+
+assert.ok(
+  homePageCode.includes("const BrazilMap = lazy("),
+  "HomePage must use lazy() for BrazilMap"
+);
+assert.ok(
+  homePageCode.includes("shouldLoadMap") && homePageCode.includes("setShouldLoadMap"),
+  "HomePage must control BrazilMap mounting via shouldLoadMap state"
+);
+assert.ok(
+  homePageCode.includes("IntersectionObserver"),
+  "HomePage must use IntersectionObserver to defer loading BrazilMap until near viewport"
+);
+assert.ok(
+  homePageCode.includes("Carregar mapa interativo"),
+  "BrazilMapSkeleton must contain an interactive button for direct activation"
+);
+
+// Verify EstadosPage retains full direct lazy access
+const estadosPageCode = fs.readFileSync(path.join(rootDir, "src", "pages", "EstadosPage.tsx"), "utf-8");
+assert.ok(
+  estadosPageCode.includes("const BrazilMap = lazy("),
+  "EstadosPage must also lazy-load BrazilMap with full direct route access"
+);
+console.log("  [PASS] HomePage conditionally defers BrazilMap bundle; direct access and manual activation preserved.");
+
+// --- TEST 9: Canonical Routes & Generated Article Integrity Validation ---
+console.log("\n[TEST 9] Canonical Routes & Generated Article Pages Validation");
+
+const canonicalRoutes = [
+  "",
+  "politica",
+  "eleicoes",
+  "economia",
+  "estados",
+  "dados-publicos",
+  "noticias",
+  "esportes",
+  "tecnologia",
+  "clima",
+  "sobre",
+];
+
+for (const r of canonicalRoutes) {
+  const pageFile = r ? path.join(rootDir, "dist", r, "index.html") : path.join(rootDir, "dist", "index.html");
+  if (fs.existsSync(pageFile)) {
+    const pageHtml = fs.readFileSync(pageFile, "utf-8");
+    assert.ok(pageHtml.includes("<title>"), `${pageFile} must contain <title>`);
+    assert.ok(pageHtml.includes("canonical"), `${pageFile} must contain canonical link`);
+  }
+}
+
+const newsDataRaw = JSON.parse(fs.readFileSync(path.join(rootDir, "public", "data", "newsData.json"), "utf-8"));
+assert.ok(Array.isArray(newsDataRaw) && newsDataRaw.length >= 10, "newsData.json must have at least 10 articles");
+for (const art of newsDataRaw) {
+  assert.ok(art.id && art.title && art.source && art.publishedAt, `Article ${art.id} must have required metadata`);
+}
+console.log(`  [PASS] Canonical routes and ${newsDataRaw.length} dataset articles verified.`);
+
 console.log("\n======================================================================");
-console.log("ALL 4 ACCESSIBILITY AUDIT FIXES VERIFIED SUCCESSFULLY (100% PASS)");
+console.log("ALL ACCESSIBILITY AUDIT & REGRESSION TESTS VERIFIED SUCCESSFULLY (100% PASS)");
 console.log("======================================================================");
+

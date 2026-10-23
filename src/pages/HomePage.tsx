@@ -1,4 +1,4 @@
-import React, { useMemo, useState, Suspense, lazy } from "react";
+import React, { useMemo, useState, useEffect, useRef, Suspense, lazy } from "react";
 import { ElectionDataSet } from "../data/electionData";
 import { NewsItem } from "../types/news";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
@@ -84,21 +84,31 @@ const NewsSectionSkeleton: React.FC = () => (
   </div>
 );
 
-const BrazilMapSkeleton: React.FC = () => (
+const BrazilMapSkeleton: React.FC<{ onActivate?: () => void }> = ({ onActivate }) => (
   <div
-    className="w-full bg-slate-50 border border-slate-200 rounded-3xl p-8 flex flex-col items-center justify-center min-h-[500px] animate-pulse text-center"
+    className="w-full bg-slate-50 border border-slate-200 rounded-3xl p-8 flex flex-col items-center justify-center min-h-[500px] text-center"
     aria-busy="true"
     aria-label="Carregando mapa interativo oficial"
   >
-    <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 mb-3">
+    <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 mb-3 animate-pulse">
       <MapPin className="w-6 h-6" />
     </div>
-    <span className="font-heading font-black text-slate-800 text-base mb-1">
+    <span className="font-heading font-black text-slate-900 text-base mb-1">
       Carregando mapa interativo oficial...
     </span>
-    <span className="text-xs text-slate-500 max-w-sm">
+    <span className="text-xs text-slate-600 max-w-sm mb-4">
       Carregando geometria vetorial das 27 Unidades da Federação e dados eleitorais.
     </span>
+    {onActivate && (
+      <button
+        type="button"
+        onClick={onActivate}
+        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition-colors cursor-pointer shadow-xs focus-visible:outline-2 focus-visible:outline-blue-600"
+      >
+        <MapPin className="w-3.5 h-3.5 text-amber-400" />
+        <span>Carregar mapa interativo</span>
+      </button>
+    )}
   </div>
 );
 
@@ -214,6 +224,38 @@ export const HomePage: React.FC<HomePageProps> = ({
     (c) => c.id === candidateFilter
   );
 
+  // Carregamento sob demanda do BrazilMap: não baixa os ~178 kB do bundle até aproximação da viewport ou clique
+  const [shouldLoadMap, setShouldLoadMap] = useState<boolean>(() => {
+    return Boolean(selectedStateUf || candidateFilter);
+  });
+  const mapSectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (shouldLoadMap) return;
+    if (selectedStateUf || candidateFilter) {
+      setShouldLoadMap(true);
+      return;
+    }
+
+    const target = mapSectionRef.current;
+    if (!target || typeof IntersectionObserver === "undefined") {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setShouldLoadMap(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, [shouldLoadMap, selectedStateUf, candidateFilter]);
+
   const sportsArticles = useMemo(() => {
     if (!Array.isArray(articles)) return [];
     const filtered = articles.filter(
@@ -262,7 +304,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <h2 className="font-heading text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
                 Mapa Interativo de Votação por Estado
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-700 mt-1 max-w-2xl leading-relaxed">
                 Navegue pelas unidades da federação para conferir o resultado oficial do 1º turno, margem de vitória, votos nominais e comparecimento eleitoral.
               </p>
             </div>
@@ -295,16 +337,22 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
           </div>
 
-          {/* Componente do Mapa SVG com Controles (Carregamento Sob Demanda) */}
-          <Suspense fallback={<BrazilMapSkeleton />}>
-            <BrazilMap
-              dataset={dataset}
-              selectedStateUf={selectedStateUf}
-              onSelectState={(uf) => onSelectState(uf)}
-              candidateFilter={candidateFilter}
-              onSelectCandidateFilter={onSelectCandidateFilter}
-            />
-          </Suspense>
+          {/* Componente do Mapa SVG com Carregamento Estritamente Sob Demanda */}
+          <div ref={mapSectionRef}>
+            {shouldLoadMap ? (
+              <Suspense fallback={<BrazilMapSkeleton />}>
+                <BrazilMap
+                  dataset={dataset}
+                  selectedStateUf={selectedStateUf}
+                  onSelectState={(uf) => onSelectState(uf)}
+                  candidateFilter={candidateFilter}
+                  onSelectCandidateFilter={onSelectCandidateFilter}
+                />
+              </Suspense>
+            ) : (
+              <BrazilMapSkeleton onActivate={() => setShouldLoadMap(true)} />
+            )}
+          </div>
         </div>
       </section>
 
