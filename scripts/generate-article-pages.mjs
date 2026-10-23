@@ -768,7 +768,7 @@ export function getInstitutionalFallbackAsset(category, distDir = DIST_DIR) {
   const assetsDir = path.join(distDir, 'assets');
   if (fs.existsSync(assetsDir)) {
     const files = fs.readdirSync(assetsDir);
-    const match = files.find((f) => f.startsWith(prefix) && f.endsWith('.jpg'));
+    const match = files.find((f) => f.startsWith(prefix) && (f.endsWith('.webp') || f.endsWith('.jpg')));
     if (match) {
       return `./assets/${match}`;
     }

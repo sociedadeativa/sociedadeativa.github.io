@@ -160,23 +160,23 @@ assert.ok(
   "index.html preconnect to fonts.gstatic.com must include crossorigin attribute"
 );
 
-// Check that the 4 fallback images are compressed (< 250 kB each)
+// Check that the 4 fallback images are compressed in WebP format (< 200 kB each)
 const imagesDir = path.join(rootDir, "src", "assets", "images");
 const fallbackFiles = [
-  "editorial_congresso_brasilia_1791575832620.jpg",
-  "editorial_urna_eleicoes_1791575843949.jpg",
-  "editorial_economia_brasil_1791575854174.jpg",
-  "editorial_dados_publicos_1791575864014.jpg",
+  "editorial_congresso_brasilia_1791575832620.webp",
+  "editorial_urna_eleicoes_1791575843949.webp",
+  "editorial_economia_brasil_1791575854174.webp",
+  "editorial_dados_publicos_1791575864014.webp",
 ];
 for (const imgName of fallbackFiles) {
   const stat = fs.statSync(path.join(imagesDir, imgName));
   const sizeKb = stat.size / 1024;
   assert.ok(
-    sizeKb < 250,
-    `Fallback image ${imgName} must be under 250 kB (measured ${sizeKb.toFixed(1)} kB)`
+    sizeKb < 200,
+    `Fallback image ${imgName} must be under 200 kB (measured ${sizeKb.toFixed(1)} kB)`
   );
 }
-console.log("  [PASS] index.html active LCP preconnect, non-blocking fonts, and compressed assets verified.");
+console.log("  [PASS] index.html active LCP preconnect, non-blocking fonts, and compressed WebP assets verified.");
 
 // --- TEST 5: Production Bundle Measurements & Chunks ---
 console.log("\n[TEST 5] Production Bundle & Chunks Audit");
