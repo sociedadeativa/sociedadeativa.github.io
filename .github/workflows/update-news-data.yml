@@ -115,7 +115,7 @@ jobs:
           git config user.name "Sociedade Ativa DataBot"
           git config user.email "bot@sociedadeativa.org"
 
-          git add public/data/newsData.json public/sitemap.xml src/data/newsData.ts
+          git add public/data/newsData.json public/sitemap.xml public/sitemap.txt src/data/newsData.ts
 
           if git diff --staged --quiet; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"

@@ -565,7 +565,22 @@ if (fs.existsSync('dist/noticias')) {
       for (let i = 0; i < article.content.length; i++) {
         const paragraph = article.content[i].trim();
         const pSample = paragraph.slice(0, Math.min(50, paragraph.length));
-        if (!bodyHtml.includes(pSample) && !bodyHtml.includes(paragraph)) {
+        const pSampleEscaped = pSample
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;');
+        const paragraphEscaped = paragraph
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;');
+
+        const isPresent =
+          bodyHtml.includes(pSample) ||
+          bodyHtml.includes(paragraph) ||
+          bodyHtml.includes(pSampleEscaped) ||
+          bodyHtml.includes(paragraphEscaped);
+
+        if (!isPresent) {
           console.error(`ERROR: ${articleHtmlPath} omitiu parágrafo de conteúdo ${i + 1}/${article.content.length} no corpo do artigo: "${pSample}..."`);
           process.exit(1);
         }
