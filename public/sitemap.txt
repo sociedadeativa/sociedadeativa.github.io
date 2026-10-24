@@ -9,7 +9,12 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1706420/
+https://sociedadeativa.github.io/noticias/ebc-1706117/
+https://sociedadeativa.github.io/noticias/ebc-1706419/
+https://sociedadeativa.github.io/noticias/ebc-1706416/
 https://sociedadeativa.github.io/noticias/ebc-1706231/
+https://sociedadeativa.github.io/noticias/ebc-1706412/
 https://sociedadeativa.github.io/noticias/ebc-1706411/
 https://sociedadeativa.github.io/noticias/ebc-1705978/
 https://sociedadeativa.github.io/noticias/ebc-1706410/
@@ -51,11 +56,6 @@ https://sociedadeativa.github.io/noticias/camara-1313398-familias-relatam-dificu
 https://sociedadeativa.github.io/noticias/ebc-1706282/
 https://sociedadeativa.github.io/noticias/camara-1313386-alem-do-segundo-turno-algumas-/
 https://sociedadeativa.github.io/noticias/ebc-1706203/
-https://sociedadeativa.github.io/noticias/ebc-1706278/
-https://sociedadeativa.github.io/noticias/ebc-1706275/
-https://sociedadeativa.github.io/noticias/camara-1312271-projeto-cria-politica-de-saude/
-https://sociedadeativa.github.io/noticias/ebc-1705982/
-https://sociedadeativa.github.io/noticias/ebc-1706276/
 https://sociedadeativa.github.io/noticias/ibge-48339/
 https://sociedadeativa.github.io/noticias/ibge-48336/
 https://sociedadeativa.github.io/noticias/ibge-48325/

@@ -5,6 +5,134 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706420",
+    "title": "Protestos na França começam sob forte esquema de segurança",
+    "summary": "Manifestantes se reuniram em Paris e em cidades de toda a França neste sábado (24), sob a vigilância de 70 mil policiais, enquanto o governo tentava evitar a repetição dos distúrbios e saques que sacudiram o país no fim de semana passado.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/protestos-na-franca-comecam-sob-forte-esquema-de-seguranca",
+    "publishedAt": "24/10/2026 às 12:38",
+    "category": "Governo",
+    "ingestedAt": "24/10/2026 às 13:58",
+    "imageUrl": "https://imagens.ebc.com.br/DIf3YrILB1gFJ-6pbmke4vVD0Wg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/09/2026-10-09t150347z_1_lynxmpem981cp_rtroptp_4_france-protest-schools.jpg?itok=VfjPSiH6",
+    "imageCaption": "Protestos na França começam sob forte esquema de segurança",
+    "imageCredit": "Juliette Jabkhiro e Alessandro Parodi - Repórteres da Reuters*",
+    "imageAlt": "Protestos na França começam sob forte esquema de segurança",
+    "author": "Juliette Jabkhiro e Alessandro Parodi - Repórteres da Reuters*",
+    "tags": [
+      "Internacional",
+      "França",
+      "manifestantes",
+      "protestos",
+      "esquema de segurança"
+    ],
+    "content": [
+      "Manifestantes se reuniram em Paris e em cidades de toda a França neste sábado (24), sob a vigilância de 70 mil policiais, enquanto o governo tentava evitar a repetição dos distúrbios e saques que sacudiram o país no fim de semana passado.",
+      "O ministro do Interior, Laurent Nuñez, disse que 135 pessoas haviam sido presas em todo o país até o início da tarde, muitas após revistas preventivas que encontraram fogos de artifício, rolamentos de esferas e outros objetos que poderiam ser usados como armas.",
+      "Enquanto o início da principal marcha em Paris transcorria de forma pacífica, a polícia usou gás lacrimogêneo contra multidões em Lyon, a terceira maior cidade da França.",
+      "O governo mobilizou 10 mil policiais a mais do que em 17 de outubro, dia em que protestos contra o custo de vida e a deterioração dos serviços públicos se transformaram em alguns dos piores distúrbios que a França viu em anos.",
+      "Grande parte do centro de Paris parecia uma cidade em lockdown, com lojistas fechando as vitrines com tapumes, museus com as portas fechadas e mais de 20 estações de metrô interditadas.",
+      "Entidades empresariais pediram que os varejistas permanecessem fechados depois que milhares de lojas e negócios foram danificados ou saqueados em toda a França no último fim de semana.",
+      "Vários dos mais conhecidos centros culturais da capital, incluindo o Louvre, o Musée d’Orsay e a Ópera de Paris, fecharam como precaução, deixando os turistas frustrados.",
+      "“Está tudo fechado com tapumes e não sabemos bem para onde ir”, disse Xavier Dolliole, turista da cidade norte-americana de Nova Orleans.",
+      "A rota da principal manifestação em Paris só foi definida após uma batalha judicial, desencadeada por uma ordem policial de última hora, que afastava os organizadores do centro da cidade em direção às regiões do sudeste da capital. A polícia argumentou que o trajeto original passava por áreas com alta concentração de empresas semelhantes às atacadas no fim de semana anterior. Líderes de esquerda disseram que a mudança tardia tinha como objetivo causar confusão e afastar as pessoas.",
+      "Muitos manifestantes acusaram o governo de reagir de forma exagerada, com soldados enviados para patrulhar a Champs-Élysées. “Choramos pelas lojas, não pelas pessoas que são empobrecidas o ano todo”, disse Clara Lebbadi, estudante de artes de 22 anos.",
+      "“Minha amiga e eu quase não viemos porque estávamos com medo, mas viemos justamente porque é importante não deixar a repressão vencer”, acrescentou.",
+      "A primeira marcha autorizada neste sábado transcorreu pacificamente em Orléans, a cerca de 120 quilômetros ao sul de Paris, onde manifestantes protestaram contra o Reagrupamento Nacional, de Marine Le Pen, que realizava um congresso partidário na cidade.",
+      "As tensões aumentaram após tiros na sexta-feira (23), a oeste de Paris, quando um atirador, suspeito de agir por ódio islamofóbico, matou uma pessoa e feriu mais quatro, entre elas uma menina de 12 anos.",
+      "“Viemos dizer à extrema direita, cara a cara, que não temos medo”, disse Bally Bagayoko, prefeito de Saint-Denis e membro do partido de esquerda radical França Insubmissa (LFI).",
+      "*( Reportagem adicional de Crispian Balmer, Bertrand Boucey, Alessandro Parodi e Elizabeth Pineau )",
+      "*É proibida a reprodução deste conteúdo."
+    ]
+  },
+  {
+    "id": "ebc-1706117",
+    "title": "Eleições 2026: saiba o que caracteriza o crime de boca de urna",
+    "summary": "Neste domingo (25), assim como em todas as eleições, os eleitores não podem pedir votos, distribuir propaganda ou abordar eleitores para influenciar a escolha do candidato.. Essas práticas podem caracterizar o crime de boca de urna.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleicoes-2026-saiba-o-que-caracteriza-o-crime-de-boca-de-urna",
+    "publishedAt": "24/10/2026 às 12:28",
+    "category": "Eleições",
+    "ingestedAt": "24/10/2026 às 13:58",
+    "imageUrl": "https://imagens.ebc.com.br/kyiqCPDQPP7iS3nMrAmUL55MYpo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/1048186-rj_021016tnrg000523.jpg?itok=zuHVXxxX",
+    "imageCaption": "Eleições 2026: saiba o que caracteriza o crime de boca de urna",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Eleições 2026: saiba o que caracteriza o crime de boca de urna",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "Eleições",
+      "eleições 2026",
+      "Eleições 2026"
+    ],
+    "content": [
+      "Neste domingo (25), assim como em todas as eleições, os eleitores não podem pedir votos, distribuir propaganda ou abordar eleitores para influenciar a escolha do candidato.. Essas práticas podem caracterizar o crime de boca de urna.",
+      "A boca de urna ocorre quando há tentativa de convencer o eleitorado a votar em determinado candidato, partido, federação ou coligação no dia da eleição.",
+      "Até o encerramento da votação, a legislação proíbe a aglomeração de pessoas com vestuário padronizado ou portando instrumentos de propaganda, quando isso caracterizar manifestação coletiva.",
+      "A manifestação individual e silenciosa do eleitor sobre a sua preferência política é liberada.",
+      "Ou seja: é permitido votar com itens como bandeiras, broches e adesivos, desde que não haja manifestação coletiva.",
+      "No ambiente digital, a lei considera crime a publicação de novos conteúdos ou o impulsionamento de conteúdos no dia da eleição, por parte dos candidatos. Conteúdos publicados anteriormente, no entanto, podem permanecer disponíveis.",
+      "Quem for pego fazendo boca de urna pode ser punido com detenção de 6 meses a 1 ano, com a possibilidade de substituição pela prestação de serviços à comunidade pelo mesmo período, além de pagamento de multa.",
+      "As irregularidades relacionadas à propaganda eleitoral podem ser comunicadas pelo Pardal, aplicativo da Justiça Eleitoral. A ferramenta permite o envio de denúncias pelo celular, com informação sobre o local, fotos, vídeos e áudios que ajudem na análise da ocorrência.",
+      "O aplicativo está disponível gratuitamente nas lojas Google Play e App Store ."
+    ]
+  },
+  {
+    "id": "ebc-1706419",
+    "title": "Ministério da Justiça faz operação para garantir segurança no 2º turno",
+    "summary": "O Ministério da Justiça e Segurança Pública (MJSP) iniciou, neste sábado (24), operação para garantir a segurança no segundo turno das eleições. As ações, que vão até amanhã (25), são realizadas em conjunto com órgãos federais e estaduais de segurança.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/ministerio-da-justica-faz-operacao-para-garantir-seguranca-no-2o-turno",
+    "publishedAt": "24/10/2026 às 12:18",
+    "category": "Justiça",
+    "ingestedAt": "24/10/2026 às 13:58",
+    "imageUrl": "https://imagens.ebc.com.br/x3C0vPOocQPWdHkERamGPBAqNuA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/01/05/c7494e27-8081-498c-9d4f-ace1e923ee83.jpeg?itok=Cygb6HxS",
+    "imageCaption": "Ministério da Justiça faz operação para garantir segurança no 2º turno",
+    "imageCredit": "Luciano Nascimento - Repórter da Agência Brasil",
+    "imageAlt": "Ministério da Justiça faz operação para garantir segurança no 2º turno",
+    "author": "Luciano Nascimento - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "eleições 2026",
+      "Ministério da Justiça",
+      "operação",
+      "Segundo Turno"
+    ],
+    "content": [
+      "O Ministério da Justiça e Segurança Pública (MJSP) iniciou, neste sábado (24), operação para garantir a segurança no segundo turno das eleições. As ações, que vão até amanhã (25), são realizadas em conjunto com órgãos federais e estaduais de segurança.",
+      "Também participam da iniciativa o Tribunal Superior Eleitoral (TSE), a Polícia Federal (PF), a Polícia Rodoviária Federal (PRF), a Agência Brasileira de Inteligência (Abin) e o Ministério da Defesa.",
+      "Entre as situações monitoradas estão crimes eleitorais, aglomerações, desinformação, crimes cibernéticos, violência política, dificuldades logísticas e ocorrências nos locais de votação e apuração.",
+      "Segundo a pasta, o efetivo das forças de segurança para o segundo turno será divulgado durante o fim de semana, após a consolidação dos dados encaminhados pelas unidades da federação. No primeiro turno, foram mobilizados 321.352 profissionais, distribuídos entre as forças estaduais (305.355), a PRF (2.726), a PF (6.565) e a Força Nacional (142). Ao todo, foram utilizadas 34.625 viaturas, 239 embarcações e 121 aeronaves.",
+      "As medidas visam facilitar o deslocamento dos eleitores, com apoio logístico à Justiça Eleitoral, quando solicitado. Essas ações envolvem o transporte de materiais e urnas, bem como a segurança de instalações. Também está prevista a articulação para situações de contingência relacionadas a condições climáticas.",
+      "As diretrizes determinam ainda que o policiamento não crie obstáculos ao deslocamento dos eleitores . As abordagens destinadas à verificação de infrações administrativas de trânsito ficam restritas a situações de risco concreto e iminente à vida ou à integridade física."
+    ]
+  },
+  {
+    "id": "ebc-1706416",
+    "title": "Ronaldinho Gaúcho anuncia volta aos gramados pelo italiano Ravenna",
+    "summary": "O jogador Ronaldinho Gaúcho voltará ao futebol profissional no próximo mês, quando jogará pelo Ravenna, time da terceira divisão italiana, contra o rival local Forlì. O anúncio foi feito pelo clube nesta sexta-feira (23) e a partida está marcada para o dia 15 de novembro.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/ronaldinho-gaucho-anuncia-volta-aos-gramados-pelo-italiano-ravenna",
+    "publishedAt": "24/10/2026 às 11:53",
+    "category": "Esportes",
+    "ingestedAt": "24/10/2026 às 13:58",
+    "imageUrl": "https://imagens.ebc.com.br/01fNtZRq4zo1CLqWVbRJCRwhdUk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/24/rg01.jpg?itok=LsTYt75m",
+    "imageCaption": "Ronaldinho Gaúcho anuncia volta aos gramados pelo italiano Ravenna",
+    "imageCredit": "Agência Brasil*",
+    "imageAlt": "Ronaldinho Gaúcho anuncia volta aos gramados pelo italiano Ravenna",
+    "author": "Agência Brasil*",
+    "tags": [
+      "Esportes",
+      "Ronaldinho Gaúcho",
+      "Futebol",
+      "Itália"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706231",
     "title": "Ex-jogadoras da seleção de futebol incentivam alunas em escolas do Rio",
     "summary": "Na escola municipal Juan Antonio Samaranch, em Santa Teresa, região central do Rio de Janeiro, o campo de futebol estava ocupado apenas por garotas, na tarde da última quarta-feira (21).",
@@ -25,30 +153,31 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Futebol",
       "pioneiras na escola"
     ],
-    "content": [
-      "Na escola municipal Juan Antonio Samaranch, em Santa Teresa, região central do Rio de Janeiro, o campo de futebol estava ocupado apenas por garotas, na tarde da última quarta-feira (21). Eram quatro times disputando um minitorneio, sob olhares de ex-jogadoras da seleção brasileira. Meninos, só na arquibancada.",
-      "A atividade fez parte da abertura do programa Pioneiras nas Escolas, que leva craques de décadas passadas para escolas da rede pública de ensino da cidade.",
-      "Antes da disputa no campo, mais de 100 alunas lotaram um auditório para ouvir, fazer perguntas e tirar fotos com as ex-jogadoras Marisa Pires, Maria Lúcia Lima e Marilza Martins. Ou como elas ficaram conhecidas: Caju, Fia e Pelezinha.",
-      "Além de ouvir histórias de motivação e curiosidades, as alunas ficaram sabendo de dificuldades, como o machismo e preconceito enfrentados pelas ex-jogadoras, que alcançaram o feito de vestir a camisa amarelinha da seleção poucos anos depois de o esporte deixar de ser proibido para mulheres.",
-      "De 1941 a 1979, o futebol era vetado às garotas, com base no Decreto-Lei 3.199, que restringia a participação de mulheres em esportes considerados incompatíveis com sua natureza.",
-      "Proibição que surpreende a estudante Nicoly Melo, de 12 anos. “Por que não podiam?”, perguntou ela, sem parecer acreditar.",
-      "Liberado em 1979, o esporte foi regulamentado apenas em 1983. A primeira seleção brasileira só viria a disputar uma competição experimental em 1988, na China.",
-      "A primeira Copa do Mundo feminina aconteceu três anos depois, também na China. Nas Olimpíadas, o esporte disputado pelas mulheres estreou em 1996, em Atlanta, nos Estados Unidos.",
-      "Ex-jogadoras da seleção brasileira feminina participam de atividades com alunas da rede pública de ensino na Escola Municipal Juan Antônio Samaranch, com o projeto Pioneiras nas Escolas. - Fernando Frazão/Agência Brasil",
-      "Fia, hoje com 62 anos, contou que havia muito machismo na época e que enfrentava o preconceito confiando na própria habilidade.",
-      "Fia ficou cinco anos na seleção, foi tricampeã continental e disputou a primeira Copa e a primeira olimpíada.",
-      "Ex-jogadoras da seleção brasileira feminina de futebol Marisa, Fia e Pelé participam de atividades com alunas da rede pública de ensino - Fernando Frazão/Agência Brasil",
-      "A ex-zagueira Caju, de 60 anos, ficou na seleção de 1988 a 1999, com um retrospecto de 43 jogos e 34 vitórias. Respondendo a uma das alunas sobre os “maiores absurdos que ouviu”, ela relembrou que recebeu provocações machistas enquanto estava em campo. “Vários torcedores diziam que mulher não servia para jogar futebol”, reproduziu.",
-      "O Pioneiras nas Escolas é coordenado pela também ex-jogadora da seleção Duda Luizelli, que vestiu ainda a camisa do Internacional, de Porto Alegre, e de Milan e Verona, times da Itália.",
-      "Para ela, o projeto mostra que mulheres devem acreditar em suas capacidades, sempre com foco nos estudos.",
-      "Ex-jogadoras da seleção brasileira feminina de futebol Marisa, Fia e Pelé participam de atividades com alunas da rede pública de ensino na Escola Municipal Juan Antônio Samaranch - Fernando Frazão/Agência Brasil",
-      "A Secretaria Municipal de Educação (SME) do Rio de Janeiro é parceira do projeto. Desde 2012, a escola Juan Antonio Samaranch é classificada pela prefeitura como Ginásio Experimental Olímpico (GEO), no qual o ensino integral é permeado por incentivo a práticas esportivas.",
-      "A escola tem cerca de 600 estudantes de 11 a 15 anos. Além de professores, a unidade conta com treinadores de 19 modalidades esportivas. Segundo a prefeitura, o projeto iniciado durante a preparação da Rio 2016 é um legado olímpico. Atualmente o Rio tem 12 GEOs.",
-      "A coordenadora de Projetos Integradores da SME, Caroline Guedes, destaca que o Pioneiras nas Escolas tem relação com a preparação do Rio de Janeiro para ser uma das oito cidades-sedes da Copa do Mundo feminina, que ocorrerá entre junho e julho de 2027.",
-      "Aluna do 9º ano, Letícia Pereira, de 15 anos, diz que é “um privilégio” receber as ex-jogadoras na própria escola.",
-      "Ela considera que a experiência, em uma escola já marcada pelo incentivo ao esporte, é “meio caminho andado para as alunas por mostrar que o esporte também dá futuro, sim”.",
-      "A estudante afirmou que será presença garantida em jogos da Copa no ano que vem: “Meu pai me leva lá, eu fico lá torcendo”, disse à Agência Brasil ."
-    ]
+    "content": []
+  },
+  {
+    "id": "ebc-1706412",
+    "title": "Inmet: Domingo de eleição será chuvoso em boa parte do país; confira",
+    "summary": "O fim de semana de eleições terá predomínio de tempo seco e de temperaturas elevadas no Norte e o Nordeste do Brasil, com possibilidade de chuvas isoladas. Já no centro-sul, a previsão é de chuvas concentradas, especialmente na região Sul, além de instabilidade no Centro-Oeste.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/inmet-domingo-de-eleicao-sera-chuvoso-em-boa-parte-do-pais-confira",
+    "publishedAt": "24/10/2026 às 11:09",
+    "category": "Eleições",
+    "ingestedAt": "24/10/2026 às 13:58",
+    "imageUrl": "https://imagens.ebc.com.br/ckexu9DshzbbG6_b4ti9lAlvtDs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/10/_int9067.jpg?itok=4zQBnN2v",
+    "imageCaption": "Inmet: Domingo de eleição será chuvoso em boa parte do país; confira",
+    "imageCredit": "Luciano Nascimento - Repórter da Agência Brasil",
+    "imageAlt": "Inmet: Domingo de eleição será chuvoso em boa parte do país; confira",
+    "author": "Luciano Nascimento - Repórter da Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "eleições 2026",
+      "metereologia",
+      "Previsão do Tempo",
+      "Inmet"
+    ],
+    "content": []
   },
   {
     "id": "ebc-1706411",
@@ -71,12 +200,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Agenda dos Candidatos",
       "Eleições"
     ],
-    "content": [
-      "Neste sábado (24), último dia da campanha eleitoral, os candidatos à presidência da República Flávio Bolsonaro e Luiz Inácio Lula da Silva participam de atos em Minas Gerais, Rio de Janeiro e São Paulo. Confira as agendas:",
-      "Pela manhã, participa de ato em Belo Horizonte, no bairro Savassi. Na parte da tarde, estará no Rio de Janeiro, em evento na Barra da Tijuca.",
-      "Luiz Inácio Lula da Silva (PT)",
-      "Pela manhã, Lula participa de ato no Rio de Janeiro, em Copacabana. Encerra a campanha com caminha na parte da tarde na Avenida Paulista, em São Paulo."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1705978",
@@ -98,16 +222,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições 2026",
       "Eleições"
     ],
-    "content": [
-      "Em todo o Brasil, 158 milhões de pessoas vão retornar às urnas neste domingo (25) para escolher quem será o chefe do Poder Executivo de 2027 a 2030. Além do cargo de presidente da República, em cinco estados e o Distrito Federal terão disputa para governador. Para ter direito a votar, o eleitor deve comparecer a uma das 499 mil seções eleitorais e apresentar um documento oficial com foto.",
-      "São aceitos como documento de identificação, inclusive em formato digital:",
-      "Os documentos oficiais com foto podem ser utilizados mesmo que estejam vencidos, desde que permitam a identificação do eleitor.",
-      "As certidões de nascimento ou de casamento não valem como prova de identidade na hora de votar.",
-      "Sim. Documentos oficiais com foto, físicos ou digitais, serão aceito para identificação.",
-      "No entanto, para votar apresentando somente o e-Título, disponível nas plataformas iOS ou Android , é preciso que o aplicativo contenha a foto do eleitor.",
-      "Local de votação ainda pode mudar; consulte de novo antes de ir à urna",
-      "Eleitor sem biometria pode votar no segundo turno das eleições"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706410",
@@ -1020,121 +1135,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "colinha",
       "Urna Eletrônica",
       "Ordem de Votação"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706278",
-    "title": "Diretora é presa por desvio de alimentos em unidade prisional feminina",
-    "summary": "O Ministério Público do Rio de Janeiro (MPRJ) obteve, nesta quinta-feira (22), a conversão da prisão em flagrante em preventiva de Graça Maria Silva de Souza, diretora do Instituto Penal Oscar Stevenson – unidade prisional feminina em Benfica, zona norte do Rio.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/diretora-e-presa-por-desvio-de-alimentos-em-unidade-prisional-feminina",
-    "publishedAt": "23/10/2026 às 08:02",
-    "category": "Justiça",
-    "ingestedAt": "23/10/2026 às 09:00",
-    "imageUrl": "https://imagens.ebc.com.br/GxhT50Hz56Q8FnnN7pg_pCnkHGQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/23/whatsapp-image-2026-10-22-at-09-33-33-3x2-1.jpg?itok=s91b6qGr",
-    "imageCaption": "Diretora é presa por desvio de alimentos em unidade prisional feminina",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Diretora é presa por desvio de alimentos em unidade prisional feminina",
-    "author": "Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Peculato",
-      "desvio de alimentos"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706275",
-    "title": "Entidades estimulam domésticas a denunciar assédio eleitoral",
-    "summary": "A empregada doméstica Leandra Lacerda, 52 anos, recorda que precisou conviver com pressões de patrões durante períodos eleitorais. As mensagens chegaram em diferentes fases de sua trajetória profissional de formas, inclusive, escancaradas.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/entidades-estimulam-domesticas-denunciar-assedio-eleitoral",
-    "publishedAt": "23/10/2026 às 07:51",
-    "category": "Eleições",
-    "ingestedAt": "23/10/2026 às 09:00",
-    "imageUrl": "https://imagens.ebc.com.br/5a3TePhNJGjhgK1Q0QR2wSNidn4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/23/whatsapp_image_2026-10-22_at_09.05.18.jpeg?itok=Akxo1CoK",
-    "imageCaption": "Entidades estimulam domésticas a denunciar assédio eleitoral",
-    "imageCredit": "Luiz Claudio Ferreira - Repórter da Agência Brasil",
-    "imageAlt": "Entidades estimulam domésticas a denunciar assédio eleitoral",
-    "author": "Luiz Claudio Ferreira - Repórter da Agência Brasil",
-    "tags": [
-      "Direitos Humanos",
-      "eleições 2026",
-      "empregadas eleitorais",
-      "Assédio",
-      "Emprego"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1312271-projeto-cria-politica-de-saude",
-    "title": "Projeto cria política de saúde mental na educação básica",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1312271-projeto-cria-politica-de-saude-mental-na-educacao-basica",
-    "publishedAt": "23/10/2026 às 07:48",
-    "category": "Congresso",
-    "ingestedAt": "23/10/2026 às 09:00",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261013170200916-768x473.jpg",
-    "imageCaption": "Renata Abreu: redes de ensino estão desamparadas na identificação precoce de sofrimento emocional",
-    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
-    "imageAlt": "Reunião de Líderes. Dep. Renata Abreu (PODE-SP)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1705982",
-    "title": "Eleitor que pediu voto em trânsito pode consultar local no e-Título",
-    "summary": "O eleitor que solicitou o voto em trânsito para o segundo turno das eleições 2026 deverá votar necessariamente no local para o qual pediu transferência. Não será possível votar na seção original.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitor-que-pediu-voto-em-transito-pode-consultar-local-no-e-titulo",
-    "publishedAt": "23/10/2026 às 07:45",
-    "category": "Eleições",
-    "ingestedAt": "23/10/2026 às 09:00",
-    "imageUrl": "https://imagens.ebc.com.br/U_PXy6jnuNqefHh0JD_zxjCkvbw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/09/03/0d7a0238.jpg?itok=PRL1g000",
-    "imageCaption": "Eleitor que pediu voto em trânsito pode consultar local no e-Título",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Eleitor que pediu voto em trânsito pode consultar local no e-Título",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "Eleições",
-      "eleições 2026",
-      "Voto em Trânsito"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706276",
-    "title": "Eleitores de Itaguaí, no Rio, votam domingo também para prefeito",
-    "summary": "Os mais de 100 mil eleitores de Itaguaí, na região metropolitana do Rio de Janeiro, voltarão às urnas neste domingo (25) para escolher o próximo presidente da República e também o novo prefeito do município.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/eleitores-de-itaguai-no-rio-votam-domingo-tambem-para-prefeito",
-    "publishedAt": "23/10/2026 às 07:45",
-    "category": "Justiça",
-    "ingestedAt": "23/10/2026 às 09:00",
-    "imageUrl": "https://imagens.ebc.com.br/dT533nV8EHShBl3p1JU2w-yACEw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/24/_pin5457.jpg-2.jpg?itok=yCAn7QkH",
-    "imageCaption": "Eleitores de Itaguaí, no Rio, votam domingo também para prefeito",
-    "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
-    "imageAlt": "Eleitores de Itaguaí, no Rio, votam domingo também para prefeito",
-    "author": "Douglas Corrêa - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Votação",
-      "prefeito",
-      "Itaguaí"
     ],
     "content": []
   },
