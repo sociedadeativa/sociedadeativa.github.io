@@ -9,8 +9,12 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1706231/
+https://sociedadeativa.github.io/noticias/ebc-1706411/
+https://sociedadeativa.github.io/noticias/ebc-1705978/
 https://sociedadeativa.github.io/noticias/ebc-1706410/
 https://sociedadeativa.github.io/noticias/ebc-1706394/
+https://sociedadeativa.github.io/noticias/ebc-1706359/
 https://sociedadeativa.github.io/noticias/ebc-1706342/
 https://sociedadeativa.github.io/noticias/ebc-1706235/
 https://sociedadeativa.github.io/noticias/ebc-1705951/
@@ -52,10 +56,6 @@ https://sociedadeativa.github.io/noticias/ebc-1706275/
 https://sociedadeativa.github.io/noticias/camara-1312271-projeto-cria-politica-de-saude/
 https://sociedadeativa.github.io/noticias/ebc-1705982/
 https://sociedadeativa.github.io/noticias/ebc-1706276/
-https://sociedadeativa.github.io/noticias/ebc-1706257/
-https://sociedadeativa.github.io/noticias/ebc-1706274/
-https://sociedadeativa.github.io/noticias/ebc-1706273/
-https://sociedadeativa.github.io/noticias/ebc-1706271/
 https://sociedadeativa.github.io/noticias/ibge-48339/
 https://sociedadeativa.github.io/noticias/ibge-48336/
 https://sociedadeativa.github.io/noticias/ibge-48325/

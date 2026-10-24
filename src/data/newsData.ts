@@ -5,6 +5,111 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706231",
+    "title": "Ex-jogadoras da seleção de futebol incentivam alunas em escolas do Rio",
+    "summary": "Na escola municipal Juan Antonio Samaranch, em Santa Teresa, região central do Rio de Janeiro, o campo de futebol estava ocupado apenas por garotas, na tarde da última quarta-feira (21).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/ex-jogadoras-da-selecao-de-futebol-incentivam-alunas-em-escolas-do-rio",
+    "publishedAt": "24/10/2026 às 11:13",
+    "category": "Esportes",
+    "ingestedAt": "24/10/2026 às 11:20",
+    "imageUrl": "https://imagens.ebc.com.br/luE50Zw3TS3Hn1tKWL7YMd8I0kk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/22/_d6a6416.jpg?itok=6Aqqw6YQ",
+    "imageCaption": "Ex-jogadoras da seleção de futebol incentivam alunas em escolas do Rio",
+    "imageCredit": "Bruno de Freitas Moura - Repórter da Agência Brasil",
+    "imageAlt": "Ex-jogadoras da seleção de futebol incentivam alunas em escolas do Rio",
+    "author": "Bruno de Freitas Moura - Repórter da Agência Brasil",
+    "tags": [
+      "Esportes",
+      "copa do mundo feminina",
+      "Futebol",
+      "pioneiras na escola"
+    ],
+    "content": [
+      "Na escola municipal Juan Antonio Samaranch, em Santa Teresa, região central do Rio de Janeiro, o campo de futebol estava ocupado apenas por garotas, na tarde da última quarta-feira (21). Eram quatro times disputando um minitorneio, sob olhares de ex-jogadoras da seleção brasileira. Meninos, só na arquibancada.",
+      "A atividade fez parte da abertura do programa Pioneiras nas Escolas, que leva craques de décadas passadas para escolas da rede pública de ensino da cidade.",
+      "Antes da disputa no campo, mais de 100 alunas lotaram um auditório para ouvir, fazer perguntas e tirar fotos com as ex-jogadoras Marisa Pires, Maria Lúcia Lima e Marilza Martins. Ou como elas ficaram conhecidas: Caju, Fia e Pelezinha.",
+      "Além de ouvir histórias de motivação e curiosidades, as alunas ficaram sabendo de dificuldades, como o machismo e preconceito enfrentados pelas ex-jogadoras, que alcançaram o feito de vestir a camisa amarelinha da seleção poucos anos depois de o esporte deixar de ser proibido para mulheres.",
+      "De 1941 a 1979, o futebol era vetado às garotas, com base no Decreto-Lei 3.199, que restringia a participação de mulheres em esportes considerados incompatíveis com sua natureza.",
+      "Proibição que surpreende a estudante Nicoly Melo, de 12 anos. “Por que não podiam?”, perguntou ela, sem parecer acreditar.",
+      "Liberado em 1979, o esporte foi regulamentado apenas em 1983. A primeira seleção brasileira só viria a disputar uma competição experimental em 1988, na China.",
+      "A primeira Copa do Mundo feminina aconteceu três anos depois, também na China. Nas Olimpíadas, o esporte disputado pelas mulheres estreou em 1996, em Atlanta, nos Estados Unidos.",
+      "Ex-jogadoras da seleção brasileira feminina participam de atividades com alunas da rede pública de ensino na Escola Municipal Juan Antônio Samaranch, com o projeto Pioneiras nas Escolas. - Fernando Frazão/Agência Brasil",
+      "Fia, hoje com 62 anos, contou que havia muito machismo na época e que enfrentava o preconceito confiando na própria habilidade.",
+      "Fia ficou cinco anos na seleção, foi tricampeã continental e disputou a primeira Copa e a primeira olimpíada.",
+      "Ex-jogadoras da seleção brasileira feminina de futebol Marisa, Fia e Pelé participam de atividades com alunas da rede pública de ensino - Fernando Frazão/Agência Brasil",
+      "A ex-zagueira Caju, de 60 anos, ficou na seleção de 1988 a 1999, com um retrospecto de 43 jogos e 34 vitórias. Respondendo a uma das alunas sobre os “maiores absurdos que ouviu”, ela relembrou que recebeu provocações machistas enquanto estava em campo. “Vários torcedores diziam que mulher não servia para jogar futebol”, reproduziu.",
+      "O Pioneiras nas Escolas é coordenado pela também ex-jogadora da seleção Duda Luizelli, que vestiu ainda a camisa do Internacional, de Porto Alegre, e de Milan e Verona, times da Itália.",
+      "Para ela, o projeto mostra que mulheres devem acreditar em suas capacidades, sempre com foco nos estudos.",
+      "Ex-jogadoras da seleção brasileira feminina de futebol Marisa, Fia e Pelé participam de atividades com alunas da rede pública de ensino na Escola Municipal Juan Antônio Samaranch - Fernando Frazão/Agência Brasil",
+      "A Secretaria Municipal de Educação (SME) do Rio de Janeiro é parceira do projeto. Desde 2012, a escola Juan Antonio Samaranch é classificada pela prefeitura como Ginásio Experimental Olímpico (GEO), no qual o ensino integral é permeado por incentivo a práticas esportivas.",
+      "A escola tem cerca de 600 estudantes de 11 a 15 anos. Além de professores, a unidade conta com treinadores de 19 modalidades esportivas. Segundo a prefeitura, o projeto iniciado durante a preparação da Rio 2016 é um legado olímpico. Atualmente o Rio tem 12 GEOs.",
+      "A coordenadora de Projetos Integradores da SME, Caroline Guedes, destaca que o Pioneiras nas Escolas tem relação com a preparação do Rio de Janeiro para ser uma das oito cidades-sedes da Copa do Mundo feminina, que ocorrerá entre junho e julho de 2027.",
+      "Aluna do 9º ano, Letícia Pereira, de 15 anos, diz que é “um privilégio” receber as ex-jogadoras na própria escola.",
+      "Ela considera que a experiência, em uma escola já marcada pelo incentivo ao esporte, é “meio caminho andado para as alunas por mostrar que o esporte também dá futuro, sim”.",
+      "A estudante afirmou que será presença garantida em jogos da Copa no ano que vem: “Meu pai me leva lá, eu fico lá torcendo”, disse à Agência Brasil ."
+    ]
+  },
+  {
+    "id": "ebc-1706411",
+    "title": "Confira a agenda dos presidenciáveis neste sábado (24)",
+    "summary": "Neste sábado (24), último dia da campanha eleitoral, os candidatos à presidência da República Flávio Bolsonaro e Luiz Inácio Lula da Silva participam de atos em Minas Gerais, Rio de Janeiro e São Paulo.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/confira-agenda-dos-presidenciaveis-neste-sabado-25",
+    "publishedAt": "24/10/2026 às 10:42",
+    "category": "Eleições",
+    "ingestedAt": "24/10/2026 às 11:20",
+    "imageUrl": "https://imagens.ebc.com.br/9cXTMjAvSTef5BcG4zKCtlXz6bA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/31/eleicoes-2026-banner.png?itok=vq2HpMUj",
+    "imageCaption": "Confira a agenda dos presidenciáveis neste sábado (24)",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Confira a agenda dos presidenciáveis neste sábado (24)",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Agenda dos Candidatos",
+      "Eleições"
+    ],
+    "content": [
+      "Neste sábado (24), último dia da campanha eleitoral, os candidatos à presidência da República Flávio Bolsonaro e Luiz Inácio Lula da Silva participam de atos em Minas Gerais, Rio de Janeiro e São Paulo. Confira as agendas:",
+      "Pela manhã, participa de ato em Belo Horizonte, no bairro Savassi. Na parte da tarde, estará no Rio de Janeiro, em evento na Barra da Tijuca.",
+      "Luiz Inácio Lula da Silva (PT)",
+      "Pela manhã, Lula participa de ato no Rio de Janeiro, em Copacabana. Encerra a campanha com caminha na parte da tarde na Avenida Paulista, em São Paulo."
+    ]
+  },
+  {
+    "id": "ebc-1705978",
+    "title": "Saiba quais documentos são aceitos para votar neste domingo",
+    "summary": "Em todo o Brasil, 158 milhões de pessoas vão retornar às urnas neste domingo (25) para escolher quem será o chefe do Poder Executivo de 2027 a 2030. Além do cargo de presidente da República, em cinco estados e o Distrito Federal terão disputa para governador.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/saiba-quais-documentos-sao-aceitos-para-votar-neste-domingo",
+    "publishedAt": "24/10/2026 às 10:21",
+    "category": "Eleições",
+    "ingestedAt": "24/10/2026 às 11:20",
+    "imageUrl": "https://imagens.ebc.com.br/e2BOhzlITVeqysSbNMgpEP33KQI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/30/img_1508-1.jpg?itok=wKefpI87",
+    "imageCaption": "Saiba quais documentos são aceitos para votar neste domingo",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Saiba quais documentos são aceitos para votar neste domingo",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Eleições"
+    ],
+    "content": [
+      "Em todo o Brasil, 158 milhões de pessoas vão retornar às urnas neste domingo (25) para escolher quem será o chefe do Poder Executivo de 2027 a 2030. Além do cargo de presidente da República, em cinco estados e o Distrito Federal terão disputa para governador. Para ter direito a votar, o eleitor deve comparecer a uma das 499 mil seções eleitorais e apresentar um documento oficial com foto.",
+      "São aceitos como documento de identificação, inclusive em formato digital:",
+      "Os documentos oficiais com foto podem ser utilizados mesmo que estejam vencidos, desde que permitam a identificação do eleitor.",
+      "As certidões de nascimento ou de casamento não valem como prova de identidade na hora de votar.",
+      "Sim. Documentos oficiais com foto, físicos ou digitais, serão aceito para identificação.",
+      "No entanto, para votar apresentando somente o e-Título, disponível nas plataformas iOS ou Android , é preciso que o aplicativo contenha a foto do eleitor.",
+      "Local de votação ainda pode mudar; consulte de novo antes de ir à urna",
+      "Eleitor sem biometria pode votar no segundo turno das eleições"
+    ]
+  },
+  {
     "id": "ebc-1706410",
     "title": "Último dia para qualquer tipo de propaganda eleitoral é neste sábado",
     "summary": "Na reta final do segundo turno das Eleições de 2026, os candidatos só poderão fazer campanha eleitoral até as 22h deste sábado (24).",
@@ -25,17 +130,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Campanha Eleitoral",
       "Eleições"
     ],
-    "content": [
-      "Na reta final do segundo turno das Eleições de 2026, os candidatos só poderão fazer campanha eleitoral até as 22h deste sábado (24). A partir deste horário ficam proibidos o uso de alto-falantes ou amplificadores de som; a distribuição de material gráfico; e a promoção de caminhada, carreata, passeata ou carro de som que transite divulgando jingles ou mensagens de candidatos.",
-      "Além disso, até 24 horas depois do fim do pleito estão vedadas a publicação e a republicação de novos conteúdos produzidos ou alterados por inteligência artificial ou tecnologia equivalente, que use imagem, voz ou manifestação de candidatos ou pessoas públicas.",
-      "Pelo calendário eleitoral, neste sábado o Tribunal Superior Eleitoral (TSE) ainda poderá divulgar comunicados, boletins e instruções ao eleitorado, em até dez minutos diários requisitados às emissoras de rádio e de televisão. Parte desse tempo pode ser cedido aos tribunais regionais eleitorais.",
-      "Ontem (23), foi o último dia da propaganda eleitoral gratuita no rádio e na televisão para o segundo turno. Na sexta-feira, também foi o último dia para a publicação de anúncios eleitorais pagos na imprensa escrita e a realização de debates entre candidatos no rádio e na TV.",
-      "Desde quinta-feira (22), encerrou-se o prazo para a realização de comícios e atividades de campanha. Também foi o último dia para a circulação paga ou impulsionada de propaganda eleitoral na internet.",
-      "Amanhã (25), os brasileiros deverão ir às urnas das 8h às 17h, para eleger o próximo presidente da República.",
-      "Eleitores do Acre, Amazonas, Distrito Federal, Espírito Santo, Rio Grande do Norte e Tocantins definem ainda o próximo governador ou governadora. Nesses locais, a ordem de votação na urna é: governador e depois presidente .",
-      "Além disso, seis cidades brasileiras terão eleições suplementares para prefeito. Nesses municípios, os eleitores votam primeiro em presidente, depois em prefeito.",
-      "O TSE recomenda consultar previamente o local de votação no site do tribunal ou no aplicativo e-Título, e que os eleitores levem uma colinha com o número dos candidatos, anotados em papel. É proibido entrar com celular na cabine de votação ."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706394",
@@ -59,20 +154,31 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Flávio Bolsonaro",
       "Ana Clara"
     ],
-    "content": [
-      "Os candidatos à Presidência da República Luiz Inácio Lula da Silva (PT) e Flávio Bolsonaro (PL) discutiram segurança pública no debate da TV Globo, na noite desta sexta-feira (23).",
-      "Questionado por Lula sobre os motivos de ter defendido o policial acusado pelo Ministério Público de matar a menina Ana Clara, de 5 anos, em 2021, Flávio afirmou que acredita na inocência do cabo da Polícia Militar (PM) do Rio de Janeiro.",
-      "“Eu quero saber quem foi o autor desse disparo, porque eu tenho a confiança que não foi esse policial. Ele sequer foi julgado ainda”, disse Flávio.",
-      "A mãe de Ana Clara, Cristiane Gomes da Silva, estava na plateia durante o debate. Flávio se dirigiu a ela pelo nome da filha e lamentou a morte da criança. “Era uma troca de tiros, uma comunidade deflagrada. A senhora sabe que tem o tráfico de drogas aí”.",
-      "Cristiane protestou contra a resposta do candidato do PL e lembrou que a perícia da Polícia Civil no local atestou que não houve troca de tiros.",
-      "\"Ele não respondeu porque defendeu o assassino da minha filha. Ele inventou um confronto ali como o policial inventou no dia\", disse a mãe de Ana Clara.",
-      "Após falar sobre o caso da menina assassinada, o candidato do PL reafirmou que, caso eleito, classificará organizações criminosas como narcoterroristas. Flávio também defendeu a redução da maioridade penal de 18 para 16 anos, e 14 anos para crimes hediondos, como estupro.",
-      "Lula rebateu e relembrou relações do adversário com milicianos do Rio de Janeiro. Em seguida, reiterou sua proposta de criar um ministério da Segurança Pública e fortalecer as polícias.",
-      "“Vou criar o ministério, fortalecer a Polícia Federal, fortalecer a Polícia Rodoviária Federal e acabar com essa bandidagem de miliciano e narcotráfico aqui no Rio de Janeiro e no Brasil inteiro”.",
-      "A educação também foi abordada pelos candidatos. Flávio Bolsonaro propôs investimento no ensino integral. “Eu vou investir muito no ensino integral. Porque criança mais perto da escola é criança mais longe do crime. Como é que eu vou fazer no tempo integral? Eu vou investir no ensino técnico no contraturno, por exemplo, para que as crianças possam aprender as profissões do futuro, elas possam se sentir estimuladas a irem para a sala de aula”.",
-      "Lula, por sua vez, lembrou da criação do Pé-de-Meia, programa que dá incentivo financeiro, na modalidade poupança, para os estudantes do ensino médio público. E afirma que criará a versão universitária do programa.",
-      "“Eu tenho muito orgulho de participar do momento histórico desse país, em que a gente fez mais universidade, a gente fez mais instituto federal, a gente fez mais escola de tempo integral, a gente cuidou da educação como jamais tinha sido cuidado”"
-    ]
+    "content": []
+  },
+  {
+    "id": "ebc-1706359",
+    "title": "BB capacitará funcionários para acolher mulheres em risco",
+    "summary": "Mulheres que procurarem ajuda em agências do Banco do Brasil (BB) ao enfrentar situações de violência poderão ser acolhidas por funcionários capacitados e receber orientações.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/bb-capacitara-funcionarios-para-acolher-mulheres-em-risco",
+    "publishedAt": "24/10/2026 às 09:43",
+    "category": "Economia",
+    "ingestedAt": "24/10/2026 às 11:20",
+    "imageUrl": "https://imagens.ebc.com.br/YW0fmrLUcLE8jPE81LqslWval3U=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/1051296-25.10.2016_fnfrz-1964.jpg?itok=CdDZKmva",
+    "imageCaption": "BB capacitará funcionários para acolher mulheres em risco",
+    "imageCredit": "Wellton Máximo – Repórter da Agência Brasil",
+    "imageAlt": "BB capacitará funcionários para acolher mulheres em risco",
+    "author": "Wellton Máximo – Repórter da Agência Brasil",
+    "tags": [
+      "Direitos Humanos",
+      "banco do brasil",
+      "direitos das mulheres",
+      "violência contra a mulher",
+      "economia"
+    ],
+    "content": []
   },
   {
     "id": "ebc-1706342",
@@ -96,13 +202,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Caixa",
       "Política"
     ],
-    "content": [
-      "A Mega-Sena sorteia neste sábado (24) prêmio estimado em R$ 230milhões. As seis dezenas do concurso 3.074 serão sorteadas a partir das 21h (horário de Brasília) no Espaço da Sorte, em São Paulo.",
-      "As apostas podem ser feitas até as 20h (horário de Brasília), em qualquer lotérica do país ou pela internet, no site ou aplicativo da Caixa.",
-      "A aposta simples, com seis dezenas, custa R$ 6.",
-      "A Caixa Loterias anunciou a antecipação para sábado dos sorteios previstos para o domingo (25), por causa do segundo turno das eleições.",
-      "No último concurso, foram sorteados os números 04 - 13 - 23 - 28 - 41 - 58 e nenhum apostador acertou as seis dezenas ."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706235",
@@ -210,6 +310,10 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "publishedAt": "23/10/2026 às 21:42",
     "category": "Justiça",
     "ingestedAt": "24/10/2026 às 10:08",
+    "imageUrl": "https://imagens.ebc.com.br/KoaRO2GeGRXwzk3RxfeTrx-mT4M=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/24/fachada-ministerio-publico-trabalho-848x477.jpg?itok=xXjWOKj0",
+    "imageCaption": "MPT apura carta de supermercado a funcionários com teor eleitoral",
+    "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
+    "imageAlt": "MPT apura carta de supermercado a funcionários com teor eleitoral",
     "author": "Douglas Corrêa - Repórter da Agência Brasil",
     "tags": [
       "Justiça",
@@ -1031,100 +1135,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Votação",
       "prefeito",
       "Itaguaí"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706257",
-    "title": "Racismo e intolerância religiosa atravessam debate eleitoral no Brasil",
-    "summary": "O enfrentamento ao racismo e a garantia da liberdade religiosa permanecem como desafios no Brasil que irá às urnas no domingo (25).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/racismo-e-intolerancia-religiosa-atravessam-debate-eleitoral-no-brasil",
-    "publishedAt": "23/10/2026 às 07:31",
-    "category": "Eleições",
-    "ingestedAt": "23/10/2026 às 09:00",
-    "imageUrl": "https://imagens.ebc.com.br/eaJSzUrvNMmZPI4kB7WfmVo3WEw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/_dsc0600.jpg?itok=g9aKi-al",
-    "imageCaption": "Racismo e intolerância religiosa atravessam debate eleitoral no Brasil",
-    "imageCredit": "Isabela Vieira - Repórter da Agência Brasil",
-    "imageAlt": "Racismo e intolerância religiosa atravessam debate eleitoral no Brasil",
-    "author": "Isabela Vieira - Repórter da Agência Brasil",
-    "tags": [
-      "Direitos Humanos",
-      "eleições 2026",
-      "Racismo",
-      "Intolerância Religiosa",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706274",
-    "title": "Libertadores Feminina tem chance de final brasileira pela terceira vez",
-    "summary": "A noite dessa quinta-feira (22) encerrou a fase de grupos da edição deste ano da Libertadores Feminina, que é disputada em Quito (Equador). As quartas de final começam neste sábado (24), com Corinthians e Palmeiras em campo.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/libertadores-feminina-tem-chance-de-final-brasileira-pela-terceira-vez",
-    "publishedAt": "23/10/2026 às 07:02",
-    "category": "Esportes",
-    "ingestedAt": "23/10/2026 às 09:00",
-    "imageUrl": "https://imagens.ebc.com.br/gbDV1-JYXMV3drku95thYCqEKu4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/23/55605342227_a8b735ccdf_o.jpg?itok=nMM31h8_",
-    "imageCaption": "Libertadores Feminina tem chance de final brasileira pela terceira vez",
-    "imageCredit": "Lincoln Chaves - Repórter da EBC",
-    "imageAlt": "Libertadores Feminina tem chance de final brasileira pela terceira vez",
-    "author": "Lincoln Chaves - Repórter da EBC",
-    "tags": [
-      "Esportes",
-      "libertadores feminina",
-      "quartas de final",
-      "Corinthians",
-      "Palmeiras"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706273",
-    "title": "Estudiantes bate Fla e Palmeiras terá revanche pelo tetra da América",
-    "summary": "A final da Libertadores deste ano terá gosto de revanche para o Palmeiras.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/estudiantes-bate-fla-e-palmeiras-tera-revanche-pelo-tetra-da-america",
-    "publishedAt": "23/10/2026 às 06:45",
-    "category": "Esportes",
-    "ingestedAt": "23/10/2026 às 09:00",
-    "imageUrl": "https://imagens.ebc.com.br/Tf2H7R3E3d65IAcINoReecteTN4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/23/2026-10-23t025751z_1701824998_up1eman088eff_rtrmadp_3_soccer-libertadores-fla-esu.jpg?itok=tsUAncwj",
-    "imageCaption": "Estudiantes bate Fla e Palmeiras terá revanche pelo tetra da América",
-    "imageCredit": "Lincoln Chaves - Repórter da EBC",
-    "imageAlt": "Estudiantes bate Fla e Palmeiras terá revanche pelo tetra da América",
-    "author": "Lincoln Chaves - Repórter da EBC",
-    "tags": [
-      "Esportes",
-      "Libertadores",
-      "flamengo",
-      "estudiantes",
-      "semifinal"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706271",
-    "title": "Portaria convoca instituições financeiras para 3ª fase do Desenrola",
-    "summary": "As instituições financeiras terão cinco dias úteis para a informar ao governo as dívidas que pretendem oferecer para renegociação na primeira etapa do Desenrola 3.0. O Diário Oficial da União publicou, em edição extraordinária, a portaria com o edital de chamamento .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/portaria-convoca-instituicoes-financeiras-para-3a-fase-do-desenrola",
-    "publishedAt": "22/10/2026 às 22:04",
-    "category": "Economia",
-    "ingestedAt": "23/10/2026 às 06:27",
-    "imageUrl": "https://imagens.ebc.com.br/FsOUn81CA0D9s3Rrvxyw6gHr4Ow=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/real_moeda_dinheiro_mcajr_2904223671.jpg?itok=r5cN9dxx",
-    "imageCaption": "Portaria convoca instituições financeiras para 3ª fase do Desenrola",
-    "imageCredit": "Wellton Máximo – Repórter da Agência Brasil",
-    "imageAlt": "Portaria convoca instituições financeiras para 3ª fase do Desenrola",
-    "author": "Wellton Máximo – Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "Desenrola",
-      "Brasil"
     ],
     "content": []
   },
