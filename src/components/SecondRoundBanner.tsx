@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   ExternalLink,
   ShieldCheck,
@@ -17,9 +17,10 @@ import {
 } from "../data/electionSecondRoundData";
 import { CandidateImage } from "./CandidateImage";
 
-interface SecondRoundBannerProps {
+export interface SecondRoundBannerProps {
   data?: SecondRoundTotalization;
   onOpenMethodology?: () => void;
+  pollingIntervalMs?: number;
 }
 
 const formatNumberBR = (num: number): string => {
@@ -33,6 +34,25 @@ const formatPercentBR = (num: number): string => {
   }).format(num) + "%";
 };
 
+const formatTimestampBR = (isoOrDateStr?: string): string => {
+  if (!isoOrDateStr) return "";
+  try {
+    const d = new Date(isoOrDateStr);
+    if (isNaN(d.getTime())) return isoOrDateStr;
+    return new Intl.DateTimeFormat("pt-BR", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      timeZone: "America/Sao_Paulo"
+    }).format(d);
+  } catch {
+    return isoOrDateStr;
+  }
+};
+
 /**
  * Painel informativo e de apuração dedicado ao 2º Turno da Eleição Presidencial de 2026.
  *
@@ -41,12 +61,106 @@ const formatPercentBR = (num: number): string => {
  * - Não reutiliza dados numéricos do 1º turno como se fossem do 2º turno.
  * - Estado de pré-eleição (0 votos, 0 seções) é tratado explicitamente como "Aguardando apuração oficial".
  * - Dados consumidos exclusivamente do dataset oficial e isolado do 2º turno gerado a partir do TSE (EA20).
+ * - Sincronização dinâmica via polling de 60s durante a apuração com cancelamento via AbortController.
  * - Disponibiliza link proeminente, acessível e seguro para o portal oficial do TSE (resultados.tse.jus.br).
  */
 export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
-  data = SECOND_ROUND_DATA,
+  data: initialData = SECOND_ROUND_DATA,
   onOpenMethodology,
+  pollingIntervalMs = 60000,
 }) => {
+  const [data, setData] = useState<SecondRoundTotalization>(initialData);
+  const [fetchError, setFetchError] = useState<string | null>(null);
+  const [lastCheckTime, setLastCheckTime] = useState<Date | null>(null);
+
+  useEffect(() => {
+    if (initialData) {
+      setData(initialData);
+    }
+  }, [initialData]);
+
+  useEffect(() => {
+    // Se a apuração já estiver finalizada, não executa polling contínuo
+    if (data.isFinal) {
+      return;
+    }
+
+    let isMounted = true;
+    let inFlightController: AbortController | null = null;
+
+    const fetchLatestData = async () => {
+      if (inFlightController) {
+        inFlightController.abort();
+      }
+      inFlightController = new AbortController();
+      const signal = inFlightController.signal;
+
+      try {
+        const response = await fetch(`/data/electionSecondRoundData.json?_t=${Date.now()}`, {
+          signal,
+          headers: {
+            "Accept": "application/json",
+            "Cache-Control": "no-cache"
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const json = await response.json();
+
+        // Validação rigorosa do payload
+        if (
+          !json ||
+          typeof json !== "object" ||
+          !Array.isArray(json.candidates) ||
+          json.candidates.length === 0 ||
+          typeof json.sectionsTotal !== "number" ||
+          json.round !== 2
+        ) {
+          throw new Error("Payload de totalização recebido possui formato inválido.");
+        }
+
+        if (isMounted) {
+          setData(json);
+          setFetchError(null);
+          setLastCheckTime(new Date());
+        }
+      } catch (err: unknown) {
+        if ((err as Error)?.name === "AbortError") {
+          return;
+        }
+        if (isMounted) {
+          // Preserva os dados válidos anteriores em caso de falha de rede/servidor
+          setFetchError((err as Error)?.message || "Falha na sincronização");
+          setLastCheckTime(new Date());
+        }
+      }
+    };
+
+    // 1. Busca imediata ao montar
+    fetchLatestData();
+
+    // 2. Polling a cada 60s enquanto a apuração estiver em andamento (e não finalizada)
+    let intervalId: ReturnType<typeof setInterval> | null = null;
+    if (data.countingStarted && !data.isFinal) {
+      intervalId = setInterval(() => {
+        fetchLatestData();
+      }, pollingIntervalMs);
+    }
+
+    return () => {
+      isMounted = false;
+      if (inFlightController) {
+        inFlightController.abort();
+      }
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
+  }, [data.countingStarted, data.isFinal, pollingIntervalMs]);
+
   const candidates: SecondRoundCandidate[] = data.candidates || [];
   const countingStarted = Boolean(data.countingStarted);
   const isFinal = Boolean(data.isFinal);
@@ -100,6 +214,41 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
             ? "Acompanhe os resultados oficiais totalizados pelo Tribunal Superior Eleitoral (TSE) em tempo real para a disputa presidencial do 2º Turno."
             : "Acompanhe a disputa e consulte a apuração oficial no portal do TSE. A votação ocorre no domingo, 25 de outubro de 2026, das 08h00 às 17h00 (horário de Brasília)."}
         </p>
+
+        {/* Indicadores de Atualização e Horário Oficial */}
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-slate-300 mt-3 pt-3 border-t border-slate-800/80">
+          {data.totalizationTime ? (
+            <span className="inline-flex items-center gap-1.5 text-slate-200">
+              <Clock className="w-3.5 h-3.5 text-blue-400" />
+              <span>
+                Totalização oficial no TSE: <strong>{data.totalizationDate} às {data.totalizationTime}</strong> (Horário de Brasília)
+              </span>
+            </span>
+          ) : data.lastUpdated ? (
+            <span className="inline-flex items-center gap-1.5 text-slate-300">
+              <Clock className="w-3.5 h-3.5 text-slate-400" />
+              <span>
+                Última checagem oficial: <strong>{formatTimestampBR(data.lastUpdated)}</strong> (Horário de Brasília)
+              </span>
+            </span>
+          ) : null}
+
+          {countingStarted && !isFinal && (
+            <span className="inline-flex items-center gap-1.5 text-blue-300 bg-blue-950/60 px-2.5 py-0.5 rounded-full border border-blue-800/50">
+              <Radio className="w-3 h-3 text-blue-400 animate-pulse" />
+              <span>Atualização automática a cada 60s</span>
+            </span>
+          )}
+
+          {fetchError && (
+            <span
+              className="inline-flex items-center gap-1.5 text-amber-300 bg-amber-950/50 px-2.5 py-0.5 rounded-full border border-amber-800/50"
+              title={fetchError}
+            >
+              <span>Conexão com servidor instável — exibindo últimos dados confirmados</span>
+            </span>
+          )}
+        </div>
 
         {/* Barra de Progresso Real quando a Apuração Iniciou */}
         {countingStarted && (

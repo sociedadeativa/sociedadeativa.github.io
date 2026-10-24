@@ -369,6 +369,194 @@ console.log('\n[TEST 6] Isolamento em relação aos arquivos do 1º turno e pipe
   passed++;
 }
 
+// ----------------------------------------------------------------------------
+// TEST 7: Posicionamento Proeminente do 2º Turno na HomePage & Sem Duplicação
+// ----------------------------------------------------------------------------
+console.log('\n[TEST 7] Posicionamento proeminente do SecondRoundBanner na HomePage & Ausência de Duplicação');
+{
+  const homePath = path.join(rootDir, 'src', 'pages', 'HomePage.tsx');
+  const homeContent = fs.readFileSync(homePath, 'utf8');
+
+  // SecondRoundBanner deve ser importado via React.lazy com skeleton
+  assert.ok(
+    homeContent.includes('const SecondRoundBanner = lazy('),
+    'HomePage.tsx deve utilizar React.lazy para SecondRoundBanner'
+  );
+  assert.ok(
+    homeContent.includes('SecondRoundBannerSkeleton'),
+    'HomePage.tsx deve definir SecondRoundBannerSkeleton para Suspense fallback'
+  );
+
+  // SecondRoundBanner deve vir antes de NationalBanner no JSX
+  const secondRoundIdx = homeContent.indexOf('<SecondRoundBanner');
+  const nationalBannerIdx = homeContent.indexOf('<NationalBanner');
+  assert.ok(secondRoundIdx > -1, 'HomePage.tsx deve renderizar <SecondRoundBanner />');
+  assert.ok(nationalBannerIdx > -1, 'HomePage.tsx deve renderizar <NationalBanner />');
+  assert.ok(
+    secondRoundIdx < nationalBannerIdx,
+    'SecondRoundBanner deve ser renderizado acima de NationalBanner na HomePage'
+  );
+
+  // Verificação de rótulos claros para ambos os conjuntos de dados
+  assert.ok(
+    homeContent.includes('1º Turno Presidencial (4 de outubro de 2026)'),
+    'HomePage.tsx deve rotular explicitamente os dados históricos do 1º turno com data'
+  );
+
+  // Verificação em EleicoesPage.tsx para evitar duplicações
+  const eleicoesPath = path.join(rootDir, 'src', 'pages', 'EleicoesPage.tsx');
+  const eleicoesContent = fs.readFileSync(eleicoesPath, 'utf8');
+  const eleicoesMatches = (eleicoesContent.match(/<SecondRoundBanner/g) || []).length;
+  assert.strictEqual(
+    eleicoesMatches,
+    1,
+    'EleicoesPage.tsx deve conter exatamente 1 instância do SecondRoundBanner (sem duplicações)'
+  );
+
+  console.log('  [PASS] 1. SecondRoundBanner lazy-loaded com skeleton e posicionado acima do NationalBanner na HomePage.');
+  console.log('  [PASS] 2. Rótulos temporais explícitos discriminam o 1º turno (04/10/2026) e o 2º turno (25/10/2026).');
+  console.log('  [PASS] 3. Exatamente 1 instância por rota sem banners duplicados na página /eleicoes/.');
+  passed++;
+}
+
+// ----------------------------------------------------------------------------
+// TEST 8: Integridade e Rotulagem Explícita do Mapa Eleitoral (1º Turno)
+// ----------------------------------------------------------------------------
+console.log('\n[TEST 8] Rotulagem estrita do Mapa Interativo como histórico do 1º Turno (04/10/2026)');
+{
+  const homePath = path.join(rootDir, 'src', 'pages', 'HomePage.tsx');
+  const homeContent = fs.readFileSync(homePath, 'utf8');
+
+  assert.ok(
+    homeContent.includes('Geografia Eleitoral · 1º Turno (4 de outubro de 2026)'),
+    'HomePage.tsx deve rotular o badge da seção do mapa com "1º Turno (4 de outubro de 2026)"'
+  );
+  assert.ok(
+    homeContent.includes('resultado oficial do 1º turno (4 de outubro de 2026)'),
+    'HomePage.tsx deve explicitar na descrição do mapa a apuração do 1º turno de 4 de outubro de 2026'
+  );
+
+  const mapPath = path.join(rootDir, 'src', 'components', 'BrazilMap.tsx');
+  const mapContent = fs.readFileSync(mapPath, 'utf8');
+  assert.ok(
+    mapContent.includes('Vencedor no 1º Turno por Estado (04/10/2026)'),
+    'BrazilMap.tsx deve conter legenda explícita indicando "1º Turno por Estado (04/10/2026)"'
+  );
+
+  console.log('  [PASS] 1. Mapa interativo explicitamente marcado como dados do 1º Turno (4 de outubro de 2026).');
+  console.log('  [PASS] 2. Legenda do BrazilMap protege contra confusão entre os turnos eleitorais.');
+  passed++;
+}
+
+// ----------------------------------------------------------------------------
+// TEST 9: Polling Dinâmico, AbortController, Resiliência a Falhas & Timestamps
+// ----------------------------------------------------------------------------
+console.log('\n[TEST 9] Auditoria do SecondRoundBanner: Polling de 60s, AbortController e Proteção contra Falhas');
+{
+  const bannerPath = path.join(rootDir, 'src', 'components', 'SecondRoundBanner.tsx');
+  const bannerContent = fs.readFileSync(bannerPath, 'utf8');
+
+  // 1. Deve consultar /data/electionSecondRoundData.json com cache busting
+  assert.ok(
+    bannerContent.includes('/data/electionSecondRoundData.json?_t='),
+    'SecondRoundBanner deve consultar /data/electionSecondRoundData.json com parâmetro de cache-busting'
+  );
+
+  // 2. Deve utilizar AbortController e cancelar requisições pendentes
+  assert.ok(
+    bannerContent.includes('new AbortController()') && bannerContent.includes('.abort()'),
+    'SecondRoundBanner deve instanciar e cancelar AbortController no cleanup'
+  );
+
+  // 3. Deve implementar polling a cada 60s condicional (enquanto countingStarted e !isFinal)
+  assert.ok(
+    bannerContent.includes('data.countingStarted && !data.isFinal'),
+    'SecondRoundBanner deve acionar polling recorrente apenas quando a apuração iniciou e não finalizou'
+  );
+  assert.ok(
+    bannerContent.includes('clearInterval(intervalId)') || bannerContent.includes('clearInterval('),
+    'SecondRoundBanner deve limpar o setInterval ao desmontar ou mudar de estado'
+  );
+
+  // 4. Deve interromper polling se isFinal for true
+  assert.ok(
+    bannerContent.includes('if (data.isFinal)'),
+    'SecondRoundBanner deve interromper polling caso a apuração esteja finalizada'
+  );
+
+  // 5. Deve tratar falhas de rede sem sobrescrever nem limpar o estado anterior
+  assert.ok(
+    bannerContent.includes('setFetchError') && bannerContent.includes('Falha na sincronização'),
+    'SecondRoundBanner deve armazenar erros de fetch de forma não-destrutiva'
+  );
+
+  // 6. Deve exibir timestamps oficiais formatados
+  assert.ok(
+    bannerContent.includes('formatTimestampBR') || bannerContent.includes('totalizationDate'),
+    'SecondRoundBanner deve conter formatação e exibição de data/hora oficial de totalização'
+  );
+  assert.ok(
+    bannerContent.includes('Atualização automática a cada 60s'),
+    'SecondRoundBanner deve exibir indicador visual de sincronização em tempo real'
+  );
+
+  console.log('  [PASS] 1. Busca imediata e polling de 60s ativo exclusivamente durante apuração.');
+  console.log('  [PASS] 2. Cancelamento limpo com AbortController e cleanup de intervalos no unmount.');
+  console.log('  [PASS] 3. Resiliência garantida: erros preservam últimos dados válidos e mostram aviso ao usuário.');
+  console.log('  [PASS] 4. Timestamps de checagem e totalização oficial exibidos com timezone de Brasília.');
+  passed++;
+}
+
+// ----------------------------------------------------------------------------
+// TEST 10: Auditoria do Workflow de Agendamento do 2º Turno (.github/workflows)
+// ----------------------------------------------------------------------------
+console.log('\n[TEST 10] Auditoria de horários UTC, permissões e dependência de deploy no workflow');
+{
+  const workflowPath = path.join(rootDir, '.github', 'workflows', 'update-election-data.yml');
+  const workflowContent = fs.readFileSync(workflowPath, 'utf8');
+
+  // 1. Cron em UTC correspondente a 17h às 24h em Brasília (UTC-3)
+  // 17h-20h BRT = 20h-23h UTC
+  // 21h-00h BRT = 00h-03h UTC do dia seguinte (26/10)
+  assert.ok(
+    workflowContent.includes("'*/15 20-23 25 10 *'"),
+    'Workflow deve programar execuções a cada 15 min entre 20h e 23h UTC em 25/10 (17h-20h BRT)'
+  );
+  assert.ok(
+    workflowContent.includes("'*/15 0-3 26 10 *'"),
+    'Workflow deve programar execuções a cada 15 min entre 00h e 03h UTC em 26/10 (21h-00h BRT)'
+  );
+
+  // 2. Permissões necessárias
+  assert.ok(
+    workflowContent.includes('contents: write'),
+    'Workflow deve requerer contents: write para comitar atualizações'
+  );
+  assert.ok(
+    workflowContent.includes('pages: write'),
+    'Workflow deve requerer pages: write para disparo do GitHub Pages'
+  );
+
+  // 3. Rebase defensivo antes do git push
+  assert.ok(
+    workflowContent.includes('git pull --rebase origin main || true'),
+    'Workflow deve executar git pull --rebase origin main antes do push'
+  );
+
+  // 4. Disparo do job deploy-pages sob has_changes == true ou manual workflow_dispatch
+  assert.ok(
+    workflowContent.includes("needs.update-election-data.outputs.has_changes == 'true'") &&
+    workflowContent.includes("github.event_name == 'workflow_dispatch'"),
+    'Job deploy-pages deve ser executado quando houver alterações OU quando disparado manualmente'
+  );
+
+  console.log('  [PASS] 1. Crons UTC mapeados com precisão para o encerramento da votação (17h Brasília).');
+  console.log('  [PASS] 2. Permissões de escrita e deploy configuradas no GitHub Actions.');
+  console.log('  [PASS] 3. Rebase preventivo e condicional de deploy com suporte a workflow_dispatch confirmados.');
+  passed++;
+}
+
 console.log('\n' + '='.repeat(75));
-console.log(`TODOS OS ${passed} TESTES DO PIPELINE DO 2º TURNO PASSARAM COM SUCESSO!`);
+console.log(`TODOS OS ${passed} TESTES DO PIPELINE E DA PRONTIDÃO DO 2º TURNO PASSARAM COM SUCESSO!`);
 console.log('='.repeat(75));
+

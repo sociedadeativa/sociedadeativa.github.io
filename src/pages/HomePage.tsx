@@ -9,6 +9,7 @@ import { ArrowRight, MapPin, Trophy, Clock } from "lucide-react";
 import { sortNewsItems, deduplicateNewsItems, isValidImageUrl } from "../services/newsService";
 
 // Componentes Pesados Abaixo da Dobra com Carregamento Sob Demanda (Code Splitting)
+const SecondRoundBanner = lazy(() => import("../components/SecondRoundBanner").then((m) => ({ default: m.SecondRoundBanner })));
 const NationalBanner = lazy(() => import("../components/NationalBanner").then((m) => ({ default: m.NationalBanner })));
 const BrazilMap = lazy(() => import("../components/BrazilMap").then((m) => ({ default: m.BrazilMap })));
 const RegionalCharts = lazy(() => import("../components/RegionalCharts").then((m) => ({ default: m.RegionalCharts })));
@@ -16,6 +17,22 @@ const EconomySection = lazy(() => import("../components/EconomySection").then((m
 const BolsaSection = lazy(() => import("../components/BolsaSection").then((m) => ({ default: m.BolsaSection })));
 const NewsSection = lazy(() => import("../components/NewsSection").then((m) => ({ default: m.NewsSection })));
 const StateTable = lazy(() => import("../components/StateTable").then((m) => ({ default: m.StateTable })));
+
+const SecondRoundBannerSkeleton: React.FC = () => (
+  <div
+    className="mb-8 rounded-3xl bg-slate-900 border border-slate-800 p-6 sm:p-8 animate-pulse text-white"
+    aria-busy="true"
+    aria-label="Carregando cobertura do 2º turno"
+  >
+    <div className="h-6 w-52 bg-slate-800 rounded-full mb-4" />
+    <div className="h-9 w-2/3 max-w-xl bg-slate-800 rounded-lg mb-3" />
+    <div className="h-4 w-1/2 max-w-md bg-slate-800 rounded-md mb-8" />
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="h-56 bg-slate-800/60 rounded-2xl border border-slate-700/80" />
+      <div className="h-56 bg-slate-800/60 rounded-2xl border border-slate-700/80" />
+    </div>
+  </div>
+);
 
 const NationalBannerSkeleton: React.FC = () => (
   <div
@@ -277,8 +294,27 @@ export const HomePage: React.FC<HomePageProps> = ({
         onOpenArticleDetails={onOpenArticleDetails}
       />
 
-      {/* 2. Painel Nacional das Eleições 2026 (Apuração 1º Turno) */}
+      {/* 2. Painel Especial de Apuração do 2º Turno Presidencial 2026 */}
+      <section id="apuracao-segundo-turno" aria-label="Apuração do 2º Turno Presidencial" className="bg-[#F8FAFC] pt-6 sm:pt-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Suspense fallback={<SecondRoundBannerSkeleton />}>
+            <SecondRoundBanner onOpenMethodology={onOpenMethodology} />
+          </Suspense>
+        </div>
+      </section>
+
+      {/* 3. Painel Nacional das Eleições 2026 (Arquivo Histórico Oficial do 1º Turno) */}
       <div id="eleicoes-nacional">
+        <div className="bg-slate-100 border-y border-slate-200 py-3">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between text-xs">
+            <span className="font-bold uppercase tracking-wider text-slate-700">
+              Arquivo Oficial Homologado · 1º Turno Presidencial (4 de outubro de 2026)
+            </span>
+            <span className="text-slate-500 hidden sm:inline">
+              100% das seções totalizadas no TSE
+            </span>
+          </div>
+        </div>
         <Suspense fallback={<NationalBannerSkeleton />}>
           <NationalBanner
             dataset={dataset}
@@ -289,23 +325,23 @@ export const HomePage: React.FC<HomePageProps> = ({
         </Suspense>
       </div>
 
-      {/* 3. Espaço Publicitário Superior */}
+      {/* 4. Espaço Publicitário Superior */}
       <AdBanner format="leaderboard" />
 
-      {/* 4. Seção do Mapa Interativo de Votação (Brasil por Estado) */}
+      {/* 5. Seção do Mapa Interativo de Votação (Brasil por Estado) */}
       <section id="mapa-brasil" className="py-8 sm:py-12 bg-white border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
             <div>
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-700 mb-1.5">
                 <MapPin className="w-3.5 h-3.5" />
-                <span>Geografia Eleitoral · 26 Estados e Distrito Federal</span>
+                <span>Geografia Eleitoral · 1º Turno (4 de outubro de 2026)</span>
               </div>
               <h2 className="font-heading text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
                 Mapa Interativo de Votação por Estado
               </h2>
               <p className="text-xs sm:text-sm text-slate-700 mt-1 max-w-2xl leading-relaxed">
-                Navegue pelas unidades da federação para conferir o resultado oficial do 1º turno, margem de vitória, votos nominais e comparecimento eleitoral.
+                Navegue pelas unidades da federação para conferir o resultado oficial do 1º turno (4 de outubro de 2026), margem de vitória, votos nominais e comparecimento eleitoral homologados pelo TSE.
               </p>
             </div>
 
