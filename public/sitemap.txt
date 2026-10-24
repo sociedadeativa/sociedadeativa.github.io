@@ -9,6 +9,11 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1705956/
+https://sociedadeativa.github.io/noticias/ebc-1706126/
+https://sociedadeativa.github.io/noticias/ebc-1706447/
+https://sociedadeativa.github.io/noticias/ebc-1705948/
+https://sociedadeativa.github.io/noticias/ebc-1706446/
 https://sociedadeativa.github.io/noticias/ebc-1706444/
 https://sociedadeativa.github.io/noticias/ebc-1706349/
 https://sociedadeativa.github.io/noticias/ebc-1706442/
@@ -51,11 +56,6 @@ https://sociedadeativa.github.io/noticias/camara-1300663-projeto-cria-recuperaca
 https://sociedadeativa.github.io/noticias/camara-1309995-projeto-reconhece-cultivo-de-c/
 https://sociedadeativa.github.io/noticias/ebc-1706323/
 https://sociedadeativa.github.io/noticias/ebc-1706321/
-https://sociedadeativa.github.io/noticias/camara-1313433-governo-vai-apresentar-projeto/
-https://sociedadeativa.github.io/noticias/ebc-1706314/
-https://sociedadeativa.github.io/noticias/ebc-1706312/
-https://sociedadeativa.github.io/noticias/camara-1311968-projeto-amplia-para-60-dias-o-/
-https://sociedadeativa.github.io/noticias/ebc-1706308/
 https://sociedadeativa.github.io/noticias/ibge-48339/
 https://sociedadeativa.github.io/noticias/ibge-48336/
 https://sociedadeativa.github.io/noticias/ibge-48325/

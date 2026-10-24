@@ -5,6 +5,143 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1705956",
+    "title": "Votação: eleitores podem usar itens que expressem preferência política",
+    "summary": "Eleitores poderão fazer manifestação individual e silenciosa da sua posição política no domingo (25), dia de votação do segundo turno das eleições 2026. Isso significa que as pessoas podem usar itens que expressem sua preferência, como: bandeiras, camisetas, broches adesivos.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/votacao-eleitores-podem-usar-itens-que-expressem-preferencia-politica",
+    "publishedAt": "24/10/2026 às 18:42",
+    "category": "Eleições",
+    "ingestedAt": "24/10/2026 às 18:55",
+    "imageUrl": "https://imagens.ebc.com.br/V_IAd6bO-xmlsx94yn9nIc47bcs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/sem_titulo-23.jpg?itok=EPWug6pA",
+    "imageCaption": "Votação: eleitores podem usar itens que expressem preferência política",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Votação: eleitores podem usar itens que expressem preferência política",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "eleições",
+      "Eleições"
+    ],
+    "content": [
+      "Eleitores poderão fazer manifestação individual e silenciosa da sua posição política no domingo (25), dia de votação do segundo turno das eleições 2026.",
+      "Isso significa que as pessoas podem usar itens que expressem sua preferência, como:",
+      "O que não pode é haver aglomerações, manifestações coletivas ruidosas, abordagem a outros eleitores ou qualquer tentativa de aliciamento, que é considerado crime de boca de urna .",
+      "Quem identificar possíveis irregularidades pode denunciar por meio do aplicativo Pardal, da Justiça Eleitoral. A ferramenta permite informar o local da ocorrência, descrever os fatos e anexar fotos, vídeos, áudios ou links para ajudar na apuração."
+    ]
+  },
+  {
+    "id": "ebc-1706126",
+    "title": "Eleições: saiba como consultar locais de votação para o segundo turno",
+    "summary": "Os 158 milhões de eleitores que vão às urnas neste domingo (25) para escolher o próximo presidente da República precisam checar o endereço da seção eleitoral antes de sair de casa.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleicoes-saiba-como-consultar-locais-de-votacao-para-o-segundo-turno",
+    "publishedAt": "24/10/2026 às 18:39",
+    "category": "Eleições",
+    "ingestedAt": "24/10/2026 às 18:55",
+    "imageUrl": "https://imagens.ebc.com.br/B2rIudFK9nh9TKcgAQvZXOlfSEU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/sem_titulo-5.jpg?itok=e7HGr7Fb",
+    "imageCaption": "Eleições: saiba como consultar locais de votação para o segundo turno",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Eleições: saiba como consultar locais de votação para o segundo turno",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Eleições",
+      "Eleições 2026"
+    ],
+    "content": [
+      "Os 158 milhões de eleitores que vão às urnas neste domingo (25) para escolher o próximo presidente da República precisam checar o endereço da seção eleitoral antes de sair de casa.",
+      "A orientação do Tribunal Superior Eleitoral é que os eleitores confiram, com antecedência, os locais de votação nos canais oficiais.",
+      "O aplicativo e-título pode ser baixado de forma gratuita em celulares Android e iOS nas lojas oficiais . Para consultar o local de votação é só abrir o aplicativo, digitar os dados solicitados e selecionar a opção “onde votar”. Vai aparecer a zona e a seção eleitoral com o endereço. É possível inclusive traçar a rota de como chegar ao local.",
+      "O Autoatendimento Eleitoral está acessível nos postos do TSE e dos tribunais regionais eleitorais (TREs) de cada estado. Alí é possível consultar o local de votação em “onde votar”, além de outros serviços, como regularização de pendências, atualização de dados e emissão de documentos de forma remota, sem precisar comparecer a um cartório eleitoral.",
+      "O ChatVote é o assistente virtual da Justiça Eleitoral. Ele usa inteligência artificial para responder dúvidas e orientar sobre os serviços disponíveis. Também pode ser acessado na página do TSE. O ChatVote fica no lado esquerdo da página, na parte inferior. É um desenho de uma urna com olhinhos. É só clicar nela e fazer a pergunta.",
+      "A votação do segundo turno ocorre no próximo dia 25 de outubro . As seções ficam abertas de 8h às 17h. O eleitor vai votar desta vez apenas para presidente da República e, em alguns estados, para governador. A disputa local ocorre no Acre, Amazonas, Distrito Federal, Espírito Santo, Rio Grande do Norte e Tocantins."
+    ]
+  },
+  {
+    "id": "ebc-1706447",
+    "title": "Justiça proíbe rede de supermercados de praticar assédio eleitoral",
+    "summary": "A Justiça do Trabalho determinou que uma rede de supermercados pare de enviar comunicados de cunho eleitoral para seus funcionários.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/justica-proibe-rede-de-supermercados-de-fazer-assedio-eleitoral",
+    "publishedAt": "24/10/2026 às 17:48",
+    "category": "Justiça",
+    "ingestedAt": "24/10/2026 às 18:55",
+    "imageUrl": "https://imagens.ebc.com.br/KoaRO2GeGRXwzk3RxfeTrx-mT4M=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/24/fachada-ministerio-publico-trabalho-848x477.jpg?itok=xXjWOKj0",
+    "imageCaption": "Justiça proíbe rede de supermercados de praticar assédio eleitoral",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Justiça proíbe rede de supermercados de praticar assédio eleitoral",
+    "author": "Agência Brasil",
+    "tags": [
+      "Justiça",
+      "eleições 2026",
+      "Rio de Janeiro",
+      "supermercados",
+      "assédio eleitoral"
+    ],
+    "content": [
+      "A Justiça do Trabalho determinou que uma rede de supermercados pare de enviar comunicados de cunho eleitoral para seus funcionários. A decisão foi tomada a pedido do Sindicato dos Comerciários, que constatou que empregados do Supermercado Zona Sul receberam carta, enviada pela empresa, que continha críticas ao cenário político e institucional brasileiro e um apelo por mudanças, às vésperas do segundo turno das eleições presidenciais.",
+      "Segundo o sindicato, a juíza Cláudia de Abreu Lima Pisco determinou, em liminar, que o supermercado envie, até as 23h59 deste sábado (24), nova mensagem aos funcionários, pelos mesmos canais utilizados originalmente, esclarecendo que o voto é livre e secreto e que nenhum empregado é obrigado a revelar sua preferência política.",
+      "Além disso, a empresa também deverá afixar a comunicação em locais de grande circulação de funcionários em seus estabelecimentos.",
+      "Caso a empresa descumpra a decisão, há multa diária de R$ 500 mil.",
+      "Ainda de acordo com o sindicato, a juíza considerou que a manifestação institucional caracteriza assédio eleitoral , ao transmitir de forma velada uma orientação política aos trabalhadores, uma vez que há uma relação de dependência econômica entre empregados e empregadores, o que poderia gerar receio de retaliações e comprometer a liberdade de voto.",
+      "A assessoria de imprensa do Supermercado Zona Sul informou que não vai se pronunciar sobre o caso."
+    ]
+  },
+  {
+    "id": "ebc-1705948",
+    "title": "Veja quem tem prioridade nas seções eleitorais no segundo turno",
+    "summary": "Os 158,7 milhões de eleitores que comparecerão às urnas no segundo turno, neste domingo (25), deverão votar apenas para presidente da República e governador, dependendo do estado .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/veja-quem-tem-prioridade-nas-secoes-eleitorais-no-segundo-turno",
+    "publishedAt": "24/10/2026 às 17:24",
+    "category": "Eleições",
+    "ingestedAt": "24/10/2026 às 18:55",
+    "imageUrl": "https://imagens.ebc.com.br/V8xh76Fs_DbZSwQqL4DYyFSzvVY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/0d4a2108.jpg?itok=E9CYWGq2",
+    "imageCaption": "Veja quem tem prioridade nas seções eleitorais no segundo turno",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Veja quem tem prioridade nas seções eleitorais no segundo turno",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "segundo turno",
+      "presidente da República",
+      "governador"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706446",
+    "title": "Transporte de indígenas deve ser aprovado por juiz, diz Nunes Marques",
+    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, negou pedido para que veículos e embarcações da Fundação Nacional dos Povos Indígenas (Funai), Secretaria de saúde Indígena (Sesai) e do Ministério dos Povos Indígenas (MPI) possam transportar.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/nunes-marques-nega-autorizacao-para-transporte-de-eleitores-indigenas",
+    "publishedAt": "24/10/2026 às 16:32",
+    "category": "Justiça",
+    "ingestedAt": "24/10/2026 às 18:55",
+    "imageUrl": "https://imagens.ebc.com.br/2xtMPiERE4b6TiEpHXkH2rBY26s=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/20/capa_terras-indigenas-voto.jpg?itok=LbUE6eIb",
+    "imageCaption": "Transporte de indígenas deve ser aprovado por juiz, diz Nunes Marques",
+    "imageCredit": "Iara Balduino - Repórter da Agência Brasil",
+    "imageAlt": "Transporte de indígenas deve ser aprovado por juiz, diz Nunes Marques",
+    "author": "Iara Balduino - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "eleições 2026",
+      "TSE",
+      "eleitores indígenas",
+      "Votação"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706444",
     "title": "Tribunais eleitorais definem urnas que serão auditadas no 2º turno",
     "summary": "Tribunais regionais eleitorais (TREs) de todo o país definiram neste sábado (24) as urnas eletrônicas que serão submetidas a auditorias neste segundo turno das eleições gerais.",
@@ -26,18 +163,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Justiça Eleitoral",
       "Urnas"
     ],
-    "content": [
-      "Tribunais regionais eleitorais (TREs) de todo o país definiram neste sábado (24) as urnas eletrônicas que serão submetidas a auditorias neste segundo turno das eleições gerais. As urnas foram sorteadas ou escolhidas por representantes de partidos políticos e entidades fiscalizadoras.",
-      "Nos quatro maiores colégios eleitorais do país, São Paulo, Minas Gerais, Rio de Janeiro e Bahia, por exemplo, serão 43 urnas auditadas, sendo 33 no teste de integridade e dez no teste de autenticidade . No Paraná, Rio Grande do Sul, em Pernambuco e no Ceará, outros estados com grande número de eleitores, serão 35 urnas, das quais 27 passam pelo teste de integridade e oito pelo de autenticidade. Em Roraima, menor colégio eleitoral do país, a auditoria incluirá 20 urnas no teste de integridade e três no de autenticidade.",
-      "As seções eleitorais sorteadas pelo teste de integridade terão suas urnas eletrônicas substituídas por equipamentos reservas. As urnas originais são levadas a um local definido, onde ficarão guardadas, em sala lacrada, até o dia da eleição . Partidos políticos e entidades fiscalizadoras são convidados a preencher cédulas de papel com os candidatos do pleito, as quais são depositadas em urnas de lona, que também são lacradas.",
-      "Neste domingo (25), servidores do Poder Judiciário e do Ministério Público apresentarão as cédulas depositadas na urna de lona e digitarão os votos dados pelos partidos políticos e entidades fiscalizadoras na urna eletrônica. Ao final da votação, às 17h, são comparados os dados do voto em papel com o registrado nas urnas eletrônicas.",
-      "Entre as entidades fiscalizadoras convidadas a participar estão a Ordem dos Advogados do Brasil (OAB), o Ministério Público, a Defensoria Pública, representantes do Congresso Nacional, da Controladoria-Geral da União (CGU), Polícia Federal, Sociedade Brasileira de Computação, do Conselho Federal de Engenharia e Agronomia (Confea), Conselho Nacional de Justiça (CNJ), Conselho Nacional do Ministério Público (CNMP), Tribunal de Contas da União (TCU) e da Confederação Nacional da Indústria (CNI).",
-      "Parte das urnas selecionadas para essa auditoria passa pelo teste de integridade com biometria. Nesse caso, os votos são depositados por eleitores voluntários, usando sua biometria, em vez de partidos políticos e outras entidades.",
-      "O teste de autenticidade, por sua vez, é feito nas próprias seções eleitorais sorteadas, antes do início da votação . O objetivo é verificar se a urna eletrônica possui os mesmos sistemas que foram abertos, compilados, assinados e lacrados pelo Tribunal Superior Eleitoral (TSE). São feitos o rompimento do lacre do compartimento da mídia de resultado, a retirada dessa mídia e a verificação das assinaturas e resumos digitais.",
-      "Neste sábado, o Tribunal Superior Eleitoral (TSE) fez uma cerimônia de verificação dos sistemas eleitorais, a fim de conferir os sistemas que atuam no processamento dos resultados das eleições, para verificar se as assinaturas e resumos digitais eram compatíveis com os originais, lacrados pela Justiça Eleitoral.",
-      "A verificação concluiu que não houve qualquer alteração do programa, de acordo com o tribunal . O TSE e os tribunais regionais também realizaram zerésimas, ou seja, emitiram relatórios comprovando que não há votos registrados no sistema de totalização, antes do início da votação.",
-      "Antes do início da votação, neste domingo (25), cada seção eleitoral fará sua própria zerésima . Elas imprimem um relatório, produzido pela urna eletrônica, mostrando que ainda não há nenhum voto registrado no equipamento e que, portanto, ele está apto a receber os votos dos eleitores."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706349",
@@ -61,21 +187,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "prioridade",
       "acessibilidade"
     ],
-    "content": [
-      "Para assegurar que o momento de ir às urnas ocorra com agilidade, conforto e segurança, a legislação brasileira estabelece um conjunto de direitos e preferências destinados a pessoas com deficiência, mobilidade reduzida e idosos.",
-      "Confira algumas das garantias asseguradas pela Justiça Eleitoral.",
-      "A organização das filas nos locais de votação prevê atendimento preferencial para dar fluidez ao processo e evitar o desgaste físico dos eleitores:",
-      "Superprioridade : Eleitores a partir de 80 anos de idade têm prioridade máxima sobre os demais, inclusive sobre os que têm entre 60 e 79 anos. Lembrando que o voto deixa de ser obrigatório quando a pessoa completa 70 anos de idade .",
-      "Prioridade : Para os demais grupos prioritários definidos em lei, o atendimento deve observar a ordem de chegada à fila.",
-      "São considerados grupos prioritários:",
-      "Acompanhante : No momento de votar, o eleitor com deficiência ou mobilidade reduzida tem direito a receber ajuda de uma pessoa de confiança que o acompanhe até a cabine de votação. A pessoa indicada pode, inclusive, digitar os números dos candidatos na urna, seguindo a orientação do eleitor. O auxílio não exige cadastro prévio ou autorização judicial, mas precisa ser autorizado pelos mesários, que avaliarão a situação.",
-      "Cão-Guia : Também é permitido às pessoas com deficiência visual acessar a cabine de votação acompanhada por seu cão-guia.",
-      "Idosos : A partir dos 60 anos de idade, o eleitor pode votar acompanhado, desde que apresente dificuldade de locomoção, flexibilidade, coordenação ou percepção e, consequentemente, se enquadre no grupo de pessoas com deficiência ou mobilidade reduzida.",
-      "Avaliação : Cabe sempre ao presidente da mesa receptora, na seção eleitoral, avaliar se a ajuda é imprescindível e autorizar que o acompanhante ingresse na cabine de votação junto com o eleitor. Qualquer que seja o caso, o acompanhante não pode estar a serviço da Justiça Eleitoral, de partido político ou de coligação.",
-      "Segundo a Justiça Eleitoral, as urnas eletrônicas dispõem de “recursos destinados a ampliar a autonomia do eleitorado com deficiência durante a votação”, tais como:",
-      "O alistamento eleitoral e o voto são obrigatórios para todos eleitores com necessidades especiais, mas aqueles cuja deficiência impossibilitar ou tornar muito difícil o deslocamento até um local de votação, pode requerer à Justiça Eleitoral a expedição de quitação eleitoral com prazo de validade indeterminado.",
-      "Esse documento o isentará de multas e outras sanções aplicáveis ao eleitor que deixar de votar nas eleições oficiais."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706442",
@@ -97,15 +209,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Rebeca Andrade",
       "ginástica artística"
     ],
-    "content": [
-      "A brasileira Rebeca Andrade conquistou neste sábado (24) o tricampeonato no Campeonato Mundial de Ginástica Artística 2026, em Roterdã, Holanda.",
-      "Rebeca levou o primeiro lugar no pódio na prova do salto sobre a mesa, com 14.466 pontos. Em segundo e terceiro lugares ficaram as norte-americanas Claire Pease, com 14.233, e Skye Blakely, com 14.166 pontos.",
-      "Com a conquista, a brasileira acumula agora dez medalhas de mundiais, sendo quatro de ouro. Rebeca também foi campeã na mesma categoria em 2021 e 2023 e do individual geral, em 2022. A brasileira tem quatro pratas e dois bronzes.",
-      "O primeiro salto de Rebeca na prova foi um Yurchenko com dupla pirueta. Na sequência executou um López, salto com que faturou duas medalhas olímpicas e os títulos mundiais de 2021 e 2023.",
-      "Com o resultado, aos 27 anos Rebeca se iguala à chinesa Cheng Fei, que, até então, era a única tricampeã mundial (2005 a 2007) no salto sobre a mesa.",
-      "Natural de Guarulhos (SP), Rebeca começou a treinar aos 4 anos, em um projeto social da prefeitura, inspirada na ginasta Daiane dos Santos, também negra. Aos 10 anos, mudou-se, sem sua família, para Curitiba, para dar continuidade aos treinamentos e, no ano seguinte, passou a competir pelo Flamengo.",
-      "Em 2012, com apenas 13 anos e em seu primeiro campeonato como profissional, venceu o Troféu Brasil, desbancando nomes como Daniele Hypolito e Jade Barbosa. Ela estreou em olimpíadas em 2016, na edição do Rio de Janeiro."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706364",
@@ -1023,120 +1127,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Exército",
       "Marinha",
       "Aeronáutica"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1313433-governo-vai-apresentar-projeto",
-    "title": "Governo vai apresentar projeto de lei para perdoar dívidas dos setores de eventos, bares e restaurantes",
-    "summary": "Proposta será semelhante à que foi aprovada para os microempreendedores individuais (MEIs).",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1313433-governo-vai-apresentar-projeto-de-lei-para-perdoar-dividas-dos-setores-de-eventos-bares-e-restaurantes",
-    "publishedAt": "23/10/2026 às 11:35",
-    "category": "Congresso",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260701152607615-768x473.jpg",
-    "imageCaption": "Pereira: do ponto de vista fiscal, o perdão é muito efetivo",
-    "imageCredit": "Acervo Câmara dos Deputados",
-    "imageAlt": "ministro paulo pereira fala em evento",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706314",
-    "title": "Receita abre consulta a lote residual do Imposto de Renda",
-    "summary": "A Receita Federal abriu nesta sexta-feira (23) a consulta ao lote residual de restituição do Imposto de Renda Pessoa Física (IRPF). Ao todo, 184.442 contribuintes serão contemplados com R$ 531,6 milhões. O pagamento está previsto para 30 de outubro.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/receita-abre-consulta-lote-residual-do-imposto-de-renda",
-    "publishedAt": "23/10/2026 às 11:18",
-    "category": "Economia",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/uKX49-O7c6wbIMzfsIhaLX5OMw8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/24/_mg_6811.jpg?itok=jzzX6lGR",
-    "imageCaption": "Receita abre consulta a lote residual do Imposto de Renda",
-    "imageCredit": "Pedro Peduzzi – Repórter da Agência Brasil",
-    "imageAlt": "Receita abre consulta a lote residual do Imposto de Renda",
-    "author": "Pedro Peduzzi – Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "Imposto de Renda",
-      "IRPF",
-      "Receita Federal",
-      "Lote Residual"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706312",
-    "title": "Segundo turno: saiba como consultar local de votação para domingo",
-    "summary": "Os 158 milhões de eleitores que vão às urnas neste domingo (25) para escolher o próximo presidente da República precisam checar o endereço da seção eleitoral antes de sair de casa.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/segundo-turno-saiba-como-consultar-local-de-votacao-para-domingo",
-    "publishedAt": "23/10/2026 às 11:05",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/jv2SGSLyzVpVPhS84izpv7DAh8E=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/sem_titulo-13.jpg?itok=eT8DtiDC",
-    "imageCaption": "Segundo turno: saiba como consultar local de votação para domingo",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Segundo turno: saiba como consultar local de votação para domingo",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições",
-      "eleições 2026",
-      "Multimídia",
-      "e-titulo"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1311968-projeto-amplia-para-60-dias-o-",
-    "title": "Projeto amplia para 60 dias o período de propaganda eleitoral",
-    "summary": "Texto de análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1311968-projeto-amplia-para-60-dias-o-periodo-de-propaganda-eleitoral",
-    "publishedAt": "23/10/2026 às 10:43",
-    "category": "Congresso",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20220808104347890-768x500.jpg",
-    "imageCaption": "Prazo atual costuma ser inferior a 50 dias",
-    "imageCredit": "Thiago Fagundes/Agência Câmara",
-    "imageAlt": "ilustração propaganda eleitoral",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706308",
-    "title": "Prévia da inflação oficial cai pela metade e fecha outubro em 0,32%",
-    "summary": "A prévia da inflação oficial de outubro ficou em 0,32%, menos da metade do mês anterior (0,7%), conforme divulgou o Instituto Brasileiro de Geografia e Estatística (IBGE), nesta sexta-feira (23).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/previa-da-inflacao-oficial-cai-pela-metade-e-fecha-outubro-em-032",
-    "publishedAt": "23/10/2026 às 10:42",
-    "category": "Economia",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/zINkRz1_V0fLMRD-XYDGT7OCSUo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/luz.jpg?itok=BOWE2W1i",
-    "imageCaption": "Prévia da inflação oficial cai pela metade e fecha outubro em 0,32%",
-    "imageCredit": "Bruno de Freitas Moura - Repórter da Agência Brasil",
-    "imageAlt": "Prévia da inflação oficial cai pela metade e fecha outubro em 0,32%",
-    "author": "Bruno de Freitas Moura - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "undefined",
-      "Inflação"
     ],
     "content": []
   },
