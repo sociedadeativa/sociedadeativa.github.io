@@ -9,6 +9,12 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1706444/
+https://sociedadeativa.github.io/noticias/ebc-1706349/
+https://sociedadeativa.github.io/noticias/ebc-1706442/
+https://sociedadeativa.github.io/noticias/ebc-1706364/
+https://sociedadeativa.github.io/noticias/ebc-1706438/
+https://sociedadeativa.github.io/noticias/ebc-1706436/
 https://sociedadeativa.github.io/noticias/ebc-1706420/
 https://sociedadeativa.github.io/noticias/ebc-1706117/
 https://sociedadeativa.github.io/noticias/ebc-1706419/
@@ -50,12 +56,6 @@ https://sociedadeativa.github.io/noticias/ebc-1706314/
 https://sociedadeativa.github.io/noticias/ebc-1706312/
 https://sociedadeativa.github.io/noticias/camara-1311968-projeto-amplia-para-60-dias-o-/
 https://sociedadeativa.github.io/noticias/ebc-1706308/
-https://sociedadeativa.github.io/noticias/ebc-1706307/
-https://sociedadeativa.github.io/noticias/ebc-1706306/
-https://sociedadeativa.github.io/noticias/camara-1313398-familias-relatam-dificuldades-/
-https://sociedadeativa.github.io/noticias/ebc-1706282/
-https://sociedadeativa.github.io/noticias/camara-1313386-alem-do-segundo-turno-algumas-/
-https://sociedadeativa.github.io/noticias/ebc-1706203/
 https://sociedadeativa.github.io/noticias/ibge-48339/
 https://sociedadeativa.github.io/noticias/ibge-48336/
 https://sociedadeativa.github.io/noticias/ibge-48325/
