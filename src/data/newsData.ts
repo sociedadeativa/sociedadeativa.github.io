@@ -5,6 +5,247 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706670",
+    "title": "TRE-SP informa substituição 219 urnas até 15h, ou 0,19% do total",
+    "summary": "Até as 15h deste domingo (25), 219 urnas eletrônicas precisaram ser substituídas no maior colégio eleitoral do país, segundo boletim do Tribunal Regional Eleitoral de São Paulo (TRE-SP).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tre-sp-informa-substituicao-219-urnas-ate-15h-ou-019-do-total",
+    "publishedAt": "25/10/2026 às 16:03",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 16:20",
+    "imageUrl": "https://imagens.ebc.com.br/lQ6NY9FdzBkh9D80g6pNG7jD7i4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/24/_pin5556.jpg-9.jpg?itok=YtjuDpJ6",
+    "imageCaption": "TRE-SP informa substituição 219 urnas até 15h, ou 0,19% do total",
+    "imageCredit": "Elaine Patricia Cruz - Repórter da Agência Brasil",
+    "imageAlt": "TRE-SP informa substituição 219 urnas até 15h, ou 0,19% do total",
+    "author": "Elaine Patricia Cruz - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Justiça Eleitoral",
+      "TRE",
+      "São Paulo"
+    ],
+    "content": [
+      "Até as 15h deste domingo (25), 219 urnas eletrônicas precisaram ser substituídas no maior colégio eleitoral do país, segundo boletim do Tribunal Regional Eleitoral de São Paulo (TRE-SP).",
+      "O número é considerado baixo pelo tribunal e corresponde a 0,19% do total de urnas que são utilizadas neste segundo turno em cidades paulistas . Entre as urnas que precisaram ser substituídas, 55 são da capital.",
+      "A substituição das urnas não traz prejuízos para a eleição, assegura o Tribunal Superior Eleitoral (TSE). Segundo o TSE, um problema mecânico ou eletrônico na urna não paralisa a votação nem prejudica os votos que já foram registrados pelos eleitores .",
+      "Ao todo, o TRE paulista preparou 114.605 urnas eletrônicas para serem utilizadas no segundo turno . A estrutura inclui também as urnas de contingência, que são equipamentos mantidos de prontidão para eventuais substituições técnicas ao longo da votação.",
+      "O estado de São Paulo é o maior colégio eleitoral do país, com mais de 34,1 milhões de pessoas aptas a votar, o que corresponde a cerca de 21,4% do eleitorado nacional.",
+      "Neste pleito, os eleitores paulistas votaram apenas para presidente da República, porque o governador Tarcísio de Freitas foi reeleito no primeiro turno ."
+    ]
+  },
+  {
+    "id": "ebc-1706669",
+    "title": "PT notifica TRE-SP por falta de ônibus na cidade neste domingo",
+    "summary": "O Partido dos Trabalhadores (PT) enviou uma notificação ao Tribunal Regional Eleitoral de São Paulo (TRE-SP) informando que há problemas na circulação da frota de ônibus da cidade neste domingo (25) de segundo turno das eleições.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/pt-notifica-tre-sp-por-falta-de-onibus-na-cidade-neste-domingo",
+    "publishedAt": "25/10/2026 às 16:03",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 16:20",
+    "imageUrl": "https://imagens.ebc.com.br/87PyspnNdBkAVaYpmAaRn_WkYSM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/20230324092529_mg_5200_1.jpg?itok=Rb6jhDHV",
+    "imageCaption": "PT notifica TRE-SP por falta de ônibus na cidade neste domingo",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "PT notifica TRE-SP por falta de ônibus na cidade neste domingo",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "Eleições",
+      "eleições 2026",
+      "TRE-SP"
+    ],
+    "content": [
+      "O Partido dos Trabalhadores (PT) enviou uma notificação ao Tribunal Regional Eleitoral de São Paulo (TRE-SP) informando que há problemas na circulação da frota de ônibus da cidade neste domingo (25) de segundo turno das eleições.",
+      "Segundo Kiko Celeguim, presidente estadual do PT em São Paulo, a legenda notifica o TRE desde a manhã de hoje solicitando que a prefeitura normalize a operação dos ônibus. De acordo com a Justiça Eleitoral, o transporte público municipal deveria estar nas ruas com 100% de sua frota. Segundo Celeguim, há apenas 60% em operação.",
+      "Há relatos de dificuldade de transporte em diversos bairros das zonas leste e norte, com pessoas esperando durante quase uma hora a chegada dos ônibus.Celeguim ressaltou que é uma situação muito grave.",
+      "Devido a essa situação, o PT entrou com pedido de prisão do secretário de Mobilidade Urbana e Transporte, Celso Jorge Caldeira. O partido também pediu a regularização imediata da situação do transporte coletivo da cidade e também a extensão do horário de votação, principalmente nas regiões que foram mais afetadas pela falta de transporte público.",
+      "“Isso é muito grave o que o prefeito Ricardo Nunes está fazendo em São Paulo, de não permitir que as pessoas exerçam seu direito à democracia e escolham o seu próximo presidente da República”, afirmou Celeguim.",
+      "A prefeitura de São Paulo informou que recebeu notificação do TRE ainda no sábado (24) a respeito do funcionamento de 100% da frota de ônibus.",
+      "“Imediatamente após receber a notificação, às 13h32, a SPTrans agiu de forma diligente e proativa, comunicando todas as concessionárias responsáveis pelos 32 lotes operacionais da cidade e transmitindo a determinação judicial para adoção das providências necessárias ao seu cumprimento. A atuação da empresa foi pautada pela agilidade, pela transparência e pelo compromisso com a prestação do serviço público de transporte”.",
+      "O órgão municipal relatou dificuldades na ampliação da frota “em prazo tão reduzido”, o que teria gerado alguns “desafios”, como a “readequação das escalas de trabalho e rotinas previamente estabelecidas”.",
+      "O TRE-SP divulgou um comunicado informando que “até o momento, não foi reportada para o TRE-SP qualquer situação que pudesse comprometer o exercício do voto. A eleição está transcorrendo normalmente e os eleitores estão chegando aos seus locais de votação. No entanto, caso algum eleitor enfrente dificuldades, a recomendação é encaminhar a denúncia ao Ministério Público Eleitoral”."
+    ]
+  },
+  {
+    "id": "ebc-1706666",
+    "title": "TRE-BA determina prisão de secretário de Mobilidade de Salvador",
+    "summary": "O presidente do Tribunal Regional Eleitoral da Bahia (TRE-BA), Maurício Kertzman Szporer, determinou à Superintendência Regional da Polícia Federal (PF) que prenda, imediatamente, o secretário municipal de Mobilidade de Salvador, Pablo Souza.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tre-ba-determina-prisao-de-secretario-de-mobilidade-de-salvador",
+    "publishedAt": "25/10/2026 às 15:52",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 16:20",
+    "imageUrl": "https://imagens.ebc.com.br/7JGbjepVf4ToXz5qv47CWAn0HzI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/pablosalvador.jpg?itok=4_I7B-7N",
+    "imageCaption": "TRE-BA determina prisão de secretário de Mobilidade de Salvador",
+    "imageCredit": "Alex Rodrigues - Repórter da Agência Brasil",
+    "imageAlt": "TRE-BA determina prisão de secretário de Mobilidade de Salvador",
+    "author": "Alex Rodrigues - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "TRE-BA",
+      "Transporte Público",
+      "transporte de eleitor"
+    ],
+    "content": [
+      "O presidente do Tribunal Regional Eleitoral da Bahia (TRE-BA), Maurício Kertzman Szporer, determinou à Superintendência Regional da Polícia Federal (PF) que prenda, imediatamente, o secretário municipal de Mobilidade de Salvador, Pablo Souza.",
+      "A decisão do desembargador foi provocada pela Federação Brasil Esperança, que reúne os partidos PT, PCdoB e PV. Mais cedo, a federação denunciou à Justiça Eleitoral que o sistema de transporte coletivo urbano da capital baiana estava operando com uma redução da frota superior a 50% em comparação aos dias úteis.",
+      "De acordo com o desembargador, após a Justiça Eleitoral receber a denúncia de federação partidária, um juiz auxiliar inspecionou a sede do BRT e constatou a presença de vários veículos parados no local. Além disso, um supervisor do local, Igor César da Cruz Moraes, confirmou ao juiz que, “seguindo orientação da Semob”, a frota em atividade até aquele momento era inferior à de dias úteis.",
+      "Em entrevista ao portal Metrópoles, o prefeito de Salvador, Bruno Reis (União Brasil), confirmou que parte da frota não deixou as garagens. Segundo ele, isso ocorreu porque “sindicalistas” colaram adesivos alusivos a candidatos do PT nos ônibus, forçando as empresas a recolhê-los para não serem acusadas de fazer propaganda eleitoral irregular.",
+      "“Considerando-se que a orientação para redução da frota partiu da Secretaria Municipal de Mobilidade de Salvador (Semob), diante das evidências da violação dos artigos 297, 304 e 347 do Código Eleitoral, determino seja procedida a imediata prisão do seu titular, o secretário Pablo Souza”, determinou o presidente do TRE-BA.",
+      "O desembargador também ordenou que a Semob e as empresas concessionárias assegurem a liberação de 100% da frota, garantindo a frequência e itinerários compatíveis com os de dias úteis, além da gratuidade das passagens . Caso não cumpram a decisão em até uma hora após terem sido notificados, a secretaria e as empresas de transporte estarão sujeitas a multas de R$ 1 milhão/hora.",
+      "Szporer também determinou que a Procuradoria Regional Eleitoral apure o caso e adote as providências necessárias.",
+      "A Agência Brasil não conseguiu contato com o secretário Pablo Souza ou com seus advogados. A reportagem também procurou a Superintendência da PF, mas ainda não teve respostas.",
+      "Em nota, a Semob informou que já determinou que todos os ônibus fossem liberados das garagens, com a frota máxima, ainda que estivessem com adesivos de candidatos – o que pode configurar propaganda irregular.",
+      "“A prioridade segue sendo a circulação de veículos e o deslocamento da população. A operação já está sendo normalizada através do diálogo entre as equipes da secretaria e representantes sindicais”, assegurou a Semob, no início da tarde."
+    ]
+  },
+  {
+    "id": "ebc-1706664",
+    "title": "Eleitores de todas as idades vão às urnas pelo futuro do país",
+    "summary": "Aos 95 anos, Horácio da Silva não se furtou ao direito de votar neste domingo (25), mesmo em uma idade em que não precisava sair de casa para escolher quem vai governar o Brasil nos próximos quatro anos.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitores-de-todas-idades-vao-urnas-pelo-futuro-do-pais",
+    "publishedAt": "25/10/2026 às 15:51",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 16:20",
+    "imageUrl": "https://imagens.ebc.com.br/6i7vAqhE0o9-3j3k1E3dq3WFwtI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/0d7a1502.jpg.jpeg?itok=WoaNfY1t",
+    "imageCaption": "Eleitores de todas as idades vão às urnas pelo futuro do país",
+    "imageCredit": "Daniella Almeida - repórter da Agência Brasil",
+    "imageAlt": "Eleitores de todas as idades vão às urnas pelo futuro do país",
+    "author": "Daniella Almeida - repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Segundo Turno",
+      "Justiça Eleitoral",
+      "Distrito Federal"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706665",
+    "title": "Pedido para ampliar horário de votação será avaliado, afirma Marques",
+    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, disse que os pedidos para ampliar o horário de votação em localidades que tiveram dificuldades no transporte de eleitores serão analisados “no tempo certo”.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/pedido-para-ampliar-horario-de-votacao-sera-avaliado-afirma-marques",
+    "publishedAt": "25/10/2026 às 15:44",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 16:20",
+    "imageUrl": "https://imagens.ebc.com.br/lp-zFbur0o2SOLI2VWyjUYLjbyk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/sem_titulo-6.jpg?itok=Qq4t5eEa",
+    "imageCaption": "Pedido para ampliar horário de votação será avaliado, afirma Marques",
+    "imageCredit": "Felipe Pontes - Repóter da Agência Brasil",
+    "imageAlt": "Pedido para ampliar horário de votação será avaliado, afirma Marques",
+    "author": "Felipe Pontes - Repóter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "TSE",
+      "Nunes Marques",
+      "Eleições"
+    ],
+    "content": []
+  },
+  {
+    "id": "camara-1313667-presidente-do-tse-destaca-uso-",
+    "title": "Presidente do TSE destaca uso de ferramentas tecnológicas contra a desinformação",
+    "summary": "Para ministro, visita dos presidentes da Câmara e do Senado no dia da eleição foi \"um ato institucional de relevante grandeza\".",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313667-presidente-do-tse-destaca-uso-de-ferramentas-tecnologicas-contra-a-desinformacao",
+    "publishedAt": "25/10/2026 às 15:32",
+    "category": "Congresso",
+    "ingestedAt": "25/10/2026 às 16:20",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/whatsapp-image-2026-10-25-at-13-23-37-1-768x489.jpeg",
+    "imageCaption": "Davi Alcolumbre (E), Kássio Nunes e Hugo Motta no TSE",
+    "imageCredit": "Divulgação",
+    "imageAlt": "Davi Alcolumbre (E), Kássio Nunes e Hugo Motta",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706661",
+    "title": "Em Salvador, quem estiver na seção eleitoral às 17h poderá votar",
+    "summary": "O corregedor-geral da Justiça Eleitoral, ministro Ricardo Villas Bôas Cueva, determinou neste domingo (25) que as autoridades eleitorais da Bahia garantam a distribuição de senhas para todos que estiverem no local de votação às 17h, mesmo que apenas nas áreas externas ou.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/em-salvador-quem-estiver-17h-na-fila-podera-votar-diz-tse",
+    "publishedAt": "25/10/2026 às 15:28",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 16:20",
+    "imageUrl": "https://imagens.ebc.com.br/YhOEf2z2rGKjnjahWOwd3K0yhfU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/41036430972_0313eeb34c_o.jpg?itok=PiR4_qfP",
+    "imageCaption": "Em Salvador, quem estiver na seção eleitoral às 17h poderá votar",
+    "imageCredit": "Felipe Pontes - Agência Brasil",
+    "imageAlt": "Em Salvador, quem estiver na seção eleitoral às 17h poderá votar",
+    "author": "Felipe Pontes - Agência Brasil",
+    "tags": [
+      "Política",
+      "Salvador",
+      "votação",
+      "eleições 2026",
+      "ônibus"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706659",
+    "title": "PM detém cinco pessoas por crimes eleitorais em São Paulo",
+    "summary": "A Polícia Militar de São Paulo deteve cinco pessoas, neste domingo (25), por crimes eleitorais. A maioria dos crimes ocorreu após eleitores fotografarem as urnas eletrônicas ou usarem o celular durante a votação, o que é proibido pela legislação eleitoral.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/pm-detem-cinco-pessoas-por-crimes-eleitorais-em-sao-paulo",
+    "publishedAt": "25/10/2026 às 15:07",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 16:20",
+    "imageUrl": "https://imagens.ebc.com.br/yTdZmy8ZpSEFMmlkNtmHY0pRWM4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int9415.jpg?itok=qduWtKIi",
+    "imageCaption": "PM detém cinco pessoas por crimes eleitorais em São Paulo",
+    "imageCredit": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "imageAlt": "PM detém cinco pessoas por crimes eleitorais em São Paulo",
+    "author": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "eleições",
+      "segundo turno",
+      "Polícia Militar"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706648",
+    "title": "TRE-BA determina retomada integral da frota de ônibus em Salvador",
+    "summary": "O Tribunal Regional Eleitoral da Bahia (TRE-BA) determinou neste domingo (25) o restabelecimento imediato da frota integral do transporte público de Salvador operando com frequência equivalente à de dias úteis e mantida a gratuidade integral aos passageiros.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tre-ba-determina-retomada-integral-da-frota-de-onibus-em-salvador",
+    "publishedAt": "25/10/2026 às 14:34",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 16:20",
+    "imageUrl": "https://imagens.ebc.com.br/RiCkyXs0KXRVQmXTKJ834RS5bvU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/_ja_0128.jpg?itok=2hinapk2",
+    "imageCaption": "TRE-BA determina retomada integral da frota de ônibus em Salvador",
+    "imageCredit": "Paula Laboissière e Pedro Peduzzi – Repórteres da Agência Brasil",
+    "imageAlt": "TRE-BA determina retomada integral da frota de ônibus em Salvador",
+    "author": "Paula Laboissière e Pedro Peduzzi – Repórteres da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "TRE-BA",
+      "transporte público",
+      "eleitor"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706643",
     "title": "Vereadora do PT é atacada durante carreata em Montes Claros",
     "summary": "A disputa acirrada deste segundo turno tem sido acompanhada por episódios de violência política contra candidatos, militantes, agentes públicos e cidadãos.",
@@ -25,23 +266,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições 2026",
       "Eleições"
     ],
-    "content": [
-      "A disputa acirrada deste segundo turno tem sido acompanhada por episódios de violência política contra candidatos, militantes, agentes públicos e cidadãos.",
-      "Em Montes Claros (MG), a vereadora Iara Pimentel (PT) foi atingida no rosto por um objeto durante ato político realizado na noite de ontem e teve de deixar o local em uma ambulância do Samu. Segundo o relato, o carro de som em que estava foi alvo de garrafas, tijolos e outros objetos.",
-      "A vereadora afirmou que a agressão é incompatível com a democracia, defendeu a liberdade de manifestação política e cobrou “investigação rigorosa, apuração dos fatos e responsabilização dos envolvidos”. Também afirmou que a violência política não pode ser naturalizada e que nenhuma divergência justifica agressões.",
-      "“Pensar diferente é um direito. A violência política é uma ameaça à democracia. Nenhuma divergência pode justificar agressões ou colocar vidas em risco”, argumentou.",
-      "O episódio de Montes Claros foi citado também pela deputada federal eleita Ana Elisa (PT-MG), que classificou a agressão sofrida por Iara Pimentel como “inadmissível”. Ela afirmou que “a democracia não combina com pedras, ameaças e agressões” e manifestou solidariedade à vereadora e às demais pessoas feridas, defendendo a responsabilização dos autores .",
-      "A parlamentar já havia denunciado ser alvo de violência política, a ponto de ter de desativar sua conta no X após sucessivas ameaças de morte e estupro .",
-      "Ana Elisa afirmou que recebia ataques \"a cada dois minutos\", declarou estar \"totalmente vulnerável\" e informou ter levado o caso à Polícia Civil de Minas Gerais. As mensagens continham conteúdos racistas, misóginos e de violência sexual.",
-      "Diante das ameaças sofridas, a deputada eleita foi incluída no Programa Estadual de Proteção de Minas Gerais .",
-      "Após votar em São Bernardo do Campo (SP), o presidente Luiz Inácio Lula da Silva citou episódios de violência registrados durante a campanha e defendeu a convivência democrática entre pessoas com opiniões políticas, religiosas e visões de mundo diferentes.",
-      "O presidente afirmou que divergências políticas não podem resultar em agressões. “A coisa mais sagrada na democracia é a convivência democrática na diversidade”, disse o presidente, citando o caso da vereadora mineira.",
-      "“Os vizinhos não precisam torcer para o mesmo time, mas não precisam brigar. Os vizinhos não precisam ter o mesmo candidato, mas também não precisam brigar. Não precisam gostar da mesma religião, mas também não precisam brigar. Se cada um aprender a respeitar o direito dos outros, a fé dos outros, o time dos outros e o partido dos outros, a gente exerce a democracia na sua plenitude”, acrescentou.",
-      "Há também relatos de ameaças contra servidores da Justiça Eleitoral. A Federação Nacional dos Trabalhadores e das Trabalhadoras do Judiciário Federal e Ministério Público da União (Fenajufe) divulgou nota de repúdio às intimidações que vêm sendo feitas desde o primeiro turno das eleições. Diante da situação, tem cobrado a responsabilização dos envolvidos.",
-      "A União Brasileira de Mulheres do Distrito Federal (UBM-DF) denunciou, na véspera do segundo turno, agressão contra sua presidenta, Maria das Neves Filha, e contra a presidenta da Mocidade do Gama, Edilamar Melo.",
-      "O caso ocorreu durante uma atividade de panfletagem em frente ao CEMI-Gama e foi registrado em vídeo. Segundo a entidade, o homem identificado é policial militar aposentado e teria arremessado uma mesa e derrubado materiais da atividade.",
-      "A UBM-DF informou ter registrado boletim de ocorrência, anunciado medidas judiciais e divulgado vídeo do episódio. Na nota, a entidade afirma que “não podemos naturalizar a barbárie e a violência contra mulheres” e caracteriza o caso como violência política de gênero."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706640",
@@ -65,16 +290,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Racismo",
       "Eleições"
     ],
-    "content": [
-      "O Ministério da Igualdade Racial encaminhou nesta manhã (25) ofícios ao Ministério da Justiça e Segurança Pública e à Procuradoria Regional Eleitoral no Estado do Rio de Janeiro para que os dois órgãos investiguem um episódio de crime racista ocorrido na tarde de ontem (24) durante manifestação em favor do candidato Flávio Bolsonaro.",
-      "Um vídeo publicado em diversas redes sociais e sites de notícias mostraram um militante bolsonarista branco conduzindo um homem negro acorrentado, durante o último ato de campanha do candidato à Presidência da República, senador Flávio Bolsonaro (PL), neste sábado (24), na Praça do Ó, na Barra da Tijuca, no Rio de Janeiro.",
-      "O candidato estava em um trio elétrico acompanhado do deputado federal Nikolas Ferreira (PL), do governador de São Paulo, Tarcísio de Freitas (Republicanos), e do governador eleito do Rio de Janeiro, Douglas Ruas (PL).",
-      "Na imagem é possível ver que o apoiador de Flávio Bolsonaro estava vestido de calça e jaqueta verde e branco com aplicações da bandeira do Brasil, camisa e tênis azuis. O homem negro acorrentado estava com uma camisa com listras vermelho e preto, bermuda preta e carregava um tridente. O homem branco se refere ao homem negro como “Luladrão, Satanás e Capiroto”.",
-      "“Cenas como essa, especialmente no contexto eleitoral, têm um significado ainda mais profundo sobre as marcas que nossa sociedade ainda carrega sobre o período escravagista e como ele segue ferindo nossa nação”, completou a pasta.",
-      "Mais cedo, a deputada federal eleita pelo Rio de Janeiro Anielle Franco (PT) publicou uma mensagem no seu perfil na rede social X informando que iria acionar o Ministério da Igualdade Racial para que adotasse as medidas necessárias tanto em relação ao caso de racismo no Rio de Janeiro quanto ao de intolerância religiosa em Belo Horizonte, ambos ocorridos em atos bolsonaristas.",
-      "Na capital mineira, uma mulher rasgou uma imagem de Nossa Senhora Aparecida, durante um ato pró Flávio Bolsonaro.",
-      "“Estive na live do Exército do Lula com Janones, Muka e Rafael Infante. Falamos de mobilização e virada de votos, mas também de dois absurdos: racismo na Barra e intolerância religiosa em BH. Vou procurar o Ministério da Igualdade Racial para entender as medidas cabíveis. Não vamos deixar passar!”, disse Anielle na publicação."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706637",
@@ -98,20 +314,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "urnas",
       "votação"
     ],
-    "content": [
-      "Os eleitores do Rio de Janeiro comparecem aos locais de votação no horário de abertura das urnas, neste domingo (25), mesmo com chuva. Quase 12,9 milhões de pessoas estão aptas a votar no estado, sendo 4,9 milhões na capital, no segundo turno das eleições.",
-      "Com um único voto para depositar, o processo está transcorrendo muito mais rápido do que no primeiro turno. Na Universidade Unisuam, em Bonsucesso, na Zona Norte, maior local de votação da capital, com 13 mil eleitores, o fluxo de pessoas foi grande durante a manhã, mas poucas sessões tinham fila.",
-      "O casal Tamara Almeida e Eduardo de Andrade preferiu ir logo no começo da votação para garantir que conseguiriam deixar seus votos na urna. Encontraram uma situação bem mais tranquila do que a do primeiro turno.",
-      "Paulo Cesar da Silva também saiu cedinho da cidade de Nova Iguaçu, e mesmo com um ferimento na perna, fez questão de participar da eleição. Com a ajuda de uma muleta e das rampas da universidade, disse que não teve problemas para chegar à sua sessão eleitoral.",
-      "Marcus Vinicius de Andrade, que mora no Complexo da Maré disse que o transporte gratuito facilitou muito a sua participação nessa eleição. Ele votava perto de casa, mas seu local de votação foi um dos 72 alterados pelo Tribunal Regional Eleitoral.",
-      "\"No primeiro turno, falaram que meu local era em outra escola, cheguei lá e enfrentei a maior fila, quando eu entrei, me falaram que era aqui, mas deu tempo de votar. Hoje foi bem tranquilo e muito rápido.\"",
-      "De acordo com mesários, duas participações se destacam neste domingo (25): a dos idosos e a de pessoas que não votaram no primeiro turno, mas compareceram às sessões no segundo.",
-      "Maria das Dores de Lima, de 82, se encaixa nas duas situações. Com a ajuda de uma cadeira de rodas por causa de um problema na coluna, ela fez questão de participar: \"É muito importante votar. E eu também quero fazer a minha prova de vida do INSS\", ela disse.",
-      "A neta Alexia de Lima complementa: \"No primeiro turno, ficamos receosos de trazer, por causa de toda a movimentação. Mas como hoje está mais tranquilo, decidimos vir\"",
-      "Regina Maria Neves, de 79 anos, também quis garantir sua participação. Pegou um ônibus em Duque de Caxias, na Baixada Fluminense, para chegar a Vila Isabel, na capital, onde vota e esperou cerca de 30 minutos, sob chuva, até a abertura do local de votação.",
-      "\"Todo cidadão brasileiro tem que votar. Perdendo ou ganhando todo mundo tem que vir, porque a nossa opinião importa\", disse.",
-      "Gilberto Adamati, de 73 anos, chegou antes das 8h ao local. \"Eu penso que é uma responsabilidade com o país. Estou bem de saúde, então não há porque deixar de vir. Eu soube de uma senhorinha de 96 anos que foi votar em cadeira de rodas. Um exemplo desses, não tem como a gente não seguir.\""
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706635",
@@ -827,30 +1030,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "content": []
   },
   {
-    "id": "ebc-1706349",
-    "title": "Saiba os direitos de idosos e pessoas com deficiência para votar",
-    "summary": "Para assegurar que o momento de ir às urnas ocorra com agilidade, conforto e segurança, a legislação brasileira estabelece um conjunto de direitos e preferências destinados a pessoas com deficiência, mobilidade reduzida e idosos.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/saiba-os-direitos-de-idosos-e-pessoas-com-deficiencia-para-votar",
-    "publishedAt": "24/10/2026 às 15:22",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 16:20",
-    "imageUrl": "https://imagens.ebc.com.br/vGW-z6BREURQ26sp8EmkunTyQbs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/10/02/0g0a5820.jpg?itok=2WKvmqop",
-    "imageCaption": "Saiba os direitos de idosos e pessoas com deficiência para votar",
-    "imageCredit": "Alex Rodrigues - Repórter da Agência Brasil",
-    "imageAlt": "Saiba os direitos de idosos e pessoas com deficiência para votar",
-    "author": "Alex Rodrigues - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "segundo turno",
-      "prioridade",
-      "acessibilidade"
-    ],
-    "content": []
-  },
-  {
     "id": "ebc-1706442",
     "title": "Rebeca Andrade conquista o tri no Mundial de Ginástica na Holanda",
     "summary": "A brasileira Rebeca Andrade conquistou neste sábado (24) o tricampeonato no Campeonato Mundial de Ginástica Artística 2026, em Roterdã, Holanda. Rebeca levou o primeiro lugar no pódio na prova do salto sobre a mesa, com 14.466 pontos.",
@@ -869,148 +1048,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Esportes",
       "Rebeca Andrade",
       "ginástica artística"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706364",
-    "title": "Trabalhador tem direito de sair do serviço para votar; confira a lei",
-    "summary": "O eleitor que vai trabalhar no dia da eleição tem o direito de se ausentar do serviço para exercer o direito ao voto, sem prejuízo de salário. A regra está prevista no artigo 234 da Lei eleitoral e em uma resolução complementar do Tribunal Superior Eleitoral (TSE), de 2026.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/trabalhador-tem-direito-de-sair-do-servico-para-votar-confira-lei",
-    "publishedAt": "24/10/2026 às 14:30",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 16:20",
-    "imageUrl": "https://imagens.ebc.com.br/jaYzG5d4xcggHxuUz0e-tfE64LU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/0d4a2205.jpg?itok=FzLyvykL",
-    "imageCaption": "Trabalhador tem direito de sair do serviço para votar; confira a lei",
-    "imageCredit": "Iara Balduino - Repórter da Agência Brasil",
-    "imageAlt": "Trabalhador tem direito de sair do serviço para votar; confira a lei",
-    "author": "Iara Balduino - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Lei Eleitoral",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706438",
-    "title": "Bullying: cartórios têm recorde de atas que podem comprovar agressões",
-    "summary": "Em 2025, os cartórios de notas brasileiros registraram 153.267 atas notariais, documento que pode ser utilizado para comprovar mensagens, publicações e outras evidências de bullying e cyberbullying.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/bullying-cartorios-tem-recorde-de-atas-que-podem-comprovar-agressoes",
-    "publishedAt": "24/10/2026 às 14:06",
-    "category": "Justiça",
-    "ingestedAt": "24/10/2026 às 16:20",
-    "imageUrl": "https://imagens.ebc.com.br/0mlcP7GYAzAsATD1pplQL0Gij5g=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/cartorio.jpg?itok=qhkoLmEw",
-    "imageCaption": "Bullying: cartórios têm recorde de atas que podem comprovar agressões",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Bullying: cartórios têm recorde de atas que podem comprovar agressões",
-    "author": "Agência Brasil",
-    "tags": [
-      "Justiça",
-      "cartórios",
-      "atas",
-      "comprovação",
-      "agressões"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706436",
-    "title": "Cartórios lançam ferramenta que permite pesquisar imóveis no país",
-    "summary": "Já é possível pesquisar informações relacionadas ao vínculo de CPFs e CNPJs a imóveis nos mais de 3,6 mil Registros de Imóveis dos 26 estados e do Distrito Federal.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/cartorios-lancam-ferramenta-que-permite-pesquisar-imoveis-no-pais",
-    "publishedAt": "24/10/2026 às 13:42",
-    "category": "Política",
-    "ingestedAt": "24/10/2026 às 16:20",
-    "imageUrl": "https://imagens.ebc.com.br/CZ9A_4dJllpUdoleSAio0tK1CUE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/21/img_9497.jpg-16.jpg?itok=Scnv_k0v",
-    "imageCaption": "Cartórios lançam ferramenta que permite pesquisar imóveis no país",
-    "imageCredit": "Ana Cristina Campos - Repórter da Agência Brasil",
-    "imageAlt": "Cartórios lançam ferramenta que permite pesquisar imóveis no país",
-    "author": "Ana Cristina Campos - Repórter da Agência Brasil",
-    "tags": [
-      "Geral",
-      "registro de imóveis",
-      "Cartórios",
-      "pesquisa",
-      "Ferramenta"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706420",
-    "title": "Protestos na França começam sob forte esquema de segurança",
-    "summary": "Manifestantes se reuniram em Paris e em cidades de toda a França neste sábado (24), sob a vigilância de 70 mil policiais, enquanto o governo tentava evitar a repetição dos distúrbios e saques que sacudiram o país no fim de semana passado.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/protestos-na-franca-comecam-sob-forte-esquema-de-seguranca",
-    "publishedAt": "24/10/2026 às 12:38",
-    "category": "Governo",
-    "ingestedAt": "24/10/2026 às 13:58",
-    "imageUrl": "https://imagens.ebc.com.br/DIf3YrILB1gFJ-6pbmke4vVD0Wg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/09/2026-10-09t150347z_1_lynxmpem981cp_rtroptp_4_france-protest-schools.jpg?itok=VfjPSiH6",
-    "imageCaption": "Protestos na França começam sob forte esquema de segurança",
-    "imageCredit": "Juliette Jabkhiro e Alessandro Parodi - Repórteres da Reuters*",
-    "imageAlt": "Protestos na França começam sob forte esquema de segurança",
-    "author": "Juliette Jabkhiro e Alessandro Parodi - Repórteres da Reuters*",
-    "tags": [
-      "Internacional",
-      "França",
-      "manifestantes",
-      "protestos",
-      "esquema de segurança"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706117",
-    "title": "Eleições 2026: saiba o que caracteriza o crime de boca de urna",
-    "summary": "Neste domingo (25), assim como em todas as eleições, os eleitores não podem pedir votos, distribuir propaganda ou abordar eleitores para influenciar a escolha do candidato.. Essas práticas podem caracterizar o crime de boca de urna.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleicoes-2026-saiba-o-que-caracteriza-o-crime-de-boca-de-urna",
-    "publishedAt": "24/10/2026 às 12:28",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 13:58",
-    "imageUrl": "https://imagens.ebc.com.br/kyiqCPDQPP7iS3nMrAmUL55MYpo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/1048186-rj_021016tnrg000523.jpg?itok=zuHVXxxX",
-    "imageCaption": "Eleições 2026: saiba o que caracteriza o crime de boca de urna",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Eleições 2026: saiba o que caracteriza o crime de boca de urna",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "Eleições",
-      "eleições 2026",
-      "Eleições 2026"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706419",
-    "title": "Ministério da Justiça faz operação para garantir segurança no 2º turno",
-    "summary": "O Ministério da Justiça e Segurança Pública (MJSP) iniciou, neste sábado (24), operação para garantir a segurança no segundo turno das eleições. As ações, que vão até amanhã (25), são realizadas em conjunto com órgãos federais e estaduais de segurança.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/ministerio-da-justica-faz-operacao-para-garantir-seguranca-no-2o-turno",
-    "publishedAt": "24/10/2026 às 12:18",
-    "category": "Justiça",
-    "ingestedAt": "24/10/2026 às 13:58",
-    "imageUrl": "https://imagens.ebc.com.br/x3C0vPOocQPWdHkERamGPBAqNuA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/01/05/c7494e27-8081-498c-9d4f-ace1e923ee83.jpeg?itok=Cygb6HxS",
-    "imageCaption": "Ministério da Justiça faz operação para garantir segurança no 2º turno",
-    "imageCredit": "Luciano Nascimento - Repórter da Agência Brasil",
-    "imageAlt": "Ministério da Justiça faz operação para garantir segurança no 2º turno",
-    "author": "Luciano Nascimento - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Ministério da Justiça",
-      "operação",
-      "Segundo Turno"
     ],
     "content": []
   },
@@ -1061,30 +1098,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "content": []
   },
   {
-    "id": "ebc-1706412",
-    "title": "Inmet: Domingo de eleição será chuvoso em boa parte do país; confira",
-    "summary": "O fim de semana de eleições terá predomínio de tempo seco e de temperaturas elevadas no Norte e o Nordeste do Brasil, com possibilidade de chuvas isoladas. Já no centro-sul, a previsão é de chuvas concentradas, especialmente na região Sul, além de instabilidade no Centro-Oeste.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/inmet-domingo-de-eleicao-sera-chuvoso-em-boa-parte-do-pais-confira",
-    "publishedAt": "24/10/2026 às 11:09",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 13:58",
-    "imageUrl": "https://imagens.ebc.com.br/ckexu9DshzbbG6_b4ti9lAlvtDs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/10/_int9067.jpg?itok=4zQBnN2v",
-    "imageCaption": "Inmet: Domingo de eleição será chuvoso em boa parte do país; confira",
-    "imageCredit": "Luciano Nascimento - Repórter da Agência Brasil",
-    "imageAlt": "Inmet: Domingo de eleição será chuvoso em boa parte do país; confira",
-    "author": "Luciano Nascimento - Repórter da Agência Brasil",
-    "tags": [
-      "Meio Ambiente",
-      "eleições 2026",
-      "metereologia",
-      "Previsão do Tempo",
-      "Inmet"
-    ],
-    "content": []
-  },
-  {
     "id": "camara-1305735-projeto-permite-que-professor-",
     "title": "Projeto permite que professor da rede pública prepare aulas em casa",
     "summary": "Texto está em análise na Câmara dos Deputados.",
@@ -1120,28 +1133,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "imageCaption": "Ilacir Bicalho: pequenos negócios ainda enfrentam dificuldades para acessar a recuperação judicial",
     "imageCredit": "Thiago Cristino / Câmara dos Deputados",
     "imageAlt": "Discussão e votação de propostas legislativas. Dep. Ilacir Bicalho (REPUBLICANOS - MG)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1309995-projeto-reconhece-cultivo-de-c",
-    "title": "Projeto reconhece cultivo de café como opção para reflorestamento na Amazônia Legal",
-    "summary": "Texto está em analise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1309995-projeto-reconhece-cultivo-de-cafe-como-opcao-para-reflorestamento-na-amazonia-legal",
-    "publishedAt": "23/10/2026 às 12:59",
-    "category": "Congresso",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260429165211795-768x473.jpg",
-    "imageCaption": "O deputado Roberto Duarte é o autor da proposta",
-    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Roberto Duarte (REPUBLICANOS - AC)",
     "author": "Agência Câmara de Notícias",
     "tags": [
       "Congresso",
