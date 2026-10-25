@@ -135,5 +135,5 @@ export const SECOND_ROUND_DATA: SecondRoundTotalization = {
     }
   ],
   "statusLabel": "Apuração oficial em andamento (0,25%)",
-  "lastUpdated": "2026-10-25T20:57:42.784Z"
+  "lastUpdated": "2026-10-25T21:27:09.313Z"
 };
