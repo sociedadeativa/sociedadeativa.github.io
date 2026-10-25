@@ -5,6 +5,251 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706600",
+    "title": "Nas duas primeiras horas de votação, 467 urnas foram substituídas",
+    "summary": "Nas primeiras 2 horas de votação, de 8h às 10h, o Tribunal Superior Eleitoral (TSE) informou em boletim que 467 urnas eletrônicas precisaram ser substituídas em todo o país neste domingo (25) de segundo turno das eleições.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/nas-2-primeiras-horas-de-votacao-467-urnas-foram-substituidas",
+    "publishedAt": "25/10/2026 às 11:10",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 11:20",
+    "imageUrl": "https://imagens.ebc.com.br/lQ6NY9FdzBkh9D80g6pNG7jD7i4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/24/_pin5556.jpg-9.jpg?itok=YtjuDpJ6",
+    "imageCaption": "Nas duas primeiras horas de votação, 467 urnas foram substituídas",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Nas duas primeiras horas de votação, 467 urnas foram substituídas",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Eleições",
+      "urna aletrônica",
+      "TSE"
+    ],
+    "content": [
+      "Nas primeiras 2 horas de votação, de 8h às 10h, o Tribunal Superior Eleitoral (TSE) informou em boletim que 467 urnas eletrônicas precisaram ser substituídas em todo o país neste domingo (25) de segundo turno das eleições.",
+      "O número corresponde a 0,09% das 499.248 urnas empregadas na votação deste ano.",
+      "A Justiça Eleitoral deixou reservados mais 48.815 equipamentos para substituição, se necessário.",
+      "O TSE não informou os motivos que levaram à substituição das urnas. Em geral a troca ocorre devido a falhas operacionais.",
+      "No primeiro turno, em 4 de outubro, foram substituídas 1.904 urnas.",
+      "Mesmo que a urna eletrônica substituída apresente falha, a legislação prevê, como último recurso, a adoção de votação com cédula de papel. Até o momento, contudo, não foi necessário.",
+      "Neste domingo (25), mais de 158,7 milhões de eleitores estão aptos a votar para presidente no segundo turno."
+    ]
+  },
+  {
+    "id": "ebc-1706574",
+    "title": "Lula vota e enaltece mobilização popular: \"nunca vi nada igual\"",
+    "summary": "O presidente Luiz Inácio Lula da Silva (PT), candidato à reeleição nas eleições de 2026, votou na manhã deste domingo (25) na Escola Estadual João Firmino Correia de Araújo, em São Bernardo do Campo, no ABC paulista.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/presidente-lula-vota-no-2o-turno-em-sao-bernardo-do-campo-sp",
+    "publishedAt": "25/10/2026 às 11:02",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 11:20",
+    "imageUrl": "https://imagens.ebc.com.br/CnEUusLcLZ6FIRLDaDYhiltsJRg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/2026-10-25t133057z_1_lynxnpem9o0cy_rtroptp_4_brazil-election.jpg?itok=Qs5qOgFJ",
+    "imageCaption": "Lula vota e enaltece mobilização popular: \"nunca vi nada igual\"",
+    "imageCredit": "Odair Braz - Repórter da Agência Brasil",
+    "imageAlt": "Lula vota e enaltece mobilização popular: \"nunca vi nada igual\"",
+    "author": "Odair Braz - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Lula",
+      "Votação",
+      "Eleições"
+    ],
+    "content": [
+      "O presidente Luiz Inácio Lula da Silva (PT), candidato à reeleição nas eleições de 2026, votou na manhã deste domingo (25) na Escola Estadual João Firmino Correia de Araújo, em São Bernardo do Campo, no ABC paulista.",
+      "Lula chegou ao colégio às 10h acompanhado da primeira-dama Janja, do vice-presidente Geraldo Alckmin (PSB), e dos ex-ministros Marina Silva, Simone Tebet e Fernando Haddad.",
+      "O presidente posou segurando a bandeira do Brasil, inicialmente sozinho e, depois, ao lado dos políticos que o acompanharam até o local de votação.",
+      "Antes de chegar ao local de votação, o presidente conversou com apoiadores e jornalistas na saída de sua casa. Ele destacou a participação população neste segundo turno lembrando que está com 80 anos e que participa da vida política há cinco décadas.",
+      "\"Então, eu vou votar agradecido ao povo brasileiro. O que o povo fez comigo nesses dias é uma coisa que não tem como pagar. É muita generosidade, é muito carinho, é muito amor, e eu serei eternamente grato ao comportamento do povo. Eu nunca vi, sinceramente. Não acredito que alguém um dia tenha sido tratado com o carinho com que fui tratado neste segundo turno”."
+    ]
+  },
+  {
+    "id": "ebc-1706572",
+    "title": "Presidente do TRE-RJ pede aos eleitores que compareçam às urnas",
+    "summary": "O presidente do Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ), desembargador Claudio de Mello Tavares, convocou os eleitores a irem às urnas para votar neste domingo (25) , no segundo turno das eleições.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/presidente-do-tre-rj-pede-aos-eleitores-que-comparecam-urnas",
+    "publishedAt": "25/10/2026 às 10:42",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 11:20",
+    "imageUrl": "https://imagens.ebc.com.br/5-NoAfRGaifdg6xF-Z2t_7_s6-U=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/presidente_do_tribunal_regional_eleitoral_do_rio_de_janeiro_tre-rj_claudio_de_mello_tavares.jpg?itok=KtbJ36yg",
+    "imageCaption": "Presidente do TRE-RJ pede aos eleitores que compareçam às urnas",
+    "imageCredit": "Cristina Indio do Brasil - Repórter da Agência Brasil",
+    "imageAlt": "Presidente do TRE-RJ pede aos eleitores que compareçam às urnas",
+    "author": "Cristina Indio do Brasil - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "TRE-RJ",
+      "eleições",
+      "Rio de Janeiro"
+    ],
+    "content": [
+      "O presidente do Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ), desembargador Claudio de Mello Tavares, convocou os eleitores a irem às urnas para votar neste domingo (25) , no segundo turno das eleições. Se dirigindo aos quase 13 milhões de eleitores e eleitoras do estado, a recomendação foi para que não abram mão de “participar deste momento tão importante para o país”.",
+      "“Sei que todos têm seus compromissos, responsabilidades e suas dificuldades, mas peço que reservem um momento neste domingo para exercer este direito. A democracia precisa da participação de todos. Cada voto tem o mesmo valor, independentemente da condição social ou do lugar em que se vive”, disse.",
+      "O presidente do TRE garantiu que foram adotadas todas as medidas necessárias para a segurança do pleito.",
+      "“Quero transmitir uma mensagem muito clara à população fluminense. Podem sair de casa e votar com tranquilidade. As forças policiais estão mobilizadas com destaque para a Polícia Militar que atua no patrulhamento das ruas e na segurança dos locais de votação”, disse.",
+      "O desembargador lembrou que novamente as Forças Armadas fazem parte do esquema montado para assegurar a presença do eleitor.",
+      "“Toda essa estrutura foi organizada para garantir que o eleitor possa fazer a sua escolha em paz de acordo com a própria consciência”, afirmou.",
+      "Claudio de Mello Tavares disse que a expectativa é de que a eleição no estado seja mais rápida uma vez que o eleitor terá apenas que votar para presidente da República. No primeiro turno a necessidade de confirmar na urna seis candidatos: deputados federal e estadual, dois votos para o Senado, governador e presidente, houve demora e filas em vários locais de votação.",
+      "“Hoje [o eleitor] votará apenas para presidente da República, por isso, não esperamos filas relevantes ao longo do dia”, avaliou.",
+      "O presidente do TRE-RJ lembrou, no entanto, que em Itaguaí, na região metropolitana do Rio de Janeiro, a votação será um pouco diferente, porque além da votação para presidente, haverá uma eleição suplementar para prefeito .",
+      "“Neste município o eleitor votará primeiro para presidente e em seguida para prefeito”, destacou.",
+      "Quanto aos locais de votação, reforçou que dos 5.040 em todo o estado, apenas dois foram alterados entre o primeiro e segundo turnos.",
+      "Segundo ele, essas mudanças ocorreram por motivos estruturais em Brás de Pina, na região da Leopoldina, e em Jardim Sulacap, na zona oeste do Rio.",
+      "“Os demais locais permanecem os mesmos. Portanto, os demais eleitores que votaram normalmente no primeiro turno podem retornar ao mesmo local com essas únicas ressalvas.",
+      "O desembargador lembrou ainda que quem não compareceu no primeiro turno não está impedido de votar normalmente neste domingo, desde que esteja com a inscrição eleitoral regular."
+    ]
+  },
+  {
+    "id": "ebc-1706573",
+    "title": "Eleições: indígenas e quilombolas têm transporte garantido",
+    "summary": "O governo federal adotou medidas para garantir o transporte de indígenas, quilombolas, ribeirinhos, extrativistas e famílias assentadas aos locais de votação neste domingo (25), dia do segundo turno das eleições presidenciais .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleicoes-indigenas-e-quilombolas-tem-transporte-garantido",
+    "publishedAt": "25/10/2026 às 10:38",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 11:20",
+    "imageUrl": "https://imagens.ebc.com.br/x3U6yWJdXsqwJEmdDxMFlFUmy8M=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/24/_pin5609.jpg-12.jpg?itok=KpswjpMf",
+    "imageCaption": "Eleições: indígenas e quilombolas têm transporte garantido",
+    "imageCredit": "Pedro Peduzzi - Repórter da Agência Brasil",
+    "imageAlt": "Eleições: indígenas e quilombolas têm transporte garantido",
+    "author": "Pedro Peduzzi - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Indígenas",
+      "Segundo Turno",
+      "Eleições"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706551",
+    "title": "Chuva altera local de votação em Itapevi, no interior paulista",
+    "summary": "As fortes chuvas que atingiram diversas cidades do estado de São Paulo durante esta madrugada provocaram alteração de um local de votação na cidade de Itapevi, no interior paulista.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/chuva-altera-local-de-votacao-em-itapevi-no-interior-paulista",
+    "publishedAt": "25/10/2026 às 10:37",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 11:20",
+    "imageUrl": "https://imagens.ebc.com.br/XxyPtoEEzpAiwGHrr8FV0vaSvrQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/altera-votacao-itapevi.jpg?itok=yszkn7Eb",
+    "imageCaption": "Chuva altera local de votação em Itapevi, no interior paulista",
+    "imageCredit": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "imageAlt": "Chuva altera local de votação em Itapevi, no interior paulista",
+    "author": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "São Paulo",
+      "chuvas",
+      "meteorologia"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706554",
+    "title": "TRE-SP substitui 52 urnas que apresentaram problemas no estado",
+    "summary": "Boletim divulgado por volta das 9h30 deste domingo (25), pelo Tribunal Regional Eleitoral de São Paulo (TRE-SP), informa que 52 urnas eletrônicas utilizadas no estado de São Paulo apresentaram algum tipo de problema e necessitaram de substituição.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tre-sp-substitui-52-urnas-que-apresentaram-problemas-no-estado",
+    "publishedAt": "25/10/2026 às 10:06",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 11:20",
+    "imageUrl": "https://imagens.ebc.com.br/diicvf_YsCBycZl--tjhV0MMQBA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/24/0d4a5003.jpg?itok=JnpbNDTG",
+    "imageCaption": "TRE-SP substitui 52 urnas que apresentaram problemas no estado",
+    "imageCredit": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "imageAlt": "TRE-SP substitui 52 urnas que apresentaram problemas no estado",
+    "author": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "TRE-SP",
+      "substituição de urnas",
+      "52 urnas",
+      "estado de São Paulo"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706549",
+    "title": "TSE agiliza aprovação de transporte para indígenas e quilombolas",
+    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, autorizou procedimento mais rápido para aprovar o transporte de indígenas, quilombolas e moradores de comunidades tradicionais até os locais de votação no segundo turno das eleições.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tse-agiliza-aprovacao-de-transporte-para-indigenas-e-quilombolas",
+    "publishedAt": "25/10/2026 às 09:27",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 11:20",
+    "imageUrl": "https://imagens.ebc.com.br/oOXZ2V2OleIAExjZyUO4RsFPRoY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/predio-tse_mcamgo_abr_22062023-6.jpg?itok=GMKraMnT",
+    "imageCaption": "TSE agiliza aprovação de transporte para indígenas e quilombolas",
+    "imageCredit": "Pedro Peduzzi - Repórter da Agência Brasil",
+    "imageAlt": "TSE agiliza aprovação de transporte para indígenas e quilombolas",
+    "author": "Pedro Peduzzi - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "TSE",
+      "Transporte",
+      "indígenas",
+      "quilombolas"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706548",
+    "title": "Ao votar no Rio de Janeiro, Flávio diz que representa a mudança",
+    "summary": "O candidato à Presidência da República Flávio Bolsonaro (PL) defendeu neste domingo (25), no segundo turno das eleições, que representa a mudança, especialmente contra a violência pública e o endividamento.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/ao-votar-no-rio-de-janeiro-flavio-diz-que-representa-mudanca",
+    "publishedAt": "25/10/2026 às 09:15",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 11:20",
+    "imageUrl": "https://imagens.ebc.com.br/P8gaBmGhG9QoCPxw49Pkwq6j-Gc=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/toms5517.jpg?itok=qLf59bNa",
+    "imageCaption": "Ao votar no Rio de Janeiro, Flávio diz que representa a mudança",
+    "imageCredit": "Tâmara Freire - Repórter da Agência Brasil",
+    "imageAlt": "Ao votar no Rio de Janeiro, Flávio diz que representa a mudança",
+    "author": "Tâmara Freire - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Flávio Bolsonaro",
+      "segundo turno",
+      "Eleições"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706352",
+    "title": "Mudanças climáticas já causam aumento de doenças infecciosas no país",
+    "summary": "Desde a década de 1980, o Brasil registra surtos comprovados de dengue, mas só em 2007 o Rio Grande do Sul teve um caso que não tenha sido importado de outra parte do país.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/mudancas-climaticas-ja-causam-aumento-de-doencas-infecciosas-no-pais",
+    "publishedAt": "25/10/2026 às 09:06",
+    "category": "Política",
+    "ingestedAt": "25/10/2026 às 11:20",
+    "imageUrl": "https://imagens.ebc.com.br/Njb1AN-Cb_ZzSLn8DjRSdD5dTfs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/23/adobestock_306185088.jpeg?itok=xGGvoSCW",
+    "imageCaption": "Mudanças climáticas já causam aumento de doenças infecciosas no país",
+    "imageCredit": "Tâmara Freire - Repórter da Agência Brasil",
+    "imageAlt": "Mudanças climáticas já causam aumento de doenças infecciosas no país",
+    "author": "Tâmara Freire - Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "Dengue",
+      "mudanças climáticas",
+      "febre do Oropouche",
+      "aquecimento global"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706346",
     "title": "Saiba quais as condutas consideradas crime eleitoral no dia da votação",
     "summary": "No segundo turno das eleições de 2026, o eleitor deve ficar atento a práticas consideradas crimes eleitorais, que podem interferir na vontade dos cidadãos e deturpar o processo democrático.",
@@ -26,26 +271,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "boca de urna",
       "Eleições"
     ],
-    "content": [
-      "No segundo turno das eleições de 2026, o eleitor deve ficar atento a práticas consideradas crimes eleitorais, que podem interferir na vontade dos cidadãos e deturpar o processo democrático.",
-      "A propaganda no dia da eleição, conhecida popularmente como boca de urna é caracterizada pela tentativa de convencer, influenciar ou arregimentar eleitores a votar ou deixar de votar em determinada candidatura ou partido no dia do pleito e tem como pena a detenção de seis meses a um ano e alternativa de prestação de serviços à comunidade pelo mesmo período.",
-      "Além disso, quem for pego praticando a boca de urna pode receber multa que vai de R$ 5.320,50 a R$ 15.961,50.",
-      "A distribuição de “santinhos”, uso de auto-falantes, realização de comício, carreata e passeata também são proibidos. No caso da distribuição de santinhos, a legislação prevê multa que pode chegar a R$ 8 mil.",
-      "Já a compra de voto se caracteriza por oferecer vantagem, como presentes ou dinheiro, para o eleitor com o objetivo de angariar o seu voto ou mesmo para prometer abstenção. A pena é de reclusão até quatro anos e pagamento de cinco a 15 dias-multa.",
-      "Também é proibido o transporte irregular de eleitores , caracterizado pelo fornecimento de transporte coletivo no dia da votação por parte do candidato. A pena para essa infração é a maior dos crimes eleitorais, sendo previsto de quatro a seis anos de reclusão, além do pagamento de 200 a 300 dias-multa. O mesmo vale para o fornecimento irregular de alimentação.",
-      "Pena igual é aplicada ao crime de promover concentração de eleitores, no dia da votação, com o fim de impedir, embaraçar ou fraudar o exercício do voto. Geralmente esse crime é praticado em conjunto com o transporte e o fornecimento irregular de refeição para eleitores.",
-      "Outro crime eleitoral é o de assédio eleitoral , que se caracteriza por ameaçar para coagir alguém a votar ou não em determinado candidato ou partido. A pena é de reclusão de até quatro anos e pagamento de cinco a 15 dias-multa.",
-      "A fraude de votos , caracterizada pela substituição de votos, a violação das urnas eletrônicas e qualquer outro ato que busque modificar artificialmente o resultado do pleito também é uma conduta criminosa. A pena é de reclusão de até cinco anos, além de multa.",
-      "A destruição, danificação ou ocultação de urna eletrônica também é crime eleitoral. A pena é de reclusão de dois a seis anos e pagamento de cinco a 15 dias-multa.",
-      "A realização de selfie na cabine eleitoral é proibida , assim como também é crime eleitoral votar mais de uma vez ou votar no lugar de outra pessoa. Nesse caso, a pena é de até três anos de reclusão.",
-      "Durante o dia de votação cabe aos órgãos de segurança (Polícia Federal, a Polícia Civil, a Polícia Militar, a Polícia Rodoviária Federal, a Polícia Militar Rodoviária e Guardas Municipais) agir para fazer cessar qualquer prática ilícita, tendo autoridade para efetuar prisões em flagrante por delitos eleitorais ou de outra natureza.",
-      "A legislação permite ao eleitor manifestar, de maneira pacífica e silenciosa, a sua preferência política, podendo ir votar com camiseta, boné, botton, adesivo e bandeira do seu candidato ou partido.",
-      "Também é permitido e recomendado que o eleitor leve uma cola eleitoral (nome e número do candidato anotados em um papel) para a cabine de votação. Segundo o Tribunal Superior Eleitoral (TSE), a medida diminui o tempo de permanência do eleitor na seção eleitoral.",
-      "Os crimes eleitorais podem ser denunciados por qualquer pessoa por meio de uma notícia-crime eleitoral verbal ou por escrito à autoridade policial, ao Ministério Público Eleitoral, nos tribunais regionais eleitorais (TREs) ou à autoridade judiciária da zona eleitoral na qual a infração ocorreu.",
-      "O aplicativo Pardal, da Justiça Eleitoral, pode ser usado para denunciar irregularidades sobre propaganda eleitoral. O relato deve conter informações sobre o local, a descrição do fato, além de fotos, vídeos, áudios ou links que possam ajudar na análise da ocorrência. A ferramenta pode ser baixada gratuitamente na Google Play e App Store .",
-      "Segundo o Ministério da Justiça e Segurança Pública (MJSP), no primeiro turno, no dia 4 de outubro foram registradas 1.170 ocorrências. Desse total, 1.113 são crimes eleitorais, seis foram crimes comuns contra candidatos e outros 13 contra locais de votação ou apuração.",
-      "Entre as principais ocorrências estão os crimes de:"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706124",
@@ -68,14 +294,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições",
       "Eleições"
     ],
-    "content": [
-      "Quem vai votar neste segundo turno das eleições precisa ficar atento às mudanças em locais de votação. Segundo dados do Tribunal Superior Eleitoral (TSE), pode haver mudanças em endereços de seções entre os dois turnos.",
-      "Por isso, a orientação é que os eleitores confiram, com antecedência, os locais de votação nos canais oficiais.",
-      "O aplicativo e-título pode ser baixado de forma gratuita em celulares Android e iOS nas lojas oficiais . Para consultar o local de votação é só abrir o aplicativo, digitar os dados solicitados e selecionar a opção “onde votar”. Vai aparecer a zona e a seção eleitoral com o endereço. É possível inclusive traçar a rota de como chegar ao local.",
-      "O Autoatendimento Eleitoral está acessível nos postos do TSE e dos tribunais regionais eleitorais (TREs) de cada estado. Alí é possível consultar o local de votação em “onde votar”, além de outros serviços, como regularização de pendências, atualização de dados e emissão de documentos de forma remota, sem precisar comparecer a um cartório eleitoral.",
-      "O ChatVote é o assistente virtual da Justiça Eleitoral. Ele usa inteligência artificial para responder dúvidas e orientar sobre os serviços disponíveis. Também pode ser acessado na página do TSE. O ChatVote fica no lado esquerdo da página, na parte inferior. É um desenho de uma urna com olhinhos. É só clicar nela e fazer a pergunta.",
-      "A votação do segundo turno ocorre no próximo dia 25 de outubro . As seções ficam abertas de 8h às 17h. O eleitor vai votar desta vez apenas para presidente da República e, em alguns estados, para governador. A disputa local ocorre no Acre, Amazonas, Distrito Federal, Espírito Santo, Rio Grande do Norte e Tocantins."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706540",
@@ -99,14 +318,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "loterias",
       "Política"
     ],
-    "content": [
-      "Ninguém acertou acertou as seis dezenas do Concurso 3.074 da Mega-Sena, sorteado nesse sábado (24). O prêmio acumulou novamente e está estimado em R$ 300 milhões para a nova rodada.",
-      "Os números sorteados são: 02 - 03 - 20 - 25 - 39 - 57.",
-      "A quina teve 175 apostas ganhadoras. Cada uma receberá R$ 30.318,56. A quadra saiu para 11.643 apostas, no valor de R$ 651 cada.",
-      "O próximo concurso ocorre na segunda-feira (26), às 21h. As apostas podem ser feitas até as 20h (horário de Brasília) do mesmo dia, em qualquer lotérica do país ou pela internet, no site ou aplicativo da Caixa .",
-      "A aposta simples, com seis dezenas, custa R$ 6.",
-      "A Caixa Loterias antecipou para sábado os sorteios previstos para este domingo (25), dia do segundo turno das eleições."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1705973",
@@ -857,220 +1069,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "segundo turno",
       "E-título",
       "título de eleitor"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706393",
-    "title": "Candidatos trocam acusações e defendem propostas em debate na Globo",
-    "summary": "O debate na TV Globo entre Lula (PT) e Flávio Bolsonaro (PL) foi marcado por uma manifestação indignada do atual presidente após uma fala do adversário. Flávio afirmou que o presidente \"dá com uma mão e tira com nove dedos\".",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/candidatos-trocam-acusacoes-e-defendem-propostas-em-debate-na-globo",
-    "publishedAt": "24/10/2026 às 02:20",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/9Onqo9jdz-beFjvvDKjknkQW5tI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/23/_d6a6892_1.jpg?itok=6dDY3yyU",
-    "imageCaption": "Candidatos trocam acusações e defendem propostas em debate na Globo",
-    "imageCredit": "Pedro Rafael Vilela",
-    "imageAlt": "Candidatos trocam acusações e defendem propostas em debate na Globo",
-    "author": "Pedro Rafael Vilela",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Lula",
-      "Flávio Bolsonaro",
-      "Debate"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706383",
-    "title": "Moraes determina bloqueio de até R$ 6 bilhões do advogado Willer Tomaz",
-    "summary": "O ministro Alexandre de Moraes, do Supremo Tribunal Federal (STF), determinou nesta sexta-feira (23) o bloqueio de até R$ 6 bilhões do advogado Willer Tomaz.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/moraes-determina-bloqueio-de-ate-r-6-bilhoes-do-advogado-willer-tomaz",
-    "publishedAt": "23/10/2026 às 21:56",
-    "category": "Justiça",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/3FWq1riHzcUje1I44xpDMji5zHc=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/11042023-pzzb9223.jpg?itok=9pIAKS04",
-    "imageCaption": "Moraes determina bloqueio de até R$ 6 bilhões do advogado Willer Tomaz",
-    "imageCredit": "André Richter - Repórter da Agência Brasil",
-    "imageAlt": "Moraes determina bloqueio de até R$ 6 bilhões do advogado Willer Tomaz",
-    "author": "André Richter - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Alexandre de Moraes",
-      "stf",
-      "Willer Tomaz",
-      "descontos irregulares"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706382",
-    "title": "MPT apura carta de supermercado a funcionários com teor eleitoral",
-    "summary": "O Ministério Público do Trabalho no Rio de Janeiro (MPT-RJ) informou nesta sexta-feira (23) que registrou uma Notícia de Fato (NF) para apurar o envio de uma carta pela rede de Supermercados Zona Sul a seus funcionários, às vésperas da eleição.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/mpt-apura-carta-de-supermercado-funcionarios-com-teor-eleitoral",
-    "publishedAt": "23/10/2026 às 21:42",
-    "category": "Justiça",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/KoaRO2GeGRXwzk3RxfeTrx-mT4M=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/24/fachada-ministerio-publico-trabalho-848x477.jpg?itok=xXjWOKj0",
-    "imageCaption": "MPT apura carta de supermercado a funcionários com teor eleitoral",
-    "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
-    "imageAlt": "MPT apura carta de supermercado a funcionários com teor eleitoral",
-    "author": "Douglas Corrêa - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Brasil"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706381",
-    "title": "Ministra rejeita ação que pedia transporte interestadual na eleição",
-    "summary": "A ministra Cármen Lúcia, do Supremo Tribunal Federal (STF), negou nesta sexta-feira (23) pedido protocolado pela campanha do candidato à reeleição Luiz Inácio Lula da Silva (PT) para estender a gratuidade de transporte público no segundo turno para viagens interestaduais.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/ministra-rejeita-acao-que-pedia-transporte-interestadual-na-eleicao",
-    "publishedAt": "23/10/2026 às 21:12",
-    "category": "Justiça",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/5_WjCbO-KqAWxTsTphC-LEHoHyQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/10/01/54036205620_c786f87348_o.jpg?itok=d_u7Qa24",
-    "imageCaption": "Ministra rejeita ação que pedia transporte interestadual na eleição",
-    "imageCredit": "André Richter - Repórter da Agência Brasil",
-    "imageAlt": "Ministra rejeita ação que pedia transporte interestadual na eleição",
-    "author": "André Richter - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Cármen Lúcia",
-      "stf",
-      "TSE"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706379",
-    "title": "Meta diz ao TSE que Exército do Lula não viola políticas da plataforma",
-    "summary": "A Meta afirmou nesta sexta-feira (23) ao Tribunal Superior Eleitoral (STE) que não encontrou irregularidades no funcionamento do canal Exército do Lula, criado no WhatsApp para postagens de apoio ao candidato à reeleição Luiz Inácio Lula da Silva (PT).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/meta-diz-ao-tse-que-exercito-do-lula-nao-viola-politicas-da-plataforma",
-    "publishedAt": "23/10/2026 às 20:48",
-    "category": "Justiça",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/Ii3vDMq1ZfrfcxJTTEcGoqEReeI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/aplicativo_0410211425.jpg?itok=SwPcAYzh",
-    "imageCaption": "Meta diz ao TSE que Exército do Lula não viola políticas da plataforma",
-    "imageCredit": "André Richter - Repórter da Agência Brasil",
-    "imageAlt": "Meta diz ao TSE que Exército do Lula não viola políticas da plataforma",
-    "author": "André Richter - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Meta",
-      "TSE",
-      "Exército do Lula"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706377",
-    "title": "Chuva deve prevalecer no domingo de eleições no Rio",
-    "summary": "O Sistema Alerta Rio prevê para domingo (25), data do segundo turno das eleições , céu nublado a encoberto, com pancadas de chuva acompanhadas de raios, a qualquer momento, na capital fluminense.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/chuva-deve-prevalecer-no-domingo-de-eleicao-no-rio",
-    "publishedAt": "23/10/2026 às 20:44",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/I6k2Ai0CZCs4mLnItOaKnqziIaY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/01/29/_d6a6795.jpg?itok=R4ZPBC9L",
-    "imageCaption": "Chuva deve prevalecer no domingo de eleições no Rio",
-    "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
-    "imageAlt": "Chuva deve prevalecer no domingo de eleições no Rio",
-    "author": "Douglas Corrêa - Repórter da Agência Brasil",
-    "tags": [
-      "Meio Ambiente",
-      "eleições 2026",
-      "meteorologia",
-      "Previsão do Tempo",
-      "Rio de Janeiro"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706372",
-    "title": "BC reforça regras de proteção ao consumidor nas ofertas de crédito",
-    "summary": "As propagandas de empréstimos obedecerão a novas regras a partir do próximo ano, decidiu nesta sexta-feira (23) o Banco Central (BC). O órgão aprovou três resoluções para reforçar a proteção dos consumidores na contratação de crédito.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/bc-reforca-regras-de-protecao-ao-consumidor-nas-ofertas-de-credito",
-    "publishedAt": "23/10/2026 às 19:31",
-    "category": "Economia",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/9UXysmYMdoscZXVYIkncIimWnz0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/10/_raf0993_1.jpg?itok=BQBuSoJl",
-    "imageCaption": "BC reforça regras de proteção ao consumidor nas ofertas de crédito",
-    "imageCredit": "Wellton Máximo - Repórter da Agência Brasil",
-    "imageAlt": "BC reforça regras de proteção ao consumidor nas ofertas de crédito",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "banco central",
-      "Crédito",
-      "Empréstimos",
-      "proteção ao consumidor"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706371",
-    "title": "Sociedade civil manifesta preocupação ao TSE por censura nas redes",
-    "summary": "Diversas entidades da sociedade civil entregaram nesta sexta-feira (23) uma nota pública ao Tribunal Superior Eleitoral (TSE) para demonstrar preocupação com riscos de censura pelas plataformas que operam as redes sociais.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/sociedade-civil-manifesta-preocupacao-ao-tse-por-censura-nas-redes",
-    "publishedAt": "23/10/2026 às 19:03",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/2BQkVist2Mv4GycrzX_TOar2fdo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/19/_int2702.jpg?itok=GV6nd7Uy",
-    "imageCaption": "Sociedade civil manifesta preocupação ao TSE por censura nas redes",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Sociedade civil manifesta preocupação ao TSE por censura nas redes",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "plataformas digitais",
-      "redes sociais",
-      "big techs"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706370",
-    "title": "Dólar fecha abaixo de R$ 5 e recua 1,58% na semana",
-    "summary": "O dólar fechou abaixo de R$ 5 nesta sexta-feira (23), e a bolsa brasileira subiu no último dia útil antes do segundo turno das eleições presidenciais. O petróleo avançou mais de 3% , atingindo o maior patamar desde abril, com o agravamento das tensões no Oriente Médio.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/dolar-fecha-abaixo-de-r-5-e-recua-158-na-semana",
-    "publishedAt": "23/10/2026 às 19:02",
-    "category": "Economia",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/l40576lYrJCJeVWHQo-DX_bSLF4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/23/2026-07-23t123806z_1_lynxmpem6m19r_rtroptp_4_usa-trump-tariffs-indonesia.jpg?itok=uN0pYfYO",
-    "imageCaption": "Dólar fecha abaixo de R$ 5 e recua 1,58% na semana",
-    "imageCredit": "Wellton Máximo - Repórter da Agência Brasil *",
-    "imageAlt": "Dólar fecha abaixo de R$ 5 e recua 1,58% na semana",
-    "author": "Wellton Máximo - Repórter da Agência Brasil *",
-    "tags": [
-      "Economia",
-      "dólar",
-      "câmbio",
-      "Bolsa de Valores",
-      "petróleo"
     ],
     "content": []
   },
