@@ -66,8 +66,8 @@ export const SECOND_ROUND_DATA: SecondRoundTotalization = {
   "scope": "br",
   "officeCode": "1",
   "officeName": "Presidente",
-  "generatedDate": "15/10/2026",
-  "generatedTime": "09:38:12",
+  "generatedDate": "24/10/2026",
+  "generatedTime": "19:19:13",
   "totalizationDate": "",
   "totalizationTime": "",
   "isFinal": false,
@@ -135,5 +135,5 @@ export const SECOND_ROUND_DATA: SecondRoundTotalization = {
     }
   ],
   "statusLabel": "Aguardando apuração oficial",
-  "lastUpdated": "2026-10-24T12:29:12.939Z"
+  "lastUpdated": "2026-10-25T12:28:50.477Z"
 };
