@@ -5,9 +5,238 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706643",
+    "title": "Vereadora do PT é atacada durante carreata em Montes Claros",
+    "summary": "A disputa acirrada deste segundo turno tem sido acompanhada por episódios de violência política contra candidatos, militantes, agentes públicos e cidadãos.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/vereadora-do-pt-e-atacada-durante-carreata-em-montes-claros",
+    "publishedAt": "25/10/2026 às 13:32",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 13:58",
+    "imageUrl": "https://imagens.ebc.com.br/9z9zPO8sTPW011qV8XSuHZp95WI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/ataques-91a423dc.jpg?itok=VkgWy8YH",
+    "imageCaption": "Vereadora do PT é atacada durante carreata em Montes Claros",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Vereadora do PT é atacada durante carreata em Montes Claros",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "Violência política",
+      "eleições 2026",
+      "Eleições"
+    ],
+    "content": [
+      "A disputa acirrada deste segundo turno tem sido acompanhada por episódios de violência política contra candidatos, militantes, agentes públicos e cidadãos.",
+      "Em Montes Claros (MG), a vereadora Iara Pimentel (PT) foi atingida no rosto por um objeto durante ato político realizado na noite de ontem e teve de deixar o local em uma ambulância do Samu. Segundo o relato, o carro de som em que estava foi alvo de garrafas, tijolos e outros objetos.",
+      "A vereadora afirmou que a agressão é incompatível com a democracia, defendeu a liberdade de manifestação política e cobrou “investigação rigorosa, apuração dos fatos e responsabilização dos envolvidos”. Também afirmou que a violência política não pode ser naturalizada e que nenhuma divergência justifica agressões.",
+      "“Pensar diferente é um direito. A violência política é uma ameaça à democracia. Nenhuma divergência pode justificar agressões ou colocar vidas em risco”, argumentou.",
+      "O episódio de Montes Claros foi citado também pela deputada federal eleita Ana Elisa (PT-MG), que classificou a agressão sofrida por Iara Pimentel como “inadmissível”. Ela afirmou que “a democracia não combina com pedras, ameaças e agressões” e manifestou solidariedade à vereadora e às demais pessoas feridas, defendendo a responsabilização dos autores .",
+      "A parlamentar já havia denunciado ser alvo de violência política, a ponto de ter de desativar sua conta no X após sucessivas ameaças de morte e estupro .",
+      "Ana Elisa afirmou que recebia ataques \"a cada dois minutos\", declarou estar \"totalmente vulnerável\" e informou ter levado o caso à Polícia Civil de Minas Gerais. As mensagens continham conteúdos racistas, misóginos e de violência sexual.",
+      "Diante das ameaças sofridas, a deputada eleita foi incluída no Programa Estadual de Proteção de Minas Gerais .",
+      "Após votar em São Bernardo do Campo (SP), o presidente Luiz Inácio Lula da Silva citou episódios de violência registrados durante a campanha e defendeu a convivência democrática entre pessoas com opiniões políticas, religiosas e visões de mundo diferentes.",
+      "O presidente afirmou que divergências políticas não podem resultar em agressões. “A coisa mais sagrada na democracia é a convivência democrática na diversidade”, disse o presidente, citando o caso da vereadora mineira.",
+      "“Os vizinhos não precisam torcer para o mesmo time, mas não precisam brigar. Os vizinhos não precisam ter o mesmo candidato, mas também não precisam brigar. Não precisam gostar da mesma religião, mas também não precisam brigar. Se cada um aprender a respeitar o direito dos outros, a fé dos outros, o time dos outros e o partido dos outros, a gente exerce a democracia na sua plenitude”, acrescentou.",
+      "Há também relatos de ameaças contra servidores da Justiça Eleitoral. A Federação Nacional dos Trabalhadores e das Trabalhadoras do Judiciário Federal e Ministério Público da União (Fenajufe) divulgou nota de repúdio às intimidações que vêm sendo feitas desde o primeiro turno das eleições. Diante da situação, tem cobrado a responsabilização dos envolvidos.",
+      "A União Brasileira de Mulheres do Distrito Federal (UBM-DF) denunciou, na véspera do segundo turno, agressão contra sua presidenta, Maria das Neves Filha, e contra a presidenta da Mocidade do Gama, Edilamar Melo.",
+      "O caso ocorreu durante uma atividade de panfletagem em frente ao CEMI-Gama e foi registrado em vídeo. Segundo a entidade, o homem identificado é policial militar aposentado e teria arremessado uma mesa e derrubado materiais da atividade.",
+      "A UBM-DF informou ter registrado boletim de ocorrência, anunciado medidas judiciais e divulgado vídeo do episódio. Na nota, a entidade afirma que “não podemos naturalizar a barbárie e a violência contra mulheres” e caracteriza o caso como violência política de gênero."
+    ]
+  },
+  {
+    "id": "ebc-1706640",
+    "title": "Ministério da Igualdade Racial quer apurar racismo em ato bolsonarista",
+    "summary": "O Ministério da Igualdade Racial encaminhou nesta manhã (25) ofícios ao Ministério da Justiça e Segurança Pública e à Procuradoria Regional Eleitoral no Estado do Rio de Janeiro para que os dois órgãos investiguem um episódio de crime racista ocorrido na tarde de ontem (24).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/ministerio-da-igualdade-racial-quer-apurar-racismo-em-ato-bolsonarista",
+    "publishedAt": "25/10/2026 às 13:08",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 13:58",
+    "imageUrl": "https://imagens.ebc.com.br/v0wf7YdvbDzoc4rHwxPtaV1Dw0E=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/24/toms5350.jpg?itok=MkoFsn9n",
+    "imageCaption": "Ministério da Igualdade Racial quer apurar racismo em ato bolsonarista",
+    "imageCredit": "Cristina Indio do Brasil - Repórter da Agência Brasil",
+    "imageAlt": "Ministério da Igualdade Racial quer apurar racismo em ato bolsonarista",
+    "author": "Cristina Indio do Brasil - Repórter da Agência Brasil",
+    "tags": [
+      "Direitos Humanos",
+      "eleições 2026",
+      "flavio bolsonaro",
+      "Racismo",
+      "Eleições"
+    ],
+    "content": [
+      "O Ministério da Igualdade Racial encaminhou nesta manhã (25) ofícios ao Ministério da Justiça e Segurança Pública e à Procuradoria Regional Eleitoral no Estado do Rio de Janeiro para que os dois órgãos investiguem um episódio de crime racista ocorrido na tarde de ontem (24) durante manifestação em favor do candidato Flávio Bolsonaro.",
+      "Um vídeo publicado em diversas redes sociais e sites de notícias mostraram um militante bolsonarista branco conduzindo um homem negro acorrentado, durante o último ato de campanha do candidato à Presidência da República, senador Flávio Bolsonaro (PL), neste sábado (24), na Praça do Ó, na Barra da Tijuca, no Rio de Janeiro.",
+      "O candidato estava em um trio elétrico acompanhado do deputado federal Nikolas Ferreira (PL), do governador de São Paulo, Tarcísio de Freitas (Republicanos), e do governador eleito do Rio de Janeiro, Douglas Ruas (PL).",
+      "Na imagem é possível ver que o apoiador de Flávio Bolsonaro estava vestido de calça e jaqueta verde e branco com aplicações da bandeira do Brasil, camisa e tênis azuis. O homem negro acorrentado estava com uma camisa com listras vermelho e preto, bermuda preta e carregava um tridente. O homem branco se refere ao homem negro como “Luladrão, Satanás e Capiroto”.",
+      "“Cenas como essa, especialmente no contexto eleitoral, têm um significado ainda mais profundo sobre as marcas que nossa sociedade ainda carrega sobre o período escravagista e como ele segue ferindo nossa nação”, completou a pasta.",
+      "Mais cedo, a deputada federal eleita pelo Rio de Janeiro Anielle Franco (PT) publicou uma mensagem no seu perfil na rede social X informando que iria acionar o Ministério da Igualdade Racial para que adotasse as medidas necessárias tanto em relação ao caso de racismo no Rio de Janeiro quanto ao de intolerância religiosa em Belo Horizonte, ambos ocorridos em atos bolsonaristas.",
+      "Na capital mineira, uma mulher rasgou uma imagem de Nossa Senhora Aparecida, durante um ato pró Flávio Bolsonaro.",
+      "“Estive na live do Exército do Lula com Janones, Muka e Rafael Infante. Falamos de mobilização e virada de votos, mas também de dois absurdos: racismo na Barra e intolerância religiosa em BH. Vou procurar o Ministério da Igualdade Racial para entender as medidas cabíveis. Não vamos deixar passar!”, disse Anielle na publicação."
+    ]
+  },
+  {
+    "id": "ebc-1706637",
+    "title": "Eleitores vão cedo aos locais de votação no Rio, mesmo com chuva",
+    "summary": "Os eleitores do Rio de Janeiro comparecem aos locais de votação no horário de abertura das urnas, neste domingo (25), mesmo com chuva. Quase 12,9 milhões de pessoas estão aptas a votar no estado, sendo 4,9 milhões na capital, no segundo turno das eleições.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitores-vao-cedo-aos-locais-de-votacao-no-rio",
+    "publishedAt": "25/10/2026 às 12:59",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 13:58",
+    "imageUrl": "https://imagens.ebc.com.br/sm8Iqd7ZLmP68Vz_1eIH0P_5F-0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int9468.jpg?itok=QpWDFi6O",
+    "imageCaption": "Eleitores vão cedo aos locais de votação no Rio, mesmo com chuva",
+    "imageCredit": "Tâmara Freire – Repórter da Agência Brasil",
+    "imageAlt": "Eleitores vão cedo aos locais de votação no Rio, mesmo com chuva",
+    "author": "Tâmara Freire – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "chuvas",
+      "urnas",
+      "votação"
+    ],
+    "content": [
+      "Os eleitores do Rio de Janeiro comparecem aos locais de votação no horário de abertura das urnas, neste domingo (25), mesmo com chuva. Quase 12,9 milhões de pessoas estão aptas a votar no estado, sendo 4,9 milhões na capital, no segundo turno das eleições.",
+      "Com um único voto para depositar, o processo está transcorrendo muito mais rápido do que no primeiro turno. Na Universidade Unisuam, em Bonsucesso, na Zona Norte, maior local de votação da capital, com 13 mil eleitores, o fluxo de pessoas foi grande durante a manhã, mas poucas sessões tinham fila.",
+      "O casal Tamara Almeida e Eduardo de Andrade preferiu ir logo no começo da votação para garantir que conseguiriam deixar seus votos na urna. Encontraram uma situação bem mais tranquila do que a do primeiro turno.",
+      "Paulo Cesar da Silva também saiu cedinho da cidade de Nova Iguaçu, e mesmo com um ferimento na perna, fez questão de participar da eleição. Com a ajuda de uma muleta e das rampas da universidade, disse que não teve problemas para chegar à sua sessão eleitoral.",
+      "Marcus Vinicius de Andrade, que mora no Complexo da Maré disse que o transporte gratuito facilitou muito a sua participação nessa eleição. Ele votava perto de casa, mas seu local de votação foi um dos 72 alterados pelo Tribunal Regional Eleitoral.",
+      "\"No primeiro turno, falaram que meu local era em outra escola, cheguei lá e enfrentei a maior fila, quando eu entrei, me falaram que era aqui, mas deu tempo de votar. Hoje foi bem tranquilo e muito rápido.\"",
+      "De acordo com mesários, duas participações se destacam neste domingo (25): a dos idosos e a de pessoas que não votaram no primeiro turno, mas compareceram às sessões no segundo.",
+      "Maria das Dores de Lima, de 82, se encaixa nas duas situações. Com a ajuda de uma cadeira de rodas por causa de um problema na coluna, ela fez questão de participar: \"É muito importante votar. E eu também quero fazer a minha prova de vida do INSS\", ela disse.",
+      "A neta Alexia de Lima complementa: \"No primeiro turno, ficamos receosos de trazer, por causa de toda a movimentação. Mas como hoje está mais tranquilo, decidimos vir\"",
+      "Regina Maria Neves, de 79 anos, também quis garantir sua participação. Pegou um ônibus em Duque de Caxias, na Baixada Fluminense, para chegar a Vila Isabel, na capital, onde vota e esperou cerca de 30 minutos, sob chuva, até a abertura do local de votação.",
+      "\"Todo cidadão brasileiro tem que votar. Perdendo ou ganhando todo mundo tem que vir, porque a nossa opinião importa\", disse.",
+      "Gilberto Adamati, de 73 anos, chegou antes das 8h ao local. \"Eu penso que é uma responsabilidade com o país. Estou bem de saúde, então não há porque deixar de vir. Eu soube de uma senhorinha de 96 anos que foi votar em cadeira de rodas. Um exemplo desses, não tem como a gente não seguir.\""
+    ]
+  },
+  {
+    "id": "ebc-1706635",
+    "title": "TSE informa que 900 urnas foram substituídas até o meio-dia",
+    "summary": "O Tribunal Superior Eleitoral (TSE) informou, em boletim, que 900 urnas eletrônicas precisaram ser substituídas em todo o país entre as 8h e o meio-dia deste domingo (25), quando ocorre o segundo turno das eleições.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tse-informa-que-900-urnas-foram-substituidas-ate-o-meio-dia",
+    "publishedAt": "25/10/2026 às 12:44",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 13:58",
+    "imageUrl": "https://imagens.ebc.com.br/ZjybLqZdrnF9AwMkk3ObhPWVpuM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/24/0d4a5000.jpg?itok=LhkRE0HZ",
+    "imageCaption": "TSE informa que 900 urnas foram substituídas até o meio-dia",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "TSE informa que 900 urnas foram substituídas até o meio-dia",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "TSE",
+      "Urnas",
+      "Trocas"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706633",
+    "title": "Apesar das fortes chuvas, eleições seguem tranquilas em São Paulo",
+    "summary": "As fortes chuvas que atingiram o estado de São Paulo nesta madrugada não atrapalham o segundo turno das eleições, afirma o presidente do Tribunal Regional Eleitoral de São Paulo (TRE-SP), José Antonio Encinas Manfré.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/apesar-das-fortes-chuvas-eleicoes-seguem-tranquilas-em-sao-paulo",
+    "publishedAt": "25/10/2026 às 12:31",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 13:58",
+    "imageUrl": "https://imagens.ebc.com.br/Kixm2Sq0M5Yt3eJLA0ali_Um6-E=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int9542.jpg?itok=fo5R7LJv",
+    "imageCaption": "Apesar das fortes chuvas, eleições seguem tranquilas em São Paulo",
+    "imageCredit": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "imageAlt": "Apesar das fortes chuvas, eleições seguem tranquilas em São Paulo",
+    "author": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "TRE-SP",
+      "Eleições",
+      "Eleições 2026"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706634",
+    "title": "Vontade das urnas precisa ser respeitada, afirma Fachin após votar",
+    "summary": "Após votar no segundo turno das eleições, o presidente do Supremo Tribunal Federal (STF), ministro Edson Fachin, voltou a afirmar neste domingo (25) que a soberania popular, expressa nas urnas, deve ser respeitada.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/vontade-das-urnas-precisa-ser-respeitada-afirma-fachin-apos-votar",
+    "publishedAt": "25/10/2026 às 12:26",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 13:58",
+    "imageUrl": "https://imagens.ebc.com.br/5NSLvu8VCC63cv3ccJP83k0h51A=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/55611295959_6d831fa6f5_o.jpg?itok=65WnIoV-",
+    "imageCaption": "Vontade das urnas precisa ser respeitada, afirma Fachin após votar",
+    "imageCredit": "Felipe Pontes - Repórter da Agência Brasil",
+    "imageAlt": "Vontade das urnas precisa ser respeitada, afirma Fachin após votar",
+    "author": "Felipe Pontes - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Edson Fachin",
+      "stf",
+      "vontade das urnas"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706623",
+    "title": "Eleitores do DF acordam cedo para garantir voto no segundo turno",
+    "summary": "Neste domingo (25), eleitores do Distrito Federal chegaram cedo às zonas eleitorais para garantir o direito ao voto neste segundo turno das Eleições de 2026 . Na Cidade Estrutural, antes mesmo das 8h, as filas nos locais de votação reuniam dezenas de pessoas.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitores-do-df-acordam-cedo-para-garantir-voto-no-segundo-turno",
+    "publishedAt": "25/10/2026 às 12:15",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 13:58",
+    "imageUrl": "https://imagens.ebc.com.br/PrL87im_y3sx6gub7hfzK_-iGjs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/pzzb8774.jpg?itok=mxPXLdg0",
+    "imageCaption": "Eleitores do DF acordam cedo para garantir voto no segundo turno",
+    "imageCredit": "Fabíola Sinimbú - Repórter da Agência Brasil",
+    "imageAlt": "Eleitores do DF acordam cedo para garantir voto no segundo turno",
+    "author": "Fabíola Sinimbú - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Distrito Federal",
+      "Presidente",
+      "governador"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706624",
+    "title": "Gol nega cancelamento de voos em massa para o Nordeste",
+    "summary": "Diversas denúncias publicadas nas redes sociais neste sábado (25) acusaram a companhia aérea Gol de ter cancelado voos em massa que sairiam de Porto Alegre para o Nordeste transportando centenas de eleitores.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/gol-nega-cancelamento-de-voos-em-massa-para-o-nordeste",
+    "publishedAt": "25/10/2026 às 12:07",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 13:58",
+    "imageUrl": "https://imagens.ebc.com.br/48TqEF-yv8zrFtfn51RwCbFaMQw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/aviao_decola_no_aeroporto_de_congonhas_abr_010819196625330.jpg?itok=Xe3Rf6Z3",
+    "imageCaption": "Gol nega cancelamento de voos em massa para o Nordeste",
+    "imageCredit": "Odair Braz - Repórter da Agência Brasil",
+    "imageAlt": "Gol nega cancelamento de voos em massa para o Nordeste",
+    "author": "Odair Braz - Repórter da Agência Brasil",
+    "tags": [
+      "Geral",
+      "aviação",
+      "Gol",
+      "Anac",
+      "eleições 2006"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706600",
     "title": "Nas duas primeiras horas de votação, 467 urnas foram substituídas",
-    "summary": "Nas primeiras 2 horas de votação, de 8h às 10h, o Tribunal Superior Eleitoral (TSE) informou em boletim que 467 urnas eletrônicas precisaram ser substituídas em todo o país neste domingo (25) de segundo turno das eleições.",
+    "summary": "Nas primeiras duas horas de votação, de 8h às 10h, o Tribunal Superior Eleitoral (TSE) informou em boletim que 467 urnas eletrônicas precisaram ser substituídas em todo o país neste domingo (25) de segundo turno das eleições.",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/nas-2-primeiras-horas-de-votacao-467-urnas-foram-substituidas",
@@ -22,19 +251,11 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Política",
       "eleições 2026",
-      "Eleições",
+      "eleições",
       "urna aletrônica",
       "TSE"
     ],
-    "content": [
-      "Nas primeiras 2 horas de votação, de 8h às 10h, o Tribunal Superior Eleitoral (TSE) informou em boletim que 467 urnas eletrônicas precisaram ser substituídas em todo o país neste domingo (25) de segundo turno das eleições.",
-      "O número corresponde a 0,09% das 499.248 urnas empregadas na votação deste ano.",
-      "A Justiça Eleitoral deixou reservados mais 48.815 equipamentos para substituição, se necessário.",
-      "O TSE não informou os motivos que levaram à substituição das urnas. Em geral a troca ocorre devido a falhas operacionais.",
-      "No primeiro turno, em 4 de outubro, foram substituídas 1.904 urnas.",
-      "Mesmo que a urna eletrônica substituída apresente falha, a legislação prevê, como último recurso, a adoção de votação com cédula de papel. Até o momento, contudo, não foi necessário.",
-      "Neste domingo (25), mais de 158,7 milhões de eleitores estão aptos a votar para presidente no segundo turno."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706574",
@@ -58,13 +279,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Votação",
       "Eleições"
     ],
-    "content": [
-      "O presidente Luiz Inácio Lula da Silva (PT), candidato à reeleição nas eleições de 2026, votou na manhã deste domingo (25) na Escola Estadual João Firmino Correia de Araújo, em São Bernardo do Campo, no ABC paulista.",
-      "Lula chegou ao colégio às 10h acompanhado da primeira-dama Janja, do vice-presidente Geraldo Alckmin (PSB), e dos ex-ministros Marina Silva, Simone Tebet e Fernando Haddad.",
-      "O presidente posou segurando a bandeira do Brasil, inicialmente sozinho e, depois, ao lado dos políticos que o acompanharam até o local de votação.",
-      "Antes de chegar ao local de votação, o presidente conversou com apoiadores e jornalistas na saída de sua casa. Ele destacou a participação população neste segundo turno lembrando que está com 80 anos e que participa da vida política há cinco décadas.",
-      "\"Então, eu vou votar agradecido ao povo brasileiro. O que o povo fez comigo nesses dias é uma coisa que não tem como pagar. É muita generosidade, é muito carinho, é muito amor, e eu serei eternamente grato ao comportamento do povo. Eu nunca vi, sinceramente. Não acredito que alguém um dia tenha sido tratado com o carinho com que fui tratado neste segundo turno”."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706572",
@@ -88,22 +303,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições",
       "Rio de Janeiro"
     ],
-    "content": [
-      "O presidente do Tribunal Regional Eleitoral do Rio de Janeiro (TRE-RJ), desembargador Claudio de Mello Tavares, convocou os eleitores a irem às urnas para votar neste domingo (25) , no segundo turno das eleições. Se dirigindo aos quase 13 milhões de eleitores e eleitoras do estado, a recomendação foi para que não abram mão de “participar deste momento tão importante para o país”.",
-      "“Sei que todos têm seus compromissos, responsabilidades e suas dificuldades, mas peço que reservem um momento neste domingo para exercer este direito. A democracia precisa da participação de todos. Cada voto tem o mesmo valor, independentemente da condição social ou do lugar em que se vive”, disse.",
-      "O presidente do TRE garantiu que foram adotadas todas as medidas necessárias para a segurança do pleito.",
-      "“Quero transmitir uma mensagem muito clara à população fluminense. Podem sair de casa e votar com tranquilidade. As forças policiais estão mobilizadas com destaque para a Polícia Militar que atua no patrulhamento das ruas e na segurança dos locais de votação”, disse.",
-      "O desembargador lembrou que novamente as Forças Armadas fazem parte do esquema montado para assegurar a presença do eleitor.",
-      "“Toda essa estrutura foi organizada para garantir que o eleitor possa fazer a sua escolha em paz de acordo com a própria consciência”, afirmou.",
-      "Claudio de Mello Tavares disse que a expectativa é de que a eleição no estado seja mais rápida uma vez que o eleitor terá apenas que votar para presidente da República. No primeiro turno a necessidade de confirmar na urna seis candidatos: deputados federal e estadual, dois votos para o Senado, governador e presidente, houve demora e filas em vários locais de votação.",
-      "“Hoje [o eleitor] votará apenas para presidente da República, por isso, não esperamos filas relevantes ao longo do dia”, avaliou.",
-      "O presidente do TRE-RJ lembrou, no entanto, que em Itaguaí, na região metropolitana do Rio de Janeiro, a votação será um pouco diferente, porque além da votação para presidente, haverá uma eleição suplementar para prefeito .",
-      "“Neste município o eleitor votará primeiro para presidente e em seguida para prefeito”, destacou.",
-      "Quanto aos locais de votação, reforçou que dos 5.040 em todo o estado, apenas dois foram alterados entre o primeiro e segundo turnos.",
-      "Segundo ele, essas mudanças ocorreram por motivos estruturais em Brás de Pina, na região da Leopoldina, e em Jardim Sulacap, na zona oeste do Rio.",
-      "“Os demais locais permanecem os mesmos. Portanto, os demais eleitores que votaram normalmente no primeiro turno podem retornar ao mesmo local com essas únicas ressalvas.",
-      "O desembargador lembrou ainda que quem não compareceu no primeiro turno não está impedido de votar normalmente neste domingo, desde que esteja com a inscrição eleitoral regular."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706573",
@@ -881,194 +1081,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "metereologia",
       "Previsão do Tempo",
       "Inmet"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706411",
-    "title": "Confira a agenda dos presidenciáveis neste sábado (24)",
-    "summary": "Neste sábado (24), último dia da campanha eleitoral, os candidatos à presidência da República Flávio Bolsonaro e Luiz Inácio Lula da Silva participam de atos em Minas Gerais, Rio de Janeiro e São Paulo.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/confira-agenda-dos-presidenciaveis-neste-sabado-25",
-    "publishedAt": "24/10/2026 às 10:42",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 11:20",
-    "imageUrl": "https://imagens.ebc.com.br/9cXTMjAvSTef5BcG4zKCtlXz6bA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/31/eleicoes-2026-banner.png?itok=vq2HpMUj",
-    "imageCaption": "Confira a agenda dos presidenciáveis neste sábado (24)",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Confira a agenda dos presidenciáveis neste sábado (24)",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Agenda dos Candidatos",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1705978",
-    "title": "Saiba quais documentos são aceitos para votar neste domingo",
-    "summary": "Em todo o Brasil, 158 milhões de pessoas vão retornar às urnas neste domingo (25) para escolher quem será o chefe do Poder Executivo de 2027 a 2030. Além do cargo de presidente da República, em cinco estados e o Distrito Federal terão disputa para governador.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/saiba-quais-documentos-sao-aceitos-para-votar-neste-domingo",
-    "publishedAt": "24/10/2026 às 10:21",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 11:20",
-    "imageUrl": "https://imagens.ebc.com.br/e2BOhzlITVeqysSbNMgpEP33KQI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/30/img_1508-1.jpg?itok=wKefpI87",
-    "imageCaption": "Saiba quais documentos são aceitos para votar neste domingo",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Saiba quais documentos são aceitos para votar neste domingo",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706410",
-    "title": "Último dia para qualquer tipo de propaganda eleitoral é neste sábado",
-    "summary": "Na reta final do segundo turno das Eleições de 2026, os candidatos só poderão fazer campanha eleitoral até as 22h deste sábado (24).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/ultimo-dia-para-qualquer-tipo-de-propaganda-eleitoral-e-neste-sabado",
-    "publishedAt": "24/10/2026 às 09:59",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/ZjybLqZdrnF9AwMkk3ObhPWVpuM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/24/0d4a5000.jpg?itok=LhkRE0HZ",
-    "imageCaption": "Último dia para qualquer tipo de propaganda eleitoral é neste sábado",
-    "imageCredit": "Luciano Nascimento - Repórter da Agência Brasil",
-    "imageAlt": "Último dia para qualquer tipo de propaganda eleitoral é neste sábado",
-    "author": "Luciano Nascimento - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Campanha Eleitoral",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706394",
-    "title": "Flávio defende inocência do único acusado pela morte de Ana Clara",
-    "summary": "Os candidatos à Presidência da República Luiz Inácio Lula da Silva (PT) e Flávio Bolsonaro (PL) discutiram segurança pública no debate da TV Globo, na noite desta sexta-feira (23).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/flavio-defende-inocencia-do-unico-acusado-pela-morte-de-ana-clara",
-    "publishedAt": "24/10/2026 às 09:49",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/ehO-28TnkbKSXAlFfYf6mYbXnyQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/23/_d6a6672.jpg?itok=G6c9wUaD",
-    "imageCaption": "Flávio defende inocência do único acusado pela morte de Ana Clara",
-    "imageCredit": "Marcelo Brandão",
-    "imageAlt": "Flávio defende inocência do único acusado pela morte de Ana Clara",
-    "author": "Marcelo Brandão",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Lula",
-      "Flávio Bolsonaro",
-      "Ana Clara"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706359",
-    "title": "BB capacitará funcionários para acolher mulheres em risco",
-    "summary": "Mulheres que procurarem ajuda em agências do Banco do Brasil (BB) ao enfrentar situações de violência poderão ser acolhidas por funcionários capacitados e receber orientações.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/bb-capacitara-funcionarios-para-acolher-mulheres-em-risco",
-    "publishedAt": "24/10/2026 às 09:43",
-    "category": "Economia",
-    "ingestedAt": "24/10/2026 às 11:20",
-    "imageUrl": "https://imagens.ebc.com.br/YW0fmrLUcLE8jPE81LqslWval3U=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/1051296-25.10.2016_fnfrz-1964.jpg?itok=CdDZKmva",
-    "imageCaption": "BB capacitará funcionários para acolher mulheres em risco",
-    "imageCredit": "Wellton Máximo – Repórter da Agência Brasil",
-    "imageAlt": "BB capacitará funcionários para acolher mulheres em risco",
-    "author": "Wellton Máximo – Repórter da Agência Brasil",
-    "tags": [
-      "Direitos Humanos",
-      "banco do brasil",
-      "direitos das mulheres",
-      "violência contra a mulher",
-      "economia"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706342",
-    "title": "Mega-Sena sorteia prêmio acumulado em R$ 230 milhões neste sábado",
-    "summary": "A Mega-Sena sorteia neste sábado (24) prêmio estimado em R$ 230milhões. As seis dezenas do concurso 3.074 serão sorteadas a partir das 21h (horário de Brasília) no Espaço da Sorte, em São Paulo.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/mega-sena-sorteia-premio-acumulado-em-r-230-milhoes-neste-sabado",
-    "publishedAt": "24/10/2026 às 08:32",
-    "category": "Política",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/lsrLdv4veqHb5D11g2-YVnn3gEE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/mcamg_abr_08052019_8683_1.jpg?itok=Qn6CX8iL",
-    "imageCaption": "Mega-Sena sorteia prêmio acumulado em R$ 230 milhões neste sábado",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Mega-Sena sorteia prêmio acumulado em R$ 230 milhões neste sábado",
-    "author": "Agência Brasil",
-    "tags": [
-      "Geral",
-      "Loterias",
-      "Mega-Sena",
-      "Caixa",
-      "Política"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706235",
-    "title": "Rádio Nacional transmite neste sábado Internacional x Botafogo",
-    "summary": "Neste sábado (24), as ondas da Rádio Nacional transmitem ao vivo o confronto entre Internacional e Botafogo pela 32ª rodada do Campeonato Brasileiro Série A Masculino 2026. As equipes se enfrentam no Estádio Beira-Rio, em Porto Alegre a partir das 16h.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/radio-nacional-transmite-neste-sabado-internacional-x-botafogo",
-    "publishedAt": "24/10/2026 às 08:15",
-    "category": "Esportes",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/ysqa_TAySitXCqrl62Gj3u-oHtc=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/22/gemini-generated-image-nffxnqnffxnqnffx.jpg?itok=tABlm-rP",
-    "imageCaption": "Rádio Nacional transmite neste sábado Internacional x Botafogo",
-    "imageCredit": "EBC",
-    "imageAlt": "Rádio Nacional transmite neste sábado Internacional x Botafogo",
-    "author": "EBC",
-    "tags": [
-      "Esportes",
-      "Rádio Nacional",
-      "Futebol",
-      "campeonato brasileiro",
-      "Botafogo"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1705951",
-    "title": "Saiba como votar usando o aplicativo e-Título do TSE",
-    "summary": "Para exercer o direito ao voto no segundo turno neste domingo (25), os eleitores poderão utilizar o e-Título, a versão digital do título de eleitor. O app pode ser utilizado desde que ele contenha a foto do eleitor.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/saiba-como-votar-usando-o-aplicativo-e-titulo-do-tse",
-    "publishedAt": "24/10/2026 às 08:12",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/3ilIV21Gr_QvU1VIJ-9oiYopcxA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/30/img_1511-2.jpg?itok=OjQFSowv",
-    "imageCaption": "Saiba como votar usando o aplicativo e-Título do TSE",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Saiba como votar usando o aplicativo e-Título do TSE",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "segundo turno",
-      "E-título",
-      "título de eleitor"
     ],
     "content": []
   },
