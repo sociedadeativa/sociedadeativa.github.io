@@ -64,6 +64,76 @@ const formatTimestampBR = (isoOrDateStr?: string): string => {
  * - Sincronização dinâmica via polling de 60s durante a apuração com cancelamento via AbortController.
  * - Disponibiliza link proeminente, acessível e seguro para o portal oficial do TSE (resultados.tse.jus.br).
  */
+/**
+ * Validação rigorosa e monotônica de payload de totalização do 2º turno.
+ * Rejeita formatos inválidos e qualquer regressão de dados (stale CDN cache):
+ * - Regressão de finalização (isFinal: true -> false)
+ * - Regressão de início de apuração (countingStarted: true -> false)
+ * - Regressão de seções apuradas (sectionsCounted menor)
+ * - Respostas obsoletas com contagem de seções inalterada mas timestamp anterior
+ * - Regressão de votos totais ou válidos
+ */
+export function validateSecondRoundPayload(
+  payload: unknown,
+  current?: SecondRoundTotalization
+): SecondRoundTotalization {
+  if (
+    !payload ||
+    typeof payload !== "object" ||
+    !Array.isArray((payload as any).candidates) ||
+    (payload as any).candidates.length === 0 ||
+    typeof (payload as any).sectionsTotal !== "number" ||
+    (payload as any).round !== 2
+  ) {
+    throw new Error("Payload de totalização recebido possui formato inválido.");
+  }
+
+  const json = payload as SecondRoundTotalization;
+
+  if (current) {
+    // 1. Defesa contra regressão de apuração já finalizada
+    if (current.isFinal && !json.isFinal) {
+      throw new Error("Payload recebido regrediu de apuração finalizada para não-finalizada (stale cache). Preservando dados mais recentes.");
+    }
+
+    // 2. Defesa contra regressão para estado de pré-apuração
+    if (current.countingStarted && !json.countingStarted) {
+      throw new Error("Payload recebido regrediu para estado pré-eleição (stale cache). Preservando dados mais recentes.");
+    }
+
+    // 3. Defesa contra regressão no número de seções apuradas
+    if (typeof json.sectionsCounted === "number" && typeof current.sectionsCounted === "number") {
+      if (json.sectionsCounted < current.sectionsCounted) {
+        throw new Error("Payload recebido possui contagem anterior à já totalizada (stale cache). Preservando dados mais recentes.");
+      }
+    }
+
+    // 4. Defesa contra respostas obsoletas (incluindo quando seções apuradas não mudaram):
+    // Verifica carimbos de data/hora oficiais (lastUpdated)
+    const currentUpdatedMs = current.lastUpdated ? Date.parse(current.lastUpdated) : 0;
+    const incomingUpdatedMs = json.lastUpdated ? Date.parse(json.lastUpdated) : 0;
+    if (!isNaN(currentUpdatedMs) && !isNaN(incomingUpdatedMs) && currentUpdatedMs > 0 && incomingUpdatedMs > 0) {
+      if (incomingUpdatedMs < currentUpdatedMs) {
+        throw new Error("Payload recebido possui data/hora anterior aos dados atuais (stale cache). Preservando dados mais recentes.");
+      }
+    }
+
+    // 5. Defesa contra decréscimo de votos computados
+    if (typeof json.totalVotes === "number" && typeof current.totalVotes === "number") {
+      if (json.totalVotes < current.totalVotes) {
+        throw new Error("Payload recebido possui total de votos inferior ao já totalizado (stale cache). Preservando dados mais recentes.");
+      }
+    }
+    if (typeof json.validVotes === "number" && typeof current.validVotes === "number") {
+      if (json.validVotes < current.validVotes) {
+        throw new Error("Payload recebido possui votos válidos inferiores ao já totalizado (stale cache). Preservando dados mais recentes.");
+      }
+    }
+  }
+
+  return json;
+}
+
 export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
   data: initialData = SECOND_ROUND_DATA,
   onOpenMethodology,
@@ -111,35 +181,11 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
           throw new Error(`HTTP ${response.status}`);
         }
 
-        const json = await response.json();
-
-        // Validação rigorosa do payload
-        if (
-          !json ||
-          typeof json !== "object" ||
-          !Array.isArray(json.candidates) ||
-          json.candidates.length === 0 ||
-          typeof json.sectionsTotal !== "number" ||
-          json.round !== 2
-        ) {
-          throw new Error("Payload de totalização recebido possui formato inválido.");
-        }
-
-        // Defesa estrita contra respostas obsoletas (stale CDN cache):
-        // Se a apuração já estiver em andamento no cliente, rejeita payloads que regridam
-        // para o estado de pré-apuração ou que tenham menos seções apuradas
-        const current = dataRef.current;
-        if (current.countingStarted) {
-          if (!json.countingStarted) {
-            throw new Error("Payload recebido regrediu para estado pré-eleição (stale cache). Preservando dados mais recentes.");
-          }
-          if (typeof json.sectionsCounted === "number" && json.sectionsCounted < current.sectionsCounted) {
-            throw new Error("Payload recebido possui contagem anterior à já totalizada (stale cache). Preservando dados mais recentes.");
-          }
-        }
+        const rawJson = await response.json();
+        const validJson = validateSecondRoundPayload(rawJson, dataRef.current);
 
         if (isMounted) {
-          setData(json);
+          setData(validJson);
           setFetchError(null);
           setLastCheckTime(new Date());
         }
@@ -148,7 +194,7 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
           return;
         }
         if (isMounted) {
-          // Preserva os dados válidos anteriores em caso de falha de rede/servidor
+          // Preserva os dados válidos anteriores em caso de falha de rede/servidor ou stale cache
           setFetchError((err as Error)?.message || "Falha na sincronização");
           setLastCheckTime(new Date());
         }
@@ -158,24 +204,19 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
     // 1. Busca imediata ao montar
     fetchLatestData();
 
-    // 2. Polling a cada 60s enquanto a apuração estiver em andamento (e não finalizada)
-    let intervalId: ReturnType<typeof setInterval> | null = null;
-    if (data.countingStarted && !data.isFinal) {
-      intervalId = setInterval(() => {
-        fetchLatestData();
-      }, pollingIntervalMs);
-    }
+    // 2. Polling contínuo a cada 60s antes do início da apuração, durante a apuração e até isFinal === true
+    const intervalId = setInterval(() => {
+      fetchLatestData();
+    }, pollingIntervalMs);
 
     return () => {
       isMounted = false;
       if (inFlightController) {
         inFlightController.abort();
       }
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
+      clearInterval(intervalId);
     };
-  }, [data.countingStarted, data.isFinal, pollingIntervalMs]);
+  }, [data.isFinal, pollingIntervalMs]);
 
   const candidates: SecondRoundCandidate[] = data.candidates || [];
   const countingStarted = Boolean(data.countingStarted);
@@ -249,7 +290,7 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
             </span>
           ) : null}
 
-          {countingStarted && !isFinal && (
+          {!isFinal && (
             <span className="inline-flex items-center gap-1.5 text-blue-300 bg-blue-950/60 px-2.5 py-0.5 rounded-full border border-blue-800/50">
               <Radio className="w-3 h-3 text-blue-400 animate-pulse" />
               <span>Atualização automática a cada 60s</span>

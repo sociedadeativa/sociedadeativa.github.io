@@ -468,10 +468,12 @@ console.log('\n[TEST 9] Auditoria do SecondRoundBanner: Polling de 60s, AbortCon
     'SecondRoundBanner deve instanciar e cancelar AbortController no cleanup'
   );
 
-  // 3. Deve implementar polling a cada 60s condicional (enquanto countingStarted e !isFinal)
+  // 3. Deve manter polling ativo a cada 60s antes do início da apuração, durante a apuração e até isFinal === true
   assert.ok(
-    bannerContent.includes('data.countingStarted && !data.isFinal'),
-    'SecondRoundBanner deve acionar polling recorrente apenas quando a apuração iniciou e não finalizou'
+    bannerContent.includes('pollingIntervalMs') &&
+    bannerContent.includes('setInterval') &&
+    bannerContent.includes('clearInterval'),
+    'SecondRoundBanner deve manter polling recorrente de 60s antes e durante a apuração'
   );
   assert.ok(
     bannerContent.includes('clearInterval(intervalId)') || bannerContent.includes('clearInterval('),
@@ -500,7 +502,7 @@ console.log('\n[TEST 9] Auditoria do SecondRoundBanner: Polling de 60s, AbortCon
     'SecondRoundBanner deve exibir indicador visual de sincronização em tempo real'
   );
 
-  console.log('  [PASS] 1. Busca imediata e polling de 60s ativo exclusivamente durante apuração.');
+  console.log('  [PASS] 1. Busca imediata e polling de 60s contínuo ativo antes e durante a apuração.');
   console.log('  [PASS] 2. Cancelamento limpo com AbortController e cleanup de intervalos no unmount.');
   console.log('  [PASS] 3. Resiliência garantida: erros preservam últimos dados válidos e mostram aviso ao usuário.');
   console.log('  [PASS] 4. Timestamps de checagem e totalização oficial exibidos com timezone de Brasília.');
@@ -592,6 +594,197 @@ console.log('\n[TEST 11] Mitigação de CDN Stale Cache (Fastly max-age=600) & V
   console.log('  [PASS] 2. Referência via dataRef protege contra closures obsoletas durante intervalos.');
   console.log('  [PASS] 3. Monotonicidade garantida: payloads obsoletos com contagem inferior são estritamente rejeitados.');
   console.log('  [PASS] 4. Dados mais recentes sempre preservados sem regressão visual na interface.');
+  passed++;
+}
+
+// ----------------------------------------------------------------------------
+// TEST 12: Regressão: Transição Pré-Eleição para Apuração em Andamento & Rejeição de Payloads Obsoletos (Stale CDN Cache)
+// ----------------------------------------------------------------------------
+console.log('\n[TEST 12] Regressão: Transição Pré-Eleição para Apuração sem Recarga & Rejeição Estrita de Payloads Obsoletos');
+{
+  const bannerPath = path.join(rootDir, 'src', 'components', 'SecondRoundBanner.tsx');
+  const bannerContent = fs.readFileSync(bannerPath, 'utf8');
+
+  // 1. Extração dinâmica da função de validação real do componente SecondRoundBanner
+  const fnStart = bannerContent.indexOf('export function validateSecondRoundPayload');
+  const fnEnd = bannerContent.indexOf('export const SecondRoundBanner');
+  assert.ok(fnStart !== -1 && fnEnd !== -1, 'validateSecondRoundPayload deve estar exportada em SecondRoundBanner.tsx');
+
+  const fnCode = bannerContent.slice(fnStart, fnEnd)
+    .replace('export function validateSecondRoundPayload', 'function validateSecondRoundPayload')
+    .replace(/\(payload as any\)/g, 'payload')
+    .replace(/: unknown/g, '')
+    .replace(/\?: SecondRoundTotalization/g, '')
+    .replace(/: SecondRoundTotalization/g, '')
+    .replace(/as SecondRoundTotalization/g, '');
+
+  const validateSecondRoundPayload = new Function(fnCode + '\nreturn validateSecondRoundPayload;')();
+  assert.strictEqual(typeof validateSecondRoundPayload, 'function', 'Função de validação deve ser executável');
+
+  // FIXTURE INICIAL: Pré-eleição (0 seções, 0 votos, countingStarted = false, isFinal = false)
+  const preElectionState = {
+    electionCode: '6258',
+    round: 2,
+    environment: 'o',
+    scope: 'br',
+    officeCode: '1',
+    officeName: 'Presidente',
+    generatedDate: '25/10/2026',
+    generatedTime: '08:00:00',
+    totalizationDate: '',
+    totalizationTime: '',
+    isFinal: false,
+    countingStarted: false,
+    countingProgress: 0,
+    sectionsTotal: 499248,
+    sectionsCounted: 0,
+    sectionsRemaining: 499248,
+    electorateTotal: 158745502,
+    turnout: 0,
+    turnoutPercentage: 0,
+    abstention: 0,
+    abstentionPercentage: 0,
+    validVotes: 0,
+    validVotesPercentage: 0,
+    blankVotes: 0,
+    blankVotesPercentage: 0,
+    nullVotes: 0,
+    nullVotesPercentage: 0,
+    totalVotes: 0,
+    candidates: [
+      { ballotNumber: 13, candidateId: '13', name: 'LUIZ INACIO LULA DA SILVA', popularName: 'Lula', party: 'PT', coalition: 'FE BRASIL', viceName: 'GERALDO ALCKMIN', vicePopularName: 'Geraldo Alckmin', viceParty: 'PSB', seq: 1, votes: 0, percentage: 0, elected: false, situation: '', color: '#ef4444', colorMuted: '#f87171', photoUrl: '', photoAttribution: '', photoSourceUrl: '', tseSourceUrl: '' },
+      { ballotNumber: 22, candidateId: '22', name: 'FLAVIO NANTES BOLSONARO', popularName: 'Flávio Bolsonaro', party: 'PL', coalition: 'PL', viceName: 'BRAGA NETTO', vicePopularName: 'Braga Netto', viceParty: 'PL', seq: 2, votes: 0, percentage: 0, elected: false, situation: '', color: '#2563eb', colorMuted: '#60a5fa', photoUrl: '', photoAttribution: '', photoSourceUrl: '', tseSourceUrl: '' }
+    ],
+    statusLabel: 'Aguardando apuração oficial',
+    lastUpdated: '2026-10-25T16:55:00.000Z'
+  };
+
+  // CENÁRIO A: Transição suave de Pré-eleição para Início da Apuração sem recarga de página
+  const firstCountingBatch = {
+    ...preElectionState,
+    countingStarted: true,
+    countingProgress: 1.5,
+    sectionsCounted: 7488,
+    sectionsRemaining: 491760,
+    totalVotes: 1800000,
+    validVotes: 1750000,
+    validVotesPercentage: 97.22,
+    candidates: [
+      { ...preElectionState.candidates[0], votes: 900000, percentage: 51.43 },
+      { ...preElectionState.candidates[1], votes: 850000, percentage: 48.57 }
+    ],
+    statusLabel: 'Apuração oficial em andamento (1,50%)',
+    totalizationDate: '25/10/2026',
+    totalizationTime: '17:05:00',
+    lastUpdated: '2026-10-25T17:05:00.000Z'
+  };
+
+  const transitionedState = validateSecondRoundPayload(firstCountingBatch, preElectionState);
+  assert.strictEqual(transitionedState.countingStarted, true, 'Transição deve habilitar countingStarted = true');
+  assert.strictEqual(transitionedState.sectionsCounted, 7488, 'Seções apuradas devem ser atualizadas');
+  assert.strictEqual(transitionedState.validVotes, 1750000, 'Votos válidos devem ser computados');
+  assert.strictEqual(transitionedState.candidates[0].votes, 900000, 'Votos dos candidatos devem ser atualizados');
+
+  // CENÁRIO B: Rejeição de payload que regrida para pré-eleição após apuração já ter iniciado
+  assert.throws(
+    () => {
+      validateSecondRoundPayload(preElectionState, transitionedState);
+    },
+    /regrediu para estado pré-eleição \(stale cache\)/,
+    'Deve rejeitar reversão para estado pré-eleição após apuração ter começado'
+  );
+
+  // CENÁRIO C: Rejeição de resposta obsoleta com menos seções apuradas
+  const staleFewerSections = {
+    ...firstCountingBatch,
+    sectionsCounted: 5000,
+    lastUpdated: '2026-10-25T17:03:00.000Z'
+  };
+  assert.throws(
+    () => {
+      validateSecondRoundPayload(staleFewerSections, transitionedState);
+    },
+    /contagem anterior à já totalizada \(stale cache\)/,
+    'Deve rejeitar payload com menos seções apuradas'
+  );
+
+  // CENÁRIO D: Rejeição de resposta obsoleta com CONTAGEM DE SEÇÕES IGUAL mas timestamp anterior
+  const staleSameSectionsOlderTime = {
+    ...firstCountingBatch,
+    sectionsCounted: 7488,
+    totalVotes: 1700000,
+    lastUpdated: '2026-10-25T17:04:00.000Z' // Anterior a 17:05:00.000Z
+  };
+  assert.throws(
+    () => {
+      validateSecondRoundPayload(staleSameSectionsOlderTime, transitionedState);
+    },
+    /data\/hora anterior aos dados atuais \(stale cache\)/,
+    'Deve rejeitar payload com seções iguais porém timestamp mais antigo do CDN'
+  );
+
+  // CENÁRIO E: Rejeição de resposta obsoleta com CONTAGEM DE SEÇÕES IGUAL e decréscimo de votos válidos
+  const staleSameSectionsLessValidVotes = {
+    ...firstCountingBatch,
+    sectionsCounted: 7488,
+    validVotes: 1650000, // Menor que 1750000
+    lastUpdated: '2026-10-25T17:05:00.000Z'
+  };
+  assert.throws(
+    () => {
+      validateSecondRoundPayload(staleSameSectionsLessValidVotes, transitionedState);
+    },
+    /votos válidos inferiores ao já totalizado \(stale cache\)/,
+    'Deve rejeitar payload com mesma contagem de seções mas decréscimo de votos apurados'
+  );
+
+  // CENÁRIO F: Avanço válido com mais seções e votos
+  const secondCountingBatch = {
+    ...firstCountingBatch,
+    sectionsCounted: 15000,
+    totalVotes: 3600000,
+    validVotes: 3500000,
+    lastUpdated: '2026-10-25T17:10:00.000Z'
+  };
+  const advancedState = validateSecondRoundPayload(secondCountingBatch, transitionedState);
+  assert.strictEqual(advancedState.sectionsCounted, 15000, 'Avanço legítimo de seções deve ser aceito');
+  assert.strictEqual(advancedState.validVotes, 3500000, 'Avanço legítimo de votos deve ser aceito');
+
+  // CENÁRIO G: Finalização da eleição e rejeição de reversão de finalização
+  const finalState = {
+    ...secondCountingBatch,
+    isFinal: true,
+    countingProgress: 100,
+    sectionsCounted: 499248,
+    sectionsRemaining: 0,
+    totalVotes: 120000000,
+    validVotes: 115000000,
+    statusLabel: 'Totalização concluída',
+    lastUpdated: '2026-10-25T20:30:00.000Z'
+  };
+  const verifiedFinalState = validateSecondRoundPayload(finalState, advancedState);
+  assert.strictEqual(verifiedFinalState.isFinal, true, 'Finalização da totalização deve ser aceita');
+
+  const staleNonFinalAfterFinal = {
+    ...finalState,
+    isFinal: false,
+    lastUpdated: '2026-10-25T20:31:00.000Z'
+  };
+  assert.throws(
+    () => {
+      validateSecondRoundPayload(staleNonFinalAfterFinal, verifiedFinalState);
+    },
+    /regrediu de apuração finalizada para não-finalizada \(stale cache\)/,
+    'Deve rejeitar payload que reverta status isFinal: true para false'
+  );
+
+  console.log('  [PASS] 1. Transição de pré-eleição para apuração em andamento aceita e validada sem reload.');
+  console.log('  [PASS] 2. Rejeição de payload obsoleto que regrida para pré-eleição.');
+  console.log('  [PASS] 3. Rejeição de payload com contagem decrescente de seções apuradas.');
+  console.log('  [PASS] 4. Rejeição de resposta com contagem de seções inalterada mas timestamp anterior.');
+  console.log('  [PASS] 5. Rejeição de resposta com contagem de seções inalterada e votos decrescentes.');
+  console.log('  [PASS] 6. Rejeição de reversão de eleição finalizada para em andamento.');
+  console.log('  [PASS] 7. Preservação estrita dos dados válidos mais recentes sem corrupção visual.');
   passed++;
 }
 
