@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   ExternalLink,
   ShieldCheck,
@@ -72,6 +72,8 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
   const [data, setData] = useState<SecondRoundTotalization>(initialData);
   const [fetchError, setFetchError] = useState<string | null>(null);
   const [lastCheckTime, setLastCheckTime] = useState<Date | null>(null);
+  const dataRef = useRef<SecondRoundTotalization>(data);
+  dataRef.current = data;
 
   useEffect(() => {
     if (initialData) {
@@ -97,6 +99,7 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
 
       try {
         const response = await fetch(`/data/electionSecondRoundData.json?_t=${Date.now()}`, {
+          cache: "no-store",
           signal,
           headers: {
             "Accept": "application/json",
@@ -120,6 +123,19 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
           json.round !== 2
         ) {
           throw new Error("Payload de totalização recebido possui formato inválido.");
+        }
+
+        // Defesa estrita contra respostas obsoletas (stale CDN cache):
+        // Se a apuração já estiver em andamento no cliente, rejeita payloads que regridam
+        // para o estado de pré-apuração ou que tenham menos seções apuradas
+        const current = dataRef.current;
+        if (current.countingStarted) {
+          if (!json.countingStarted) {
+            throw new Error("Payload recebido regrediu para estado pré-eleição (stale cache). Preservando dados mais recentes.");
+          }
+          if (typeof json.sectionsCounted === "number" && json.sectionsCounted < current.sectionsCounted) {
+            throw new Error("Payload recebido possui contagem anterior à já totalizada (stale cache). Preservando dados mais recentes.");
+          }
         }
 
         if (isMounted) {

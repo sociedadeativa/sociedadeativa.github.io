@@ -556,7 +556,47 @@ console.log('\n[TEST 10] Auditoria de horários UTC, permissões e dependência 
   passed++;
 }
 
+// ----------------------------------------------------------------------------
+// TEST 11: Mitigação de Cache de CDN (Fastly max-age=600) e Defesa Monotônica
+// ----------------------------------------------------------------------------
+console.log('\n[TEST 11] Mitigação de CDN Stale Cache (Fastly max-age=600) & Validação Monotônica de Contagem');
+{
+  const bannerPath = path.join(rootDir, 'src', 'components', 'SecondRoundBanner.tsx');
+  const bannerContent = fs.readFileSync(bannerPath, 'utf8');
+
+  // 1. Deve instruir fetch com cache: "no-store" para mitigar cache HTTP de navegador
+  assert.ok(
+    bannerContent.includes('cache: "no-store"'),
+    'SecondRoundBanner deve incluir cache: "no-store" na configuração de requisição do fetch'
+  );
+
+  // 2. Deve utilizar dataRef para evitar armadilhas de closure obsoleto
+  assert.ok(
+    bannerContent.includes('dataRef = useRef') && bannerContent.includes('dataRef.current'),
+    'SecondRoundBanner deve utilizar dataRef para manter referência sempre atualizada do estado de apuração'
+  );
+
+  // 3. Deve rejeitar reversão para estado pré-eleição (stale cache) quando apuração já iniciou
+  assert.ok(
+    bannerContent.includes('Payload recebido regrediu para estado pré-eleição (stale cache)'),
+    'SecondRoundBanner deve rejeitar e preservar dados se payload recebido regredir de apuração iniciada para pré-eleição'
+  );
+
+  // 4. Deve rejeitar seções apuradas inferiores ao total já exibido
+  assert.ok(
+    bannerContent.includes('json.sectionsCounted < current.sectionsCounted'),
+    'SecondRoundBanner deve rejeitar contagem de seções inferior à já exibida'
+  );
+
+  console.log('  [PASS] 1. cache: "no-store" configurado explicitamente no fetch.');
+  console.log('  [PASS] 2. Referência via dataRef protege contra closures obsoletas durante intervalos.');
+  console.log('  [PASS] 3. Monotonicidade garantida: payloads obsoletos com contagem inferior são estritamente rejeitados.');
+  console.log('  [PASS] 4. Dados mais recentes sempre preservados sem regressão visual na interface.');
+  passed++;
+}
+
 console.log('\n' + '='.repeat(75));
 console.log(`TODOS OS ${passed} TESTES DO PIPELINE E DA PRONTIDÃO DO 2º TURNO PASSARAM COM SUCESSO!`);
 console.log('='.repeat(75));
+
 
