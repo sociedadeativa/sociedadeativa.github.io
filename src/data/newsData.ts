@@ -5,6 +5,37 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706539",
+    "title": "Nunes Marques pede vigilância e senso crítico com notícias no 2º turno",
+    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, pediu, neste sábado (24), que a população se mantenha vigilante e eleve o senso critico em relação às informações que circularem neste domingo (25), segundo turno das eleições.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/nunes-marques-pede-vigilancia-e-senso-critico-com-noticias-no-2o-turno",
+    "publishedAt": "24/10/2026 às 21:32",
+    "category": "Eleições",
+    "ingestedAt": "25/10/2026 às 06:21",
+    "imageUrl": "https://imagens.ebc.com.br/mL7hg6O6EzcCiE3b3ajAgCpWohY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/05/12/0d7a3465.jpg.jpeg?itok=5Sf3Z2rh",
+    "imageCaption": "Nunes Marques pede vigilância e senso crítico com notícias no 2º turno",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Nunes Marques pede vigilância e senso crítico com notícias no 2º turno",
+    "author": "Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Eleições"
+    ],
+    "content": [
+      "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, pediu, neste sábado (24), que a população se mantenha vigilante e eleve o senso critico em relação às informações que circularem neste domingo (25), segundo turno das eleições. As seções ficam abertas de 8h às 17h, seguindo o horário de Brasília, e quem não votou no primeiro turno, pode votar no segundo .",
+      "\"É dever de todos, inclusive nós, eleitores, garantir o sigilo do voto. Também devemos nos manter vigilantes com relação às informações que recebemos e compartilhamos\", disse em transmissão de rede nacional de rádio e televisão.",
+      "Os brasileiros irão votar para presidente da República e, em alguns estados, para governador. A disputa local ocorre no Acre, Amazonas, Distrito Federal, Espírito Santo, Rio Grande do Norte e Tocantins.",
+      "O ministro destacou alguns cuidados que os eleitores devem ter neste domingo, como a importância da cola eleitoral com o número dos candidatos e a checagem do local de votação . \"Apesar de termos um número muito pequeno de alterações [de seções eleitorais], não custa verificar essa informação antes de sair de casa\", alertou.",
+      "Para isso, várias ferramentas estão disponíveis, como o aplicativo e-título, o Autoatendimento Eleitoral nas páginas do TSE e dos tribunais regionais eleitorais (TREs) de cada estado e o ChatVote, assistente virtual da Justiça Eleitoral que também pode ser acessado na página do TSE.",
+      "Ainda segundo o ministro, o e-título é a ferramenta mais completa da Justiça Eleitoral e está disponível gratuitamente nas lojas de aplicativos. \"Por meio dela, além de consultarmos nosso local de votação, é possível justificar ausência às urnas, consultar o pagamento de débitos eleitorais, ler os boletins de urna e ter acesso à versão eletrônica do título eleitoral\", explicou.",
+      "O presidente do TSE convidou os 158 milhões de eleitores a comparecerem às urnas. \"O voto é a melhor expressão dos direitos e deveres inerentes à cidadania. Ao exercê-lo, demonstramos nossa disposição concreta de agir em favor do nosso país, dos valores que nos são caros e das crenças que carregamos. É por isso que se trata de direito pessoal e intransferível\", disse.",
+      "Segundo ele, neste domingo, a Justiça Eleitoral estará novamente mobilizada em todo o território nacional para assegurar a livre e espontânea manifestação da vontade do eleitorado, \"garantindo o mesmo clima de tranquilidade e respeito registrado no primeiro turno\"."
+    ]
+  },
+  {
     "id": "ebc-1706497",
     "title": "Em Brasília, atos por Lula e Flávio ficam a 2 km de distância",
     "summary": "Apenas dois quilômetros separaram, no centro de Brasília, as multidões de simpatizantes de Luiz Inácio Lula da Silva (PT) e Flávio Bolsonaro (PL), candidatos à Presidência da República, neste sábado (24), véspera das eleições.",
@@ -62,7 +93,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "publishedAt": "24/10/2026 às 20:19",
     "category": "Eleições",
     "ingestedAt": "24/10/2026 às 21:22",
-    "imageUrl": "https://imagens.ebc.com.br/7xX-cSJp3aRjcJ-4JiF0NvoV4Jg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/24/flaviolularj.jpg?itok=Q3keUt6C",
+    "imageUrl": "https://imagens.ebc.com.br/e9fqgKgbZvdaYZ6rBa2WhaDQtcg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/13/55555300939_daa2412940_o_copy2.jpg?itok=5eb2rWBS",
     "imageCaption": "Candidatos à Presidência reúnem apoiadores no último dia de campanha",
     "imageCredit": "Agência Brasil*",
     "imageAlt": "Candidatos à Presidência reúnem apoiadores no último dia de campanha",
@@ -70,7 +101,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Política",
       "eleições 2026",
-      "Campanhas",
+      "campanhas",
       "último dia",
       "Lula"
     ],
@@ -118,12 +149,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições",
       "Eleições"
     ],
-    "content": [
-      "Eleitores poderão fazer manifestação individual e silenciosa da sua posição política no domingo (25), dia de votação do segundo turno das eleições 2026.",
-      "Isso significa que as pessoas podem usar itens que expressem sua preferência, como:",
-      "O que não pode é haver aglomerações, manifestações coletivas ruidosas, abordagem a outros eleitores ou qualquer tentativa de aliciamento, que é considerado crime de boca de urna .",
-      "Quem identificar possíveis irregularidades pode denunciar por meio do aplicativo Pardal, da Justiça Eleitoral. A ferramenta permite informar o local da ocorrência, descrever os fatos e anexar fotos, vídeos, áudios ou links para ajudar na apuração."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706126",
@@ -1091,30 +1117,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Congresso",
       "Brasil",
       "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706334",
-    "title": "Barra do Corda afasta secretário por ameaça a eleitores do PT",
-    "summary": "O prefeito de Barra do Corda, no Maranhão, Rigo Alberto Teles de Sousa, determinou, na quinta-feira (22), o afastamento do secretário municipal de Segurança Pública, Antonio James Mota da Silva, até o fim das eleições.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/barra-do-corda-afasta-secretario-por-ameaca-eleitores-do-pt",
-    "publishedAt": "23/10/2026 às 14:24",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/bWd97jgte8ujVd-ia1wHjOVLp34=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/23/firefly_gemini_flash_melhorar_nitidez_68678_copy.jpg?itok=eY1Zoawj",
-    "imageCaption": "Barra do Corda afasta secretário por ameaça a eleitores do PT",
-    "imageCredit": "Daniella Almeida - Repórter da Agência Brasil",
-    "imageAlt": "Barra do Corda afasta secretário por ameaça a eleitores do PT",
-    "author": "Daniella Almeida - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Secretário de Segurança",
-      "Barra do Corda",
-      "ameaça a eleitores"
     ],
     "content": []
   },
