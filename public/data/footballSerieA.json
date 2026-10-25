@@ -6,7 +6,7 @@
   "season": "2026",
   "source": "football-data.org (v4 API)",
   "isReal": true,
-  "lastUpdated": "2026-10-25T09:18:56.635Z",
+  "lastUpdated": "2026-10-25T21:16:06.080Z",
   "standings": [
     {
       "position": 1,
@@ -10657,11 +10657,12 @@
       "tournamentId": "brasileirao-a",
       "tournamentName": "Brasileirão Série A",
       "phase": "32ª Rodada",
-      "status": "agendado",
+      "status": "encerrado",
       "homeTeam": {
         "id": 6684,
         "name": "Internacional",
         "shortName": "Internacional",
+        "score": 3,
         "logo": "https://crests.football-data.org/6684.png",
         "initials": "SCI",
         "color": "bg-slate-800 text-white"
@@ -10670,6 +10671,7 @@
         "id": 1770,
         "name": "Botafogo",
         "shortName": "Botafogo",
+        "score": 0,
         "logo": "https://crests.football-data.org/1770.png",
         "initials": "BOT",
         "color": "bg-slate-700 text-white"
@@ -10688,11 +10690,12 @@
       "tournamentId": "brasileirao-a",
       "tournamentName": "Brasileirão Série A",
       "phase": "32ª Rodada",
-      "status": "agendado",
+      "status": "encerrado",
       "homeTeam": {
         "id": 4364,
         "name": "Mirassol",
         "shortName": "Mirassol",
+        "score": 1,
         "logo": "https://crests.football-data.org/4364.png",
         "initials": "MIR",
         "color": "bg-slate-800 text-white"
@@ -10701,6 +10704,7 @@
         "id": 1776,
         "name": "São Paulo",
         "shortName": "São Paulo",
+        "score": 1,
         "logo": "https://crests.football-data.org/1776.png",
         "initials": "PAU",
         "color": "bg-slate-700 text-white"
@@ -10719,11 +10723,12 @@
       "tournamentId": "brasileirao-a",
       "tournamentName": "Brasileirão Série A",
       "phase": "32ª Rodada",
-      "status": "agendado",
+      "status": "encerrado",
       "homeTeam": {
         "id": 1782,
         "name": "Vitória",
         "shortName": "Vitória",
+        "score": 1,
         "logo": "https://crests.football-data.org/1782.png",
         "initials": "VIT",
         "color": "bg-slate-800 text-white"
@@ -10732,6 +10737,7 @@
         "id": 1768,
         "name": "Paranaense",
         "shortName": "Paranaense",
+        "score": 1,
         "logo": "https://crests.football-data.org/1768.png",
         "initials": "CAP",
         "color": "bg-slate-700 text-white"
@@ -10750,12 +10756,12 @@
       "tournamentId": "brasileirao-a",
       "tournamentName": "Brasileirão Série A",
       "phase": "32ª Rodada",
-      "status": "ao_vivo",
-      "minute": "Ao vivo",
+      "status": "encerrado",
       "homeTeam": {
         "id": 1769,
         "name": "Palmeiras",
         "shortName": "Palmeiras",
+        "score": 2,
         "logo": "https://crests.football-data.org/1769.png",
         "initials": "PAL",
         "color": "bg-slate-800 text-white"
@@ -10764,6 +10770,7 @@
         "id": 4286,
         "name": "Bragantino",
         "shortName": "Bragantino",
+        "score": 0,
         "logo": "https://crests.football-data.org/4286.png",
         "initials": "RBB",
         "color": "bg-slate-700 text-white"
@@ -10782,11 +10789,12 @@
       "tournamentId": "brasileirao-a",
       "tournamentName": "Brasileirão Série A",
       "phase": "32ª Rodada",
-      "status": "agendado",
+      "status": "encerrado",
       "homeTeam": {
         "id": 1780,
         "name": "Vasco da Gama",
         "shortName": "Vasco da Gama",
+        "score": 3,
         "logo": "https://crests.football-data.org/1780.png",
         "initials": "VAS",
         "color": "bg-slate-800 text-white"
@@ -10795,6 +10803,7 @@
         "id": 1779,
         "name": "Corinthians",
         "shortName": "Corinthians",
+        "score": 2,
         "logo": "https://crests.football-data.org/1779.png",
         "initials": "COR",
         "color": "bg-slate-700 text-white"
@@ -10819,6 +10828,7 @@
         "id": 1772,
         "name": "Chapecoense",
         "shortName": "Chapecoense",
+        "score": 2,
         "logo": "https://crests.football-data.org/1772_large.png",
         "initials": "CHA",
         "color": "bg-slate-800 text-white"
@@ -10827,6 +10837,7 @@
         "id": 1765,
         "name": "Fluminense",
         "shortName": "Fluminense",
+        "score": 1,
         "logo": "https://crests.football-data.org/1765.png",
         "initials": "FLU",
         "color": "bg-slate-700 text-white"
@@ -10851,6 +10862,7 @@
         "id": 6685,
         "name": "Santos",
         "shortName": "Santos",
+        "score": 0,
         "logo": "https://crests.football-data.org/6685.png",
         "initials": "SAN",
         "color": "bg-slate-800 text-white"
@@ -10859,6 +10871,7 @@
         "id": 1777,
         "name": "Bahia",
         "shortName": "Bahia",
+        "score": 0,
         "logo": "https://crests.football-data.org/1777.png",
         "initials": "BAH",
         "color": "bg-slate-700 text-white"
