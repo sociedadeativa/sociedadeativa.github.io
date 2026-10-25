@@ -9,6 +9,8 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1706497/
+https://sociedadeativa.github.io/noticias/ebc-1706496/
 https://sociedadeativa.github.io/noticias/ebc-1705956/
 https://sociedadeativa.github.io/noticias/ebc-1706126/
 https://sociedadeativa.github.io/noticias/ebc-1706447/
@@ -54,8 +56,6 @@ https://sociedadeativa.github.io/noticias/camara-1305735-projeto-permite-que-pro
 https://sociedadeativa.github.io/noticias/ebc-1706334/
 https://sociedadeativa.github.io/noticias/camara-1300663-projeto-cria-recuperacao-judic/
 https://sociedadeativa.github.io/noticias/camara-1309995-projeto-reconhece-cultivo-de-c/
-https://sociedadeativa.github.io/noticias/ebc-1706323/
-https://sociedadeativa.github.io/noticias/ebc-1706321/
 https://sociedadeativa.github.io/noticias/ibge-48339/
 https://sociedadeativa.github.io/noticias/ibge-48336/
 https://sociedadeativa.github.io/noticias/ibge-48325/

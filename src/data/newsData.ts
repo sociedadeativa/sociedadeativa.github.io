@@ -5,6 +5,99 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706497",
+    "title": "Em Brasília, atos por Lula e Flávio ficam a 2 km de distância",
+    "summary": "Apenas dois quilômetros separaram, no centro de Brasília, as multidões de simpatizantes de Luiz Inácio Lula da Silva (PT) e Flávio Bolsonaro (PL), candidatos à Presidência da República, neste sábado (24), véspera das eleições.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/em-brasilia-atos-por-lula-e-flavio-ficam-2-km-de-distancia",
+    "publishedAt": "24/10/2026 às 20:52",
+    "category": "Eleições",
+    "ingestedAt": "24/10/2026 às 21:22",
+    "imageUrl": "https://imagens.ebc.com.br/TP8koQHn97iCk4Zc8ccHSgSIswo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/24/lulabolsodf.jpg?itok=31PvuXPE",
+    "imageCaption": "Em Brasília, atos por Lula e Flávio ficam a 2 km de distância",
+    "imageCredit": "Luiz Claudio Ferreira - Repórter da Agência Brasil*",
+    "imageAlt": "Em Brasília, atos por Lula e Flávio ficam a 2 km de distância",
+    "author": "Luiz Claudio Ferreira - Repórter da Agência Brasil*",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "manifestação",
+      "Lula",
+      "Brasília"
+    ],
+    "content": [
+      "Apenas dois quilômetros separaram, no centro de Brasília, as multidões de simpatizantes de Luiz Inácio Lula da Silva (PT) e Flávio Bolsonaro (PL), candidatos à Presidência da República, neste sábado (24), véspera das eleições. Houve provocações entre os dois lados no meio do caminho, quando eventualmente os eleitores se encontraram nas ruas.",
+      "Os adeptos das duas candidaturas disseram que se formou uma distância intransponível entre eles, mas a palavra democracia foi repetida pelos dois lados. Nas duas manifestações, houve trios elétricos com jingles de campanha e o Hino Nacional. Enquanto o grupo majoritariamente de vermelho se concentrou nas imediações do Museu Nacional, os de amarelo foram para a Torre de TV.",
+      "De camisa vermelha, com a imagem do atual presidente Lula, a arquiteta Hanna Brandini, de 33 anos, ouvia gritos de pessoas do outro lado da rua. Mas não se incomodou. Era a primeira grande manifestação de que ela participava.",
+      "“Entendo que foi uma campanha marcada por muita desinformação. Os desentendimentos podem ser apenas momentâneos”, disse.",
+      "Passou por ela, na mesma calçada, de camisa da seleção brasileira, o bacharel em direito que preferiu se identificar apenas como Leonardo*, de 36 anos.",
+      "Ele espera que o próximo governo, a ser eleito neste domingo (25), conte com o respeito de quem foi derrotado.",
+      "Também de camisa da seleção brasileira estavam as amigas Lana Wendy Rodrigues, monitora de creche de 29 anos, e a vendedora Dayane Gomes, de 32 anos. Ambas moradoras de Sobradinho 2, na periferia do Distrito Federal, elas dizem que não tiveram resistências ou intolerâncias de quem pensa diferente porque preferem evitar “conversas de política” no dia a dia. Dizem que vivem em uma “bolha” em que há preferências por ideais “de direita”. Juntas, levaram uma bandeira do Brasil para o ato.",
+      "Lana e Dayane tiveram, porém, dois irmãos que preferiram não vestir amarelo na manifestação. O bancário Samuel Nascimento, de 26, e a consultora, Julia Nascimento, de 34, costumam frequentar manifestações juntos e são contrários a “extremismos”.",
+      "Vendendo leques, bonés e camisetas com imagens do candidato Flávio Bolsonaro, a estudante secundarista Maria Eduarda Nascimento, de 18 anos, estava empolgada com o primeiro voto. Um ano importante para ela, que pretende tentar ingressar no curso superior de biomedicina . Ela diz que foi influenciada pelo gosto do pai e também de amigos da igreja evangélica que frequenta na Ceilândia, a maior região administrativa do Distrito Federal.",
+      "A dois quilômetros dali, as irmãs gêmeas Laila e Melissa Lacerda, de 16 anos, também estavam entusiasmadas com o primeiro voto para o presidente Lula. Na rotina de estudos do segundo ano do ensino médio, elas disseram que estão muito felizes e empolgadas com a participação dos mais jovens nos atos.",
+      "Laila entende que todos os amigos têm como pautas principais o ensino público e gratuito e também o desarmamento. “Não temos como concordar com quem defende mais armas nas ruas”, afirmou Laila.",
+      "Também estava empolgado com a manifestação o economista aposentado Murilo da Cunha, de 73 anos. Por causa de uma doença rara neurológica, ele percorreu a Esplanada dos Ministérios em uma cadeira de rodas.",
+      "“Estou muito feliz e nunca vi nada igual na minha vida. Comparo com os movimentos de Diretas Já, na década de 1980, e com os cara-pintadas, de 1992”, lembrou. Ele lamentou ter se afastado de familiares e amigos por causa da divergência de opiniões.",
+      "Murilo da Cunha percorreu a Esplanada dos Ministérios em cadeira de rodas - Foto Lula Marques/Agência Brasil.",
+      "Próximo a ele, na Esplanada, um casal optou por não ir de vermelho para a manifestação. José Pedro Oliveira, de 61, e Ana Carolina Campos, de 48, disseram que em 2018 votaram em Jair Bolsonaro para presidente. A mudança de opinião ocorreu depois que o filho adolescente ficou em perigo de morte em uma Unidade de Terapia Intensiva com covid-19.",
+      "“Nós nos decepcionamos muito e passamos a pensar radicalmente diferente. Nosso filho vai se formar neste ano em ciência da computação e devemos prezar para que o negacionismo não ameace a vida de mais ninguém’, disse Ana Carolina. José Pedro afirmou que se afastou de familiares e amigos depois do episódio.",
+      "Um grupo de amigos na manifestação também explicou que o voto em Lula tinha relação com a proteção de pessoas negras e LGBTs . Os universitários Nathália Rocha, de 25, e Eduardo Couto, de 28, além da advogada Sophia Barbosa, de 28, enfatizaram a necessidade de regulamentar as redes sociais que, segundo eles, abriram um abismo entre os brasileiros. “Isso é urgente. A nossa democracia pede isso”, disse a advogada.",
+      "Em Maceió (AL), apoiadores de Lula se reuniram na orla antes do sol nascer para participar de uma corrida pelo atual presidente. A largada foi às 5h13 da manhã.",
+      "Em Fortaleza (CE), também houve corrida de rua pela manhã. Surfistas, nadadores e atletas de remo fizeram um ato dentro do mar em apoio a Lula com o slogan “A Praia é Nossa”.",
+      "Apoiadores do candidato Flávio Bolsonaro fizeram um ato em Goiânia (GO) pela manhã. Também houve manifestações em Cuiabá (MT), Dourados (MS), em Vitória (ES) e diversas outras cidades do país.",
+      "Lula participou de uma manifestação pela manhã em Copacabana, no Rio de Janeiro, e à tarde esteve com apoiadores na Avenida Paulista, em São Paulo.",
+      "Já o candidato Flávio Bolsonaro acompanhou uma motocarreata em Belo Horizonte, Minas Gerais, pela manhã e, na sequência, fez ato na Barra da Tijuca, no Rio de Janeiro.",
+      "* Colaborou Iara Balduino"
+    ]
+  },
+  {
+    "id": "ebc-1706496",
+    "title": "Candidatos à Presidência reúnem apoiadores no último dia de campanha",
+    "summary": "Os candidatos à Presidência da República Flávio Bolsonaro (PL) e Luiz Inácio Lula da Silva (PT) reuniram multidões em atos com apoiadores no Rio de Janeiro, em Minas Gerais e São Paulo, no último dia da campanha eleitoral, neste sábado (24).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/candidatos-presidencia-reunem-apoiadores-no-ultimo-dia-de-campanha",
+    "publishedAt": "24/10/2026 às 20:19",
+    "category": "Eleições",
+    "ingestedAt": "24/10/2026 às 21:22",
+    "imageUrl": "https://imagens.ebc.com.br/7xX-cSJp3aRjcJ-4JiF0NvoV4Jg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/24/flaviolularj.jpg?itok=Q3keUt6C",
+    "imageCaption": "Candidatos à Presidência reúnem apoiadores no último dia de campanha",
+    "imageCredit": "Agência Brasil*",
+    "imageAlt": "Candidatos à Presidência reúnem apoiadores no último dia de campanha",
+    "author": "Agência Brasil*",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Campanhas",
+      "último dia",
+      "Lula"
+    ],
+    "content": [
+      "Os candidatos à Presidência da República Flávio Bolsonaro (PL) e Luiz Inácio Lula da Silva (PT) reuniram multidões em atos com apoiadores no Rio de Janeiro, em Minas Gerais e São Paulo, no último dia da campanha eleitoral, neste sábado (24).",
+      "Nesta tarde, na Barra da Tijuca, zona oeste do Rio de Janeiro, o senador Flávio Bolsonaro participou de uma caminhada com apoiadores ao som de trios elétricos partindo da Praça do Ó. Ele discursou brevemente agradecendo o apoio. \"Vocês estão fazendo parte dessa história\" declarou.",
+      "Com apoio dos deputados federais eleitos Nikolas Ferreira (PL-MG) e Sóstenes Cavalcante (PL-RJ), do senador eleito Dalagnol e do governador de São Paulo Tarcísio Freitas (Republicanos), Flávio disse que os próximos anos serão de \" felicidade, prosperidade, liberdade e vitória porque o Brasil vai vencer\".",
+      "O candidato também estava acompanhado da esposa, Fernanda, e do governador eleito no Rio de Janeiro, Douglas Ruas (PL). Entre os apoiadores, muitas famílias com crianças, motociclistas e lutadores de jiu-jitsu. A família Gracie, referência na modalidade, foi saudada pelos mestres de cerimônia do evento.",
+      "A manifestação se deslocou em direção ao Condomínio Vivendas da Barra, onde a família Bolsonaro tem uma casa. O trajeto foi de cerca de 1 quilômetro.",
+      "Apoiadores usavam camisetas da seleção, verde-amarelo e portavam faixas adesivos e outros adereços com a frase \"Fora Lula\". Também se viam muitas bandeiras de Israel. A multidão cantou o Hino Nacional.",
+      "Candidato à reeleição, Lula também reuniu apoiadores no Rio de Janeiro, mas na orla de Copacabana, em uma caminhada que começou no fim da manhã. Em um breve pronunciamento aos jornalistas antes do evento, ele destacou que essa foi a disputa eleitoral em que mais enfrentou mentiras do lado adversário, representado pelo senador Flávio Bolsonaro.",
+      "Lula ainda agradeceu a mobilização de apoiadores durante o segundo turno e afirmou que “não se ganha eleição sem o povo”. Segundo ele, os brasileiros querem “mudança para frente e não retroceder”, citando o que chamou de desmontes na cultura, educação, trabalho, saúde e infraestrutura, ocorridos no governo anterior de Jair de Bolsonaro, pai de Flávio.",
+      "O candidato do PT estava acompanhado da primeira-dama, Janja Lula da Silva, e de políticos aliados, como ministros, ex-ministros, o prefeito do Rio de Janeiro, Eduardo Cavaliere, e o ex-prefeito Eduardo Paes, entre outros.",
+      "Durante a caminhada de pouco menos de 1 quilômetro, trios elétricos e o carro onde estava o presidente foram saudados pela multidão, que ostentava as cores vermelho, do PT, e o amarelo, da camisa da seleção brasileira. O público presente também levava cartazes que exaltavam feitos do atual governo e colocavam em dúvida a garantia de direitos em caso de vitória da campanha adversária.",
+      "O presidente lembrou ainda o caso Ana Clara , menina de 5 anos que morreu em uma comunidade em Niterói, no Rio de Janeiro, atingida por tiro de fuzil disparado por um soldado da Polícia Militar (PM), em 2021. O senador Flávio Bolsonaro defendeu a inocência do PM.",
+      "Ao fim da caminhada, ele fez um chamado ao voto feminino e disse que são as mulheres que vão ganhar a eleição. “Cada mulher que sentiu a dor daquela mãe que perdeu um filho, uma menina de 5 anos, com a bala de um policial bandido, cada mulher não pode votar no miliciano”, disse.",
+      "Pela manhã, o candidato Flávio também participou de uma motocarreata em Belo Horizonte, capital mineira, acompanhado de outras lideranças da direita como o deputado federal Nikolas Ferreira e o governador de São Paulo Tarcísio de Freitas . O senador fez o trajeto em cima de um trio elétrico e deixou o evento sem discursar.",
+      "Em publicação nas redes sociais, Flávio também falou àqueles que ainda estão indecisos sobre a escolha para o segundo turno. Para o candidato do PL, o Brasil está “unido do mesmo lado, que é o lado da mudança”.",
+      "“O Brasil cansou de esperar porque o que foi vendido como esperança virou medo, desilusão, recorde de mulheres assassinadas e obras inacabadas. Quero me colocar à disposição e como presidente da República vou dar o meu melhor”, completou Flávio.",
+      "Também em um segundo evento, à tarde, Lula encerrou a campanha em ato na Avenida Paulista, em São Paulo. O candidato novamente destacou o apoio popular e a confiança na possibilidade de uma virada.",
+      "“Estamos terminando uma campanha que possivelmente só tenha tido similar no segundo turno de 1989. A de 89 foi a campanha mais emocionante de que participei na minha vida, pela participação viva da sociedade”, disse, em um ato com apoio massivo de militantes e simpatizantes que também cantaram o Hino Nacional.",
+      "“Neste segundo turno, a sociedade brasileira resolveu assumir a responsabilidade de dizer que a eleição não é uma coisa de um partido, é uma coisa de pessoas que se preocupam com o país, de pessoas que se preocupam com o dia a dia de outras pessoas”, afirmou Lula, em coletiva de imprensa.",
+      "Na capital paulista, o candidato voltou a criticar as posturas do candidato Flávio Bolsonaro, como a defesa do policial que matou a jovem Ana Clara e a suposta proximidade com milícias fluminenses.",
+      "* Colaboraram Guilherme Jeronymo, de São Paulo, e Isabela Vieira e Bruno de Freitas Moura, do Rio de Janeiro."
+    ]
+  },
+  {
     "id": "ebc-1705956",
     "title": "Votação: eleitores podem usar itens que expressem preferência política",
     "summary": "Eleitores poderão fazer manifestação individual e silenciosa da sua posição política no domingo (25), dia de votação do segundo turno das eleições 2026. Isso significa que as pessoas podem usar itens que expressem sua preferência, como: bandeiras, camisetas, broches adesivos.",
@@ -53,14 +146,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Eleições",
       "Eleições 2026"
     ],
-    "content": [
-      "Os 158 milhões de eleitores que vão às urnas neste domingo (25) para escolher o próximo presidente da República precisam checar o endereço da seção eleitoral antes de sair de casa.",
-      "A orientação do Tribunal Superior Eleitoral é que os eleitores confiram, com antecedência, os locais de votação nos canais oficiais.",
-      "O aplicativo e-título pode ser baixado de forma gratuita em celulares Android e iOS nas lojas oficiais . Para consultar o local de votação é só abrir o aplicativo, digitar os dados solicitados e selecionar a opção “onde votar”. Vai aparecer a zona e a seção eleitoral com o endereço. É possível inclusive traçar a rota de como chegar ao local.",
-      "O Autoatendimento Eleitoral está acessível nos postos do TSE e dos tribunais regionais eleitorais (TREs) de cada estado. Alí é possível consultar o local de votação em “onde votar”, além de outros serviços, como regularização de pendências, atualização de dados e emissão de documentos de forma remota, sem precisar comparecer a um cartório eleitoral.",
-      "O ChatVote é o assistente virtual da Justiça Eleitoral. Ele usa inteligência artificial para responder dúvidas e orientar sobre os serviços disponíveis. Também pode ser acessado na página do TSE. O ChatVote fica no lado esquerdo da página, na parte inferior. É um desenho de uma urna com olhinhos. É só clicar nela e fazer a pergunta.",
-      "A votação do segundo turno ocorre no próximo dia 25 de outubro . As seções ficam abertas de 8h às 17h. O eleitor vai votar desta vez apenas para presidente da República e, em alguns estados, para governador. A disputa local ocorre no Acre, Amazonas, Distrito Federal, Espírito Santo, Rio Grande do Norte e Tocantins."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706447",
@@ -84,14 +170,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "supermercados",
       "assédio eleitoral"
     ],
-    "content": [
-      "A Justiça do Trabalho determinou que uma rede de supermercados pare de enviar comunicados de cunho eleitoral para seus funcionários. A decisão foi tomada a pedido do Sindicato dos Comerciários, que constatou que empregados do Supermercado Zona Sul receberam carta, enviada pela empresa, que continha críticas ao cenário político e institucional brasileiro e um apelo por mudanças, às vésperas do segundo turno das eleições presidenciais.",
-      "Segundo o sindicato, a juíza Cláudia de Abreu Lima Pisco determinou, em liminar, que o supermercado envie, até as 23h59 deste sábado (24), nova mensagem aos funcionários, pelos mesmos canais utilizados originalmente, esclarecendo que o voto é livre e secreto e que nenhum empregado é obrigado a revelar sua preferência política.",
-      "Além disso, a empresa também deverá afixar a comunicação em locais de grande circulação de funcionários em seus estabelecimentos.",
-      "Caso a empresa descumpra a decisão, há multa diária de R$ 500 mil.",
-      "Ainda de acordo com o sindicato, a juíza considerou que a manifestação institucional caracteriza assédio eleitoral , ao transmitir de forma velada uma orientação política aos trabalhadores, uma vez que há uma relação de dependência econômica entre empregados e empregadores, o que poderia gerar receio de retaliações e comprometer a liberdade de voto.",
-      "A assessoria de imprensa do Supermercado Zona Sul informou que não vai se pronunciar sobre o caso."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1705948",
@@ -1080,53 +1159,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Congresso",
       "Brasil",
       "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706323",
-    "title": "ONS fará operação especial para garantir energia no segundo turno",
-    "summary": "O Operador Nacional do Sistema Elétrico (ONS) adotará uma operação especial para reforçar a segurança do fornecimento de energia durante o segundo turno das eleições, neste domingo (25).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/ons-fara-operacao-especial-para-garantir-energia-no-segundo-turno",
-    "publishedAt": "23/10/2026 às 11:53",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/yHCiaU3l_1rIjF2AjgtqG2-4PjA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/24/_pin5468.jpg-3.jpg?itok=nDR8j7KQ",
-    "imageCaption": "ONS fará operação especial para garantir energia no segundo turno",
-    "imageCredit": "Pedro Peduzzi - Repórter da Agência Brasil",
-    "imageAlt": "ONS fará operação especial para garantir energia no segundo turno",
-    "author": "Pedro Peduzzi - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "ONS",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706321",
-    "title": "Forças Armadas mobilizam 25 mil militares para o segundo turno",
-    "summary": "As Forças Armadas vão mobilizar cerca de 25 mil militares para apoiar a Justiça Eleitoral no segundo turno das eleições, neste domingo (25). O trabalho envolverá militares da Marinha, do Exército e da Aeronáutica.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/forcas-armadas-mobilizam-25-mil-militares-para-o-segundo-turno",
-    "publishedAt": "23/10/2026 às 11:49",
-    "category": "Eleições",
-    "ingestedAt": "24/10/2026 às 10:08",
-    "imageUrl": "https://imagens.ebc.com.br/UDeLCc0BcGWreniuBf513NJJnvE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/02/0d4a1596.jpg?itok=JeFqhh5P",
-    "imageCaption": "Forças Armadas mobilizam 25 mil militares para o segundo turno",
-    "imageCredit": "Pedro Peduzzi – Repórter da Agência Brasil",
-    "imageAlt": "Forças Armadas mobilizam 25 mil militares para o segundo turno",
-    "author": "Pedro Peduzzi – Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Exército",
-      "Marinha",
-      "Aeronáutica"
     ],
     "content": []
   },
