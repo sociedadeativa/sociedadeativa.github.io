@@ -5,6 +5,200 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "camara-1310273-projeto-preve-integracao-de-da",
+    "title": "Projeto prevê integração de dados públicos e simplificação de licenças",
+    "summary": "A proposta tramita na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1310273-projeto-preve-integracao-de-dados-publicos-e-simplificacao-de-licencas",
+    "publishedAt": "26/10/2026 às 10:38",
+    "category": "Congresso",
+    "ingestedAt": "26/10/2026 às 10:54",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260318173016737-768x474.jpg",
+    "imageCaption": "O deputado Josenildo é o autor da proposta",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Josenildo (PDT - AP)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Kayo Magalhães / Câmara dos Deputados",
+      "O deputado Josenildo é o autor da proposta",
+      "O Projeto de Lei (PL) 3066/26 altera a Lei da Liberdade Econômica para reduzir a burocracia e ampliar a integração digital. Uma das principais medidas proíbe o governo de exigir documentos já disponíveis em bancos de dados oficiais, obrigando o compartilhamento dessas informações entre as próprias instituições públicas. A proposta tramita na Câmara dos Deputados.",
+      "O texto também prevê a criação de um sistema nacional de sandbox regulatório – um espaço de testes com regras flexíveis para novos negócios. Nesse sistema, órgãos reguladores poderão autorizar o funcionamento experimental dessas atividades.",
+      "Atualmente, o sandbox regulatório opera de forma limitada, temporária e restrita a alguns setores, como o financeiro.",
+      "Segundo o autor, deputado Josenildo (PDT-AP), a iniciativa contribui para reduzir a burocracia diminuindo o \"custo Brasil\".",
+      "\"A proposta incentiva a digitalização integral de processos administrativos, a interoperabilidade entre bases governamentais, a integração de sistemas públicos, a utilização de assinaturas digitais e o acompanhamento eletrônico em tempo real de procedimentos administrativos, reduzindo custos operacionais e ampliando a eficiência da atuação estatal\", reforçou.",
+      "O projeto prevê a aprovação automática de licenças, caso o órgão público não responda ao pedido do empreendedor dentro de um prazo razoável. A medida busca evitar que os negócios fiquem travados pela demora da administração pública. A Lei da Liberdade Econômica já prevê aprovação tácita em situações delimitadas, com condições e exceções.",
+      "O texto cria um padrão nacional unificado para as atividades econômicas de baixo risco, para a quais Estados e municípios só poderão fazer exigências adicionais para o funcionamento se comprovado o risco da atividade.",
+      "A proposta estabelece ainda o Ranking Nacional de Modernização Econômica com o propósito de avaliar e comparar estados e municípios com base no tempo médio de abertura de empresas, digitalização administrativa e facilidade de licenciamento.",
+      "A proposta será analisada de forma conclusiva pelas comissões de Administração e Serviço Público; de Desenvolvimento Econômico; e de Constituição e Justiça e de Cidadania. Para virar lei, precisa ser aprovada pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
+    ]
+  },
+  {
+    "id": "camara-1313746-pl-tera-seis-governadores-a-pa",
+    "title": "PL terá seis governadores a partir de 2027; PT ficará com quatro",
+    "summary": "Confira a lista dos partidos que elegeram governadores em 2026.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313746-pl-tera-seis-governadores-a-partir-de-2027-pt-ficara-com-quatro",
+    "publishedAt": "26/10/2026 às 10:14",
+    "category": "Congresso",
+    "ingestedAt": "26/10/2026 às 10:54",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/mosaico-partidos-copiar-governadores02-768x513.jpg",
+    "imageCaption": "PL terá seis governadores a partir de 2027; PT ficará com quatro",
+    "imageCredit": "Câmara dos Deputados",
+    "imageAlt": "PL terá seis governadores a partir de 2027; PT ficará com quatro",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Mesmo sem eleger nenhum governador em segundo turno, o PL será o partido com mais governos estaduais a partir de 2027, com seis. A sigla comandará os três estados do Sul (Paraná, Rio Grande do Sul e Santa Catarina), além de Rio de Janeiro, Rondônia e Roraima.",
+      "O PSD vem em seguida, com cinco governos, nos estados do Amapá, Amazonas (vitória em segundo turno), Maranhão, Pernambuco e Sergipe.",
+      "Por sua vez, o PP elegeu dois governadores em segundo turno, chegando ao comando de quatro unidades da Federação: Acre, Distrito Federal, Mato Grosso do Sul e Paraíba.",
+      "O PT, que havia elegido três governadores em primeiro turno (Bahia, Ceará e Piauí), venceu o governo do Rio Grande do Norte em segundo turno, chegando a quatro eleitos.",
+      "Também com quatro governadores no total, o Republicanos venceu em Mato Grosso, Minas Gerais e São Paulo – todos em primeiro turno – e no Espírito Santo (em segundo turno).",
+      "O PSDB, com a vitória no Tocantins em segundo turno, acumula dois governadores, pois venceu no primeiro turno em Alagoas.",
+      "Já MDB e Podemos terão um governador cada, respectivamente em Goiás e Pará, eleitos em primeiro turno.",
+      "Confira os governadores eleitos no segundo turno",
+      "Deputados que viram governadores",
+      "Dois deputados federais foram eleitos governadores.",
+      "Vicentinho Júnior (PSDB-TO), vitorioso em segundo turno no Tocantins, juntou-se a Zucco (PL-RS), que venceu no Rio Grande do Sul já no primeiro turno.",
+      "Mais notícias sobre as Eleições 2026"
+    ]
+  },
+  {
+    "id": "ebc-1706825",
+    "title": "PF investiga se problemas na circulação de ônibus prejudicaram eleitor",
+    "summary": "A Polícia Federal (PF) investiga se problemas na circulação de ônibus no segundo turno da eleição, no último domingo (25), prejudicou o trânsito de eleitores.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/pf-investiga-se-problemas-na-circulacao-de-onibus-prejudicaram-eleitor",
+    "publishedAt": "26/10/2026 às 10:05",
+    "category": "Justiça",
+    "ingestedAt": "26/10/2026 às 10:54",
+    "imageUrl": "https://imagens.ebc.com.br/5JCac9FQ6LFkiQbwYrpRFKdMuVg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/toms5600.jpg?itok=GyZpNdRe",
+    "imageCaption": "PF investiga se problemas na circulação de ônibus prejudicaram eleitor",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "PF investiga se problemas na circulação de ônibus prejudicaram eleitor",
+    "author": "Agência Brasil",
+    "tags": [
+      "Justiça",
+      "eleições 2026",
+      "Ônibus",
+      "Circulação",
+      "Eleitor"
+    ],
+    "content": [
+      "A Polícia Federal (PF) investiga se problemas na circulação de ônibus no segundo turno da eleição, no último domingo (25), prejudicou o trânsito de eleitores. Um inquérito policial foi aberto para apurar a situação em Sergipe, mas há investigações também sobre ocorrências nos estados de São Paulo, da Bahia, de Alagoas e do Piauí.",
+      "A PF informou que pretende apurar as circunstâncias da redução das frotas de ônibus em circulação em alguns locais desses estados e também se isso impediu ou dificultou o voto de eleitores . O artigo 297 do Código Eleitoral prevê que responsáveis por “impedir ou embaraçar o exercício do sufrágio” estão sujeitos a pena de seis meses de prisão e pagamento de multa.",
+      "Ele informou que diligências estão em andamento nesses expedientes, com oitivas de pessoas e apurações nos locais.",
+      "A redução dos ônibus em circulação motivou a campanha do candidato à Presidência da República Luiz Inácio Lula da Silva (PT) a pedir a prorrogação do horário de votação nesses locais, o que foi acatado pelo Supremo Tribunal Federal (STF) e pelo Tribunal Superior Eleitoral (TSE). A votação foi prorrogada por mais duas horas, até as 19h.",
+      "Até o início da noite de domingo, a PF informou que abriu três inquéritos, lavrou 44 termos circunstanciados e conduziu 56 pessoas a delegacias, para apurar os mais diversos crimes eleitorais. A maior parte dos casos foi de violação do sigilo do voto, propaganda irregular e desobediência eleitoral."
+    ]
+  },
+  {
+    "id": "camara-1310197-projeto-cria-sistema-nacional-",
+    "title": "Projeto cria Sistema Nacional de Economia Criativa de Base Local",
+    "summary": "O texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1310197-projeto-cria-sistema-nacional-de-economia-criativa-de-base-local",
+    "publishedAt": "26/10/2026 às 09:33",
+    "category": "Congresso",
+    "ingestedAt": "26/10/2026 às 10:54",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20231121201633654-768x473.jpg",
+    "imageCaption": "Duda Ramos, autor da proposta",
+    "imageCredit": "Zeca Ribeiro/Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas. Dep. Duda Ramos(MDB - RR)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706820",
+    "title": "Novo canal de umidade leva chuvas ao Norte, Centro-Oeste e Nordeste",
+    "summary": "O avanço de uma frente fria pela costa brasileira e a formação de um novo canal de umidade favorecem, nesta segunda-feira (26), o retorno das chuvas a áreas do Norte, Centro-Oeste e Nordeste, informa o Instituto Nacional de Meteorologia (Inmet).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/novo-canal-de-umidade-leva-chuvas-ao-norte-centro-oeste-e-nordeste",
+    "publishedAt": "26/10/2026 às 08:58",
+    "category": "Política",
+    "ingestedAt": "26/10/2026 às 10:54",
+    "imageUrl": "https://imagens.ebc.com.br/RvWhbQmiGuSsVhzWXPdB-QChaAM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/04/22/chuvabelem0426.jpg?itok=nYomOk6m",
+    "imageCaption": "Novo canal de umidade leva chuvas ao Norte, Centro-Oeste e Nordeste",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Novo canal de umidade leva chuvas ao Norte, Centro-Oeste e Nordeste",
+    "author": "Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "meteorologia",
+      "previsão do tempo",
+      "Inmet",
+      "chuvas"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706817",
+    "title": "Força Nacional reforçará segurança na fronteira com a Colômbia",
+    "summary": "A Força Nacional de Segurança Pública atuará junto com a Polícia Federal na fronteira do Brasil com a Colômbia, no município de Tabatinga, no Amazonas. A permanência tem prazo de 90 dias.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/forca-nacional-reforcara-seguranca-na-fronteira-com-colombia",
+    "publishedAt": "26/10/2026 às 08:43",
+    "category": "Política",
+    "ingestedAt": "26/10/2026 às 10:54",
+    "imageUrl": "https://imagens.ebc.com.br/Pp7LKz7scanNc4vAAmbaHn8_EDE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/tabatinga-fronteira_mcamgo_abr_030320231818-8.jpg?itok=gt3dNPKp",
+    "imageCaption": "Força Nacional reforçará segurança na fronteira com a Colômbia",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Força Nacional reforçará segurança na fronteira com a Colômbia",
+    "author": "Agência Brasil",
+    "tags": [
+      "Geral",
+      "Força Nacional",
+      "segurança",
+      "Amazônia",
+      "Tabatinga"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706814",
+    "title": "Em festa da vitória, Lula pede que público cante Hino da Independência",
+    "summary": "O presidente da República reeleito, Luiz Inácio Lula da Silva, em discurso na festa da vitória na Avenida Paulista, pediu que os presentes cantassem o Hino da Independência do Brasil.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/em-festa-da-vitoria-lula-pede-que-publico-cante-hino-da-independencia",
+    "publishedAt": "26/10/2026 às 07:02",
+    "category": "Eleições",
+    "ingestedAt": "26/10/2026 às 10:54",
+    "imageUrl": "https://imagens.ebc.com.br/sQndnwA3RB4S6uvEONLGVh4y1tk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/26/_int1477.jpg.jpeg?itok=4OguplRr",
+    "imageCaption": "Em festa da vitória, Lula pede que público cante Hino da Independência",
+    "imageCredit": "Bruno Bocchini e Camila Boehm - Repórteres da Agência Brasil",
+    "imageAlt": "Em festa da vitória, Lula pede que público cante Hino da Independência",
+    "author": "Bruno Bocchini e Camila Boehm - Repórteres da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Lula",
+      "Reeleição",
+      "Avenida Paulista"
+    ],
+    "content": []
+  },
+  {
     "id": "camara-1313758-o-povo-e-soberano-e-fez-a-sua-",
     "title": "\"O povo é soberano e fez a sua escolha\", diz Motta ao parabenizar Lula pela reeleição",
     "summary": "Presidente também afirmou que a sua atuação no comando da Câmara continuará pautada pela moderação.",
@@ -24,15 +218,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Eleições 2026",
       "Brasil"
     ],
-    "content": [
-      "Acervo Câmara dos Deputados",
-      "Hugo Motta desejou serinidade a Lula",
-      "O presidente da Câmara dos Deputados, Hugo Motta (Republicanos-PB), parabenizou o presidente da República, Luiz Inácio Lula da Silva, pela vitória no segundo turno das eleições deste domingo. Em publicação nas suas redes sociais, Motta ressaltou a força do processo democrático.",
-      "“A democracia é soberana. O povo é soberano e, através das urnas, fez a sua escolha. Parabenizo o presidente Lula pela reeleição e desejo serenidade e equilíbrio na condução do país nos próximos quatro anos”, declarou o presidente da Casa.",
-      "Motta também afirmou que a sua atuação no comando da Câmara continuará pautada pela moderação e pela harmonia institucional, visando o andamento de projetos prioritários para o país.",
-      "“Como presidente da Câmara, reafirmo meu compromisso com o diálogo e o equilíbrio para, respeitando sempre a independência entre os Poderes, construirmos consenso e avançarmos nas pautas que o povo brasileiro tanto espera”, concluiu.",
-      "Leia mais notícias sobre as eleições 2026"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706750",
@@ -56,23 +242,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "mídias digitais",
       "Plataformas Digitais"
     ],
-    "content": [
-      "Em primeiro discurso após a vitória nas eleições presidenciais deste domingo (25), o presidente da República Luiz Inácio Lula da Silva, reeleito com mais de 64 milhões de votos , agradeceu ao povo brasileiro pela generosidade e afirmou que teve que vencer a interferência das plataformas digitais vinda do exterior. Lula disse que terá que regulá-las em seu novo mandato.",
-      "“É uma eleição em que a gente teve que vencer a intromissão vinda de fora para dentro através de plataformas digitais, que nós vamos ter que regulá-las. Não é possível que a gente não tenha consciência que o crime no mundo digital tem que ser tratado igual crime na vida real”, disse.",
-      "Lula, que completará 81 anos na próxima terça-feira (27), foi reeleito para o quarto mandato. Ele já presidiu o país de 2003 a 2010 e de 2023 a 2026. Lula destacou que é o único presidente sem diploma que conseguiu ser eleito quatro vezes.",
-      "O resultado marca um momento histórico para a política brasileira e evidencia uma conquista após intensa mobilização coletiva. “Eu queria agradecer ao povo brasileiro a generosidade que eles têm comigo há muito tempo. E, neste segundo turno, agradecer a generosidade da juventude brasileira que foi para rua para defender a democracia, quero agradecer às pessoas idosas.”",
-      "O presidente disse que as eleições de 2026 trouxeram muitas lições. Ele agradeceu ao deputado federal André Janones, que coordenou uma campanha nas redes sociais de apoio à reeleição e disse que o novo governo será marcado pela participação popular em nas decisões.",
-      "“Não vou ficar permitido ser interpretado por jornalista com má fé. Eu vou dizer o que eu penso, o que eu faço”, acrescentou. Lula fez um discurso por volta das 22h20 em um auditório do hotel InterContinental, na capital paulista. Logo em seguida, Lula deixou o local e seguiu para a avenida Paulista, onde ocorre uma grande comemoração de seus apoiadores.",
-      "Estavam presentes na coletiva o vice-presidente Geraldo Alckmin; o deputado federal reeleito André Janones, que impulsionou a campanha de Lula neste segundo turno; o ministro da Saúde, Alexandre Padilha; o ministro de Desenvolvimento Social, Wellington Dias; a ministra da Gestão e da Inovação em Serviços Públicos, Esther Dweck; o ministro da Secretaria-Geral da Presidência da República; a deputada federal Sâmia Bonfim.",
-      "Além disso, o deputado estadual Eduardo Suplicy; o ex-ministro da Fazenda e candidato derrotado para o governo de São Paulo, Fernando Haddad; o presidente do BNDES, Aloizio Mercadante; o senador Camilo Santana; ex-ministra do Meio Ambiente, a deputada federal Marina Silva; a ex-ministra do Planejamento e Orçamento, Simone Tebet; o ex-prefeito de Recife, João Campos, candidato derrotado ao governo de Pernambuco e o governador reeleito do Piauí, Rafael Fonteles, coordenador de comunicação da campanha de Lula.",
-      "Após o resultado do primeiro turno das eleições de 2026, milhares de pessoas foram às ruas em diversas cidades de todas as regiões do país em defesa da democracia, da Constituição Federal e dos direitos adquiridos após o fim da ditadura militar no país. Os direitos humanos são, inclusive, uma área que, historicamente, diferenciam de maneira significativa os dois candidatos que disputaram o segundo turno das eleições presidenciais.",
-      "Enquanto Lula ascendeu politicamente no fim dos anos 1970, fazendo o enfrentamento à ditadura militar e às graves violações de direitos humanos do regime, Flávio Bolsonaro é herdeiro político do pai, Jair Bolsonaro, um notório defensor da ditadura e admirador do coronel Carlos Brilhante Ustra, apontado pela Comissão Nacional da Verdade como responsável por diversos crimes no período ditatorial, incluindo torturas e mortes.",
-      "Nas propostas econômicas, o presidente reeleito aposta na continuidade do modelo atual , com investimentos públicos, programas sociais e valorização da renda. Lula pretende manter e aperfeiçoar programas como Bolsa Família e Minha Casa, Minha Vida, além de preservar políticas de combate à fome.",
-      "Lula pretende manter o arcabouço fiscal, mecanismo que estabelece limites para o crescimento das despesas públicas. Na área tributária, ele defende maior progressividade, com participação proporcionalmente maior das rendas mais altas no financiamento do Estado.",
-      "Ele defende a valorização real do salário mínimo e também prioriza a manutenção de direitos trabalhistas e a ampliação da proteção social. A política econômica também prevê investimentos em infraestrutura, reindustrialização, inovação e energia renovável.",
-      "Para Lula, a educação constitui o principal instrumento de transformação e mobilidade social. Entre as propostas estão a construção de creches e pré-escolas, ampliação de medidas de formação docente e valorização dos professores, além de aumentar o número de matrículas em tempo integral e aprimorar programas como o Pé-de-Meia .",
-      "Além disso, o presidente reeleito destaca medidas de apoio à formação docente e para elevar o interesse de estudantes de licenciaturas pela profissão, a exemplo do Pé-de-Meia Licenciatura. Por meio do reforço do programa Bolsa Mais Professores, Lula também quer atrair e manter docentes em redes públicas de educação básica e áreas do conhecimento com carência de profissionais."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706744",
@@ -96,17 +266,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Lula reeleito",
       "Eleições"
     ],
-    "content": [
-      "O senador Flávio Bolsonaro (PL), candidato derrotado no segundo turno das eleições presidenciais, anunciou na noite deste domingo (25) que não vai reconhecer o resultado das urnas, apesar da diferença de mais de 4,4 milhões de votos a favor de Luiz Inácio Lula da Silva (PT) .",
-      "A justificativa seria a prorrogação do horário de votação eleitoral, decidida pelo ministro do Supremo Tribunal Federal (STF), Cristiano Zanin, que atendeu um pedido de ambas as candidaturas, incluindo a da campanha de Flávio.",
-      "Para ele, os acontecimentos do segundo turno foram inaceitáveis.",
-      "\"O que aconteceu hoje não foi algo normal. Foi algo, inclusive, inaceitável. Um ministro da Suprema Corte, pela primeira vez na história, ex-advogado do Lula, dá uma canetada, a pedido de um ex-sócio dele, e muda a regra do jogo no meio do jogo. Às 17h01, o ministro Zanin, que não faz parte do Tribunal Superior Eleitoral [TSE], atropelando a justiça especializada, toma uma decisão prorrogando por duas horas as eleições. Isso nunca tinha acontecido na história do Brasil. Houve uma quebra total de isonomia entre os brasileiros de diversas cidades e diferentes estados. Eu nunca vou saber se num estado onde as urnas não foram reabertas quantos votos eu poderia ter. É inexplicável ter acontecido o que aconteceu\", disse o candidato.",
-      "Sem fazer menção aos mais de 59 milhões de votos recebidos, Flávio Bolsonaro saiu sem responder às perguntas.",
-      "Zanin tomou a decisão sobre a prorrogação do horário de votação, até às 19h, em caráter de urgência, considerando graves os relatos de dificuldades no transporte de eleitores, especialmente em cidades da Bahia e na cidade de São Paulo.",
-      "A determinação, anunciada próximo das 17h, horário previsto para o encerramento da votação, inicialmente estabeleceu a extensão do prazo em todas as seções eleitorais.",
-      "Após informações do TSE de que diversas urnas já haviam sido fechadas, o ministro esclareceu que a prorrogação deveria ser aplicada somente às seções que ainda estavam abertas.",
-      "O presidente do TSE, Kassio Nunes Marques, orientou os tribunais regionais a manterem essas seções em funcionamento até as 19h. Os votos registrados nas urnas já encerradas seriam computados normalmente."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706749",
@@ -256,7 +416,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/nunes-maques-diz-que-decisao-de-zanin-dificultou-processo-eleitoral",
     "publishedAt": "25/10/2026 às 22:34",
-    "category": "Eleições",
+    "category": "Justiça",
     "ingestedAt": "26/10/2026 às 06:34",
     "imageUrl": "https://imagens.ebc.com.br/xXD-3HE5vhBLLXrSUQpnI65_pMI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/sem_titulo-9.jpg?itok=FOV8F6hQ",
     "imageCaption": "Nunes Maques diz que decisão de Zanin dificultou processo eleitoral",
@@ -267,30 +427,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Justiça",
       "Kassio Nunes Marques",
       "TSE",
-      "eleições 2026",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1313658-motta-defende-o-dialogo-e-diz-",
-    "title": "Motta defende o diálogo e diz que Lula tem a oportunidade de conciliar o país",
-    "summary": "Segundo ele, a Câmara e o Senado darão o apoio necessário às pautas voltadas à população.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1313658-motta-defende-o-dialogo-e-diz-que-lula-tem-a-oportunidade-de-conciliar-o-pais",
-    "publishedAt": "25/10/2026 às 22:30",
-    "category": "Congresso",
-    "ingestedAt": "26/10/2026 às 06:34",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/coletiva2-768x505.png",
-    "imageCaption": "Alcolumbre e Motta falam sobre a vitória de Lula",
-    "imageCredit": "Reprodução TV Câmara",
-    "imageAlt": "Alcolumbre e Motta concedem entrevista",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
+      "eleições 2026"
     ],
     "content": []
   },
@@ -315,6 +452,28 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Imprensa Internacional",
       "imprensa",
       "Jornalismo"
+    ],
+    "content": []
+  },
+  {
+    "id": "camara-1313658-motta-defende-o-dialogo-e-diz-",
+    "title": "Motta defende o diálogo e diz que Lula tem a oportunidade de conciliar o país",
+    "summary": "Segundo ele, a Câmara e o Senado darão o apoio necessário às pautas voltadas à população.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313658-motta-defende-o-dialogo-e-diz-que-lula-tem-a-oportunidade-de-conciliar-o-pais",
+    "publishedAt": "25/10/2026 às 22:30",
+    "category": "Congresso",
+    "ingestedAt": "26/10/2026 às 06:34",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/coletiva2-768x505.png",
+    "imageCaption": "Alcolumbre e Motta falam sobre a vitória de Lula",
+    "imageCredit": "Reprodução TV Câmara",
+    "imageAlt": "Alcolumbre e Motta concedem entrevista",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
     ],
     "content": []
   },
@@ -899,167 +1058,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições 2026",
       "Rio de Janeiro",
       "TRE-RJ"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706678",
-    "title": "Salvador: Procon atualiza para 544 total de ônibus parados em garagens",
-    "summary": "O Procon da Bahia atualizou para 544 o total de ônibus de transporte público parados em cinco garagens de Salvador, após denúncias de eleitores sobre o bloqueio da saída dos veículos. A informação foi confirmada pela Secretaria de Comunicação Social do governo do estado.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/salvador-procon-atualiza-para-544-total-de-onibus-parados-em-garagens",
-    "publishedAt": "25/10/2026 às 17:09",
-    "category": "Eleições",
-    "ingestedAt": "25/10/2026 às 18:55",
-    "author": "Paula Laboissière - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "Salvador",
-      "eleições 2026",
-      "eleições",
-      "transporte público"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706677",
-    "title": "Zanin manda ampliar horário de votação até as 19h em todo o país",
-    "summary": "O ministro Cristiano Zanin, do Supremo Tribunal Federal (STF), decidiu há pouco ampliar o horário de votação até as 19h em todo o país.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/zanin-manda-ampliar-horario-de-votacao-ate-19h",
-    "publishedAt": "25/10/2026 às 17:07",
-    "category": "Justiça",
-    "ingestedAt": "25/10/2026 às 18:55",
-    "imageUrl": "https://imagens.ebc.com.br/w1fbVjHBe4R0lCjiMPJG9qFSveo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/0d7a1422.jpg.jpeg?itok=9ohkq9td",
-    "imageCaption": "Zanin manda ampliar horário de votação até as 19h em todo o país",
-    "imageCredit": "André Richter - Repórter da Agência Brasil",
-    "imageAlt": "Zanin manda ampliar horário de votação até as 19h em todo o país",
-    "author": "André Richter - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Brasil"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706676",
-    "title": "Nunes Marques dá meia hora para TRE-BA responder sobre transporte",
-    "summary": "Em decisão assinada às 16h07, o presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, deu meia hora para que o Tribunal Regional Eleitoral da Bahia (TRE-BA) preste informações sobre a situação do transporte por ônibus urbano na cidade de Salvador.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/nunes-marques-da-meia-hora-para-tre-ba-responder-sobre-transporte",
-    "publishedAt": "25/10/2026 às 17:05",
-    "category": "Justiça",
-    "ingestedAt": "25/10/2026 às 18:55",
-    "imageUrl": "https://imagens.ebc.com.br/1aYBkalFmvX0adCedPBhxqjBtK8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/sem_titulo-7.jpg?itok=Vt5Ynmrb",
-    "imageCaption": "Nunes Marques dá meia hora para TRE-BA responder sobre transporte",
-    "imageCredit": "Felipe Pontes - Repórter da Agência Brasil",
-    "imageAlt": "Nunes Marques dá meia hora para TRE-BA responder sobre transporte",
-    "author": "Felipe Pontes - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "TRE-BA",
-      "Kassio Nunes Marques",
-      "transporte público"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706675",
-    "title": "Campanha de Flávio pede votação até 19h por chuvas em alguns estados",
-    "summary": "A campanha do candidato a presidente da República Flávio Bolsonaro (PL) pediu há pouco ao Tribunal Superior Eleitoral (TSE) a ampliação do horário de votação em municípios de São Paulo, Minas Gerais, Paraná, Santa Catarina e Rio Grande do Sul.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/campanha-de-flavio-pede-votacao-ate-19h-por-chuvas-em-alguns-estados",
-    "publishedAt": "25/10/2026 às 17:04",
-    "category": "Eleições",
-    "ingestedAt": "25/10/2026 às 18:55",
-    "imageUrl": "https://imagens.ebc.com.br/qwn1Dl_keqNpC8H5UpOaL27urv4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/15/20200130_163302.jpg?itok=LMU474mm",
-    "imageCaption": "Campanha de Flávio pede votação até 19h por chuvas em alguns estados",
-    "imageCredit": "André Richter - repórter da Agência Brasil",
-    "imageAlt": "Campanha de Flávio pede votação até 19h por chuvas em alguns estados",
-    "author": "André Richter - repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Flávio Bolsonaro",
-      "Partido Liberal",
-      "Justiça Eleitoral"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706674",
-    "title": "Campanha de Lula denuncia falta de transporte em nove estados",
-    "summary": "A coligação Brasil Pronto Pra Mais, do presidente e candidato à reeleição Luiz Inácio Lula da Silva (PT), entrou com ação no Tribunal Superior Eleitoral (TSE) denunciando falta de transporte em cidades de, pelo menos, nove estados do país: Bahia, São Paulo, Alagoas, Pernambuco.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/campanha-de-lula-denuncia-falta-de-transporte-em-nove-estados",
-    "publishedAt": "25/10/2026 às 17:01",
-    "category": "Eleições",
-    "ingestedAt": "25/10/2026 às 18:55",
-    "imageUrl": "https://imagens.ebc.com.br/_RbD2sojog3I3c-sgX1lVgMhBYU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/0d4a5309.jpg?itok=tTmdGn9h",
-    "imageCaption": "Campanha de Lula denuncia falta de transporte em nove estados",
-    "imageCredit": "Lucas Pordeus León - Repórter da Agência Brasil",
-    "imageAlt": "Campanha de Lula denuncia falta de transporte em nove estados",
-    "author": "Lucas Pordeus León - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "transporte público",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706673",
-    "title": "Lula pede prorrogação de votação em cidades com falhas no transporte",
-    "summary": "Candidato à reeleição, o presidente da República Luiz Inácio Lula da Silva, reclamou da falta de transporte em várias cidades do país.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/lula-pede-prorrogacao-de-votacao-em-cidades-com-falhas-no-transporte",
-    "publishedAt": "25/10/2026 às 16:46",
-    "category": "Eleições",
-    "ingestedAt": "25/10/2026 às 18:55",
-    "imageUrl": "https://imagens.ebc.com.br/-3YwWHPrNg0nZ2s205GfnJwXcjA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/0d4a5319.jpg?itok=3gY81f2t",
-    "imageCaption": "Lula pede prorrogação de votação em cidades com falhas no transporte",
-    "imageCredit": "Marcelo Brandão – Repórter da Agência Brasil",
-    "imageAlt": "Lula pede prorrogação de votação em cidades com falhas no transporte",
-    "author": "Marcelo Brandão – Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "eleições",
-      "transporte público",
-      "mobilidade urbana"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706663",
-    "title": "\"Não poderia ficar de fora\", diz idoso que votou 10 dias após cirurgia",
-    "summary": "O segundo turno das eleições no Rio de Janeiro transcorre tranquilamente. Apesar da chuva no início da votação, muita gente já aguardava nas filas na abertura das seções eleitorais.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/nao-poderia-ficar-de-fora-diz-idoso-que-votou-10-dias-apos-cirurgia",
-    "publishedAt": "25/10/2026 às 16:23",
-    "category": "Eleições",
-    "ingestedAt": "25/10/2026 às 18:55",
-    "imageUrl": "https://imagens.ebc.com.br/2h9W3h8T5aKsdQljllqgOdwlxhE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/toms5579.jpg?itok=YBEilABV",
-    "imageCaption": "\"Não poderia ficar de fora\", diz idoso que votou 10 dias após cirurgia",
-    "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
-    "imageAlt": "\"Não poderia ficar de fora\", diz idoso que votou 10 dias após cirurgia",
-    "author": "Douglas Corrêa - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "segundo turno",
-      "idosos",
-      "Rio de Janeiro"
     ],
     "content": []
   },
