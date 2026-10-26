@@ -6,7 +6,7 @@
   "season": "2026",
   "source": "football-data.org (v4 API)",
   "isReal": true,
-  "lastUpdated": "2026-10-26T09:31:48.040Z",
+  "lastUpdated": "2026-10-26T21:22:57.640Z",
   "standings": [
     {
       "position": 1,
@@ -10822,8 +10822,7 @@
       "tournamentId": "brasileirao-a",
       "tournamentName": "Brasileirão Série A",
       "phase": "32ª Rodada",
-      "status": "ao_vivo",
-      "minute": "Ao vivo",
+      "status": "encerrado",
       "homeTeam": {
         "id": 1772,
         "name": "Chapecoense",
@@ -10856,13 +10855,12 @@
       "tournamentId": "brasileirao-a",
       "tournamentName": "Brasileirão Série A",
       "phase": "32ª Rodada",
-      "status": "ao_vivo",
-      "minute": "Ao vivo",
+      "status": "encerrado",
       "homeTeam": {
         "id": 6685,
         "name": "Santos",
         "shortName": "Santos",
-        "score": 0,
+        "score": 1,
         "logo": "https://crests.football-data.org/6685.png",
         "initials": "SAN",
         "color": "bg-slate-800 text-white"
@@ -10871,7 +10869,7 @@
         "id": 1777,
         "name": "Bahia",
         "shortName": "Bahia",
-        "score": 0,
+        "score": 1,
         "logo": "https://crests.football-data.org/1777.png",
         "initials": "BAH",
         "color": "bg-slate-700 text-white"
