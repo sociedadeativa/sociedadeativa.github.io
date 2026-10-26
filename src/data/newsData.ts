@@ -5,6 +5,158 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "camara-1310135-projeto-cria-politica-para-inc",
+    "title": "Projeto cria política para incentivar economia compartilhada no campo",
+    "summary": "Proposta institui a Política Nacional do Agro Colaborativo; texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1310135-projeto-cria-politica-para-incentivar-economia-compartilhada-no-campo",
+    "publishedAt": "26/10/2026 às 14:08",
+    "category": "Congresso",
+    "ingestedAt": "26/10/2026 às 14:15",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260602160347611-768x473.jpg",
+    "imageCaption": "José Medeiros, autor do projeto de lei",
+    "imageCredit": "Kayo Magalhães/Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. José Medeiros (PL-MT)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Kayo Magalhães/Câmara dos Deputados",
+      "José Medeiros, autor do projeto de lei",
+      "O Projeto de Lei 2971/26 institui a Política Nacional do Agro Colaborativo, voltada à promoção de modelos produtivos baseados em cooperação, economia compartilhada, agricultura circular e reaproveitamento de recursos no setor agropecuário brasileiro.",
+      "Apresentada pelo deputado José Medeiros (PL-MT), a proposta tem como metas:",
+      "O projeto define o agro colaborativo como a divisão e o uso comum de máquinas, equipamentos, insumos, infraestruturas e serviços entre produtores rurais.",
+      "Entre os ativos compartilháveis listados no texto estão tratores, colheitadeiras, implementos agrícolas, sistemas de irrigação e colmeias.",
+      "Entre as medidas previstas para implementar a política pública, estão:",
+      "O projeto também determina o incentivo estatal a:",
+      "Além disso, prevê o fomento ao uso de ferramentas como inteligência artificial, internet das coisas, blockchain (bloco de dados) e aplicativos digitais de compartilhamento no campo.",
+      "José Medeiros acredita que a economia compartilhada aplicada ao campo poderá melhorar o desempenho agrícola, principalmente dos pequenos produtores. “Um trator que hoje fica ocioso 80% do tempo pode atender dezenas de produtores”, exemplifica. “Estamos falando de democratização real do acesso à tecnologia.”",
+      "O deputado ressalta a importância da modernização do setor. “O agronegócio é uma das maiores forças econômicas do país, mas enfrenta desafios graves: custo elevado de produção, desigualdade tecnológica, desperdício de recursos e baixa integração produtiva”, diagnostica.",
+      "A proposta tramita na Câmara dos Deputados e será analisada pelas seguintes comissões permanentes, em caráter conclusivo :",
+      "Para virar lei, o texto terá de ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
+    ]
+  },
+  {
+    "id": "ebc-1706848",
+    "title": "Lula cresce em número de votos em todos os estados; Flávio recuou em 6",
+    "summary": "Entre os brasileiros que compareceram neste domingo (25) às urnas no segundo turno das Eleições de 2026, 64.256. 232 escolheram o presidente Luiz Inácio Lula da Silva.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/lula-cresce-em-numero-de-votos-em-todos-os-estados-flavio-recuou-em-6",
+    "publishedAt": "26/10/2026 às 14:06",
+    "category": "Eleições",
+    "ingestedAt": "26/10/2026 às 14:15",
+    "imageUrl": "https://imagens.ebc.com.br/sm8Iqd7ZLmP68Vz_1eIH0P_5F-0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int9468.jpg?itok=QpWDFi6O",
+    "imageCaption": "Lula cresce em número de votos em todos os estados; Flávio recuou em 6",
+    "imageCredit": "Fabíola Sinimbú - Repórter da Agência Brasil",
+    "imageAlt": "Lula cresce em número de votos em todos os estados; Flávio recuou em 6",
+    "author": "Fabíola Sinimbú - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "Votos",
+      "Lula",
+      "Flávio Bolsonaro",
+      "eleições 2026"
+    ],
+    "content": [
+      "Entre os brasileiros que compareceram neste domingo (25) às urnas no segundo turno das Eleições de 2026, 64.256.232 escolheram o presidente Luiz Inácio Lula da Silva. O total representa 10,3 milhões de votos a mais que os que Lula recebeu no primeiro turno, quando foram registrados quase 53,9 milhões. O crescimento de votos se deu em todos os 26 estados e no Distrito Federal, com destaque para Minas Gerais.",
+      "Flávio Bolsonaro também cresceu na maior parte dos estados, mas com menor diferença entre os dois turnos. E, em seis estados, o candidato recuou um total de mais de 52,3 mil votos.",
+      "Em termos absolutos, São Paulo foi o estado onde Lula abriu a maior margem de diferença entre os dois turnos, com crescimento de 2,6 milhões de votos.",
+      "O segundo foi Minas Gerais, com mais de 1,1 milhão conquistados em menos de um mês. Minas também foi o único estado em que Lula virou o resultado, uma vez que Flávio Bolsonaro tinha terminado o primeiro turno à frente, com 5,7 milhões de votos contra 5,1 milhões de votos para Lula. No segundo turno, Lula avançou para 6,3 milhões de votos no estado, contra 6,2 milhões de votos de Flávio .",
+      "O crescimento de Lula no Rio de Janeiro, reduto político de Flávio Bolsonaro, também chama a atenção. Entre os dois turnos, o candidato do PT cresceu mais de 872 mil votos, enquanto que Flávio Bolsonaro avançou pouco mais de 202 mil votos.",
+      "Os estados onde Lula cresceu menos, em números absolutos, foram Roraima, Acre e Amapá, onde o presidente somou, respectivamente, pouco mais de 9 mil votos, 9,7 mil e 10,4 mil."
+    ]
+  },
+  {
+    "id": "camara-1313505-projeto-proibe-cobranca-de-tax",
+    "title": "Projeto proíbe cobrança de taxa para acesso a praias, rios e cachoeiras",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313505-projeto-proibe-cobranca-de-taxa-para-acesso-a-praias-rios-e-cachoeiras",
+    "publishedAt": "26/10/2026 às 13:49",
+    "category": "Congresso",
+    "ingestedAt": "26/10/2026 às 14:15",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/comissao-do-esporte-193-711x484.jpg",
+    "imageCaption": "Marcos Tavares: cidadão tem o direito de usufruir de espaços públicos",
+    "imageCredit": "Cleia Viana / Câmara dos Deputados",
+    "imageAlt": "Prêmio \"Comenda Incentivadores do Esporte\". Dep. Marcos TavaresPDT - RJ",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Cleia Viana / Câmara dos Deputados",
+      "Marcos Tavares: cidadão tem o direito de usufruir de espaços públicos",
+      "O Projeto de Lei 3700/26, em análise na Câmara dos Deputados, garante o livre acesso da população a praias, rios, lagoas, cachoeiras e ilhas públicas em todo o país.",
+      "O texto proíbe a cobrança de taxa, tarifa, pedágio, ingresso ou qualquer contraprestação em dinheiro para entrar, circular ou permanecer nesses locais.",
+      "A regra atinge a administração pública direta e indireta da União, dos estados, do Distrito Federal e dos municípios. A proibição também alcança concessionárias ou qualquer particular que explore bens naturais públicos sob autorização.",
+      "“A preservação ambiental constitui dever do poder público e da sociedade”, afirma o autor proposta, deputado Marcos Tavares (PDT-RJ). Ele acrescenta que espaços públicos não podem ser objeto de “barreiras econômicas que impeçam o cidadão de usufruir de um patrimônio que já lhe pertence”.",
+      "Pelo texto, continuam permitidas as cobranças por serviços opcionais colocados à disposição dos visitantes, como estacionamento, transporte, passeios turísticos, hospedagem e aluguel de equipamentos.",
+      "A cobrança de ingressos em unidades de conservação da natureza, se autorizada por lei, também não será afetada.",
+      "O projeto não cria direito de passagem por terrenos privados. No entanto, no caso de condomínios fechados onde a área comum seja o acesso tradicional ou único ao recurso natural, a passagem de pedestres não poderá ser bloqueada nem cobrada – os visitantes deverão respeitar as normas do local.",
+      "A proposta proíbe ainda cancelas, guaritas, cercas ou portões que bloqueiem o trânsito livre. As exceções cabem apenas para restrições temporárias e fundamentadas por motivos de segurança pública, calamidade, proteção ambiental ou obras autorizadas.",
+      "O projeto será analisado, em caráter conclusivo , pelas comissões de Meio Ambiente e Desenvolvimento Sustentável; de Desenvolvimento Urbano; e de Constituição e Justiça e de Cidadania.",
+      "Para virar lei, o texto terá de ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
+    ]
+  },
+  {
+    "id": "ebc-1706844",
+    "title": "Vitória de Lula repercute na imprensa europeia e asiática",
+    "summary": "Neste domingo (25), Luiz Inácio Lula da Silva foi reeleito para o seu quarto mandato na Presidência da República, em virada inédita. A disputa acirrada com o senador Flávio Bolsonaro ganhou destaque nos principais jornais da Europa e Ásia.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/vitoria-de-lula-repercute-na-imprensa-europeia-e-asiatica",
+    "publishedAt": "26/10/2026 às 13:33",
+    "category": "Congresso",
+    "ingestedAt": "26/10/2026 às 14:15",
+    "imageUrl": "https://imagens.ebc.com.br/ck2CR1IojYZXGTLvwOiQPwKgvbo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/26/_raf6219-8.jpg?itok=sSJQ3IWS",
+    "imageCaption": "Vitória de Lula repercute na imprensa europeia e asiática",
+    "imageCredit": "Matheus Crobelatti* - Estagiário da Agência Brasil",
+    "imageAlt": "Vitória de Lula repercute na imprensa europeia e asiática",
+    "author": "Matheus Crobelatti* - Estagiário da Agência Brasil",
+    "tags": [
+      "Internacional",
+      "Vitória de Lula",
+      "repercussão",
+      "imprensa europeia",
+      "asiática"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706842",
+    "title": "Votação de Lula é a maior já recebida por um presidenciável no país",
+    "summary": "Ao terminar o segundo turno da eleição presidencial com 64.256. 232 votos neste domingo (25), o presidente reeleito Luiz Inácio Lula da Silva (PT) conquistou a maior votação já obtida por um presidenciável na história do país.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/votacao-de-lula-e-maior-ja-recebida-por-um-presidenciavel-no-pais",
+    "publishedAt": "26/10/2026 às 13:19",
+    "category": "Eleições",
+    "ingestedAt": "26/10/2026 às 14:15",
+    "imageUrl": "https://imagens.ebc.com.br/1NINlYHI8fqmA-xpeKPPCzuetCo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/26/_int0648.jpg.jpeg?itok=xDShwHWC",
+    "imageCaption": "Votação de Lula é a maior já recebida por um presidenciável no país",
+    "imageCredit": "Bruno de Freitas Moura - Repórter da Agência Brasil",
+    "imageAlt": "Votação de Lula é a maior já recebida por um presidenciável no país",
+    "author": "Bruno de Freitas Moura - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Lula",
+      "votação",
+      "recorde"
+    ],
+    "content": []
+  },
+  {
     "id": "camara-1310537-projeto-propoe-financiamento-d",
     "title": "Projeto propõe financiamento do Move Brasil para representantes comerciais",
     "summary": "O texto está em análise na Câmara dos Deputados.",
@@ -24,19 +176,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Vinicius Loures / Câmara dos Deputados",
-      "Rubens Pereira Júnior é o autor da proposta",
-      "O Projeto de Lei PL 3259/26 inclui os representantes comerciais autônomos entre os beneficiários das linhas de financiamento do Programa Move Brasil para a compra de veículos novos a serem utilizados no exercício da atividade profissional. A proposta estabelece que esses profissionais poderão ter acesso às mesmas condições de financiamento aplicáveis a taxistas e motoristas de aplicativo.",
-      "O texto está em análise na Câmara dos Deputados.",
-      "Pelo texto, será considerado representante comercial autônomo a pessoa física ou jurídica regularmente registrada e ativa no respectivo Conselho Regional dos Representantes Comerciais, nos termos da Lei 4.886/1965 , que regulamenta a atividade.",
-      "A proposta também define a aplicação dos critérios de sustentabilidade ambiental, social e econômica do programa, além das condições diferenciadas asseguradas às mulheres, inclusive para o financiamento de equipamentos de segurança. O texto permite, ainda, a utilização de garantias públicas ou de fundos garantidores vinculados ao Move Brasil.",
-      "Para obter o financiamento, o interessado deverá comprovar o exercício da atividade de representação comercial e estar com o cadastro regular. O acesso ao recurso continuará sujeito à análise de crédito da instituição financeira credenciada.",
-      "O autor da proposta, deputado Rubens Pereira Júnior (PT-MA), afirma que o veículo é um instrumento de trabalho para os representantes comerciais, que precisam se deslocar para visitar clientes e atender diferentes municípios.",
-      "“Para o representante comercial, o veículo não é bem de consumo ou de uso pessoal, mas instrumento direto de trabalho, renda e produtividade. A dificuldade de acesso a crédito em condições adequadas onera essa atividade e compromete a renovação da frota profissional. A extensão das linhas do Move Brasil corrige essa distorção e amplia a justiça econômica da política pública”, afirmou.",
-      "O projeto, que tramita em caráter conclusivo , será analisado pelas comissões de Viação e Transportes; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania. Para virar lei, precisa ser aprovado pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "camara-1313811-lideres-governistas-celebram-v",
@@ -48,28 +188,17 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "publishedAt": "26/10/2026 às 11:34",
     "category": "Congresso",
     "ingestedAt": "26/10/2026 às 12:32",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/mosaico-partidos-768x513.jpg",
-    "imageCaption": "Líderes governistas celebram vitória de Lula; oposição critica prorrogação da votação e lamenta resultado",
-    "imageCredit": "Câmara dos Deputados",
-    "imageAlt": "Líderes governistas celebram vitória de Lula; oposição critica prorrogação da votação e lamenta resultado",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/paulo-pimenta-pt-rs-e-cabo-gilberto-silva-pl-pb.jpg",
+    "imageCaption": "Paulo Pimenta, líder do governo na Câmara, e Cabo Gilberto Silva, líder da oposição",
+    "imageCredit": "Agência Câmara",
+    "imageAlt": "Paulo Pimenta e Cabo Gilberto Silva",
     "author": "Agência Câmara de Notícias",
     "tags": [
       "Congresso",
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Líderes governistas da Câmara dos Deputados consideraram a reeleição do presidente da República, Luiz Inácio Lula da Silva, uma vitória da democracia, enquanto o líder da oposição avaliou que a prorrogação do horário de votação representou um golpe.",
-      "O líder do governo na Câmara, deputado Paulo Pimenta (PT-RS), disse que Lula venceu as eleições graças à campanha que tomou as ruas e as redes sociais em defesa da democracia e da soberania. “Cabe a nós fazer esse governo dar certo”, afirmou ele em suas redes sociais. O líder do PT, deputado Pedro Uczai (SC), comemorou: “A democracia venceu!\"",
-      "O líder da oposição, deputado Cabo Gilberto Silva (PL-PB), afirmou que “o Brasil sofreu um golpe” com a prorrogação das votações por duas horas, determinada pelo ministro do Supremo Tribunal Federal Cristiano Zanin para o país inteiro, e não apenas para algumas cidades. “O consórcio PT e STF sequestrou a nação”, declarou Gilberto Silva.",
-      "O líder do PDT, deputado André Figueiredo (CE), afirmou em suas redes sociais que o resultado das urnas reafirmou “o compromisso com um país mais justo, soberano e desenvolvido”. Ele observou, no entanto, que será um ciclo desafiador, que exigirá “responsabilidade, diálogo e muito trabalho”.",
-      "Líder do MDB, o deputado Isnaldo Bulhões Jr. (AL) disse que o momento exige união e responsabilidade para pacificar o país.",
-      "O líder da federação PSDB-Cidadania, deputado Adolfo Viana (PSDB-BA), anunciou seu voto em Flávio, mas repostou uma mensagem oficial do seu partido cumprimentando Lula pela vitória. “Desejamos êxito ao presidente reeleito e esperamos que seu governo saiba buscar a união dos brasileiros, respeitando as diferenças que fazem parte da vida democrática”, diz a nota.",
-      "O líder do Novo, deputado Gilson Marques (SC), declarou o \"luto do Brasil que trabalha\" e disse que não desistirá do país. “Nunca vou entender alguém comemorando junto com criminosos, ministros intocáveis e censuradores”, disse.",
-      "O líder do PL, deputado Sóstenes Cavalcante (RJ), pediu que “Deus tenha misericórdia do Brasil”.",
-      "Único representante do Missão na Câmara, o deputado Kim Kataguiri (SP) gravou um vídeo em que prevê \"mais quatro anos de desastre econômico e a indicação de quatro ministros para o STF, que vão mandar na nossa vida durante os próximos 30 anos”. Ele avaliou que a principal responsável pela vitória do PT foi uma direita “debochada, soberba e fraca”, que não reagiu ao “discurso de guerra” da campanha de Lula.",
-      "Leia mais notícias sobre as eleições 2026"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706833",
@@ -93,23 +222,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Vagas Remanescentes",
       "MEC"
     ],
-    "content": [
-      "As inscrições para as vagas remanescentes do Fundo de Financiamento Estudantil (Fies), referentes ao segundo semestre de 2026, foram abertas nesta segunda-feira (26).",
-      "Os estudantes interessados poderão se inscrever gratuitamente até 3 de novembro, exclusivamente pelo Portal Único de Acesso ao Ensino Superior . É preciso fazer login pela conta da plataforma Gov.br.",
-      "Saiba o passo a passo para a inscrição .",
-      "O programa oferece financiamento para estudantes que desejam cursar o ensino superior em faculdades privadas bem avaliadas pelo Ministério da Educação (MEC).",
-      "O Fies cobre as mensalidades do curso e permite que o estudante pague, com condições facilitadas, o valor financiado após a conclusão da graduação.",
-      "Nesta edição, as vagas remanescentes destinam-se exclusivamente à contratação do financiamento no segundo semestre letivo deste ano, sem possibilidade de extensão do prazo.",
-      "Uma das etapas do processo seletivo vai verificar se os candidatos pré-selecionados têm condições de acompanhar as atividades acadêmicas e concluir o semestre com aproveitamento suficiente.",
-      "Para participar, é necessário ter feito o Exame Nacional do Ensino Médio (Enem) a partir de 2010, com média igual ou superior a 450 pontos nas cinco provas de conhecimentos e nota acima de zero na redação.",
-      "O estudante não pode ter participado do exame como treineiro.",
-      "O candidato também precisa ter renda familiar mensal bruta por pessoa de até três salários mínimos, de acordo com o edital , que trata da ocupação das vagas.",
-      "Na parte acadêmica, o candidato pré-selecionado deve ter condições de cumprir a frequência mínima exigida pela instituição privada de ensino superior neste segundo semestre letivo de 2026.",
-      "Ao todo, são 50 mil vagas distribuídas pelo país.",
-      "O edital reserva 50% dessas vagas remanescentes a candidatos com renda familiar mensal por pessoa de até meio salário mínimo e inscrição atualizada no Cadastro Único para Programas Sociais do governo federal (CadÚnico). Para essa verificação, serão consideradas as informações cadastrais atualizadas até 8 de outubro de 2026.",
-      "Os estudantes pré-selecionados nessa modalidade poderão solicitar financiamento de até 100% dos encargos educacionais, conforme as regras do programa.",
-      "O resultado da chamada única está previsto para 16 de novembro."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706830",
@@ -128,10 +241,10 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "author": "Vitor Abdala - Repórter da Agência Brasil",
     "tags": [
       "Política",
+      "eleições 2026",
       "Mato Grosso",
       "paraná",
-      "plebiscito",
-      "distritos"
+      "Plebiscito"
     ],
     "content": []
   },
@@ -356,7 +469,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "category": "Congresso",
     "ingestedAt": "26/10/2026 às 06:34",
     "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261013174850516-768x473.jpg",
-    "imageCaption": "Hugo Motta desejou serinidade a Lula",
+    "imageCaption": "Hugo Motta desejou serenidade a Lula",
     "imageCredit": "Acervo Câmara dos Deputados",
     "imageAlt": "motta preside a sessão do Plenário",
     "author": "Agência Câmara de Notícias",
@@ -949,120 +1062,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições 2026",
       "Polícia Federal",
       "Andrei Rodrigues",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706695",
-    "title": "Eleitores relatam urnas fechadas e falta de transporte em Salvador",
-    "summary": "A professora Paula Fernanda Souza, 42 anos, mora em Salvador e conseguiu votar com tranquilidade, por volta das 13h deste domingo (25), dia do segundo turno das eleições.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleitores-relatam-urnas-fechadas-e-falta-de-transporte-em-salvador",
-    "publishedAt": "25/10/2026 às 19:27",
-    "category": "Eleições",
-    "ingestedAt": "25/10/2026 às 21:32",
-    "imageUrl": "https://imagens.ebc.com.br/DUQDMfEb-f3Fas1bn_fRnC5DED4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/2026-10-25t230426z_156509754_rc2kaoatrp41_rtrmadp_3_brazil-election.jpg?itok=_hy9HcMr",
-    "imageCaption": "Eleitores relatam urnas fechadas e falta de transporte em Salvador",
-    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
-    "imageAlt": "Eleitores relatam urnas fechadas e falta de transporte em Salvador",
-    "author": "Paula Laboissière – Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Segundo Turno",
-      "Transporte Público",
-      "Salvador"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706697",
-    "title": "Advogado vê sabotagem à democracia em falta de transporte de eleitores",
-    "summary": "A falta de transporte público para eleitores durante o segundo turno, neste domingo (25), representa uma sabotagem ao processo democrático.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/advogado-ve-sabotagem-democracia-em-falta-de-transporte-de-eleitores",
-    "publishedAt": "25/10/2026 às 19:22",
-    "category": "Justiça",
-    "ingestedAt": "25/10/2026 às 21:32",
-    "imageUrl": "https://imagens.ebc.com.br/3qQgXw-UkunH25h2PHY_kqv1_to=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/pzzb8893.jpg?itok=sdCfcwxQ",
-    "imageCaption": "Advogado vê sabotagem à democracia em falta de transporte de eleitores",
-    "imageCredit": "Pedro Rafael Vilela - Repórter da Agência Brasil",
-    "imageAlt": "Advogado vê sabotagem à democracia em falta de transporte de eleitores",
-    "author": "Pedro Rafael Vilela - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706696",
-    "title": "TSE retoma contagem de votos em todo o país",
-    "summary": "Às 19h deste domingo (25), o Tribunal Superior Eleitoral (TSE) retomou a totalização de votos do segundo turno das eleições.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-retoma-contagem-de-votos-em-todo-o-pais",
-    "publishedAt": "25/10/2026 às 19:21",
-    "category": "Justiça",
-    "ingestedAt": "25/10/2026 às 21:32",
-    "imageUrl": "https://imagens.ebc.com.br/jNukEQ-QdyvcjxHCM8AC36hI64M=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/predio-tse_mcamgo_abr_22062023-7.jpg?itok=Eo2myzGq",
-    "imageCaption": "TSE retoma contagem de votos em todo o país",
-    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
-    "imageAlt": "TSE retoma contagem de votos em todo o país",
-    "author": "Paula Laboissière – Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Brasil"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706693",
-    "title": "TRE-SP diz que determinação de Zanin está sendo cumprida no estado",
-    "summary": "O presidente do Tribunal Regional Eleitoral de São Paulo (TRE-SP), José Antonio Encinas Manfré, disse que o estado de São Paulo está cumprindo a decisão do ministro do Supremo Tribunal Federal (STF) Cristiano Zanin de prorrogar o horário de votação do segundo turno até as 19h.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tre-sp-diz-que-determinacao-de-zanin-esta-sendo-cumprida-no-estado",
-    "publishedAt": "25/10/2026 às 19:02",
-    "category": "Justiça",
-    "ingestedAt": "25/10/2026 às 21:32",
-    "imageUrl": "https://imagens.ebc.com.br/yTdZmy8ZpSEFMmlkNtmHY0pRWM4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int9415.jpg?itok=qduWtKIi",
-    "imageCaption": "TRE-SP diz que determinação de Zanin está sendo cumprida no estado",
-    "imageCredit": "Elaine Patricia Cruz – Repórter da Agência Brasil",
-    "imageAlt": "TRE-SP diz que determinação de Zanin está sendo cumprida no estado",
-    "author": "Elaine Patricia Cruz – Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "TRE-SP"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706691",
-    "title": "TSE diz que contagem dos votos será retomada às 19h",
-    "summary": "O Tribunal Superior Eleitoral (TSE) informou há pouco que a totalização dos votos do segundo turno será retomada às 19h.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tse-diz-que-contagem-dos-votos-sera-retomada-19h",
-    "publishedAt": "25/10/2026 às 18:48",
-    "category": "Eleições",
-    "ingestedAt": "25/10/2026 às 18:55",
-    "imageUrl": "https://imagens.ebc.com.br/Ur673rNKOthS13gtPem3YnHw5XI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/predio-tse_mcamgo_abr_301020221818.jpg?itok=oOzfPtSU",
-    "imageCaption": "TSE diz que contagem dos votos será retomada às 19h",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "TSE diz que contagem dos votos será retomada às 19h",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "contagem dos votos",
-      "TSE",
       "Eleições"
     ],
     "content": []
