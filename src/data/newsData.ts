@@ -5,6 +5,185 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "camara-1310537-projeto-propoe-financiamento-d",
+    "title": "Projeto propõe financiamento do Move Brasil para representantes comerciais",
+    "summary": "O texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1310537-projeto-propoe-financiamento-do-move-brasil-para-representantes-comerciais",
+    "publishedAt": "26/10/2026 às 12:08",
+    "category": "Congresso",
+    "ingestedAt": "26/10/2026 às 12:32",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261014175748058-1-768x473.jpg",
+    "imageCaption": "Rubens Pereira Júnior é o autor da proposta",
+    "imageCredit": "Vinicius Loures / Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Rubens Pereira Júnior (PT - MA)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Vinicius Loures / Câmara dos Deputados",
+      "Rubens Pereira Júnior é o autor da proposta",
+      "O Projeto de Lei PL 3259/26 inclui os representantes comerciais autônomos entre os beneficiários das linhas de financiamento do Programa Move Brasil para a compra de veículos novos a serem utilizados no exercício da atividade profissional. A proposta estabelece que esses profissionais poderão ter acesso às mesmas condições de financiamento aplicáveis a taxistas e motoristas de aplicativo.",
+      "O texto está em análise na Câmara dos Deputados.",
+      "Pelo texto, será considerado representante comercial autônomo a pessoa física ou jurídica regularmente registrada e ativa no respectivo Conselho Regional dos Representantes Comerciais, nos termos da Lei 4.886/1965 , que regulamenta a atividade.",
+      "A proposta também define a aplicação dos critérios de sustentabilidade ambiental, social e econômica do programa, além das condições diferenciadas asseguradas às mulheres, inclusive para o financiamento de equipamentos de segurança. O texto permite, ainda, a utilização de garantias públicas ou de fundos garantidores vinculados ao Move Brasil.",
+      "Para obter o financiamento, o interessado deverá comprovar o exercício da atividade de representação comercial e estar com o cadastro regular. O acesso ao recurso continuará sujeito à análise de crédito da instituição financeira credenciada.",
+      "O autor da proposta, deputado Rubens Pereira Júnior (PT-MA), afirma que o veículo é um instrumento de trabalho para os representantes comerciais, que precisam se deslocar para visitar clientes e atender diferentes municípios.",
+      "“Para o representante comercial, o veículo não é bem de consumo ou de uso pessoal, mas instrumento direto de trabalho, renda e produtividade. A dificuldade de acesso a crédito em condições adequadas onera essa atividade e compromete a renovação da frota profissional. A extensão das linhas do Move Brasil corrige essa distorção e amplia a justiça econômica da política pública”, afirmou.",
+      "O projeto, que tramita em caráter conclusivo , será analisado pelas comissões de Viação e Transportes; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania. Para virar lei, precisa ser aprovado pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
+    ]
+  },
+  {
+    "id": "camara-1313811-lideres-governistas-celebram-v",
+    "title": "Líderes governistas celebram vitória de Lula; oposição critica prorrogação da votação e lamenta resultado",
+    "summary": "Para o líder da oposição, PT e STF \"sequestraram\" a nação; líder do governo diz que a eleição representou a vitória da democracia.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313811-lideres-governistas-celebram-vitoria-de-lula-oposicao-critica-prorrogacao-da-votacao-e-lamenta-resultado",
+    "publishedAt": "26/10/2026 às 11:34",
+    "category": "Congresso",
+    "ingestedAt": "26/10/2026 às 12:32",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/mosaico-partidos-768x513.jpg",
+    "imageCaption": "Líderes governistas celebram vitória de Lula; oposição critica prorrogação da votação e lamenta resultado",
+    "imageCredit": "Câmara dos Deputados",
+    "imageAlt": "Líderes governistas celebram vitória de Lula; oposição critica prorrogação da votação e lamenta resultado",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Líderes governistas da Câmara dos Deputados consideraram a reeleição do presidente da República, Luiz Inácio Lula da Silva, uma vitória da democracia, enquanto o líder da oposição avaliou que a prorrogação do horário de votação representou um golpe.",
+      "O líder do governo na Câmara, deputado Paulo Pimenta (PT-RS), disse que Lula venceu as eleições graças à campanha que tomou as ruas e as redes sociais em defesa da democracia e da soberania. “Cabe a nós fazer esse governo dar certo”, afirmou ele em suas redes sociais. O líder do PT, deputado Pedro Uczai (SC), comemorou: “A democracia venceu!\"",
+      "O líder da oposição, deputado Cabo Gilberto Silva (PL-PB), afirmou que “o Brasil sofreu um golpe” com a prorrogação das votações por duas horas, determinada pelo ministro do Supremo Tribunal Federal Cristiano Zanin para o país inteiro, e não apenas para algumas cidades. “O consórcio PT e STF sequestrou a nação”, declarou Gilberto Silva.",
+      "O líder do PDT, deputado André Figueiredo (CE), afirmou em suas redes sociais que o resultado das urnas reafirmou “o compromisso com um país mais justo, soberano e desenvolvido”. Ele observou, no entanto, que será um ciclo desafiador, que exigirá “responsabilidade, diálogo e muito trabalho”.",
+      "Líder do MDB, o deputado Isnaldo Bulhões Jr. (AL) disse que o momento exige união e responsabilidade para pacificar o país.",
+      "O líder da federação PSDB-Cidadania, deputado Adolfo Viana (PSDB-BA), anunciou seu voto em Flávio, mas repostou uma mensagem oficial do seu partido cumprimentando Lula pela vitória. “Desejamos êxito ao presidente reeleito e esperamos que seu governo saiba buscar a união dos brasileiros, respeitando as diferenças que fazem parte da vida democrática”, diz a nota.",
+      "O líder do Novo, deputado Gilson Marques (SC), declarou o \"luto do Brasil que trabalha\" e disse que não desistirá do país. “Nunca vou entender alguém comemorando junto com criminosos, ministros intocáveis e censuradores”, disse.",
+      "O líder do PL, deputado Sóstenes Cavalcante (RJ), pediu que “Deus tenha misericórdia do Brasil”.",
+      "Único representante do Missão na Câmara, o deputado Kim Kataguiri (SP) gravou um vídeo em que prevê \"mais quatro anos de desastre econômico e a indicação de quatro ministros para o STF, que vão mandar na nossa vida durante os próximos 30 anos”. Ele avaliou que a principal responsável pela vitória do PT foi uma direita “debochada, soberba e fraca”, que não reagiu ao “discurso de guerra” da campanha de Lula.",
+      "Leia mais notícias sobre as eleições 2026"
+    ]
+  },
+  {
+    "id": "ebc-1706833",
+    "title": "Fies 2: inscrições gratuitas para vagas remanescentes estão abertas",
+    "summary": "As inscrições para as vagas remanescentes do Fundo de Financiamento Estudantil (Fies), referentes ao segundo semestre de 2026, foram abertas nesta segunda-feira (26).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/fies-2-inscricoes-gratuitas-para-vagas-remanescentes-estao-abertas",
+    "publishedAt": "26/10/2026 às 11:25",
+    "category": "Política",
+    "ingestedAt": "26/10/2026 às 12:32",
+    "imageUrl": "https://imagens.ebc.com.br/KxveeRC9afa_Z0Io_KgLYnlS3CI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/10/24/0d9a2961.jpg?itok=oWJ8_Vjl",
+    "imageCaption": "Fies 2: inscrições gratuitas para vagas remanescentes estão abertas",
+    "imageCredit": "Daniella Almeida - Repórter da Agência Brasil",
+    "imageAlt": "Fies 2: inscrições gratuitas para vagas remanescentes estão abertas",
+    "author": "Daniella Almeida - Repórter da Agência Brasil",
+    "tags": [
+      "Educação",
+      "Fies 2",
+      "Inscrições",
+      "Vagas Remanescentes",
+      "MEC"
+    ],
+    "content": [
+      "As inscrições para as vagas remanescentes do Fundo de Financiamento Estudantil (Fies), referentes ao segundo semestre de 2026, foram abertas nesta segunda-feira (26).",
+      "Os estudantes interessados poderão se inscrever gratuitamente até 3 de novembro, exclusivamente pelo Portal Único de Acesso ao Ensino Superior . É preciso fazer login pela conta da plataforma Gov.br.",
+      "Saiba o passo a passo para a inscrição .",
+      "O programa oferece financiamento para estudantes que desejam cursar o ensino superior em faculdades privadas bem avaliadas pelo Ministério da Educação (MEC).",
+      "O Fies cobre as mensalidades do curso e permite que o estudante pague, com condições facilitadas, o valor financiado após a conclusão da graduação.",
+      "Nesta edição, as vagas remanescentes destinam-se exclusivamente à contratação do financiamento no segundo semestre letivo deste ano, sem possibilidade de extensão do prazo.",
+      "Uma das etapas do processo seletivo vai verificar se os candidatos pré-selecionados têm condições de acompanhar as atividades acadêmicas e concluir o semestre com aproveitamento suficiente.",
+      "Para participar, é necessário ter feito o Exame Nacional do Ensino Médio (Enem) a partir de 2010, com média igual ou superior a 450 pontos nas cinco provas de conhecimentos e nota acima de zero na redação.",
+      "O estudante não pode ter participado do exame como treineiro.",
+      "O candidato também precisa ter renda familiar mensal bruta por pessoa de até três salários mínimos, de acordo com o edital , que trata da ocupação das vagas.",
+      "Na parte acadêmica, o candidato pré-selecionado deve ter condições de cumprir a frequência mínima exigida pela instituição privada de ensino superior neste segundo semestre letivo de 2026.",
+      "Ao todo, são 50 mil vagas distribuídas pelo país.",
+      "O edital reserva 50% dessas vagas remanescentes a candidatos com renda familiar mensal por pessoa de até meio salário mínimo e inscrição atualizada no Cadastro Único para Programas Sociais do governo federal (CadÚnico). Para essa verificação, serão consideradas as informações cadastrais atualizadas até 8 de outubro de 2026.",
+      "Os estudantes pré-selecionados nessa modalidade poderão solicitar financiamento de até 100% dos encargos educacionais, conforme as regras do programa.",
+      "O resultado da chamada única está previsto para 16 de novembro."
+    ]
+  },
+  {
+    "id": "ebc-1706830",
+    "title": "Plebiscito: eleitores de 6 cidades decidem transferência de distritos",
+    "summary": "Eleitores de seis municípios brasileiros decidiram, por meio de plebiscitos , mudanças em seus territórios com desmembramentos e incorporações de distritos.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/plebiscito-eleitores-de-6-cidades-decidem-transferencia-de-distritos",
+    "publishedAt": "26/10/2026 às 11:11",
+    "category": "Eleições",
+    "ingestedAt": "26/10/2026 às 12:32",
+    "imageUrl": "https://imagens.ebc.com.br/eN75VFBQ_U_1VO_5G2JCcNjniwU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/0d4a5579.jpg?itok=p6yDCEhZ",
+    "imageCaption": "Plebiscito: eleitores de 6 cidades decidem transferência de distritos",
+    "imageCredit": "Vitor Abdala - Repórter da Agência Brasil",
+    "imageAlt": "Plebiscito: eleitores de 6 cidades decidem transferência de distritos",
+    "author": "Vitor Abdala - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "Mato Grosso",
+      "paraná",
+      "plebiscito",
+      "distritos"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706829",
+    "title": "TSE nega acusação de Flávio sobre expulsão de fiscais de sala-cofre",
+    "summary": "O Tribunal Superior Eleitoral (TSE) disse nesta segunda-feira (26) ser falsa afirmação do candidato à Presidência derrotado no segundo turno, Flávio Bolsonaro, de que fiscais de seu partido, o PL, foram expulsos da sala-cofre da Corte durante a apuração.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-nega-acusacao-de-flavio-sobre-expulsao-de-fiscais-de-sala-cofre",
+    "publishedAt": "26/10/2026 às 11:00",
+    "category": "Justiça",
+    "ingestedAt": "26/10/2026 às 12:32",
+    "imageUrl": "https://imagens.ebc.com.br/UcbUWTZwXc9bq1yRSj8GkwLHtQU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/03/kassio_nunes_marques_durante_pronunciamento02.jpg?itok=9vYA-A1E",
+    "imageCaption": "TSE nega acusação de Flávio sobre expulsão de fiscais de sala-cofre",
+    "imageCredit": "Felipe Pontes - Repórter da Agência Brasil",
+    "imageAlt": "TSE nega acusação de Flávio sobre expulsão de fiscais de sala-cofre",
+    "author": "Felipe Pontes - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "TSE",
+      "acusação de Flávio",
+      "expulsão de fiscais",
+      "sala-cofre"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706828",
+    "title": "Eleitores de sete cidades escolheram seus prefeitos neste 2º turno",
+    "summary": "Eleitores de sete cidades brasileiras elegeram, nesse domingo (25), seus futuros prefeito e vice.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/eleitores-de-sete-cidades-escolheram-seus-prefeitos-neste-2o-turno",
+    "publishedAt": "26/10/2026 às 10:50",
+    "category": "Eleições",
+    "ingestedAt": "26/10/2026 às 12:32",
+    "imageUrl": "https://imagens.ebc.com.br/dT533nV8EHShBl3p1JU2w-yACEw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/24/_pin5457.jpg-2.jpg?itok=yCAn7QkH",
+    "imageCaption": "Eleitores de sete cidades escolheram seus prefeitos neste 2º turno",
+    "imageCredit": "Alex Rodrigues - Repórter da Agência Brasil",
+    "imageAlt": "Eleitores de sete cidades escolheram seus prefeitos neste 2º turno",
+    "author": "Alex Rodrigues - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "eleições 2026",
+      "municípios",
+      "eleições suplementares",
+      "Eleições"
+    ],
+    "content": []
+  },
+  {
     "id": "camara-1310273-projeto-preve-integracao-de-da",
     "title": "Projeto prevê integração de dados públicos e simplificação de licenças",
     "summary": "A proposta tramita na Câmara dos Deputados.",
@@ -24,20 +203,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Kayo Magalhães / Câmara dos Deputados",
-      "O deputado Josenildo é o autor da proposta",
-      "O Projeto de Lei (PL) 3066/26 altera a Lei da Liberdade Econômica para reduzir a burocracia e ampliar a integração digital. Uma das principais medidas proíbe o governo de exigir documentos já disponíveis em bancos de dados oficiais, obrigando o compartilhamento dessas informações entre as próprias instituições públicas. A proposta tramita na Câmara dos Deputados.",
-      "O texto também prevê a criação de um sistema nacional de sandbox regulatório – um espaço de testes com regras flexíveis para novos negócios. Nesse sistema, órgãos reguladores poderão autorizar o funcionamento experimental dessas atividades.",
-      "Atualmente, o sandbox regulatório opera de forma limitada, temporária e restrita a alguns setores, como o financeiro.",
-      "Segundo o autor, deputado Josenildo (PDT-AP), a iniciativa contribui para reduzir a burocracia diminuindo o \"custo Brasil\".",
-      "\"A proposta incentiva a digitalização integral de processos administrativos, a interoperabilidade entre bases governamentais, a integração de sistemas públicos, a utilização de assinaturas digitais e o acompanhamento eletrônico em tempo real de procedimentos administrativos, reduzindo custos operacionais e ampliando a eficiência da atuação estatal\", reforçou.",
-      "O projeto prevê a aprovação automática de licenças, caso o órgão público não responda ao pedido do empreendedor dentro de um prazo razoável. A medida busca evitar que os negócios fiquem travados pela demora da administração pública. A Lei da Liberdade Econômica já prevê aprovação tácita em situações delimitadas, com condições e exceções.",
-      "O texto cria um padrão nacional unificado para as atividades econômicas de baixo risco, para a quais Estados e municípios só poderão fazer exigências adicionais para o funcionamento se comprovado o risco da atividade.",
-      "A proposta estabelece ainda o Ranking Nacional de Modernização Econômica com o propósito de avaliar e comparar estados e municípios com base no tempo médio de abertura de empresas, digitalização administrativa e facilidade de licenciamento.",
-      "A proposta será analisada de forma conclusiva pelas comissões de Administração e Serviço Público; de Desenvolvimento Econômico; e de Constituição e Justiça e de Cidadania. Para virar lei, precisa ser aprovada pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "camara-1313746-pl-tera-seis-governadores-a-pa",
@@ -59,20 +225,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Mesmo sem eleger nenhum governador em segundo turno, o PL será o partido com mais governos estaduais a partir de 2027, com seis. A sigla comandará os três estados do Sul (Paraná, Rio Grande do Sul e Santa Catarina), além de Rio de Janeiro, Rondônia e Roraima.",
-      "O PSD vem em seguida, com cinco governos, nos estados do Amapá, Amazonas (vitória em segundo turno), Maranhão, Pernambuco e Sergipe.",
-      "Por sua vez, o PP elegeu dois governadores em segundo turno, chegando ao comando de quatro unidades da Federação: Acre, Distrito Federal, Mato Grosso do Sul e Paraíba.",
-      "O PT, que havia elegido três governadores em primeiro turno (Bahia, Ceará e Piauí), venceu o governo do Rio Grande do Norte em segundo turno, chegando a quatro eleitos.",
-      "Também com quatro governadores no total, o Republicanos venceu em Mato Grosso, Minas Gerais e São Paulo – todos em primeiro turno – e no Espírito Santo (em segundo turno).",
-      "O PSDB, com a vitória no Tocantins em segundo turno, acumula dois governadores, pois venceu no primeiro turno em Alagoas.",
-      "Já MDB e Podemos terão um governador cada, respectivamente em Goiás e Pará, eleitos em primeiro turno.",
-      "Confira os governadores eleitos no segundo turno",
-      "Deputados que viram governadores",
-      "Dois deputados federais foram eleitos governadores.",
-      "Vicentinho Júnior (PSDB-TO), vitorioso em segundo turno no Tocantins, juntou-se a Zucco (PL-RS), que venceu no Rio Grande do Sul já no primeiro turno.",
-      "Mais notícias sobre as Eleições 2026"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706825",
@@ -96,13 +249,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Circulação",
       "Eleitor"
     ],
-    "content": [
-      "A Polícia Federal (PF) investiga se problemas na circulação de ônibus no segundo turno da eleição, no último domingo (25), prejudicou o trânsito de eleitores. Um inquérito policial foi aberto para apurar a situação em Sergipe, mas há investigações também sobre ocorrências nos estados de São Paulo, da Bahia, de Alagoas e do Piauí.",
-      "A PF informou que pretende apurar as circunstâncias da redução das frotas de ônibus em circulação em alguns locais desses estados e também se isso impediu ou dificultou o voto de eleitores . O artigo 297 do Código Eleitoral prevê que responsáveis por “impedir ou embaraçar o exercício do sufrágio” estão sujeitos a pena de seis meses de prisão e pagamento de multa.",
-      "Ele informou que diligências estão em andamento nesses expedientes, com oitivas de pessoas e apurações nos locais.",
-      "A redução dos ônibus em circulação motivou a campanha do candidato à Presidência da República Luiz Inácio Lula da Silva (PT) a pedir a prorrogação do horário de votação nesses locais, o que foi acatado pelo Supremo Tribunal Federal (STF) e pelo Tribunal Superior Eleitoral (TSE). A votação foi prorrogada por mais duas horas, até as 19h.",
-      "Até o início da noite de domingo, a PF informou que abriu três inquéritos, lavrou 44 termos circunstanciados e conduziu 56 pessoas a delegacias, para apurar os mais diversos crimes eleitorais. A maior parte dos casos foi de violação do sigilo do voto, propaganda irregular e desobediência eleitoral."
-    ]
+    "content": []
   },
   {
     "id": "camara-1310197-projeto-cria-sistema-nacional-",
@@ -917,147 +1064,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "contagem dos votos",
       "TSE",
       "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706690",
-    "title": "TRE-RJ diz que seções eleitorais ficarão abertas até as 19h",
-    "summary": "O Tribunal Regional Eleitoral do Rio de Janeiro (TRË-RJ) informou no início da noite deste domingo (25) que todas as seções eleitorais deverão permanecer instaladas.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tre-rj-diz-que-secoes-eleitorais-ficarao-abertas-ate-19h",
-    "publishedAt": "25/10/2026 às 18:47",
-    "category": "Justiça",
-    "ingestedAt": "25/10/2026 às 18:55",
-    "imageUrl": "https://imagens.ebc.com.br/2d_mIw2bM7hc8W57uH6lWvkBSfk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/toms5590.jpg?itok=4Y_zXYId",
-    "imageCaption": "TRE-RJ diz que seções eleitorais ficarão abertas até as 19h",
-    "imageCredit": "Ana Cristina Campos - Repórter da Agência Brasil",
-    "imageAlt": "TRE-RJ diz que seções eleitorais ficarão abertas até as 19h",
-    "author": "Ana Cristina Campos - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "TRE-RJ"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706685",
-    "title": "No DF, urnas fecham antes de informação sobre prorrogação chegar",
-    "summary": "Nas seções eleitorais do Distrito Federal, as urnas foram fechadas às 17h em ponto, antes que a informação sobre a prorrogação do horário de votação até as 19h pudesse chegar a mesários e presidentes de seção, informou o Tribunal Regional Eleitoral (TRE-DF).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/no-df-urnas-fecham-antes-de-informacao-sobre-prorrogacao-chegar",
-    "publishedAt": "25/10/2026 às 18:34",
-    "category": "Eleições",
-    "ingestedAt": "25/10/2026 às 18:55",
-    "imageUrl": "https://imagens.ebc.com.br/eN75VFBQ_U_1VO_5G2JCcNjniwU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/0d4a5579.jpg?itok=p6yDCEhZ",
-    "imageCaption": "No DF, urnas fecham antes de informação sobre prorrogação chegar",
-    "imageCredit": "Felipe Pontes - Repórter da Agência Brasil",
-    "imageAlt": "No DF, urnas fecham antes de informação sobre prorrogação chegar",
-    "author": "Felipe Pontes - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "segundo turno",
-      "Distrito Federal",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706684",
-    "title": "TSE: seções eleitorais ainda abertas devem manter votação até as 19h",
-    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, decidiu há pouco, neste domingo (25), que somente as seções eleitorais que ainda estão abertas deverão ampliar a votação até as 19h .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/tse-secoes-eleitorais-ainda-abertas-devem-manter-votacao-ate-19h",
-    "publishedAt": "25/10/2026 às 18:15",
-    "category": "Eleições",
-    "ingestedAt": "25/10/2026 às 18:55",
-    "imageUrl": "https://imagens.ebc.com.br/lp-zFbur0o2SOLI2VWyjUYLjbyk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/sem_titulo-6.jpg?itok=Qq4t5eEa",
-    "imageCaption": "TSE: seções eleitorais ainda abertas devem manter votação até as 19h",
-    "imageCredit": "André Richter - repórter da Agência Brasil",
-    "imageAlt": "TSE: seções eleitorais ainda abertas devem manter votação até as 19h",
-    "author": "André Richter - repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "TSE",
-      "Justiça Eleitoral",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706683",
-    "title": "Horário de votação ampliado será apenas onde urnas não foram fechadas",
-    "summary": "O ministro Cristiano Zanin, do Supremo Tribunal Federal (STF) , esclareceu há pouco que a decisão que determinou a prorrogação da votação até as 19h deverá ser cumprida nos locais em que as urnas ainda não foram fechadas.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/horario-de-votacao-ampliado-sera-apenas-onde-urnas-nao-foram-fechadas",
-    "publishedAt": "25/10/2026 às 18:08",
-    "category": "Justiça",
-    "ingestedAt": "25/10/2026 às 18:55",
-    "imageUrl": "https://imagens.ebc.com.br/eN75VFBQ_U_1VO_5G2JCcNjniwU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/0d4a5579.jpg?itok=p6yDCEhZ",
-    "imageCaption": "Horário de votação ampliado será apenas onde urnas não foram fechadas",
-    "imageCredit": "André Richter - Repórter da Agência Brasil",
-    "imageAlt": "Horário de votação ampliado será apenas onde urnas não foram fechadas",
-    "author": "André Richter - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Cristiano Zanin",
-      "stf",
-      "Eleições 2026"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706682",
-    "title": "Ministros do TSE se reúnem a portas fechadas após decisão de Zanin",
-    "summary": "Os ministros do Tribunal Superior Eleitoral (TSE) estão em reunião fechada para tratar da decisão do ministro do Supremo Tribunal Federal (STF) Cristiano Zanin que estendeu o horário de votação até as 19h em todo o país.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/ministros-do-tse-se-reunem-a-portas-fechadas-apos-decisao-de-zanin",
-    "publishedAt": "25/10/2026 às 18:02",
-    "category": "Justiça",
-    "ingestedAt": "25/10/2026 às 18:55",
-    "imageUrl": "https://imagens.ebc.com.br/d9fEeCPDjkqvb5-sDLGv6gO7hN0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/17/dji_20260716174410_0332_d.jpg?itok=Cr2Ypqkl",
-    "imageCaption": "Ministros do TSE se reúnem a portas fechadas após decisão de Zanin",
-    "imageCredit": "André Richter - Repórter da Agência Brasil",
-    "imageAlt": "Ministros do TSE se reúnem a portas fechadas após decisão de Zanin",
-    "author": "André Richter - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições",
-      "eleições 2026",
-      "TSE"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706679",
-    "title": "Policial militar é preso acusado de venda de voto no estado do Rio",
-    "summary": "Um policial militar foi detido neste domingo (25) tentando fotografar seu voto na cabine eleitoral, em Três Rios, no Rio de Janeiro. Com ele, foram encontrados R$ 114.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/policial-militar-e-preso-acusado-de-venda-de-voto-no-estado-do-rio",
-    "publishedAt": "25/10/2026 às 17:28",
-    "category": "Eleições",
-    "ingestedAt": "25/10/2026 às 18:55",
-    "imageUrl": "https://imagens.ebc.com.br/5JCac9FQ6LFkiQbwYrpRFKdMuVg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/toms5600.jpg?itok=GyZpNdRe",
-    "imageCaption": "Policial militar é preso acusado de venda de voto no estado do Rio",
-    "imageCredit": "Ana Cristina Campos - Repórter da Agência Brasil",
-    "imageAlt": "Policial militar é preso acusado de venda de voto no estado do Rio",
-    "author": "Ana Cristina Campos - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições",
-      "eleições 2026",
-      "Rio de Janeiro",
-      "TRE-RJ"
     ],
     "content": []
   },
