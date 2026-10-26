@@ -5,6 +5,211 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706859",
+    "title": "Prêmio TV Brasil Petrobras Para Elas: as melhores laterais-esquerdas",
+    "summary": "A organização do Prêmio TV Brasil Petrobras Para Elas revelou nesta segunda-feira (26) mais três finalistas, desta vez na categoria melhor lateral-esquerda. Estão na disputa a são-paulina Bia Menezes, a palmeirense Raissa Bahia e a corintiana Tamires.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/premio-tv-brasil-petrobras-para-elas-melhores-laterais-esquerdas",
+    "publishedAt": "26/10/2026 às 16:28",
+    "category": "Esportes",
+    "ingestedAt": "26/10/2026 às 16:35",
+    "imageUrl": "https://imagens.ebc.com.br/-VmYY80YFcEHd01XI34R9SI_kPs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/26/foto-montagem-laterais-esquerdas_0.png?itok=KVHAmVZ2",
+    "imageCaption": "Prêmio TV Brasil Petrobras Para Elas: as melhores laterais-esquerdas",
+    "imageCredit": "Lincoln Chaves- Repórter da EBC",
+    "imageAlt": "Prêmio TV Brasil Petrobras Para Elas: as melhores laterais-esquerdas",
+    "author": "Lincoln Chaves- Repórter da EBC",
+    "tags": [
+      "Esportes",
+      "finalistas",
+      "laterais-esquerdas",
+      "prêmio",
+      "Futebol Feminino"
+    ],
+    "content": [
+      "A organização do Prêmio TV Brasil Petrobras Para Elas revelou nesta segunda-feira (26) mais três finalistas, desta vez na categoria melhor lateral-esquerda. Estão na disputa a são-paulina Bia Menezes, a palmeirense Raissa Bahia e a corintiana Tamires.",
+      "Após ser submetida a uma cirurgia no tornozelo no fim de 2025, Bia Menezes iniciou o ano como reserva de Clara. Quando retornou, a lateral de 29 anos não saiu mais do time, participando de cinco gols (três marcados e duas assistências) nos 14 jogos que fez no Campeonato Brasileiro. Foi dela a bola na rede que encaminhou o título tricolor, no empate por 1 a 1 com o Corinthians, no Morumbi, na segunda partida da final.",
+      "Raissa Bahia chegou ao Palmeiras no meio do ano passado, após defender o Grêmio. Foi em 2026 que a jogadora de 23 anos virou uma das peças mais importantes do time de Rosana Augusto, destacando-se pela versatilidade. Lateral de ofício, passou a ser usada, em várias ocasiões, como ponta-esquerda. Estreou na seleção brasileira e não sentiu o peso da camisa, caindo de vez no gosto do técnico Arthur Elias.",
+      "Aos 39 anos e na oitava temporada pelo Corinthians, Tamires segue como referência no time que ​foi à décima final de Brasileirão seguida. Por vezes revezando com a também lateral-esquerda Juliete, a camisa 37 foi a quinta jogadora do elenco com mais minutos na competição. Na Libertadores Feminina, que está em curso no Equador, ela ajudou o Timão a chegar às semifinais com duas assistências em quatro partidas.",
+      "As finalistas foram definidas por meio de votação entre representantes dos clubes que integram a elite do futebol feminino brasileiro. As ganhadoras serão anunciadas em cerimônia no Museu do Futebol, em São Paulo, no próximo dia 15 de novembro.",
+      "O Prêmio TV Brasil Petrobras Para Elas também reconhecerá as melhores atletas nas demais posições: goleira, lateral-direita, zagueiras, meio-campistas e atacantes. As outras categorias são: Craque da Torcida, Jogadora Revelação, Melhor Treinador(a), Melhor Jogadora, Artilheira, Gol Mais Bonito e Melhor Departamento de Futebol Feminino.",
+      "Há, ainda, uma categoria especial, chamada Futebol Feminino Contra o Feminicídio. O prêmio destaca o clube que melhor realizou ações de enfrentamento à violência contra a mulher ao longo da temporada."
+    ]
+  },
+  {
+    "id": "camara-1309849-projeto-cria-politica-nacional",
+    "title": "Projeto cria política nacional para profissionais de portaria, vigia e controle de acesso",
+    "summary": "Proposta estabelece piso salarial e define medidas de segurança e de capacitação; texto está em análise na Câmara.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1309849-projeto-cria-politica-nacional-para-profissionais-de-portaria-vigia-e-controle-de-acesso",
+    "publishedAt": "26/10/2026 às 16:23",
+    "category": "Congresso",
+    "ingestedAt": "26/10/2026 às 16:35",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2025/08/deputado-marcos-tavares-01-768x513.jpeg",
+    "imageCaption": "Deputado Marcos Tavares, autor da proposta",
+    "imageCredit": "Divulgação",
+    "imageAlt": "Projeto cria política nacional para profissionais de portaria, vigia e controle de acesso",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Deputado Marcos Tavares, autor da proposta",
+      "O Projeto de Lei 3122/26 cria a Política Nacional de Valorização, Qualificação e Proteção dos Profissionais de Portaria, Vigia e Controle de Acesso. A proposta estabelece um piso salarial nacional de R$ 3 mil e define medidas de segurança, capacitação e proteção para esses trabalhadores.",
+      "Pelo texto, são considerados profissionais abrangidos pela proposta aqueles que exercem atividades como recepção, identificação, orientação, registro, triagem, comunicação, observação, guarda patrimonial não armada e controle de entrada e saída de pessoas, veículos, objetos e correspondências.",
+      "Entre os objetivos da política estão a valorização remuneratória, a prevenção de riscos ocupacionais, agressões, ameaças, assédio e desvio de função, além da capacitação profissional e da adoção de protocolos de segurança, comunicação e registro de ocorrências.",
+      "A proposta estabelece condições mínimas para os postos de trabalho, como iluminação, ventilação, proteção contra intempéries, assento, higiene, acesso a água potável e meios de comunicação. Também prevê o fornecimento de equipamentos de proteção individual quando exigidos pela atividade ou pelos riscos identificados.",
+      "O projeto também determina capacitação inicial e periódica dos profissionais, de acordo com a natureza do posto de trabalho e o grau de risco da atividade. Entre os conteúdos previstos estão atendimento ao público, comunicação, controle de acesso, mediação de conflitos, procedimentos de emergência, uso de equipamentos e sistemas tecnológicos, proteção de dados e prevenção de assédio, discriminação e violência psicológica.",
+      "A proposta proíbe exigir dos profissionais o desempenho habitual de atividades incompatíveis com a função contratada. Entre elas estão segurança armada, serviços permanentes de limpeza e manutenção, cobrança, fiscalização disciplinar, contenção física de pessoas, perseguição de suspeitos e revista pessoal ou patrimonial coercitiva, salvo nas hipóteses previstas em lei e quando realizada por profissional habilitado.",
+      "O texto também determina que as atividades de portaria, vigia e controle de acesso sejam organizadas de forma a não obrigar o trabalhador a realizar intervenção física, contenção corporal, uso de arma ou atuação própria de forças policiais ou de segurança privada armada.",
+      "Em casos de agressão, ameaça, assédio, tentativa de invasão ou outras situações de violência relacionadas ao exercício da função, o empregador ou tomador de serviços deverá prestar apoio imediato, adotar medidas para interromper a situação de risco e registrar a ocorrência quando cabível.",
+      "O texto estabelece ainda regras para o uso de portaria remota, controle eletrônico de acesso, videomonitoramento, biometria, aplicativos e sistemas automatizados. Os profissionais que operarem esses sistemas deverão receber treinamento adequado. O autor, deputado Marcos Tavares (PDT-RJ), afirma que a proposição reconhece que a média remuneratória atual de parte relevante da categoria ainda se encontra abaixo do patamar necessário para valorização adequada.",
+      "“O projeto não pretende transformar porteiros, vigias ou controladores de acesso em vigilantes armados, policiais privados ou agentes de segurança pública. Ao contrário, estabelece expressamente limites funcionais, veda exigências incompatíveis com a contratação e protege o trabalhador contra intervenção física, contenção de pessoas, perseguição de suspeitos, uso de armas ou atuação própria de atividade regulada por legislação específica”, explicou Tavares.",
+      "O projeto, que tramita em caráter conclusivo , será analisado pelas comissões de Trabalho; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania. Para virar lei, precisa ser aprovado pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
+    ]
+  },
+  {
+    "id": "ebc-1706856",
+    "title": "Prazo para empresas escolherem modelo do Simples acaba nesta sexta",
+    "summary": "Os micro e pequenos empresários precisam ficar atentos. Acaba nesta sexta-feira (30) o prazo para a escolha do regime tributário que entrará em vigor em janeiro, com a reforma tributária.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/prazo-para-empresas-escolherem-modelo-do-simples-acaba-nesta-sexta",
+    "publishedAt": "26/10/2026 às 15:22",
+    "category": "Economia",
+    "ingestedAt": "26/10/2026 às 16:35",
+    "imageUrl": "https://imagens.ebc.com.br/fkfzrsxiXSdFPrlh0vk6GnEjUsQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/10/_raf1037_1.jpg?itok=QXEJ1MDg",
+    "imageCaption": "Prazo para empresas escolherem modelo do Simples acaba nesta sexta",
+    "imageCredit": "Wellton Máximo - Repórter da Agência Brasil",
+    "imageAlt": "Prazo para empresas escolherem modelo do Simples acaba nesta sexta",
+    "author": "Wellton Máximo - Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "Reforma Tributária",
+      "MEI",
+      "Pequena empresa",
+      "Regime Tributário"
+    ],
+    "content": [
+      "Os micro e pequenos empresários precisam ficar atentos. Acaba nesta sexta-feira (30) o prazo para a escolha do regime tributário que entrará em vigor em janeiro, com a reforma tributária.",
+      "Os negócios que desejarem recolher o Imposto sobre Bens e Serviços (IBS) e a Contribuição sobre Bens e Serviços (CBS) pelo regime regular terão até sexta-feira para registrar a opção. Quem não fizer a escolha continuará a recolher pelo regime simplificado, que tem uma alíquota variável por tipo e tamanho de negócio posteriormente rateada em diversos tributos.",
+      "Também na sexta-feira acaba o prazo para as empresas regularizarem as pendências que impediram o ingresso no Simples Nacional. O prazo de opção pelo regime acabou no dia 15 .",
+      "O Simples Nacional é um regime simplificado de tributação para quem fatura até R$ 4,8 milhões por ano. Por causa do novo sistema tributário, o Comitê Gestor do Simples Nacional (CGSN) antecipou a escolha do regime tributário.",
+      "As empresas que desejarem ingressar no regime em 2027 devem fazer o pedido até 30 de outubro. Até então, a opção pelo Simples era realizada em janeiro de cada ano.",
+      "A data limite acabaria em 30 de setembro, mas, após diálogo com o Conselho Federal de Contabilidade e o Serviço Brasileiro de Apoio às Micro e Pequenas Empresas (Sebrae), o CGSN estendeu o prazo para 15 de outubro.",
+      "O novo prazo foi regulamentado por resolução do CGSN editada no fim de setembro. As normas incorporaram ao regime simplificado o Imposto sobre Bens e Serviços (IBS) e a Contribuição sobre Bens e Serviços (CBS), tributos criados pela reforma tributária sobre o consumo.",
+      "As micro e pequenas empresas têm de 3 de novembro a 20 de dezembro para desistir das opções. O prazo vale tanto para reverter a inclusão no Simples como para cancelar o recolhimento do IBS e da CBS a partir de 2027.",
+      "A nova regra vale para empresas que ainda não são optantes pelo Simples Nacional e querem utilizar o regime a partir de janeiro de 2027.",
+      "As seguintes datas estão mantidas:",
+      "Criada por causa da transição para o novo sistema tributário, a alteração busca dar mais previsibilidade às empresas antes do início do ano-calendário.",
+      "Outra mudança envolve a forma de recolhimento do IBS e da CBS. A empresa poderá permanecer no Simples Nacional e, simultaneamente, optar pelo recolhimento desses dois tributos pelo regime regular.",
+      "Para o primeiro semestre de 2027, a escolha deveria ter sido feita em setembro, com validade de janeiro a junho.",
+      "Quem não fez a opção pelo regime regular nesse período permanecerá, no primeiro semestre, com IBS e CBS dentro da sistemática do Simples.",
+      "A decisão poderá ser revista em março de 2027, com efeitos para o segundo semestre.",
+      "A escolha pode ter impacto especialmente para empresas que vendem para outras empresas, devido à possibilidade de geração e aproveitamento de créditos tributários.",
+      "Por isso, a avaliação do regime não deve considerar apenas a alíquota. Também entram na análise fatores como:",
+      "Quem já está no Simples Nacional, em regra, não precisa solicitar novamente a permanência no regime.",
+      "Ainda assim, é recomendado verificar a situação fiscal da empresa em setembro deste ano para identificar eventuais pendências ou exclusões para 2027.",
+      "As empresas que permanecerem no Simples e não quiserem recolher IBS e CBS pelo regime regular não precisarão fazer uma nova opção.",
+      "Quem quiser retirar esses dois tributos da sistemática do Simples deverá formalizar a escolha dentro do prazo estabelecido.",
+      "As empresas abertas entre 1º de outubro e 31 de dezembro de 2026 terão uma regra específica.",
+      "Nesse caso, a opção pelo Simples Nacional feita no momento da inscrição do CNPJ produzirá efeitos tanto para o período restante de 2026 quanto para todo o ano de 2027.",
+      "A escolha relacionada ao IBS e à CBS pelo regime regular também poderá ser feita na abertura da empresa, com efeitos a partir de janeiro de 2027.",
+      "Se o empresário não quiser permanecer no Simples em 2027, poderá solicitar a exclusão por opção até o último dia de 2026.",
+      "A antecipação da opção também criou uma possibilidade de desistência.",
+      "Quem fez o pedido até 15 de outubro poderá cancelar a solicitação até 30 de novembro de 2026.",
+      "O cancelamento, porém, será irretratável. Isso significa que, depois de desistir, a empresa não poderá fazer uma nova opção para produzir efeitos em 2027.",
+      "A antecipação também permite que eventuais pendências sejam identificadas antes do início do ano. Em caso de indeferimento por problemas que possam ser regularizados, a empresa terá prazo para corrigir a situação.",
+      "A mudança não altera o calendário de opção pelo Simei, sistema aplicável ao Microempreendedor Individual (MEI).",
+      "Para o MEI, a opção pelo Simei continua sendo realizada em janeiro de cada ano, até o último dia útil do mês.",
+      "Dessa forma, a antecipação para setembro não deve ser confundida com as regras específicas aplicáveis aos microempreendedores individuais.",
+      "Outra mudança anunciada pelo CGSN envolve a emissão da Nota Fiscal de Serviço eletrônica (NFS-e) no emissor nacional.",
+      "A obrigatoriedade para empresas optantes pelo Simples Nacional foi adiada de 1º de setembro para 1º de novembro de 2026.",
+      "O adiamento busca dar mais tempo para municípios e empresas realizarem adaptações tecnológicas e operacionais.",
+      "Entre as providências recomendadas estão:",
+      "A regulamentação também altera a forma de prestação de informações fiscais e socioeconômicas.",
+      "A Declaração de Informações Socioeconômicas e Fiscais (Defis) deixará de ser apresentada como declaração separada. As informações passarão a ser incorporadas ao Programa Gerador do Documento de Arrecadação do Simples Nacional – Declaratório (PGDAS-D), com entrega anual de janeiro a março.",
+      "A mudança faz parte da adaptação do Simples Nacional ao novo modelo tributário.",
+      "Com setembro concentrando decisões relevantes para o próximo ano, especialistas recomendam que empresas e contadores antecipem a análise tributária.",
+      "A escolha entre manter IBS e CBS no Simples ou recolhê-los pelo regime regular pode produzir efeitos diferentes dependendo do setor, dos fornecedores e do perfil dos clientes.",
+      "Por isso, antes de formalizar a opção, a recomendação é que a micro e pequena empresa simule os dois cenários , além de revisar os sistemas, a emissão de notas fiscais e planejar o caixa para 2027."
+    ]
+  },
+  {
+    "id": "ebc-1706853",
+    "title": "Segundo turno das eleições registra menor abstenção em 20 anos",
+    "summary": "As abstenções nas eleições gerais de 2026 caíram de 33.469. 244 no primeiro turno, para 30.509. 005 de eleitores no segundo turno, diferença de mais de 2,9 milhões de pessoas.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/segundo-turno-das-eleicoes-registra-menor-abstencao-em-20-anos",
+    "publishedAt": "26/10/2026 às 15:14",
+    "category": "Eleições",
+    "ingestedAt": "26/10/2026 às 16:35",
+    "imageUrl": "https://imagens.ebc.com.br/r8kLJCTmsdNMxukrdr_HjNK1Ba8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/21/pzzb8762.jpg?itok=2DYVWmKp",
+    "imageCaption": "Segundo turno das eleições registra menor abstenção em 20 anos",
+    "imageCredit": "Fabíola Sinimbú – Repórter da Agência Brasil",
+    "imageAlt": "Segundo turno das eleições registra menor abstenção em 20 anos",
+    "author": "Fabíola Sinimbú – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "votos brancos",
+      "votos nulos",
+      "abstenções"
+    ],
+    "content": []
+  },
+  {
+    "id": "camara-1312038-projeto-suspende-cobranca-de-t",
+    "title": "Projeto suspende cobrança de tributos na importação de urânio",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1312038-projeto-suspende-cobranca-de-tributos-na-importacao-de-uranio",
+    "publishedAt": "26/10/2026 às 15:03",
+    "category": "Congresso",
+    "ingestedAt": "26/10/2026 às 16:35",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260526175232735-2-768x473.jpg",
+    "imageCaption": "Deputada Laura Carneiro, autora do projeto",
+    "imageCredit": "Kayo Magalhães / Câmara dos deputados",
+    "imageAlt": "Discussão e Votação de propostas legislativas. Dep. Laura Carneiro (PSD - RJ)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706849",
+    "title": "Em São Paulo, três municípios escolhem novos prefeitos",
+    "summary": "Os eleitores das cidades paulistas de Macedônia, Martinópolis e Narandiba foram às urnas ontem (25) não somente para votar no novo presidente da República, mas também para eleger seus novos prefeitos.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/em-sao-paulo-tres-municipios-escolhem-novos-prefeitos",
+    "publishedAt": "26/10/2026 às 14:36",
+    "category": "Eleições",
+    "ingestedAt": "26/10/2026 às 16:35",
+    "imageUrl": "https://imagens.ebc.com.br/aB-C67Qf1vUKo0kfP8iRgCp-AZs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/26/sp.jpg?itok=Y2UAOSLZ",
+    "imageCaption": "Em São Paulo, três municípios escolhem novos prefeitos",
+    "imageCredit": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "imageAlt": "Em São Paulo, três municípios escolhem novos prefeitos",
+    "author": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "São Paulo",
+      "Prefeitos",
+      "eleição suplementar"
+    ],
+    "content": []
+  },
+  {
     "id": "camara-1310135-projeto-cria-politica-para-inc",
     "title": "Projeto cria política para incentivar economia compartilhada no campo",
     "summary": "Proposta institui a Política Nacional do Agro Colaborativo; texto está em análise na Câmara dos Deputados.",
@@ -24,27 +229,36 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Kayo Magalhães/Câmara dos Deputados",
-      "José Medeiros, autor do projeto de lei",
-      "O Projeto de Lei 2971/26 institui a Política Nacional do Agro Colaborativo, voltada à promoção de modelos produtivos baseados em cooperação, economia compartilhada, agricultura circular e reaproveitamento de recursos no setor agropecuário brasileiro.",
-      "Apresentada pelo deputado José Medeiros (PL-MT), a proposta tem como metas:",
-      "O projeto define o agro colaborativo como a divisão e o uso comum de máquinas, equipamentos, insumos, infraestruturas e serviços entre produtores rurais.",
-      "Entre os ativos compartilháveis listados no texto estão tratores, colheitadeiras, implementos agrícolas, sistemas de irrigação e colmeias.",
-      "Entre as medidas previstas para implementar a política pública, estão:",
-      "O projeto também determina o incentivo estatal a:",
-      "Além disso, prevê o fomento ao uso de ferramentas como inteligência artificial, internet das coisas, blockchain (bloco de dados) e aplicativos digitais de compartilhamento no campo.",
-      "José Medeiros acredita que a economia compartilhada aplicada ao campo poderá melhorar o desempenho agrícola, principalmente dos pequenos produtores. “Um trator que hoje fica ocioso 80% do tempo pode atender dezenas de produtores”, exemplifica. “Estamos falando de democratização real do acesso à tecnologia.”",
-      "O deputado ressalta a importância da modernização do setor. “O agronegócio é uma das maiores forças econômicas do país, mas enfrenta desafios graves: custo elevado de produção, desigualdade tecnológica, desperdício de recursos e baixa integração produtiva”, diagnostica.",
-      "A proposta tramita na Câmara dos Deputados e será analisada pelas seguintes comissões permanentes, em caráter conclusivo :",
-      "Para virar lei, o texto terá de ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
+  },
+  {
+    "id": "ebc-1706847",
+    "title": "PM registra 7 ocorrências e 6 detidos até o meio-dia de domingo em SP",
+    "summary": "Sete ocorrências foram registradas pela Polícia Militar durante o segundo turno das eleições até o meio-dia deste domingo (25). Cinco pessoas foram presas.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/pm-registra-7-ocorrencias-e-6-detidos-ate-o-meio-dia-de-domingo-em-sp",
+    "publishedAt": "26/10/2026 às 14:07",
+    "category": "Eleições",
+    "ingestedAt": "26/10/2026 às 16:35",
+    "imageUrl": "https://imagens.ebc.com.br/SD-1YJ7io5xNneGILoLdpJ8_eBI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/10/06/_mg_2276.jpg?itok=PRj9aZug",
+    "imageCaption": "PM registra 7 ocorrências e 6 detidos até o meio-dia de domingo em SP",
+    "imageCredit": "Flávia Albuquerque - Repórter da Agência Brasil",
+    "imageAlt": "PM registra 7 ocorrências e 6 detidos até o meio-dia de domingo em SP",
+    "author": "Flávia Albuquerque - Repórter da Agência Brasil",
+    "tags": [
+      "Geral",
+      "eleições 2026",
+      "São Paulo",
+      "Prisões",
+      "Desacato"
+    ],
+    "content": []
   },
   {
     "id": "ebc-1706848",
-    "title": "Lula cresce em número de votos em todos os estados; Flávio recuou em 6",
-    "summary": "Entre os brasileiros que compareceram neste domingo (25) às urnas no segundo turno das Eleições de 2026, 64.256. 232 escolheram o presidente Luiz Inácio Lula da Silva.",
+    "title": "Lula cresce em número de votos em todos os estados; Flávio recua em 6",
+    "summary": "Entre os brasileiros que compareceram neste domingo (25) às urnas no segundo turno das Eleições de 2026, 64.256. 232 escolheram o presidente Luiz Inácio Lula da Silva .",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/lula-cresce-em-numero-de-votos-em-todos-os-estados-flavio-recuou-em-6",
@@ -52,9 +266,9 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "category": "Eleições",
     "ingestedAt": "26/10/2026 às 14:15",
     "imageUrl": "https://imagens.ebc.com.br/sm8Iqd7ZLmP68Vz_1eIH0P_5F-0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int9468.jpg?itok=QpWDFi6O",
-    "imageCaption": "Lula cresce em número de votos em todos os estados; Flávio recuou em 6",
+    "imageCaption": "Lula cresce em número de votos em todos os estados; Flávio recua em 6",
     "imageCredit": "Fabíola Sinimbú - Repórter da Agência Brasil",
-    "imageAlt": "Lula cresce em número de votos em todos os estados; Flávio recuou em 6",
+    "imageAlt": "Lula cresce em número de votos em todos os estados; Flávio recua em 6",
     "author": "Fabíola Sinimbú - Repórter da Agência Brasil",
     "tags": [
       "Política",
@@ -63,14 +277,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Flávio Bolsonaro",
       "eleições 2026"
     ],
-    "content": [
-      "Entre os brasileiros que compareceram neste domingo (25) às urnas no segundo turno das Eleições de 2026, 64.256.232 escolheram o presidente Luiz Inácio Lula da Silva. O total representa 10,3 milhões de votos a mais que os que Lula recebeu no primeiro turno, quando foram registrados quase 53,9 milhões. O crescimento de votos se deu em todos os 26 estados e no Distrito Federal, com destaque para Minas Gerais.",
-      "Flávio Bolsonaro também cresceu na maior parte dos estados, mas com menor diferença entre os dois turnos. E, em seis estados, o candidato recuou um total de mais de 52,3 mil votos.",
-      "Em termos absolutos, São Paulo foi o estado onde Lula abriu a maior margem de diferença entre os dois turnos, com crescimento de 2,6 milhões de votos.",
-      "O segundo foi Minas Gerais, com mais de 1,1 milhão conquistados em menos de um mês. Minas também foi o único estado em que Lula virou o resultado, uma vez que Flávio Bolsonaro tinha terminado o primeiro turno à frente, com 5,7 milhões de votos contra 5,1 milhões de votos para Lula. No segundo turno, Lula avançou para 6,3 milhões de votos no estado, contra 6,2 milhões de votos de Flávio .",
-      "O crescimento de Lula no Rio de Janeiro, reduto político de Flávio Bolsonaro, também chama a atenção. Entre os dois turnos, o candidato do PT cresceu mais de 872 mil votos, enquanto que Flávio Bolsonaro avançou pouco mais de 202 mil votos.",
-      "Os estados onde Lula cresceu menos, em números absolutos, foram Roraima, Acre e Amapá, onde o presidente somou, respectivamente, pouco mais de 9 mil votos, 9,7 mil e 10,4 mil."
-    ]
+    "content": []
   },
   {
     "id": "camara-1313505-projeto-proibe-cobranca-de-tax",
@@ -92,21 +299,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Cleia Viana / Câmara dos Deputados",
-      "Marcos Tavares: cidadão tem o direito de usufruir de espaços públicos",
-      "O Projeto de Lei 3700/26, em análise na Câmara dos Deputados, garante o livre acesso da população a praias, rios, lagoas, cachoeiras e ilhas públicas em todo o país.",
-      "O texto proíbe a cobrança de taxa, tarifa, pedágio, ingresso ou qualquer contraprestação em dinheiro para entrar, circular ou permanecer nesses locais.",
-      "A regra atinge a administração pública direta e indireta da União, dos estados, do Distrito Federal e dos municípios. A proibição também alcança concessionárias ou qualquer particular que explore bens naturais públicos sob autorização.",
-      "“A preservação ambiental constitui dever do poder público e da sociedade”, afirma o autor proposta, deputado Marcos Tavares (PDT-RJ). Ele acrescenta que espaços públicos não podem ser objeto de “barreiras econômicas que impeçam o cidadão de usufruir de um patrimônio que já lhe pertence”.",
-      "Pelo texto, continuam permitidas as cobranças por serviços opcionais colocados à disposição dos visitantes, como estacionamento, transporte, passeios turísticos, hospedagem e aluguel de equipamentos.",
-      "A cobrança de ingressos em unidades de conservação da natureza, se autorizada por lei, também não será afetada.",
-      "O projeto não cria direito de passagem por terrenos privados. No entanto, no caso de condomínios fechados onde a área comum seja o acesso tradicional ou único ao recurso natural, a passagem de pedestres não poderá ser bloqueada nem cobrada – os visitantes deverão respeitar as normas do local.",
-      "A proposta proíbe ainda cancelas, guaritas, cercas ou portões que bloqueiem o trânsito livre. As exceções cabem apenas para restrições temporárias e fundamentadas por motivos de segurança pública, calamidade, proteção ambiental ou obras autorizadas.",
-      "O projeto será analisado, em caráter conclusivo , pelas comissões de Meio Ambiente e Desenvolvimento Sustentável; de Desenvolvimento Urbano; e de Constituição e Justiça e de Cidadania.",
-      "Para virar lei, o texto terá de ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706844",
@@ -126,7 +319,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Internacional",
       "Vitória de Lula",
-      "repercussão",
+      "Repercussão",
       "imprensa europeia",
       "asiática"
     ],
@@ -135,7 +328,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
     "id": "ebc-1706842",
     "title": "Votação de Lula é a maior já recebida por um presidenciável no país",
-    "summary": "Ao terminar o segundo turno da eleição presidencial com 64.256. 232 votos neste domingo (25), o presidente reeleito Luiz Inácio Lula da Silva (PT) conquistou a maior votação já obtida por um presidenciável na história do país.",
+    "summary": "Ao terminar o segundo turno da eleição presidencial com 64.256. 232 votos neste domingo (25), o presidente reeleito, Luiz Inácio Lula da Silva (PT), conquistou a maior votação já obtida por um presidenciável na história do país.",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/votacao-de-lula-e-maior-ja-recebida-por-um-presidenciavel-no-pais",
@@ -151,8 +344,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Política",
       "eleições 2026",
       "Lula",
-      "votação",
-      "recorde"
+      "Votação",
+      "Recorde"
     ],
     "content": []
   },
@@ -256,7 +449,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tse-nega-acusacao-de-flavio-sobre-expulsao-de-fiscais-de-sala-cofre",
     "publishedAt": "26/10/2026 às 11:00",
-    "category": "Justiça",
+    "category": "Eleições",
     "ingestedAt": "26/10/2026 às 12:32",
     "imageUrl": "https://imagens.ebc.com.br/UcbUWTZwXc9bq1yRSj8GkwLHtQU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/03/kassio_nunes_marques_durante_pronunciamento02.jpg?itok=9vYA-A1E",
     "imageCaption": "TSE nega acusação de Flávio sobre expulsão de fiscais de sala-cofre",
@@ -266,9 +459,9 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Justiça",
       "TSE",
-      "acusação de Flávio",
-      "expulsão de fiscais",
-      "sala-cofre"
+      "eleições 2026",
+      "Kassio Nunes Marques",
+      "Eleições"
     ],
     "content": []
   },
@@ -280,7 +473,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/eleitores-de-sete-cidades-escolheram-seus-prefeitos-neste-2o-turno",
     "publishedAt": "26/10/2026 às 10:50",
-    "category": "Eleições",
+    "category": "Justiça",
     "ingestedAt": "26/10/2026 às 12:32",
     "imageUrl": "https://imagens.ebc.com.br/dT533nV8EHShBl3p1JU2w-yACEw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/24/_pin5457.jpg-2.jpg?itok=yCAn7QkH",
     "imageCaption": "Eleitores de sete cidades escolheram seus prefeitos neste 2º turno",
@@ -291,8 +484,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Justiça",
       "eleições 2026",
       "municípios",
-      "eleições suplementares",
-      "Eleições"
+      "eleições suplementares"
     ],
     "content": []
   },
@@ -358,9 +550,9 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Justiça",
       "eleições 2026",
-      "Ônibus",
-      "Circulação",
-      "Eleitor"
+      "ônibus",
+      "circulação",
+      "eleitor"
     ],
     "content": []
   },
@@ -453,7 +645,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Política",
       "eleições 2026",
       "Lula",
-      "Reeleição",
+      "reeleição",
       "Avenida Paulista"
     ],
     "content": []
@@ -500,7 +692,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Lula",
       "eleições 2026",
       "mídias digitais",
-      "Plataformas Digitais"
+      "plataformas digitais"
     ],
     "content": []
   },
@@ -524,7 +716,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições 2026",
       "Flávio Bolsonaro",
       "Lula reeleito",
-      "Eleições"
+      "Multimídia"
     ],
     "content": []
   },
@@ -547,7 +739,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Política",
       "eleições 2026",
       "Lula reeleito",
-      "Eleições"
+      "Lula",
+      "Multimídia"
     ],
     "content": []
   },
@@ -692,6 +885,28 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "content": []
   },
   {
+    "id": "camara-1313658-motta-defende-o-dialogo-e-diz-",
+    "title": "Motta defende o diálogo e diz que Lula tem a oportunidade de conciliar o país",
+    "summary": "Segundo ele, a Câmara e o Senado darão o apoio necessário às pautas voltadas à população.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313658-motta-defende-o-dialogo-e-diz-que-lula-tem-a-oportunidade-de-conciliar-o-pais",
+    "publishedAt": "25/10/2026 às 22:30",
+    "category": "Congresso",
+    "ingestedAt": "26/10/2026 às 06:34",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/coletiva2-768x505.png",
+    "imageCaption": "Alcolumbre e Motta falam sobre a vitória de Lula",
+    "imageCredit": "Reprodução TV Câmara",
+    "imageAlt": "Alcolumbre e Motta concedem entrevista",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706715",
     "title": "Imprensa internacional destaca vitória histórica de Lula",
     "summary": "A vitória histórica do presidente Luiz Inácio Lula da Silva (PT), reeleito neste domingo (25) para um quarto mandato , estampou a página digital de alguns dos principais jornais do planeta.",
@@ -712,28 +927,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Imprensa Internacional",
       "imprensa",
       "Jornalismo"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1313658-motta-defende-o-dialogo-e-diz-",
-    "title": "Motta defende o diálogo e diz que Lula tem a oportunidade de conciliar o país",
-    "summary": "Segundo ele, a Câmara e o Senado darão o apoio necessário às pautas voltadas à população.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1313658-motta-defende-o-dialogo-e-diz-que-lula-tem-a-oportunidade-de-conciliar-o-pais",
-    "publishedAt": "25/10/2026 às 22:30",
-    "category": "Congresso",
-    "ingestedAt": "26/10/2026 às 06:34",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/coletiva2-768x505.png",
-    "imageCaption": "Alcolumbre e Motta falam sobre a vitória de Lula",
-    "imageCredit": "Reprodução TV Câmara",
-    "imageAlt": "Alcolumbre e Motta concedem entrevista",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
     ],
     "content": []
   },
@@ -924,149 +1117,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "content": []
   },
   {
-    "id": "ebc-1706702",
-    "title": "Em SP, 80% das urnas estavam encerradas quando votação foi prorrogada",
-    "summary": "Mais de 80% das seções eleitorais de São Paulo já estavam fechadas quando chegou a determinação do ministro do Supremo Tribunal Federal (STF), Cristiano Zanin, sobre a prorrogação do horário de votação de segundo turno até as 19h .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/em-sp-80-das-urnas-estavam-encerradas-quando-votacao-foi-prorrogada",
-    "publishedAt": "25/10/2026 às 20:14",
-    "category": "Justiça",
-    "ingestedAt": "25/10/2026 às 21:32",
-    "imageUrl": "https://imagens.ebc.com.br/Kixm2Sq0M5Yt3eJLA0ali_Um6-E=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int9542.jpg?itok=fo5R7LJv",
-    "imageCaption": "Em SP, 80% das urnas estavam encerradas quando votação foi prorrogada",
-    "imageCredit": "Elaine Patrícia Cruz - Repórter da Agência Brasil",
-    "imageAlt": "Em SP, 80% das urnas estavam encerradas quando votação foi prorrogada",
-    "author": "Elaine Patrícia Cruz - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "TRE-SP",
-      "Eleições 2026"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706345",
-    "title": "Vicentinho Júnior é eleito governador do estado do Tocantins",
-    "summary": "Com 83,96% das urnas apuradas, o candidato Vicentinho Júnior (PSDB) foi eleito governador do estado do Tocantins . O candidato recebeu, até o momento, 467.130 votos válidos, o equivalente a 63,95% .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/vicentinho-junior-e-eleito-governador-do-estado-do-tocantins",
-    "publishedAt": "25/10/2026 às 20:06",
-    "category": "Eleições",
-    "ingestedAt": "25/10/2026 às 21:32",
-    "imageUrl": "https://imagens.ebc.com.br/t1Fbou0Yi29r3obf88R1yMBOymE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/02/img20260527164252484.jpg?itok=5a686CaJ",
-    "imageCaption": "Vicentinho Júnior é eleito governador do estado do Tocantins",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Vicentinho Júnior é eleito governador do estado do Tocantins",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Segundo Turno",
-      "Tocantins",
-      "Vicentinho Júnior"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706339",
-    "title": "Celina Leão é reeleita governadora do Distrito Federal",
-    "summary": "Com 91,78 % das urnas apuradas, Celina Leão (PP) está matematicamente reeleita governadora do Distrito Federal. A atual governadora recebeu, até o momento, 907.869 votos, o equivalente a 57,21% dos votos válidos. Eleitores do DF voltam às urnas para escolher entre Celina e Grass.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/celina-leao-e-reeleita-governadora-do-distrito-federal",
-    "publishedAt": "25/10/2026 às 20:04",
-    "category": "Eleições",
-    "ingestedAt": "25/10/2026 às 21:32",
-    "imageUrl": "https://imagens.ebc.com.br/hthi2fvVwOnqMFuDha9NKcvwtsI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/04/pzzb6974.jpg?itok=IbgaJ6Bb",
-    "imageCaption": "Celina Leão é reeleita governadora do Distrito Federal",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Celina Leão é reeleita governadora do Distrito Federal",
-    "author": "Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Celina Leão",
-      "Distrito Federal",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706701",
-    "title": "OEA acompanha denúncias de falta de ônibus no dia da eleição",
-    "summary": "A Organização dos Estados Americanos (OEA) informou neste domingo (25) que acompanha as denúncias de problemas no transporte público durante o segundo turno das eleições presidenciais no Brasil.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/oea-acompanha-denuncias-de-falta-de-onibus-no-dia-da-eleicao",
-    "publishedAt": "25/10/2026 às 19:58",
-    "category": "Eleições",
-    "ingestedAt": "25/10/2026 às 21:32",
-    "imageUrl": "https://imagens.ebc.com.br/gNlWzw_T3BPD0hYispsj0l9wvmY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/0d4a5383.jpg?itok=qS4LdLg2",
-    "imageCaption": "OEA acompanha denúncias de falta de ônibus no dia da eleição",
-    "imageCredit": "Wellton Máximo - Repórter da Agência Brasil",
-    "imageAlt": "OEA acompanha denúncias de falta de ônibus no dia da eleição",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "OEA",
-      "Justiça Eleitoral",
-      "Segundo Turno"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706700",
-    "title": "Centrais sindicais criticam falta de ônibus no dia da eleição",
-    "summary": "Dirigentes de sete centrais sindicais divulgaram uma nota neste domingo (25) criticando a falta de ônibus urbanos e as restrições relatadas em outros meios de transporte durante o segundo turno da eleição presidencial.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/centrais-sindicais-criticam-falta-de-onibus-no-dia-da-eleicao",
-    "publishedAt": "25/10/2026 às 19:54",
-    "category": "Justiça",
-    "ingestedAt": "25/10/2026 às 21:32",
-    "imageUrl": "https://imagens.ebc.com.br/5JCac9FQ6LFkiQbwYrpRFKdMuVg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/toms5600.jpg?itok=GyZpNdRe",
-    "imageCaption": "Centrais sindicais criticam falta de ônibus no dia da eleição",
-    "imageCredit": "Wellton Máximo - Repórter da Agência Brasil",
-    "imageAlt": "Centrais sindicais criticam falta de ônibus no dia da eleição",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "Centrais Sindicais",
-      "Transporte Público",
-      "Mobilidade Urbana"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706699",
-    "title": "PF vai apurar ataque a vereadora de Montes Claros, diz diretor-geral",
-    "summary": "O diretor-geral da Polícia Federal (PF), Andrei Rodrigues, confirmou neste domingo (25) que o órgão vai investigar o ataque contra a vereadora de Montes Claros (MG) Iara Pimentel (PT).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/pf-vai-apurar-ataque-vereadora-de-montes-claros-diz-diretor-geral",
-    "publishedAt": "25/10/2026 às 19:37",
-    "category": "Eleições",
-    "ingestedAt": "25/10/2026 às 21:32",
-    "imageUrl": "https://imagens.ebc.com.br/9z9zPO8sTPW011qV8XSuHZp95WI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/ataques-91a423dc.jpg?itok=VkgWy8YH",
-    "imageCaption": "PF vai apurar ataque a vereadora de Montes Claros, diz diretor-geral",
-    "imageCredit": "Alex Rodrigues - Repórter da Agência Brasil",
-    "imageAlt": "PF vai apurar ataque a vereadora de Montes Claros, diz diretor-geral",
-    "author": "Alex Rodrigues - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Polícia Federal",
-      "Andrei Rodrigues",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
     "id": "ebc-1706442",
     "title": "Rebeca Andrade conquista o tri no Mundial de Ginástica na Holanda",
     "summary": "A brasileira Rebeca Andrade conquistou neste sábado (24) o tricampeonato no Campeonato Mundial de Ginástica Artística 2026, em Roterdã, Holanda. Rebeca levou o primeiro lugar no pódio na prova do salto sobre a mesa, com 14.466 pontos.",
@@ -1108,29 +1158,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Ronaldinho Gaúcho",
       "Futebol",
       "Itália"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706231",
-    "title": "Ex-jogadoras da seleção de futebol incentivam alunas em escolas do Rio",
-    "summary": "Na escola municipal Juan Antonio Samaranch, em Santa Teresa, região central do Rio de Janeiro, o campo de futebol estava ocupado apenas por garotas, na tarde da última quarta-feira (21).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/ex-jogadoras-da-selecao-de-futebol-incentivam-alunas-em-escolas-do-rio",
-    "publishedAt": "24/10/2026 às 11:13",
-    "category": "Esportes",
-    "ingestedAt": "24/10/2026 às 11:20",
-    "imageUrl": "https://imagens.ebc.com.br/luE50Zw3TS3Hn1tKWL7YMd8I0kk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/22/_d6a6416.jpg?itok=6Aqqw6YQ",
-    "imageCaption": "Ex-jogadoras da seleção de futebol incentivam alunas em escolas do Rio",
-    "imageCredit": "Bruno de Freitas Moura - Repórter da Agência Brasil",
-    "imageAlt": "Ex-jogadoras da seleção de futebol incentivam alunas em escolas do Rio",
-    "author": "Bruno de Freitas Moura - Repórter da Agência Brasil",
-    "tags": [
-      "Esportes",
-      "copa do mundo feminina",
-      "Futebol",
-      "pioneiras na escola"
     ],
     "content": []
   },
