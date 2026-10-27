@@ -433,6 +433,17 @@ for (const filePath of requiredHtmlFiles) {
     console.error(`ERROR: ${filePath} possui Google tag GA4 duplicada (${gaTagMatches.length} ocorrências)!`);
     process.exit(1);
   }
+
+  // 4b. Verificação do Google AdSense (ca-pub-6825003516232826) e prevenção de duplicações
+  if (!html.includes('ca-pub-6825003516232826')) {
+    console.error(`ERROR: ${filePath} ausente do snippet de verificação do Google AdSense (ca-pub-6825003516232826)!`);
+    process.exit(1);
+  }
+  const adSenseMatches = html.match(/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-6825003516232826/g) || [];
+  if (adSenseMatches.length !== 1) {
+    console.error(`ERROR: ${filePath} possui snippet do Google AdSense duplicado (${adSenseMatches.length} ocorrências)!`);
+    process.exit(1);
+  }
 }
 
 // 5. Validação do LCP Image Preload dinâmico em dist/index.html
@@ -661,9 +672,14 @@ if (fs.existsSync('dist/noticias')) {
       }
     }
 
-    // Validação de verificação do Google
+    // Validação de verificação do Google Search Console
     if (!html.includes('oZPS6sfWTE5EJAuLOsZCtq9UoF1lh4wMhD9Jz13OTSs')) {
       console.error(`ERROR: ${articleHtmlPath} ausente da tag google-site-verification!`);
+      process.exit(1);
+    }
+    // Validação de verificação do Google AdSense
+    if (!html.includes('ca-pub-6825003516232826')) {
+      console.error(`ERROR: ${articleHtmlPath} ausente do snippet de verificação do Google AdSense (ca-pub-6825003516232826)!`);
       process.exit(1);
     }
 
