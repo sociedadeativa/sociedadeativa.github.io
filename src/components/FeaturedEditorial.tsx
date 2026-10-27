@@ -383,11 +383,11 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                   <h2 className="font-heading text-xs font-black uppercase tracking-wider text-slate-900 flex items-center gap-1.5 min-w-0">
                     <Sparkles className="w-3.5 h-3.5 text-blue-900 shrink-0" />
                     <span className="truncate">
-                      Radar Cívico <span className="hidden min-[390px]:inline">· Despachos Oficiais</span>
+                      Radar Cívico · Mais Lidas
                     </span>
                   </h2>
                   <span className="text-[10px] font-mono text-slate-600 font-bold bg-white px-2 py-0.5 rounded border border-slate-200/70 shrink-0">
-                    Hoje
+                    Em Alta
                   </span>
                 </div>
 
@@ -421,6 +421,9 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
 
                           {/* Cabeçalho do despacho: horário e órgão oficial */}
                           <div className="flex items-center gap-1.5 text-[10px] text-slate-500 font-mono mb-0.5 min-w-0">
+                            <span className="font-bold text-blue-900 tabular-nums shrink-0">
+                              0{idx + 1}.
+                            </span>
                             <span className="font-bold text-slate-700 tabular-nums shrink-0">
                               {timeString}
                             </span>
@@ -432,10 +435,10 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                             </span>
                           </div>
 
-                          {/* Conteúdo / Título do Despacho */}
-                          <p className="text-xs font-medium text-slate-800 group-hover:text-blue-900 leading-snug line-clamp-2 transition-colors break-words">
+                          {/* Conteúdo / Título do Despacho com h3 semântico */}
+                          <h3 className="text-xs font-semibold text-slate-800 group-hover:text-blue-900 leading-snug line-clamp-2 transition-colors break-words">
                             {item.title}
-                          </p>
+                          </h3>
                         </li>
                       );
                     })}
