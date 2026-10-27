@@ -589,8 +589,8 @@ export const OFFICIAL_ECONOMIC_INDICATORS: EconomicIndicator[] = [
     "id": "ibovespa",
     "name": "Índice Bovespa (Principal indicador de ações da B3)",
     "shortName": "Ibovespa (IBOV)",
-    "value": 176055,
-    "formattedValue": "176.055 pts",
+    "value": 176059,
+    "formattedValue": "176.059 pts",
     "unit": "pontos",
     "variation": -0.31,
     "variationPeriod": "vs. pregão anterior (-0,31%)",
@@ -602,7 +602,7 @@ export const OFFICIAL_ECONOMIC_INDICATORS: EconomicIndicator[] = [
     "sourceUrl": "https://b3.com.br/pt_br/market-data-e-indices/indices/indices-amplos/ibovespa-b3.htm",
     "quotationUrl": "https://b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/cotacoes/",
     "officialSeriesCode": "IBOV (Código B3)",
-    "updatedAt": "27/10/2026 13:22",
+    "updatedAt": "27/10/2026 14:23",
     "frequency": "Pregão Diário",
     "category": "Juros & Câmbio",
     "description": "Principal índice acionário da América Latina e termômetro do mercado de capitais brasileiro. Composto pelas ações e units das empresas de maior negociabilidade e representatividade na B3.",
@@ -611,7 +611,7 @@ export const OFFICIAL_ECONOMIC_INDICATORS: EconomicIndicator[] = [
     "marketStatusText": "Pregão Aberto (15 min defasagem)",
     "isDelayed": true,
     "delayNotice": "Cotações públicas com defasagem regulatória mínima de 15 minutos (B3). Fora do horário de negociação, exibe o último fechamento oficial verificado.",
-    "quoteTimestamp": "27/10/2026 13:22",
+    "quoteTimestamp": "27/10/2026 14:23",
     "historicalData": [
       {
         "period": "30/09/2026",
