@@ -5,6 +5,70 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706892",
+    "title": "Mega-Sena não tem ganhador; prêmio acumula para R$ 305 milhões",
+    "summary": "Ninguém acertou acertou as seis dezenas do Concurso 3.075 da Mega-Sena, sorteado nesta segunda-feira (26). O prêmio acumulou novamente e está estimado em R$ 305 milhões para a nova rodada. Os números sorteados são: 07 - 10 - 14 - 27 - 36 - 55 A quina teve 182 apostas ganhadoras.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/mega-sena-nao-tem-ganhador-premio-acumula-para-r-305-milhoes",
+    "publishedAt": "26/10/2026 às 22:08",
+    "category": "Economia",
+    "ingestedAt": "27/10/2026 às 06:32",
+    "imageUrl": "https://imagens.ebc.com.br/Rtkw68roLekx1SxopfRd90zWq_E=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/20230622_182751.jpg?itok=x99P54Ik",
+    "imageCaption": "Mega-Sena não tem ganhador; prêmio acumula para R$ 305 milhões",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Mega-Sena não tem ganhador; prêmio acumula para R$ 305 milhões",
+    "author": "Agência Brasil",
+    "tags": [
+      "Economia",
+      "Mega-Sena",
+      "Loteria",
+      "concurso 3075",
+      "Mega Semana da Mega-Sena"
+    ],
+    "content": [
+      "Ninguém acertou acertou as seis dezenas do Concurso 3.075 da Mega-Sena, sorteado nesta segunda-feira (26). O prêmio acumulou novamente e está estimado em R$ 305 milhões para a nova rodada.",
+      "Os números sorteados são: 07 - 10 - 14 - 27 - 36 - 55",
+      "A quina teve 182 apostas ganhadoras. Cada uma receberá R$ 19.433,12. A quadra saiu para 11.018 apostas, no valor de R$ 458,57 cada.",
+      "O próximo concurso será nesta terça-feira (27).",
+      "Até sexta-feira (30), a Caixa realiza a Mega Semana da Mega-Sena, com cinco sorteios consecutivos.",
+      "A ação especial terá sorteios (concursos 3075, 3076, 3077, 3078 e 3079) de segunda a sexta-feira, substituindo o calendário regular.",
+      "As regras para aposta e prêmios não mudam. Os interessados devem apostar até as 20h e os sorteios serão realizados às 21h no horário de Brasília. A aposta simples, de seis números, custa R$ 6.",
+      "As apostas na Mega-Sena podem ser feitas nas casas lotéricas de todo o país, no site e no aplicativo Loterias CAIXA e no Internet Banking.",
+      "Após a semana especial, a Mega-Sena retomará seu calendário regular de sorteios e abrirá as vendas da Mega da Virada 2026."
+    ]
+  },
+  {
+    "id": "ebc-1706891",
+    "title": "PL, partido de Flávio, reconhece vitória de Lula nas eleições",
+    "summary": "O presidente do Partido Liberal (PL), Valdemar Costa Neto, publicou nota oficial, nesta segunda-feira (26), em que reconhece a vitória do presidente Luiz Inácio Lula da Silva nas eleições deste ano.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/partido-de-flavio-pl-reconhece-vitoria-de-lula-nas-eleicoes",
+    "publishedAt": "26/10/2026 às 21:38",
+    "category": "Eleições",
+    "ingestedAt": "27/10/2026 às 06:32",
+    "imageUrl": "https://imagens.ebc.com.br/0Q5U1TD_ZoexrcD-Ehc4ZROZw4E=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/pl_imprensa_mcajr_abr_2311222328.jpg?itok=t-1LZ8sx",
+    "imageCaption": "PL, partido de Flávio, reconhece vitória de Lula nas eleições",
+    "imageCredit": "Luiz Cláudio Ferreira - Repórter da Agência Brasil",
+    "imageAlt": "PL, partido de Flávio, reconhece vitória de Lula nas eleições",
+    "author": "Luiz Cláudio Ferreira - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Lula",
+      "Valdemar Costa Neto",
+      "Eleições"
+    ],
+    "content": [
+      "O presidente do Partido Liberal (PL), Valdemar Costa Neto, publicou nota oficial, nesta segunda-feira (26), em que reconhece a vitória do presidente Luiz Inácio Lula da Silva nas eleições deste ano. No entanto, ele cobrou esclarecimentos sobre o que chamou de medidas “eleitoreiras”, com “ampliação de gastos públicos”.",
+      "Após a divulgação da vitória do atual presidente, o candidato derrotado, o senador Flávio Bolsonaro, disse que não reconheceria o resultado. A justificativa do candidato seria a prorrogação do horário de votação eleitoral , decidida pelo ministro do Supremo Tribunal Federal (STF), Cristiano Zanin, que atendeu um pedido de ambas as candidaturas, incluindo a da campanha de Flávio.",
+      "Na nota, o presidente do PL não traz o mesmo argumento. Para Costa Neto, houve ampliação dos gastos públicos com benefícios sociais “às vésperas da votação”, o que levantaria questionamentos sobre os “efeitos dessas medidas em um processo eleitoral justo”.",
+      "Ao pedir “esclarecimentos”, o presidente da legenda disse que o partido vai acompanhar os fatos e buscar “respostas com responsabilidade, transparência e respeito à instituições”.",
+      "Na eleição de domingo, Flávio Bolsonaro teve 59,8 milhões de votos (48,2%), enquanto que o presidente Lula chegou a 64,2 milhões (51,7%)."
+    ]
+  },
+  {
     "id": "ebc-1706889",
     "title": "Harry Kane e Alexia Putellas vencem prêmio Bola de Ouro de 2026",
     "summary": "O atacante Harry Kane e a meia Alexia Putellas são os vencedores da Bola de Ouro, tradicional premiação da revista France Football que condecora os melhores jogadores da temporada no futebol mundial.",
@@ -59,14 +123,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "CNBB",
       "Igreja Católica"
     ],
-    "content": [
-      "A Conferência Nacional dos Bispos do Brasil (CNBB) parabenizou o presidente Luiz Inácio Lula da Silva e ao vice-presidente Geraldo Alckmin pela reeleição, no 2º turno das eleições e pediu atenção prioritária para os pobres e vulneráveis.",
-      "\"Acreditamos que a dignidade da pessoa humana, a destinação universal dos bens, a solidariedade, a subsidiariedade e o bem comum devem orientar as decisões políticas e econômicas\", diz nota da entidade da Igreja Católica.",
-      "”Esses princípios encontram expressão concreta na defesa da vida desde a concepção até seu fim natural, na superação da fome e da miséria, na promoção do trabalho digno, na garantia de acesso à saúde, à educação e à moradia, na proteção das crianças, dos idosos e das famílias, no cuidado com os povos indígenas e as comunidades tradicionais e na preservação de nossa Casa Comum”, pontua a nota.",
-      "A nota fala ainda da polarização vivida pelo país no período eleitoral e que o Brasil precisa de gestos concretos de pacificação e respeito às diferenças e de valorização das instituições democráticas.",
-      "Para a CNBB, o desenvolvimento de uma nação não pode ser avaliado apenas por indicadores econômicos, mas também pela capacidade de assegurar condições dignas de existência àqueles que permanecem à margem das oportunidades e dos direitos fundamentais.",
-      "\"Também desejamos reafirmar a importância do fortalecimento das instituições, do respeito à Constituição Federal, da promoção da paz social e do combate à corrupção e a toda forma de violência\", conclui a nota."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706884",
@@ -90,24 +147,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "tarifaço",
       "EUA"
     ],
-    "content": [
-      "O presidente dos Estados Unidos, Donald Trump, questionou o processo eleitoral brasileiro, nesta segunda-feira (26).",
-      "Em conversa com jornalistas, o presidente estadunidense questionou a prorrogação do horário da votação, ecoando o posicionamento da campanha do candidato derrotado no segundo turno das eleições, Flávio Bolsonaro.",
-      "“Acho que pareceu ruim a eleição, o jeito que foi organizada, com a prorrogação [do prazo de votação]. Muito estranho”, disse Trump. Para ele, a eleição “pareceu fraudada”, mas ele não aprofundou o assunto.",
-      "Questionado por um jornalista se ele poderia fazer algo em relação às eleições no Brasil, Trump disse que não governa o Brasil e que tem boa relação com o presidente reeleito Luiz Inácio Lula da Silva.",
-      "“Eu não governo o Brasil, eu governo os Estados Unidos. Eu só pensei que a eleição foi... eu gosto do Lula, me dou muito bem com ele”.",
-      "Neste domingo (25), no segundo turno das eleições gerais, após registros de restrições na circulação do transporte coletivo em diversas cidades do país, o ministro do Supremo Tribunal Federal, Cristiano Zanin, decidiu ampliar o horário das eleições por duas horas, até as 19h.",
-      "Lula foi reeleito com mais de 64 milhões de votos. O senador Flávio Bolsonaro contabilizou 59,8 milhões de votos.",
-      "Em entrevista à TV Vanguarda, do interior de São Paulo, o vice-presidente reeleito Geraldo Alckmin respondeu brevemente às declarações de Trump. Para o vice, a opinião do presidente dos EUA é \"equivocada\" e ele não deveria interferir na política do Brasil.",
-      "“Totalmente equivocada, né? Primeiro, não se interfere na política de outro país. Isso é uma regra basilar. Segundo, não tem nenhum referencial para dizer isso. O Brasil é um exemplo para o mundo, de urna eletrônica, segurança jurídica. Democracia você ganha eleição, você perde. É o povo que decide”.",
-      "Em seguida, Alckmin exaltou as negociações do Brasil com outros mercados como alternativa ao tarifaço imposto pelos Estados Unidos, que inviabilizou a entrada de alguns produtos brasileiros naquele país. Ele disse que continuará negociando com o vizinho do hemisfério norte.",
-      "“Encerrada a eleição, vamos continuar a negociação com os Estado Unidos para ter um bom acordo. Estamos abrindo o mercado, fizemos acordo Mercosul-Singapura, Mercosul-União Europeia e estamos bem encaminhados para um acordo Mercosul-Canadá. Mesmo com o tarifaço batemos recorde de exportação”.",
-      "O presidente estadunidense afirmou que não escolheu um lado na corrida presidencial brasileira, e apenas acompanhou o processo.",
-      "Parlamentares dos EUA, no entanto, chegaram a formalizar um pedido à Casa Branca, para que Trump não interferisse em favor de Flávio, demonstrando falta de consenso sobre o apoio declarado de Trump ao candidato derrotado.",
-      "Em 24 de setembro, 31 parlamentares do partido democrata enviaram uma carta falando em um “esforço coordenado\" do governo Trump para ameaçar a aliança estratégica dos EUA com o Brasil e enfraquecer a segunda maior democracia do Hemisfério Ocidental às vésperas da eleição presidencial.",
-      "Na carta, os democratas acusam o governo Trump de tomar uma série de medidas para tentar garantir a vitória de Flávio Bolsonaro.",
-      "Entre elas, a imposição do tarifaço às mercadorias brasileiras como forma de evitar a condenação de Jair Bolsonaro por golpe de Estado e a aplicação da Lei Magnitsky ao ministro do Supremo Tribunal Federal (STF) Alexandre de Moraes."
-    ]
+    "content": []
   },
   {
     "id": "camara-1314009-motta-e-alcolumbre-parabenizam",
@@ -1085,52 +1125,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Lula",
       "reeleição",
       "Avenida Paulista"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1313758-o-povo-e-soberano-e-fez-a-sua-",
-    "title": "\"O povo é soberano e fez a sua escolha\", diz Motta ao parabenizar Lula pela reeleição",
-    "summary": "Presidente também afirmou que a sua atuação no comando da Câmara continuará pautada pela moderação.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1313758-o-povo-e-soberano-e-fez-a-sua-escolha-diz-motta-ao-parabenizar-lula-pela-reeleicao",
-    "publishedAt": "26/10/2026 às 00:07",
-    "category": "Congresso",
-    "ingestedAt": "26/10/2026 às 06:34",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261013174850516-768x473.jpg",
-    "imageCaption": "Hugo Motta desejou serenidade a Lula",
-    "imageCredit": "Acervo Câmara dos Deputados",
-    "imageAlt": "motta preside a sessão do Plenário",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Eleições 2026",
-      "Brasil"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706750",
-    "title": "Lula agradece votos e diz que teve de vencer intromissão vinda de fora",
-    "summary": "Em primeiro discurso após a vitória nas eleições presidenciais deste domingo (25), o presidente da República Luiz Inácio Lula da Silva, reeleito com mais de 64 milhões de votos , agradeceu ao povo brasileiro pela generosidade e afirmou que teve que vencer a interferência.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/lula-agradece-votos-e-diz-que-teve-de-vencer-intromissao-vinda-de-fora",
-    "publishedAt": "25/10/2026 às 23:49",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 06:34",
-    "imageUrl": "https://imagens.ebc.com.br/SiWGsanySMebBHv7vXjRvHX0N5Y=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int0535.jpg.jpeg?itok=YFsgYXxV",
-    "imageCaption": "Lula agradece votos e diz que teve de vencer intromissão vinda de fora",
-    "imageCredit": "Bruno Bocchini e Camila Boehm - Repórteres da Agência Brasil",
-    "imageAlt": "Lula agradece votos e diz que teve de vencer intromissão vinda de fora",
-    "author": "Bruno Bocchini e Camila Boehm - Repórteres da Agência Brasil",
-    "tags": [
-      "Política",
-      "Lula",
-      "eleições 2026",
-      "mídias digitais",
-      "plataformas digitais"
     ],
     "content": []
   },

@@ -9,6 +9,8 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1706892/
+https://sociedadeativa.github.io/noticias/ebc-1706891/
 https://sociedadeativa.github.io/noticias/ebc-1706889/
 https://sociedadeativa.github.io/noticias/ebc-1706888/
 https://sociedadeativa.github.io/noticias/ebc-1706884/
@@ -54,8 +56,6 @@ https://sociedadeativa.github.io/noticias/camara-1310197-projeto-cria-sistema-na
 https://sociedadeativa.github.io/noticias/ebc-1706820/
 https://sociedadeativa.github.io/noticias/ebc-1706817/
 https://sociedadeativa.github.io/noticias/ebc-1706814/
-https://sociedadeativa.github.io/noticias/camara-1313758-o-povo-e-soberano-e-fez-a-sua-/
-https://sociedadeativa.github.io/noticias/ebc-1706750/
 https://sociedadeativa.github.io/noticias/ibge-48339/
 https://sociedadeativa.github.io/noticias/ibge-48336/
 https://sociedadeativa.github.io/noticias/ibge-48325/
