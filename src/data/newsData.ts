@@ -5,6 +5,157 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "camara-1310860-projeto-preve-acordos-em-acoes",
+    "title": "Projeto prevê acordos em ações sobre mineração irregular e ressarcimento à União",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1310860-projeto-preve-acordos-em-acoes-sobre-mineracao-irregular-e-ressarcimento-a-uniao",
+    "publishedAt": "27/10/2026 às 08:55",
+    "category": "Congresso",
+    "ingestedAt": "27/10/2026 às 09:06",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260715113534527-768x473.jpg",
+    "imageCaption": "Evair Vieira de Melo é o autor da proposta",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Reunião de Comparecimento de Ministro. Dep. Evair Vieira de Melo (REPUBLICANOS - ES)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Kayo Magalhães / Câmara dos Deputados",
+      "Evair Vieira de Melo é o autor da proposta",
+      "O Projeto de Lei 2984/26 cria o Programa de Acordos de Indenização por Mineração em Desconformidade, para permitir acordos em ações judiciais que cobram ressarcimento à União por mineração feita fora das regras. A proposta inclui ações já transitadas em julgado e está em análise na Câmara dos Deputados.",
+      "O valor do acordo seria calculado com base na Compensação Financeira pela Exploração de Recursos Minerais (CFem) incidente sobre o volume de minério comercializado. O projeto prevê um multiplicador de cinco vezes esse valor para pagamento à vista e de dez vezes para pagamento em até 60 meses. Se o minerador já tiver recolhido CFem pela extração irregular, o valor pago será descontado. Os valores também seriam atualizados pela taxa Selic.",
+      "Hoje, em ações de ressarcimento da União por extração mineral irregular, a orientação dominante da Justiça é calcular a indenização com base no valor de mercado do minério extraído.",
+      "Conforme a proposta, além do acordo, o minerador pagaria uma compensação ambiental equivalente a 10% do valor calculado. O recurso poderia ir para fundos ambientais ou hídricos, para uma unidade de conservação na mesma bacia hidrográfica ou para a Agência Nacional de Mineração (ANM), para custear equipamentos e informatização.",
+      "O projeto prevê exceção para quem já tiver assumido obrigação de compensação, ou equivalente, em outro processo.",
+      "Segundo o autor, deputado Evair Vieira de Melo (Republicanos-ES), a proposta garante a punição, assegura a recuperação do meio ambiente e evita o fechamento de negócios.",
+      "\"Condenações em ações civis decorrentes da usurpação mineral que adotem como critério indenizatório o valor de mercado do bem soam demasiadamente penosas e podem, possivelmente, gerar um estrangulamento da sustentabilidade econômica de diversos empreendimentos que geram riqueza e renda no interior do Brasil\", afirmou.",
+      "O projeto será analisado, em caráter conclusivo , pelas comissões de Minas e Energia; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania. Para virar lei, precisa ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
+    ]
+  },
+  {
+    "id": "ebc-1706894",
+    "title": "Petrobras inova na produção sustentável de combustível de aviação",
+    "summary": "Um novo marco na produção de combustível sustentável de aviação (SAF) foi obtido pela Refinaria Duque de Caxias (Reduc) na primeira quinzena de outubro.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/petrobras-inova-na-producao-sustentavel-de-combustivel-de-aviacao",
+    "publishedAt": "27/10/2026 às 07:32",
+    "category": "Política",
+    "ingestedAt": "27/10/2026 às 09:06",
+    "imageUrl": "https://imagens.ebc.com.br/-G8VValqpg1_n-RdDYC33a-Fpx0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/20/img_2036-2.jpg?itok=XZ37aDCX",
+    "imageCaption": "Petrobras inova na produção sustentável de combustível de aviação",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Petrobras inova na produção sustentável de combustível de aviação",
+    "author": "Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "combustível de aviação",
+      "SAF",
+      "produção sustentável",
+      "Petrobras"
+    ],
+    "content": [
+      "Um novo marco na produção de combustível sustentável de aviação (SAF) foi obtido pela Refinaria Duque de Caxias (Reduc) na primeira quinzena de outubro. Com a recertificação internacional do produto, a Petrobras obteve avanços que reduziram significativamente a intensidade de carbono SAF, reforçando os mais elevados padrões globais de sustentabilidade, rastreabilidade e governança.",
+      "Uma auditoria internacional de aviação confirmou evolução expressiva no desempenho ambiental do combustível. O processo reconheceu melhorias implementadas na gestão das fontes de hidrogênio utilizadas na produção do SAF, tornando a operação da refinaria ainda mais alinhada à metodologia internacional de certificação.",
+      "Com isso, a intensidade de carbono de hidrogênio empregado na produção foi reduzida em 29%. Essa melhoria refletiu diretamente no desempenho ambiental produzido a partir do óleo de milho, com redução de 23,8% na intensidade de carbono do SAF.",
+      "O resultado posiciona o SAF produzido pela Reduc entre os combustíveis sustentáveis de aviação com menor intensidade de carbono disponíveis no mercado.",
+      "“Ao aprimorar seus processos e fortalecer sua governança em sustentabilidade, a Petrobras avança na construção de alternativas para atender às futuras exigências regulatórias e ampliar sua participação nos mercados de combustíveis renováveis e de baixo carbono”, acrescenta."
+    ]
+  },
+  {
+    "id": "ebc-1706855",
+    "title": "Um ano depois, mortes da Operação Contenção ainda são investigadas",
+    "summary": "Ainda era madrugada, em 28 de outubro de 2025, quando mais de 2,5 mil policiais civis e militares começaram a se preparar para uma operação nos complexos de favelas do Alemão e da Penha.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/um-ano-depois-mortes-da-operacao-contencao-ainda-sao-investigadas",
+    "publishedAt": "27/10/2026 às 07:05",
+    "category": "Política",
+    "ingestedAt": "27/10/2026 às 09:06",
+    "imageUrl": "https://imagens.ebc.com.br/Zqp9k-USauVdAXQIN-k_7_sZL94=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/10/31/0d4a6512.jpg?itok=jNEnd8aK",
+    "imageCaption": "Um ano depois, mortes da Operação Contenção ainda são investigadas",
+    "imageCredit": "Vitor Abdala e Cláudia Bojunga*",
+    "imageAlt": "Um ano depois, mortes da Operação Contenção ainda são investigadas",
+    "author": "Vitor Abdala e Cláudia Bojunga*",
+    "tags": [
+      "Direitos Humanos",
+      "Operação Contenção",
+      "Violência Policial",
+      "Segurança Pública",
+      "Operação Policial"
+    ],
+    "content": [
+      "Ainda era madrugada, em 28 de outubro de 2025, quando mais de 2,5 mil policiais civis e militares começaram a se preparar para uma operação nos complexos de favelas do Alemão e da Penha. Entre as milhares de incursões em comunidades realizadas no Rio de Janeiro nos últimos 40 anos, aquela seria a mais letal .",
+      "O que se viu ao longo do dia foram horas de confrontos armados, ônibus incendiados por criminosos nas ruas, e o avanço dos policiais pelas ruas e vielas das favelas. Em 29 de outubro, o balanço era de que 121 pessoas haviam perdido suas vidas, sendo quatro policiais. O número subiu para cinco em 22 de novembro, com a morte de um policial que estava internado .",
+      "As imagens de corpos alinhados em uma rua na Vila Cruzeiro, no bairro da Penha, rodaram o mundo. Segundo a polícia, as 117 pessoas que não eram policiais morreram durante troca de tiros com os agentes. Moradores das comunidades e parentes de pessoas que morreram, entretanto, relataram episódios de tortura e execução .",
+      "Passado um ano, ainda não há conclusão sobre as circunstâncias das mortes e sobre os responsáveis por elas , mesmo com investigações das polícias Civil e Federal e do Ministério Público do Rio de Janeiro (MPRJ).",
+      "Naquele dia, a Polícia Civil divulgou que se tratava de uma “megaoperação”, com o objetivo de capturar lideranças criminosas do Rio de Janeiro e de outros estados, que estariam atuando a partir daqueles complexos de favelas, na zona norte da cidade.",
+      "A entrada das forças de segurança nos complexos era parte de uma operação iniciada meses antes, a Contenção.",
+      "Segundo o governo do estado do Rio, a série de ações policiais buscava “ser uma ofensiva estratégica para conter e atacar o avanço territorial da facção criminosa Comando Vermelho” e “desarticular a estrutura financeira, logística e operacional da organização criminosa”.",
+      "Sob facções e operações, população de favelas vive traumas e adoece",
+      "Coordenador do Grupo de Atuação Especializada em Segurança Pública do MPRJ, o promotor de Justiça Fabio Correa preside o Procedimento Investigatório Criminal (PIC) aberto para apurar as mortes ocorridas durante a operação dos dias 28 e 29 de outubro de 2025.",
+      "“É uma situação sui generis, como nunca aconteceu na história da segurança pública do Rio de Janeiro, tanto que é considerada a operação mais letal da história”, destaca o promotor.",
+      "Segundo ele, o MPRJ já colheu depoimentos de 255 policiais civis e militares que participaram da operação e de 61 pessoas que foram presas na ação. Os promotores também entraram em contato com parentes de todos os mortos e conseguiram ouvir 45 deles.",
+      "O MPRJ também acompanhou as necropsias realizadas pelo Instituto Médico-Legal (IML) e ainda analisa laudos periciais e imagens das câmeras corporais usadas pelos policiais no dia da ação.",
+      "Chega a 4 mil o total de horas de imagens gravadas pelas câmeras corporais obtidas. Não foi registrada, no entanto, toda a atuação de cada agente . Segundo as autoridades de segurança pública do Rio de Janeiro, as baterias se esgotaram depois de horas de realização da operação.",
+      "Inicialmente, pelo menos dois casos chamaram a atenção dos peritos do MPRJ e são considerados “atípicos”. Um deles foi uma morte por disparos efetuados a curta distância. O outro foi um caso de decapitação da vítima .",
+      "“[Os dois casos] não são conclusivos e permanecem ainda em apuração no bojo dessa investigação, que apura a totalidade das mortes, não só dos civis, como também dos policiais”, ressalta Corrêa. “É um elemento de prova, um elemento que vai ser trazido aos autos junto com os demais, com as demais análises sobre depoimentos, câmeras corporais [usadas pelos policiais]”.",
+      "Ele destaca, no entanto, que não foi possível realizar a perícia no local do crime, o que dificulta o entendimento do que aconteceu nesses casos.",
+      "“Então este é mais um elemento que entra na análise, de tudo que aconteceu”, afirma. “[Mas] o Ministério Público espera e pretende dar essas respostas definitivas sobre o que de fato aconteceu naquele dia”.",
+      "Raquel Rodrigues se emociona ao fazer reconhecimento do corpo do filho, Yago Ravel Rodrigues Rosário, encontrado decapitado, um dos mortos na Operação Contenção, no Instituto Médico Legal. Foto: Fernando Frazão/Agência Brasil",
+      "Os relatos de execuções não foram os únicos excessos que teriam sido cometidos por policiais durante a operação Contenção. Algumas investigações sobre desvios de conduta, por exemplo, já foram concluídas pelo MPRJ.",
+      "Até junho deste ano, 27 policiais já tinham sido denunciados à Justiça pelo MPRJ por crimes como desvio de fuzis apreendidos, furtos de peças de carro e outros bens, invasões de domicílio e constrangimento de moradores. Apesar da interrupção de gravações por esgotamento das baterias, também foi constatado que várias câmeras foram intencionalmente desligadas ou obstruídas .",
+      "Um levantamento do MPRJ, com base na análise de 51 equipamentos de gravação usados pelo Batalhão de Operações Especiais (Bope), apontou que pelo menos 17% dos equipamentos foram desligados propositalmente pelos policiais . Em 7,8%, há indícios de obstrução da lente para impedir a gravação em determinados momentos.",
+      "Em março deste ano, a Comissão Interamericana de Direitos Humanos (CIDH), da Organização dos Estados Americanos (OEA), divulgou um relatório mostrando alguns problemas na condução da operação e da investigação.",
+      "O documento aponta, por exemplo, a tática de encurralar os criminosos em uma área da comunidade, com uma estratégia militar chamada de “martelo e bigorna”, “cujo objetivo seria confinar o oponente, restringir rotas de fuga e exercer pressão convergente em perímetro delimitado até sua ‘neutralização’”.",
+      "O elevado número de mortos, inicialmente 121, sobrecarregou o Instituto Médico-Legal (IML). A CIDH descreveu “relatos de armazenamento inadequado dos corpos” e demora na liberação para os familiares.",
+      "O relatório apontou ainda restrições iniciais de acesso da Defensoria Pública do Estado do Rio de Janeiro aos laudos de autópsia e relatórios periciais, “o que limitou sua capacidade de acompanhar e fiscalizar os procedimentos forenses”, em nome das famílias em situação de vulnerabilidade representadas pelo órgão. Posteriormente, a Defensoria acabou tendo acesso aos documentos e ainda não terminou de mostrá-los às famílias.",
+      "Dos 99 presos durante a ação, 17 tinham mandados de prisão expedidos contra eles. O relatório informa lesões em 17 detidos e outros 36 tiveram laudos inconclusivos para maus-tratos e tortura . Uma pessoa foi liberada da prisão sem sequer ter sido submetida a exames de corpo de delito.",
+      "A retirada dos corpos da área de mata foi feita pelos próprios moradores e, segundo o relatório, houve relatos de que alguns desses cadáveres “apresentavam marcas que poderiam ser indicativas de execução extrajudicial, tortura, maus-tratos ou lesões perfurocortantes”.",
+      "O relatório também apontou para a disparidade do número de mortos entre policiais (cinco) e não policiais (117). Para a CIDH, a desproporção acentuada suscita questionamentos quanto à finalidade dos disparos e indica a necessidade de exame rigoroso sobre se a força letal foi empregada como primeiro recurso, inclusive em situações nas quais a imobilização poderia ter sido viável.",
+      "A comissão interamericana acrescenta que havia corpos com múltiplos disparos na cabeça, na boca, nas costas, nas axilas e no tórax, em posições que não seriam compatíveis com troca de tiros.",
+      "“Foram relatados casos de pessoas vistas vivas sob custódia policial e posteriormente encontradas mortas, além de indícios de amarras, lesões perfurocortantes e disparos à queima-roupa”, descreve o relatório.",
+      "A CIDH também concluiu que “o modelo atual de investigação da violência policial no Brasil, particularmente no estado do Rio de Janeiro, apresenta deficiências estruturais que comprometem a independência, imparcialidade e eficácia das apurações”.",
+      "Pesquisadoras ouvidas pelas equipes de reportagem da Empresa Brasil de Comunicação ( EBC ) disseram que, apesar de todas as mortes e de o governo estadual ter apresentado a operação como bem-sucedida, não houve mudança significativa no controle territorial armado dos dois complexos de favelas .",
+      "“O que a gente percebe é o que percebemos em todas as operações violentas no Rio de Janeiro. O saldo é nulo ou negativo. A gente fala nulo porque nada mudou”, afirma Maria Isabel Couto, do Instituto Fogo Cruzado",
+      "Segundo ela, o saldo negativo é visto quando se analisa que essas operações geram ainda mais traumas para a população local.",
+      "“É uma população que viu seus entes queridos e pessoas conhecidas serem exterminadas. [Viram] em praça pública, os corpos enfileirados. A troco de nada, a gente vê pessoas que lidam há um ano com esse trauma, acumulado há tantos outros, de que essas vidas são entendidas pelo poder público como dispensáveis. Por quê? Porque, em nome de mudança nenhuma, pessoas são exterminadas”.",
+      "Tiroteios constantes afetam desenvolvimento de crianças em comunidades",
+      "Pesquisadora do Grupo de Estudos de Novos Ilegalismos (Geni), da Universidade Federal Fluminense (UFF), Carolina Grillo concorda que essa operação, como tantas outras, não teve impacto significativo no cenário de segurança pública do Rio de Janeiro.",
+      "“Os moradores passaram por uma cena de filme de terror para nada. No segundo em que a polícia foi embora, o Comando Vermelho continuava controlando o território. Supostamente, essa operação era para prender o Doca [liderança criminosa local]. Segundo os moradores, todo mundo já sabia que ia ter operação e que o Doca já tinha saído na véspera”, afirma.",
+      "Carolina Grillo complementa que, além de colocar a população em risco e criar um caos na cidade, a operação foi incapaz de proteger os próprios policiais.",
+      "“A operação foi um verdadeiro desastre, que resultou em cinco policiais mortos, ou seja, sem um planejamento adequado, que pensasse em proteger seus próprios agentes”, ressalta.",
+      "A Agência Brasil pediu para entrevistar representantes das polícias Civil, Militar, Federal e da Secretaria Estadual de Segurança Pública.",
+      "A Polícia Militar respondeu que não seria possível realizar a entrevista. A Polícia Federal diz que não comenta investigações em andamento. A Polícia Civil e a Secretaria de Segurança não responderam ao pedido da reportagem."
+    ]
+  },
+  {
+    "id": "ebc-1706893",
+    "title": "Gol nos acréscimos assegura Flamengo na liderança do Brasileirão",
+    "summary": "A 32ª rodada do Campeonato Brasileiro chegou ao fim da forma que começou. A dramática vitória por 3 a 2 sobre o Atlético-MG na noite de segunda-feira (26), no Maracanã, manteve o Rubro-Negro na liderança da competição. Os cariocas foram a campo sob pressão.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/gol-nos-acrescimos-assegura-flamengo-na-lideranca-do-brasileirao",
+    "publishedAt": "27/10/2026 às 06:45",
+    "category": "Esportes",
+    "ingestedAt": "27/10/2026 às 09:06",
+    "author": "Lincoln Chaves - Repórter da EBC",
+    "tags": [
+      "Esportes",
+      "Brasileirão",
+      "flamengo",
+      "Atlético-MG",
+      "liderença"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706892",
     "title": "Mega-Sena não tem ganhador; prêmio acumula para R$ 305 milhões",
     "summary": "Ninguém acertou acertou as seis dezenas do Concurso 3.075 da Mega-Sena, sorteado nesta segunda-feira (26). O prêmio acumulou novamente e está estimado em R$ 305 milhões para a nova rodada. Os números sorteados são: 07 - 10 - 14 - 27 - 36 - 55 A quina teve 182 apostas ganhadoras.",
@@ -26,17 +177,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "concurso 3075",
       "Mega Semana da Mega-Sena"
     ],
-    "content": [
-      "Ninguém acertou acertou as seis dezenas do Concurso 3.075 da Mega-Sena, sorteado nesta segunda-feira (26). O prêmio acumulou novamente e está estimado em R$ 305 milhões para a nova rodada.",
-      "Os números sorteados são: 07 - 10 - 14 - 27 - 36 - 55",
-      "A quina teve 182 apostas ganhadoras. Cada uma receberá R$ 19.433,12. A quadra saiu para 11.018 apostas, no valor de R$ 458,57 cada.",
-      "O próximo concurso será nesta terça-feira (27).",
-      "Até sexta-feira (30), a Caixa realiza a Mega Semana da Mega-Sena, com cinco sorteios consecutivos.",
-      "A ação especial terá sorteios (concursos 3075, 3076, 3077, 3078 e 3079) de segunda a sexta-feira, substituindo o calendário regular.",
-      "As regras para aposta e prêmios não mudam. Os interessados devem apostar até as 20h e os sorteios serão realizados às 21h no horário de Brasília. A aposta simples, de seis números, custa R$ 6.",
-      "As apostas na Mega-Sena podem ser feitas nas casas lotéricas de todo o país, no site e no aplicativo Loterias CAIXA e no Internet Banking.",
-      "Após a semana especial, a Mega-Sena retomará seu calendário regular de sorteios e abrirá as vendas da Mega da Virada 2026."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706891",
@@ -60,13 +201,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Valdemar Costa Neto",
       "Eleições"
     ],
-    "content": [
-      "O presidente do Partido Liberal (PL), Valdemar Costa Neto, publicou nota oficial, nesta segunda-feira (26), em que reconhece a vitória do presidente Luiz Inácio Lula da Silva nas eleições deste ano. No entanto, ele cobrou esclarecimentos sobre o que chamou de medidas “eleitoreiras”, com “ampliação de gastos públicos”.",
-      "Após a divulgação da vitória do atual presidente, o candidato derrotado, o senador Flávio Bolsonaro, disse que não reconheceria o resultado. A justificativa do candidato seria a prorrogação do horário de votação eleitoral , decidida pelo ministro do Supremo Tribunal Federal (STF), Cristiano Zanin, que atendeu um pedido de ambas as candidaturas, incluindo a da campanha de Flávio.",
-      "Na nota, o presidente do PL não traz o mesmo argumento. Para Costa Neto, houve ampliação dos gastos públicos com benefícios sociais “às vésperas da votação”, o que levantaria questionamentos sobre os “efeitos dessas medidas em um processo eleitoral justo”.",
-      "Ao pedir “esclarecimentos”, o presidente da legenda disse que o partido vai acompanhar os fatos e buscar “respostas com responsabilidade, transparência e respeito à instituições”.",
-      "Na eleição de domingo, Flávio Bolsonaro teve 59,8 milhões de votos (48,2%), enquanto que o presidente Lula chegou a 64,2 milhões (51,7%)."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706889",
@@ -90,20 +225,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Harry Kane",
       "atacante"
     ],
-    "content": [
-      "O atacante Harry Kane e a meia Alexia Putellas são os vencedores da Bola de Ouro, tradicional premiação da revista France Football que condecora os melhores jogadores da temporada no futebol mundial. O anúncio dos ganhadores aconteceu nesta segunda-feira (26) no London Palladium, teatro centenário de Londres.",
-      "Nascido na capital inglesa, Kane recebeu das mãos do ex-jogador brasileiro Ronaldo Fenômeno o troféu de maneira inédita na carreira. Ele superou a concorrência dos também atacantes Kylian Mbappé, francês que defende o Real Madrid (Espanha), e Lamine Yamal, espanhol que atua no Barcelona, do mesmo país.",
-      "Somando atuações por Bayern de Munique e seleção da Inglaterra, Kane anotou 73 gols em 65 partidas na temporada 2025/2026, que contempla o período entre 3 de agosto de 2025 e 19 de julho de 2026. Somente pelo clube, onde foi campeão alemão e da Copa da Alemanha, o inglês de 33 anos balançou as redes 61 vezes em 51 jogos. Não à toa, também levou o Prêmio Gerd Müller, de melhor atacante, repetindo 2024.",
-      "Já Alexia liderou o Barcelona a quatro títulos na temporada: Campeonato Espanhol, Copa da Rainha, Supercopa da Espanha e o principal deles: a Liga dos Campeões da Europa. Ela ainda venceu a Liga das Nações da União Europeia de Futebol (Uefa) pela seleção de seu país.",
-      "A meia de 32 anos deixou para trás duas atacantes: a polonesa Ewa Pajor, do próprio Barcelona, e a jamaicana Khadija Shaw, do Manchester City (Inglaterra). Foi a terceira vez que ela levou o prêmio - as anteriores foram 2021 e 2022. Após a última temporada, a 14ª dela no time catalão, Alexia deixou o clube para defender o London City Lionesses (Inglaterra).",
-      "Entre os homens, o Brasil teve três indicados entre os 30 finalistas. O atacante Vinícius Júnior, do Real Madrid, ficou na 17ª posição. Gabriel Magalhães, do Arsenal (Inglaterra), foi o 21º, quatro postos a frente do também zagueiro Marquinhos, do Paris Saint-Germain (França).",
-      "No feminino, a única representante do país no top-30 foi Lorena. A goleira do Kansas City Current (Estados Unidos) e da seleção brasileira ocupou o 28º lugar. Ela ainda concorreu ao posto de melhor da posição na temporada, entre cinco finalistas, mas a ganhadora foi a espanhola Cata Coll, do Barcelona.",
-      "O futebol brasileiro também marcou presença na eleição de melhor time masculino da temporada. Tetra da Libertadores em 2025, o Flamengo acabou superado pelo Paris Saint-Germain, vencedor da Liga dos Campeões da Europa e que conquistou a Copa Intercontinental justamente em cima do Rubro-Negro, nos pênaltis.",
-      "Troféu Yashin Masculino: Unai Simón - Athletic Bilbao e seleção da Espanha)",
-      "Troféu Gerd Müller Feminino: Charlyn Corral - atacante do Pachuca e da seleção do México (50 gols em 49 jogos na temporada)",
-      "Time Feminino do ano: Barcelona",
-      "Troféu Sócrates (prêmio que reconhece causas sociais): Bukayo Saka, atacante do Arsenal e da seleção da Inglaterra"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706888",
@@ -309,7 +431,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições 2026",
       "Pedro Sanchez",
       "Emmanuel Macron",
-      "repercussão"
+      "Repercussão"
     ],
     "content": []
   },
@@ -1031,100 +1153,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "ônibus",
       "circulação",
       "eleitor"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1310197-projeto-cria-sistema-nacional-",
-    "title": "Projeto cria Sistema Nacional de Economia Criativa de Base Local",
-    "summary": "O texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310197-projeto-cria-sistema-nacional-de-economia-criativa-de-base-local",
-    "publishedAt": "26/10/2026 às 09:33",
-    "category": "Congresso",
-    "ingestedAt": "26/10/2026 às 10:54",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20231121201633654-768x473.jpg",
-    "imageCaption": "Duda Ramos, autor da proposta",
-    "imageCredit": "Zeca Ribeiro/Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas. Dep. Duda Ramos(MDB - RR)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706820",
-    "title": "Novo canal de umidade leva chuvas ao Norte, Centro-Oeste e Nordeste",
-    "summary": "O avanço de uma frente fria pela costa brasileira e a formação de um novo canal de umidade favorecem, nesta segunda-feira (26), o retorno das chuvas a áreas do Norte, Centro-Oeste e Nordeste, informa o Instituto Nacional de Meteorologia (Inmet).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/novo-canal-de-umidade-leva-chuvas-ao-norte-centro-oeste-e-nordeste",
-    "publishedAt": "26/10/2026 às 08:58",
-    "category": "Política",
-    "ingestedAt": "26/10/2026 às 10:54",
-    "imageUrl": "https://imagens.ebc.com.br/RvWhbQmiGuSsVhzWXPdB-QChaAM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/04/22/chuvabelem0426.jpg?itok=nYomOk6m",
-    "imageCaption": "Novo canal de umidade leva chuvas ao Norte, Centro-Oeste e Nordeste",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Novo canal de umidade leva chuvas ao Norte, Centro-Oeste e Nordeste",
-    "author": "Agência Brasil",
-    "tags": [
-      "Meio Ambiente",
-      "meteorologia",
-      "previsão do tempo",
-      "Inmet",
-      "chuvas"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706817",
-    "title": "Força Nacional reforçará segurança na fronteira com a Colômbia",
-    "summary": "A Força Nacional de Segurança Pública atuará junto com a Polícia Federal na fronteira do Brasil com a Colômbia, no município de Tabatinga, no Amazonas. A permanência tem prazo de 90 dias.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/forca-nacional-reforcara-seguranca-na-fronteira-com-colombia",
-    "publishedAt": "26/10/2026 às 08:43",
-    "category": "Política",
-    "ingestedAt": "26/10/2026 às 10:54",
-    "imageUrl": "https://imagens.ebc.com.br/Pp7LKz7scanNc4vAAmbaHn8_EDE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/tabatinga-fronteira_mcamgo_abr_030320231818-8.jpg?itok=gt3dNPKp",
-    "imageCaption": "Força Nacional reforçará segurança na fronteira com a Colômbia",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Força Nacional reforçará segurança na fronteira com a Colômbia",
-    "author": "Agência Brasil",
-    "tags": [
-      "Geral",
-      "Força Nacional",
-      "segurança",
-      "Amazônia",
-      "Tabatinga"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706814",
-    "title": "Em festa da vitória, Lula pede que público cante Hino da Independência",
-    "summary": "O presidente da República reeleito, Luiz Inácio Lula da Silva, em discurso na festa da vitória na Avenida Paulista, pediu que os presentes cantassem o Hino da Independência do Brasil.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/em-festa-da-vitoria-lula-pede-que-publico-cante-hino-da-independencia",
-    "publishedAt": "26/10/2026 às 07:02",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 10:54",
-    "imageUrl": "https://imagens.ebc.com.br/sQndnwA3RB4S6uvEONLGVh4y1tk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/26/_int1477.jpg.jpeg?itok=4OguplRr",
-    "imageCaption": "Em festa da vitória, Lula pede que público cante Hino da Independência",
-    "imageCredit": "Bruno Bocchini e Camila Boehm - Repórteres da Agência Brasil",
-    "imageAlt": "Em festa da vitória, Lula pede que público cante Hino da Independência",
-    "author": "Bruno Bocchini e Camila Boehm - Repórteres da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Lula",
-      "reeleição",
-      "Avenida Paulista"
     ],
     "content": []
   },
