@@ -9,6 +9,10 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1706951/
+https://sociedadeativa.github.io/noticias/ebc-1706948/
+https://sociedadeativa.github.io/noticias/ebc-1706946/
+https://sociedadeativa.github.io/noticias/ebc-1706945/
 https://sociedadeativa.github.io/noticias/ebc-1706942/
 https://sociedadeativa.github.io/noticias/ebc-1706940/
 https://sociedadeativa.github.io/noticias/ebc-1706939/
@@ -52,10 +56,6 @@ https://sociedadeativa.github.io/noticias/ebc-1706865/
 https://sociedadeativa.github.io/noticias/camara-1310183-projeto-cria-programa-para-sim/
 https://sociedadeativa.github.io/noticias/ebc-1706863/
 https://sociedadeativa.github.io/noticias/ebc-1706857/
-https://sociedadeativa.github.io/noticias/ebc-1706860/
-https://sociedadeativa.github.io/noticias/ebc-1706859/
-https://sociedadeativa.github.io/noticias/camara-1309849-projeto-cria-politica-nacional/
-https://sociedadeativa.github.io/noticias/ebc-1706858/
 https://sociedadeativa.github.io/noticias/ibge-48339/
 https://sociedadeativa.github.io/noticias/ibge-48336/
 https://sociedadeativa.github.io/noticias/ibge-48325/

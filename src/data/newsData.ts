@@ -5,6 +5,140 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706951",
+    "title": "Inep divulga local de provas do Enem; candidato pode conferir no site",
+    "summary": "Os participantes do Exame Nacional do Ensino Médio (Enem) 2026 já podem conferir os locais onde farão as prova nos domingos 8 e 15 de novembro.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/inep-divulga-local-de-provas-do-enem-candidato-pode-conferir-no-site",
+    "publishedAt": "27/10/2026 às 13:41",
+    "category": "Eleições",
+    "ingestedAt": "27/10/2026 às 14:18",
+    "imageUrl": "https://imagens.ebc.com.br/LW-eLKPXDa-5k4smREjGXkQxdHc=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/11/16/toms0215.jpg?itok=IGudC1NH",
+    "imageCaption": "Inep divulga local de provas do Enem; candidato pode conferir no site",
+    "imageCredit": "Ana Cristina Campos – Repórter da Agência Brasil",
+    "imageAlt": "Inep divulga local de provas do Enem; candidato pode conferir no site",
+    "author": "Ana Cristina Campos – Repórter da Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "Inep",
+      "Enem 2026",
+      "Cartão de Confirmação",
+      "MEC"
+    ],
+    "content": [
+      "Os participantes do Exame Nacional do Ensino Médio (Enem) 2026 já podem conferir os locais onde farão as prova nos domingos 8 e 15 de novembro.",
+      "O Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) disponibilizou, nesta terça-feira (27), o Cartão de Confirmação de Inscrição do Enem com a informação.",
+      "Para acessar o documento, basta o inscrito acessar a Página do Participante . É preciso usar a senha da plataforma Gov.br.",
+      "Além da informação sobre os locais de prova, o Cartão de Confirmação traz o número de inscrição, a data e o horário. Caso o inscrito tenha direito a atendimento especializado ou ao tratamento pelo nome social autorizado pelo Inep, os dados também estarão registrados.",
+      "O Inep avisa que não é obrigatório levar o Cartão de Confirmação de Inscrição nos dias de aplicação do Enem, mas recomenda levá-lo para evitar erros.",
+      "As provas serão aplicadas em dois domingos de novembro, nos dias 8 e 15, no turno da tarde, nas 27 unidades da federação.",
+      "De acordo com o edital desta edição , o primeiro dia do Enem terá duração de cinco horas e 30 minutos. Neste dia, os candidatos farão a redação e os exames de linguagens (língua portuguesa, literatura, língua estrangeira, artes, educação física e tecnologias da informação), códigos e suas tecnologias e ciências humanas (história, geografia, filosofia e sociologia) e suas tecnologias.",
+      "No segundo dia, os estudantes farão provas de ciências da natureza e suas tecnologias (biologia, química e física) e matemática. Os participantes terão cinco horas para fazer as provas. São 45 questões em cada área do conhecimento.",
+      "Saiba tudo sobre o exame no Guia do Enem , disponibilizado pelo Ministério da Educação (MEC).",
+      "Nesta edição, o Ministério da Educação (MEC) registrou mais de 5 milhões de inscrições.",
+      "O Enem é considerado a principal forma de entrada na educação superior no Brasil, por meio de programas federais como o Sistema de Seleção Unificada (Sisu), o Programa Universidade para Todos (Prouni) e o Fundo de Financiamento Estudantil (Fies).",
+      "As instituições de ensino públicas e privadas usam os resultados das provas para selecionar os estudantes.",
+      "Os resultados individuais do exame também podem ser aproveitados em processos seletivos de instituições de ensino de Portugal que tenham convênio com o Inep.",
+      "Desde a edição de 2025, o Enem também voltou a certificar a conclusão do ensino médio para os candidatos a partir dos 18 anos.",
+      "Pela primeira vez, o Enem também terá como objetivo avaliar o domínio das competências e habilidades esperadas no fim do ensino médio, integrando o Sistema de Avaliação da Educação Básica (Saeb)."
+    ]
+  },
+  {
+    "id": "ebc-1706948",
+    "title": "MPT registra quase 2 mil denúncias de assédio eleitoral no Brasil",
+    "summary": "O Ministério Público do Trabalho (MPT) recebeu 1.937 denúncias de assédio eleitoral até essa segunda-feira (26), dia seguinte ao segundo turno das eleições . Desse total, 946 ocorreram entre os dois períodos.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/mpt-registra-1937-denuncias-de-assedio-eleitoral",
+    "publishedAt": "27/10/2026 às 13:35",
+    "category": "Justiça",
+    "ingestedAt": "27/10/2026 às 14:18",
+    "imageUrl": "https://imagens.ebc.com.br/yTdZmy8ZpSEFMmlkNtmHY0pRWM4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int9415.jpg?itok=qduWtKIi",
+    "imageCaption": "MPT registra quase 2 mil denúncias de assédio eleitoral no Brasil",
+    "imageCredit": "Felipe Pontes – Repórter da Agência Brasil",
+    "imageAlt": "MPT registra quase 2 mil denúncias de assédio eleitoral no Brasil",
+    "author": "Felipe Pontes – Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "TSE",
+      "assédio eleitoral",
+      "eleições 2026",
+      "Multimídia"
+    ],
+    "content": [
+      "O Ministério Público do Trabalho (MPT) recebeu 1.937 denúncias de assédio eleitoral até essa segunda-feira (26), dia seguinte ao segundo turno das eleições . Desse total, 946 ocorreram entre os dois períodos.",
+      "O assédio eleitoral no trabalho é crime e configura-se quando alguém usa sua posição de poder no ambiente de trabalho para influenciar, constranger ou pressionar trabalhadores a votar, deixar de votar ou apoiar determinado candidato, partido ou posicionamento político.",
+      "Em todo o Brasil, o MPT manteve equipes de plantão durante toda a campanha eleitoral para atuar em casos mais urgentes. A maior parte dessas denúncias diz respeito à disputa para presidente da República.",
+      "Ao todo, durante o processo eleitoral o órgão ajuizou 59 ações civis públicas para combater o assédio eleitoral, obtendo 52 liminares (decisões urgentes e provisórias) para garantir o direto ao voto livre dos trabalhadores.",
+      "Além das liminares, foram assinados 53 termos de ajuste de conduta por patrões que se comprometeram a não interferir na livre escolha eleitoral de seus funcionários.",
+      "Um dos casos mais emblemáticos do segundo turno diz respeito ao empresário Leandro Batista Nóbrega, dono do Frigorífico Goiás.",
+      "Ele publicou um vídeo nas redes sociais ofertando viagem para a cidade turística de Caldas Novas (GO), com todas as despesas pagas, para mil apoiadores do então candidato à reeleição Luiz Inácio Lula da Silva. O objetivo seria que eles não fossem votar.",
+      "A Justiça do Trabalho acabou concedendo uma liminar para barrar a iniciativa, sob pena de multa de R$ 100 mil por trabalhador encontrado na situação.",
+      "Entre as violações mais comum, contudo, está impedir que os funcionários saiam para votar. Foi o que aconteceu na Bahia.",
+      "A empresa Total Atacado foi obrigada, por liminar, a aplicar escala que garantisse o direito ao voto, após denúncias de que empregados de lojas nos municípios de Salvador e Lauro de Freitas não haviam sido liberados no primeiro turno das eleições.",
+      "Saiba mais no Repórter Brasil Tarde, da TV Brasil",
+      "No Rio de Janeiro, a deputada estadual eleita Índia Armaleu (PL), a mais votada do estado com 248.504 votos, publicou nas redes sociais, nessa segunda-feira, mensagens sugerindo que empresários demitisse empregados que demonstrassem apoio ao presidente reeleito Luiz Inácio Lula da Silva.",
+      "“Empresário, olha a rede social do teu funcionário aí e confere se ele fez o ‘L’. Acho que não faz sentido nenhum manter na tua empresa quem odeia empresários”, destaca uma das mensagens reproduzidas no perfil da deputada.",
+      "O mesmo fez a deputada Jéssica Ramos Moreno (PL), no Paraná. Eleita deputada estadual, ela publicou no domingo nas redes sociais mensagem sugerindo a demissão de funcionários que votassem no PT. “Você tem uma empregada que é petista? Demita!”",
+      "Nesses casos, o empresário que promova demissões por motivo de orientação política pode se enquadrar na prática de discriminação na manutenção das relações de trabalho, prática vedada pela Constituição e pela Consolidação das Leis do Trabalho (CLT) ."
+    ]
+  },
+  {
+    "id": "ebc-1706946",
+    "title": "Zumbi, Finados e Proclamação: confira feriados nacionais de novembro",
+    "summary": "Desde 2023, quando foi sancionada a lei que cria o Dia Nacional de Zumbi e da Consciência Negra, o Brasil tem três feriados nacionais no calendário de novembro.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/zumbi-finados-e-proclamacao-confira-feriados-nacionais-de-novembro",
+    "publishedAt": "27/10/2026 às 13:17",
+    "category": "Brasil",
+    "ingestedAt": "27/10/2026 às 14:18",
+    "imageUrl": "https://imagens.ebc.com.br/3qW3P2YFh5wjHux36lmtt1_qjPg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/05/26/lei_do_luto_parental.jpg?itok=yZ5cUmDR",
+    "imageCaption": "Zumbi, Finados e Proclamação: confira feriados nacionais de novembro",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Zumbi, Finados e Proclamação: confira feriados nacionais de novembro",
+    "author": "Agência Brasil",
+    "tags": [
+      "Geral",
+      "feriados",
+      "novembro",
+      "Dia da Consciência Negra",
+      "Finados"
+    ],
+    "content": [
+      "Desde 2023, quando foi sancionada a lei que cria o Dia Nacional de Zumbi e da Consciência Negra, o Brasil tem três feriados nacionais no calendário de novembro. Em 2026, eles são comemorados nas seguintes datas:",
+      "Comemoração de seguidores da Igreja Católica e cristãos de outras tradições, que também é conhecida como Dia dos Mortos. É celebrada como feriado no Brasil de acordo com a Lei Nº 10.607 de 19 de dezembro de 2002.",
+      "A Proclamação da República ocorreu em 15 de novembro de 1889, quando o marechal Deodoro da Fonseca saiu de sua casa no centro do Rio de Janeiro, próximo à Central do Brasil, para proclamar a República acompanhado por uma tropa de cerca de mil militares. É comemorado conforme Lei Nº 662, de 6 de abril de 1949. Marca a data da promulgação do Decreto 1 de 15 de novembro de 1889, que foi assinado por Deodoro da Fonseca.",
+      "Cortejo da Tia Ciata em comemoração do Dia da Consciência Negra - Tomaz Silva/Agência Brasil",
+      "A data de 20 Novembro remete à morte do líder do Quilombo dos Palmares, Zumbi, assassinado em 1695. O local foi um dos maiores quilombos do Brasil durante o período colonial, símbolo de resistência contra a escravização negra no país. Antes de ser feriado nacional , a data era oficial apenas em alguns estados, como Rio de Janeiro, Alagoas e São Paulo - e em mais de 1,2 mil cidades por meio de leis municipais e estaduais."
+    ]
+  },
+  {
+    "id": "ebc-1706945",
+    "title": "Câncer de mama: mulheres negras morrem 3,8 vezes mais que brancas",
+    "summary": "Mulheres negras têm taxa de mortalidade 3,8 vezes maior de câncer de mama em comparação às mulheres brancas.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/cancer-de-mama-mulheres-negras-morrem-38-vezes-mais-que-brancas",
+    "publishedAt": "27/10/2026 às 13:17",
+    "category": "Política",
+    "ingestedAt": "27/10/2026 às 14:18",
+    "imageUrl": "https://imagens.ebc.com.br/w1HTECjpy-7HGXz9Bz-W6hwLXZ4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/27/toms5751.jpg?itok=xu08tMm6",
+    "imageCaption": "Câncer de mama: mulheres negras morrem 3,8 vezes mais que brancas",
+    "imageCredit": "Ana Cristina Campos – Repórter da Agência Brasil",
+    "imageAlt": "Câncer de mama: mulheres negras morrem 3,8 vezes mais que brancas",
+    "author": "Ana Cristina Campos – Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "Câncer de Mama",
+      "Outubro Rosa",
+      "Inca",
+      "Política"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706942",
     "title": "Governo buscará cumprir meta fiscal com diálogo, diz Durigan",
     "summary": "O ministro da Fazenda, Dario Durigan, assegurou, nesta terça-feira (27), em Brasília, que o governo federal vai discutir com agentes do mercado financeiro e do setor privado em geral medidas de ajuste que favoreçam o cumprimento da meta fiscal.",
@@ -25,13 +159,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "governo",
       "Meta Fiscal"
     ],
-    "content": [
-      "O ministro da Fazenda, Dario Durigan, assegurou, nesta terça-feira (27), em Brasília, que o governo federal vai discutir com agentes do mercado financeiro e do setor privado em geral medidas de ajuste que favoreçam o cumprimento da meta fiscal.",
-      "O ministro revelou que, na segunda-feira (26), entrou em contato com representantes do setor financeiro para tentar acalmar o mercado, um dia após o presidente Luiz Inácio Lula da Silva ser reeleito para mais quatro anos à frente do governo federal.",
-      "Sem fornecer mais detalhes, Durigan comentou que a equipe de governo já vem discutindo medidas de ajuste fiscal, incluindo a possibilidade de uma ampliação da fatia do Orçamento da União passível de ser contingenciada - medida que depende da aprovação do Congresso Nacional.",
-      "“Estamos passando por um período de transição”, destacou o ministro, referindo-se ao período entre o anúncio do resultado do segundo turno das eleições presidenciais e o dia 5 de janeiro, quando Lula e o vice-presidente, Geraldo Alckmin, serão reempossados.",
-      "“[Até lá] o presidente vai se sentar tanto com a equipe atual, quanto com a que ainda vai designar para o novo mandato, e definir os próximos passos concretos. Sabendo que já temos medidas prontas, como a busca pelo centro da meta, que vão ser tratadas com o Congresso Nacional em breve.”"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706940",
@@ -53,20 +181,9 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições 2026",
       "Flávio Bolsonaro",
       "Polícia Federal",
-      "Eleições"
+      "mutimídia"
     ],
-    "content": [
-      "A Polícia Federal (PF) cancelou os passaportes do senador Flávio Bolsonaro (PL-RJ), uma vez que ele não cumpriu a decisão judicial de entrega dos documentos . Não há, até o momento, registro formal de saída do senador do país.",
-      "Diante da situação, a PF vai oficiar o ministro do Supremo Tribunal Federal Alexandre de Moraes sobre o não cumprimento da determinação.",
-      "O cancelamento dos passaportes ocorre em meio a suspeitas de que o candidato derrotado nas eleições presidenciais de 2026 teria cruzado a fronteira para a Argentina usando documento de identidade e com a intenção de ir aos Estados Unidos a bordo de um jato executivo.",
-      "A suspeita ganhou força após matéria publicada nesta terça-feira (27) pelo site argentino Infobae , informando que o senador já estaria em Puerto Iguazú, cidade que faz fronteira com o Brasil. De lá, ele viajaria para os Estados Unidos a bordo de um Gulfstream G400, registro LV-JQW, pertencente à empresa Baires Fly S.A.",
-      "Ainda segundo a imprensa argentina, a Casa Rosada informou não ter registrado, até o momento, a entrada de Flávio Bolsonaro no país.",
-      "Flávio é investigado em dois inquéritos que tramitam no Supremo Tribunal Federal (STF). Em um deles, é suspeito, ao lado do advogado Willer Tomaz, de lavagem de dinheiro por meio de plataformas de bets. Ele também é alvo de outro inquérito que investiga o financiamento do filme Dark Horse, sobre a trajetória de seu pai.",
-      "Eduardo Bolsonaro, irmão de Flávio, está nos Estados Unidos, apesar de constar contra ele um mandado de prisão em aberto no Brasil . Na semana passada, Eduardo, que teve o mandato de deputado federal cassado, defendeu que Flávio deveria deixar o Brasil se perdesse a eleição .",
-      "O ex-deputado foi condenado a quatro anos de prisão por articular sanções contra autoridades brasileiras e o tarifaço dos Estados Unidos contra as exportações do país , em uma tentativa de evitar a condenação de seu pai, o ex-presidente Jair Bolsonaro, no processo da trama golpista.",
-      "Apesar de Flávio não ter aceitado a derrota no segundo turno das eleições presidenciais em seu primeiro discurso após a apuração, o Partido Liberal reconheceu publicamente nesta terça-feira que Luiz Inácio Lula da Silva venceu o pleito .",
-      "O presidente Luiz Inácio Lula da Silva foi reeleito com uma diferença de mais de 4,4 milhões de votos."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706939",
@@ -90,30 +207,22 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "combustível",
       "governo federal"
     ],
-    "content": [
-      "O governo federal informou nesta terça-feira (27) que renovará por mais um mês a subvenção de R$ 2,12 por litro ao óleo diesel. A medida será formalizada por meio de portaria a ser publicada no Diário Oficial da União .",
-      "A renovação já havia sido sinalizada mais cedo pelo ministro da Fazenda, Dario Durigan. Ao ser questionado sobre o tema, ele disse que o governo ainda discutia os detalhes para a publicação da medida.",
-      "“A gente vai tratar [da questão da renovação da subvenção do diesel]. Temos reuniões durante o dia e faremos anúncios nas próximas horas ou dias”, declarou o ministro.",
-      "De acordo com o governo, o impacto fiscal da prorrogação será compensado por receitas extraordinárias provenientes do petróleo, preservando a neutralidade fiscal.",
-      "A subvenção está prevista na Medida Provisória nº 1.391 , de 11 de setembro de 2026, que autorizou a União a conceder subvenção econômica a produtores e importadores de óleo diesel enquanto persistirem as instabilidades no mercado internacional de combustíveis decorrentes de conflitos geopolíticos",
-      "A legislação federal tem, como objetivo, reduzir os efeitos da volatilidade do mercado internacional sobre o preço do diesel no país.",
-      "Em nota, o Ministério do Planejamento e Orçamento informou que a renovação terá validade de 30 dias e poderá ser novamente prorrogada conforme a evolução do mercado internacional de combustíveis."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706938",
-    "title": "Polícia investiga morte de engenheiro agredido em Santos",
+    "title": "Polícia investiga morte de engenheiro agredido após ato pró-Lula",
     "summary": "A Polícia Civil investiga a morte do engenheiro Marcelo de Oliveira da Rocha, de 30 anos, que morreu no último domingo (25) após ter sido brutalmente espancado na madrugada de sábado (24), em Santos, no litoral paulista.",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/policia-investiga-morte-de-engenheiro-agredido-em-santos",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/policia-investiga-morte-de-engenheiro-agredido-apos-ato-pro-lula",
     "publishedAt": "27/10/2026 às 12:38",
     "category": "Brasil",
-    "ingestedAt": "27/10/2026 às 13:16",
+    "ingestedAt": "27/10/2026 às 14:18",
     "imageUrl": "https://imagens.ebc.com.br/P7UeedtZPGUm116KlpRlKYVSEU0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/17/86b9cab4-2ff6-4485-abd1-45d80a5218ec.jpeg?itok=ABqDQ6Si",
-    "imageCaption": "Polícia investiga morte de engenheiro agredido em Santos",
+    "imageCaption": "Polícia investiga morte de engenheiro agredido após ato pró-Lula",
     "imageCredit": "Matheus Crobelatti*",
-    "imageAlt": "Polícia investiga morte de engenheiro agredido em Santos",
+    "imageAlt": "Polícia investiga morte de engenheiro agredido após ato pró-Lula",
     "author": "Matheus Crobelatti*",
     "tags": [
       "Geral",
@@ -608,7 +717,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições 2026",
       "Lula",
       "Valdemar Costa Neto",
-      "Eleições"
+      "Multimídia"
     ],
     "content": []
   },
@@ -1032,100 +1141,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Partidos Políticos",
       "governadores",
       "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706860",
-    "title": "Holanda anuncia US$ 500 milhões em fundo florestal criado pelo Brasil",
-    "summary": "O governo dos Países Baixos (Holanda) anunciou nesta segunda-feira (26) que pretende investir US$500 milhões no Fundo Florestas Tropicais para Sempre (TFFF , na sigla em inglês).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/holanda-anuncia-us500-milhoes-em-fundo-florestal-criado-pelo-brasil",
-    "publishedAt": "26/10/2026 às 16:44",
-    "category": "Governo",
-    "ingestedAt": "26/10/2026 às 19:03",
-    "imageUrl": "https://imagens.ebc.com.br/fgK9FH5IxnW88CWd00CNKaRzNH0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/13/img_e1168-19_1.jpg?itok=5cuZQzne",
-    "imageCaption": "Holanda anuncia US$ 500 milhões em fundo florestal criado pelo Brasil",
-    "imageCredit": "Rafael Cardoso - Repórter da Agência Brasil",
-    "imageAlt": "Holanda anuncia US$ 500 milhões em fundo florestal criado pelo Brasil",
-    "author": "Rafael Cardoso - Repórter da Agência Brasil",
-    "tags": [
-      "Meio Ambiente",
-      "TFFF",
-      "Fundo Florestas Tropicais",
-      "Países baixos",
-      "Holanda"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706859",
-    "title": "Prêmio TV Brasil Petrobras Para Elas: as melhores laterais-esquerdas",
-    "summary": "A organização do Prêmio TV Brasil Petrobras Para Elas revelou nesta segunda-feira (26) mais três finalistas, desta vez na categoria melhor lateral-esquerda. Estão na disputa a são-paulina Bia Menezes, a palmeirense Raissa Bahia e a corintiana Tamires.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/premio-tv-brasil-petrobras-para-elas-melhores-laterais-esquerdas",
-    "publishedAt": "26/10/2026 às 16:28",
-    "category": "Esportes",
-    "ingestedAt": "26/10/2026 às 16:35",
-    "imageUrl": "https://imagens.ebc.com.br/-VmYY80YFcEHd01XI34R9SI_kPs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/26/foto-montagem-laterais-esquerdas_0.png?itok=KVHAmVZ2",
-    "imageCaption": "Prêmio TV Brasil Petrobras Para Elas: as melhores laterais-esquerdas",
-    "imageCredit": "Lincoln Chaves- Repórter da EBC",
-    "imageAlt": "Prêmio TV Brasil Petrobras Para Elas: as melhores laterais-esquerdas",
-    "author": "Lincoln Chaves- Repórter da EBC",
-    "tags": [
-      "Esportes",
-      "Finalistas",
-      "laterais-esquerdas",
-      "prêmio",
-      "Futebol Feminino"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1309849-projeto-cria-politica-nacional",
-    "title": "Projeto cria política nacional para profissionais de portaria, vigia e controle de acesso",
-    "summary": "Proposta estabelece piso salarial e define medidas de segurança e de capacitação; texto está em análise na Câmara.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1309849-projeto-cria-politica-nacional-para-profissionais-de-portaria-vigia-e-controle-de-acesso",
-    "publishedAt": "26/10/2026 às 16:23",
-    "category": "Congresso",
-    "ingestedAt": "26/10/2026 às 16:35",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2025/08/deputado-marcos-tavares-01-768x513.jpeg",
-    "imageCaption": "Deputado Marcos Tavares, autor da proposta",
-    "imageCredit": "Divulgação",
-    "imageAlt": "Projeto cria política nacional para profissionais de portaria, vigia e controle de acesso",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706858",
-    "title": "Bombeiros encontram corpo de mulher levada por correnteza",
-    "summary": "O Corpo de Bombeiros encontrou nesta segunda-feira (26) o corpo de uma mulher que desapareceu após ter o carro arrastado por uma correnteza no Ribeirão do Pinhal, na zona rural de Pinhalzinho, no interior paulista.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/bombeiros-encontram-corpo-de-mulher-levada-por-correnteza",
-    "publishedAt": "26/10/2026 às 16:11",
-    "category": "Brasil",
-    "ingestedAt": "26/10/2026 às 19:03",
-    "imageUrl": "https://imagens.ebc.com.br/XxyPtoEEzpAiwGHrr8FV0vaSvrQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/altera-votacao-itapevi.jpg?itok=yszkn7Eb",
-    "imageCaption": "Bombeiros encontram corpo de mulher levada por correnteza",
-    "imageCredit": "Elaine Patricia Cruz – Repórter da Agência Brasil",
-    "imageAlt": "Bombeiros encontram corpo de mulher levada por correnteza",
-    "author": "Elaine Patricia Cruz – Repórter da Agência Brasil",
-    "tags": [
-      "Geral",
-      "Corpo de Bombeiros",
-      "Chuvas",
-      "São Paulo",
-      "Brasil"
     ],
     "content": []
   },
