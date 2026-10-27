@@ -5,6 +5,181 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706889",
+    "title": "Harry Kane e Alexia Putellas vencem prêmio Bola de Ouro de 2026",
+    "summary": "O atacante Harry Kane e a meia Alexia Putellas são os vencedores da Bola de Ouro, tradicional premiação da revista France Football que condecora os melhores jogadores da temporada no futebol mundial.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/harry-kane-e-alexia-putellas-vencem-premio-bola-de-ouro-de-2026",
+    "publishedAt": "26/10/2026 às 21:12",
+    "category": "Esportes",
+    "ingestedAt": "26/10/2026 às 21:28",
+    "imageUrl": "https://imagens.ebc.com.br/G1Vfne_QL4_bQN-smot_5SSTlo8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/26/harry_kane_e_alexia_putellas_premio_bola_de_ouro_2026.jpg?itok=e06EF3-R",
+    "imageCaption": "Harry Kane e Alexia Putellas vencem prêmio Bola de Ouro de 2026",
+    "imageCredit": "Lincoln Chaves - Repórter da EBC",
+    "imageAlt": "Harry Kane e Alexia Putellas vencem prêmio Bola de Ouro de 2026",
+    "author": "Lincoln Chaves - Repórter da EBC",
+    "tags": [
+      "Esportes",
+      "Bola de Ouro",
+      "prêmio",
+      "Harry Kane",
+      "atacante"
+    ],
+    "content": [
+      "O atacante Harry Kane e a meia Alexia Putellas são os vencedores da Bola de Ouro, tradicional premiação da revista France Football que condecora os melhores jogadores da temporada no futebol mundial. O anúncio dos ganhadores aconteceu nesta segunda-feira (26) no London Palladium, teatro centenário de Londres.",
+      "Nascido na capital inglesa, Kane recebeu das mãos do ex-jogador brasileiro Ronaldo Fenômeno o troféu de maneira inédita na carreira. Ele superou a concorrência dos também atacantes Kylian Mbappé, francês que defende o Real Madrid (Espanha), e Lamine Yamal, espanhol que atua no Barcelona, do mesmo país.",
+      "Somando atuações por Bayern de Munique e seleção da Inglaterra, Kane anotou 73 gols em 65 partidas na temporada 2025/2026, que contempla o período entre 3 de agosto de 2025 e 19 de julho de 2026. Somente pelo clube, onde foi campeão alemão e da Copa da Alemanha, o inglês de 33 anos balançou as redes 61 vezes em 51 jogos. Não à toa, também levou o Prêmio Gerd Müller, de melhor atacante, repetindo 2024.",
+      "Já Alexia liderou o Barcelona a quatro títulos na temporada: Campeonato Espanhol, Copa da Rainha, Supercopa da Espanha e o principal deles: a Liga dos Campeões da Europa. Ela ainda venceu a Liga das Nações da União Europeia de Futebol (Uefa) pela seleção de seu país.",
+      "A meia de 32 anos deixou para trás duas atacantes: a polonesa Ewa Pajor, do próprio Barcelona, e a jamaicana Khadija Shaw, do Manchester City (Inglaterra). Foi a terceira vez que ela levou o prêmio - as anteriores foram 2021 e 2022. Após a última temporada, a 14ª dela no time catalão, Alexia deixou o clube para defender o London City Lionesses (Inglaterra).",
+      "Entre os homens, o Brasil teve três indicados entre os 30 finalistas. O atacante Vinícius Júnior, do Real Madrid, ficou na 17ª posição. Gabriel Magalhães, do Arsenal (Inglaterra), foi o 21º, quatro postos a frente do também zagueiro Marquinhos, do Paris Saint-Germain (França).",
+      "No feminino, a única representante do país no top-30 foi Lorena. A goleira do Kansas City Current (Estados Unidos) e da seleção brasileira ocupou o 28º lugar. Ela ainda concorreu ao posto de melhor da posição na temporada, entre cinco finalistas, mas a ganhadora foi a espanhola Cata Coll, do Barcelona.",
+      "O futebol brasileiro também marcou presença na eleição de melhor time masculino da temporada. Tetra da Libertadores em 2025, o Flamengo acabou superado pelo Paris Saint-Germain, vencedor da Liga dos Campeões da Europa e que conquistou a Copa Intercontinental justamente em cima do Rubro-Negro, nos pênaltis.",
+      "Troféu Yashin Masculino: Unai Simón - Athletic Bilbao e seleção da Espanha)",
+      "Troféu Gerd Müller Feminino: Charlyn Corral - atacante do Pachuca e da seleção do México (50 gols em 49 jogos na temporada)",
+      "Time Feminino do ano: Barcelona",
+      "Troféu Sócrates (prêmio que reconhece causas sociais): Bukayo Saka, atacante do Arsenal e da seleção da Inglaterra"
+    ]
+  },
+  {
+    "id": "ebc-1706888",
+    "title": "CNBB parabeniza Lula e pede atenção aos mais pobres",
+    "summary": "A Conferência Nacional dos Bispos do Brasil (CNBB) parabenizou o presidente Luiz Inácio Lula da Silva e ao vice-presidente Geraldo Alckmin pela reeleição, no 2º turno das eleições e pediu atenção prioritária para os pobres e vulneráveis.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/cnbb-parabeniza-lula-e-pede-atencao-aos-mais-pobres",
+    "publishedAt": "26/10/2026 às 20:52",
+    "category": "Eleições",
+    "ingestedAt": "26/10/2026 às 21:28",
+    "author": "Douglas Corrêa - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Lula",
+      "CNBB",
+      "Igreja Católica"
+    ],
+    "content": [
+      "A Conferência Nacional dos Bispos do Brasil (CNBB) parabenizou o presidente Luiz Inácio Lula da Silva e ao vice-presidente Geraldo Alckmin pela reeleição, no 2º turno das eleições e pediu atenção prioritária para os pobres e vulneráveis.",
+      "\"Acreditamos que a dignidade da pessoa humana, a destinação universal dos bens, a solidariedade, a subsidiariedade e o bem comum devem orientar as decisões políticas e econômicas\", diz nota da entidade da Igreja Católica.",
+      "”Esses princípios encontram expressão concreta na defesa da vida desde a concepção até seu fim natural, na superação da fome e da miséria, na promoção do trabalho digno, na garantia de acesso à saúde, à educação e à moradia, na proteção das crianças, dos idosos e das famílias, no cuidado com os povos indígenas e as comunidades tradicionais e na preservação de nossa Casa Comum”, pontua a nota.",
+      "A nota fala ainda da polarização vivida pelo país no período eleitoral e que o Brasil precisa de gestos concretos de pacificação e respeito às diferenças e de valorização das instituições democráticas.",
+      "Para a CNBB, o desenvolvimento de uma nação não pode ser avaliado apenas por indicadores econômicos, mas também pela capacidade de assegurar condições dignas de existência àqueles que permanecem à margem das oportunidades e dos direitos fundamentais.",
+      "\"Também desejamos reafirmar a importância do fortalecimento das instituições, do respeito à Constituição Federal, da promoção da paz social e do combate à corrupção e a toda forma de violência\", conclui a nota."
+    ]
+  },
+  {
+    "id": "ebc-1706884",
+    "title": "Trump questiona eleição brasileira e Alckmin rebate: “equivocado”",
+    "summary": "O presidente dos Estados Unidos, Donald Trump, questionou o processo eleitoral brasileiro, nesta segunda-feira (26).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/trump-questiona-eleicao-brasileira-e-alckmin-rebate-equivocado",
+    "publishedAt": "26/10/2026 às 20:18",
+    "category": "Eleições",
+    "ingestedAt": "26/10/2026 às 21:28",
+    "imageUrl": "https://imagens.ebc.com.br/aX4GQKcT4Ke0I0BRdrUfmIPAgNA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/26/2026-10-26t221053z_2_lynxnpem9p1rv_rtroptp_4_usa-trump.jpg?itok=paPDwWJQ",
+    "imageCaption": "Trump questiona eleição brasileira e Alckmin rebate: “equivocado”",
+    "imageCredit": "Marcelo Brandão – repórter da Agência Brasil",
+    "imageAlt": "Trump questiona eleição brasileira e Alckmin rebate: “equivocado”",
+    "author": "Marcelo Brandão – repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "Donald Trump",
+      "eleições 2026",
+      "tarifaço",
+      "EUA"
+    ],
+    "content": [
+      "O presidente dos Estados Unidos, Donald Trump, questionou o processo eleitoral brasileiro, nesta segunda-feira (26).",
+      "Em conversa com jornalistas, o presidente estadunidense questionou a prorrogação do horário da votação, ecoando o posicionamento da campanha do candidato derrotado no segundo turno das eleições, Flávio Bolsonaro.",
+      "“Acho que pareceu ruim a eleição, o jeito que foi organizada, com a prorrogação [do prazo de votação]. Muito estranho”, disse Trump. Para ele, a eleição “pareceu fraudada”, mas ele não aprofundou o assunto.",
+      "Questionado por um jornalista se ele poderia fazer algo em relação às eleições no Brasil, Trump disse que não governa o Brasil e que tem boa relação com o presidente reeleito Luiz Inácio Lula da Silva.",
+      "“Eu não governo o Brasil, eu governo os Estados Unidos. Eu só pensei que a eleição foi... eu gosto do Lula, me dou muito bem com ele”.",
+      "Neste domingo (25), no segundo turno das eleições gerais, após registros de restrições na circulação do transporte coletivo em diversas cidades do país, o ministro do Supremo Tribunal Federal, Cristiano Zanin, decidiu ampliar o horário das eleições por duas horas, até as 19h.",
+      "Lula foi reeleito com mais de 64 milhões de votos. O senador Flávio Bolsonaro contabilizou 59,8 milhões de votos.",
+      "Em entrevista à TV Vanguarda, do interior de São Paulo, o vice-presidente reeleito Geraldo Alckmin respondeu brevemente às declarações de Trump. Para o vice, a opinião do presidente dos EUA é \"equivocada\" e ele não deveria interferir na política do Brasil.",
+      "“Totalmente equivocada, né? Primeiro, não se interfere na política de outro país. Isso é uma regra basilar. Segundo, não tem nenhum referencial para dizer isso. O Brasil é um exemplo para o mundo, de urna eletrônica, segurança jurídica. Democracia você ganha eleição, você perde. É o povo que decide”.",
+      "Em seguida, Alckmin exaltou as negociações do Brasil com outros mercados como alternativa ao tarifaço imposto pelos Estados Unidos, que inviabilizou a entrada de alguns produtos brasileiros naquele país. Ele disse que continuará negociando com o vizinho do hemisfério norte.",
+      "“Encerrada a eleição, vamos continuar a negociação com os Estado Unidos para ter um bom acordo. Estamos abrindo o mercado, fizemos acordo Mercosul-Singapura, Mercosul-União Europeia e estamos bem encaminhados para um acordo Mercosul-Canadá. Mesmo com o tarifaço batemos recorde de exportação”.",
+      "O presidente estadunidense afirmou que não escolheu um lado na corrida presidencial brasileira, e apenas acompanhou o processo.",
+      "Parlamentares dos EUA, no entanto, chegaram a formalizar um pedido à Casa Branca, para que Trump não interferisse em favor de Flávio, demonstrando falta de consenso sobre o apoio declarado de Trump ao candidato derrotado.",
+      "Em 24 de setembro, 31 parlamentares do partido democrata enviaram uma carta falando em um “esforço coordenado\" do governo Trump para ameaçar a aliança estratégica dos EUA com o Brasil e enfraquecer a segunda maior democracia do Hemisfério Ocidental às vésperas da eleição presidencial.",
+      "Na carta, os democratas acusam o governo Trump de tomar uma série de medidas para tentar garantir a vitória de Flávio Bolsonaro.",
+      "Entre elas, a imposição do tarifaço às mercadorias brasileiras como forma de evitar a condenação de Jair Bolsonaro por golpe de Estado e a aplicação da Lei Magnitsky ao ministro do Supremo Tribunal Federal (STF) Alexandre de Moraes."
+    ]
+  },
+  {
+    "id": "camara-1314009-motta-e-alcolumbre-parabenizam",
+    "title": "Motta e Alcolumbre parabenizam Lula e reafirmam compromisso com harmonia institucional",
+    "summary": "Presidentes da Câmara e do Senado foram recebidos no Palácio da Alvorada.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1314009-motta-e-alcolumbre-parabenizam-lula-e-reafirmam-compromisso-com-harmonia-institucional",
+    "publishedAt": "26/10/2026 às 20:17",
+    "category": "Congresso",
+    "ingestedAt": "26/10/2026 às 21:28",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/whatsapp-image-2026-10-26-at-19-12-03-768x510.jpeg",
+    "imageCaption": "Alcolumbre e Motta visitam Lula no Palácio da Alvorada",
+    "imageCredit": "Ricardo Stuckert/Divulgação",
+    "imageAlt": "Alcolumbre, Lula e Motta no Alvorada",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706878",
+    "title": "Lucas Pinheiro abre temporada com ouro em slalom gigante na Áustria",
+    "summary": "Primeiro campeão brasileiro em Olimpíadas de Inverno, o esquiador Lucas Pinheiro Braathen faturou o ouro na prova de slalom gigante masculino que abriu no último domingo (25) a temporada do circuito internacional de esqui alpino em Sölden (Áustria).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/lucas-pinheiro-abre-temporada-com-ouro-em-slalom-gigante-na-austria",
+    "publishedAt": "26/10/2026 às 19:07",
+    "category": "Esportes",
+    "ingestedAt": "26/10/2026 às 21:28",
+    "imageUrl": "https://imagens.ebc.com.br/jgBphsTAIMBBgQ0KXXqSt3nrfIM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/26/lucas_pinheiro_braathen_ouro_austria_out_2026_1.jpg?itok=OiRI6hYT",
+    "imageCaption": "Lucas Pinheiro abre temporada com ouro em slalom gigante na Áustria",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Lucas Pinheiro abre temporada com ouro em slalom gigante na Áustria",
+    "author": "Agência Brasil",
+    "tags": [
+      "Esportes",
+      "slalom gigante",
+      "Lucas Pinheiro Braathen",
+      "ouro",
+      "campeão olímpico"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706876",
+    "title": "Dólar sobe 8,21%, e bolsa cai 13,88% após reeleição de Lula",
+    "summary": "O mercado financeiro brasileiro teve um dia de forte turbulência nesta segunda-feira (26), após a reeleição do presidente Luiz Inácio Lula da Silva no segundo turno das eleições presidenciais. O dólar fechou em alta de 8,21%, a R$ 5,403.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/dolar-sobe-821-e-bolsa-cai-1388-apos-reeleicao-de-lula",
+    "publishedAt": "26/10/2026 às 19:07",
+    "category": "Economia",
+    "ingestedAt": "26/10/2026 às 21:28",
+    "imageUrl": "https://imagens.ebc.com.br/EWxxyDwzkokjlHCxeSm6du6t7-E=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2021-10-06t120841z_1_lynxmpeh950lf_rtroptp_4_dolar-abre.jpg?itok=Y5tU1sqN",
+    "imageCaption": "Dólar sobe 8,21%, e bolsa cai 13,88% após reeleição de Lula",
+    "imageCredit": "Wellton Máximo - Repórter da Agência Brasil*",
+    "imageAlt": "Dólar sobe 8,21%, e bolsa cai 13,88% após reeleição de Lula",
+    "author": "Wellton Máximo - Repórter da Agência Brasil*",
+    "tags": [
+      "Economia",
+      "Mercado Financeiro",
+      "Dólar",
+      "Bolsa de Valores",
+      "Ibovespa"
+    ],
+    "content": []
+  },
+  {
     "id": "camara-1310277-projeto-facilita-captacao-de-r",
     "title": "Projeto facilita captação de recursos privados para produtores rurais",
     "summary": "Texto está em análise na Câmara dos Deputados.",
@@ -24,18 +199,55 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Brasil",
       "Notícias"
     ],
-    "content": [
-      "Vinicius Loures/Câmara dos Deputados",
-      "Deputado José Medeiros, autor do projeto de lei",
-      "O Projeto de Lei 3117/26 cria o marco do crédito privado desburocratizado do agronegócio (Fiagro Livre). O objetivo é simplificar a emissão de títulos de crédito (CPR) por agricultores familiares e pequenos e médios produtores, facilitando o acesso ao crédito privado. O texto tramita na Câmara dos Deputados.",
-      "Pela proposta, a emissão de títulos de crédito pelo produtor poderá ser feita por meio eletrônico, com assinatura digital, dispensando o reconhecimento de firma em cartório. Além disso, a documentação exigida será limitada ao estritamente necessário para identificar o produtor e a operação.",
-      "As CPRs emitidas poderão contar com uma garantia complementar de fundos garantidores autorizados pelo governo.",
-      "O texto proíbe órgãos públicos de exigirem documentos adicionais que não estejam previstos na lei e determina que o governo promova um programa de educação financeira voltado ao produtor.",
-      "O autor do projeto, deputado José Medeiros (PL-MT), argumentou que os produtores rurais estão enfrentando dificuldade para acessar o crédito rural tradicional, devido aos altos custos, escassez de recursos subsidiados e burocracia.",
-      "\"Enquanto grandes grupos econômicos conseguem captar recursos diretamente no mercado financeiro, emitir títulos e acessar fundos de investimento, milhares de produtores permanecem dependentes de processos burocráticos lentos e frequentemente incompatíveis com o calendário agrícola\", justificou o parlamentar.",
-      "O projeto será analisado em caráter conclusivo pelas comissões de Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania. Para virar lei, precisa ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
+    "content": []
+  },
+  {
+    "id": "ebc-1706874",
+    "title": "Anvisa proíbe venda de picolé com melatonina e suplemento de proteína",
+    "summary": "A Agência Nacional de Vigilância Sanitária (Anvisa) decidiu, nesta segunda (26), recolher e proibir a comercialização de dois produtos alimentícios, um picolé e um suplemento, por conterem ingredientes que não passaram por avaliação de segurança.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/anvisa-proibe-venda-de-picole-com-melatonina-e-suplemento-de-proteina",
+    "publishedAt": "26/10/2026 às 18:40",
+    "category": "Política",
+    "ingestedAt": "26/10/2026 às 21:28",
+    "imageUrl": "https://imagens.ebc.com.br/NkPZeU3XE-goCGG7FUa13DNOlvI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/01/09/0d7a5833.jpg?itok=nEsJTKzo",
+    "imageCaption": "Anvisa proíbe venda de picolé com melatonina e suplemento de proteína",
+    "imageCredit": "Luiz Claudio Ferreira - Repórter da Agência Brasil",
+    "imageAlt": "Anvisa proíbe venda de picolé com melatonina e suplemento de proteína",
+    "author": "Luiz Claudio Ferreira - Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "Anvisa",
+      "suplemento",
+      "picolé",
+      "Política"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706872",
+    "title": "Dengue: 3 milhões de adolescentes estão com vacinação incompleta",
+    "summary": "Mais de 3 milhões de adolescentes que tomaram a primeira dose da vacina contra a dengue ainda precisam voltar aos postos de saúde para completar o esquema vacinal.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/dengue-3-milhoes-de-adolescentes-estao-com-vacinacao-incompleta",
+    "publishedAt": "26/10/2026 às 18:34",
+    "category": "Governo",
+    "ingestedAt": "26/10/2026 às 21:28",
+    "imageUrl": "https://imagens.ebc.com.br/xyENdfD6AeWM8rt6M9DjF6yynDE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/04/04/img_9278.jpg?itok=EDKoaR5c",
+    "imageCaption": "Dengue: 3 milhões de adolescentes estão com vacinação incompleta",
+    "imageCredit": "Tâmara Freire - Repórter da Agência Brasil",
+    "imageAlt": "Dengue: 3 milhões de adolescentes estão com vacinação incompleta",
+    "author": "Tâmara Freire - Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "vacina",
+      "Dengue",
+      "Instituto Butantan",
+      "Ministério da Saúde"
+    ],
+    "content": []
   },
   {
     "id": "ebc-1706871",
@@ -59,24 +271,29 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Emmanuel Macron",
       "repercussão"
     ],
-    "content": [
-      "Políticos de várias partes do mundo continuam se manifestando, após a reeleição do presidente Luiz Inácio Lula da Silva, no último domingo (25).",
-      "O presidente da França, Emmanuel Macron, usou as redes sociais para parabenizar o seu homólogo brasileiro.",
-      "O primeiro-ministro da Espanha, Pedro Sanchéz, foi outro a usar as redes sociais para exaltar a vitória de Lula sobre a extrema-direita.",
-      "O presidente do Equador, Daniel Noboa, também foi ao X, antigo Twitter, para felicitar o presidente brasileiro.",
-      "“Parabéns, Lula, por esta vitória. Nossa região tem inimigos comuns, desafios compartilhados e muito a ganhar quando trabalhamos juntos”.",
-      "Noboa é um político de direita e um dos aliados do presidente dos Estados Unidos, Donald Trump, na América do Sul.",
-      "Outros líderes da América Latina também felicitaram o brasileiro pela reeleição. Entre eles, a presidente do México, Claudia Sheinbaum, e o presidente do Uruguai, Yamandu Orsi.",
-      "O primeiro-ministro do Canadá, Mark Carney, também exaltou a relação entre seu país e o Brasil ao congratular o presidente reeleito.",
-      "“A relação entre o Canadá e o Brasil floresceu sob nossa parceria. Vamos aproveitar essa oportunidade para torna-la ainda mais forte, juntos – para criar novas grandes oportunidades de comércio, proteger o meio-ambiente e construir maior prosperidade para os povos de ambos países”.",
-      "A primeira ministra do Japão, Sanae Takaishi, disse esperar que Lula “continue a guiar o Brasil com sua forte liderança” e se mostrou ansiosa para trabalhar com o brasileiro e estreitar “ainda mais a parceria estratégica global numa gama ampla de áreas”. Entre essas áreas, Takaishi citou um acordo entre Japão e Mercosul.",
-      "A China divulgou um comunicado por meio do porta-voz do ministério chinês dos Negócios Estrangeiros.",
-      "Vladimir Putin, presidente da Rússia, falou em “reconhecimento dos brasileiros às suas notáveis qualidades de liderança, seu apoio à política de desenvolvimento socioeconômico sustentável do país e a proteção de sua soberania e legítimos interesses no cenário global”.",
-      "Já Ursula Von der Leyen, presidente da Comissão Europeia, publicou um comunicado se dirigindo a Lula e exaltou a bandeira do multilateralismo, muito defendida pelo brasileiro em seus discursos no exterior. “Parabéns ao amigo Lula pela sua vitória eleitoral. A democracia e o multilateralismo venceram no Brasil”.",
-      "O prefeito de Nova York, Zohran Mamdani, em entrevista à imprensa nesta segunda-feira (26), disse que estava indo para casa quando viu vários novaiorquinos saindo de um bar gritando o nome de Lula o que mostrou, segundo ele, animação dos moradores da cidade com a vitória do candidato do PT.",
-      "“Eu vi o quanto ele significa para tanta gente nessa cidade, nesse país e por todo o mundo, honestamente”. Nas redes sociais, Mamdani também mandou um recado para Lula. “O povo unido jamais será vencido! Parabéns, presidente Lula.”",
-      "*com informações de Matheus Crobelatti e Pedro Rafael Vilela"
-    ]
+    "content": []
+  },
+  {
+    "id": "ebc-1706870",
+    "title": "Dia do Servidor Público: ponto facultativo será na sexta-feira",
+    "summary": "Celebrado no dia 28 de outubro, o Dia do Servidor Público terá este ano o ponto facultativo transferido para a sexta-feira. dia 30, próxima sexta-feira. Desta forma, a data se une ao fim de semana e ao feriado do Dia de Finados, em 2 de novembro, na segunda-feira.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/dia-do-servidor-publico-ponto-facultativo-sera-na-sexta-feira",
+    "publishedAt": "26/10/2026 às 18:28",
+    "category": "Política",
+    "ingestedAt": "26/10/2026 às 21:28",
+    "imageUrl": "https://imagens.ebc.com.br/ylHlw_pEhxAAhx-CSiFVhbhP4yE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/06/22/dji_20260621145838_0073_d.jpg?itok=D1wMTw7F",
+    "imageCaption": "Dia do Servidor Público: ponto facultativo será na sexta-feira",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Dia do Servidor Público: ponto facultativo será na sexta-feira",
+    "author": "Agência Brasil",
+    "tags": [
+      "Geral",
+      "Dia do Servidor Público",
+      "Política"
+    ],
+    "content": []
   },
   {
     "id": "ebc-1706869",
@@ -100,18 +317,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Salvador",
       "frota de ônibus"
     ],
-    "content": [
-      "O presidente do Tribunal Regional Eleitoral da Bahia (TRE-BA), Maurício Kertzman Szporer, revogou, nesta segunda-feira (26), a ordem de prisão em flagrante do secretário municipal de Mobilidade de Salvador, Pablo Souza.",
-      "O magistrado tinha ordenado , no domingo (25), que a Polícia Federal (PF) detivesse Souza. A determinação buscava “constranger” a Secretaria de Mobilidade (Semob) a tomar as providências necessárias para garantir a circulação de 100% da frota de ônibus na capital baiana durante o segundo turno das eleições.",
-      "“A [ordem de] prisão cumpria função instrumental: constranger ao cumprimento imediato da tutela de urgência até o encerramento da votação. Essa finalidade se exauriu [com o término do horário de votação]”, argumenta Szporer ao justificar a revogação de parte de sua decisão anterior.",
-      "Segundo o magistrado, o mandado de prisão não foi cumprido antes de deixar de ser necessário porque Souza se encontra no exterior e só deve retornar ao Brasil nesta segunda-feira. O secretário municipal também se comprometeu a se apresentar espontaneamente às autoridades responsáveis assim que chegar ao país.",
-      "O Ministério Público Eleitoral (MPE), que instaurou um procedimento preliminar (notícia de fato) para apurar as suspeitas de crime eleitoral, não requereu a prisão de Souza.",
-      "Em sua decisão, o presidente do TRE-BA destaca que a revogação da ordem de prisão não elimina a necessidade de apuração dos fatos . O magistrado determina que a Semob e as empresas concessionárias preservem e apresentem, em até 48 horas após ser intimadas, o plano de operações vigente no domingo; as escalas de motoristas; as ordens de serviço; os registros de monitoramento da frota e as comunicações internas relativas à redução do serviço, com a comparação com dias úteis.",
-      "Segundo Szporer, a conduta de Souza, em tese, pode configurar crime eleitoral, passível de reclusão de quatro a seis anos e mais o pagamento de multa.",
-      "Há provas materiais, como vídeos e fotografias, de dezenas de ônibus retidos em garagens das empresas concessionárias de transporte durante no horário de votação, enquanto a frota operava com uma redução superior a 50% da empregada em dias úteis.",
-      "A Agência Brasil não conseguiu contato com o secretário municipal ou com seus advogados.",
-      "Em nota divulgada no domingo, a Semob garantiu ter determinado que todos os ônibus fossem liberados das garagens , com a frota máxima, de forma a garantir o serviço de transporte gratuito para a população durante a votação."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706867",
@@ -295,7 +501,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "author": "Lincoln Chaves- Repórter da EBC",
     "tags": [
       "Esportes",
-      "finalistas",
+      "Finalistas",
       "laterais-esquerdas",
       "prêmio",
       "Futebol Feminino"
@@ -925,216 +1131,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições 2026",
       "mídias digitais",
       "plataformas digitais"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706744",
-    "title": "Flávio não reconhece vitória de Lula e tentará anulação do pleito",
-    "summary": "O senador Flávio Bolsonaro (PL), candidato derrotado no segundo turno das eleições presidenciais, anunciou na noite deste domingo (25) que não vai reconhecer o resultado das urnas, apesar da diferença de mais de 4,4 milhões de votos a favor de Luiz Inácio Lula da Silva (PT) .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/flavio-nao-reconhece-vitoria-de-lula-e-tentara-anulacao-do-pleito",
-    "publishedAt": "25/10/2026 às 23:39",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 06:34",
-    "imageUrl": "https://imagens.ebc.com.br/qD733U3Fydl3t6-aw2NgvpRbmS8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/0d4a6224.jpg?itok=QmVUasF2",
-    "imageCaption": "Flávio não reconhece vitória de Lula e tentará anulação do pleito",
-    "imageCredit": "Pedro Rafael Vilela - Repórter da Agência Brasil",
-    "imageAlt": "Flávio não reconhece vitória de Lula e tentará anulação do pleito",
-    "author": "Pedro Rafael Vilela - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Flávio Bolsonaro",
-      "Lula reeleito",
-      "Multimídia"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706749",
-    "title": "“Vamos mudar o jeito de governar este país”, diz Lula",
-    "summary": "No primeiro discurso após a reeleição, o presidente Luiz Inácio Lula da Silva afirmou que mudará o jeito de governar o Brasil. Com 100% das urnas apuradas, Lula registrou mais de 64,2 milhões de votos, o que corresponde a 51,79% dos votos válidos.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/vamos-mudar-o-jeito-de-governar-este-pais-diz-lula",
-    "publishedAt": "25/10/2026 às 23:35",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 06:34",
-    "imageUrl": "https://imagens.ebc.com.br/bDzqtQ08f1ckQuo2Md8bK2dTEWY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int0408.jpg.jpeg?itok=7R16VWZ1",
-    "imageCaption": "“Vamos mudar o jeito de governar este país”, diz Lula",
-    "imageCredit": "Wellton Máximo – Repórter da Agência Brasil",
-    "imageAlt": "“Vamos mudar o jeito de governar este país”, diz Lula",
-    "author": "Wellton Máximo – Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Lula reeleito",
-      "Lula",
-      "Multimídia"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706747",
-    "title": "Motta e Alcolumbre, líderes do Congresso Nacional, parabenizam Lula",
-    "summary": "Os líderes do Congresso Nacional fizeram um pronunciamento conjunto à imprensa, na noite deste domingo (25), em Brasília, para saudar a reeleição do presidente Luiz Inácio Lula da Silva .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/motta-e-alcolumbre-lideres-do-congresso-nacional-parabenizam-lula",
-    "publishedAt": "25/10/2026 às 23:31",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 06:34",
-    "imageUrl": "https://imagens.ebc.com.br/9GzLzWc3-2i9ZwugDbr9cw2w29A=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int0419.jpg.jpeg?itok=MeaY6Qnk",
-    "imageCaption": "Motta e Alcolumbre, líderes do Congresso Nacional, parabenizam Lula",
-    "imageCredit": "Pedro Rafael Vilela - Repórter da Agência Brasil",
-    "imageAlt": "Motta e Alcolumbre, líderes do Congresso Nacional, parabenizam Lula",
-    "author": "Pedro Rafael Vilela - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "Lula",
-      "eleições 2026",
-      "Hugo Motta",
-      "Davi Alcolumbre"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706743",
-    "title": "Fachin diz que vontade dos eleitores deve ser respeitada",
-    "summary": "O presidente do Supremo Tribunal Federal (STF), ministro Edson Fachin, declarou neste domingo (25) que a vontade manifestada pelos eleitores nas urnas deve ser respeitada.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/fachin-diz-que-vontade-dos-eleitores-deve-ser-respeitada",
-    "publishedAt": "25/10/2026 às 23:11",
-    "category": "Justiça",
-    "ingestedAt": "26/10/2026 às 06:34",
-    "imageUrl": "https://imagens.ebc.com.br/6-LSG4GLgpQioLx6Kp_2ZL61MPs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/21/55603645624_ea872fc2f4_o.jpg?itok=BdXcMxDz",
-    "imageCaption": "Fachin diz que vontade dos eleitores deve ser respeitada",
-    "imageCredit": "André Richter - Repórter da Agência Brasil",
-    "imageAlt": "Fachin diz que vontade dos eleitores deve ser respeitada",
-    "author": "André Richter - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Edson Fachin",
-      "stf",
-      "eleições 2026",
-      "Lula"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706729",
-    "title": "Nas redes sociais, líderes latino-americanos saúdam Lula pela vitória",
-    "summary": "Momentos após a confirmação oficial da vitória de Luiz Inácio Lula da Silva nas eleições presidenciais do Brasil, líderes de países vizinhos foram às redes sociais cumprimentar o presidente reeleito.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/nas-redes-sociais-lideres-latino-americanos-saudam-lula-pela-vitoria",
-    "publishedAt": "25/10/2026 às 22:50",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 06:34",
-    "imageUrl": "https://imagens.ebc.com.br/vzm-zmb8AvwlOkqhW1bgdppzZK0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int0023.jpg_0.jpeg?itok=b3TSu2Ab",
-    "imageCaption": "Nas redes sociais, líderes latino-americanos saúdam Lula pela vitória",
-    "imageCredit": "Pedro Rafael Vilela - Repórter da Agência Brasil",
-    "imageAlt": "Nas redes sociais, líderes latino-americanos saúdam Lula pela vitória",
-    "author": "Pedro Rafael Vilela - Repórter da Agência Brasil",
-    "tags": [
-      "Internacional",
-      "eleições 2026",
-      "Lula",
-      "Eleições"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1313728-presidente-do-tse-afirma-que-a",
-    "title": "Presidente do TSE afirma que a decisão de prorrogar a votação exigiu medidas extraordinárias",
-    "summary": "Ministro Kassio Nunes Marques disse que houve dificuldades para armazenar boletins de urna, mas que a apuração ocorreu com segurança.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1313728-presidente-do-tse-afirma-que-a-decisao-de-prorrogar-a-votacao-exigiu-medidas-extraordinarias",
-    "publishedAt": "25/10/2026 às 22:42",
-    "category": "Congresso",
-    "ingestedAt": "26/10/2026 às 06:34",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/kassio-nunes-marques-768x463.jpg",
-    "imageCaption": "Ministro Kassio Nunes Marques, presidente do TSE, faz balanço da eleição",
-    "imageCredit": "Lula Marques/Agência Brasil",
-    "imageAlt": "Ministro Kassio Nunes Marques, presidente do TSE",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706720",
-    "title": "Presidente do TSE liga para Lula para parabenizar reeleição",
-    "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, ligou neste domingo (25) para o presidente Luiz Inácio Lula da Silva para parabenizá-lo pela reeleição no segundo turno das eleições .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/presidente-do-tse-liga-para-lula-para-parabenizar-reeleicao",
-    "publishedAt": "25/10/2026 às 22:39",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 06:34",
-    "imageUrl": "https://imagens.ebc.com.br/TyiB-qihGNK_VWmQ5HF-IpJwfhA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_mg_9334-1.jpg?itok=jxqQ-8kY",
-    "imageCaption": "Presidente do TSE liga para Lula para parabenizar reeleição",
-    "imageCredit": "André Richter - repórter da Agência Brasil",
-    "imageAlt": "Presidente do TSE liga para Lula para parabenizar reeleição",
-    "author": "André Richter - repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Lula",
-      "Kassio Nunes Marques",
-      "TSE"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706442",
-    "title": "Rebeca Andrade conquista o tri no Mundial de Ginástica na Holanda",
-    "summary": "A brasileira Rebeca Andrade conquistou neste sábado (24) o tricampeonato no Campeonato Mundial de Ginástica Artística 2026, em Roterdã, Holanda. Rebeca levou o primeiro lugar no pódio na prova do salto sobre a mesa, com 14.466 pontos.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/rebeca-andrade-conquista-o-tri-no-mundial-de-ginastica-na-holanda",
-    "publishedAt": "24/10/2026 às 15:04",
-    "category": "Esportes",
-    "ingestedAt": "24/10/2026 às 16:20",
-    "imageUrl": "https://imagens.ebc.com.br/-AJEBVI2xgAMtic8DGjzXzinFSU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/24/2026-10-24t133541z_1335199391_up1emao11rgeg_rtrmadp_3_gymnastics-world.jpg?itok=53F8_PSQ",
-    "imageCaption": "Rebeca Andrade conquista o tri no Mundial de Ginástica na Holanda",
-    "imageCredit": "Letycia Treitero Kawada - Repórter da Agência Brasil",
-    "imageAlt": "Rebeca Andrade conquista o tri no Mundial de Ginástica na Holanda",
-    "author": "Letycia Treitero Kawada - Repórter da Agência Brasil",
-    "tags": [
-      "Esportes",
-      "Rebeca Andrade",
-      "ginástica artística"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706416",
-    "title": "Ronaldinho Gaúcho anuncia volta aos gramados pelo italiano Ravenna",
-    "summary": "O jogador Ronaldinho Gaúcho voltará ao futebol profissional no próximo mês, quando jogará pelo Ravenna, time da terceira divisão italiana, contra o rival local Forlì. O anúncio foi feito pelo clube nesta sexta-feira (23) e a partida está marcada para o dia 15 de novembro.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/ronaldinho-gaucho-anuncia-volta-aos-gramados-pelo-italiano-ravenna",
-    "publishedAt": "24/10/2026 às 11:53",
-    "category": "Esportes",
-    "ingestedAt": "24/10/2026 às 13:58",
-    "imageUrl": "https://imagens.ebc.com.br/01fNtZRq4zo1CLqWVbRJCRwhdUk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/24/rg01.jpg?itok=LsTYt75m",
-    "imageCaption": "Ronaldinho Gaúcho anuncia volta aos gramados pelo italiano Ravenna",
-    "imageCredit": "Agência Brasil*",
-    "imageAlt": "Ronaldinho Gaúcho anuncia volta aos gramados pelo italiano Ravenna",
-    "author": "Agência Brasil*",
-    "tags": [
-      "Esportes",
-      "Ronaldinho Gaúcho",
-      "Futebol",
-      "Itália"
     ],
     "content": []
   },
