@@ -1,7 +1,7 @@
-import congressoImg from "./images/editorial_congresso_brasilia_1791575832620.webp";
-import urnaImg from "./images/editorial_urna_eleicoes_1791575843949.webp";
-import economiaImg from "./images/editorial_economia_brasil_1791575854174.webp";
-import dadosImg from "./images/editorial_dados_publicos_1791575864014.webp";
+import congressoImg from "./images/editorial_congresso_brasilia_1791575832620.jpg";
+import urnaImg from "./images/editorial_urna_eleicoes_1791575843949.jpg";
+import economiaImg from "./images/editorial_economia_brasil_1791575854174.jpg";
+import dadosImg from "./images/editorial_dados_publicos_1791575864014.jpg";
 
 export const EDITORIAL_IMAGES = {
   congresso: {

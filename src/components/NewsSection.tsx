@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NewsItem, NewsCategory, NEWS_CATEGORIES } from "../types/news";
-import { isValidImageUrl, getFullArticleById } from "../services/newsService";
+import { isValidImageUrl } from "../services/newsService";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { NewsCard } from "./NewsCard";
 import { useNews } from "../hooks/useNews";
@@ -35,31 +35,14 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
     setSearchQuery,
     activeArticle,
     setActiveArticle,
-  } = useNews({ initialArticles: articles, skipBackgroundSync: true });
+  } = useNews({ initialArticles: articles });
 
   const [copied, setCopied] = useState(false);
   const [modalImageError, setModalImageError] = useState(false);
-  const [dynamicContent, setDynamicContent] = useState<string[] | null>(null);
 
   useEffect(() => {
     setModalImageError(false);
-    setDynamicContent(activeArticle?.content && activeArticle.content.length > 0 ? activeArticle.content : null);
-    if (activeArticle && (!activeArticle.content || activeArticle.content.length === 0)) {
-      let isMounted = true;
-      getFullArticleById(activeArticle.id)
-        .then((full) => {
-          if (isMounted && full?.content && full.content.length > 0) {
-            setDynamicContent(full.content);
-          }
-        })
-        .catch(() => {});
-      return () => {
-        isMounted = false;
-      };
-    }
-  }, [activeArticle?.id, activeArticle?.imageUrl, activeArticle?.content]);
-
-  const activeContent = dynamicContent || (activeArticle?.content && activeArticle.content.length > 0 ? activeArticle.content : null);
+  }, [activeArticle?.id, activeArticle?.imageUrl]);
 
   const categories = ["Todas", ...NEWS_CATEGORIES];
 
@@ -127,34 +110,31 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
         </div>
 
         {/* Barra de Navegação por Categorias Oficiais */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-6 text-xs">
-          <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-bold uppercase text-slate-600 mr-1 shrink-0">
-            <Filter className="w-3 h-3 text-slate-500" />
+        <div role="tablist" aria-label="Categorias oficiais de notícias" className="flex items-center gap-1.5 overflow-x-auto pb-3 mb-6 text-xs scrollbar-thin scrollbar-thumb-slate-200">
+          <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-bold uppercase text-slate-400 mr-1 shrink-0">
+            <Filter className="w-3 h-3" />
             Filtro:
           </span>
 
-          <div role="tablist" aria-label="Categorias oficiais de notícias" className="flex items-center gap-1.5 scrollbar-thin scrollbar-thumb-slate-200">
-            {categories.map((cat) => {
-              const isActive = selectedCategory === cat;
-              return (
-                <button
-                  key={cat}
-                  role="tab"
-                  aria-selected={isActive}
-                  aria-controls="news-articles-grid"
-                  aria-label={`Filtrar notícias por ${cat}`}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`min-h-[34px] px-3 py-1.5 rounded-xl font-bold transition-all cursor-pointer whitespace-nowrap text-xs shrink-0 flex items-center justify-center ${
-                    isActive
-                      ? "bg-slate-900 text-white shadow-xs"
-                      : "bg-slate-100 text-slate-700 hover:text-slate-950 hover:bg-slate-200/80"
-                  }`}
-                >
-                  {cat}
-                </button>
-              );
-            })}
-          </div>
+          {categories.map((cat) => {
+            const isActive = selectedCategory === cat;
+            return (
+              <button
+                key={cat}
+                role="tab"
+                aria-selected={isActive}
+                aria-label={`Filtrar notícias por ${cat}`}
+                onClick={() => setSelectedCategory(cat)}
+                className={`min-h-[34px] px-3 py-1.5 rounded-xl font-bold transition-all cursor-pointer whitespace-nowrap text-xs shrink-0 flex items-center justify-center ${
+                  isActive
+                    ? "bg-slate-900 text-white shadow-xs"
+                    : "bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200/80"
+                }`}
+              >
+                {cat}
+              </button>
+            );
+          })}
         </div>
 
         {/* Mensagem quando não houver resultados */}
@@ -163,7 +143,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
             <p className="text-sm font-bold text-slate-700">
               Nenhuma notícia encontrada para os critérios selecionados.
             </p>
-            <p className="text-xs text-slate-600 mt-1">
+            <p className="text-xs text-slate-500 mt-1">
               Tente redefinir o termo de pesquisa ou escolher outra categoria.
             </p>
             <button
@@ -178,7 +158,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
           </div>
         ) : (
           /* Grade Responsiva de Cartões de Notícias */
-          <div id="news-articles-grid" role="region" aria-label="Notícias oficiais filtradas" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredArticles.map((article, idx) => {
               const isFeatured = idx === 0 && selectedCategory === "Todas" && !searchQuery;
 
@@ -303,7 +283,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
                 <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-blue-700" />
                   <span>
-                    {activeContent && activeContent.length > 0
+                    {activeArticle.content && activeArticle.content.length > 0
                       ? "Resumo do Fato"
                       : "Nota de Síntese Factual Oficial"}
                   </span>
@@ -352,9 +332,9 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
               </div>
 
               {/* Parágrafos do Conteúdo ou Diretriz de Transparência de Súmula */}
-              {activeContent && activeContent.length > 0 ? (
+              {activeArticle.content && activeArticle.content.length > 0 ? (
                 <div className="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed mb-6 font-serif">
-                  {activeContent.map((p, idx) => (
+                  {activeArticle.content.map((p, idx) => (
                     <p key={idx}>{p}</p>
                   ))}
                 </div>

@@ -67,7 +67,6 @@ jobs:
           else
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
             git commit -m "chore(eleicoes): atualiza apuração oficial do 2º turno presidencial 2026 [skip ci]"
-            git pull --rebase origin main || true
             git push
             NEW_SHA=$(git rev-parse HEAD)
             echo "commit_sha=$NEW_SHA" >> "$GITHUB_OUTPUT"
@@ -77,10 +76,10 @@ jobs:
   deploy-pages:
     name: Deploy Updated Election Data to GitHub Pages
     needs: update-election-data
-    if: needs.update-election-data.outputs.has_changes == 'true' || github.event_name == 'workflow_dispatch'
+    if: needs.update-election-data.outputs.has_changes == 'true'
     uses: ./.github/workflows/deploy.yml
     with:
-      ref: ${{ needs.update-election-data.outputs.commit_sha || github.sha }}
+      ref: ${{ needs.update-election-data.outputs.commit_sha || 'main' }}
     permissions:
       contents: read
       pages: write

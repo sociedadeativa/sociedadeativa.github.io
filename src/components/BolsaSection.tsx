@@ -401,9 +401,9 @@ export const BolsaSection: React.FC = () => {
           <div className="flex items-start gap-3">
             <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
             <div className="text-xs">
-              <h3 className="font-bold text-amber-950 mb-0.5">
+              <h4 className="font-bold text-amber-950 mb-0.5">
                 Falha na Sincronização Automática ({syncError.time})
-              </h3>
+              </h4>
               <p className="text-amber-800 leading-relaxed">
                 Não foi possível obter dados frescos do servidor nesta verificação. As cotações da última sincronização bem-sucedida (<strong className="font-mono text-amber-950">{lastSyncTime}</strong>) foram preservadas com segurança.
               </p>
@@ -427,7 +427,7 @@ export const BolsaSection: React.FC = () => {
         <div className="mb-6 p-4 bg-amber-50/90 rounded-2xl border border-amber-200 text-amber-900 flex items-start gap-3">
           <ShieldAlert className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
           <div className="text-xs">
-            <h3 className="font-bold text-amber-950 mb-0.5">Aviso de Dados Preservados (Conexão Indisponível)</h3>
+            <h4 className="font-bold text-amber-950 mb-0.5">Aviso de Dados Preservados (Conexão Indisponível)</h4>
             <p className="text-amber-800 leading-relaxed">
               {marketData.staleNotice ||
                 `Exibindo último fechamento oficial consolidado do pregão de ${marketData.tradingSession}. A comunicação em tempo real com a B3 está temporariamente indisponível. Nenhum valor de cotação ou variação foi fabricado.`}
@@ -546,14 +546,12 @@ export const BolsaSection: React.FC = () => {
 
       {/* PAINÉIS B, C e D: Rankings do Mercado (Mais Negociadas, Maiores Altas, Maiores Baixas) */}
       <div className="space-y-6">
-        <h3 className="sr-only">Rankings de Ações e Ativos da B3</h3>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200">
           {/* Navegação entre Abas de Rankings */}
           <div role="tablist" aria-label="Rankings de ações da B3" className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
             <button
               role="tab"
               aria-selected={activeTab === "mostTraded"}
-              aria-controls="painel-rankings-b3"
               aria-label={`Ver ações mais negociadas na B3 (${mostTraded.length} ativos)`}
               onClick={() => setActiveTab("mostTraded")}
               className={`min-h-[40px] px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
@@ -569,7 +567,6 @@ export const BolsaSection: React.FC = () => {
             <button
               role="tab"
               aria-selected={activeTab === "gainers"}
-              aria-controls="painel-rankings-b3"
               aria-label={`Ver maiores altas do pregão na B3 (${gainers.length} ativos)`}
               onClick={() => setActiveTab("gainers")}
               className={`min-h-[40px] px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
@@ -585,7 +582,6 @@ export const BolsaSection: React.FC = () => {
             <button
               role="tab"
               aria-selected={activeTab === "decliners"}
-              aria-controls="painel-rankings-b3"
               aria-label={`Ver maiores baixas do pregão na B3 (${decliners.length} ativos)`}
               onClick={() => setActiveTab("decliners")}
               className={`min-h-[40px] px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
@@ -599,7 +595,7 @@ export const BolsaSection: React.FC = () => {
             </button>
           </div>
 
-          <span className="text-[11px] text-slate-600 font-mono font-medium">
+          <span className="text-[11px] text-slate-500 font-mono">
             {isMarketOpen
               ? `Sessão ativa: ${marketData.tradingSession}`
               : `Sessão de fechamento: ${marketData.tradingSession}`}
@@ -623,29 +619,27 @@ export const BolsaSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Tabela do Ranking Ativo com papel semântico de tabpanel */}
-        <div id="painel-rankings-b3" role="tabpanel" aria-label="Tabela de rankings de ações da B3">
-          {activeTab === "mostTraded" &&
-            renderStockTable(
-              mostTraded,
-              "Volume Financeiro (R$)",
-              "Nenhuma ação registrada para o critério de volume financeiro."
-            )}
+        {/* Tabela do Ranking Ativo */}
+        {activeTab === "mostTraded" &&
+          renderStockTable(
+            mostTraded,
+            "Volume Financeiro (R$)",
+            "Nenhuma ação registrada para o critério de volume financeiro."
+          )}
 
-          {activeTab === "gainers" &&
-            renderStockTable(
-              gainers,
-              "Variação Diária (%)",
-              "Nenhuma ação em alta registrada nesta sessão."
-            )}
+        {activeTab === "gainers" &&
+          renderStockTable(
+            gainers,
+            "Variação Diária (%)",
+            "Nenhuma ação em alta registrada nesta sessão."
+          )}
 
-          {activeTab === "decliners" &&
-            renderStockTable(
-              decliners,
-              "Variação Diária (%)",
-              "Nenhuma ação em baixa registrada nesta sessão."
-            )}
-        </div>
+        {activeTab === "decliners" &&
+          renderStockTable(
+            decliners,
+            "Variação Diária (%)",
+            "Nenhuma ação em baixa registrada nesta sessão."
+          )}
       </div>
 
       {/* Nota de Governança, Regulação e Termos de Uso da B3 */}

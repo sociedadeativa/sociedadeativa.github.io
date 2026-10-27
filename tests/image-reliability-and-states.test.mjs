@@ -36,26 +36,7 @@ assert.ok(
   editorialImagesContent.includes("caption:"),
   "EDITORIAL_IMAGES entries must include attribution captions"
 );
-assert.ok(
-  editorialImagesContent.includes(".webp"),
-  "EDITORIAL_IMAGES must import optimized WebP fallback assets"
-);
-const fallbackImagesDir = path.join(rootDir, "src", "assets", "images");
-const expectedWebpFiles = [
-  "editorial_congresso_brasilia_1791575832620.webp",
-  "editorial_urna_eleicoes_1791575843949.webp",
-  "editorial_economia_brasil_1791575854174.webp",
-  "editorial_dados_publicos_1791575864014.webp",
-];
-for (const file of expectedWebpFiles) {
-  assert.ok(
-    fs.existsSync(path.join(fallbackImagesDir, file)),
-    `WebP fallback asset ${file} must exist on disk`
-  );
-}
-const existingJpgs = fs.readdirSync(fallbackImagesDir).filter((f) => f.endsWith(".jpg"));
-assert.equal(existingJpgs.length, 0, "No stale JPG fallback files should remain in src/assets/images");
-console.log("  [PASS] Editorial images registry contains all 4 verified WebP fallback assets with credits and zero stale JPGs.");
+console.log("  [PASS] Editorial images registry contains all 4 verified fallback assets with credits.");
 
 // --- TEST 2: CandidateImage Explicit Dimensions & Async Decoding ---
 console.log("\n[TEST 2] CandidateImage Dimensions & Decoding");

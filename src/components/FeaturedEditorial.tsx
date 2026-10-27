@@ -25,10 +25,9 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
   const PINNED_LEAD_ARTICLE_ID: string | null = null;
   const [leadImageError, setLeadImageError] = useState(false);
 
-  // Utiliza a ordenação cronológica já garantida por useNews / newsService sem reprocessamento duplicado no mount
+  // Garante ordenação cronológica decrescente estrita (mais recente primeiro) e ausência de duplicatas
   const validArticles = useMemo(() => {
-    if (!Array.isArray(articles) || articles.length === 0) return [];
-    return articles;
+    return sortNewsItems(deduplicateNewsItems(Array.isArray(articles) ? articles : []));
   }, [articles]);
 
   // Encontra artigo principal (Lead): prioriza fixação intencional, depois o mais recente (articles[0])
@@ -334,9 +333,9 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
               <div className="flex items-center justify-between pb-3 border-b border-slate-200">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-3.5 bg-blue-900 rounded-xs" />
-                  <h2 className="font-heading text-xs font-black uppercase tracking-wider text-slate-900">
+                  <span className="font-heading text-xs font-black uppercase tracking-wider text-slate-900">
                     Destaques Editoriais
-                  </h2>
+                  </span>
                 </div>
                 <PortalLink
                   route="noticias"
@@ -354,7 +353,7 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                     onClick={() => onOpenArticleDetails(art)}
                     className="group cursor-pointer py-3.5 first:pt-1 last:pb-0"
                   >
-                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] text-slate-600 mb-1.5 font-medium">
+                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] text-slate-500 mb-1.5 font-medium">
                       <span className={getCategoryBadgeClass(art.category, true)}>
                         {art.category}
                       </span>
@@ -380,14 +379,14 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
             <div className="pt-2">
               <div className="bg-slate-50 rounded-2xl p-4 sm:p-5 border border-slate-200/80">
                 <div className="flex items-center justify-between gap-2 mb-3.5 pb-2.5 border-b border-slate-200/60 min-w-0">
-                  <h2 className="font-heading text-xs font-black uppercase tracking-wider text-slate-900 flex items-center gap-1.5 min-w-0">
+                  <span className="font-heading text-xs font-black uppercase tracking-wider text-slate-900 flex items-center gap-1.5 min-w-0">
                     <Sparkles className="w-3.5 h-3.5 text-blue-900 shrink-0" />
                     <span className="truncate">
-                      Radar Cívico · Mais Lidas
+                      Radar Cívico <span className="hidden min-[390px]:inline">· Despachos Oficiais</span>
                     </span>
-                  </h2>
-                  <span className="text-[10px] font-mono text-slate-600 font-bold bg-white px-2 py-0.5 rounded border border-slate-200/70 shrink-0">
-                    Em Alta
+                  </span>
+                  <span className="text-[10px] font-mono text-slate-500 font-bold bg-white px-2 py-0.5 rounded border border-slate-200/70 shrink-0">
+                    Hoje
                   </span>
                 </div>
 
@@ -421,9 +420,6 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
 
                           {/* Cabeçalho do despacho: horário e órgão oficial */}
                           <div className="flex items-center gap-1.5 text-[10px] text-slate-500 font-mono mb-0.5 min-w-0">
-                            <span className="font-bold text-blue-900 tabular-nums shrink-0">
-                              0{idx + 1}.
-                            </span>
                             <span className="font-bold text-slate-700 tabular-nums shrink-0">
                               {timeString}
                             </span>
@@ -435,10 +431,10 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
                             </span>
                           </div>
 
-                          {/* Conteúdo / Título do Despacho com h3 semântico */}
-                          <h3 className="text-xs font-semibold text-slate-800 group-hover:text-blue-900 leading-snug line-clamp-2 transition-colors break-words">
+                          {/* Conteúdo / Título do Despacho */}
+                          <p className="text-xs font-medium text-slate-800 group-hover:text-blue-900 leading-snug line-clamp-2 transition-colors break-words">
                             {item.title}
-                          </h3>
+                          </p>
                         </li>
                       );
                     })}

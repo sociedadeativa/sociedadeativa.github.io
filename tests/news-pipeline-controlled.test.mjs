@@ -759,57 +759,6 @@ async function runTests() {
   console.log(t8.stdout.trim());
   passedTests++;
 
-  // TEST 9: Regression test: Paragraph Extraction with Editorial Markers and HTML Escaped Validation
-  console.log('\n[TEST 9] Regression: Paragraph Extraction with Editorial Markers & HTML Escaped Validation');
-  const test9Code = `
-    import fs from 'node:fs';
-    import assert from 'node:assert';
-    import { extractParagraphs } from './scripts/update-news-data.mjs';
-
-    // 1. Verify extractParagraphs strips leading editorial bullet arrows (>> / &gt;&gt;)
-    const rawWithArrows = \`
-      <p>&gt;&gt; TSE dá 24h para Meta e X explicarem distribuição de material político</p>
-      <p>Entidades da sociedade civil entregaram nota pública ao TSE manifestando preocupação.</p>
-      <p>&gt;&gt; Leia também: Regras eleitorais de 2026</p>
-    \`;
-    const paragraphs = extractParagraphs(rawWithArrows);
-    assert.ok(Array.isArray(paragraphs), "Expected paragraphs array");
-    assert.ok(paragraphs.length >= 1, "Expected at least 1 valid paragraph");
-    assert.strictEqual(
-      paragraphs[0],
-      "TSE dá 24h para Meta e X explicarem distribuição de material político",
-      "extractParagraphs must strip leading '>>' or '&gt;&gt;' marker"
-    );
-    console.log("  [PASS] 1. Leading editorial markers like '>>' properly stripped from prose paragraphs.");
-
-    // 2. Verify validate-build handles HTML-escaped characters (<, >, &, quotes)
-    const validateScript = fs.readFileSync('scripts/validate-build.mjs', 'utf8');
-    assert.ok(
-      validateScript.includes('pSampleEscaped') || validateScript.includes('paragraphEscaped'),
-      "validate-build.mjs must support HTML-escaped characters in paragraph validation"
-    );
-    console.log("  [PASS] 2. validate-build.mjs includes HTML-escaped paragraph validation support.");
-
-    // 3. Verify .github/workflows/update-news-data.yml stages public/sitemap.txt
-    const workflowContent = fs.readFileSync('.github/workflows/update-news-data.yml', 'utf8');
-    assert.ok(
-      workflowContent.includes('public/sitemap.txt'),
-      "update-news-data.yml must stage public/sitemap.txt in git add"
-    );
-    console.log("  [PASS] 3. update-news-data.yml git add includes public/sitemap.txt.");
-
-    console.log("TEST 9 PASSED: Paragraph extraction, HTML escaped validation, and workflow staging verified.");
-  `;
-
-  const t9 = await runScript(test9Code);
-  if (t9.code !== 0) {
-    console.error('Test 9 failed with stderr:', t9.stderr);
-    console.error('Stdout:', t9.stdout);
-    process.exit(1);
-  }
-  console.log(t9.stdout.trim());
-  passedTests++;
-
   // Restore initial data files
   fs.writeFileSync(NEWS_DATA_FILE, initialNewsData, 'utf8');
   fs.writeFileSync(TS_DATA_FILE, initialTsData, 'utf8');

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import {
   ExternalLink,
   ShieldCheck,
@@ -17,10 +17,9 @@ import {
 } from "../data/electionSecondRoundData";
 import { CandidateImage } from "./CandidateImage";
 
-export interface SecondRoundBannerProps {
+interface SecondRoundBannerProps {
   data?: SecondRoundTotalization;
   onOpenMethodology?: () => void;
-  pollingIntervalMs?: number;
 }
 
 const formatNumberBR = (num: number): string => {
@@ -34,25 +33,6 @@ const formatPercentBR = (num: number): string => {
   }).format(num) + "%";
 };
 
-const formatTimestampBR = (isoOrDateStr?: string): string => {
-  if (!isoOrDateStr) return "";
-  try {
-    const d = new Date(isoOrDateStr);
-    if (isNaN(d.getTime())) return isoOrDateStr;
-    return new Intl.DateTimeFormat("pt-BR", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      timeZone: "America/Sao_Paulo"
-    }).format(d);
-  } catch {
-    return isoOrDateStr;
-  }
-};
-
 /**
  * Painel informativo e de apuração dedicado ao 2º Turno da Eleição Presidencial de 2026.
  *
@@ -61,163 +41,12 @@ const formatTimestampBR = (isoOrDateStr?: string): string => {
  * - Não reutiliza dados numéricos do 1º turno como se fossem do 2º turno.
  * - Estado de pré-eleição (0 votos, 0 seções) é tratado explicitamente como "Aguardando apuração oficial".
  * - Dados consumidos exclusivamente do dataset oficial e isolado do 2º turno gerado a partir do TSE (EA20).
- * - Sincronização dinâmica via polling de 60s durante a apuração com cancelamento via AbortController.
  * - Disponibiliza link proeminente, acessível e seguro para o portal oficial do TSE (resultados.tse.jus.br).
  */
-/**
- * Validação rigorosa e monotônica de payload de totalização do 2º turno.
- * Rejeita formatos inválidos e qualquer regressão de dados (stale CDN cache):
- * - Regressão de finalização (isFinal: true -> false)
- * - Regressão de início de apuração (countingStarted: true -> false)
- * - Regressão de seções apuradas (sectionsCounted menor)
- * - Respostas obsoletas com contagem de seções inalterada mas timestamp anterior
- * - Regressão de votos totais ou válidos
- */
-export function validateSecondRoundPayload(
-  payload: unknown,
-  current?: SecondRoundTotalization
-): SecondRoundTotalization {
-  if (
-    !payload ||
-    typeof payload !== "object" ||
-    !Array.isArray((payload as any).candidates) ||
-    (payload as any).candidates.length === 0 ||
-    typeof (payload as any).sectionsTotal !== "number" ||
-    (payload as any).round !== 2
-  ) {
-    throw new Error("Payload de totalização recebido possui formato inválido.");
-  }
-
-  const json = payload as SecondRoundTotalization;
-
-  if (current) {
-    // 1. Defesa contra regressão de apuração já finalizada
-    if (current.isFinal && !json.isFinal) {
-      throw new Error("Payload recebido regrediu de apuração finalizada para não-finalizada (stale cache). Preservando dados mais recentes.");
-    }
-
-    // 2. Defesa contra regressão para estado de pré-apuração
-    if (current.countingStarted && !json.countingStarted) {
-      throw new Error("Payload recebido regrediu para estado pré-eleição (stale cache). Preservando dados mais recentes.");
-    }
-
-    // 3. Defesa contra regressão no número de seções apuradas
-    if (typeof json.sectionsCounted === "number" && typeof current.sectionsCounted === "number") {
-      if (json.sectionsCounted < current.sectionsCounted) {
-        throw new Error("Payload recebido possui contagem anterior à já totalizada (stale cache). Preservando dados mais recentes.");
-      }
-    }
-
-    // 4. Defesa contra respostas obsoletas (incluindo quando seções apuradas não mudaram):
-    // Verifica carimbos de data/hora oficiais (lastUpdated)
-    const currentUpdatedMs = current.lastUpdated ? Date.parse(current.lastUpdated) : 0;
-    const incomingUpdatedMs = json.lastUpdated ? Date.parse(json.lastUpdated) : 0;
-    if (!isNaN(currentUpdatedMs) && !isNaN(incomingUpdatedMs) && currentUpdatedMs > 0 && incomingUpdatedMs > 0) {
-      if (incomingUpdatedMs < currentUpdatedMs) {
-        throw new Error("Payload recebido possui data/hora anterior aos dados atuais (stale cache). Preservando dados mais recentes.");
-      }
-    }
-
-    // 5. Defesa contra decréscimo de votos computados
-    if (typeof json.totalVotes === "number" && typeof current.totalVotes === "number") {
-      if (json.totalVotes < current.totalVotes) {
-        throw new Error("Payload recebido possui total de votos inferior ao já totalizado (stale cache). Preservando dados mais recentes.");
-      }
-    }
-    if (typeof json.validVotes === "number" && typeof current.validVotes === "number") {
-      if (json.validVotes < current.validVotes) {
-        throw new Error("Payload recebido possui votos válidos inferiores ao já totalizado (stale cache). Preservando dados mais recentes.");
-      }
-    }
-  }
-
-  return json;
-}
-
 export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
-  data: initialData = SECOND_ROUND_DATA,
+  data = SECOND_ROUND_DATA,
   onOpenMethodology,
-  pollingIntervalMs = 60000,
 }) => {
-  const [data, setData] = useState<SecondRoundTotalization>(initialData);
-  const [fetchError, setFetchError] = useState<string | null>(null);
-  const [lastCheckTime, setLastCheckTime] = useState<Date | null>(null);
-  const dataRef = useRef<SecondRoundTotalization>(data);
-  dataRef.current = data;
-
-  useEffect(() => {
-    if (initialData) {
-      setData(initialData);
-    }
-  }, [initialData]);
-
-  useEffect(() => {
-    // Se a apuração já estiver finalizada, não executa polling contínuo
-    if (data.isFinal) {
-      return;
-    }
-
-    let isMounted = true;
-    let inFlightController: AbortController | null = null;
-
-    const fetchLatestData = async () => {
-      if (inFlightController) {
-        inFlightController.abort();
-      }
-      inFlightController = new AbortController();
-      const signal = inFlightController.signal;
-
-      try {
-        const response = await fetch(`/data/electionSecondRoundData.json?_t=${Date.now()}`, {
-          cache: "no-store",
-          signal,
-          headers: {
-            "Accept": "application/json",
-            "Cache-Control": "no-cache"
-          }
-        });
-
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}`);
-        }
-
-        const rawJson = await response.json();
-        const validJson = validateSecondRoundPayload(rawJson, dataRef.current);
-
-        if (isMounted) {
-          setData(validJson);
-          setFetchError(null);
-          setLastCheckTime(new Date());
-        }
-      } catch (err: unknown) {
-        if ((err as Error)?.name === "AbortError") {
-          return;
-        }
-        if (isMounted) {
-          // Preserva os dados válidos anteriores em caso de falha de rede/servidor ou stale cache
-          setFetchError((err as Error)?.message || "Falha na sincronização");
-          setLastCheckTime(new Date());
-        }
-      }
-    };
-
-    // 1. Busca imediata ao montar
-    fetchLatestData();
-
-    // 2. Polling contínuo a cada 60s antes do início da apuração, durante a apuração e até isFinal === true
-    const intervalId = setInterval(() => {
-      fetchLatestData();
-    }, pollingIntervalMs);
-
-    return () => {
-      isMounted = false;
-      if (inFlightController) {
-        inFlightController.abort();
-      }
-      clearInterval(intervalId);
-    };
-  }, [data.isFinal, pollingIntervalMs]);
-
   const candidates: SecondRoundCandidate[] = data.candidates || [];
   const countingStarted = Boolean(data.countingStarted);
   const isFinal = Boolean(data.isFinal);
@@ -271,41 +100,6 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
             ? "Acompanhe os resultados oficiais totalizados pelo Tribunal Superior Eleitoral (TSE) em tempo real para a disputa presidencial do 2º Turno."
             : "Acompanhe a disputa e consulte a apuração oficial no portal do TSE. A votação ocorre no domingo, 25 de outubro de 2026, das 08h00 às 17h00 (horário de Brasília)."}
         </p>
-
-        {/* Indicadores de Atualização e Horário Oficial */}
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-slate-300 mt-3 pt-3 border-t border-slate-800/80">
-          {data.totalizationTime ? (
-            <span className="inline-flex items-center gap-1.5 text-slate-200">
-              <Clock className="w-3.5 h-3.5 text-blue-400" />
-              <span>
-                Totalização oficial no TSE: <strong>{data.totalizationDate} às {data.totalizationTime}</strong> (Horário de Brasília)
-              </span>
-            </span>
-          ) : data.lastUpdated ? (
-            <span className="inline-flex items-center gap-1.5 text-slate-300">
-              <Clock className="w-3.5 h-3.5 text-slate-400" />
-              <span>
-                Última checagem oficial: <strong>{formatTimestampBR(data.lastUpdated)}</strong> (Horário de Brasília)
-              </span>
-            </span>
-          ) : null}
-
-          {!isFinal && (
-            <span className="inline-flex items-center gap-1.5 text-blue-300 bg-blue-950/60 px-2.5 py-0.5 rounded-full border border-blue-800/50">
-              <Radio className="w-3 h-3 text-blue-400 animate-pulse" />
-              <span>Atualização automática a cada 60s</span>
-            </span>
-          )}
-
-          {fetchError && (
-            <span
-              className="inline-flex items-center gap-1.5 text-amber-300 bg-amber-950/50 px-2.5 py-0.5 rounded-full border border-amber-800/50"
-              title={fetchError}
-            >
-              <span>Conexão com servidor instável — exibindo últimos dados confirmados</span>
-            </span>
-          )}
-        </div>
 
         {/* Barra de Progresso Real quando a Apuração Iniciou */}
         {countingStarted && (

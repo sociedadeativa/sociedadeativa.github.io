@@ -1,17 +1,10 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import { ElectionDataSet } from "../data/electionData";
+import { RegionalCharts } from "../components/RegionalCharts";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { PortalLink } from "../components/PortalLink";
 import { AdBanner } from "../components/AdBanner";
 import { Database, ShieldCheck, FileCode, ExternalLink, BarChart3, ArrowRight } from "lucide-react";
-
-const RegionalCharts = lazy(() => import("../components/RegionalCharts").then((m) => ({ default: m.RegionalCharts })));
-
-const RegionalChartsSkeleton: React.FC = () => (
-  <div className="w-full py-8 animate-pulse" aria-busy="true" aria-label="Carregando gráficos regionais">
-    <div className="h-64 bg-slate-100 rounded-3xl border border-slate-200" />
-  </div>
-);
 
 interface DadosPublicosPageProps {
   dataset: ElectionDataSet;
@@ -158,9 +151,7 @@ export const DadosPublicosPage: React.FC<DadosPublicosPageProps> = ({
               Comparações de volume de votos válidos nominais e desvios de comparecimento eleitoral.
             </p>
           </div>
-          <Suspense fallback={<RegionalChartsSkeleton />}>
-            <RegionalCharts dataset={dataset} />
-          </Suspense>
+          <RegionalCharts dataset={dataset} />
         </div>
 
         {/* 3. Diretório de APIs Oficiais do Governo Federal */}

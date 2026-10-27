@@ -1,53 +1,15 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath } from 'url';
-import { defineConfig, type Plugin } from 'vite';
+import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 const rootDir = fileURLToPath(new URL('.', import.meta.url));
 
-function earlyStylesheetDiscoveryPlugin(): Plugin {
-  return {
-    name: 'early-stylesheet-discovery',
-    enforce: 'post',
-    transformIndexHtml: {
-      order: 'post',
-      handler(html) {
-        // Encontra todas as tags <link rel="stylesheet"> geradas pelo Vite para o bundle de assets CSS
-        const cssLinkRegex = /<link\s+[^>]*rel=["']stylesheet["'][^>]*href=["'][^"']*assets\/[^"']+\.css["'][^>]*>/gi;
-        const matches = html.match(cssLinkRegex);
-        if (!matches || matches.length === 0) return html;
-
-        // Remove a tag da posição padrão (injetada no final de <head>, após os módulos JS)
-        let cleanedHtml = html.replace(cssLinkRegex, '');
-
-        // Formata as tags encontradas
-        const stylesheetTags = matches.join('\n    ');
-
-        // Posiciona a folha de estilo no topo do <head>, logo após a meta tag de viewport,
-        // garantindo que o preload scanner e o parser HTML descubram o CSS no 1º pacote TCP
-        if (cleanedHtml.includes('name="viewport"')) {
-          return cleanedHtml.replace(
-            /(<meta\s+name=["']viewport["'][^>]*>)/i,
-            `$1\n    ${stylesheetTags}`
-          );
-        } else if (cleanedHtml.includes('<head>')) {
-          return cleanedHtml.replace(/<head>/i, `<head>\n    ${stylesheetTags}`);
-        }
-        return cleanedHtml;
-      },
-    },
-  };
-}
-
-export default defineConfig(({ command }) => {
-  if (command === 'build') {
-    process.env.NODE_ENV = 'production';
-  }
-
+export default defineConfig(() => {
   return {
     base: './',
-    plugins: [react(), tailwindcss(), earlyStylesheetDiscoveryPlugin()],
+    plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
         '@': rootDir,
@@ -72,13 +34,11 @@ export default defineConfig(({ command }) => {
         },
         output: {
           manualChunks(id) {
-            if (id.includes('node_modules')) {
-              if (id.includes('react-dom') || id.includes('react/') || id.includes('scheduler')) {
-                return 'vendor-react';
-              }
-              if (id.includes('lucide-react')) {
-                return 'vendor-lucide';
-              }
+            if (id.includes('node_modules/react/') || id.includes('node_modules/react-dom/')) {
+              return 'vendor-react';
+            }
+            if (id.includes('src/data/brazilGeo.ts')) {
+              return 'data-brazil-geo';
             }
           },
         },

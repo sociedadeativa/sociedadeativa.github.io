@@ -43,8 +43,7 @@ export const OFFICIAL_CATEGORIES = [
   'Economia',
   'Brasil',
   'Mundo',
-  'Esportes',
-  'Tecnologia'
+  'Esportes'
 ];
 
 /**
@@ -448,9 +447,6 @@ export function extractParagraphs(rawHtml) {
     if (/^(foto|cr[eé]dito|imagem|legenda)\s*[:–-]/i.test(b)) continue;
     if (/(ebc\.png|ebc\.gif|tracking|pixel|beacon)/i.test(b)) continue;
     if (/^(not[ií]cias?\s+relacionadas?|leia\s+mais|veja\s+tamb[eé]m)\s*[:–-]?$/i.test(b)) continue;
-    // Remove marcadores residuais de hiperlinks inline ou marcadores editoriais como >> ou +
-    b = b.replace(/^(?:>{1,3}|&gt;{1,3}|»|\+)\s*/i, '').trim();
-    if (b.length < 25) continue;
     paragraphs.push(b);
   }
   return paragraphs.length > 0 ? paragraphs : undefined;
@@ -669,21 +665,6 @@ function generateTags(initialTags, category, title, source) {
       tagsSet.add('Futebol');
     }
   }
-  if (category === 'Tecnologia' || lowerTitle.includes('tecnologia') || lowerTitle.includes('inovação') || lowerTitle.includes('inteligência artificial') || lowerTitle.includes('5g') || lowerTitle.includes('cibersegurança') || lowerTitle.includes('segurança digital')) {
-    tagsSet.add('Tecnologia');
-    if (lowerTitle.includes('inteligência artificial') || lowerTitle.includes('inteligencia artificial') || /\bia\b/.test(lowerTitle)) {
-      tagsSet.add('Inteligência Artificial');
-    }
-    if (lowerTitle.includes('5g') || lowerTitle.includes('telecom') || lowerTitle.includes('anatel') || lowerTitle.includes('banda larga')) {
-      tagsSet.add('Telecomunicações');
-    }
-    if (lowerTitle.includes('ciber') || lowerTitle.includes('segurança digital') || lowerTitle.includes('lgpd') || lowerTitle.includes('privacidade')) {
-      tagsSet.add('Cibersegurança');
-    }
-    if (lowerTitle.includes('inovação') || lowerTitle.includes('inovacao') || lowerTitle.includes('transformação digital')) {
-      tagsSet.add('Inovação');
-    }
-  }
 
   const finalTags = Array.from(tagsSet).slice(0, 5);
   // Garante ao menos 3 tags
@@ -706,7 +687,6 @@ async function fetchAgenciaBrasil() {
     { url: 'https://agenciabrasil.ebc.com.br/rss/justica/feed.xml', section: 'justica' },
     { url: 'https://agenciabrasil.ebc.com.br/rss/economia/feed.xml', section: 'economia' },
     { url: 'https://agenciabrasil.ebc.com.br/rss/esportes/feed.xml', section: 'esportes' },
-    { url: 'https://agenciabrasil.ebc.com.br/rss/geral/feed.xml', section: 'geral' },
     { url: 'https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml', section: 'ultimas' }
   ];
 
@@ -717,7 +697,6 @@ async function fetchAgenciaBrasil() {
   const economyRegex = /\b(economia|inflação|inflacao|ipca|selic|juros|câmbio|cambio|dólar|dolar|pib|mercado|fazenda|copom|tesouro)\b/i;
   const govRegex = /\b(governo|presidente|presidência|presidencia|planalto|ministro|ministério|ministerio|itamaraty|itamarati)\b/i;
   const sportsRegex = /\b(futebol|campeonato|brasileir[aã]o|libertadores|copa|seleção\s+brasileira|atleta|atletas|esporte|esportes|olimpíadas|olimpiadas|paralimpíadas|paralimpiadas|tênis|tenis|vôlei|volei|basquete|natação|natacao|judô|judo|corrida|fórmula\s*1|formula\s*1)\b/i;
-  const techRegex = /\b(tecnologia|tecnologias|inovação|inovacao|inteligência\s+artificial|inteligencia\s+artificial|\bia\b|algoritmo|algoritmos|cibersegurança|ciberseguranca|cibernética|cibernetica|segurança\s+digital|seguranca\s+digital|computação|computacao|computador|smartphone|smartphones|celular|celulares|internet|banda\s+larga|5g|telecom|telecomunicações|telecomunicacoes|anatel|dados\s+abertos|transformação\s+digital|transformacao\s+digital|pix|sistema\s+digital|automação|automacao|software|hardware|semicondutores|biometria|criptografia|lgpd|satélite|satelite)\b/i;
 
   for (const { url, section } of feeds) {
     try {
@@ -768,25 +747,15 @@ async function fetchAgenciaBrasil() {
         const fullContent = `${title} ${summary} ${categories.join(' ')}`;
 
         if (section === 'politica') {
-          if (electoralRegex.test(fullContent)) {
-            category = 'Eleições';
-          } else if (techRegex.test(fullContent)) {
-            category = 'Tecnologia';
-          } else {
-            category = 'Política';
-          }
+          category = electoralRegex.test(fullContent) ? 'Eleições' : 'Política';
         } else if (section === 'justica') {
           category = 'Justiça';
         } else if (section === 'economia') {
           category = 'Economia';
         } else if (section === 'esportes') {
           category = 'Esportes';
-        } else if (section === 'geral' || section === 'ultimas') {
-          if (techRegex.test(fullContent)) {
-            category = 'Tecnologia';
-          } else if (sportsRegex.test(fullContent)) {
-            category = 'Esportes';
-          } else if (electoralRegex.test(fullContent)) {
+        } else if (section === 'ultimas') {
+          if (electoralRegex.test(fullContent)) {
             category = 'Eleições';
           } else if (justiceRegex.test(fullContent)) {
             category = 'Justiça';
@@ -796,8 +765,10 @@ async function fetchAgenciaBrasil() {
             category = 'Economia';
           } else if (govRegex.test(fullContent)) {
             category = 'Governo';
+          } else if (sportsRegex.test(fullContent)) {
+            category = 'Esportes';
           } else {
-            category = section === 'geral' ? 'Brasil' : 'Política';
+            category = 'Política';
           }
         }
 
@@ -999,15 +970,11 @@ async function fetchIBGE() {
 
       // Regra oficial IBGE:
       // Econômicas / editorias e dados econômicos → "Economia"
-      // Tecnologia, geociências tecnológicas e inovação → "Tecnologia"
       // Outros (sociais, demografia, censo, geral) → "Brasil"
       const editorias = (item.editorias || '').toLowerCase();
-      const techRegex = /\b(tecnologia|tecnologias|geotecnologia|geotecnologias|inovação|inovacao|inteligência\s+artificial|inteligencia\s+artificial|\bia\b|datificação|datificacao|dados\s+abertos|transformação\s+digital|transformacao\s+digital|sistema\s+digital)\b/i;
       let category = 'Brasil';
       if (editorias.includes('econom') || economicRegex.test(`${title} ${summary}`)) {
         category = 'Economia';
-      } else if (editorias.includes('tecnolog') || editorias.includes('geocien') || techRegex.test(`${title} ${summary}`)) {
-        category = 'Tecnologia';
       }
 
       const { formatted: publishedAt, timestamp } = parseDateToBrasilia(item.data_publicacao);
@@ -1433,17 +1400,11 @@ async function main() {
     }
   }
 
-  // Garante representatividade também para categorias temáticas essenciais como Esportes e Tecnologia
+  // Garante representatividade também para categorias temáticas essenciais como Esportes
   const sportsItems = uniqueOfficialItems.filter((item) => item.category === 'Esportes');
   const minSportsQuota = Math.min(sportsItems.length, 3);
   for (let i = 0; i < minSportsQuota; i++) {
     selectedOfficial.add(sportsItems[i]);
-  }
-
-  const techItems = uniqueOfficialItems.filter((item) => item.category === 'Tecnologia');
-  const minTechQuota = Math.min(techItems.length, 3);
-  for (let i = 0; i < minTechQuota; i++) {
-    selectedOfficial.add(techItems[i]);
   }
 
   // Preenche as vagas restantes com as notícias mais recentes no geral
@@ -1558,19 +1519,12 @@ async function main() {
     }
   }
 
-  // 8. Gravação do arquivo JSON e sincronização com src/data/newsData.ts para bundle crítico otimizado
+  // 8. Gravação do arquivo JSON e sincronização estrita com src/data/newsData.ts para paridade de dados
   const serialized = JSON.stringify(finalDataset, null, 2) + '\n';
   fs.writeFileSync(NEWS_DATA_PATH, serialized, 'utf8');
 
   const TS_NEWS_PATH = path.join(rootDir, 'src', 'data', 'newsData.ts');
-  // Mantém os primeiros artigos líderes com conteúdo completo para a dobra crítica inicial (LCP)
-  // e os demais com metadados essenciais pré-normalizados (content: []) para minimizar o JavaScript inicial
-  const criticalDataset = finalDataset.map((item, idx) => {
-    if (idx < 3) return item;
-    const { content, ...rest } = item;
-    return { ...rest, content: [] };
-  });
-  const tsContent = `import { NewsItem, NewsCategory } from "../types/news";\n\nexport type { NewsItem, NewsCategory };\nexport type NewsArticle = NewsItem;\n\nexport const OFFICIAL_NEWS_ARTICLES: NewsItem[] = ${JSON.stringify(criticalDataset, null, 2)};\n`;
+  const tsContent = `import { NewsItem, NewsCategory } from "../types/news";\n\nexport type { NewsItem, NewsCategory };\nexport type NewsArticle = NewsItem;\n\nexport const OFFICIAL_NEWS_ARTICLES: NewsItem[] = ${JSON.stringify(finalDataset, null, 2)};\n`;
   fs.writeFileSync(TS_NEWS_PATH, tsContent, 'utf8');
 
   // 9. Relatório de Execução Consolidado

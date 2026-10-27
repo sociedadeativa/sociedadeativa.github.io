@@ -3,7 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVHPGPZTSL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'G-FVHPGPZTSL');
+    </script>
 
     <title>Notícias — Sociedade Ativa | Política, Eleições e Economia</title>
     <meta name="description" content="Acompanhe as últimas notícias e despachos sobre política, eleições, economia, atos do Executivo, Congresso Nacional, STF e dados do Brasil." />
@@ -12,7 +21,6 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <meta name="google-site-verification" content="oZPS6sfWTE5EJAuLOsZCtq9UoF1lh4wMhD9Jz13OTSs" />
-    <meta name="google-adsense-account" content="ca-pub-6825003561232826">
     <link rel="canonical" href="https://sociedadeativa.github.io/noticias/" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="author" content="Sociedade Ativa — Jornalismo de Dados" />
@@ -56,68 +64,6 @@
       }
     }
     </script>
-    
-    <!-- Google tag (gtag.js) — Carregamento diferido após renderização crítica -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      window.gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', 'G-FVHPGPZTSL');
-
-      (function() {
-        if (window.__ga4Loaded || window.__ga4Loading) return;
-
-        function loadGtag() {
-          if (window.__ga4Loaded || window.__ga4Loading) return;
-          window.__ga4Loading = true;
-          removeInteractionListeners();
-
-          var s = document.createElement('script');
-          s.async = true;
-          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-FVHPGPZTSL';
-          s.onload = function() {
-            window.__ga4Loaded = true;
-          };
-          s.onerror = function() {
-            window.__ga4Loading = false;
-          };
-          var head = document.head || document.getElementsByTagName('head')[0];
-          if (head) {
-            head.appendChild(s);
-          }
-        }
-
-        var interactionEvents = ['scroll', 'click', 'touchstart', 'keydown'];
-        function onInteraction() {
-          loadGtag();
-        }
-        function addInteractionListeners() {
-          interactionEvents.forEach(function(evt) {
-            window.addEventListener(evt, onInteraction, { once: true, passive: true });
-          });
-        }
-        function removeInteractionListeners() {
-          interactionEvents.forEach(function(evt) {
-            window.removeEventListener(evt, onInteraction);
-          });
-        }
-        addInteractionListeners();
-
-        if ('requestIdleCallback' in window) {
-          window.requestIdleCallback(loadGtag, { timeout: 3500 });
-        } else if (document.readyState === 'complete') {
-          setTimeout(loadGtag, 1500);
-        } else {
-          window.addEventListener('load', function() {
-            setTimeout(loadGtag, 1500);
-          }, { once: true });
-        }
-      })();
-    </script>
-    <!-- Google AdSense: Verificação de Site / Análise de Conta -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6825003561232826"
-     crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="root"></div>

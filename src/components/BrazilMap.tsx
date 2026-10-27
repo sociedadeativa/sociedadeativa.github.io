@@ -959,7 +959,7 @@ export const BrazilMap: React.FC<BrazilMapProps> = ({
         <div className="flex items-center justify-between gap-3 mb-2">
           <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
             <Layers className="w-3.5 h-3.5 text-slate-500" />
-            Vencedor no 1º Turno por Estado (04/10/2026)
+            Vencedor no 1º Turno por Estado
           </span>
           <div className="flex items-center gap-2">
             {candidateFilter && (

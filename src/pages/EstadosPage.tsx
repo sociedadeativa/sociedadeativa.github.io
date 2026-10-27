@@ -1,36 +1,11 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import { ElectionDataSet, StateElectionResult } from "../data/electionData";
+import { BrazilMap } from "../components/BrazilMap";
 import { CandidateResultsView } from "../components/CandidateResultsView";
+import { StateTable } from "../components/StateTable";
 import { PortalLink } from "../components/PortalLink";
 import { AdBanner } from "../components/AdBanner";
 import { MapPin, ArrowRight, Building, Users, CheckCircle2 } from "lucide-react";
-
-const BrazilMap = lazy(() => import("../components/BrazilMap").then((m) => ({ default: m.BrazilMap })));
-const StateTable = lazy(() => import("../components/StateTable").then((m) => ({ default: m.StateTable })));
-
-const BrazilMapSkeleton: React.FC = () => (
-  <div
-    className="w-full bg-slate-50 border border-slate-200 rounded-3xl p-8 flex flex-col items-center justify-center min-h-[500px] animate-pulse text-center"
-    aria-busy="true"
-    aria-label="Carregando mapa interativo oficial"
-  >
-    <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 mb-3">
-      <MapPin className="w-6 h-6" />
-    </div>
-    <span className="font-heading font-black text-slate-800 text-base mb-1">
-      Carregando mapa dos estados...
-    </span>
-    <span className="text-xs text-slate-500 max-w-sm">
-      Carregando geometria vetorial das 27 Unidades da Federação e dados eleitorais.
-    </span>
-  </div>
-);
-
-const StateTableSkeleton: React.FC = () => (
-  <div className="w-full py-8 animate-pulse" aria-busy="true" aria-label="Carregando tabela de estados">
-    <div className="h-96 bg-slate-100 rounded-3xl border border-slate-200" />
-  </div>
-);
 
 interface EstadosPageProps {
   dataset: ElectionDataSet;
@@ -119,15 +94,13 @@ export const EstadosPage: React.FC<EstadosPageProps> = ({
             )}
           </div>
 
-          <Suspense fallback={<BrazilMapSkeleton />}>
-            <BrazilMap
-              dataset={dataset}
-              selectedStateUf={selectedStateUf}
-              onSelectState={onSelectState}
-              candidateFilter={candidateFilter}
-              onSelectCandidateFilter={onSelectCandidateFilter}
-            />
-          </Suspense>
+          <BrazilMap
+            dataset={dataset}
+            selectedStateUf={selectedStateUf}
+            onSelectState={onSelectState}
+            candidateFilter={candidateFilter}
+            onSelectCandidateFilter={onSelectCandidateFilter}
+          />
         </div>
 
         {/* 2. Quadro Individual de Candidatos à Presidência (Totalização ou Filtrado por UF) */}
@@ -220,13 +193,11 @@ export const EstadosPage: React.FC<EstadosPageProps> = ({
 
         {/* 3. Tabela Geral de Apuração dos 26 Estados + DF */}
         <div className="mb-12">
-          <Suspense fallback={<StateTableSkeleton />}>
-            <StateTable
-              dataset={dataset}
-              selectedStateUf={selectedStateUf}
-              onSelectState={onSelectState}
-            />
-          </Suspense>
+          <StateTable
+            dataset={dataset}
+            selectedStateUf={selectedStateUf}
+            onSelectState={onSelectState}
+          />
         </div>
 
         <AdBanner format="in-feed" />

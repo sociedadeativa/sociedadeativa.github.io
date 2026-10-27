@@ -78,43 +78,36 @@ export const EconomySection: React.FC = () => {
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
             {/* Categorias */}
             <div className="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 scrollbar-none">
-              <span className="text-xs font-bold text-slate-600 uppercase tracking-wider mr-1 hidden sm:inline">
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mr-1 hidden sm:inline">
                 Categoria:
               </span>
-              <div role="tablist" aria-label="Categorias de indicadores econômicos" className="flex items-center gap-1.5">
+              <button
+                onClick={() => setSelectedCategory("Todas")}
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
+                  selectedCategory === "Todas"
+                    ? "bg-slate-900 text-white shadow-xs"
+                    : "bg-slate-100 hover:bg-slate-200 text-slate-700"
+                }`}
+              >
+                Todas ({stats.total})
+              </button>
+
+              {ECONOMY_CATEGORIES.map((cat) => (
                 <button
-                  role="tab"
-                  aria-selected={selectedCategory === "Todas"}
-                  aria-controls="indicadores-economicos-grid"
-                  aria-label={`Filtrar todos os indicadores econômicos (${stats.total} indicadores)`}
-                  onClick={() => setSelectedCategory("Todas")}
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
                   className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
-                    selectedCategory === "Todas"
+                    selectedCategory === cat
                       ? "bg-slate-900 text-white shadow-xs"
                       : "bg-slate-100 hover:bg-slate-200 text-slate-700"
                   }`}
+                  role="tab"
+                  aria-selected={selectedCategory === cat}
+                  aria-label={`Filtrar indicadores pela categoria ${cat}`}
                 >
-                  Todas ({stats.total})
+                  {cat}
                 </button>
-
-                {ECONOMY_CATEGORIES.map((cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => setSelectedCategory(cat)}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
-                      selectedCategory === cat
-                        ? "bg-slate-900 text-white shadow-xs"
-                        : "bg-slate-100 hover:bg-slate-200 text-slate-700"
-                    }`}
-                    role="tab"
-                    aria-selected={selectedCategory === cat}
-                    aria-controls="indicadores-economicos-grid"
-                    aria-label={`Filtrar indicadores pela categoria ${cat}`}
-                  >
-                    {cat}
-                  </button>
-                ))}
-              </div>
+              ))}
             </div>
 
             {/* Busca e Filtro de Fonte */}
@@ -126,7 +119,6 @@ export const EconomySection: React.FC = () => {
                     key={src}
                     role="tab"
                     aria-selected={selectedSource === src}
-                    aria-controls="indicadores-economicos-grid"
                     aria-label={`Filtrar indicadores pela fonte oficial ${src}`}
                     onClick={() => setSelectedSource(src)}
                     className={`min-h-[32px] px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer whitespace-nowrap flex items-center justify-center ${
@@ -158,7 +150,7 @@ export const EconomySection: React.FC = () => {
 
         {/* Grid de Cards dos Indicadores */}
         {filteredIndicators.length > 0 ? (
-          <div id="indicadores-economicos-grid" role="region" aria-label="Grade de indicadores econômicos" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {filteredIndicators.map((indicator) => (
               <EconomyCard
                 key={indicator.id}
@@ -200,7 +192,7 @@ export const EconomySection: React.FC = () => {
               <p className="leading-relaxed">
                 Todos os dados são de domínio público, apurados pelo <strong>IBGE</strong> (Sistema SIDRA) e pelo <strong>Banco Central do Brasil</strong> (Sistema SGS e PTAX). O Sociedade Ativa não produz estimativas próprias, não altera séries temporais e segue estritamente os calendários de divulgação oficial dos órgãos de Estado.
               </p>
-              <p className="text-[11px] text-slate-600 pt-1">
+              <p className="text-[11px] text-slate-400 pt-1">
                 Aviso de integridade: indicadores sincronizados automaticamente a partir das séries públicas estruturadas do IBGE (SIDRA) e do Banco Central do Brasil (SGS/PTAX), com validação de dados em pipeline seguro.
               </p>
             </div>

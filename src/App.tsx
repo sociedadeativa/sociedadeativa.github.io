@@ -10,10 +10,8 @@ import { NewsItem } from "./types/news";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
-// Página Inicial carregada diretamente para pintura imediata da dobra LCP sem waterfall
-import { HomePage } from "./pages/HomePage";
-
-// Páginas Dedicadas do Portal com Divisão em Chunks (Route-Level Code Splitting)
+// Páginas Dedicadas do Portal com Code-Splitting Dinâmico por Rota
+const HomePage = lazy(() => import("./pages/HomePage").then((m) => ({ default: m.HomePage })));
 const PoliticaPage = lazy(() => import("./pages/PoliticaPage").then((m) => ({ default: m.PoliticaPage })));
 const EleicoesPage = lazy(() => import("./pages/EleicoesPage").then((m) => ({ default: m.EleicoesPage })));
 const EconomiaPage = lazy(() => import("./pages/EconomiaPage").then((m) => ({ default: m.EconomiaPage })));
@@ -26,22 +24,28 @@ const ClimaPage = lazy(() => import("./pages/ClimaPage").then((m) => ({ default:
 const SobrePage = lazy(() => import("./pages/SobrePage").then((m) => ({ default: m.SobrePage })));
 const ArticlePage = lazy(() => import("./pages/ArticlePage").then((m) => ({ default: m.ArticlePage })));
 
-// Modais e Painéis Carregados Sob Demanda (Zero impacto no carregamento inicial)
+// Modais e Painéis Carregados Sob Demanda (On-Demand)
 const StateDetailPanel = lazy(() => import("./components/StateDetailPanel").then((m) => ({ default: m.StateDetailPanel })));
 const MethodologyModal = lazy(() => import("./components/MethodologyModal").then((m) => ({ default: m.MethodologyModal })));
 const DataInspectorModal = lazy(() => import("./components/DataInspectorModal").then((m) => ({ default: m.DataInspectorModal })));
 const SearchModal = lazy(() => import("./components/SearchModal").then((m) => ({ default: m.SearchModal })));
 const ArticleModal = lazy(() => import("./components/ArticleModal").then((m) => ({ default: m.ArticleModal })));
 
-const PageLoadingFallback: React.FC = () => (
-  <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-pulse" aria-busy="true" aria-label="Carregando seção do portal">
-    <div className="h-5 w-32 bg-slate-200 rounded-md mb-3" />
-    <div className="h-9 w-2/3 max-w-xl bg-slate-200 rounded-lg mb-4" />
-    <div className="h-4 w-1/2 max-w-md bg-slate-200 rounded-md mb-8" />
+// Fallback de Carregamento Neutro e Acessível para Mudanças de Rota
+const RouteLoadingFallback: React.FC = () => (
+  <div
+    className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-pulse space-y-8"
+    aria-label="Carregando página do portal"
+  >
+    <div className="space-y-3 pb-6 border-b border-slate-200">
+      <div className="h-4 bg-slate-200 rounded w-1/4" />
+      <div className="h-10 bg-slate-200 rounded w-2/3" />
+      <div className="h-4 bg-slate-200 rounded w-1/2" />
+    </div>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="h-64 bg-slate-200/80 rounded-2xl" />
-      <div className="h-64 bg-slate-200/80 rounded-2xl" />
-      <div className="h-64 bg-slate-200/80 rounded-2xl" />
+      <div className="h-64 bg-white rounded-2xl border border-slate-200" />
+      <div className="h-64 bg-white rounded-2xl border border-slate-200" />
+      <div className="h-64 bg-white rounded-2xl border border-slate-200" />
     </div>
   </div>
 );
@@ -86,9 +90,9 @@ export default function App() {
         onOpenSearch={() => setIsSearchOpen(true)}
       />
 
-      {/* 2. Conteúdo Principal Orientado a Rota com Suspense */}
+      {/* 2. Conteúdo Principal Orientado a Rota */}
       <main className="flex-1 w-full overflow-x-hidden">
-        <Suspense fallback={<PageLoadingFallback />}>
+        <Suspense fallback={<RouteLoadingFallback />}>
           {currentRoute === "home" && (
             <HomePage
               dataset={currentDataset}
@@ -215,7 +219,7 @@ export default function App() {
         </Suspense>
       </main>
 
-      {/* 3. Painel Lateral com Detalhamento do Estado Selecionado (Carregamento Sob Demanda) */}
+      {/* 3. Painel Lateral com Detalhamento do Estado Selecionado */}
       {selectedStateUf && (
         <Suspense fallback={null}>
           <StateDetailPanel
@@ -227,7 +231,7 @@ export default function App() {
         </Suspense>
       )}
 
-      {/* 4. Modal de Metodologia Oficial e Transparência Eleitoral (Carregamento Sob Demanda) */}
+      {/* 4. Modal de Metodologia Oficial e Transparência Eleitoral */}
       {isMethodologyOpen && (
         <Suspense fallback={null}>
           <MethodologyModal
@@ -238,7 +242,7 @@ export default function App() {
         </Suspense>
       )}
 
-      {/* 5. Modal de Inspeção e Ingestão de Dados JSON do TSE (Carregamento Sob Demanda) */}
+      {/* 5. Modal de Inspeção e Ingestão de Dados JSON do TSE */}
       {isDataInspectorOpen && (
         <Suspense fallback={null}>
           <DataInspectorModal
@@ -251,7 +255,7 @@ export default function App() {
         </Suspense>
       )}
 
-      {/* 6. Modal de Busca Rápida e Navegação (Carregamento Sob Demanda) */}
+      {/* 6. Modal de Busca Rápida e Navegação */}
       {isSearchOpen && (
         <Suspense fallback={null}>
           <SearchModal
@@ -266,7 +270,7 @@ export default function App() {
         </Suspense>
       )}
 
-      {/* 7. Modal de Leitura de Matéria e Compartilhamento (Carregamento Sob Demanda) */}
+      {/* 7. Modal de Leitura de Matéria e Compartilhamento */}
       {activeArticle && (
         <Suspense fallback={null}>
           <ArticleModal
