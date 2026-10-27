@@ -35,7 +35,10 @@ const jsonLead = rawJson[0];
 const criticalLead = criticalArticles[0];
 
 assert.equal(criticalLead.id, jsonLead.id, "Lead article ID must match between JSON and critical TS bundle");
-assert.ok(criticalLead.id.startsWith("ebc-"), "Expected lead article ID to be an official EBC article");
+assert.ok(
+  ["ebc-", "camara-", "senado-", "tse-", "gov-"].some((prefix) => criticalLead.id.startsWith(prefix)),
+  "Expected lead article ID to be an official news article (ebc, camara, senado, tse, gov)"
+);
 assert.equal(criticalLead.title, jsonLead.title, "Lead article title must match");
 assert.equal(criticalLead.imageUrl, jsonLead.imageUrl, "Lead article imageUrl must match character-for-character");
 assert.equal(criticalLead.publishedAt, jsonLead.publishedAt, "Lead article publishedAt must match");

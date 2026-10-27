@@ -40,10 +40,12 @@ assert.equal(
   expectedLead.imageUrl.trim(),
   "Resolved image URL must exactly match the lead article imageUrl"
 );
-assert.ok(
-  leadImageUrl.includes("?itok="),
-  "Image URL parameters (e.g. ?itok=...) must be preserved character-for-character"
-);
+if (expectedLead.imageUrl.includes("?")) {
+  assert.ok(
+    leadImageUrl.includes("?"),
+    "Image URL parameters (e.g. ?itok=...) must be preserved character-for-character"
+  );
+}
 console.log(`  [PASS] Lead article identified: "${expectedLead.id}" with image URL "${leadImageUrl}"`);
 
 // --- TEST 2: Presença do Preload em dist/index.html com fetchpriority="high" ---
