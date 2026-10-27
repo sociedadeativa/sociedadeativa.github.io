@@ -434,14 +434,19 @@ for (const filePath of requiredHtmlFiles) {
     process.exit(1);
   }
 
-  // 4b. Verificação do Google AdSense (ca-pub-6825003516232826) e prevenção de duplicações
-  if (!html.includes('ca-pub-6825003516232826')) {
-    console.error(`ERROR: ${filePath} ausente do snippet de verificação do Google AdSense (ca-pub-6825003516232826)!`);
+  // 4b. Verificação do Google AdSense (ca-pub-6825003561232826) e prevenção de duplicações
+  if (!html.includes('ca-pub-6825003561232826')) {
+    console.error(`ERROR: ${filePath} ausente do identificador do Google AdSense (ca-pub-6825003561232826)!`);
     process.exit(1);
   }
-  const adSenseMatches = html.match(/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-6825003516232826/g) || [];
+  const adSenseMatches = html.match(/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-6825003561232826/g) || [];
   if (adSenseMatches.length !== 1) {
     console.error(`ERROR: ${filePath} possui snippet do Google AdSense duplicado (${adSenseMatches.length} ocorrências)!`);
+    process.exit(1);
+  }
+  const adSenseMetaMatches = html.match(/<meta\s+name=["']google-adsense-account["']\s+content=["']ca-pub-6825003561232826["']\s*\/?>/gi) || [];
+  if (adSenseMetaMatches.length !== 1) {
+    console.error(`ERROR: ${filePath} possui meta tag google-adsense-account duplicada ou ausente (${adSenseMetaMatches.length} ocorrências)!`);
     process.exit(1);
   }
 }
@@ -677,9 +682,14 @@ if (fs.existsSync('dist/noticias')) {
       console.error(`ERROR: ${articleHtmlPath} ausente da tag google-site-verification!`);
       process.exit(1);
     }
-    // Validação de verificação do Google AdSense
-    if (!html.includes('ca-pub-6825003516232826')) {
-      console.error(`ERROR: ${articleHtmlPath} ausente do snippet de verificação do Google AdSense (ca-pub-6825003516232826)!`);
+    // Validação de verificação do Google AdSense (meta tag e script)
+    if (!html.includes('ca-pub-6825003561232826')) {
+      console.error(`ERROR: ${articleHtmlPath} ausente do identificador do Google AdSense (ca-pub-6825003561232826)!`);
+      process.exit(1);
+    }
+    const artMetaMatches = html.match(/<meta\s+name=["']google-adsense-account["']\s+content=["']ca-pub-6825003561232826["']\s*\/?>/gi) || [];
+    if (artMetaMatches.length !== 1) {
+      console.error(`ERROR: ${articleHtmlPath} possui meta tag google-adsense-account duplicada ou ausente (${artMetaMatches.length} ocorrências)!`);
       process.exit(1);
     }
 
