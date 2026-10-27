@@ -189,7 +189,7 @@ console.log("  [PASS] Validator correctly handles full URLs, shorteners, domain 
 console.log("\n[TEST 9] Verifying 14 Product Image URLs Restored");
 const expectedImages = {
   "ml-dell-i5": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/dell/dell-15-intel-3530/media-gallery/laptop-dell-dc15250nt-bk-plastic-gallery-3.psd?fmt=png-alpha&pscan=auto&scl=1&wid=4582&hei=2686&qlt=100,0&resMode=sharp2&size=4582,2686",
-  "ml-kingston-nv3-1tb": "https://media.kingston.com/kingston/product/SNV3S_500GB_pkg-zm-lg.jpg",
+  "ml-kingston-nv3-1tb": "https://media.kingston.com/kingston/product/SNV3S_1000GB_pkg-zm-lg.jpg",
   "ml-kingston-fury-beast-ddr5-16gb": "https://media.kingston.com/kingston/product/FURY_Beast_Black_DDR5_1-zm-lg.jpg",
   "ml-tplink-ex1500": "https://static.tp-link.com/upload/image-line/Front_large_20230331034453h.jpg",
   "ml-samsung-odyssey-g40": "https://images.samsung.com/is/image/samsung/p6pim/br/ls27bg400elmzd/gallery/br-gaming-ls27bg400elmzd-ls--bg---elxzd-548310344?$1164_776_PNG$",
@@ -198,7 +198,7 @@ const expectedImages = {
   "amz-kingston-fury-beast-ddr4-16gb": "https://www.kingstonstore.com.br/cdn/shop/products/DDR4FBKK21_7b235660-af7f-4653-a30a-777ab67994e8.jpg?v=1627489262&width=990",
   "amz-logitech-m170": "https://www.logitechstore.com.br/media/catalog/product/cache/105e6f420716e0751863c4b81f527d17/l/o/logitech_m170.webp",
   "amz-usb-c-7em1": "https://m.media-amazon.com/images/I/71meNHlW9LL._AC_SL1500_.jpg",
-  "shp-tgt-m60-a1": "https://tgtgamer.com.br/wp-content/uploads/2025/09/TGT-M60A1-RBW01-1-1.jpg",
+  "shp-tgt-m60-a1": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/t/g/tgt-m60a1-rbw01.jpg",
   "shp-tplink-ub500": "https://static.tp-link.com/upload/image-line/Overview_UB500_US_2312_01_large_20240105034224g.jpg",
   "shp-suporte-aluminio": "https://down-br.img.susercontent.com/file/br-11134207-820m8-ml62cvdmyzuu02.webp",
   "shp-hub-usb-4portas": "https://down-br.img.susercontent.com/file/br-11134207-7qukw-lgrxdphnm8zve4.webp",
