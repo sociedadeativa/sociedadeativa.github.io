@@ -106,15 +106,22 @@ export function validateAffiliateUrl(
 
     case "Amazon Brasil": {
       const isAmazonStandard =
-        hostname === "amazon.com.br" || hostname.endsWith(".amazon.com.br");
-      const isAmazonShortener = hostname === "amzn.to" || hostname.endsWith(".amzn.to");
+        hostname === "amazon.com.br" ||
+        hostname.endsWith(".amazon.com.br") ||
+        hostname === "amazon.com" ||
+        hostname.endsWith(".amazon.com");
+      const isAmazonShortener =
+        hostname === "amzn.to" ||
+        hostname.endsWith(".amzn.to") ||
+        hostname === "link.amazon" ||
+        hostname.endsWith(".link.amazon");
 
       if (!isAmazonStandard && !isAmazonShortener) {
         return {
           isValid: false,
           status: "disabled",
           reviewStatus: "invalid",
-          reason: `Domínio incompatível para Amazon Brasil: "${hostname}". Esperado amazon.com.br ou amzn.to.`,
+          reason: `Domínio incompatível para Amazon Brasil: "${hostname}". Esperado amazon.com.br, amzn.to ou link.amazon.`,
         };
       }
 
@@ -133,7 +140,7 @@ export function validateAffiliateUrl(
           status: "active",
           reviewStatus: "flagged_for_manual_review",
           isRedirectUncertain: true,
-          reason: "Link encurtador amzn.to com formato válido; sinalizado para verificação manual do destino final.",
+          reason: "Link encurtador oficial da Amazon (amzn.to / link.amazon) com formato válido; sinalizado para verificação manual do destino final.",
         };
       }
 
@@ -207,190 +214,190 @@ export function validateAffiliateUrl(
 export const AFFILIATE_PRODUCTS: AffiliateProduct[] = [
   // --- 5 Produtos Mercado Livre ---
   {
-    id: "ml-item-1",
-    name: "Smartphone 5G com Processador Octa-Core",
-    description: "Dispositivo móvel com suporte às novas faixas de conectividade 5G liberadas pela Anatel e homologação oficial.",
+    id: "ml-dell-i5",
+    name: "Notebook Dell i5",
+    description: "Notebook portátil Dell equipado com processador Intel Core i5 para alta produtividade, estudos e trabalho corporativo.",
     imageUrl: "",
-    affiliateUrl: "",
+    affiliateUrl: "https://meli.la/1yBrTcP",
     merchant: "Mercado Livre",
-    categories: ["tecnologia", "smartphone", "5g", "dispositivos"],
-    status: "disabled",
+    categories: ["tecnologia", "computacao", "hardware", "notebook"],
+    status: "active",
     needsReview: true,
-    reviewStatus: "invalid",
-    reviewReason: "URL e imagem do produto pendentes de fornecimento direto pelo proprietário na conversa.",
+    reviewStatus: "flagged_for_manual_review",
+    reviewReason: "Link encurtador meli.la com formato válido; sinalizado para verificação manual do destino final.",
   },
   {
-    id: "ml-item-2",
-    name: "Roteador Wi-Fi 6 Gigabit Dual-Band",
-    description: "Equipamento de rede para alta largura de banda e estabilidade em fibra óptica residencial e corporativa.",
+    id: "ml-kingston-nv3-1tb",
+    name: "SSD Kingston NV3 1TB",
+    description: "Unidade de estado sólido NVMe M.2 de alta velocidade para carregamento ágil do sistema operacional e aplicações.",
     imageUrl: "",
-    affiliateUrl: "",
+    affiliateUrl: "https://meli.la/1eimyfJ",
     merchant: "Mercado Livre",
-    categories: ["tecnologia", "internet-telecom", "redes"],
-    status: "disabled",
+    categories: ["tecnologia", "computacao", "hardware", "armazenamento"],
+    status: "active",
     needsReview: true,
-    reviewStatus: "invalid",
-    reviewReason: "URL e imagem do produto pendentes de fornecimento direto pelo proprietário na conversa.",
+    reviewStatus: "flagged_for_manual_review",
+    reviewReason: "Link encurtador meli.la com formato válido; sinalizado para verificação manual do destino final.",
   },
   {
-    id: "ml-item-3",
-    name: "Câmera de Segurança Inteligente Wi-Fi Full HD",
-    description: "Sistema de monitoramento com visão noturna, criptografia ponto a ponto e aplicativo de controle.",
+    id: "ml-kingston-fury-beast-ddr5-16gb",
+    name: "Memória RAM Kingston Fury Beast DDR5 16GB",
+    description: "Módulo de memória RAM de alto desempenho DDR5 para estabilidade e velocidade em multitarefas e jogos.",
     imageUrl: "",
-    affiliateUrl: "",
+    affiliateUrl: "https://meli.la/2JpxZ2G",
     merchant: "Mercado Livre",
-    categories: ["tecnologia", "ciberseguranca", "seguranca"],
-    status: "disabled",
+    categories: ["tecnologia", "computacao", "hardware", "memoria"],
+    status: "active",
     needsReview: true,
-    reviewStatus: "invalid",
-    reviewReason: "URL e imagem do produto pendentes de fornecimento direto pelo proprietário na conversa.",
+    reviewStatus: "flagged_for_manual_review",
+    reviewReason: "Link encurtador meli.la com formato válido; sinalizado para verificação manual do destino final.",
   },
   {
-    id: "ml-item-4",
-    name: "Notebook Ultrafino com SSD NVMe e 16GB RAM",
-    description: "Computador portátil para trabalho remoto, desenvolvimento de software e navegação com autonomia de bateria.",
+    id: "ml-tplink-ex1500",
+    name: "Roteador TP-Link EX1500",
+    description: "Roteador com tecnologia Wi-Fi 6 de última geração para máxima cobertura e estabilidade de conexão de rede.",
     imageUrl: "",
-    affiliateUrl: "",
+    affiliateUrl: "https://meli.la/168szhH",
     merchant: "Mercado Livre",
-    categories: ["tecnologia", "computacao", "hardware"],
-    status: "disabled",
+    categories: ["tecnologia", "internet-telecom", "redes", "roteador"],
+    status: "active",
     needsReview: true,
-    reviewStatus: "invalid",
-    reviewReason: "URL e imagem do produto pendentes de fornecimento direto pelo proprietário na conversa.",
+    reviewStatus: "flagged_for_manual_review",
+    reviewReason: "Link encurtador meli.la com formato válido; sinalizado para verificação manual do destino final.",
   },
   {
-    id: "ml-item-5",
-    name: "No-break Interativo 1200VA com Estabilizador",
-    description: "Proteção elétrica e autonomia para roteadores, servidores domésticos e computadores de teletrabalho.",
+    id: "ml-samsung-odyssey-g40",
+    name: "Monitor Samsung Odyssey G40 27 polegadas",
+    description: "Monitor gamer IPS com taxa de atualização de 240Hz e tempo de resposta de 1ms para fluidez e fidelidade visual.",
     imageUrl: "",
-    affiliateUrl: "",
+    affiliateUrl: "https://meli.la/2nGDQZd",
     merchant: "Mercado Livre",
-    categories: ["tecnologia", "computacao", "energia"],
-    status: "disabled",
+    categories: ["tecnologia", "computacao", "perifericos", "monitores"],
+    status: "active",
     needsReview: true,
-    reviewStatus: "invalid",
-    reviewReason: "URL e imagem do produto pendentes de fornecimento direto pelo proprietário na conversa.",
+    reviewStatus: "flagged_for_manual_review",
+    reviewReason: "Link encurtador meli.la com formato válido; sinalizado para verificação manual do destino final.",
   },
 
   // --- 5 Produtos Amazon Brasil ---
   {
-    id: "amz-item-1",
-    name: "Smart Speaker com Assistente de Voz Inteligente",
-    description: "Hub de automação residencial compatível com comandos de voz, reprodução de notícias e gestão de rotinas.",
+    id: "amz-dell-15-i5-1334u",
+    name: "Notebook Dell 15 i5-1334U",
+    description: "Notebook Dell 15 polegadas com processador Intel Core i5 de 13ª geração para excelente performance multitarefa.",
     imageUrl: "",
-    affiliateUrl: "",
+    affiliateUrl: "https://link.amazon/B03AAtQeg",
     merchant: "Amazon Brasil",
-    categories: ["tecnologia", "ia", "automacao", "dispositivos"],
-    status: "disabled",
+    categories: ["tecnologia", "computacao", "hardware", "notebook"],
+    status: "active",
     needsReview: true,
-    reviewStatus: "invalid",
-    reviewReason: "URL e imagem do produto pendentes de fornecimento direto pelo proprietário na conversa.",
+    reviewStatus: "flagged_for_manual_review",
+    reviewReason: "Link encurtador link.amazon com formato válido; sinalizado para verificação manual do destino final.",
   },
   {
-    id: "amz-item-2",
-    name: "Leitor Digital com Tela Antirreflexo e Luz Ajustável",
-    description: "Dispositivo de leitura para documentos, legislação comentada e obras técnicas com baixo consumo energético.",
+    id: "amz-kingston-nv3-1tb",
+    name: "SSD Kingston NV3 1TB",
+    description: "Armazenamento SSD interno Kingston NV3 de 1TB com tecnologia PCIe 4.0 NVMe de rápida transferência.",
     imageUrl: "",
-    affiliateUrl: "",
+    affiliateUrl: "https://link.amazon/B0bY7jItD",
     merchant: "Amazon Brasil",
-    categories: ["tecnologia", "dispositivos", "produtividade"],
-    status: "disabled",
+    categories: ["tecnologia", "computacao", "hardware", "armazenamento"],
+    status: "active",
     needsReview: true,
-    reviewStatus: "invalid",
-    reviewReason: "URL e imagem do produto pendentes de fornecimento direto pelo proprietário na conversa.",
+    reviewStatus: "flagged_for_manual_review",
+    reviewReason: "Link encurtador link.amazon com formato válido; sinalizado para verificação manual do destino final.",
   },
   {
-    id: "amz-item-3",
-    name: "Chave de Segurança FIDO2 / U2F para Autenticação 2FA",
-    description: "Dispositivo físico de criptografia para proteção de contas digitais e prevenção de ataques cibernéticos.",
+    id: "amz-kingston-fury-beast-ddr4-16gb",
+    name: "Kit Kingston Fury Beast DDR4 16GB",
+    description: "Kit de memória RAM Kingston Fury Beast DDR4 para upgrade de performance em sistemas desktop.",
     imageUrl: "",
-    affiliateUrl: "",
+    affiliateUrl: "https://link.amazon/B0bsPX8hM",
     merchant: "Amazon Brasil",
-    categories: ["tecnologia", "ciberseguranca", "seguranca"],
-    status: "disabled",
+    categories: ["tecnologia", "computacao", "hardware", "memoria"],
+    status: "active",
     needsReview: true,
-    reviewStatus: "invalid",
-    reviewReason: "URL e imagem do produto pendentes de fornecimento direto pelo proprietário na conversa.",
+    reviewStatus: "flagged_for_manual_review",
+    reviewReason: "Link encurtador link.amazon com formato válido; sinalizado para verificação manual do destino final.",
   },
   {
-    id: "amz-item-4",
-    name: "SSD Externo Portátil 1TB USB 3.2 Tipo-C",
-    description: "Armazenamento veloz e resistente a impactos para backup de dados sensíveis e grandes volumes de informação.",
+    id: "amz-logitech-m170",
+    name: "Mouse Logitech M170",
+    description: "Mouse óptico sem fio ergonômico e confiável com autonomia de até 12 meses de bateria.",
     imageUrl: "",
-    affiliateUrl: "",
+    affiliateUrl: "https://link.amazon/B0gw4A1QN",
     merchant: "Amazon Brasil",
-    categories: ["tecnologia", "computacao", "armazenamento"],
-    status: "disabled",
+    categories: ["tecnologia", "computacao", "perifericos", "mouse"],
+    status: "active",
     needsReview: true,
-    reviewStatus: "invalid",
-    reviewReason: "URL e imagem do produto pendentes de fornecimento direto pelo proprietário na conversa.",
+    reviewStatus: "flagged_for_manual_review",
+    reviewReason: "Link encurtador link.amazon com formato válido; sinalizado para verificação manual do destino final.",
   },
   {
-    id: "amz-item-5",
-    name: "Teclado Mecânico Ergonômico com Conexão Sem Fio",
-    description: "Periférico para digitação prolongada com switches táteis de precisão e emparelhamento multi-dispositivo.",
+    id: "amz-usb-c-7em1",
+    name: "Hub USB-C 7 em 1",
+    description: "Adaptador multifuncional USB-C com portas USB 3.0, HDMI 4K e leitor de cartões para conectividade completa.",
     imageUrl: "",
-    affiliateUrl: "",
+    affiliateUrl: "https://link.amazon/B03tbdDCd",
     merchant: "Amazon Brasil",
-    categories: ["tecnologia", "computacao", "acessorios"],
-    status: "disabled",
+    categories: ["tecnologia", "computacao", "acessorios", "hub"],
+    status: "active",
     needsReview: true,
-    reviewStatus: "invalid",
-    reviewReason: "URL e imagem do produto pendentes de fornecimento direto pelo proprietário na conversa.",
+    reviewStatus: "flagged_for_manual_review",
+    reviewReason: "Link encurtador link.amazon com formato válido; sinalizado para verificação manual do destino final.",
   },
 
   // --- 4 Produtos Shopee ---
   {
-    id: "shp-item-1",
-    name: "Cabo de Rede Patch Cord Cat6 Blindado 10 Metros",
-    description: "Cabeamento estruturado de alta fidelidade para conexão direta ao modem, eliminando latências e interferências.",
+    id: "shp-tgt-m60-a1",
+    name: "Teclado TGT M60 A1",
+    description: "Teclado mecânico compacto no layout ABNT2 com iluminação e acionamento preciso de teclas.",
     imageUrl: "",
-    affiliateUrl: "",
+    affiliateUrl: "https://s.shopee.com.br/7Ky5D9KZD3",
     merchant: "Shopee",
-    categories: ["tecnologia", "internet-telecom", "redes"],
-    status: "disabled",
+    categories: ["tecnologia", "computacao", "perifericos", "teclado"],
+    status: "active",
     needsReview: true,
-    reviewStatus: "invalid",
-    reviewReason: "URL e imagem do produto pendentes de fornecimento direto pelo proprietário na conversa.",
+    reviewStatus: "flagged_for_manual_review",
+    reviewReason: "Link encurtador da Shopee com formato válido; sinalizado para verificação manual do destino final.",
   },
   {
-    id: "shp-item-2",
-    name: "Adaptador USB-C Multiportas 7 em 1 com Saída HDMI 4K",
-    description: "Hub de expansão para laptops e tablets modernos com portas USB 3.0, leitor de cartões e alimentação PD.",
+    id: "shp-tplink-ub500",
+    name: "Adaptador TP-Link UB500 Bluetooth 5.3",
+    description: "Nano adaptador USB com tecnologia Bluetooth 5.3 para conexão estável de periféricos e áudio sem fio.",
     imageUrl: "",
-    affiliateUrl: "",
+    affiliateUrl: "https://s.shopee.com.br/30p63RUju2",
     merchant: "Shopee",
-    categories: ["tecnologia", "computacao", "acessorios"],
-    status: "disabled",
+    categories: ["tecnologia", "computacao", "acessorios", "bluetooth"],
+    status: "active",
     needsReview: true,
-    reviewStatus: "invalid",
-    reviewReason: "URL e imagem do produto pendentes de fornecimento direto pelo proprietário na conversa.",
+    reviewStatus: "flagged_for_manual_review",
+    reviewReason: "Link encurtador da Shopee com formato válido; sinalizado para verificação manual do destino final.",
   },
   {
-    id: "shp-item-3",
-    name: "Suporte Articulado de Mesa com Ajuste de Altura para Monitor",
-    description: "Acessório ergonômico com padrão VESA para alinhamento postural em jornadas intensivas de informática.",
+    id: "shp-suporte-aluminio",
+    name: "Suporte Articulado de Alumínio para Notebook",
+    description: "Suporte ergonômico ajustável em liga de alumínio para ventilação térmica e alinhamento postural.",
     imageUrl: "",
-    affiliateUrl: "",
+    affiliateUrl: "https://s.shopee.com.br/9V2ZnSv2Jr",
     merchant: "Shopee",
-    categories: ["tecnologia", "computacao", "ergonomia"],
-    status: "disabled",
+    categories: ["tecnologia", "computacao", "ergonomia", "acessorios"],
+    status: "active",
     needsReview: true,
-    reviewStatus: "invalid",
-    reviewReason: "URL e imagem do produto pendentes de fornecimento direto pelo proprietário na conversa.",
+    reviewStatus: "flagged_for_manual_review",
+    reviewReason: "Link encurtador da Shopee com formato válido; sinalizado para verificação manual do destino final.",
   },
   {
-    id: "shp-item-4",
-    name: "Filtro de Linha DPS Clamper com 5 Tomadas e Proteção contra Surtos",
-    description: "Protetor eletrônico certificado para proteção de modems, roteadores e computadores contra descargas atmosféricas.",
+    id: "shp-hub-usb-4portas",
+    name: "Hub USB 4 Portas",
+    description: "Hub extensor compacto com 4 portas USB para expansão rápida de periféricos em computadores e notebooks.",
     imageUrl: "",
-    affiliateUrl: "",
+    affiliateUrl: "https://s.shopee.com.br/3LRwSHNg2J",
     merchant: "Shopee",
-    categories: ["tecnologia", "computacao", "energia"],
-    status: "disabled",
+    categories: ["tecnologia", "computacao", "acessorios", "hub"],
+    status: "active",
     needsReview: true,
-    reviewStatus: "invalid",
-    reviewReason: "URL e imagem do produto pendentes de fornecimento direto pelo proprietário na conversa.",
+    reviewStatus: "flagged_for_manual_review",
+    reviewReason: "Link encurtador da Shopee com formato válido; sinalizado para verificação manual do destino final.",
   },
 ];
 
@@ -408,13 +415,11 @@ export function auditAffiliateProducts(
 
     // Não desativa produtos apenas porque redirecionamentos externos não podem ser auditados automaticamente
     const isFormatValid = urlValidation.isValid && urlValidation.status === "active";
-    const isValid = isFormatValid && hasImage && hasName && hasDescription && item.status === "active";
+    const isValid = isFormatValid && hasName && hasDescription && item.status === "active";
 
     let reason: string | undefined = undefined;
     if (!urlValidation.isValid) {
       reason = urlValidation.reason;
-    } else if (!hasImage) {
-      reason = "Imagem do produto não fornecida.";
     } else if (!hasName || !hasDescription) {
       reason = "Nome ou descrição do produto incompletos.";
     } else if (item.status === "disabled") {
@@ -439,8 +444,8 @@ export function auditAffiliateProducts(
 
 /**
  * Retorna exclusivamente os produtos ativos e validados.
- * - Produtos desativados (status: 'disabled') ou com URL/imagem inválidos são filtrados.
- * - Produtos com links válidos mas sinalizados para revisão manual (ex: encurtadores amzn.to/meli.la)
+ * - Produtos desativados (status: 'disabled') ou com URL inválida são filtrados.
+ * - Produtos com links válidos mas sinalizados para revisão manual (ex: encurtadores amzn.to/meli.la/link.amazon)
  *   NÃO são bloqueados automaticamente se status === 'active'.
  */
 export function getActiveAffiliateProducts(
@@ -453,10 +458,6 @@ export function getActiveAffiliateProducts(
     }
 
     if (!item.affiliateUrl || !item.affiliateUrl.trim()) {
-      return false;
-    }
-
-    if (!item.imageUrl || !item.imageUrl.trim()) {
       return false;
     }
 

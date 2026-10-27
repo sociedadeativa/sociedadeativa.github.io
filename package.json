@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port=3000 --host=0.0.0.0",
+    "dev": "vite",
     "build": "NODE_ENV=production vite build && node scripts/generate-article-pages.mjs && node scripts/validate-build.mjs",
     "generate-articles": "node scripts/generate-article-pages.mjs",
     "update-economy": "node scripts/update-economic-data.mjs",

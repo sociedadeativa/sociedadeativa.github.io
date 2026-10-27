@@ -109,24 +109,30 @@ assert.ok(
 console.log("  [PASS] Price non-display rule verified across types and components.");
 
 // [TEST 6] Strict Handling of Genuinely Invalid Links vs Flagged Uncertain Redirects
-console.log("\n[TEST 6] Verifying Invalid Links are Disabled & Uncertain Redirects are Flagged for Review");
+console.log("\n[TEST 6] Verifying Active Status with Manual Review Flags for Official Shorteners");
 // Extrai apenas o bloco AFFILIATE_PRODUCTS para contar registros de produtos
 const productsBlockMatch = affiliateDataContent.match(/export const AFFILIATE_PRODUCTS: AffiliateProduct\[\] = \[([\s\S]*?)\];/);
 assert.ok(productsBlockMatch, "AFFILIATE_PRODUCTS array must be exported");
 const productsBlock = productsBlockMatch[1];
 
-const disabledInCatalog = (productsBlock.match(/status:\s*"disabled"/g) || []).length;
+const activeInCatalog = (productsBlock.match(/status:\s*"active"/g) || []).length;
 const needsReviewInCatalog = (productsBlock.match(/needsReview:\s*true/g) || []).length;
+const flaggedInCatalog = (productsBlock.match(/reviewStatus:\s*"flagged_for_manual_review"/g) || []).length;
 
 assert.equal(
-  disabledInCatalog,
+  activeInCatalog,
   14,
-  `All 14 catalog records must have status: "disabled", got ${disabledInCatalog}`
+  `All 14 catalog records must have status: "active", got ${activeInCatalog}`
 );
 assert.equal(
   needsReviewInCatalog,
   14,
   `All 14 catalog records must have needsReview: true, got ${needsReviewInCatalog}`
+);
+assert.equal(
+  flaggedInCatalog,
+  14,
+  `All 14 catalog records must have reviewStatus: "flagged_for_manual_review", got ${flaggedInCatalog}`
 );
 
 // Verifica que getActiveAffiliateProducts filtra estritamente produtos desativados
@@ -135,7 +141,7 @@ assert.ok(
   "getActiveAffiliateProducts must strictly filter out disabled products"
 );
 
-console.log("  [PASS] Catalog records verified; inactive products filtered strictly.");
+console.log("  [PASS] Catalog records verified: all 14 active with manual review flags for uncertain redirects.");
 
 // [TEST 7] Page Integration in TecnologiaPage and ArticlePage
 console.log("\n[TEST 7] Verifying Page Integration in TecnologiaPage & ArticlePage");
