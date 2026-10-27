@@ -5,49 +5,267 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706962",
+    "title": "Aliado de Trump diz que Flávio Bolsonaro chegou aos EUA",
+    "summary": "O investidor e ex-secretário de Turismo do México, Simón Levy, publicou uma postagem nas redes sociais nesta terça-feira (27) relatando que Flávio Bolsonaro teria chegado aos Estados Unidos (EUA), em uma articulação liderada pelo secretário de Estado norte-americano, Marco Rubio.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/aliado-de-trump-diz-que-flavio-bolsonaro-chegou-aos-eua",
+    "publishedAt": "27/10/2026 às 16:26",
+    "category": "Política",
+    "ingestedAt": "27/10/2026 às 16:36",
+    "imageUrl": "https://imagens.ebc.com.br/7zSPhZdGsxSeMbcABfhOQll_8lw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/16/_d6a8708.jpg?itok=CdyXlTjc",
+    "imageCaption": "Aliado de Trump diz que Flávio Bolsonaro chegou aos EUA",
+    "imageCredit": "Pedro Rafael Vilela - Repórter da Agência Brasil",
+    "imageAlt": "Aliado de Trump diz que Flávio Bolsonaro chegou aos EUA",
+    "author": "Pedro Rafael Vilela - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "Flávio Bolsonaro",
+      "fuga",
+      "EUA",
+      "Marco Rubio"
+    ],
+    "content": [
+      "O investidor e ex-secretário de Turismo do México, Simón Levy, publicou uma postagem nas redes sociais nesta terça-feira (27) relatando que Flávio Bolsonaro teria chegado aos Estados Unidos (EUA), em uma articulação liderada pelo secretário de Estado norte-americano, Marco Rubio. A fuga de Flávio, menos de 48 horas após perder as eleições presidenciais , também foi confirmada pela agência de notícias Reuters .",
+      "Levy é empresário e advogado e se autodescreve publicamente como um aliado próximo e alguém que serve a Donald Trump e ao movimento MAGA [Make America Great Again, no inglês].",
+      "A Agência Brasil procurou a assessoria de Flávio, mas não recebeu retorno. O senador não chegou a entregar seus passaportes à Polícia Federal (PF) após decisão do ministro Alexandre de Moraes, do Supremo Tribunal Federal (STF).",
+      "A decisão está em segredo de justiça e foi tornada pública pelo senador em suas redes sociais. A ordem judicial faz parte do processo em que Flávio e o advogado Willer Tomaz são investigados no STF por lavagem de dinheiro. Por causa do descumprimento, os passaportes do parlamentar foram cancelados diretamente pela PF ."
+    ]
+  },
+  {
+    "id": "camara-1312007-projeto-determina-divulgacao-a",
+    "title": "Projeto determina divulgação ativa de relatórios e prestações de contas de parcerias com o poder público",
+    "summary": "A proposta está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1312007-projeto-determina-divulgacao-ativa-de-relatorios-e-prestacoes-de-contas-de-parcerias-com-o-poder-publico",
+    "publishedAt": "27/10/2026 às 16:20",
+    "category": "Congresso",
+    "ingestedAt": "27/10/2026 às 16:36",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260903163035519-768x473.jpg",
+    "imageCaption": "Rodrigo Rollemberg: \"Atransparência, nesses casos, não é apenas uma exigência legal, é uma obrigação\"",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Deputado Rodrigo Rollemberg (PSB-DF) no Plenário da Câmara dos Deputados",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Kayo Magalhães / Câmara dos Deputados",
+      "Rodrigo Rollemberg: \"Atransparência, nesses casos, não é apenas uma exigência legal, é uma obrigação\"",
+      "O Projeto de Lei 1797/26 torna obrigatória a divulgação ativa de relatórios técnicos de monitoramento e de pareceres sobre a prestação de contas de parcerias entre a administração pública e as organizações da sociedade civil.",
+      "O projeto prevê prazo de até um ano para a prestação final de contas, contado do término da parceria. A administração pública terá ainda até um ano, após receber a prestação final, para emitir manifestação conclusiva sobre as contas.",
+      "O texto em análise na Câmara dos Deputados altera a Lei 13.019/14 , que trata dessas parcerias. A publicação ocorrerá em local de fácil acesso ao cidadão, respeitadas as diretrizes da Lei Geral de Proteção de Dados Pessoais (LGPD) .",
+      "O autor, deputado Rodrigo Rollemberg (PSB-DF), disse na justificativa que a ideia é ampliar a transparência e o controle sobre gastos públicos. “A transparência, nesses casos, não é apenas uma exigência legal, é uma obrigação”, afirmou.",
+      "O projeto será analisado, em caráter conclusivo , pelas comissões de Administração e Serviço Público; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania.",
+      "Para virar lei, terá de ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
+    ]
+  },
+  {
+    "id": "camara-1314150-projeto-define-regras-para-par",
+    "title": "Projeto define regras para participação de filhos em atividades rurais da família",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1314150-projeto-define-regras-para-participacao-de-filhos-em-atividades-rurais-da-familia",
+    "publishedAt": "27/10/2026 às 15:50",
+    "category": "Congresso",
+    "ingestedAt": "27/10/2026 às 16:36",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260617191929473-768x473.jpg",
+    "imageCaption": "Evair Vieira de Melo: ideia é preparar jovens para a sucessão no campo",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Evair Vieira de Melo (REPUBLICANOS - ES)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Kayo Magalhães / Câmara dos Deputados",
+      "Evair Vieira de Melo: ideia é preparar jovens para a sucessão no campo",
+      "O Projeto de Lei 3448/26 estabelece critérios para a participação de filhos de trabalhadores e de produtores rurais nas atividades práticas e de gestão da propriedade familiar. O texto está em análise na Câmara dos Deputados.",
+      "A proposta permite a colaboração de jovens a partir de 14 anos nas tarefas produtivas, mediante condições como compatibilidade com a frequência escolar, garantia de repouso, lazer e tempo para estudo, além de supervisão dos pais.",
+      "Pelo projeto, essas atividades terão natureza formativa, colaborativa e de apoio à economia familiar, sem a configuração de vínculo empregatício de qualquer espécie. Poderão ser criados programas de incentivo e capacitação técnica.",
+      "A proposta também proíbe expressamente a realização de tarefas noturnas, perigosas ou insalubres, bem como de atividades incluídas na Lista das Piores Formas de Trabalho Infantil (Lista TIP), regulamentada pelo Decreto 6.481/08 .",
+      "Segundo o autor, deputado Evair Vieira de Melo (Republicanos-ES), o projeto define um marco regulatório claro e protetivo. “A realidade do meio rural demonstra um cenário desafiador no que se refere à permanência das novas gerações no campo”, afirma.",
+      "“Ao preparar tecnicamente o jovem para a gestão e a sucessão no campo, a proposta atua como vetor de desenvolvimento regional, fixando o homem na terra com dignidade, renda e sustentabilidade”, acrescenta o parlamentar.",
+      "Segundo o último Censo Agropecuário , de 2017, houve uma redução, em termos absolutos e relativos, nos estabelecimentos dirigidos por produtores com menos de 45 anos de idade, enquanto que as faixas etárias mais elevadas registraram aumento.",
+      "O projeto será analisado, em caráter conclusivo , pelas comissões de Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural; de Previdência, Assistência Social, Infância, Adolescência e Família; e de Constituição e Justiça e de Cidadania.",
+      "Para virar lei, terá de ser aprovado pela Câmara e pelo Senado.",
+      "Saiba mais sobre a tramitação de projetos de lei"
+    ]
+  },
+  {
+    "id": "camara-1313498-projeto-restringe-participacao",
+    "title": "Projeto restringe participação em seleções brasileiras de futebol a atletas que atuam no país",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313498-projeto-restringe-participacao-em-selecoes-brasileiras-de-futebol-a-atletas-que-atuam-no-pais",
+    "publishedAt": "27/10/2026 às 15:15",
+    "category": "Congresso",
+    "ingestedAt": "27/10/2026 às 16:36",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260914100149196-768x474.jpg",
+    "imageCaption": "Luiz Carlos Hauly, autor da proposta",
+    "imageCredit": "Maryanna Oliveira / Câmara dos Deputados",
+    "imageAlt": "Homenagem às XXXIII Jornadas Latinoamericanas de Derecho Tributario. Dep. Luiz Carlos Hauly (PODE - PR)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Esportes",
+      "Futebol"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706949",
+    "title": "Israelenses vão às urnas em eleição que pode tirar Netanyahu do poder",
+    "summary": "Cerca de 7 milhões de israelenses vão às urnas, nesta terça-feira (27), pela primeira vez desde o ataque do Hamas de 7 de outubro de 2023.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/israelenses-vao-as-urnas-em-eleicao-que-pode-tirar-netanyahu-do-poder",
+    "publishedAt": "27/10/2026 às 14:36",
+    "category": "Eleições",
+    "ingestedAt": "27/10/2026 às 16:36",
+    "imageUrl": "https://imagens.ebc.com.br/5-VHoNLaGMpSiifwDAazdN4TEr0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/27/eleicoes_istarel_montagem.jpg?itok=3x6U9jWv",
+    "imageCaption": "Israelenses vão às urnas em eleição que pode tirar Netanyahu do poder",
+    "imageCredit": "Lucas Pordeus León - Repórter da Agência Brasil",
+    "imageAlt": "Israelenses vão às urnas em eleição que pode tirar Netanyahu do poder",
+    "author": "Lucas Pordeus León - Repórter da Agência Brasil",
+    "tags": [
+      "Internacional",
+      "Conflito no Oriente Médio",
+      "Israel",
+      "Eleições em Israel",
+      "Benjamin Netanyahu"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706956",
+    "title": "Anistia Internacional denunciará Milei à ONU por ataque a jornalistas",
+    "summary": "A Anistia Internacional informou que vai denunciar o presidente argentino, Javier Milei, à Organização das Nações Unidas (ONU) e à Comissão Interamericana de Direitos Humanos (CIDH) por hostilidade a jornalistas.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/anistia-internacional-denunciara-milei-onu-por-ataque-jornalistas",
+    "publishedAt": "27/10/2026 às 14:35",
+    "category": "Governo",
+    "ingestedAt": "27/10/2026 às 16:36",
+    "imageUrl": "https://imagens.ebc.com.br/OTC_zZKxvEH5oiVcmwfjq-usVaU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024-01-30t185321z_1_lynxmpek0t0o9_rtroptp_4_holocaust-memorial-argentina.jpg?itok=SNbHqtnK",
+    "imageCaption": "Anistia Internacional denunciará Milei à ONU por ataque a jornalistas",
+    "imageCredit": "Bruno de Freitas Moura - Repórter da Agência Brasil",
+    "imageAlt": "Anistia Internacional denunciará Milei à ONU por ataque a jornalistas",
+    "author": "Bruno de Freitas Moura - Repórter da Agência Brasil",
+    "tags": [
+      "Internacional",
+      "Anistisa Internacional",
+      "javier milei",
+      "ONU",
+      "ataque a jornalistas"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706955",
+    "title": "Justiça italiana adia julgamento sobre extradição de Zambelli",
+    "summary": "A Justiça da Itália adiou para 24 de novembro o julgamento sobre a extradição para o Brasil da deputada cassada Carla Zambelli, no caso em que ela foi condenada por porte ilegal de arma de fogo e constrangimento ilegal.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/justica-italiana-adia-julgamento-sobre-extradicao-de-zambelli",
+    "publishedAt": "27/10/2026 às 14:28",
+    "category": "Justiça",
+    "ingestedAt": "27/10/2026 às 16:36",
+    "imageUrl": "https://imagens.ebc.com.br/IEtNECjxPtFeWpLVnDUZdqz8Wk0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/06/05/captura_de_tela_2026-06-05_as_11.27.52.jpg?itok=91kAz59H",
+    "imageCaption": "Justiça italiana adia julgamento sobre extradição de Zambelli",
+    "imageCredit": "Felipe Pontes – repórter da Agência Brasil",
+    "imageAlt": "Justiça italiana adia julgamento sobre extradição de Zambelli",
+    "author": "Felipe Pontes – repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "Carla Zambelli",
+      "Itália",
+      "Julgamento",
+      "Justiça Italiana"
+    ],
+    "content": []
+  },
+  {
+    "id": "camara-1310596-projeto-aumenta-pena-para-adul",
+    "title": "Projeto aumenta pena para adulteração de alimentos e torna o crime hediondo",
+    "summary": "Para virar lei, o texto precisa ser aprovado pela Câmara e pelo Senado.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1310596-projeto-aumenta-pena-para-adulteracao-de-alimentos-e-torna-o-crime-hediondo",
+    "publishedAt": "27/10/2026 às 10:22",
+    "category": "Congresso",
+    "ingestedAt": "27/10/2026 às 11:41",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20251028165800456-768x473.jpg",
+    "imageCaption": "Júnior Ferrari: a adulteração de alimentos pode ocasionar danos graves ou fatais ao consumidor",
+    "imageCredit": "Renato Araújo/Câmara dos Deputados",
+    "imageAlt": "Deputado Júnior Ferrari (PSD-PA) fala em comissão da Câmara dos Deputados",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": []
+  },
+  {
+    "id": "camara-1313021-projeto-preve-gps-obrigatorio-",
+    "title": "Projeto prevê GPS obrigatório em veículos de transporte escolar",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313021-projeto-preve-gps-obrigatorio-em-veiculos-de-transporte-escolar",
+    "publishedAt": "27/10/2026 às 11:46",
+    "category": "Congresso",
+    "ingestedAt": "27/10/2026 às 13:16",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/comissao-do-esporte-194-711x480.jpg",
+    "imageCaption": "Marcos Tavares: tecnologia fortalece segurança das crianças",
+    "imageCredit": "Cleia Viana / Câmara dos Deputados",
+    "imageAlt": "Prêmio \"Comenda Incentivadores do Esporte\". Dep. Marcos TavaresPDT - RJ",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706951",
-    "title": "Inep divulga local de provas do Enem; candidato pode conferir no site",
+    "title": "Inep divulga local de provas do Enem 2026; saiba como conferir",
     "summary": "Os participantes do Exame Nacional do Ensino Médio (Enem) 2026 já podem conferir os locais onde farão as prova nos domingos 8 e 15 de novembro.",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/inep-divulga-local-de-provas-do-enem-candidato-pode-conferir-no-site",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/inep-divulga-local-de-provas-do-enem-2026-candidato-pode-conferir-no-site",
     "publishedAt": "27/10/2026 às 13:41",
-    "category": "Eleições",
-    "ingestedAt": "27/10/2026 às 14:18",
+    "category": "Política",
+    "ingestedAt": "27/10/2026 às 16:36",
     "imageUrl": "https://imagens.ebc.com.br/LW-eLKPXDa-5k4smREjGXkQxdHc=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/11/16/toms0215.jpg?itok=IGudC1NH",
-    "imageCaption": "Inep divulga local de provas do Enem; candidato pode conferir no site",
+    "imageCaption": "Inep divulga local de provas do Enem 2026; saiba como conferir",
     "imageCredit": "Ana Cristina Campos – Repórter da Agência Brasil",
-    "imageAlt": "Inep divulga local de provas do Enem; candidato pode conferir no site",
+    "imageAlt": "Inep divulga local de provas do Enem 2026; saiba como conferir",
     "author": "Ana Cristina Campos – Repórter da Agência Brasil",
     "tags": [
-      "Meio Ambiente",
+      "Educação",
       "Inep",
       "Enem 2026",
-      "Cartão de Confirmação",
+      "cartão de confirmação",
       "MEC"
     ],
-    "content": [
-      "Os participantes do Exame Nacional do Ensino Médio (Enem) 2026 já podem conferir os locais onde farão as prova nos domingos 8 e 15 de novembro.",
-      "O Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) disponibilizou, nesta terça-feira (27), o Cartão de Confirmação de Inscrição do Enem com a informação.",
-      "Para acessar o documento, basta o inscrito acessar a Página do Participante . É preciso usar a senha da plataforma Gov.br.",
-      "Além da informação sobre os locais de prova, o Cartão de Confirmação traz o número de inscrição, a data e o horário. Caso o inscrito tenha direito a atendimento especializado ou ao tratamento pelo nome social autorizado pelo Inep, os dados também estarão registrados.",
-      "O Inep avisa que não é obrigatório levar o Cartão de Confirmação de Inscrição nos dias de aplicação do Enem, mas recomenda levá-lo para evitar erros.",
-      "As provas serão aplicadas em dois domingos de novembro, nos dias 8 e 15, no turno da tarde, nas 27 unidades da federação.",
-      "De acordo com o edital desta edição , o primeiro dia do Enem terá duração de cinco horas e 30 minutos. Neste dia, os candidatos farão a redação e os exames de linguagens (língua portuguesa, literatura, língua estrangeira, artes, educação física e tecnologias da informação), códigos e suas tecnologias e ciências humanas (história, geografia, filosofia e sociologia) e suas tecnologias.",
-      "No segundo dia, os estudantes farão provas de ciências da natureza e suas tecnologias (biologia, química e física) e matemática. Os participantes terão cinco horas para fazer as provas. São 45 questões em cada área do conhecimento.",
-      "Saiba tudo sobre o exame no Guia do Enem , disponibilizado pelo Ministério da Educação (MEC).",
-      "Nesta edição, o Ministério da Educação (MEC) registrou mais de 5 milhões de inscrições.",
-      "O Enem é considerado a principal forma de entrada na educação superior no Brasil, por meio de programas federais como o Sistema de Seleção Unificada (Sisu), o Programa Universidade para Todos (Prouni) e o Fundo de Financiamento Estudantil (Fies).",
-      "As instituições de ensino públicas e privadas usam os resultados das provas para selecionar os estudantes.",
-      "Os resultados individuais do exame também podem ser aproveitados em processos seletivos de instituições de ensino de Portugal que tenham convênio com o Inep.",
-      "Desde a edição de 2025, o Enem também voltou a certificar a conclusão do ensino médio para os candidatos a partir dos 18 anos.",
-      "Pela primeira vez, o Enem também terá como objetivo avaliar o domínio das competências e habilidades esperadas no fim do ensino médio, integrando o Sistema de Avaliação da Educação Básica (Saeb)."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706948",
     "title": "MPT registra quase 2 mil denúncias de assédio eleitoral no Brasil",
-    "summary": "O Ministério Público do Trabalho (MPT) recebeu 1.937 denúncias de assédio eleitoral até essa segunda-feira (26), dia seguinte ao segundo turno das eleições . Desse total, 946 ocorreram entre os dois períodos.",
+    "summary": "O Ministério Público do Trabalho (MPT) recebeu 1.937 denúncias de assédio eleitoral até essa segunda-feira (26), dia seguinte ao segundo turno das eleições . Desse total, 946 ocorreram entre o primeiro e o segundo turnos.",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/mpt-registra-1937-denuncias-de-assedio-eleitoral",
@@ -64,25 +282,9 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "TSE",
       "assédio eleitoral",
       "eleições 2026",
-      "Multimídia"
+      "multimídia"
     ],
-    "content": [
-      "O Ministério Público do Trabalho (MPT) recebeu 1.937 denúncias de assédio eleitoral até essa segunda-feira (26), dia seguinte ao segundo turno das eleições . Desse total, 946 ocorreram entre os dois períodos.",
-      "O assédio eleitoral no trabalho é crime e configura-se quando alguém usa sua posição de poder no ambiente de trabalho para influenciar, constranger ou pressionar trabalhadores a votar, deixar de votar ou apoiar determinado candidato, partido ou posicionamento político.",
-      "Em todo o Brasil, o MPT manteve equipes de plantão durante toda a campanha eleitoral para atuar em casos mais urgentes. A maior parte dessas denúncias diz respeito à disputa para presidente da República.",
-      "Ao todo, durante o processo eleitoral o órgão ajuizou 59 ações civis públicas para combater o assédio eleitoral, obtendo 52 liminares (decisões urgentes e provisórias) para garantir o direto ao voto livre dos trabalhadores.",
-      "Além das liminares, foram assinados 53 termos de ajuste de conduta por patrões que se comprometeram a não interferir na livre escolha eleitoral de seus funcionários.",
-      "Um dos casos mais emblemáticos do segundo turno diz respeito ao empresário Leandro Batista Nóbrega, dono do Frigorífico Goiás.",
-      "Ele publicou um vídeo nas redes sociais ofertando viagem para a cidade turística de Caldas Novas (GO), com todas as despesas pagas, para mil apoiadores do então candidato à reeleição Luiz Inácio Lula da Silva. O objetivo seria que eles não fossem votar.",
-      "A Justiça do Trabalho acabou concedendo uma liminar para barrar a iniciativa, sob pena de multa de R$ 100 mil por trabalhador encontrado na situação.",
-      "Entre as violações mais comum, contudo, está impedir que os funcionários saiam para votar. Foi o que aconteceu na Bahia.",
-      "A empresa Total Atacado foi obrigada, por liminar, a aplicar escala que garantisse o direito ao voto, após denúncias de que empregados de lojas nos municípios de Salvador e Lauro de Freitas não haviam sido liberados no primeiro turno das eleições.",
-      "Saiba mais no Repórter Brasil Tarde, da TV Brasil",
-      "No Rio de Janeiro, a deputada estadual eleita Índia Armaleu (PL), a mais votada do estado com 248.504 votos, publicou nas redes sociais, nessa segunda-feira, mensagens sugerindo que empresários demitisse empregados que demonstrassem apoio ao presidente reeleito Luiz Inácio Lula da Silva.",
-      "“Empresário, olha a rede social do teu funcionário aí e confere se ele fez o ‘L’. Acho que não faz sentido nenhum manter na tua empresa quem odeia empresários”, destaca uma das mensagens reproduzidas no perfil da deputada.",
-      "O mesmo fez a deputada Jéssica Ramos Moreno (PL), no Paraná. Eleita deputada estadual, ela publicou no domingo nas redes sociais mensagem sugerindo a demissão de funcionários que votassem no PT. “Você tem uma empregada que é petista? Demita!”",
-      "Nesses casos, o empresário que promova demissões por motivo de orientação política pode se enquadrar na prática de discriminação na manutenção das relações de trabalho, prática vedada pela Constituição e pela Consolidação das Leis do Trabalho (CLT) ."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706946",
@@ -106,13 +308,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Dia da Consciência Negra",
       "Finados"
     ],
-    "content": [
-      "Desde 2023, quando foi sancionada a lei que cria o Dia Nacional de Zumbi e da Consciência Negra, o Brasil tem três feriados nacionais no calendário de novembro. Em 2026, eles são comemorados nas seguintes datas:",
-      "Comemoração de seguidores da Igreja Católica e cristãos de outras tradições, que também é conhecida como Dia dos Mortos. É celebrada como feriado no Brasil de acordo com a Lei Nº 10.607 de 19 de dezembro de 2002.",
-      "A Proclamação da República ocorreu em 15 de novembro de 1889, quando o marechal Deodoro da Fonseca saiu de sua casa no centro do Rio de Janeiro, próximo à Central do Brasil, para proclamar a República acompanhado por uma tropa de cerca de mil militares. É comemorado conforme Lei Nº 662, de 6 de abril de 1949. Marca a data da promulgação do Decreto 1 de 15 de novembro de 1889, que foi assinado por Deodoro da Fonseca.",
-      "Cortejo da Tia Ciata em comemoração do Dia da Consciência Negra - Tomaz Silva/Agência Brasil",
-      "A data de 20 Novembro remete à morte do líder do Quilombo dos Palmares, Zumbi, assassinado em 1695. O local foi um dos maiores quilombos do Brasil durante o período colonial, símbolo de resistência contra a escravização negra no país. Antes de ser feriado nacional , a data era oficial apenas em alguns estados, como Rio de Janeiro, Alagoas e São Paulo - e em mais de 1,2 mil cidades por meio de leis municipais e estaduais."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706945",
@@ -131,10 +327,10 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "author": "Ana Cristina Campos – Repórter da Agência Brasil",
     "tags": [
       "Saúde",
-      "Câncer de Mama",
+      "câncer de mama",
       "Outubro Rosa",
       "Inca",
-      "Política"
+      "Multimídia"
     ],
     "content": []
   },
@@ -227,8 +423,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Geral",
       "Polícia Federal",
-      "Engenheiro",
-      "Morte",
+      "engenheiro",
+      "morte",
       "santos"
     ],
     "content": []
@@ -276,8 +472,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Justiça",
       "lucas pavanato",
       "MPSP",
-      "discriminação",
-      "inquérito"
+      "Discriminação",
+      "Inquérito"
     ],
     "content": []
   },
@@ -323,28 +519,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Polícia Federal",
       "Rio de Janeiro",
       "Marcelo Queiroz"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1313021-projeto-preve-gps-obrigatorio-",
-    "title": "Projeto prevê GPS obrigatório em veículos de transporte escolar",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1313021-projeto-preve-gps-obrigatorio-em-veiculos-de-transporte-escolar",
-    "publishedAt": "27/10/2026 às 11:46",
-    "category": "Congresso",
-    "ingestedAt": "27/10/2026 às 13:16",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/comissao-do-esporte-194-711x480.jpg",
-    "imageCaption": "Marcos Tavares: tecnologia fortalece segurança das crianças",
-    "imageCredit": "Cleia Viana / Câmara dos Deputados",
-    "imageAlt": "Prêmio \"Comenda Incentivadores do Esporte\". Dep. Marcos TavaresPDT - RJ",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
     ],
     "content": []
   },
@@ -503,28 +677,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "imageCaption": "Maria Rosas: profissional é capacitado para identificar dificuldades de aprendizagem",
     "imageCredit": "Kayo Magalhães / Câmara dos deputados",
     "imageAlt": "Homenagem aos 49 anos da Igreja Universal do Reino de Deus. Dep. Maria Rosas (REPUBLICANOS - SP)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1310596-projeto-aumenta-pena-para-adul",
-    "title": "Projeto aumenta pena para adulteração de alimentos e torna o crime hediondo",
-    "summary": "Para virar lei, o texto precisa ser aprovado pela Câmara e pelo Senado.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310596-projeto-aumenta-pena-para-adulteracao-de-alimentos-e-torna-o-crime-hediondo",
-    "publishedAt": "27/10/2026 às 10:22",
-    "category": "Congresso",
-    "ingestedAt": "27/10/2026 às 11:41",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20251028165800456-768x473.jpg",
-    "imageCaption": "Júnior Ferrari: a adulteração de alimentos pode ocasionar danos graves ou fatais ao consumidor",
-    "imageCredit": "Renato Araújo/Câmara dos Deputados",
-    "imageAlt": "Deputado Júnior Ferrari (PSD-PA) fala em comissão da Câmara dos Deputados",
     "author": "Agência Câmara de Notícias",
     "tags": [
       "Congresso",
@@ -741,7 +893,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Bola de Ouro",
       "prêmio",
       "Harry Kane",
-      "atacante"
+      "Atacante"
     ],
     "content": []
   },
@@ -976,171 +1128,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Geral",
       "Dia do Servidor Público",
       "Brasil"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706869",
-    "title": "TRE-BA revoga ordem de prisão de secretário de Mobilidade de Salvador",
-    "summary": "O presidente do Tribunal Regional Eleitoral da Bahia (TRE-BA), Maurício Kertzman Szporer, revogou, nesta segunda-feira (26), a ordem de prisão em flagrante do secretário municipal de Mobilidade de Salvador, Pablo Souza.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tre-ba-revoga-ordem-de-prisao-de-secretario-de-mobilidade-de-salvador",
-    "publishedAt": "26/10/2026 às 18:13",
-    "category": "Justiça",
-    "ingestedAt": "26/10/2026 às 19:03",
-    "imageUrl": "https://imagens.ebc.com.br/7JGbjepVf4ToXz5qv47CWAn0HzI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/pablosalvador.jpg?itok=4_I7B-7N",
-    "imageCaption": "TRE-BA revoga ordem de prisão de secretário de Mobilidade de Salvador",
-    "imageCredit": "Alex Rodrigues - Repórter da Agência Brasil",
-    "imageAlt": "TRE-BA revoga ordem de prisão de secretário de Mobilidade de Salvador",
-    "author": "Alex Rodrigues - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "eleições 2026",
-      "secretário de Mobilidade",
-      "Salvador",
-      "frota de ônibus"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706867",
-    "title": "Moraes manda Flávio entregar passaporte e o proíbe de deixar o país",
-    "summary": "O ministro Alexandre de Moraes, do Supremo Tribunal Federal (STF), proibiu nesta segunda-feira (26) o senador Flávio Bolsonaro (PL) de deixar o país. O parlamentar será obrigado a entregar os seus passaportes à Polícia Federal (PF) .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/moraes-manda-flavio-entregar-passaporte-e-o-proibe-de-deixar-o-pais",
-    "publishedAt": "26/10/2026 às 17:55",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 19:03",
-    "imageUrl": "https://imagens.ebc.com.br/Qtjte3zav4YAhMvmi05ybn1qMNo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/0d4a6208.jpg?itok=XSa21UAX",
-    "imageCaption": "Moraes manda Flávio entregar passaporte e o proíbe de deixar o país",
-    "imageCredit": "André Richter - repórter da Agência Brasil",
-    "imageAlt": "Moraes manda Flávio entregar passaporte e o proíbe de deixar o país",
-    "author": "André Richter - repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Alexandre de Moraes",
-      "Supremo Tribunal Federal",
-      "stf"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706868",
-    "title": "Posse de Lula será em 5 de janeiro",
-    "summary": "A posse para o quarto mandato do presidente Luiz Inácio Lula da Silva e do vice Geraldo Alckmin ocorrerá no dia 5 de janeiro de 2027, e não mais no primeiro dia do ano. Os governadores e vices vão assumir o mandato no dia seguinte.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/posse-de-lula-sera-em-5-de-janeiro",
-    "publishedAt": "26/10/2026 às 17:54",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 19:03",
-    "imageUrl": "https://imagens.ebc.com.br/SVelJ3U6maA2Bb1Rg_ieGkXiI2Y=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/24/_int7543.jpg?itok=TvCWu-qS",
-    "imageCaption": "Posse de Lula será em 5 de janeiro",
-    "imageCredit": "Luiz Claudio Ferreira - Repórter da Agência Brasil",
-    "imageAlt": "Posse de Lula será em 5 de janeiro",
-    "author": "Luiz Claudio Ferreira - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Posse",
-      "Data",
-      "Presidente"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706865",
-    "title": "PF registrou 86 casos de possíveis crimes eleitorais no 2º turno",
-    "summary": "A Polícia Federal divulgou nesta segunda-feira (26) que 86 casos relacionados a possíveis crimes eleitorais foram registrados no segundo turno das eleições. Também foram instaurados 13 inquéritos policiais e lavrados 64 termos circunstanciados de ocorrência.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/pf-registrou-no-2o-turno-86-casos-de-possiveis-crimes-eleitorais",
-    "publishedAt": "26/10/2026 às 17:29",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 19:03",
-    "imageUrl": "https://imagens.ebc.com.br/b-X1dIglbetWhvfUJH3-Y6xshzM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/24/_pin5585.jpg-11.jpg?itok=_vBmgx3B",
-    "imageCaption": "PF registrou 86 casos de possíveis crimes eleitorais no 2º turno",
-    "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
-    "imageAlt": "PF registrou 86 casos de possíveis crimes eleitorais no 2º turno",
-    "author": "Douglas Corrêa - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Polícia Federal",
-      "crime eleitoral",
-      "Justiça Eleitoral"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1310183-projeto-cria-programa-para-sim",
-    "title": "Projeto cria programa para simplificar regularização ambiental e fundiária de imóveis rurais",
-    "summary": "O texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310183-projeto-cria-programa-para-simplificar-regularizacao-ambiental-e-fundiaria-de-imoveis-rurais",
-    "publishedAt": "26/10/2026 às 17:14",
-    "category": "Congresso",
-    "ingestedAt": "26/10/2026 às 19:03",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260602160347611-768x473.jpg",
-    "imageCaption": "José Medeiros, autor da proposta",
-    "imageCredit": "Kayo Magalhães/Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. José Medeiros (PL-MT)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706863",
-    "title": "Mega-Sena terá semana especial com cinco sorteios consecutivos",
-    "summary": "Desta segunda-feira (26) até sexta-feira (30), a Caixa realiza a Mega Semana da Mega-Sena, com cinco sorteios consecutivos. A ação especial terá sorteios (concursos 3075, 3076, 3077, 3078 e 3079) de segunda a sexta-feira, substituindo o calendário regular.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/mega-sena-tera-semana-especial-com-cinco-sorteios-consecutivos",
-    "publishedAt": "26/10/2026 às 17:01",
-    "category": "Brasil",
-    "ingestedAt": "26/10/2026 às 19:03",
-    "imageUrl": "https://imagens.ebc.com.br/J5kgqjV4tFLwXg8_GzSp8kVKlr4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/20230622_182658.jpg?itok=_yxjfe3l",
-    "imageCaption": "Mega-Sena terá semana especial com cinco sorteios consecutivos",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Mega-Sena terá semana especial com cinco sorteios consecutivos",
-    "author": "Agência Brasil",
-    "tags": [
-      "Geral",
-      "Mega-Sena",
-      "Loterias Caixa",
-      "Brasil"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706857",
-    "title": "Eleições 2026: oito partidos vão comandar 26 estados e o DF",
-    "summary": "O resultado do segundo turno das eleições de 2026, nesse domingo (25), consolidou o novo mapa partidário do Brasil.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/eleicoes-2026-oito-partidos-vao-comandar-26-estados-e-o-df",
-    "publishedAt": "26/10/2026 às 16:55",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 19:03",
-    "imageUrl": "https://imagens.ebc.com.br/yTdZmy8ZpSEFMmlkNtmHY0pRWM4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int9415.jpg?itok=qduWtKIi",
-    "imageCaption": "Eleições 2026: oito partidos vão comandar 26 estados e o DF",
-    "imageCredit": "Alex Rodrigues - Repórter da Agência Brasil",
-    "imageAlt": "Eleições 2026: oito partidos vão comandar 26 estados e o DF",
-    "author": "Alex Rodrigues - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Partidos Políticos",
-      "governadores",
-      "Eleições"
     ],
     "content": []
   },
