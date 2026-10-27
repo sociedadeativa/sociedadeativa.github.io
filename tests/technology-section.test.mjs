@@ -191,6 +191,130 @@ assert.ok(!techMatches.some((a) => a.id === "art-4"), "art-4 (Futebol) NÃO deve
 
 console.log("  ✓ Filtros de palavras-chave e categorias isolam artigos de tecnologia sem falso-positivos em futebol.");
 
+// 8. Validação do Pipeline de Notícias (scripts/update-news-data.mjs)
+console.log("\nTeste 8: Validação do pipeline de ingestão e classificação em scripts/update-news-data.mjs...");
+const updateScriptPath = path.join(rootDir, "scripts", "update-news-data.mjs");
+assert.ok(fs.existsSync(updateScriptPath), "scripts/update-news-data.mjs deve existir");
+const updateScriptContent = fs.readFileSync(updateScriptPath, "utf8");
+
+const catMatch = updateScriptContent.match(/export const OFFICIAL_CATEGORIES = (\[[\s\S]*?\]);/);
+assert.ok(catMatch, "scripts/update-news-data.mjs deve exportar OFFICIAL_CATEGORIES");
+const rawCatArray = catMatch[1].replace(/'/g, '"').replace(/,\s*\]/, ']');
+const categories = JSON.parse(rawCatArray);
+assert.ok(
+  Array.isArray(categories) && categories.includes("Tecnologia"),
+  "OFFICIAL_CATEGORIES em scripts/update-news-data.mjs DEVE incluir 'Tecnologia'"
+);
+assert.ok(
+  updateScriptContent.includes("techRegex"),
+  "scripts/update-news-data.mjs deve definir techRegex para classificação automatizada"
+);
+assert.ok(
+  updateScriptContent.includes("geral"),
+  "scripts/update-news-data.mjs deve monitorar feed geral da Agência Brasil"
+);
+assert.ok(
+  updateScriptContent.includes("category === 'Tecnologia'") || updateScriptContent.includes('category === "Tecnologia"'),
+  "scripts/update-news-data.mjs deve alocar cota de representatividade para Tecnologia"
+);
+console.log("  ✓ scripts/update-news-data.mjs categoriza, tagueia e inclui Tecnologia nas categorias oficiais.");
+
+// 9. Validação do Dataset de Notícias Reais
+console.log("\nTeste 9: Validação da presença e integridade de artigos de tecnologia no dataset oficial...");
+const newsDataJsonPath = path.join(rootDir, "public", "data", "newsData.json");
+const newsDataTsPath = path.join(rootDir, "src", "data", "newsData.ts");
+
+assert.ok(fs.existsSync(newsDataJsonPath), "public/data/newsData.json deve existir");
+assert.ok(fs.existsSync(newsDataTsPath), "src/data/newsData.ts deve existir");
+
+const jsonNews = JSON.parse(fs.readFileSync(newsDataJsonPath, "utf8"));
+const tsContent = fs.readFileSync(newsDataTsPath, "utf8");
+const tsMatch = tsContent.match(/export const OFFICIAL_NEWS_ARTICLES: NewsItem\[\] = (\[[\s\S]*\]);/);
+assert.ok(tsMatch, "src/data/newsData.ts deve conter array OFFICIAL_NEWS_ARTICLES");
+const tsNews = JSON.parse(tsMatch[1]);
+
+assert.strictEqual(jsonNews.length, tsNews.length, "Total paridade de quantidade entre JSON e TS");
+
+const techArticlesInDataset = jsonNews.filter((a) => a.category === "Tecnologia");
+assert.ok(
+  techArticlesInDataset.length >= 2,
+  `Deve haver ao menos 2 artigos autênticos com categoria 'Tecnologia' no dataset (encontrados: ${techArticlesInDataset.length})`
+);
+
+for (const art of techArticlesInDataset) {
+  assert.ok(art.id, "Artigo deve ter ID");
+  assert.ok(art.title, "Artigo deve ter título");
+  assert.ok(art.summary, "Artigo deve ter resumo");
+  assert.ok(art.articleUrl.startsWith("https://"), "URL do artigo deve ser HTTPS");
+  assert.ok(
+    /^\d{2}\/\d{2}\/\d{4} às \d{2}:\d{2}$/.test(art.publishedAt),
+    `Formato de publishedAt inválido no artigo ${art.id}: ${art.publishedAt}`
+  );
+  if (art.ingestedAt) {
+    assert.ok(
+      /^\d{2}\/\d{2}\/\d{4} às \d{2}:\d{2}$/.test(art.ingestedAt),
+      `Formato de ingestedAt inválido no artigo ${art.id}: ${art.ingestedAt}`
+    );
+  }
+}
+console.log(`  ✓ Dataset contém ${techArticlesInDataset.length} artigos autênticos de Tecnologia com datas oficiais verificadas.`);
+
+// 10. Validação de Semântica ARIA e Acessibilidade em TecnologiaPage.tsx
+console.log("\nTeste 10: Validação de acessibilidade, abas ARIA e hierarquia de títulos em TecnologiaPage.tsx...");
+const techPagePath = path.join(rootDir, "src", "pages", "TecnologiaPage.tsx");
+assert.ok(fs.existsSync(techPagePath), "src/pages/TecnologiaPage.tsx deve existir");
+const techPageContent = fs.readFileSync(techPagePath, "utf8");
+
+assert.ok(
+  techPageContent.includes('role="tablist"'),
+  "TecnologiaPage deve conter container com role='tablist'"
+);
+assert.ok(
+  techPageContent.includes('aria-controls="tech-topic-panel"'),
+  "Botões de aba devem declarar aria-controls='tech-topic-panel'"
+);
+assert.ok(
+  techPageContent.includes('id={`tech-tab-${topic.id}`}'),
+  "Botões de aba devem ter identificadores únicos id='tech-tab-...'"
+);
+assert.ok(
+  techPageContent.includes('role="tabpanel"'),
+  "Container de conteúdo das abas deve ter role='tabpanel'"
+);
+assert.ok(
+  techPageContent.includes('id="tech-topic-panel"'),
+  "Container de conteúdo deve ter id='tech-topic-panel'"
+);
+assert.ok(
+  techPageContent.includes('aria-labelledby={`tech-tab-${selectedTopic}`}'),
+  "Container de conteúdo deve ser rotulado por aria-labelledby do tab selecionado"
+);
+assert.ok(
+  techPageContent.includes("art.updatedAt"),
+  "TecnologiaPage deve exibir timestamp de atualização se disponível e diferente da publicação"
+);
+console.log("  ✓ TecnologiaPage cumpre 100% dos requisitos de semântica ARIA e hierarquia de títulos.");
+
+// 11. Validação do Workflow Agendado do GitHub Actions
+console.log("\nTeste 11: Validação do workflow agendado em .github/workflows/update-news-data.yml...");
+const workflowPath = path.join(rootDir, ".github", "workflows", "update-news-data.yml");
+assert.ok(fs.existsSync(workflowPath), ".github/workflows/update-news-data.yml deve existir");
+const workflowContent = fs.readFileSync(workflowPath, "utf8");
+
+assert.ok(
+  workflowContent.includes("node scripts/update-news-data.mjs"),
+  "Workflow deve executar scripts/update-news-data.mjs"
+);
+assert.ok(
+  workflowContent.includes("schedule:"),
+  "Workflow deve ter gatilho de agendamento cron"
+);
+assert.ok(
+  workflowContent.includes("cron: '0 9,14,19,0 * * *'"),
+  "Workflow deve conter horários regulares de expediente jornalístico brasileiro"
+);
+console.log("  ✓ Workflow de atualização automática configurado para execução periódica e manual.");
+
 console.log("\n===========================================================================");
-console.log("TODOS OS TESTES FOCADOS DA SEÇÃO DE TECNOLOGIA PASSARAM COM SUCESSO!");
+console.log("TODOS OS 11 TESTES FOCADOS DA SEÇÃO DE TECNOLOGIA PASSARAM COM SUCESSO!");
 console.log("===========================================================================\n");

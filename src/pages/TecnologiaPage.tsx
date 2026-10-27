@@ -265,8 +265,10 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
               return (
                 <button
                   key={topic.id}
+                  id={`tech-tab-${topic.id}`}
                   role="tab"
                   aria-selected={isActive}
+                  aria-controls="tech-topic-panel"
                   aria-label={`Filtrar por área tecnológica: ${topic.label}`}
                   onClick={() => setSelectedTopic(topic.id)}
                   className={`p-3 min-h-[44px] rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
@@ -296,7 +298,12 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
           {/* Coluna Principal: Matérias Reais da Editoria */}
           <div className="lg:col-span-8 space-y-6">
-            <div className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-xs">
+            <div
+              role="tabpanel"
+              id="tech-topic-panel"
+              aria-labelledby={`tech-tab-${selectedTopic}`}
+              className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-xs"
+            >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100 mb-5">
                 <div>
                   <h2 className="font-heading text-xl sm:text-2xl font-black text-slate-950 flex items-center gap-2">
@@ -329,6 +336,11 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
                           <span className="text-[11px] text-slate-500 flex items-center gap-1">
                             <Clock className="w-3 h-3 text-slate-400" />
                             <span>{art.publishedAt}</span>
+                            {art.updatedAt && art.updatedAt !== art.publishedAt && (
+                              <span className="text-slate-400 text-[10px]">
+                                · Atualizado às {art.updatedAt.includes("às") ? art.updatedAt.split("às")[1].trim() : art.updatedAt}
+                              </span>
+                            )}
                           </span>
                         </div>
 
@@ -414,9 +426,9 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
                 <ShieldCheck className="w-4 h-4 text-indigo-600" />
                 <span>Radar Regulatório Digital</span>
               </div>
-              <h3 className="font-heading font-black text-base text-slate-950 mb-2">
+              <h2 className="font-heading font-black text-base text-slate-950 mb-2">
                 Marcos Normativos &amp; Diretrizes
-              </h3>
+              </h2>
               <p className="text-xs text-slate-600 mb-4 leading-relaxed">
                 Acompanhamento factual das principais legislações e políticas públicas tecnológicas em vigor ou tramitação no Congresso Nacional:
               </p>
@@ -478,9 +490,9 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
                 <Info className="w-4 h-4" />
                 <span>Metodologia &amp; Fontes</span>
               </div>
-              <h3 className="font-heading font-black text-base text-white mb-2">
+              <h2 className="font-heading font-black text-base text-white mb-2">
                 Fontes Primárias Auditáveis
-              </h3>
+              </h2>
               <p className="text-xs text-slate-300 leading-relaxed mb-4">
                 O Sociedade Ativa não publica rumores de mercado nem gera notícias sintéticas. As apurações baseiam-se em:
               </p>

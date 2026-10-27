@@ -5,6 +5,241 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1706942",
+    "title": "Governo buscará cumprir meta fiscal com diálogo, diz Durigan",
+    "summary": "O ministro da Fazenda, Dario Durigan, assegurou, nesta terça-feira (27), em Brasília, que o governo federal vai discutir com agentes do mercado financeiro e do setor privado em geral medidas de ajuste que favoreçam o cumprimento da meta fiscal.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-buscara-cumprir-meta-fiscal-com-dialogo-diz-durigan",
+    "publishedAt": "27/10/2026 às 13:04",
+    "category": "Economia",
+    "ingestedAt": "27/10/2026 às 13:16",
+    "imageUrl": "https://imagens.ebc.com.br/ZHwDUBvDuOV9hbQxPzy1u1nv8XY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/05/12/0d9a7467.jpg?itok=DdlnxcKL",
+    "imageCaption": "Governo buscará cumprir meta fiscal com diálogo, diz Durigan",
+    "imageCredit": "Alex Rodrigues - Repórter da Agência Brasil",
+    "imageAlt": "Governo buscará cumprir meta fiscal com diálogo, diz Durigan",
+    "author": "Alex Rodrigues - Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "Dario Durigan",
+      "governo",
+      "Meta Fiscal"
+    ],
+    "content": [
+      "O ministro da Fazenda, Dario Durigan, assegurou, nesta terça-feira (27), em Brasília, que o governo federal vai discutir com agentes do mercado financeiro e do setor privado em geral medidas de ajuste que favoreçam o cumprimento da meta fiscal.",
+      "O ministro revelou que, na segunda-feira (26), entrou em contato com representantes do setor financeiro para tentar acalmar o mercado, um dia após o presidente Luiz Inácio Lula da Silva ser reeleito para mais quatro anos à frente do governo federal.",
+      "Sem fornecer mais detalhes, Durigan comentou que a equipe de governo já vem discutindo medidas de ajuste fiscal, incluindo a possibilidade de uma ampliação da fatia do Orçamento da União passível de ser contingenciada - medida que depende da aprovação do Congresso Nacional.",
+      "“Estamos passando por um período de transição”, destacou o ministro, referindo-se ao período entre o anúncio do resultado do segundo turno das eleições presidenciais e o dia 5 de janeiro, quando Lula e o vice-presidente, Geraldo Alckmin, serão reempossados.",
+      "“[Até lá] o presidente vai se sentar tanto com a equipe atual, quanto com a que ainda vai designar para o novo mandato, e definir os próximos passos concretos. Sabendo que já temos medidas prontas, como a busca pelo centro da meta, que vão ser tratadas com o Congresso Nacional em breve.”"
+    ]
+  },
+  {
+    "id": "ebc-1706940",
+    "title": "Polícia Federal cancela passaportes de Flávio Bolsonaro",
+    "summary": "A Polícia Federal (PF) cancelou os passaportes do senador Flávio Bolsonaro (PL-RJ), uma vez que ele não cumpriu a decisão judicial de entrega dos documentos . Não há, até o momento, registro formal de saída do senador do país.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/policia-federal-cancela-passaportes-de-flavio-bolsonaro",
+    "publishedAt": "27/10/2026 às 12:52",
+    "category": "Eleições",
+    "ingestedAt": "27/10/2026 às 13:16",
+    "imageUrl": "https://imagens.ebc.com.br/sKPd4d8UKTn0AdJBba5m8qn_d50=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/0d4a6236.jpg?itok=3AF9OK3O",
+    "imageCaption": "Polícia Federal cancela passaportes de Flávio Bolsonaro",
+    "imageCredit": "Pedro Peduzzi - repórter da Agência Brasil",
+    "imageAlt": "Polícia Federal cancela passaportes de Flávio Bolsonaro",
+    "author": "Pedro Peduzzi - repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "eleições 2026",
+      "Flávio Bolsonaro",
+      "Polícia Federal",
+      "Eleições"
+    ],
+    "content": [
+      "A Polícia Federal (PF) cancelou os passaportes do senador Flávio Bolsonaro (PL-RJ), uma vez que ele não cumpriu a decisão judicial de entrega dos documentos . Não há, até o momento, registro formal de saída do senador do país.",
+      "Diante da situação, a PF vai oficiar o ministro do Supremo Tribunal Federal Alexandre de Moraes sobre o não cumprimento da determinação.",
+      "O cancelamento dos passaportes ocorre em meio a suspeitas de que o candidato derrotado nas eleições presidenciais de 2026 teria cruzado a fronteira para a Argentina usando documento de identidade e com a intenção de ir aos Estados Unidos a bordo de um jato executivo.",
+      "A suspeita ganhou força após matéria publicada nesta terça-feira (27) pelo site argentino Infobae , informando que o senador já estaria em Puerto Iguazú, cidade que faz fronteira com o Brasil. De lá, ele viajaria para os Estados Unidos a bordo de um Gulfstream G400, registro LV-JQW, pertencente à empresa Baires Fly S.A.",
+      "Ainda segundo a imprensa argentina, a Casa Rosada informou não ter registrado, até o momento, a entrada de Flávio Bolsonaro no país.",
+      "Flávio é investigado em dois inquéritos que tramitam no Supremo Tribunal Federal (STF). Em um deles, é suspeito, ao lado do advogado Willer Tomaz, de lavagem de dinheiro por meio de plataformas de bets. Ele também é alvo de outro inquérito que investiga o financiamento do filme Dark Horse, sobre a trajetória de seu pai.",
+      "Eduardo Bolsonaro, irmão de Flávio, está nos Estados Unidos, apesar de constar contra ele um mandado de prisão em aberto no Brasil . Na semana passada, Eduardo, que teve o mandato de deputado federal cassado, defendeu que Flávio deveria deixar o Brasil se perdesse a eleição .",
+      "O ex-deputado foi condenado a quatro anos de prisão por articular sanções contra autoridades brasileiras e o tarifaço dos Estados Unidos contra as exportações do país , em uma tentativa de evitar a condenação de seu pai, o ex-presidente Jair Bolsonaro, no processo da trama golpista.",
+      "Apesar de Flávio não ter aceitado a derrota no segundo turno das eleições presidenciais em seu primeiro discurso após a apuração, o Partido Liberal reconheceu publicamente nesta terça-feira que Luiz Inácio Lula da Silva venceu o pleito .",
+      "O presidente Luiz Inácio Lula da Silva foi reeleito com uma diferença de mais de 4,4 milhões de votos."
+    ]
+  },
+  {
+    "id": "ebc-1706939",
+    "title": "Governo prorroga por um mês subvenção de R$ 2,12 ao diesel",
+    "summary": "O governo federal informou nesta terça-feira (27) que renovará por mais um mês a subvenção de R$ 2,12 por litro ao óleo diesel. A medida será formalizada por meio de portaria a ser publicada no Diário Oficial da União .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-prorroga-por-um-mes-subvencao-de-r-212-ao-diesel",
+    "publishedAt": "27/10/2026 às 12:41",
+    "category": "Economia",
+    "ingestedAt": "27/10/2026 às 13:16",
+    "imageUrl": "https://imagens.ebc.com.br/vdZ84gev7mIlNfRdihWW5eX4NrE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/ffraz_abr2405182853_1.jpg?itok=4e5n1yET",
+    "imageCaption": "Governo prorroga por um mês subvenção de R$ 2,12 ao diesel",
+    "imageCredit": "Pedro Peduzzi - Repórter da Agência Brasil",
+    "imageAlt": "Governo prorroga por um mês subvenção de R$ 2,12 ao diesel",
+    "author": "Pedro Peduzzi - Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "óleo diesel",
+      "subvenção",
+      "combustível",
+      "governo federal"
+    ],
+    "content": [
+      "O governo federal informou nesta terça-feira (27) que renovará por mais um mês a subvenção de R$ 2,12 por litro ao óleo diesel. A medida será formalizada por meio de portaria a ser publicada no Diário Oficial da União .",
+      "A renovação já havia sido sinalizada mais cedo pelo ministro da Fazenda, Dario Durigan. Ao ser questionado sobre o tema, ele disse que o governo ainda discutia os detalhes para a publicação da medida.",
+      "“A gente vai tratar [da questão da renovação da subvenção do diesel]. Temos reuniões durante o dia e faremos anúncios nas próximas horas ou dias”, declarou o ministro.",
+      "De acordo com o governo, o impacto fiscal da prorrogação será compensado por receitas extraordinárias provenientes do petróleo, preservando a neutralidade fiscal.",
+      "A subvenção está prevista na Medida Provisória nº 1.391 , de 11 de setembro de 2026, que autorizou a União a conceder subvenção econômica a produtores e importadores de óleo diesel enquanto persistirem as instabilidades no mercado internacional de combustíveis decorrentes de conflitos geopolíticos",
+      "A legislação federal tem, como objetivo, reduzir os efeitos da volatilidade do mercado internacional sobre o preço do diesel no país.",
+      "Em nota, o Ministério do Planejamento e Orçamento informou que a renovação terá validade de 30 dias e poderá ser novamente prorrogada conforme a evolução do mercado internacional de combustíveis."
+    ]
+  },
+  {
+    "id": "ebc-1706938",
+    "title": "Polícia investiga morte de engenheiro agredido em Santos",
+    "summary": "A Polícia Civil investiga a morte do engenheiro Marcelo de Oliveira da Rocha, de 30 anos, que morreu no último domingo (25) após ter sido brutalmente espancado na madrugada de sábado (24), em Santos, no litoral paulista.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/policia-investiga-morte-de-engenheiro-agredido-em-santos",
+    "publishedAt": "27/10/2026 às 12:38",
+    "category": "Brasil",
+    "ingestedAt": "27/10/2026 às 13:16",
+    "imageUrl": "https://imagens.ebc.com.br/P7UeedtZPGUm116KlpRlKYVSEU0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/17/86b9cab4-2ff6-4485-abd1-45d80a5218ec.jpeg?itok=ABqDQ6Si",
+    "imageCaption": "Polícia investiga morte de engenheiro agredido em Santos",
+    "imageCredit": "Matheus Crobelatti*",
+    "imageAlt": "Polícia investiga morte de engenheiro agredido em Santos",
+    "author": "Matheus Crobelatti*",
+    "tags": [
+      "Geral",
+      "Polícia Federal",
+      "Engenheiro",
+      "Morte",
+      "santos"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706937",
+    "title": "Para conter oscilações, Tesouro anuncia nova recompra de títulos",
+    "summary": "O Tesouro Nacional anunciou nesta terça-feira (27) que vai recomprar Notas do Tesouro Nacional Série B (NTN-B) com vencimentos em 15/08/2030, 15/05/2035, 15/08/2040 e 15/05/2045. O edital com as condições do leilão de recompra será divulgado no site da instituição.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/para-conter-oscilacoes-tesouro-anuncia-nova-recompra-de-titulos",
+    "publishedAt": "27/10/2026 às 12:36",
+    "category": "Economia",
+    "ingestedAt": "27/10/2026 às 13:16",
+    "imageUrl": "https://imagens.ebc.com.br/1cy5uguugv_1vsOe-4tl9WNcfN0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/10/_raf1010_1.jpg?itok=DbnHfTFq",
+    "imageCaption": "Para conter oscilações, Tesouro anuncia nova recompra de títulos",
+    "imageCredit": "Alex Rodrigues - Repórter da Agência Brasil",
+    "imageAlt": "Para conter oscilações, Tesouro anuncia nova recompra de títulos",
+    "author": "Alex Rodrigues - Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "Tesouro Nacional",
+      "recompra de títulos",
+      "Ministro da Fazenda",
+      "Dario Durigan"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706935",
+    "title": "MPSP instaura inquérito para investigar vereador Lucas Pavanato",
+    "summary": "O Ministério Público de São Paulo (MP-SP) vai investigar o deputado federal eleito Lucas Pavanato (PL-SP) por suposta prática de discriminação, incitação à hostilidade e discurso de ódio por meio de um inquérito civil instaurado nesta segunda-feira (26), com base em declarações.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/mpsp-instaura-inquerito-para-investigar-vereador-lucas-pavanato",
+    "publishedAt": "27/10/2026 às 12:27",
+    "category": "Justiça",
+    "ingestedAt": "27/10/2026 às 13:16",
+    "imageUrl": "https://imagens.ebc.com.br/GTew6YagRy9eIQqYGRHKGl0hOCk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/27/54240867653-08575f5a63-k-1-.jpg?itok=hY9_oUJS",
+    "imageCaption": "MPSP instaura inquérito para investigar vereador Lucas Pavanato",
+    "imageCredit": "Flávia Albuquerque - Repórter da Agência Brasil",
+    "imageAlt": "MPSP instaura inquérito para investigar vereador Lucas Pavanato",
+    "author": "Flávia Albuquerque - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "lucas pavanato",
+      "MPSP",
+      "discriminação",
+      "inquérito"
+    ],
+    "content": []
+  },
+  {
+    "id": "camara-1313222-projeto-muda-regras-para-incor",
+    "title": "Projeto muda regras para incorporação de novas tecnologias no SUS",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313222-projeto-muda-regras-para-incorporacao-de-novas-tecnologias-no-sus",
+    "publishedAt": "27/10/2026 às 12:24",
+    "category": "Congresso",
+    "ingestedAt": "27/10/2026 às 13:16",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/06/depositphotos-86028332-xl-768x536.jpg",
+    "imageCaption": "Incorporação de procedimentos deverá ser analisada em duas fases",
+    "imageCredit": "Depositphotos",
+    "imageAlt": "Projeto muda regras para incorporação de novas tecnologias no SUS",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Tecnologia",
+      "Brasil"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706931",
+    "title": "Deputado do Rio volta a ser alvo da PF por suspeita de fraudes",
+    "summary": "O deputado federal Marcelo Queiroz (PSDB-RJ) voltou a ser alvo da Polícia Federal , nesta terça-feira (27), na segunda fase da Operação Castratio .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/deputado-do-rio-volta-ser-alvo-da-pf-por-suspeita-de-fraudes",
+    "publishedAt": "27/10/2026 às 11:59",
+    "category": "Justiça",
+    "ingestedAt": "27/10/2026 às 13:16",
+    "imageUrl": "https://imagens.ebc.com.br/-awM0m-amQjSpAHefc6UPijRSvY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/27/whatsapp_image_2026-10-27_at_09.37.16.jpeg?itok=kz1HkqGR",
+    "imageCaption": "Deputado do Rio volta a ser alvo da PF por suspeita de fraudes",
+    "imageCredit": "Cristina Indio do Brasil - Repórter da Agência Brasil",
+    "imageAlt": "Deputado do Rio volta a ser alvo da PF por suspeita de fraudes",
+    "author": "Cristina Indio do Brasil - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "Polícia Federal",
+      "Rio de Janeiro",
+      "Marcelo Queiroz"
+    ],
+    "content": []
+  },
+  {
+    "id": "camara-1313021-projeto-preve-gps-obrigatorio-",
+    "title": "Projeto prevê GPS obrigatório em veículos de transporte escolar",
+    "summary": "Texto está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313021-projeto-preve-gps-obrigatorio-em-veiculos-de-transporte-escolar",
+    "publishedAt": "27/10/2026 às 11:46",
+    "category": "Congresso",
+    "ingestedAt": "27/10/2026 às 13:16",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/comissao-do-esporte-194-711x480.jpg",
+    "imageCaption": "Marcos Tavares: tecnologia fortalece segurança das crianças",
+    "imageCredit": "Cleia Viana / Câmara dos Deputados",
+    "imageAlt": "Prêmio \"Comenda Incentivadores do Esporte\". Dep. Marcos TavaresPDT - RJ",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": []
+  },
+  {
     "id": "ebc-1706929",
     "title": "Dino manda PF apurar interferência externa no processo eleitoral",
     "summary": "O ministro Flávio Dino, do Supremo Tribunal Federal (STF), ordenou que a Polícia Federal (PF) abra um inquérito para apurar a possível interferência estrangeira sobre o processo eleitoral brasileiro, sobretudo por meio do financiamento oculto de campanha política .",
@@ -26,27 +261,11 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições 2026",
       "Polícia Federal"
     ],
-    "content": [
-      "O ministro Flávio Dino, do Supremo Tribunal Federal (STF), ordenou que a Polícia Federal (PF) abra um inquérito para apurar a possível interferência estrangeira sobre o processo eleitoral brasileiro, sobretudo por meio do financiamento oculto de campanha política .",
-      "Dino tomou a decisão após ser provocado pelo PT numa arguição de descumprimento de preceito fundamental (ADPF) aberta pelo Instituto Brasileiro de Mineração (Ibram), na qual o ministro já decidiu sobre questões relativas à soberania nacional e à aplicação de ordens judiciais e leis estrangeiras no Brasil .",
-      "Na decisão desta terça-feira (27), o ministro avaliou que as informações levadas ao seu conhecimento, todas relativas a uma possível interferência estrangeira nas eleições, não devem tramitar na referida ADPF, mas necessitam ser apuradas em procedimentos próprios de investigação, sob a supervisão do STF.",
-      "Ele afirmou que todas as denúncias reforçam a preocupação levantada pela Agência Brasileira de Inteligência (Abin) , que, em relatório anterior às eleições sobre desafios de inteligência para 2026, apontou para o alto incentivo para que atores externos com interesses no Brasil interferissem no processo eleitoral.",
-      "Entre as principais informações citadas pelo ministro, está a de que os executivos Tallis Gomes e Pedro Sang teriam atuado em nome da empresa Rockbridge Network para angariar recursos para a campanha do candidato Flávio Bolsonaro nos Estados Unidos.",
-      "Outra denúncia diz respeito à veiculação remunerada, por perfis sediados no exterior, de conteúdos alusivos à eleição presidencial brasileira . As publicações traziam dados favoráveis à vitória de Flávio Bolsonaro na plataforma de apostas Polymarket, bloqueada no Brasil desde 2024.",
-      "Dino citou uma representação aberta pelo candidato à Presidência da República Renan Santos (Missão), que apresentou ao Tribunal Superior Eleitoral (TSE) exemplos desses anúncios, sempre em perfis estrangeiros, mas voltados ao público brasileiro.",
-      "“Com base no acervo probatório e nas postagens colacionadas, verifica-se um padrão: perfis estrangeiros, de forma reiterada, fazem postagens versando sobre as eleições brasileiras, todas realizadas de forma paga, quase sempre em português e voltadas ao público brasileiro”, diz a representação de Renan Santos.",
-      "Ainda foram citadas por Dino suspeitas em torno da atuação da empresa Meta - dona das plataformas Facebook, Instagram e WhatsApp. O ministro mencionou relatório publicado em 22 de outubro pelo Comitê de Supervisão da Meta, que apontou falhas na garantia de integridade eleitoral da empresa.",
-      "Ele citou ainda preocupações externadas por observadores da Organização das Nações Unidas (ONU) que atuaram durante as eleições brasileiras, em comunicado publicado em 21 de outubro.",
-      "Entre as preocupações elencadas pela ONU estão:",
-      "Por fim, o ministro afirmou ainda ser necessário apurar a acusação de que a exploração mineral de terras raras em território brasileiro tenha sido ofertada em troca de interferência no processo eleitoral.",
-      "Dino frisou “a necessidade de esclarecer o possível vínculo entre apoio eleitoral e o interesse econômico de agentes estrangeiros nas terras raras e nos minerais críticos brasileiro”.",
-      "“Cumpre, portanto, apurar quem teria formulado eventual proposta, a quem ela teria sido dirigida, por qual instrumento e em que consistiria a suposta contrapartida, tendo presente que os recursos minerais pertencem à União e sua exploração depende de autorização ou concessão concedida no interesse nacional”, acrescentou o ministro.",
-      "Ao final da decisão, Dino determinou que a PF atue nas seguintes linhas de investigação:"
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706913",
-    "title": "Governo enviará MP do Imposto Seletivo e renova subvenção ao diesel",
+    "title": "Governo vai enviar MP do Imposto Seletivo e renova subvenção ao diesel",
     "summary": "O ministro da Fazenda, Dario Durigan, afirmou que o governo federal deve enviar ao Congresso Nacional, nos próximos dias, uma Medida Provisória (MP) estabelecendo as alíquotas do chamado Imposto Seletivo (IS).",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
@@ -55,22 +274,18 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "category": "Economia",
     "ingestedAt": "27/10/2026 às 11:41",
     "imageUrl": "https://imagens.ebc.com.br/ZHwDUBvDuOV9hbQxPzy1u1nv8XY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/05/12/0d9a7467.jpg?itok=DdlnxcKL",
-    "imageCaption": "Governo enviará MP do Imposto Seletivo e renova subvenção ao diesel",
+    "imageCaption": "Governo vai enviar MP do Imposto Seletivo e renova subvenção ao diesel",
     "imageCredit": "Alex Rodrigues - Repórter da Agência Brasil",
-    "imageAlt": "Governo enviará MP do Imposto Seletivo e renova subvenção ao diesel",
+    "imageAlt": "Governo vai enviar MP do Imposto Seletivo e renova subvenção ao diesel",
     "author": "Alex Rodrigues - Repórter da Agência Brasil",
     "tags": [
       "Economia",
-      "Ministro da Fazenda",
+      "ministro da Fazenda",
       "Dario Durigan",
       "MP do Imposto Seletivo",
       "subvenção ao diesel"
     ],
-    "content": [
-      "O ministro da Fazenda, Dario Durigan, afirmou que o governo federal deve enviar ao Congresso Nacional, nos próximos dias, uma Medida Provisória (MP) estabelecendo as alíquotas do chamado Imposto Seletivo (IS).",
-      "Também conhecido como Imposto do Pecado, o tributo foi aprovado junto com a reforma tributária e será cobrado a partir de 2027, com a justificativa de desestimular o consumo de produtos e atividades consideradas prejudiciais à saúde ou ao meio ambiente , como cigarros, bebidas alcoólicas, refrigerantes, alguns tipos de veículos, além da extração de bens minerais, loterias, apostas e jogos de fantasy sports (jogos online).",
-      "Em entrevista na entrada do ministério, Durigan disse que o governo renovaria a subvenção ao óleo diesel . Quase no mesmo momento, o Ministério do Planejamento e Orçamento confirmou a renovação da subvenção ao combustível, no valor de R$ 2,12 por litro, como forma de conter a alta dos preços. A medida tem validade de um mês, podendo ser renovada ao fim do período."
-    ]
+    "content": []
   },
   {
     "id": "ebc-1706911",
@@ -93,19 +308,55 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "sistema financeiro",
       "inadimplência"
     ],
-    "content": [
-      "O Banco Central (BC) informou nesta terça-feira (27) que \"não vê risco relevante\" para a estabilidade financeira do país, apesar da piora dos indicadores de crédito das famílias.",
-      "Segundo o Relatório de Estabilidade Financeira referente ao primeiro semestre de 2026, o sistema financeiro continua com níveis confortáveis de capitalização e liquidez, além de capacidade de resistir a cenários adversos.",
-      "O documento mostra que os ativos problemáticos das famílias, indicador que reúne operações com atraso ou sinais de dificuldade de pagamento, aumentaram e atingiram o maior nível desde 2012 na maioria das modalidades de crédito.",
-      "De acordo com o BC, a inadimplência foi o principal fator responsável por esse movimento.",
-      "A autoridade monetária também informou que o comprometimento da renda das famílias com o pagamento de dívidas alcançou o maior nível dos últimos 21 anos.",
-      "As estimativas do banco apontam que a pressão sobre a capacidade de pagamento dos consumidores deve continuar ao longo do segundo semestre.",
-      "Apesar desse cenário, o BC avalia que o Sistema Financeiro Nacional permanece resiliente. As provisões constituídas pelas instituições financeiras seguem compatíveis com as perdas esperadas, enquanto os testes de estresse de capital e de liquidez indicam que os bancos mantêm capacidade de enfrentar cenários econômicos adversos.",
-      "O relatório aponta ainda desaceleração do crédito para famílias e empresas, em linha com os juros elevados e a atividade econômica mais moderada. Segundo o BC, as instituições financeiras também vêm demonstrando maior cautela na concessão de empréstimos.",
-      "Pesquisa feita pela autoridade monetária mostra que 73% das instituições financeiras consultadas estão muito ou totalmente confiantes na resiliência do sistema.",
-      "As principais preocupações apontadas foram o risco fiscal e a possibilidade de aumento da inadimplência em um ambiente de juros elevados por um período prolongado.",
-      "Na avaliação do Banco Central, o aumento do endividamento de famílias e empresas exige cautela adicional na oferta de crédito. O órgão informou que estuda medidas voltadas aos segmentos de maior risco para reduzir situações de superendividamento e fortalecer a sustentabilidade do crédito no país."
-    ]
+    "content": []
+  },
+  {
+    "id": "ebc-1706912",
+    "title": "Concentração de gases do efeito estufa atingem níveis recordes",
+    "summary": "Um relatório publicado nesta terça-feira (27) pela Organização Meteorológica Mundial (WMO) mostrou que 2025 atingiu níveis de concentração “sem precedentes” de gases do efeito estufa na atmosfera.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/concentracao-de-gases-do-efeito-estufa-atingem-niveis-recordes",
+    "publishedAt": "27/10/2026 às 11:14",
+    "category": "Política",
+    "ingestedAt": "27/10/2026 às 13:16",
+    "imageUrl": "https://imagens.ebc.com.br/zjkzb1mk_aPGmgTAYWXJR-QdHh8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/09/13/tiete_poluicao11.jpg?itok=02wwBHNw",
+    "imageCaption": "Concentração de gases do efeito estufa atingem níveis recordes",
+    "imageCredit": "Vitor Abdala – Repórter da Agência Brasil",
+    "imageAlt": "Concentração de gases do efeito estufa atingem níveis recordes",
+    "author": "Vitor Abdala – Repórter da Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "WMO",
+      "Gases de Efeito Estufa",
+      "Poluição",
+      "Política"
+    ],
+    "content": []
+  },
+  {
+    "id": "ebc-1706910",
+    "title": "PF investiga desvio de dinheiro em empresa de previdência de São Roque",
+    "summary": "A empresa São Roque Prev, responsável pela previdência social dos servidores da cidade de São Roque, no interior de São Paulo, é alvo, nesta terça-feira (27), de investigação da Polícia Federal por desvio de dinheiro.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/pf-investiga-desvio-de-dinheiro-em-empresa-de-previdencia-de-sao-roque",
+    "publishedAt": "27/10/2026 às 11:12",
+    "category": "Brasil",
+    "ingestedAt": "27/10/2026 às 13:16",
+    "imageUrl": "https://imagens.ebc.com.br/_dr_roPLd2aUt7r8x6LStStwais=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/27/5d291c89-ba9e-46e1-bc7c-3f5eec48f552.jpeg?itok=EOnLybN6",
+    "imageCaption": "PF investiga desvio de dinheiro em empresa de previdência de São Roque",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "PF investiga desvio de dinheiro em empresa de previdência de São Roque",
+    "author": "Agência Brasil",
+    "tags": [
+      "Geral",
+      "Operação Entressafras",
+      "Polícia Federal",
+      "empresa de previdência",
+      "São Roque SP"
+    ],
+    "content": []
   },
   {
     "id": "camara-1311917-projeto-institui-politica-de-e",
@@ -605,7 +856,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/dia-do-servidor-publico-ponto-facultativo-sera-na-sexta-feira",
     "publishedAt": "26/10/2026 às 18:28",
-    "category": "Política",
+    "category": "Brasil",
     "ingestedAt": "26/10/2026 às 21:28",
     "imageUrl": "https://imagens.ebc.com.br/ylHlw_pEhxAAhx-CSiFVhbhP4yE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/06/22/dji_20260621145838_0073_d.jpg?itok=D1wMTw7F",
     "imageCaption": "Dia do Servidor Público: ponto facultativo será na sexta-feira",
@@ -615,7 +866,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Geral",
       "Dia do Servidor Público",
-      "Política"
+      "Brasil"
     ],
     "content": []
   },
@@ -745,7 +996,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/mega-sena-tera-semana-especial-com-cinco-sorteios-consecutivos",
     "publishedAt": "26/10/2026 às 17:01",
-    "category": "Política",
+    "category": "Brasil",
     "ingestedAt": "26/10/2026 às 19:03",
     "imageUrl": "https://imagens.ebc.com.br/J5kgqjV4tFLwXg8_GzSp8kVKlr4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/20230622_182658.jpg?itok=_yxjfe3l",
     "imageCaption": "Mega-Sena terá semana especial com cinco sorteios consecutivos",
@@ -756,7 +1007,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Geral",
       "Mega-Sena",
       "Loterias Caixa",
-      "Política"
+      "Brasil"
     ],
     "content": []
   },
@@ -862,7 +1113,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/bombeiros-encontram-corpo-de-mulher-levada-por-correnteza",
     "publishedAt": "26/10/2026 às 16:11",
-    "category": "Política",
+    "category": "Brasil",
     "ingestedAt": "26/10/2026 às 19:03",
     "imageUrl": "https://imagens.ebc.com.br/XxyPtoEEzpAiwGHrr8FV0vaSvrQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/altera-votacao-itapevi.jpg?itok=yszkn7Eb",
     "imageCaption": "Bombeiros encontram corpo de mulher levada por correnteza",
@@ -874,263 +1125,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Corpo de Bombeiros",
       "Chuvas",
       "São Paulo",
-      "Política"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706856",
-    "title": "Prazo para empresas escolherem modelo do Simples acaba nesta sexta",
-    "summary": "Os micro e pequenos empresários precisam ficar atentos. Acaba nesta sexta-feira (30) o prazo para a escolha do regime tributário que entrará em vigor em janeiro, com a reforma tributária.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/prazo-para-empresas-escolherem-modelo-do-simples-acaba-nesta-sexta",
-    "publishedAt": "26/10/2026 às 15:22",
-    "category": "Economia",
-    "ingestedAt": "26/10/2026 às 16:35",
-    "imageUrl": "https://imagens.ebc.com.br/fkfzrsxiXSdFPrlh0vk6GnEjUsQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/10/_raf1037_1.jpg?itok=QXEJ1MDg",
-    "imageCaption": "Prazo para empresas escolherem modelo do Simples acaba nesta sexta",
-    "imageCredit": "Wellton Máximo - Repórter da Agência Brasil",
-    "imageAlt": "Prazo para empresas escolherem modelo do Simples acaba nesta sexta",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "Reforma Tributária",
-      "MEI",
-      "Pequena empresa",
-      "Regime Tributário"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706853",
-    "title": "Segundo turno das eleições registra menor abstenção em 20 anos",
-    "summary": "As abstenções nas eleições gerais de 2026 caíram de 33.469. 244 no primeiro turno, para 30.509. 005 de eleitores no segundo turno, diferença de mais de 2,9 milhões de pessoas.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/segundo-turno-das-eleicoes-registra-menor-abstencao-em-20-anos",
-    "publishedAt": "26/10/2026 às 15:14",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 16:35",
-    "imageUrl": "https://imagens.ebc.com.br/r8kLJCTmsdNMxukrdr_HjNK1Ba8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/21/pzzb8762.jpg?itok=2DYVWmKp",
-    "imageCaption": "Segundo turno das eleições registra menor abstenção em 20 anos",
-    "imageCredit": "Fabíola Sinimbú – Repórter da Agência Brasil",
-    "imageAlt": "Segundo turno das eleições registra menor abstenção em 20 anos",
-    "author": "Fabíola Sinimbú – Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "votos brancos",
-      "votos nulos",
-      "abstenções"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1312038-projeto-suspende-cobranca-de-t",
-    "title": "Projeto suspende cobrança de tributos na importação de urânio",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1312038-projeto-suspende-cobranca-de-tributos-na-importacao-de-uranio",
-    "publishedAt": "26/10/2026 às 15:03",
-    "category": "Congresso",
-    "ingestedAt": "26/10/2026 às 16:35",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260526175232735-2-768x473.jpg",
-    "imageCaption": "Deputada Laura Carneiro, autora do projeto",
-    "imageCredit": "Kayo Magalhães / Câmara dos deputados",
-    "imageAlt": "Discussão e Votação de propostas legislativas. Dep. Laura Carneiro (PSD - RJ)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706849",
-    "title": "Em São Paulo, três municípios escolhem novos prefeitos",
-    "summary": "Os eleitores das cidades paulistas de Macedônia, Martinópolis e Narandiba foram às urnas ontem (25) não somente para votar no novo presidente da República, mas também para eleger seus novos prefeitos.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/em-sao-paulo-tres-municipios-escolhem-novos-prefeitos",
-    "publishedAt": "26/10/2026 às 14:36",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 16:35",
-    "imageUrl": "https://imagens.ebc.com.br/aB-C67Qf1vUKo0kfP8iRgCp-AZs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/26/sp.jpg?itok=Y2UAOSLZ",
-    "imageCaption": "Em São Paulo, três municípios escolhem novos prefeitos",
-    "imageCredit": "Elaine Patricia Cruz – Repórter da Agência Brasil",
-    "imageAlt": "Em São Paulo, três municípios escolhem novos prefeitos",
-    "author": "Elaine Patricia Cruz – Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "São Paulo",
-      "Prefeitos",
-      "eleição suplementar"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1310135-projeto-cria-politica-para-inc",
-    "title": "Projeto cria política para incentivar economia compartilhada no campo",
-    "summary": "Proposta institui a Política Nacional do Agro Colaborativo; texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310135-projeto-cria-politica-para-incentivar-economia-compartilhada-no-campo",
-    "publishedAt": "26/10/2026 às 14:08",
-    "category": "Congresso",
-    "ingestedAt": "26/10/2026 às 14:15",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260602160347611-768x473.jpg",
-    "imageCaption": "José Medeiros, autor do projeto de lei",
-    "imageCredit": "Kayo Magalhães/Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. José Medeiros (PL-MT)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706847",
-    "title": "PM registra 7 ocorrências e 6 detidos até o meio-dia de domingo em SP",
-    "summary": "Sete ocorrências foram registradas pela Polícia Militar durante o segundo turno das eleições até o meio-dia deste domingo (25). Cinco pessoas foram presas.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/pm-registra-7-ocorrencias-e-6-detidos-ate-o-meio-dia-de-domingo-em-sp",
-    "publishedAt": "26/10/2026 às 14:07",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 16:35",
-    "imageUrl": "https://imagens.ebc.com.br/SD-1YJ7io5xNneGILoLdpJ8_eBI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/10/06/_mg_2276.jpg?itok=PRj9aZug",
-    "imageCaption": "PM registra 7 ocorrências e 6 detidos até o meio-dia de domingo em SP",
-    "imageCredit": "Flávia Albuquerque - Repórter da Agência Brasil",
-    "imageAlt": "PM registra 7 ocorrências e 6 detidos até o meio-dia de domingo em SP",
-    "author": "Flávia Albuquerque - Repórter da Agência Brasil",
-    "tags": [
-      "Geral",
-      "eleições 2026",
-      "São Paulo",
-      "Prisões",
-      "Desacato"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706848",
-    "title": "Lula cresce em número de votos em todos os estados; Flávio recua em 6",
-    "summary": "Entre os brasileiros que compareceram neste domingo (25) às urnas no segundo turno das Eleições de 2026, 64.256. 232 escolheram o presidente Luiz Inácio Lula da Silva .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/lula-cresce-em-numero-de-votos-em-todos-os-estados-flavio-recuou-em-6",
-    "publishedAt": "26/10/2026 às 14:06",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 14:15",
-    "imageUrl": "https://imagens.ebc.com.br/sm8Iqd7ZLmP68Vz_1eIH0P_5F-0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int9468.jpg?itok=QpWDFi6O",
-    "imageCaption": "Lula cresce em número de votos em todos os estados; Flávio recua em 6",
-    "imageCredit": "Fabíola Sinimbú - Repórter da Agência Brasil",
-    "imageAlt": "Lula cresce em número de votos em todos os estados; Flávio recua em 6",
-    "author": "Fabíola Sinimbú - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "Votos",
-      "Lula",
-      "Flávio Bolsonaro",
-      "eleições 2026"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1313505-projeto-proibe-cobranca-de-tax",
-    "title": "Projeto proíbe cobrança de taxa para acesso a praias, rios e cachoeiras",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1313505-projeto-proibe-cobranca-de-taxa-para-acesso-a-praias-rios-e-cachoeiras",
-    "publishedAt": "26/10/2026 às 13:49",
-    "category": "Congresso",
-    "ingestedAt": "26/10/2026 às 14:15",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/comissao-do-esporte-193-711x484.jpg",
-    "imageCaption": "Marcos Tavares: cidadão tem o direito de usufruir de espaços públicos",
-    "imageCredit": "Cleia Viana / Câmara dos Deputados",
-    "imageAlt": "Prêmio \"Comenda Incentivadores do Esporte\". Dep. Marcos TavaresPDT - RJ",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706844",
-    "title": "Vitória de Lula repercute na imprensa europeia e asiática",
-    "summary": "Neste domingo (25), Luiz Inácio Lula da Silva foi reeleito para o seu quarto mandato na Presidência da República, em virada inédita. A disputa acirrada com o senador Flávio Bolsonaro ganhou destaque nos principais jornais da Europa e Ásia.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/vitoria-de-lula-repercute-na-imprensa-europeia-e-asiatica",
-    "publishedAt": "26/10/2026 às 13:33",
-    "category": "Congresso",
-    "ingestedAt": "26/10/2026 às 14:15",
-    "imageUrl": "https://imagens.ebc.com.br/ck2CR1IojYZXGTLvwOiQPwKgvbo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/26/_raf6219-8.jpg?itok=sSJQ3IWS",
-    "imageCaption": "Vitória de Lula repercute na imprensa europeia e asiática",
-    "imageCredit": "Matheus Crobelatti* - Estagiário da Agência Brasil",
-    "imageAlt": "Vitória de Lula repercute na imprensa europeia e asiática",
-    "author": "Matheus Crobelatti* - Estagiário da Agência Brasil",
-    "tags": [
-      "Internacional",
-      "Vitória de Lula",
-      "Repercussão",
-      "imprensa europeia",
-      "asiática"
-    ],
-    "content": []
-  },
-  {
-    "id": "ebc-1706842",
-    "title": "Votação de Lula é a maior já recebida por um presidenciável no país",
-    "summary": "Ao terminar o segundo turno da eleição presidencial com 64.256. 232 votos neste domingo (25), o presidente reeleito, Luiz Inácio Lula da Silva (PT), conquistou a maior votação já obtida por um presidenciável na história do país.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/votacao-de-lula-e-maior-ja-recebida-por-um-presidenciavel-no-pais",
-    "publishedAt": "26/10/2026 às 13:19",
-    "category": "Eleições",
-    "ingestedAt": "26/10/2026 às 14:15",
-    "imageUrl": "https://imagens.ebc.com.br/1NINlYHI8fqmA-xpeKPPCzuetCo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/26/_int0648.jpg.jpeg?itok=xDShwHWC",
-    "imageCaption": "Votação de Lula é a maior já recebida por um presidenciável no país",
-    "imageCredit": "Bruno de Freitas Moura - Repórter da Agência Brasil",
-    "imageAlt": "Votação de Lula é a maior já recebida por um presidenciável no país",
-    "author": "Bruno de Freitas Moura - Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "eleições 2026",
-      "Lula",
-      "Votação",
-      "Recorde"
-    ],
-    "content": []
-  },
-  {
-    "id": "camara-1310537-projeto-propoe-financiamento-d",
-    "title": "Projeto propõe financiamento do Move Brasil para representantes comerciais",
-    "summary": "O texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1310537-projeto-propoe-financiamento-do-move-brasil-para-representantes-comerciais",
-    "publishedAt": "26/10/2026 às 12:08",
-    "category": "Congresso",
-    "ingestedAt": "26/10/2026 às 12:32",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261014175748058-1-768x473.jpg",
-    "imageCaption": "Rubens Pereira Júnior é o autor da proposta",
-    "imageCredit": "Vinicius Loures / Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Rubens Pereira Júnior (PT - MA)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
+      "Brasil"
     ],
     "content": []
   },
@@ -1142,7 +1137,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
     "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48339-espaco-geociencias-da-confest-confege-2026-debate-territorio-meio-ambiente-e-geotecnologias.html",
     "publishedAt": "21/10/2026 às 05:34",
-    "category": "Brasil",
+    "category": "Tecnologia",
     "ingestedAt": "21/10/2026 às 21:27",
     "imageUrl": "https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/ibge/2026_10/capa-noticia-espaco-geociencias.jpg",
     "imageCaption": "Espaço Geociências da CONFEST/CONFEGE 2026 debate território, meio ambiente e geotecnologias",
@@ -1150,10 +1145,11 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "imageAlt": "Espaço Geociências da CONFEST/CONFEGE 2026 debate território, meio ambiente e geotecnologias",
     "author": "Agência IBGE Notícias",
     "tags": [
-      "ibge",
-      "Notícia",
-      "Brasil",
-      "Estatísticas"
+      "Tecnologia",
+      "Inovação",
+      "Estatísticas",
+      "Geociências",
+      "Brasil"
     ],
     "content": []
   },
@@ -1165,7 +1161,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciadenoticias.ibge.gov.br",
     "articleUrl": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48336-ibge-e-embaixada-do-brasil-na-china-discutem-cooperacao-em-datificacao-e-inteligencia-artificial.html",
     "publishedAt": "21/10/2026 às 02:03",
-    "category": "Brasil",
+    "category": "Tecnologia",
     "ingestedAt": "21/10/2026 às 14:58",
     "imageUrl": "https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/ibge/2026_10/reuniao-ibge-embaixada-brasil-china.jpg",
     "imageCaption": "IBGE e Embaixada do Brasil na China discutem cooperação em datificação e inteligência artificial",
@@ -1173,10 +1169,11 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "imageAlt": "IBGE e Embaixada do Brasil na China discutem cooperação em datificação e inteligência artificial",
     "author": "Agência IBGE Notícias",
     "tags": [
-      "ibge",
-      "Notícia",
-      "Brasil",
-      "Estatísticas"
+      "Tecnologia",
+      "Inteligência Artificial",
+      "Inovação",
+      "Estatísticas",
+      "Brasil"
     ],
     "content": []
   },
