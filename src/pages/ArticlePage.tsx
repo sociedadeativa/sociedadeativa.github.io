@@ -3,6 +3,7 @@ import { NewsItem, NewsCategory } from "../types/news";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { getArticleUrl, navigateToArticle } from "../utils/router";
 import { PortalLink } from "../components/PortalLink";
+import { AffiliateSection } from "../components/AffiliateSection";
 import { isValidImageUrl, getFullArticleById } from "../services/newsService";
 import {
   Calendar,
@@ -396,6 +397,18 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
             )}
           </div>
         </section>
+
+        {/* Módulo de Afiliados para Artigos de Tecnologia e Inovação */}
+        {article.category === "Tecnologia" && (
+          <div className="mb-10">
+            <AffiliateSection
+              category="tecnologia"
+              compact={false}
+              title="Dispositivos & Equipamentos Relacionados"
+              subtitle="Recomendações e produtos tecnológicos certificados disponíveis nos marketplaces parceiros."
+            />
+          </div>
+        )}
 
         {/* Seção de Notícias Relacionadas */}
         {finalRelated.length > 0 && (
