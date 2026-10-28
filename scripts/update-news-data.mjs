@@ -447,6 +447,9 @@ export function extractParagraphs(rawHtml) {
     if (/^(foto|cr[eé]dito|imagem|legenda)\s*[:–-]/i.test(b)) continue;
     if (/(ebc\.png|ebc\.gif|tracking|pixel|beacon)/i.test(b)) continue;
     if (/^(not[ií]cias?\s+relacionadas?|leia\s+mais|veja\s+tamb[eé]m)\s*[:–-]?$/i.test(b)) continue;
+    // Remove marcadores residuais de hiperlinks inline ou marcadores editoriais como >> ou +
+    b = b.replace(/^(?:>{1,3}|&gt;{1,3}|»|\+)\s*/i, '').trim();
+    if (b.length < 25) continue;
     paragraphs.push(b);
   }
   return paragraphs.length > 0 ? paragraphs : undefined;

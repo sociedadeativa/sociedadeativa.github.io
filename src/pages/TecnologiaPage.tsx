@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { NewsItem } from "../types/news";
 import { PortalLink } from "../components/PortalLink";
+import { AffiliateSection } from "../components/AffiliateSection";
 import { sortNewsItems, deduplicateNewsItems } from "../services/newsService";
 import {
   Cpu,
@@ -471,6 +472,9 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
                 </div>
               </div>
             </div>
+
+            {/* Bloco de Afiliados e Recomendações Tecnológicas */}
+            <AffiliateSection compact={true} />
 
             {/* Bloco 2: Diretrizes de Jornalismo Tecnológico e Fontes Verificadas */}
             <div className="bg-slate-900 text-white rounded-2xl p-5 shadow-xs">

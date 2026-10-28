@@ -433,6 +433,47 @@ for (const filePath of requiredHtmlFiles) {
     console.error(`ERROR: ${filePath} possui Google tag GA4 duplicada (${gaTagMatches.length} ocorrências)!`);
     process.exit(1);
   }
+
+  // 4b. Verificação do Google AdSense (ca-pub-6825003561232826) e prevenção de duplicações
+  if (!html.includes('ca-pub-6825003561232826')) {
+    console.error(`ERROR: ${filePath} ausente do identificador do Google AdSense (ca-pub-6825003561232826)!`);
+    process.exit(1);
+  }
+  const adSenseMatches = html.match(/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-6825003561232826/g) || [];
+  if (adSenseMatches.length !== 1) {
+    console.error(`ERROR: ${filePath} possui snippet do Google AdSense duplicado (${adSenseMatches.length} ocorrências)!`);
+    process.exit(1);
+  }
+  const adSenseMetaMatches = html.match(/<meta\s+name=["']google-adsense-account["']\s+content=["']ca-pub-6825003561232826["']\s*\/?>/gi) || [];
+  if (adSenseMetaMatches.length !== 1) {
+    console.error(`ERROR: ${filePath} possui meta tag google-adsense-account duplicada ou ausente (${adSenseMetaMatches.length} ocorrências)!`);
+    process.exit(1);
+  }
+}
+
+// 5. Validação do LCP Image Preload dinâmico em dist/index.html
+const indexHtmlContent = fs.readFileSync('dist/index.html', 'utf8');
+const preloadMatches = [...indexHtmlContent.matchAll(/<link\s+rel=["']preload["']\s+as=["']image["'][^>]*>/gi)];
+if (preloadMatches.length > 1) {
+  console.error(`ERROR: dist/index.html contém múltiplas tags de preload de imagem (${preloadMatches.length})!`);
+  process.exit(1);
+}
+if (preloadMatches.length === 1) {
+  const preloadTag = preloadMatches[0][0];
+  const hrefMatch = preloadTag.match(/href=["']([^"']+)["']/);
+  if (!hrefMatch || !hrefMatch[1].trim()) {
+    console.error('ERROR: Tag de preload de imagem em dist/index.html sem atributo href válido!');
+    process.exit(1);
+  }
+  if (!preloadTag.includes('fetchpriority="high"')) {
+    console.error('ERROR: Tag de preload de imagem em dist/index.html deve conter fetchpriority="high"!');
+    process.exit(1);
+  }
+  if (!preloadTag.includes('referrerpolicy="no-referrer"')) {
+    console.error('ERROR: Tag de preload de imagem em dist/index.html deve conter referrerpolicy="no-referrer"!');
+    process.exit(1);
+  }
+  console.log(`LCP Preload validado em dist/index.html: ${hrefMatch[1]}`);
 }
 
 // Validação e auditoria estrita de prontidão de produção para todas as páginas de notícias
@@ -540,7 +581,22 @@ if (fs.existsSync('dist/noticias')) {
       for (let i = 0; i < article.content.length; i++) {
         const paragraph = article.content[i].trim();
         const pSample = paragraph.slice(0, Math.min(50, paragraph.length));
-        if (!bodyHtml.includes(pSample) && !bodyHtml.includes(paragraph)) {
+        const pSampleEscaped = pSample
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;');
+        const paragraphEscaped = paragraph
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;');
+
+        const isPresent =
+          bodyHtml.includes(pSample) ||
+          bodyHtml.includes(paragraph) ||
+          bodyHtml.includes(pSampleEscaped) ||
+          bodyHtml.includes(paragraphEscaped);
+
+        if (!isPresent) {
           console.error(`ERROR: ${articleHtmlPath} omitiu parágrafo de conteúdo ${i + 1}/${article.content.length} no corpo do artigo: "${pSample}..."`);
           process.exit(1);
         }
@@ -621,9 +677,19 @@ if (fs.existsSync('dist/noticias')) {
       }
     }
 
-    // Validação de verificação do Google
+    // Validação de verificação do Google Search Console
     if (!html.includes('oZPS6sfWTE5EJAuLOsZCtq9UoF1lh4wMhD9Jz13OTSs')) {
       console.error(`ERROR: ${articleHtmlPath} ausente da tag google-site-verification!`);
+      process.exit(1);
+    }
+    // Validação de verificação do Google AdSense (meta tag e script)
+    if (!html.includes('ca-pub-6825003561232826')) {
+      console.error(`ERROR: ${articleHtmlPath} ausente do identificador do Google AdSense (ca-pub-6825003561232826)!`);
+      process.exit(1);
+    }
+    const artMetaMatches = html.match(/<meta\s+name=["']google-adsense-account["']\s+content=["']ca-pub-6825003561232826["']\s*\/?>/gi) || [];
+    if (artMetaMatches.length !== 1) {
+      console.error(`ERROR: ${articleHtmlPath} possui meta tag google-adsense-account duplicada ou ausente (${artMetaMatches.length} ocorrências)!`);
       process.exit(1);
     }
 
