@@ -1821,33 +1821,6 @@
     ]
   },
   {
-    "id": "eleicoes-2026-tse-apuracao-primeiro-turno",
-    "title": "TSE conclui 100% da totalização: Flávio Bolsonaro e Lula disputarão o 2º turno",
-    "summary": "Com 125,2 milhões de votos válidos nominais, Tribunal Superior Eleitoral confirma votação e convoca eleitores para o segundo turno no último domingo de outubro.",
-    "source": "Redação Sociedade Ativa",
-    "sourceUrl": "https://sociedadeativa.github.io/",
-    "articleUrl": "https://sociedadeativa.github.io/",
-    "publishedAt": "05/10/2026 às 08:30",
-    "category": "Eleições",
-    "ingestedAt": "05/10/2026 às 08:30",
-    "updatedAt": "05/10/2026 às 10:15",
-    "author": "Redação Sociedade Ativa / Cobertura Especial",
-    "tags": [
-      "TSE",
-      "Eleições 2026",
-      "Segundo Turno",
-      "Apuração",
-      "Presidência"
-    ],
-    "content": [
-      "O Tribunal Superior Eleitoral (TSE) concluiu oficialmente a totalização de 100% das urnas eletrônicas em todo o território nacional e no exterior, confirmando a realização de segundo turno entre os dois candidatos mais votados à Presidência da República.",
-      "Flávio Bolsonaro (PL) encerrou a apuração na liderança com 60.910.742 votos nominais, correspondendo a 48,63% dos sufrágios válidos. Luiz Inácio Lula da Silva (PT) obteve 54.898.347 votos nominais, totalizando 43,83% dos votos válidos, sacramentando a disputa final para o pleito de 25 de outubro.",
-      "Na sequência da totalização homologada pela Justiça Eleitoral, Aldo Cury obteve 4.020.155 votos (3,21%), seguido por Delegado Santos com 3.011.890 votos (2,41%), Ronaldo Caiado com 1.391.020 votos (1,11%) e Romeu Zema com 1.021.050 votos (0,81%).",
-      "O total de eleitores que compareceram às seções eleitorais alcançou 131.540.320 cidadãos. Os votos brancos somaram 2.842.100 (2,16%) e os votos nulos totalizaram 3.445.016 (2,62%), com abstenção oficial registrada de 18,34% do colégio eleitoral.",
-      "A equipe técnica da Corte Eleitoral reforçou a segurança, integridade e celeridade do processo eletrônico de votação, convocando todo o eleitorado a comparecer às urnas no próximo dia 25 de outubro para o exercício da soberania popular."
-    ]
-  },
-  {
     "id": "bcb-21279-bc-moderniza-apresentacao-de-d",
     "title": "BC moderniza apresentação de dados sobre atuação no mercado de câmbio",
     "summary": "Iniciativa traz histórico de estoque e cronograma de vencimentos de Swap Cambial e Linha com Recompra sem mudar formato de leilões de câmbio.",
@@ -1908,6 +1881,33 @@
       "No campo da segurança, a atualização incorpora mecanismos destinados a reforçar a confiabilidade do ecossistema. Entre as medidas adotadas destacam-se o aprimoramento dos procedimentos relacionados ao registro de marcações de fundada suspeita de fraude no Diretório de Identificadores de Contas Transacionais (DICT), a obrigatoriedade de comunicação ao usuário sobre realização de marcação, informando a data do registro e a possibilidade de revisão da medida, bem como a exigência de cancelamento da marcação quando, após análise, não subsistirem elementos que justifiquem a suspeita.",
       "Assim, o participante que aceitar uma notificação de infração ou que registrar uma marcação de fundada suspeita de fraude passa a ser expressamente o responsável pela respectiva marcação, inclusive por seu eventual cancelamento.",
       "As medidas se somam a outras iniciativas recentes do BC para fortalecer a integridade e a resiliência do Pix, diante do crescimento contínuo de sua utilização pela população e pelas empresas."
+    ]
+  },
+  {
+    "id": "eleicoes-2026-tse-apuracao-primeiro-turno",
+    "title": "TSE conclui 100% da totalização: Flávio Bolsonaro e Lula disputarão o 2º turno",
+    "summary": "Com 125,2 milhões de votos válidos nominais, Tribunal Superior Eleitoral confirma votação e convoca eleitores para o segundo turno no último domingo de outubro.",
+    "source": "Redação Sociedade Ativa",
+    "sourceUrl": "https://sociedadeativa.github.io/",
+    "articleUrl": "https://sociedadeativa.github.io/",
+    "publishedAt": "05/10/2026 às 08:30",
+    "category": "Eleições",
+    "ingestedAt": "05/10/2026 às 08:30",
+    "updatedAt": "05/10/2026 às 10:15",
+    "author": "Redação Sociedade Ativa / Cobertura Especial",
+    "tags": [
+      "TSE",
+      "Eleições 2026",
+      "Segundo Turno",
+      "Apuração",
+      "Presidência"
+    ],
+    "content": [
+      "O Tribunal Superior Eleitoral (TSE) concluiu oficialmente a totalização de 100% das urnas eletrônicas em todo o território nacional e no exterior, confirmando a realização de segundo turno entre os dois candidatos mais votados à Presidência da República.",
+      "Flávio Bolsonaro (PL) encerrou a apuração na liderança com 60.910.742 votos nominais, correspondendo a 48,63% dos sufrágios válidos. Luiz Inácio Lula da Silva (PT) obteve 54.898.347 votos nominais, totalizando 43,83% dos votos válidos, sacramentando a disputa final para o pleito de 25 de outubro.",
+      "Na sequência da totalização homologada pela Justiça Eleitoral, Aldo Cury obteve 4.020.155 votos (3,21%), seguido por Delegado Santos com 3.011.890 votos (2,41%), Ronaldo Caiado com 1.391.020 votos (1,11%) e Romeu Zema com 1.021.050 votos (0,81%).",
+      "O total de eleitores que compareceram às seções eleitorais alcançou 131.540.320 cidadãos. Os votos brancos somaram 2.842.100 (2,16%) e os votos nulos totalizaram 3.445.016 (2,62%), com abstenção oficial registrada de 18,34% do colégio eleitoral.",
+      "A equipe técnica da Corte Eleitoral reforçou a segurança, integridade e celeridade do processo eletrônico de votação, convocando todo o eleitorado a comparecer às urnas no próximo dia 25 de outubro para o exercício da soberania popular."
     ]
   }
 ]
