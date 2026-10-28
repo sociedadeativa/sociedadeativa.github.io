@@ -12,6 +12,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execSync } from 'node:child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -666,8 +667,14 @@ function main() {
 
   console.log(`Sucesso: ${generatedCount} páginas individuais de notícias geradas em dist/noticias/[id]/index.html`);
 
-  // Injeta o LCP image preload dinâmico na homepage gerada (dist/index.html)
-  injectHomepageLcpPreload(articles, DIST_DIR);
+  // Otimiza e gera variantes WebP da imagem líder com salvaguardas de direitos autorais
+  const leadImageMeta = optimizeLeadStoryImage(articles, rootDir, DIST_DIR);
+
+  // Pré-renderiza a primeira dobra da homepage (Header + FeaturedEditorial Lead) estaticamente dentro de #root
+  prerenderHomepage(articles, DIST_DIR, leadImageMeta);
+
+  // Injeta o LCP image preload dinâmico na homepage gerada (dist/index.html) com responsive srcset
+  injectHomepageLcpPreload(articles, DIST_DIR, leadImageMeta);
 
   // Gera o sitemap.xml atualizado incluindo seções canônicas e todos os artigos
   generateSitemap(generatedArticles);
@@ -808,17 +815,285 @@ export function getInstitutionalFallbackAsset(category, distDir = DIST_DIR) {
   return null;
 }
 
+export function optimizeLeadStoryImage(articles, rootPath = rootDir, distDir = DIST_DIR) {
+  if (!Array.isArray(articles) || articles.length === 0) return null;
+
+  const validArticles = sortNewsItems(deduplicateNewsItems(articles));
+  const leadArticle = validArticles[0] || null;
+  if (!leadArticle) return null;
+
+  const publicLeadDir = path.join(rootPath, 'public', 'assets', 'lead');
+  const distLeadDir = path.join(distDir, 'assets', 'lead');
+  fs.mkdirSync(publicLeadDir, { recursive: true });
+  if (fs.existsSync(distDir)) {
+    fs.mkdirSync(distLeadDir, { recursive: true });
+  }
+
+  // Salvaguardas de Direitos Autorais:
+  // - Para fotos da Câmara dos Deputados: verificar banco oficial sob CC BY 4.0, preservar atribuição e notar adaptação WebP.
+  // - Para Agência Brasil onde reuso comercial/adaptação não é confirmado: preferir imagem institucional de capa de propriedade da Sociedade Ativa.
+  let sourceImagePath = null;
+  let attribution = 'Acervo Institucional Sociedade Ativa · Congresso Nacional, Brasília';
+  let isInstitutional = true;
+
+  const institutionalCover = path.join(
+    rootPath,
+    'src',
+    'assets',
+    'images',
+    'editorial_congresso_brasilia_1791575832620.jpg'
+  );
+
+  if (leadArticle.imageUrl && isValidImageUrl(leadArticle.imageUrl)) {
+    const imgUrl = leadArticle.imageUrl.trim();
+    if (imgUrl.includes('camara.leg.br')) {
+      attribution = `${leadArticle.imageCredit || 'Câmara dos Deputados'} (CC BY 4.0) · Adaptação WebP Sociedade Ativa`;
+      isInstitutional = false;
+      const tempDownloadPath = path.join(publicLeadDir, 'temp-camara-lead.jpg');
+      try {
+        execSync(`curl -s -L --max-time 10 "${imgUrl}" -o "${tempDownloadPath}"`);
+        if (fs.existsSync(tempDownloadPath) && fs.statSync(tempDownloadPath).size > 1000) {
+          sourceImagePath = tempDownloadPath;
+        }
+      } catch {
+        sourceImagePath = null;
+      }
+    }
+  }
+
+  if (!sourceImagePath) {
+    sourceImagePath = institutionalCover;
+    attribution = 'Acervo Institucional Sociedade Ativa · Congresso Nacional, Brasília';
+    isInstitutional = true;
+  }
+
+  const out640 = path.join(publicLeadDir, 'lead-story-640.webp');
+  const out960 = path.join(publicLeadDir, 'lead-story-960.webp');
+  const outFallback = path.join(publicLeadDir, 'lead-story-fallback.jpg');
+
+  // Conversão segura em tempo de build usando ImageMagick (sem inflar o bundle JS de cliente)
+  if (fs.existsSync(sourceImagePath)) {
+    try {
+      execSync(`/usr/bin/convert "${sourceImagePath}" -resize 640x360^ -gravity center -extent 640x360 -quality 82 "${out640}"`);
+      execSync(`/usr/bin/convert "${sourceImagePath}" -resize 960x540^ -gravity center -extent 960x540 -quality 82 "${out960}"`);
+      execSync(`/usr/bin/convert "${sourceImagePath}" -resize 960x540^ -gravity center -extent 960x540 -quality 80 "${outFallback}"`);
+      console.log(`Sucesso: Variantes otimizadas WebP da imagem líder geradas em ${publicLeadDir}`);
+    } catch (err) {
+      console.warn(`[Aviso] Falha ao executar ImageMagick convert: ${err.message}`);
+    }
+  }
+
+  // Copia variantes geradas para dist/assets/lead se dist existir
+  if (fs.existsSync(distDir)) {
+    fs.mkdirSync(distLeadDir, { recursive: true });
+    if (fs.existsSync(out640)) fs.copyFileSync(out640, path.join(distLeadDir, 'lead-story-640.webp'));
+    if (fs.existsSync(out960)) fs.copyFileSync(out960, path.join(distLeadDir, 'lead-story-960.webp'));
+    if (fs.existsSync(outFallback)) fs.copyFileSync(outFallback, path.join(distLeadDir, 'lead-story-fallback.jpg'));
+  }
+
+  return {
+    leadArticle,
+    src640: './assets/lead/lead-story-640.webp',
+    src960: './assets/lead/lead-story-960.webp',
+    fallback: './assets/lead/lead-story-fallback.jpg',
+    attribution,
+    isInstitutional,
+  };
+}
+
+export function prerenderHomepage(articles, distDir = DIST_DIR, leadImageMeta = null) {
+  const indexHtmlPath = path.join(distDir, 'index.html');
+  if (!fs.existsSync(indexHtmlPath)) {
+    console.warn(`[Aviso] ${indexHtmlPath} não existe para pré-renderização da homepage.`);
+    return;
+  }
+
+  let html = fs.readFileSync(indexHtmlPath, 'utf8');
+
+  const validArticles = sortNewsItems(deduplicateNewsItems(articles));
+  const leadArticle = leadImageMeta?.leadArticle || validArticles[0] || null;
+  const secondaryArticles = validArticles.slice(1, 4);
+
+  if (!leadArticle) return;
+
+  const leadTitle = escapeHtml(leadArticle.title);
+  const leadSummary = escapeHtml(leadArticle.summary || '');
+  const leadCategory = escapeHtml(leadArticle.category || 'Política');
+  const leadDate = escapeHtml(leadArticle.publishedAt || '');
+  const leadUrl = `./noticias/${leadArticle.id}/`;
+  const attribution = escapeHtml(
+    leadImageMeta?.attribution || 'Acervo Institucional Sociedade Ativa · Congresso Nacional, Brasília'
+  );
+  const badgeType = leadImageMeta?.isInstitutional ? 'Institucional' : 'Fotojornalismo';
+
+  const secondaryHtml = secondaryArticles
+    .map(
+      (a) => `
+      <div class="py-3.5 space-y-1">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase border text-slate-900 bg-slate-100 border-slate-200/80">${escapeHtml(
+            a.category
+          )}</span>
+          <span class="text-[11px] text-slate-500 font-medium">${escapeHtml(a.publishedAt || '')}</span>
+        </div>
+        <h3 class="font-heading font-bold text-sm sm:text-base text-slate-900 leading-snug hover:text-blue-900">
+          <a href="./noticias/${a.id}/">${escapeHtml(a.title)}</a>
+        </h3>
+        <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed">${escapeHtml(a.summary || '')}</p>
+      </div>`
+    )
+    .join('');
+
+  const prerenderedContent = `
+  <div class="min-h-screen bg-white text-slate-900 flex flex-col font-sans">
+    <header class="border-b border-slate-200 bg-white/98 backdrop-blur-md sticky top-0 z-40 transition-all">
+      <div class="bg-slate-900 text-slate-300 py-2 px-3 sm:px-4 lg:px-4 xl:px-6 2xl:px-8 border-b border-slate-800/80 block w-full overflow-hidden">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+          <div class="flex items-center justify-start lg:justify-between gap-1.5 sm:gap-2 xl:gap-2.5 overflow-x-auto lg:overflow-x-visible scrollbar-none py-0.5 -mx-3 px-3 sm:mx-0 sm:px-0 max-w-full touch-pan-x min-w-0 w-full">
+            <a href="./#economia" class="group flex items-center gap-1.5 lg:gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-200 shadow-2xs">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300">IPCA:</span>
+              <span class="font-mono font-extrabold text-white text-xs sm:text-[13px] tabular-nums tracking-tight">+0,82%</span>
+              <span class="text-[10px] sm:text-[11px] text-slate-400 font-sans pl-1.5 border-l border-slate-700/80 whitespace-nowrap">Set/26 · IBGE</span>
+            </a>
+            <a href="./#economia" class="group flex items-center gap-1.5 lg:gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-200 shadow-2xs">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300">Selic:</span>
+              <span class="font-mono font-extrabold text-white text-xs sm:text-[13px] tabular-nums tracking-tight">14,00% a.a.</span>
+              <span class="text-[10px] sm:text-[11px] text-slate-400 font-sans pl-1.5 border-l border-slate-700/80 whitespace-nowrap">06/08/26 · BCB</span>
+            </a>
+            <a href="./#economia" class="group flex items-center gap-1.5 lg:gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-200 shadow-2xs">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300">PTAX:</span>
+              <span class="font-mono font-extrabold text-white text-xs sm:text-[13px] tabular-nums tracking-tight">R$ 4,99</span>
+              <span class="text-[10px] sm:text-[11px] text-slate-400 font-sans pl-1.5 border-l border-slate-700/80 whitespace-nowrap">09/10/26 · BCB</span>
+            </a>
+            <a href="./#eleicoes" class="group flex items-center gap-1.5 lg:gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-200 shadow-2xs">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-blue-400">Eleições:</span>
+              <span class="font-mono font-extrabold text-white text-xs sm:text-[13px] tabular-nums tracking-tight">100% Apurado</span>
+              <span class="text-[10px] sm:text-[11px] text-slate-400 font-sans pl-1.5 border-l border-slate-700/80 whitespace-nowrap">1ºT · TSE</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-slate-950 text-slate-400 text-[11px] py-1.5 px-4 sm:px-6 lg:px-8 border-b border-slate-800/90 block w-full overflow-hidden">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-3 w-full">
+          <div class="flex items-center gap-2 text-[10px] sm:text-[11px] text-slate-400 font-medium">
+            <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true"></span>
+            <span>Dados Oficiais Verificados · Fontes primárias públicas</span>
+          </div>
+          <div class="flex items-center gap-2.5 sm:gap-3 shrink-0 text-xs font-sans text-slate-400">
+            <a href="./#sobre" class="text-slate-300 hover:text-white transition-colors font-medium text-[11px] sm:text-xs">Transparência &amp; Fontes</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-b border-slate-100">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 sm:py-4 flex items-center justify-center">
+          <a href="./" class="flex flex-col items-center justify-center text-center group rounded-lg p-1" title="Sociedade Ativa — Página Inicial">
+            <div class="flex items-center justify-center gap-2 sm:gap-3">
+              <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-xl bg-blue-900 text-white flex items-center justify-center font-heading font-black text-xs sm:text-sm tracking-widest shadow-xs shrink-0 select-none border border-blue-950">SA</div>
+              <span class="font-heading text-lg sm:text-2xl md:text-3xl font-black tracking-tight text-slate-950 uppercase leading-none whitespace-nowrap">Sociedade Ativa</span>
+            </div>
+            <p class="text-[10px] sm:text-xs text-slate-500 font-medium leading-tight mt-1 text-center">Política, eleições, notícias e dados do Brasil</p>
+          </a>
+        </div>
+      </div>
+      <div class="border-b border-slate-200 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav aria-label="Navegação editorial principal" class="flex items-center justify-start md:justify-center gap-3 sm:gap-6 lg:gap-8 overflow-x-auto scrollbar-none py-2 text-xs font-bold uppercase tracking-wider text-slate-600">
+            <a href="./#eleicoes" class="py-1.5 hover:text-blue-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Eleições 2026</a>
+            <a href="./#economia" class="py-1.5 hover:text-emerald-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Economia</a>
+            <a href="./#estados" class="py-1.5 hover:text-amber-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Estados</a>
+            <a href="./#dados-publicos" class="py-1.5 hover:text-purple-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Dados Públicos</a>
+            <a href="./#noticias" class="py-1.5 hover:text-slate-950 whitespace-nowrap shrink-0 border-b-2 border-transparent">Notícias</a>
+            <a href="./#esportes" class="py-1.5 hover:text-emerald-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Esportes</a>
+            <a href="./#tecnologia" class="py-1.5 hover:text-indigo-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Tecnologia</a>
+            <a href="./#clima" class="py-1.5 hover:text-sky-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Clima</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="py-8 sm:py-10 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center gap-2 pb-5 mb-6 border-b border-slate-100 overflow-x-auto scrollbar-none text-xs">
+            <span class="font-bold uppercase tracking-wider text-slate-500 text-[11px] shrink-0 mr-1">Em Foco:</span>
+            <div class="flex items-center gap-2 shrink-0">
+              <a href="./#eleicoes" class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-900 font-semibold hover:bg-blue-100 transition-colors">Apuração Presidencial 2026</a>
+              <a href="./#economia" class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-900 font-semibold hover:bg-emerald-100 transition-colors">Inflação IPCA &amp; Meta Selic</a>
+              <a href="./#noticias" class="px-2.5 py-1 rounded-md bg-red-50 text-red-900 font-semibold hover:bg-red-100 transition-colors">Renovação do Congresso</a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-start">
+            <div class="md:col-span-7 flex flex-col">
+              <article class="group flex flex-col">
+                <div class="relative rounded-2xl overflow-hidden mb-4 bg-slate-100 aspect-[16/9] shadow-xs border border-slate-200/80">
+                  <picture>
+                    <source type="image/webp" srcset="./assets/lead/lead-story-640.webp 640w, ./assets/lead/lead-story-960.webp 960w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 720px" />
+                    <img src="./assets/lead/lead-story-960.webp" srcset="./assets/lead/lead-story-640.webp 640w, ./assets/lead/lead-story-960.webp 960w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 720px" alt="${leadTitle}" width="1280" height="720" class="w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" />
+                  </picture>
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent pointer-events-none"></div>
+                  <div class="absolute bottom-0 inset-x-0 p-3 sm:px-4 sm:py-3 text-white flex items-center justify-between gap-3">
+                    <div class="min-w-0 flex-1">
+                      <p class="text-xs sm:text-[13px] font-medium text-white leading-snug line-clamp-2 sm:line-clamp-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)] tracking-normal break-words">${attribution}</p>
+                    </div>
+                    <span class="shrink-0 hidden sm:inline-flex items-center bg-slate-950/85 border border-white/20 backdrop-blur-xs px-2.5 py-0.5 rounded text-[11px] text-white uppercase font-bold tracking-wider shadow-xs">${badgeType}</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2.5 mb-2.5">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold tracking-wider uppercase border text-slate-900 bg-rose-50/80 border-rose-200/70">${leadCategory}</span>
+                  <span class="text-slate-300 font-light">·</span>
+                  <span class="text-xs font-semibold text-slate-700">${leadDate}</span>
+                </div>
+
+                <h1 class="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-slate-950 leading-[1.15] mb-3 tracking-tight hover:text-blue-900 transition-colors">
+                  <a href="${leadUrl}">${leadTitle}</a>
+                </h1>
+
+                <p class="text-sm sm:text-base text-slate-700 leading-relaxed mb-4 line-clamp-3">${leadSummary}</p>
+
+                <div class="flex items-center gap-3 pt-2">
+                  <a href="${leadUrl}" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-900 hover:bg-blue-800 text-white text-xs font-bold transition-colors">
+                    Ler matéria completa
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="md:col-span-5 flex flex-col pt-8 border-t border-slate-200 md:pt-0 md:border-t-0 md:border-l md:border-slate-200 md:pl-6 lg:pl-8 xl:pl-10 space-y-6">
+              <div>
+                <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                  <h2 class="font-heading font-bold text-base text-slate-900">Outros Destaques</h2>
+                  <a href="./#noticias" class="text-xs font-bold text-blue-700 hover:text-blue-900">Ver todas</a>
+                </div>
+                <div class="divide-y divide-slate-100">
+                  ${secondaryHtml}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>`;
+
+  html = html.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${prerenderedContent}</div>`);
+  fs.writeFileSync(indexHtmlPath, html, 'utf8');
+  console.log('Sucesso: dist/index.html pré-renderizado estaticamente com Header e Lead Story card dentro de #root.');
+}
+
 export function getLeadArticleImageUrl(articles, distDir = DIST_DIR) {
   if (!Array.isArray(articles) || articles.length === 0) return null;
 
-  // Lógica de seleção estritamente idêntica a FeaturedEditorial.tsx
-  const PINNED_LEAD_ARTICLE_ID = null;
   const validArticles = sortNewsItems(deduplicateNewsItems(articles));
-  const pinnedArticle = PINNED_LEAD_ARTICLE_ID
-    ? validArticles.find((a) => a.id === PINNED_LEAD_ARTICLE_ID)
-    : null;
-  const leadArticle = pinnedArticle || validArticles[0] || null;
+  const leadArticle = validArticles[0] || null;
   if (!leadArticle) return null;
+
+  // Se a variante otimizada WebP estiver presente no diretório dist, retorne-a preferencialmente
+  const distWebp = path.join(distDir, 'assets', 'lead', 'lead-story-960.webp');
+  if (fs.existsSync(distWebp)) {
+    return './assets/lead/lead-story-960.webp';
+  }
 
   const hasValidArticleImage = Boolean(
     leadArticle.imageUrl && isValidImageUrl(leadArticle.imageUrl)
@@ -831,7 +1106,7 @@ export function getLeadArticleImageUrl(articles, distDir = DIST_DIR) {
   return getInstitutionalFallbackAsset(leadArticle.category, distDir);
 }
 
-export function injectHomepageLcpPreload(articles, distDir = DIST_DIR) {
+export function injectHomepageLcpPreload(articles, distDir = DIST_DIR, leadImageMeta = null) {
   const indexHtmlPath = path.join(distDir, 'index.html');
   if (!fs.existsSync(indexHtmlPath)) {
     console.warn(`[Aviso] ${indexHtmlPath} não existe para injeção de LCP preload.`);
@@ -840,33 +1115,29 @@ export function injectHomepageLcpPreload(articles, distDir = DIST_DIR) {
 
   let html = fs.readFileSync(indexHtmlPath, 'utf8');
 
-  // Remove com segurança qualquer preload de imagem LCP anterior para prevenir duplicatas e evitar URLs obsoletas
-  html = html.replace(/\s*<!--\s*LCP:\s*Pré-carregamento dinâmico.*?-->\s*/gi, '\n');
+  // Remove com segurança qualquer preload de imagem LCP anterior para prevenir duplicatas
+  html = html.replace(/\s*<!--\s*LCP:\s*Pré-carregamento.*?-->\s*/gi, '\n');
   html = html.replace(/\s*<link\s+rel=["']preload["']\s+as=["']image["'][^>]*>\s*/gi, '\n');
 
-  const leadImageSrc = getLeadArticleImageUrl(articles, distDir);
+  const preloadHref = './assets/lead/lead-story-960.webp';
+  const preloadSrcSet = './assets/lead/lead-story-640.webp 640w, ./assets/lead/lead-story-960.webp 960w';
+  const preloadSizes = '(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 720px';
 
-  if (leadImageSrc) {
-    const preloadTag = `    <!-- LCP: Pré-carregamento dinâmico da imagem líder editorial para acelerar a renderização mobile -->\n    <link rel="preload" as="image" href="${leadImageSrc}" fetchpriority="high" referrerpolicy="no-referrer">`;
+  const preloadTag = `    <!-- LCP: Pré-carregamento dinâmico e responsivo da imagem líder editorial para acelerar a renderização mobile -->\n    <link rel="preload" as="image" href="${preloadHref}" imagesrcset="${preloadSrcSet}" imagesizes="${preloadSizes}" fetchpriority="high" referrerpolicy="no-referrer">`;
 
-    // Injeta na seção <head> logo após dns-prefetch ou antes dos scripts
-    if (html.includes('<link rel="dns-prefetch" href="https://imagens.ebc.com.br">')) {
-      html = html.replace(
-        '<link rel="dns-prefetch" href="https://imagens.ebc.com.br">',
-        `<link rel="dns-prefetch" href="https://imagens.ebc.com.br">\n${preloadTag}`
-      );
-    } else if (html.includes('</head>')) {
-      html = html.replace('</head>', `${preloadTag}\n  </head>`);
-    }
-
-    fs.writeFileSync(indexHtmlPath, html, 'utf8');
-    console.log(`Sucesso: dist/index.html atualizado com LCP image preload dinâmico: ${leadImageSrc}`);
-    return leadImageSrc;
-  } else {
-    fs.writeFileSync(indexHtmlPath, html, 'utf8');
-    console.log('dist/index.html verificado: nenhuma imagem de lead válida para preloading (tag omitida com segurança).');
-    return null;
+  // Injeta na seção <head> logo após dns-prefetch ou antes dos scripts / fechamento </head>
+  if (html.includes('<link rel="dns-prefetch" href="https://imagens.ebc.com.br">')) {
+    html = html.replace(
+      '<link rel="dns-prefetch" href="https://imagens.ebc.com.br">',
+      `<link rel="dns-prefetch" href="https://imagens.ebc.com.br">\n${preloadTag}`
+    );
+  } else if (html.includes('</head>')) {
+    html = html.replace('</head>', `${preloadTag}\n  </head>`);
   }
+
+  fs.writeFileSync(indexHtmlPath, html, 'utf8');
+  console.log(`Sucesso: dist/index.html atualizado com LCP responsive image preload: ${preloadHref}`);
+  return preloadHref;
 }
 
 main();

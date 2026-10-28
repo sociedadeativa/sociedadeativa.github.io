@@ -264,18 +264,43 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
               >
                 {/* Imagem Editorial de Alta Definição (Horizontal Lead-Story Image com enquadramento 16:9) */}
                 <div className="relative rounded-2xl overflow-hidden mb-4 bg-slate-100 aspect-[16/9] shadow-xs border border-slate-200/80">
-                  <img
-                    src={leadImageSrc}
-                    alt={leadImageAlt}
-                    width={1280}
-                    height={720}
-                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
-                    loading="eager"
-                    fetchPriority="high"
-                    decoding="async"
-                    referrerPolicy="no-referrer"
-                    onError={() => setLeadImageError(true)}
-                  />
+                  <picture>
+                    {!leadImageError ? (
+                      <>
+                        <source
+                          type="image/webp"
+                          srcSet="./assets/lead/lead-story-640.webp 640w, ./assets/lead/lead-story-960.webp 960w"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 720px"
+                        />
+                        <img
+                          src="./assets/lead/lead-story-960.webp"
+                          srcSet="./assets/lead/lead-story-640.webp 640w, ./assets/lead/lead-story-960.webp 960w"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 720px"
+                          alt={leadImageAlt}
+                          width={1280}
+                          height={720}
+                          className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                          loading="eager"
+                          fetchPriority="high"
+                          decoding="async"
+                          referrerPolicy="no-referrer"
+                          onError={() => setLeadImageError(true)}
+                        />
+                      </>
+                    ) : (
+                      <img
+                        src={institutionalFallback.src}
+                        alt={institutionalFallback.alt}
+                        width={1280}
+                        height={720}
+                        className="w-full h-full object-cover"
+                        loading="eager"
+                        fetchPriority="high"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                      />
+                    )}
+                  </picture>
                   {/* Gradiente de alto contraste preservando a composição e visibilidade da foto */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent pointer-events-none" />
                   

@@ -2,6 +2,79 @@ import { NewsItem } from "../types/news";
 
 export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
   {
+    "id": "camara-1314516-comissao-aprova-projeto-que-to",
+    "title": "Comissão aprova projeto que torna permanente a política de combate à malária",
+    "summary": "A proposta segue em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1314516-comissao-aprova-projeto-que-torna-permanente-a-politica-de-combate-a-malaria",
+    "publishedAt": "28/10/2026 às 14:17",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260902193010211-768x473.jpg",
+    "imageCaption": "Chico Alencar: medida protege a continuidade de um trabalho importante na redução da incidência da malária no país",
+    "imageCredit": "Bruno Spada / Câmara dos Deputados",
+    "imageAlt": "Deputado Chico Alencar (Psol-RJ) fala no Plenário da Câmara dos Deputados",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "headline": "Comissão aprova projeto que torna permanente a política de combate à malária",
+    "lead": "A proposta segue em análise na Câmara dos Deputados.",
+    "content": [],
+    "ingestedAt": "28/10/2026 às 14:32"
+  },
+  {
+    "id": "camara-1313029-projeto-exige-campanha-informa",
+    "title": "Projeto exige campanha informativa 90 dias antes de cobrança de pedágio em rodovia federal",
+    "summary": "A proposta está em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1313029-projeto-exige-campanha-informativa-90-dias-antes-de-cobranca-de-pedagio-em-rodovia-federal",
+    "publishedAt": "28/10/2026 às 12:59",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260812174119627-768x473.jpg",
+    "imageCaption": "Alencar Santana: ideia é promover a conscientização e evitar punições desproporcionais",
+    "imageCredit": "Thiago Cristino / Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Alencar Santana (PT - SP)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "headline": "Projeto exige campanha informativa 90 dias antes de cobrança de pedágio em rodovia federal",
+    "lead": "A proposta está em análise na Câmara dos Deputados.",
+    "content": [],
+    "ingestedAt": "28/10/2026 às 13:09"
+  },
+  {
+    "id": "ebc-1707072",
+    "title": "Retinopatia: doença ocular afeta um em cada três diabéticos",
+    "summary": "Uma em cada três pessoas com diabetes no Brasil desenvolverá, em algum momento da vida, retinopatia diabética – uma das principais causas de perda visual evitável entre adultos em idade produtiva. Os dados são do Conselho Brasileiro de Oftalmologia (CBO) .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/retinopatia-doenca-ocular-afeta-um-em-cada-tres-diabeticos",
+    "publishedAt": "28/10/2026 às 13:50",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/xzKsdeOEB1vVnlrvNTUFfrpCMGU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/_mg_2874.jpg?itok=IrqY-qsG",
+    "imageCaption": "Retinopatia: doença ocular afeta um em cada três diabéticos",
+    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
+    "imageAlt": "Retinopatia: doença ocular afeta um em cada três diabéticos",
+    "author": "Paula Laboissière – Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "retinopatia",
+      "Diabetes",
+      "Política"
+    ],
+    "headline": "Retinopatia: doença ocular afeta um em cada três diabéticos",
+    "lead": "Uma em cada três pessoas com diabetes no Brasil desenvolverá, em algum momento da vida, retinopatia diabética – uma das principais causas de perda visual evitável entre adultos em idade produtiva. Os dados são do Conselho Brasileiro de Oftalmologia (CBO) .",
+    "content": [],
+    "ingestedAt": "28/10/2026 às 14:32"
+  },
+  {
     "id": "ebc-1707069",
     "title": "INSS alerta para golpes que usam informação falsa sobre biometria",
     "summary": "O Instituto Nacional do Seguro Social (INSS) divulgou nota para informar que são falsas informações que circulam na internet e nas redes sociais sobre o bloqueio de benefícios.",
@@ -76,30 +149,6 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "lead": "O livro Trincheira tropical: a Segunda Guerra Mundial no Rio , de Ruy Castro, publicado pela Companhia das Letras, venceu a categoria Livro do Ano no Prêmio Jabuti 2026, a principal do evento, pela segunda vez consecutiva.",
     "content": [],
     "ingestedAt": "28/10/2026 às 14:11"
-  },
-  {
-    "id": "camara-1313029-projeto-exige-campanha-informa",
-    "title": "Projeto exige campanha informativa 90 dias antes de cobrança de pedágio em rodovia federal",
-    "summary": "A proposta está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1313029-projeto-exige-campanha-informativa-90-dias-antes-de-cobranca-de-pedagio-em-rodovia-federal",
-    "publishedAt": "28/10/2026 às 12:59",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260812174119627-768x473.jpg",
-    "imageCaption": "Alencar Santana: ideia é promover a conscientização e evitar punições desproporcionais",
-    "imageCredit": "Thiago Cristino / Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Alencar Santana (PT - SP)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "headline": "Projeto exige campanha informativa 90 dias antes de cobrança de pedágio em rodovia federal",
-    "lead": "A proposta está em análise na Câmara dos Deputados.",
-    "content": [],
-    "ingestedAt": "28/10/2026 às 13:09"
   },
   {
     "id": "ebc-1707062",
@@ -177,55 +226,5 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "lead": "Veja como consultar despesas do governo federal, entender orçamento, empenhos e pagamentos e verificar os dados públicos em fontes oficiais.",
     "content": [],
     "ingestedAt": "28/10/2026 às 12:00"
-  },
-  {
-    "id": "camara-1314501-comissao-aprova-projeto-que-al",
-    "title": "Comissão aprova projeto que altera regras de posse e porte de armas",
-    "summary": "Pelo texto aprovado, todo brasileiro com pelo menos 25 anos que cumprir critérios objetivos poderá adquirir arma de uso permitido.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1314501-comissao-aprova-projeto-que-altera-regras-de-posse-e-porte-de-armas",
-    "publishedAt": "28/10/2026 às 11:51",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260617182948490-768x473.jpg",
-    "imageCaption": "Delegado Caveira é o relator da proposta",
-    "imageCredit": "Thiago Cristino / Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Delegado Caveira (PL - PA)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "headline": "Comissão aprova projeto que altera regras de posse e porte de armas",
-    "lead": "Pelo texto aprovado, todo brasileiro com pelo menos 25 anos que cumprir critérios objetivos poderá adquirir arma de uso permitido.",
-    "content": [],
-    "ingestedAt": "28/10/2026 às 13:09"
-  },
-  {
-    "id": "ebc-1707058",
-    "title": "ONG internacional aponta falhas na investigação da Operação Contenção",
-    "summary": "Um relatório divulgado nesta quarta-feira (28) pela organização não governamental internacional Human Rights Watch (HRW) apontou que houve falhas na investigação das mortes ocorridas durante a Operação Contenção , ocorrida há um ano, no Rio de Janeiro.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/ong-internacional-aponta-falhas-na-investigacao-da-operacao-contencao",
-    "publishedAt": "28/10/2026 às 11:38",
-    "category": "Política",
-    "imageUrl": "https://imagens.ebc.com.br/bj7DbKWZFYFQclqKAS_DVy57LM8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/10/29/toms9786.jpg?itok=WHUPJaUR",
-    "imageCaption": "ONG internacional aponta falhas na investigação da Operação Contenção",
-    "imageCredit": "Vitor Abdala – Repórter da Agência Brasil",
-    "imageAlt": "ONG internacional aponta falhas na investigação da Operação Contenção",
-    "author": "Vitor Abdala – Repórter da Agência Brasil",
-    "tags": [
-      "Direitos Humanos",
-      "Rio de Janeiro",
-      "Operação Contenção",
-      "Humans Right Watch",
-      "HRW"
-    ],
-    "headline": "ONG internacional aponta falhas na investigação da Operação Contenção",
-    "lead": "Um relatório divulgado nesta quarta-feira (28) pela organização não governamental internacional Human Rights Watch (HRW) apontou que houve falhas na investigação das mortes ocorridas durante a Operação Contenção , ocorrida há um ano, no Rio de Janeiro.",
-    "content": [],
-    "ingestedAt": "28/10/2026 às 13:09"
   }
 ];
