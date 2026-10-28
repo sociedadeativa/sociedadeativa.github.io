@@ -12,6 +12,7 @@ import {
   RefreshCw,
   SlidersHorizontal,
 } from "lucide-react";
+import { handleTabKeyDown } from "../utils/a11yTabs";
 
 export const EconomySection: React.FC = () => {
   const {
@@ -77,11 +78,30 @@ export const EconomySection: React.FC = () => {
         <div className="bg-white rounded-2xl p-3 sm:p-4 border border-slate-200 shadow-xs mb-8 space-y-3">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
             {/* Categorias */}
-            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 scrollbar-none">
-              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mr-1 hidden sm:inline">
+            {/* Abas de Categorias */}
+            <div
+              role="tablist"
+              aria-label="Categorias de indicadores econômicos"
+              onKeyDown={(e) =>
+                handleTabKeyDown(
+                  e,
+                  ["Todas", ...ECONOMY_CATEGORIES] as const,
+                  selectedCategory,
+                  setSelectedCategory
+                )
+              }
+              className="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 scrollbar-none"
+            >
+              <span className="text-xs font-bold text-slate-500 uppercase tracking-wider mr-1 hidden sm:inline">
                 Categoria:
               </span>
               <button
+                id="tab-econ-cat-Todas"
+                role="tab"
+                aria-selected={selectedCategory === "Todas"}
+                tabIndex={selectedCategory === "Todas" ? 0 : -1}
+                aria-controls="panel-economy-indicators"
+                aria-label={`Todas (${stats.total}): visualizar todos os indicadores`}
                 onClick={() => setSelectedCategory("Todas")}
                 className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
                   selectedCategory === "Todas"
@@ -95,15 +115,18 @@ export const EconomySection: React.FC = () => {
               {ECONOMY_CATEGORIES.map((cat) => (
                 <button
                   key={cat}
+                  id={`tab-econ-cat-${cat}`}
+                  role="tab"
+                  aria-selected={selectedCategory === cat}
+                  tabIndex={selectedCategory === cat ? 0 : -1}
+                  aria-controls="panel-economy-indicators"
+                  aria-label={`${cat}: filtrar indicadores pela categoria ${cat}`}
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
                     selectedCategory === cat
                       ? "bg-slate-900 text-white shadow-xs"
                       : "bg-slate-100 hover:bg-slate-200 text-slate-700"
                   }`}
-                  role="tab"
-                  aria-selected={selectedCategory === cat}
-                  aria-label={`Filtrar indicadores pela categoria ${cat}`}
                 >
                   {cat}
                 </button>
@@ -113,13 +136,28 @@ export const EconomySection: React.FC = () => {
             {/* Busca e Filtro de Fonte */}
             <div className="flex items-center gap-2">
               {/* Filtro por Fonte */}
-              <div role="tablist" aria-label="Filtrar por instituição emissora" className="flex items-center bg-slate-100 p-0.5 rounded-xl border border-slate-200/80 text-xs">
+              <div
+                role="tablist"
+                aria-label="Filtrar por instituição emissora"
+                onKeyDown={(e) =>
+                  handleTabKeyDown(
+                    e,
+                    ["Todas", "IBGE", "Banco Central do Brasil"] as const,
+                    selectedSource,
+                    setSelectedSource
+                  )
+                }
+                className="flex items-center bg-slate-100 p-0.5 rounded-xl border border-slate-200/80 text-xs"
+              >
                 {(["Todas", "IBGE", "Banco Central do Brasil"] as (OfficialAgency | "Todas")[]).map((src) => (
                   <button
                     key={src}
+                    id={`tab-econ-src-${src === "Banco Central do Brasil" ? "BCB" : src}`}
                     role="tab"
                     aria-selected={selectedSource === src}
-                    aria-label={`Filtrar indicadores pela fonte oficial ${src}`}
+                    tabIndex={selectedSource === src ? 0 : -1}
+                    aria-controls="panel-economy-indicators"
+                    aria-label={`${src === "Banco Central do Brasil" ? "BCB" : src}: filtrar indicadores pela fonte oficial ${src}`}
                     onClick={() => setSelectedSource(src)}
                     className={`min-h-[32px] px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer whitespace-nowrap flex items-center justify-center ${
                       selectedSource === src
@@ -134,52 +172,54 @@ export const EconomySection: React.FC = () => {
 
               {/* Campo de Busca */}
               <div className="relative flex-1 sm:w-60">
-                <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+                <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
                 <input
                   type="text"
                   placeholder="Buscar indicador..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   aria-label="Buscar indicador econômico oficial"
-                  className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 transition-all text-slate-800 placeholder-slate-400"
+                  className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 transition-all text-slate-800 placeholder-slate-500"
                 />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Grid de Cards dos Indicadores */}
-        {filteredIndicators.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filteredIndicators.map((indicator) => (
-              <EconomyCard
-                key={indicator.id}
-                indicator={indicator}
-                onOpenDetails={(ind) => setActiveIndicatorModal(ind)}
-              />
-            ))}
-          </div>
-        ) : (
-          <div className="bg-white rounded-2xl p-10 border border-slate-200 text-center max-w-md mx-auto">
-            <SlidersHorizontal className="w-8 h-8 text-slate-300 mx-auto mb-2" />
-            <h3 className="font-heading font-bold text-slate-800 text-base">
-              Nenhum indicador encontrado
-            </h3>
-            <p className="text-xs text-slate-500 mt-1">
-              Não encontramos resultados para a combinação de filtros ou busca selecionada.
-            </p>
-            <button
-              onClick={() => {
-                setSelectedCategory("Todas");
-                setSelectedSource("Todas");
-                setSearchQuery("");
-              }}
-              className="mt-4 px-4 py-2 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition-colors cursor-pointer"
-            >
-              Limpar Filtros
-            </button>
-          </div>
-        )}
+        {/* Grid de Cards dos Indicadores (TabPanel) */}
+        <div id="panel-economy-indicators" role="tabpanel" aria-label="Indicadores econômicos oficiais">
+          {filteredIndicators.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {filteredIndicators.map((indicator) => (
+                <EconomyCard
+                  key={indicator.id}
+                  indicator={indicator}
+                  onOpenDetails={(ind) => setActiveIndicatorModal(ind)}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="bg-white rounded-2xl p-10 border border-slate-200 text-center max-w-md mx-auto">
+              <SlidersHorizontal className="w-8 h-8 text-slate-400 mx-auto mb-2" />
+              <h3 className="font-heading font-bold text-slate-800 text-base">
+                Nenhum indicador encontrado
+              </h3>
+              <p className="text-xs text-slate-500 mt-1">
+                Não encontramos resultados para a combinação de filtros ou busca selecionada.
+              </p>
+              <button
+                onClick={() => {
+                  setSelectedCategory("Todas");
+                  setSelectedSource("Todas");
+                  setSearchQuery("");
+                }}
+                className="mt-4 px-4 py-2 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition-colors cursor-pointer"
+              >
+                Limpar Filtros
+              </button>
+            </div>
+          )}
+        </div>
 
         {/* Nota Metodológica e Transparência */}
         <div className="mt-10 p-4 sm:p-5 bg-white rounded-2xl border border-slate-200/90 shadow-2xs">

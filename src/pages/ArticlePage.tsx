@@ -252,20 +252,20 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
 
             <div className="flex items-center gap-3 self-start sm:self-auto flex-wrap">
               <div className="flex items-center gap-1.5 text-slate-500">
-                <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                <Calendar className="w-3.5 h-3.5 text-slate-500" />
                 <span>Publicado em {article.publishedAt}</span>
               </div>
 
               {article.updatedAt && article.updatedAt !== article.publishedAt && (
-                <div className="flex items-center gap-1.5 text-slate-400 text-[11px]">
-                  <Clock className="w-3 h-3" />
+                <div className="flex items-center gap-1.5 text-slate-500 text-xs">
+                  <Clock className="w-3 h-3 text-slate-500" />
                   <span>Atualizado em {article.updatedAt}</span>
                 </div>
               )}
 
               {(!article.updatedAt || article.updatedAt === article.publishedAt) && article.ingestedAt && article.ingestedAt !== article.publishedAt && (
-                <div className="flex items-center gap-1.5 text-slate-400 text-[11px]">
-                  <Clock className="w-3 h-3" />
+                <div className="flex items-center gap-1.5 text-slate-500 text-xs">
+                  <Clock className="w-3 h-3 text-slate-500" />
                   <span>Recebido pelo portal em {article.ingestedAt}</span>
                 </div>
               )}
@@ -411,7 +411,7 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
           {/* Tags do Artigo */}
           {article.tags && article.tags.length > 0 && (
             <div className="mt-8 pt-5 border-t border-slate-100 flex items-center gap-2 flex-wrap">
-              <Tag className="w-3.5 h-3.5 text-slate-400" />
+              <Tag className="w-3.5 h-3.5 text-slate-500" />
               <span className="text-xs font-semibold text-slate-500 mr-1">Temas:</span>
               {article.tags.map((tag) => (
                 <span

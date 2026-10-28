@@ -10,6 +10,7 @@ import {
   ArrowUpDown,
   ChevronRight,
 } from "lucide-react";
+import { handleTabKeyDown } from "../utils/a11yTabs";
 
 interface StateTableProps {
   dataset: ElectionDataSet;
@@ -165,25 +166,40 @@ export const StateTable: React.FC<StateTableProps> = ({
         <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3 mb-6 p-3 bg-slate-50 rounded-2xl border border-slate-200">
           {/* Caixa de Busca */}
           <div className="relative flex-1 max-w-md">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
               type="text"
               placeholder="Filtrar por estado ou sigla (ex: São Paulo, SP, Minas)..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               aria-label="Filtrar estados por nome ou sigla"
-              className="w-full pl-9 pr-3 py-2 text-xs bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 text-slate-900 placeholder:text-slate-400 font-medium"
+              className="w-full pl-9 pr-3 py-2 text-xs bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 text-slate-900 placeholder:text-slate-500 font-medium"
             />
           </div>
 
           {/* Filtros por Vencedor e Região */}
           <div className="flex flex-wrap items-center gap-2 text-xs">
             {/* Filtro por Vencedor */}
-            <div role="tablist" aria-label="Filtrar estados por resultado de apuração" className="flex items-center gap-1 bg-white p-1 rounded-xl border border-slate-200 shadow-2xs overflow-x-auto max-w-full">
+            <div
+              role="tablist"
+              aria-label="Filtrar estados por resultado de apuração"
+              onKeyDown={(e) =>
+                handleTabKeyDown(
+                  e,
+                  ["all", "flavio", "lula"] as const,
+                  selectedWinnerFilter,
+                  setSelectedWinnerFilter
+                )
+              }
+              className="flex items-center gap-1 bg-white p-1 rounded-xl border border-slate-200 shadow-2xs overflow-x-auto max-w-full"
+            >
               <button
+                id="tab-winner-all"
                 role="tab"
                 aria-selected={selectedWinnerFilter === "all"}
-                aria-label="Exibir todos os estados"
+                tabIndex={selectedWinnerFilter === "all" ? 0 : -1}
+                aria-controls="panel-state-table"
+                aria-label="Todos: exibir todos os estados"
                 onClick={() => setSelectedWinnerFilter("all")}
                 className={`min-h-[44px] px-3.5 py-2 rounded-lg transition-colors cursor-pointer text-xs font-bold whitespace-nowrap active:bg-slate-200 flex items-center justify-center ${
                   selectedWinnerFilter === "all"
@@ -194,9 +210,12 @@ export const StateTable: React.FC<StateTableProps> = ({
                 Todos
               </button>
               <button
+                id="tab-winner-flavio"
                 role="tab"
                 aria-selected={selectedWinnerFilter === "flavio"}
-                aria-label="Filtrar estados com vitória de Flávio Bolsonaro"
+                tabIndex={selectedWinnerFilter === "flavio" ? 0 : -1}
+                aria-controls="panel-state-table"
+                aria-label="Vitória Flávio Bolsonaro: filtrar estados com vitória de Flávio Bolsonaro"
                 onClick={() => setSelectedWinnerFilter("flavio")}
                 className={`min-h-[44px] px-3.5 py-2 rounded-lg transition-colors cursor-pointer text-xs font-bold whitespace-nowrap active:bg-blue-100 flex items-center justify-center ${
                   selectedWinnerFilter === "flavio"
@@ -207,9 +226,12 @@ export const StateTable: React.FC<StateTableProps> = ({
                 Vitória Flávio Bolsonaro
               </button>
               <button
+                id="tab-winner-lula"
                 role="tab"
                 aria-selected={selectedWinnerFilter === "lula"}
-                aria-label="Filtrar estados com vitória de Lula"
+                tabIndex={selectedWinnerFilter === "lula" ? 0 : -1}
+                aria-controls="panel-state-table"
+                aria-label="Vitória Lula: filtrar estados com vitória de Lula"
                 onClick={() => setSelectedWinnerFilter("lula")}
                 className={`min-h-[44px] px-3.5 py-2 rounded-lg transition-colors cursor-pointer text-xs font-bold whitespace-nowrap active:bg-red-100 flex items-center justify-center ${
                   selectedWinnerFilter === "lula"
@@ -222,16 +244,31 @@ export const StateTable: React.FC<StateTableProps> = ({
             </div>
 
             {/* Filtro por Região */}
-            <div role="tablist" aria-label="Filtrar tabela por região geográfica" className="flex items-center gap-1 overflow-x-auto text-xs py-0.5 max-w-full">
+            <div
+              role="tablist"
+              aria-label="Filtrar tabela por região geográfica"
+              onKeyDown={(e) =>
+                handleTabKeyDown(
+                  e,
+                  ["all", "Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"],
+                  selectedRegion,
+                  setSelectedRegion
+                )
+              }
+              className="flex items-center gap-1 overflow-x-auto text-xs py-0.5 max-w-full"
+            >
               {["all", "Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"].map(
                 (reg) => {
                   const isActive = selectedRegion === reg;
                   return (
                     <button
                       key={reg}
+                      id={`tab-stateregion-${reg}`}
                       role="tab"
                       aria-selected={isActive}
-                      aria-label={`Filtrar por ${reg === "all" ? "todas as regiões" : `região ${reg}`}`}
+                      tabIndex={isActive ? 0 : -1}
+                      aria-controls="panel-state-table"
+                      aria-label={`${reg === "all" ? "Todas as Regiões" : reg}: filtrar tabela por ${reg === "all" ? "todas as regiões" : `região ${reg}`}`}
                       onClick={() => setSelectedRegion(reg)}
                       className={`min-h-[44px] px-3.5 py-2 rounded-xl transition-colors cursor-pointer whitespace-nowrap text-xs font-bold active:bg-slate-200 flex items-center justify-center ${
                         isActive
@@ -249,7 +286,12 @@ export const StateTable: React.FC<StateTableProps> = ({
         </div>
 
         {/* Tabela de Resultados */}
-        <div className="border border-slate-200 rounded-2xl overflow-hidden shadow-xs bg-white">
+        <div
+          id="panel-state-table"
+          role="tabpanel"
+          aria-label="Tabela de resultados eleitorais por estado"
+          className="border border-slate-200 rounded-2xl overflow-hidden shadow-xs bg-white"
+        >
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs">
               <thead>
@@ -260,7 +302,7 @@ export const StateTable: React.FC<StateTableProps> = ({
                   >
                     <div className="flex items-center gap-1.5">
                       <span>Estado / Sigla</span>
-                      <ArrowUpDown className="w-3 h-3 text-slate-400" />
+                      <ArrowUpDown className="w-3 h-3 text-slate-500" />
                     </div>
                   </th>
 
@@ -270,7 +312,7 @@ export const StateTable: React.FC<StateTableProps> = ({
                   >
                     <div className="flex items-center gap-1.5">
                       <span>Região</span>
-                      <ArrowUpDown className="w-3 h-3 text-slate-400" />
+                      <ArrowUpDown className="w-3 h-3 text-slate-500" />
                     </div>
                   </th>
 
@@ -280,7 +322,7 @@ export const StateTable: React.FC<StateTableProps> = ({
                   >
                     <div className="flex items-center gap-1.5">
                       <span>Vencedor no Estado</span>
-                      <ArrowUpDown className="w-3 h-3 text-slate-400" />
+                      <ArrowUpDown className="w-3 h-3 text-slate-500" />
                     </div>
                   </th>
 
@@ -290,7 +332,7 @@ export const StateTable: React.FC<StateTableProps> = ({
                   >
                     <div className="flex items-center justify-end gap-1.5">
                       <span>Flávio Bolsonaro (%)</span>
-                      <ArrowUpDown className="w-3 h-3 text-slate-400" />
+                      <ArrowUpDown className="w-3 h-3 text-slate-500" />
                     </div>
                   </th>
 
@@ -300,7 +342,7 @@ export const StateTable: React.FC<StateTableProps> = ({
                   >
                     <div className="flex items-center justify-end gap-1.5">
                       <span>Lula (%)</span>
-                      <ArrowUpDown className="w-3 h-3 text-slate-400" />
+                      <ArrowUpDown className="w-3 h-3 text-slate-500" />
                     </div>
                   </th>
 
@@ -310,7 +352,7 @@ export const StateTable: React.FC<StateTableProps> = ({
                   >
                     <div className="flex items-center justify-end gap-1.5">
                       <span>Vantagem (%)</span>
-                      <ArrowUpDown className="w-3 h-3 text-slate-400" />
+                      <ArrowUpDown className="w-3 h-3 text-slate-500" />
                     </div>
                   </th>
 
@@ -320,7 +362,7 @@ export const StateTable: React.FC<StateTableProps> = ({
                   >
                     <div className="flex items-center justify-end gap-1.5">
                       <span>Votos Válidos</span>
-                      <ArrowUpDown className="w-3 h-3 text-slate-400" />
+                      <ArrowUpDown className="w-3 h-3 text-slate-500" />
                     </div>
                   </th>
 
@@ -330,7 +372,7 @@ export const StateTable: React.FC<StateTableProps> = ({
                   >
                     <div className="flex items-center justify-end gap-1.5">
                       <span>Comparecimento</span>
-                      <ArrowUpDown className="w-3 h-3 text-slate-400" />
+                      <ArrowUpDown className="w-3 h-3 text-slate-500" />
                     </div>
                   </th>
 
@@ -384,7 +426,7 @@ export const StateTable: React.FC<StateTableProps> = ({
                             <span className="font-bold text-slate-900">
                               {winner.popularName}
                             </span>
-                            <span className="text-[11px] text-slate-400 font-mono">
+                            <span className="text-[11px] text-slate-600 font-mono">
                               ({winner.party})
                             </span>
                           </div>
@@ -423,8 +465,9 @@ export const StateTable: React.FC<StateTableProps> = ({
                             e.stopPropagation();
                             onSelectState(st.uf);
                           }}
-                          className="text-slate-400 hover:text-slate-900 p-1 hover:bg-slate-200 rounded-lg transition-colors cursor-pointer"
-                          title="Ver apuração deste estado"
+                          className="text-slate-500 hover:text-slate-900 p-1 hover:bg-slate-200 rounded-lg transition-colors cursor-pointer"
+                          title={`Ver apuração de ${st.name} (${st.uf})`}
+                          aria-label={`Ver apuração de ${st.name} (${st.uf})`}
                         >
                           <ChevronRight className="w-4 h-4 inline" />
                         </button>

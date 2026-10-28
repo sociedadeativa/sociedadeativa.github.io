@@ -24,6 +24,7 @@ import {
   ChevronDown,
   Award,
 } from "lucide-react";
+import { handleTabKeyDown } from "../utils/a11yTabs";
 
 interface BrazilMapProps {
   dataset: ElectionDataSet;
@@ -514,15 +515,30 @@ export const BrazilMap: React.FC<BrazilMapProps> = ({
           </div>
 
           {/* Abas de Regiões Brasileiras (Telas Médias e Grandes) */}
-          <div role="tablist" aria-label="Filtro de regiões do Brasil" className="hidden lg:flex items-center bg-white/95 backdrop-blur-md rounded-xl p-1 border border-slate-200 shadow-xs text-xs">
+          <div
+            role="tablist"
+            aria-label="Filtro de regiões do Brasil"
+            onKeyDown={(e) =>
+              handleTabKeyDown(
+                e,
+                Object.keys(REGION_PRESETS),
+                activeRegion,
+                handleRegionSelect
+              )
+            }
+            className="hidden lg:flex items-center bg-white/95 backdrop-blur-md rounded-xl p-1 border border-slate-200 shadow-xs text-xs"
+          >
             {Object.entries(REGION_PRESETS).map(([key, item]) => {
               const isActive = activeRegion === key;
               return (
                 <button
                   key={key}
+                  id={`tab-region-${key}`}
                   role="tab"
                   aria-selected={isActive}
-                  aria-label={`Aproximar mapa na região ${item.label}`}
+                  tabIndex={isActive ? 0 : -1}
+                  aria-controls="panel-brazil-map-drawing"
+                  aria-label={`${item.label}: aproximar mapa na região ${item.label}`}
                   onClick={() => handleRegionSelect(key)}
                   className={`min-h-[36px] px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer whitespace-nowrap text-xs flex items-center justify-center ${
                     isActive
@@ -586,6 +602,9 @@ export const BrazilMap: React.FC<BrazilMapProps> = ({
 
       {/* Tela de Desenho SVG Interativa */}
       <div
+        id="panel-brazil-map-drawing"
+        role="tabpanel"
+        aria-labelledby={`tab-region-${activeRegion}`}
         ref={drawingAreaRef}
         className="w-full h-full cursor-grab active:cursor-grabbing overflow-hidden flex items-center justify-center relative touch-none select-none"
         style={{ touchAction: "none" }}

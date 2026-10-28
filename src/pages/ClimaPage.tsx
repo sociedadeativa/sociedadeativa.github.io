@@ -479,7 +479,7 @@ export const ClimaPage: React.FC<ClimaPageProps> = ({
           <div className="relative">
             <form onSubmit={handleCustomCitySubmit} className="relative">
               <div className="relative flex items-center">
-                <Search className="w-5 h-5 text-slate-400 absolute left-4 pointer-events-none" />
+                <Search className="w-5 h-5 text-slate-500 absolute left-4 pointer-events-none" />
                 <input
                   type="text"
                   value={searchQuery}
@@ -490,7 +490,7 @@ export const ClimaPage: React.FC<ClimaPageProps> = ({
                   onFocus={() => setIsSearchOpen(true)}
                   placeholder="Pesquise qualquer cidade do Brasil ou do mundo (ex: São Paulo, Paris, Santiago, Curitiba, Nova York, Roma...)"
                   aria-label="Pesquisar previsão do tempo por cidade ou região"
-                  className="w-full pl-11 pr-24 py-3.5 bg-white border border-slate-300 rounded-2xl shadow-xs text-sm sm:text-base text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-600 focus:border-sky-600 transition-all font-medium"
+                  className="w-full pl-11 pr-24 py-3.5 bg-white border border-slate-300 rounded-2xl shadow-xs text-sm sm:text-base text-slate-900 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-600 focus:border-sky-600 transition-all font-medium"
                 />
                 <div className="absolute right-2 flex items-center gap-1">
                   {searchQuery && (
@@ -500,7 +500,7 @@ export const ClimaPage: React.FC<ClimaPageProps> = ({
                         setSearchQuery("");
                         setGeocodedSuggestions([]);
                       }}
-                      className="min-h-[36px] min-w-[36px] flex items-center justify-center text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer"
+                      className="min-h-[36px] min-w-[36px] flex items-center justify-center text-slate-500 hover:text-slate-700 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer"
                       title="Limpar campo de pesquisa"
                       aria-label="Limpar campo de pesquisa"
                     >
@@ -594,8 +594,8 @@ export const ClimaPage: React.FC<ClimaPageProps> = ({
 
           {/* Atalhos Rápidos por Cidades e Capitais */}
           <div className="flex items-center gap-2 mt-3 overflow-x-auto scrollbar-none pb-1">
-            <span className="text-xs font-bold text-slate-400 shrink-0 uppercase tracking-wider flex items-center gap-1">
-              <MapPin className="w-3 h-3 text-slate-400" />
+            <span className="text-xs font-bold text-slate-500 shrink-0 uppercase tracking-wider flex items-center gap-1">
+              <MapPin className="w-3 h-3 text-slate-500" />
               Acesso Rápido:
             </span>
             {quickPills.map((p) => {

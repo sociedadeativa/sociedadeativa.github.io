@@ -245,7 +245,7 @@ export const IndicatorDetailModal: React.FC<IndicatorDetailModalProps> = ({
                 <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500">
                   Série Histórica Recente
                 </h3>
-                <span className="text-[11px] text-slate-400 font-medium">
+                <span className="text-xs text-slate-500 font-medium">
                   {indicator.historicalData.length} períodos
                 </span>
               </div>
@@ -282,7 +282,7 @@ export const IndicatorDetailModal: React.FC<IndicatorDetailModalProps> = ({
                 <div className="mt-3 overflow-x-auto">
                   <table className="w-full text-left text-xs">
                     <thead>
-                      <tr className="text-slate-400 border-b border-slate-200 text-[10px] uppercase font-bold">
+                      <tr className="text-slate-600 border-b border-slate-200 text-xs uppercase font-bold">
                         <th className="pb-1.5 font-bold">Período</th>
                         <th className="pb-1.5 text-right font-bold">Valor</th>
                       </tr>

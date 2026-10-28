@@ -19,6 +19,7 @@ import {
   Calendar,
   CheckCircle2,
 } from "lucide-react";
+import { handleTabKeyDown } from "../utils/a11yTabs";
 
 interface CandidateResultsViewProps {
   dataset: ElectionDataSet;
@@ -156,19 +157,19 @@ export const CandidateResultsView: React.FC<CandidateResultsViewProps> = ({
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
           {/* Campo de Busca por Nome */}
           <div className="relative flex-1 max-w-md">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
               type="text"
               placeholder="Buscar candidato por nome ou número..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               aria-label="Buscar candidato por nome ou número"
-              className="w-full pl-9 pr-3 py-2 text-xs font-medium rounded-xl border border-slate-200 bg-slate-50/70 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-700/20 focus:border-blue-700 transition-all text-slate-900 placeholder:text-slate-400"
+              className="w-full pl-9 pr-3 py-2 text-xs font-medium rounded-xl border border-slate-200 bg-slate-50/70 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-700/20 focus:border-blue-700 transition-all text-slate-900 placeholder:text-slate-500"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
-                className="absolute right-1 top-1/2 -translate-y-1/2 min-h-[32px] min-w-[32px] flex items-center justify-center text-xs text-slate-400 hover:text-slate-700 cursor-pointer font-bold rounded-lg"
+                className="absolute right-1 top-1/2 -translate-y-1/2 min-h-[32px] min-w-[32px] flex items-center justify-center text-xs text-slate-500 hover:text-slate-800 cursor-pointer font-bold rounded-lg"
                 title="Limpar busca"
                 aria-label="Limpar pesquisa de candidatos"
               >
@@ -199,9 +200,14 @@ export const CandidateResultsView: React.FC<CandidateResultsViewProps> = ({
         </div>
 
         {/* Filtro por Partido (Abas / Pílulas discretas) */}
-        <div role="tablist" aria-label="Filtrar candidatos por agremiação partidária" className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+        <div
+          role="tablist"
+          aria-label="Filtrar candidatos por agremiação partidária"
+          onKeyDown={(e) => handleTabKeyDown(e, parties, partyFilter, setPartyFilter)}
+          className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none"
+        >
           <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mr-1 shrink-0 flex items-center gap-1">
-            <Filter className="w-3 h-3 text-slate-400" />
+            <Filter className="w-3 h-3 text-slate-500" />
             Partido:
           </span>
           {parties.map((party) => {
@@ -210,9 +216,12 @@ export const CandidateResultsView: React.FC<CandidateResultsViewProps> = ({
             return (
               <button
                 key={party}
+                id={`tab-party-${party}`}
                 role="tab"
                 aria-selected={isActive}
-                aria-label={`Filtrar candidatos por ${label}`}
+                tabIndex={isActive ? 0 : -1}
+                aria-controls="panel-candidates-list"
+                aria-label={`${label}: filtrar candidatos`}
                 onClick={() => setPartyFilter(party)}
                 className={`min-h-[34px] px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center justify-center ${
                   isActive
@@ -228,7 +237,7 @@ export const CandidateResultsView: React.FC<CandidateResultsViewProps> = ({
 
         {/* Aviso de Transparência Cívica e Neutralidade Informativa */}
         <div className="p-3 bg-slate-50 border border-slate-200/90 rounded-2xl flex items-start gap-2.5 text-[11px] text-slate-600 leading-relaxed">
-          <Info className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+          <Info className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
           <p>
             <strong>Transparência Informativa:</strong> A busca, a filtragem partidária e a ordenação são estritamente ferramentas instrumentais de navegação e acessibilidade documental. Não constituem recomendações políticas, ranqueamentos de mérito ou juízos de valor editorial.
           </p>
@@ -236,7 +245,12 @@ export const CandidateResultsView: React.FC<CandidateResultsViewProps> = ({
       </div>
 
       {/* Grade de Cartões Individuais dos Candidatos */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
+      <div
+        id="panel-candidates-list"
+        role="tabpanel"
+        aria-labelledby={`tab-party-${partyFilter}`}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4"
+      >
         {displayedCandidates.map((cand, index) => {
           const isWinner1st = cand.id === "flavio";
           const isRunnerUp1st = cand.id === "lula";
@@ -323,7 +337,7 @@ export const CandidateResultsView: React.FC<CandidateResultsViewProps> = ({
                       <p className="text-[11px] text-slate-500 font-medium leading-tight line-clamp-1 mt-0.5">
                         {cand.name}
                       </p>
-                      <p className="text-[10px] text-slate-400 mt-1 line-clamp-2">
+                      <p className="text-xs text-slate-600 mt-1 line-clamp-2">
                         {cand.coalition}
                       </p>
                     </div>
@@ -371,7 +385,7 @@ export const CandidateResultsView: React.FC<CandidateResultsViewProps> = ({
                 <div className="pt-3 border-t border-slate-100 space-y-2 text-[11px]">
                   <div className="flex items-center justify-between text-slate-500">
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3 text-slate-400" />
+                      <Calendar className="w-3 h-3 text-slate-500" />
                       Ano 2026 · 1º Turno
                     </span>
                     <span className="font-mono text-[10px] text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">

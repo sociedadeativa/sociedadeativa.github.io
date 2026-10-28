@@ -293,6 +293,131 @@ assert.ok(
 );
 console.log("  [PASS] NationalBanner renders <h2>, eliminating duplicate <h1> on HomePage and EleicoesPage.");
 
+// --- TEST 5: Skip Link & Main Content Target ---
+console.log("\n[TEST 5] Skip Link and Main Content Target Verification");
+const appPath = path.join(rootDir, "src", "App.tsx");
+const appCode = fs.readFileSync(appPath, "utf-8");
+
+assert.ok(
+  appCode.includes('href="#conteudo"'),
+  "App.tsx must include skip link pointing to #conteudo"
+);
+assert.ok(
+  appCode.includes("Pular para o conteúdo"),
+  "Skip link text must be 'Pular para o conteúdo'"
+);
+assert.ok(
+  appCode.includes("sr-only focus:not-sr-only"),
+  "Skip link must use sr-only and focus:not-sr-only classes"
+);
+assert.ok(
+  appCode.includes('id="conteudo"'),
+  "App.tsx <main> element must have id='conteudo'"
+);
+console.log("  [PASS] Portuguese skip link and main target id verified.");
+
+// --- TEST 6: Reduced Motion Configuration ---
+console.log("\n[TEST 6] Reduced Motion Configuration Verification");
+assert.ok(
+  appCode.includes('from "motion/react"') || appCode.includes("from 'motion/react'"),
+  "App.tsx must import MotionConfig from 'motion/react'"
+);
+assert.ok(
+  appCode.includes('reducedMotion="user"'),
+  "App.tsx must configure MotionConfig with reducedMotion='user'"
+);
+console.log("  [PASS] MotionConfig reducedMotion='user' verified.");
+
+// --- TEST 7: WAI-ARIA Tab Semantics, Roving Tabindex & Panels ---
+console.log("\n[TEST 7] WAI-ARIA Tab Semantics, Roving Tabindex & Tabpanels");
+
+const tabComponents = [
+  { name: "BolsaSection", file: "src/components/BolsaSection.tsx", panelId: "panel-bolsa-rankings" },
+  { name: "NewsSection", file: "src/components/NewsSection.tsx", panelId: "panel-news-list" },
+  { name: "BrazilMap", file: "src/components/BrazilMap.tsx", panelId: "panel-brazil-map-drawing" },
+  { name: "StateTable", file: "src/components/StateTable.tsx", panelId: "panel-state-table" },
+  { name: "EconomySection", file: "src/components/EconomySection.tsx", panelId: "panel-economy-indicators" },
+  { name: "CandidateResultsView", file: "src/components/CandidateResultsView.tsx", panelId: "panel-candidates-list" },
+  { name: "NoticiasPage", file: "src/pages/NoticiasPage.tsx", panelId: "panel-noticias-list" },
+  { name: "TecnologiaPage", file: "src/pages/TecnologiaPage.tsx", panelId: "panel-tech-news" },
+  { name: "EsportesPage", file: "src/pages/EsportesPage.tsx", panelId: "panel-esportes-matches" },
+];
+
+for (const { name, file, panelId } of tabComponents) {
+  const code = fs.readFileSync(path.join(rootDir, file), "utf-8");
+  assert.ok(
+    code.includes('role="tablist"'),
+    `${name} must contain role="tablist"`
+  );
+  assert.ok(
+    code.includes('role="tab"'),
+    `${name} must contain role="tab"`
+  );
+  assert.ok(
+    code.includes('aria-selected='),
+    `${name} tabs must define aria-selected`
+  );
+  assert.ok(
+    code.includes('tabIndex={') || code.includes('tabIndex ='),
+    `${name} tabs must implement roving tabIndex (0 or -1)`
+  );
+  assert.ok(
+    code.includes(`aria-controls="${panelId}"`),
+    `${name} tabs must link to panel with aria-controls="${panelId}"`
+  );
+  assert.ok(
+    code.includes(`id="${panelId}"`) && code.includes('role="tabpanel"'),
+    `${name} must contain matching tabpanel with id="${panelId}"`
+  );
+  assert.ok(
+    code.includes("handleTabKeyDown"),
+    `${name} tablist must handle keyboard navigation with handleTabKeyDown`
+  );
+  console.log(`  [PASS] ${name} tablist, tabs, roving tabIndex, keyboard nav, and panel verified.`);
+}
+
+// --- TEST 8: WCAG 2.5.3 Label in Name Principle ---
+console.log("\n[TEST 8] WCAG 2.5.3 Label in Name Principle");
+assert.ok(
+  headerCode.includes('aria-label="Buscar no portal"'),
+  "Header search button accessible name must begin with visible text 'Buscar'"
+);
+
+assert.ok(
+  esportesPageCode.includes('aria-label="Anterior: rodada anterior"'),
+  "EsportesPage previous round button accessible name must begin with visible text 'Anterior'"
+);
+
+const artModalPath = path.join(rootDir, "src", "components", "ArticleModal.tsx");
+const artModalCode = fs.readFileSync(artModalPath, "utf-8");
+assert.ok(
+  artModalCode.includes('aria-label={copied ? "Link copiado: copiado para a área de transferência" : "Compartilhar: compartilhar matéria"}'),
+  "ArticleModal share button accessible name must begin with visible text 'Compartilhar' or 'Link copiado'"
+);
+console.log("  [PASS] Label in Name principle verified on visible-text buttons.");
+
+// --- TEST 9: Contrast and Typography Compliance ---
+console.log("\n[TEST 9] Contrast and Typography Compliance");
+const sportsDataPath = path.join(rootDir, "src", "data", "sportsData.ts");
+const sportsDataCode = fs.readFileSync(sportsDataPath, "utf-8");
+assert.ok(
+  sportsDataCode.includes('badgeColor: "bg-amber-700 text-white"'),
+  "Copa do Brasil badge must use bg-amber-700 for WCAG AA contrast with white text"
+);
+
+assert.ok(
+  esportesPageCode.includes('bg-amber-700 text-white'),
+  "EsportesPage DEMO_NOTICE badge must use bg-amber-700 text-white"
+);
+
+const indModalCodePath = path.join(rootDir, "src", "components", "IndicatorDetailModal.tsx");
+const indCode = fs.readFileSync(indModalCodePath, "utf-8");
+assert.ok(
+  indCode.includes('text-slate-600 border-b border-slate-200 text-xs uppercase font-bold'),
+  "IndicatorDetailModal historical table header must use text-slate-600 text-xs for contrast"
+);
+console.log("  [PASS] Contrast and typography standards verified.");
+
 console.log("\n======================================================================");
-console.log("ALL 4 ACCESSIBILITY AUDIT FIXES VERIFIED SUCCESSFULLY (100% PASS)");
+console.log("ALL ACCESSIBILITY AUDIT FIXES VERIFIED SUCCESSFULLY (100% PASS)");
 console.log("======================================================================");

@@ -5,6 +5,7 @@ import { useNews } from "../hooks/useNews";
 import { AdBanner } from "../components/AdBanner";
 import { PortalLink } from "../components/PortalLink";
 import { Newspaper, Search, X, Filter, ExternalLink, Calendar, AlertTriangle, RefreshCw } from "lucide-react";
+import { handleTabKeyDown } from "../utils/a11yTabs";
 
 interface NoticiasPageProps {
   initialArticles: NewsItem[];
@@ -81,19 +82,19 @@ export const NoticiasPage: React.FC<NoticiasPageProps> = ({
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
             {/* Campo de Pesquisa Textual */}
             <div className="relative w-full sm:max-w-md">
-              <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Pesquisar por assunto, palavra-chave ou órgão..."
                 aria-label="Pesquisar notícias oficiais por assunto ou órgão"
-                className="w-full pl-9 pr-9 py-2 rounded-xl text-xs sm:text-sm bg-slate-50 border border-slate-200 focus:bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus-visible:outline-hidden text-slate-800 transition-all placeholder:text-slate-400"
+                className="w-full pl-9 pr-9 py-2 rounded-xl text-xs sm:text-sm bg-slate-50 border border-slate-200 focus:bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus-visible:outline-hidden text-slate-800 transition-all placeholder:text-slate-500"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
-                  className="absolute right-1 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 min-h-[32px] min-w-[32px] flex items-center justify-center rounded-lg cursor-pointer"
+                  className="absolute right-1 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-700 min-h-[32px] min-w-[32px] flex items-center justify-center rounded-lg cursor-pointer"
                   title="Limpar busca"
                   aria-label="Limpar busca de notícias"
                 >
@@ -124,15 +125,23 @@ export const NoticiasPage: React.FC<NoticiasPageProps> = ({
           </div>
 
           {/* Abas de Categorias Editoriais (Botões Interativos) */}
-          <div role="tablist" aria-label="Categorias editoriais de notícias" className="flex items-center gap-1.5 overflow-x-auto scrollbar-none pt-2 border-t border-slate-100">
+          <div
+            role="tablist"
+            aria-label="Categorias editoriais de notícias"
+            onKeyDown={(e) => handleTabKeyDown(e, '[role="tab"]')}
+            className="flex items-center gap-1.5 overflow-x-auto scrollbar-none pt-2 border-t border-slate-100"
+          >
             {categories.map((cat) => {
               const isSelected = selectedCategory === cat;
               return (
                 <button
                   key={cat}
                   role="tab"
+                  id={`tab-noticias-${cat}`}
                   aria-selected={isSelected}
-                  aria-label={`Filtrar notícias pela categoria ${cat}`}
+                  tabIndex={isSelected ? 0 : -1}
+                  aria-controls="panel-noticias-list"
+                  aria-label={`${cat}: filtrar notícias pela categoria ${cat}`}
                   onClick={() => setSelectedCategory(cat)}
                   className={`min-h-[34px] px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap cursor-pointer shrink-0 flex items-center justify-center ${
                     isSelected
@@ -148,7 +157,12 @@ export const NoticiasPage: React.FC<NoticiasPageProps> = ({
         </div>
 
         {/* Listagem de Artigos */}
-        <div className="mb-12">
+        <div
+          id="panel-noticias-list"
+          role="tabpanel"
+          aria-labelledby={`tab-noticias-${selectedCategory}`}
+          className="mb-12"
+        >
           <div className="flex items-center justify-between mb-6">
             <h2 className="font-heading text-xl sm:text-2xl font-black text-slate-900">
               Notícias Encontradas

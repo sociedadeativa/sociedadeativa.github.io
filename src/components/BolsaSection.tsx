@@ -18,6 +18,7 @@ import {
   RefreshCw,
   AlertTriangle,
 } from "lucide-react";
+import { handleTabKeyDown } from "../utils/a11yTabs";
 
 export const BolsaSection: React.FC = () => {
   // Inicialização instantânea com dados oficiais compilados para evitar qualquer tela em branco
@@ -548,11 +549,26 @@ export const BolsaSection: React.FC = () => {
       <div className="space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200">
           {/* Navegação entre Abas de Rankings */}
-          <div role="tablist" aria-label="Rankings de ações da B3" className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
+          <div
+            role="tablist"
+            aria-label="Rankings de ações da B3"
+            onKeyDown={(e) =>
+              handleTabKeyDown(
+                e,
+                ["mostTraded", "gainers", "decliners"] as const,
+                activeTab,
+                setActiveTab
+              )
+            }
+            className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none"
+          >
             <button
+              id="tab-bolsa-mostTraded"
               role="tab"
               aria-selected={activeTab === "mostTraded"}
-              aria-label={`Ver ações mais negociadas na B3 (${mostTraded.length} ativos)`}
+              tabIndex={activeTab === "mostTraded" ? 0 : -1}
+              aria-controls="panel-bolsa-rankings"
+              aria-label={`B. Mais Negociadas (${mostTraded.length}): ver ações mais negociadas na B3`}
               onClick={() => setActiveTab("mostTraded")}
               className={`min-h-[40px] px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
                 activeTab === "mostTraded"
@@ -565,9 +581,12 @@ export const BolsaSection: React.FC = () => {
             </button>
 
             <button
+              id="tab-bolsa-gainers"
               role="tab"
               aria-selected={activeTab === "gainers"}
-              aria-label={`Ver maiores altas do pregão na B3 (${gainers.length} ativos)`}
+              tabIndex={activeTab === "gainers" ? 0 : -1}
+              aria-controls="panel-bolsa-rankings"
+              aria-label={`C. Maiores Altas (${gainers.length}): ver maiores altas do pregão na B3`}
               onClick={() => setActiveTab("gainers")}
               className={`min-h-[40px] px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
                 activeTab === "gainers"
@@ -580,9 +599,12 @@ export const BolsaSection: React.FC = () => {
             </button>
 
             <button
+              id="tab-bolsa-decliners"
               role="tab"
               aria-selected={activeTab === "decliners"}
-              aria-label={`Ver maiores baixas do pregão na B3 (${decliners.length} ativos)`}
+              tabIndex={activeTab === "decliners" ? 0 : -1}
+              aria-controls="panel-bolsa-rankings"
+              aria-label={`D. Maiores Baixas (${decliners.length}): ver maiores baixas do pregão na B3`}
               onClick={() => setActiveTab("decliners")}
               className={`min-h-[40px] px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
                 activeTab === "decliners"
@@ -602,51 +624,59 @@ export const BolsaSection: React.FC = () => {
           </span>
         </div>
 
-        {/* Detalhe da Metodologia de cada Ranking */}
-        <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 text-xs text-slate-600 flex items-start gap-2.5">
-          <Layers className="w-4 h-4 text-blue-700 shrink-0 mt-0.5" />
-          <div>
-            <span className="font-bold text-slate-900">
-              {activeTab === "mostTraded" && "Metodologia: Ações Mais Negociadas"}
-              {activeTab === "gainers" && "Metodologia: Maiores Altas do Pregão"}
-              {activeTab === "decliners" && "Metodologia: Maiores Baixas do Pregão"}
-            </span>
-            <p className="mt-0.5 text-slate-600 leading-relaxed text-[11px]">
-              {activeTab === "mostTraded" && marketData.rankingMethodology.mostTradedMetric}
-              {activeTab === "gainers" && marketData.rankingMethodology.gainersMetric}
-              {activeTab === "decliners" && marketData.rankingMethodology.declinersMetric}
-            </p>
+        {/* Painel de Conteúdo Associado às Abas */}
+        <div
+          id="panel-bolsa-rankings"
+          role="tabpanel"
+          aria-labelledby={`tab-bolsa-${activeTab}`}
+          className="space-y-6"
+        >
+          {/* Detalhe da Metodologia de cada Ranking */}
+          <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 text-xs text-slate-600 flex items-start gap-2.5">
+            <Layers className="w-4 h-4 text-blue-700 shrink-0 mt-0.5" />
+            <div>
+              <span className="font-bold text-slate-900">
+                {activeTab === "mostTraded" && "Metodologia: Ações Mais Negociadas"}
+                {activeTab === "gainers" && "Metodologia: Maiores Altas do Pregão"}
+                {activeTab === "decliners" && "Metodologia: Maiores Baixas do Pregão"}
+              </span>
+              <p className="mt-0.5 text-slate-600 leading-relaxed text-[11px]">
+                {activeTab === "mostTraded" && marketData.rankingMethodology.mostTradedMetric}
+                {activeTab === "gainers" && marketData.rankingMethodology.gainersMetric}
+                {activeTab === "decliners" && marketData.rankingMethodology.declinersMetric}
+              </p>
+            </div>
           </div>
+
+          {/* Tabela do Ranking Ativo */}
+          {activeTab === "mostTraded" &&
+            renderStockTable(
+              mostTraded,
+              "Volume Financeiro (R$)",
+              "Nenhuma ação registrada para o critério de volume financeiro."
+            )}
+
+          {activeTab === "gainers" &&
+            renderStockTable(
+              gainers,
+              "Variação Diária (%)",
+              "Nenhuma ação em alta registrada nesta sessão."
+            )}
+
+          {activeTab === "decliners" &&
+            renderStockTable(
+              decliners,
+              "Variação Diária (%)",
+              "Nenhuma ação em baixa registrada nesta sessão."
+            )}
         </div>
-
-        {/* Tabela do Ranking Ativo */}
-        {activeTab === "mostTraded" &&
-          renderStockTable(
-            mostTraded,
-            "Volume Financeiro (R$)",
-            "Nenhuma ação registrada para o critério de volume financeiro."
-          )}
-
-        {activeTab === "gainers" &&
-          renderStockTable(
-            gainers,
-            "Variação Diária (%)",
-            "Nenhuma ação em alta registrada nesta sessão."
-          )}
-
-        {activeTab === "decliners" &&
-          renderStockTable(
-            decliners,
-            "Variação Diária (%)",
-            "Nenhuma ação em baixa registrada nesta sessão."
-          )}
       </div>
 
       {/* Nota de Governança, Regulação e Termos de Uso da B3 */}
       <div className="mt-8 pt-4 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
           <div className="flex items-center gap-1.5">
-            <Calendar className="w-3.5 h-3.5 text-slate-400" />
+            <Calendar className="w-3.5 h-3.5 text-slate-500" />
             <span>
               {isMarketOpen ? (
                 <>

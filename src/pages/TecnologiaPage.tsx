@@ -22,6 +22,7 @@ import {
   CheckCircle2,
   ChevronRight,
 } from "lucide-react";
+import { handleTabKeyDown } from "../utils/a11yTabs";
 
 interface TecnologiaPageProps {
   articles?: NewsItem[];
@@ -236,19 +237,19 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
 
             {/* Campo de Busca Rápida de Notícias de Tecnologia */}
             <div className="relative max-w-xs w-full">
-              <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <Search className="w-3.5 h-3.5 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
               <input
                 type="text"
                 placeholder="Buscar termos em tecnologia..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 aria-label="Buscar termos e notícias em tecnologia"
-                className="w-full pl-8 pr-8 py-1.5 text-xs bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 placeholder-slate-400"
+                className="w-full pl-8 pr-8 py-1.5 text-xs bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 placeholder-slate-500"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
-                  className="absolute right-1 top-1/2 -translate-y-1/2 min-h-[32px] min-w-[32px] flex items-center justify-center text-slate-400 hover:text-slate-600 text-xs font-bold rounded-md cursor-pointer"
+                  className="absolute right-1 top-1/2 -translate-y-1/2 min-h-[32px] min-w-[32px] flex items-center justify-center text-slate-500 hover:text-slate-700 text-xs font-bold rounded-md cursor-pointer"
                   title="Limpar busca"
                   aria-label="Limpar busca de tecnologia"
                 >
@@ -259,7 +260,12 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
           </div>
 
           {/* Abas de Tópicos Responsivas */}
-          <div role="tablist" aria-label="Áreas tecnológicas" className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
+          <div
+            role="tablist"
+            aria-label="Áreas tecnológicas"
+            onKeyDown={(e) => handleTabKeyDown(e, '[role="tab"]')}
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2"
+          >
             {TECH_TOPICS.map((topic) => {
               const Icon = topic.icon;
               const isActive = selectedTopic === topic.id;
@@ -267,8 +273,11 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
                 <button
                   key={topic.id}
                   role="tab"
+                  id={`tab-tech-${topic.id}`}
                   aria-selected={isActive}
-                  aria-label={`Filtrar por área tecnológica: ${topic.label}`}
+                  tabIndex={isActive ? 0 : -1}
+                  aria-controls="panel-tech-news"
+                  aria-label={`${topic.label}: filtrar por área tecnológica`}
                   onClick={() => setSelectedTopic(topic.id)}
                   className={`p-3 min-h-[44px] rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
                     isActive
@@ -294,7 +303,12 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
         </div>
 
         {/* 3. Grade Principal: Lista de Notícias Oficiais & Painel Informativo Lateral */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+        <div
+          id="panel-tech-news"
+          role="tabpanel"
+          aria-labelledby={`tab-tech-${selectedTopic}`}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12"
+        >
           {/* Coluna Principal: Matérias Reais da Editoria */}
           <div className="lg:col-span-8 space-y-6">
             <div className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-xs">
@@ -328,7 +342,7 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
                             {art.category || "Tecnologia"}
                           </span>
                           <span className="text-[11px] text-slate-500 flex items-center gap-1">
-                            <Clock className="w-3 h-3 text-slate-400" />
+                            <Clock className="w-3 h-3 text-slate-500" />
                             <span>{art.publishedAt}</span>
                           </span>
                         </div>
@@ -383,7 +397,7 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
                 /* Estado Vazio Neutro Sem Fabricações */
                 <div className="py-12 px-4 rounded-xl border border-dashed border-slate-200 bg-slate-50/70 text-center">
                   <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center mx-auto mb-3 text-slate-500">
-                    <Radio className="w-5 h-5 text-slate-400" />
+                    <Radio className="w-5 h-5 text-slate-500" />
                   </div>
                   <h3 className="font-heading font-bold text-sm text-slate-800 mb-1">
                     Nenhuma matéria oficial de tecnologia encontrada para este filtro
@@ -506,7 +520,7 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
                   <span>Resoluções técnicas da Anatel e do Banco Central do Brasil.</span>
                 </li>
               </ul>
-              <div className="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+              <div className="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-300">
                 Auditoria pública de dados e transparência governamental.
               </div>
             </div>

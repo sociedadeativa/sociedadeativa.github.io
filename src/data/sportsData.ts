@@ -22,7 +22,7 @@ export interface SportTournament {
 export const TOURNAMENTS: SportTournament[] = [
   { id: "brasileirao-a", name: "Brasileirão Série A", shortName: "Série A", category: "nacional", badgeColor: "bg-emerald-600 text-white", season: "2026" },
   { id: "brasileirao-b", name: "Brasileirão Série B", shortName: "Série B", category: "nacional", badgeColor: "bg-blue-600 text-white", season: "2026" },
-  { id: "copa-do-brasil", name: "Copa do Brasil", shortName: "Copa do Brasil", category: "nacional", badgeColor: "bg-amber-600 text-white", season: "2026" },
+  { id: "copa-do-brasil", name: "Copa do Brasil", shortName: "Copa do Brasil", category: "nacional", badgeColor: "bg-amber-700 text-white", season: "2026" },
   { id: "libertadores", name: "CONMEBOL Libertadores", shortName: "Libertadores", category: "continental", badgeColor: "bg-slate-900 text-amber-400", season: "2026" },
   { id: "sul-americana", name: "CONMEBOL Sul-Americana", shortName: "Sul-Americana", category: "continental", badgeColor: "bg-blue-900 text-blue-200", season: "2026" },
   { id: "champions", name: "UEFA Champions League", shortName: "Champions League", category: "internacional", badgeColor: "bg-indigo-950 text-indigo-200", season: "2026/27" },

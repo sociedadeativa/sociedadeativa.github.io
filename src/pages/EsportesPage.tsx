@@ -32,6 +32,7 @@ import {
   RefreshCw,
   CheckCircle2,
 } from "lucide-react";
+import { handleTabKeyDown } from "../utils/a11yTabs";
 import {
   DEMO_NOTICE,
   TOURNAMENTS,
@@ -273,7 +274,7 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
             </div>
             <div className="flex-1">
               <div className="flex flex-wrap items-center gap-2 mb-1">
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-black bg-amber-600 text-white tracking-wide uppercase">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-black bg-amber-700 text-white tracking-wide uppercase">
                   {DEMO_NOTICE}
                 </span>
                 <span className="text-xs font-bold text-amber-900">
@@ -372,11 +373,19 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
               </span>
             )}
           </div>
-          <div role="tablist" aria-label="Competições esportivas" className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+          <div
+            role="tablist"
+            aria-label="Competições esportivas"
+            onKeyDown={(e) => handleTabKeyDown(e, '[role="tab"]')}
+            className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none"
+          >
             <button
               role="tab"
+              id="tab-tourn-todos"
               aria-selected={selectedTournament === "todos"}
-              aria-label="Exibir todas as competições"
+              tabIndex={selectedTournament === "todos" ? 0 : -1}
+              aria-controls="panel-esportes-matches"
+              aria-label="Todas as Competições: exibir todas as competições"
               onClick={() => setSelectedTournament("todos")}
               className={`min-h-[36px] px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all border flex items-center justify-center ${
                 selectedTournament === "todos"
@@ -390,8 +399,11 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
               <button
                 key={t.id}
                 role="tab"
+                id={`tab-tourn-${t.id}`}
                 aria-selected={selectedTournament === t.id}
-                aria-label={`Filtrar por competição: ${t.name}`}
+                tabIndex={selectedTournament === t.id ? 0 : -1}
+                aria-controls="panel-esportes-matches"
+                aria-label={`${t.name}: filtrar por competição ${t.name}`}
                 onClick={() => setSelectedTournament(t.id)}
                 className={`min-h-[36px] px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all border flex items-center gap-1.5 ${
                   selectedTournament === t.id
@@ -457,11 +469,19 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                 </div>
 
                 {/* Filtro de Status das Partidas */}
-                <div role="tablist" aria-label="Status das partidas" className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg text-xs font-semibold">
+                <div
+                  role="tablist"
+                  aria-label="Status das partidas"
+                  onKeyDown={(e) => handleTabKeyDown(e, '[role="tab"]')}
+                  className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg text-xs font-semibold"
+                >
                   <button
                     role="tab"
+                    id="tab-status-todos"
                     aria-selected={matchStatusFilter === "todos"}
-                    aria-label="Filtrar todas as partidas"
+                    tabIndex={matchStatusFilter === "todos" ? 0 : -1}
+                    aria-controls="panel-esportes-matches"
+                    aria-label="Todos: filtrar todas as partidas"
                     onClick={() => setMatchStatusFilter("todos")}
                     className={`min-h-[34px] px-2.5 py-1 rounded-md transition-colors flex items-center justify-center ${
                       matchStatusFilter === "todos" ? "bg-white text-slate-950 shadow-2xs font-bold" : "text-slate-600 hover:text-slate-900"
@@ -471,8 +491,11 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                   </button>
                   <button
                     role="tab"
+                    id="tab-status-ao_vivo"
                     aria-selected={matchStatusFilter === "ao_vivo"}
-                    aria-label="Filtrar partidas ao vivo"
+                    tabIndex={matchStatusFilter === "ao_vivo" ? 0 : -1}
+                    aria-controls="panel-esportes-matches"
+                    aria-label="Ao Vivo: filtrar partidas ao vivo"
                     onClick={() => setMatchStatusFilter("ao_vivo")}
                     className={`min-h-[34px] px-2.5 py-1 rounded-md transition-colors flex items-center justify-center gap-1 ${
                       matchStatusFilter === "ao_vivo" ? "bg-rose-600 text-white shadow-2xs font-bold" : "text-slate-600 hover:text-slate-900"
@@ -483,8 +506,11 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                   </button>
                   <button
                     role="tab"
+                    id="tab-status-encerrado"
                     aria-selected={matchStatusFilter === "encerrado"}
-                    aria-label="Filtrar partidas encerradas"
+                    tabIndex={matchStatusFilter === "encerrado" ? 0 : -1}
+                    aria-controls="panel-esportes-matches"
+                    aria-label="Encerrados: filtrar partidas encerradas"
                     onClick={() => setMatchStatusFilter("encerrado")}
                     className={`min-h-[34px] px-2.5 py-1 rounded-md transition-colors flex items-center justify-center ${
                       matchStatusFilter === "encerrado" ? "bg-white text-slate-950 shadow-2xs font-bold" : "text-slate-600 hover:text-slate-900"
@@ -494,8 +520,11 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                   </button>
                   <button
                     role="tab"
+                    id="tab-status-proximos"
                     aria-selected={matchStatusFilter === "proximos"}
-                    aria-label="Filtrar próximas partidas agendadas"
+                    tabIndex={matchStatusFilter === "proximos" ? 0 : -1}
+                    aria-controls="panel-esportes-matches"
+                    aria-label="Próximos: filtrar próximas partidas agendadas"
                     onClick={() => setMatchStatusFilter("proximos")}
                     className={`min-h-[34px] px-2.5 py-1 rounded-md transition-colors flex items-center justify-center ${
                       matchStatusFilter === "proximos" ? "bg-white text-slate-950 shadow-2xs font-bold" : "text-slate-600 hover:text-slate-900"
@@ -540,7 +569,7 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                       disabled={serieARounds.indexOf(selectedRound) <= 0 || selectedRound === "todas"}
                       className="inline-flex items-center justify-center gap-1 px-3 py-1.5 min-h-[36px] rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors text-xs font-bold cursor-pointer"
                       title="Rodada anterior"
-                      aria-label="Rodada anterior"
+                      aria-label="Anterior: rodada anterior"
                     >
                       <ChevronLeft className="w-3.5 h-3.5" />
                       <span className="hidden sm:inline">Anterior</span>
@@ -564,7 +593,12 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
               )}
 
               {/* Lista de Partidas */}
-              <div className="divide-y divide-slate-100 mt-2">
+              <div
+                id="panel-esportes-matches"
+                role="tabpanel"
+                aria-labelledby={`tab-tourn-${selectedTournament}`}
+                className="divide-y divide-slate-100 mt-2"
+              >
                 {selectedTournament === "brasileirao-a" && isSerieALoading ? (
                   <div className="py-12 text-center">
                     <div className="w-8 h-8 border-3 border-emerald-600 border-t-transparent rounded-full animate-spin mx-auto mb-3" />
@@ -689,7 +723,7 @@ export const EsportesPage: React.FC<EsportesPageProps> = ({
                             {match.status === "ao_vivo" || match.status === "encerrado" ? (
                               <div className="flex items-center gap-2 px-3 py-1 bg-slate-900 text-white rounded-lg font-mono font-black text-lg sm:text-xl shadow-2xs">
                                 <span>{typeof match.homeTeam.score === "number" ? match.homeTeam.score : "-"}</span>
-                                <span className="text-slate-400 font-normal">x</span>
+                                <span className="text-slate-300 font-normal">x</span>
                                 <span>{typeof match.awayTeam.score === "number" ? match.awayTeam.score : "-"}</span>
                               </div>
                             ) : (

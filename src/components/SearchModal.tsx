@@ -84,20 +84,20 @@ export const SearchModal: React.FC<SearchModalProps> = ({
       >
         {/* Barra de Pesquisa */}
         <div className="flex items-center gap-3 p-4 sm:p-5 border-b border-slate-100 bg-slate-50/50">
-          <Search className="w-5 h-5 text-slate-400 shrink-0 pointer-events-none" />
+          <Search className="w-5 h-5 text-slate-500 shrink-0 pointer-events-none" />
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Buscar por notícias, estados, indicadores ou candidatos..."
             aria-label="Pesquisar notícias, estados, indicadores ou candidatos no portal"
-            className="w-full bg-transparent text-sm sm:text-base outline-none text-slate-900 placeholder:text-slate-400 font-medium"
+            className="w-full bg-transparent text-sm sm:text-base outline-none text-slate-900 placeholder:text-slate-500 font-medium"
             autoFocus
           />
           {query && (
             <button
               onClick={() => setQuery("")}
-              className="min-h-[36px] min-w-[36px] flex items-center justify-center rounded-lg hover:bg-slate-200 text-slate-400 hover:text-slate-700 transition-colors cursor-pointer"
+              className="min-h-[36px] min-w-[36px] flex items-center justify-center rounded-lg hover:bg-slate-200 text-slate-500 hover:text-slate-800 transition-colors cursor-pointer"
               aria-label="Limpar campo de pesquisa"
               title="Limpar busca"
             >

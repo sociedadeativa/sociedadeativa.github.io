@@ -17,6 +17,7 @@ import {
   ShieldCheck,
   Filter,
 } from "lucide-react";
+import { handleTabKeyDown } from "../utils/a11yTabs";
 
 interface NewsSectionProps {
   articles?: NewsItem[];
@@ -110,8 +111,15 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
         </div>
 
         {/* Barra de Navegação por Categorias Oficiais */}
-        <div role="tablist" aria-label="Categorias oficiais de notícias" className="flex items-center gap-1.5 overflow-x-auto pb-3 mb-6 text-xs scrollbar-thin scrollbar-thumb-slate-200">
-          <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-bold uppercase text-slate-400 mr-1 shrink-0">
+        <div
+          role="tablist"
+          aria-label="Categorias oficiais de notícias"
+          onKeyDown={(e) =>
+            handleTabKeyDown(e, categories, selectedCategory, setSelectedCategory)
+          }
+          className="flex items-center gap-1.5 overflow-x-auto pb-3 mb-6 text-xs scrollbar-thin scrollbar-thumb-slate-200"
+        >
+          <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-bold uppercase text-slate-500 mr-1 shrink-0">
             <Filter className="w-3 h-3" />
             Filtro:
           </span>
@@ -121,9 +129,12 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
             return (
               <button
                 key={cat}
+                id={`tab-news-${cat}`}
                 role="tab"
                 aria-selected={isActive}
-                aria-label={`Filtrar notícias por ${cat}`}
+                tabIndex={isActive ? 0 : -1}
+                aria-controls="panel-news-list"
+                aria-label={`${cat}: filtrar notícias por ${cat}`}
                 onClick={() => setSelectedCategory(cat)}
                 className={`min-h-[34px] px-3 py-1.5 rounded-xl font-bold transition-all cursor-pointer whitespace-nowrap text-xs shrink-0 flex items-center justify-center ${
                   isActive
@@ -137,48 +148,55 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
           })}
         </div>
 
-        {/* Mensagem quando não houver resultados */}
-        {filteredArticles.length === 0 ? (
-          <div className="text-center py-12 px-4 bg-slate-50 rounded-2xl border border-slate-200">
-            <p className="text-sm font-bold text-slate-700">
-              Nenhuma notícia encontrada para os critérios selecionados.
-            </p>
-            <p className="text-xs text-slate-500 mt-1">
-              Tente redefinir o termo de pesquisa ou escolher outra categoria.
-            </p>
-            <button
-              onClick={() => {
-                setSelectedCategory("Todas");
-                setSearchQuery("");
-              }}
-              className="mt-3 px-4 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 cursor-pointer transition-colors"
-            >
-              Ver todas as notícias
-            </button>
-          </div>
-        ) : (
-          /* Grade Responsiva de Cartões de Notícias */
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredArticles.map((article, idx) => {
-              const isFeatured = idx === 0 && selectedCategory === "Todas" && !searchQuery;
+        {/* Painel de Artigos Associado às Abas */}
+        <div
+          id="panel-news-list"
+          role="tabpanel"
+          aria-labelledby={`tab-news-${selectedCategory}`}
+        >
+          {/* Mensagem quando não houver resultados */}
+          {filteredArticles.length === 0 ? (
+            <div className="text-center py-12 px-4 bg-slate-50 rounded-2xl border border-slate-200">
+              <p className="text-sm font-bold text-slate-700">
+                Nenhuma notícia encontrada para os critérios selecionados.
+              </p>
+              <p className="text-xs text-slate-500 mt-1">
+                Tente redefinir o termo de pesquisa ou escolher outra categoria.
+              </p>
+              <button
+                onClick={() => {
+                  setSelectedCategory("Todas");
+                  setSearchQuery("");
+                }}
+                className="mt-3 px-4 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 cursor-pointer transition-colors"
+              >
+                Ver todas as notícias
+              </button>
+            </div>
+          ) : (
+            /* Grade Responsiva de Cartões de Notícias */
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredArticles.map((article, idx) => {
+                const isFeatured = idx === 0 && selectedCategory === "Todas" && !searchQuery;
 
-              return (
-                <NewsCard
-                  key={article.id}
-                  article={article}
-                  isFeatured={isFeatured}
-                  onOpenDetails={(item) => {
-                    if (onOpenArticleDetails) {
-                      onOpenArticleDetails(item);
-                    } else {
-                      setActiveArticle(item);
-                    }
-                  }}
-                />
-              );
-            })}
-          </div>
-        )}
+                return (
+                  <NewsCard
+                    key={article.id}
+                    article={article}
+                    isFeatured={isFeatured}
+                    onOpenDetails={(item) => {
+                      if (onOpenArticleDetails) {
+                        onOpenArticleDetails(item);
+                      } else {
+                        setActiveArticle(item);
+                      }
+                    }}
+                  />
+                );
+              })}
+            </div>
+          )}
+        </div>
 
         {/* Nota Editorial sobre Agregação e Atribuição de Fontes */}
         <div className="mt-10 p-4 rounded-xl bg-slate-50/80 border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-500">

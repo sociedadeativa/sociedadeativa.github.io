@@ -1,4 +1,5 @@
 import React, { useState, Suspense, lazy } from "react";
+import { MotionConfig } from "motion/react";
 import { DATASET_2026, ElectionDataSet } from "./data/electionData";
 import { INITIAL_NEWS_SNAPSHOT } from "./data/initialNewsSnapshot";
 import { useNews } from "./hooks/useNews";
@@ -79,19 +80,28 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden bg-[#F8FAFC] text-slate-900 flex flex-col font-sans selection:bg-slate-900 selection:text-white">
-      {/* 1. Barra Superior Editorial e Navegação Thematic Menu */}
-      <Header
-        dataset={currentDataset}
-        currentRoute={currentRoute}
-        indicators={indicators}
-        onOpenMethodology={() => setIsMethodologyOpen(true)}
-        onOpenDataInspector={() => setIsDataInspectorOpen(true)}
-        onOpenSearch={() => setIsSearchOpen(true)}
-      />
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-screen w-full overflow-x-hidden bg-[#F8FAFC] text-slate-900 flex flex-col font-sans selection:bg-slate-900 selection:text-white">
+        {/* Skip Link Acessível em Português para Salto de Navegação */}
+        <a
+          href="#conteudo"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-[100] bg-white px-4 py-2 rounded text-slate-900 font-bold shadow-lg border border-slate-300"
+        >
+          Pular para o conteúdo
+        </a>
 
-      {/* 2. Conteúdo Principal Orientado a Rota */}
-      <main className="flex-1 w-full overflow-x-hidden">
+        {/* 1. Barra Superior Editorial e Navegação Thematic Menu */}
+        <Header
+          dataset={currentDataset}
+          currentRoute={currentRoute}
+          indicators={indicators}
+          onOpenMethodology={() => setIsMethodologyOpen(true)}
+          onOpenDataInspector={() => setIsDataInspectorOpen(true)}
+          onOpenSearch={() => setIsSearchOpen(true)}
+        />
+
+        {/* 2. Conteúdo Principal Orientado a Rota */}
+        <main id="conteudo" className="flex-1 w-full overflow-x-hidden">
         <Suspense fallback={<RouteLoadingFallback />}>
           {currentRoute === "home" && (
             <HomePage
@@ -280,11 +290,12 @@ export default function App() {
         </Suspense>
       )}
 
-      {/* 8. Rodapé Editorial do Portal em Português */}
-      <Footer
-        onOpenMethodology={() => setIsMethodologyOpen(true)}
-        onOpenDataInspector={() => setIsDataInspectorOpen(true)}
-      />
-    </div>
+        {/* 8. Rodapé Editorial do Portal em Português */}
+        <Footer
+          onOpenMethodology={() => setIsMethodologyOpen(true)}
+          onOpenDataInspector={() => setIsDataInspectorOpen(true)}
+        />
+      </div>
+    </MotionConfig>
   );
 }

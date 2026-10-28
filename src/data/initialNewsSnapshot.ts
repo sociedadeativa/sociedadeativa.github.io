@@ -2,6 +2,81 @@ import { NewsItem } from "../types/news";
 
 export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
   {
+    "id": "ebc-1707082",
+    "title": "Consumo de alimentos cresce após proibição das bets no país, diz Abras",
+    "summary": "O desempenho do varejo alimentar apresentou alta de 6,5% no Brasil na semana entre os dias 05 a 11 de outubro de 2026, em relação ao mesmo período no ano anterior.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/consumo-de-alimentos-cresce-apos-proibicao-das-bets-no-pais-diz-abras",
+    "publishedAt": "28/10/2026 às 15:11",
+    "category": "Economia",
+    "imageUrl": "https://imagens.ebc.com.br/R7D3GEISEgfeWlIuPBKfa499hkQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/06/12/20231130_110010.jpg?itok=Q3KsDUtF",
+    "imageCaption": "Consumo de alimentos cresce após proibição das bets no país, diz Abras",
+    "imageCredit": "Flávia Albuquerque - Repórter da Agência Brasil",
+    "imageAlt": "Consumo de alimentos cresce após proibição das bets no país, diz Abras",
+    "author": "Flávia Albuquerque - Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "proibição das bets",
+      "Abras",
+      "Supermercados"
+    ],
+    "headline": "Consumo de alimentos cresce após proibição das bets no país, diz Abras",
+    "lead": "O desempenho do varejo alimentar apresentou alta de 6,5% no Brasil na semana entre os dias 05 a 11 de outubro de 2026, em relação ao mesmo período no ano anterior.",
+    "content": [],
+    "ingestedAt": "28/10/2026 às 15:18"
+  },
+  {
+    "id": "camara-1314512-comissao-aprova-incentivo-a-st",
+    "title": "Comissão aprova incentivo a startups de inclusão, saúde pública e bioeconomia amazônica",
+    "summary": "Proposta segue em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1314512-comissao-aprova-incentivo-a-startups-de-inclusao-saude-publica-e-bioeconomia-amazonica",
+    "publishedAt": "28/10/2026 às 15:02",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20251028153305862-768x473.jpg",
+    "imageCaption": "Deputado Daniel Agrobom, relator da proposta",
+    "imageCredit": "Zeca Ribeiro / Câmara dos Deputados",
+    "imageAlt": "Audiência Pública - Questões diversas relacionadas ao trabalho plataformizado. Dep. Daniel Agrobom (PL-GO)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "headline": "Comissão aprova incentivo a startups de inclusão, saúde pública e bioeconomia amazônica",
+    "lead": "Proposta segue em análise na Câmara dos Deputados.",
+    "content": [],
+    "ingestedAt": "28/10/2026 às 15:18"
+  },
+  {
+    "id": "ebc-1707078",
+    "title": "Enem: mulheres e pardos lideram inscrições; confira o painel do Inep",
+    "summary": "As mulheres representam 63,98% das 5.051. 345 inscrições confirmadas no Exame Nacional do Ensino Médio (Enem) de 2026 . Em números absolutos, elas são 3.232. 013 inscritas. Já os homens correspondem a 36,02%, totalizando 1.819. 332 inscritos.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/enem-mulheres-e-pardos-lideram-inscricoes-confira-o-painel-do-inep",
+    "publishedAt": "28/10/2026 às 14:38",
+    "category": "Eleições",
+    "imageUrl": "https://imagens.ebc.com.br/UTMSo4ofGBvrnJxhavBSCpha5QU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/11/16/toms0126.jpg?itok=LgTyLqXG",
+    "imageCaption": "Enem: mulheres e pardos lideram inscrições; confira o painel do Inep",
+    "imageCredit": "Daniella Almeida – Repórter da Agência Brasil",
+    "imageAlt": "Enem: mulheres e pardos lideram inscrições; confira o painel do Inep",
+    "author": "Daniella Almeida – Repórter da Agência Brasil",
+    "tags": [
+      "Educação",
+      "Enem 2026",
+      "painel enem",
+      "Inep",
+      "MEC"
+    ],
+    "headline": "Enem: mulheres e pardos lideram inscrições; confira o painel do Inep",
+    "lead": "As mulheres representam 63,98% das 5.051. 345 inscrições confirmadas no Exame Nacional do Ensino Médio (Enem) de 2026 . Em números absolutos, elas são 3.232. 013 inscritas. Já os homens correspondem a 36,02%, totalizando 1.819. 332 inscritos.",
+    "content": [],
+    "ingestedAt": "28/10/2026 às 15:18"
+  },
+  {
     "id": "camara-1314541-lideres-de-partidos-defendem-b",
     "title": "Líderes de partidos defendem busca da governabilidade após as eleições",
     "summary": "Deputados contrários ao governo prometem oposição responsável e propositiva.",
@@ -23,7 +98,32 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Líderes de partidos defendem busca da governabilidade após as eleições",
     "lead": "Deputados contrários ao governo prometem oposição responsável e propositiva.",
     "content": [],
-    "ingestedAt": "28/10/2026 às 14:44"
+    "ingestedAt": "28/10/2026 às 15:18"
+  },
+  {
+    "id": "ebc-1707074",
+    "title": "Anvisa suspende venda de linguiça defumada após detecção de bactéria",
+    "summary": "A Agência Nacional de Vigilância Sanitária (Anvisa) suspendeu nesta quarta-feira (28) a venda da linguiça de carne suína defumada da marca KF Embutidos. Um laudo de análise microbiológica detectou a presença da bactéria Listeria monocytogenes no Lote 21/08/2026 do produto.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/anvisa-suspende-venda-de-linguica-defumada-apos-deteccao-de-bacteria",
+    "publishedAt": "28/10/2026 às 14:21",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/UgdFxYdKdhZLh4mBtM7zuGJJe3Q=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/28/captura_de_tela_2026-10-28_141213_copy.jpg?itok=ECBU51Ph",
+    "imageCaption": "Anvisa suspende venda de linguiça defumada após detecção de bactéria",
+    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
+    "imageAlt": "Anvisa suspende venda de linguiça defumada após detecção de bactéria",
+    "author": "Paula Laboissière – Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "Anvisa",
+      "Vigilância Sanitária",
+      "Política"
+    ],
+    "headline": "Anvisa suspende venda de linguiça defumada após detecção de bactéria",
+    "lead": "A Agência Nacional de Vigilância Sanitária (Anvisa) suspendeu nesta quarta-feira (28) a venda da linguiça de carne suína defumada da marca KF Embutidos. Um laudo de análise microbiológica detectou a presença da bactéria Listeria monocytogenes no Lote 21/08/2026 do produto.",
+    "content": [],
+    "ingestedAt": "28/10/2026 às 15:18"
   },
   {
     "id": "camara-1314516-comissao-aprova-projeto-que-to",
@@ -47,7 +147,33 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão aprova projeto que torna permanente a política de combate à malária",
     "lead": "A proposta segue em análise na Câmara dos Deputados.",
     "content": [],
-    "ingestedAt": "28/10/2026 às 14:44"
+    "ingestedAt": "28/10/2026 às 15:18"
+  },
+  {
+    "id": "ebc-1707075",
+    "title": "Governo libera R$ 68,6 milhões para combater incêndios e seca no Norte",
+    "summary": "O Governo Federal informou nesta quarta-feira (28) que liberou R$ 68,6 milhões para ações de combate a incêndios em estados da Região Norte. Os recursos, enviados para o Amazonas, Pará e Acre, também se destinam ao combate à estiagem e à seca.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/governo-libera-r-686-milhoes-para-combater-incendios-e-seca-no-norte",
+    "publishedAt": "28/10/2026 às 14:15",
+    "category": "Governo",
+    "imageUrl": "https://imagens.ebc.com.br/5OS-PGlROhGqxJ8EOMnSJI6buJQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/13/img_1103-3_1.jpg?itok=ZQl0JohI",
+    "imageCaption": "Governo libera R$ 68,6 milhões para combater incêndios e seca no Norte",
+    "imageCredit": "Luciano Nascimento - Repórter da Agência Brasil",
+    "imageAlt": "Governo libera R$ 68,6 milhões para combater incêndios e seca no Norte",
+    "author": "Luciano Nascimento - Repórter da Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "Amazonas",
+      "Pará",
+      "Acre",
+      "incêndios"
+    ],
+    "headline": "Governo libera R$ 68,6 milhões para combater incêndios e seca no Norte",
+    "lead": "O Governo Federal informou nesta quarta-feira (28) que liberou R$ 68,6 milhões para ações de combate a incêndios em estados da Região Norte. Os recursos, enviados para o Amazonas, Pará e Acre, também se destinam ao combate à estiagem e à seca.",
+    "content": [],
+    "ingestedAt": "28/10/2026 às 15:18"
   },
   {
     "id": "camara-1313029-projeto-exige-campanha-informa",
@@ -96,133 +222,6 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Anvisa suspende propaganda enganosa de suplementos alimentares",
     "lead": "A Agência Nacional de Vigilância Sanitária (Anvisa) suspendeu a propaganda dos suplementos alimentares em gotas Glifit e Glicofit, fabricados pela empresa Vita Nutriom Saúde & Bem Estar Ltda. A decisão foi publicada na Resolução-RE nº4224, de 26 de outubro de 2026 .",
     "content": [],
-    "ingestedAt": "28/10/2026 às 14:44"
-  },
-  {
-    "id": "ebc-1707072",
-    "title": "Retinopatia: doença ocular afeta um em cada três diabéticos",
-    "summary": "Uma em cada três pessoas com diabetes no Brasil desenvolverá, em algum momento da vida, retinopatia diabética – uma das principais causas de perda visual evitável entre adultos em idade produtiva. Os dados são do Conselho Brasileiro de Oftalmologia (CBO) .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/retinopatia-doenca-ocular-afeta-um-em-cada-tres-diabeticos",
-    "publishedAt": "28/10/2026 às 13:50",
-    "category": "Política",
-    "imageUrl": "https://imagens.ebc.com.br/xzKsdeOEB1vVnlrvNTUFfrpCMGU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/_mg_2874.jpg?itok=IrqY-qsG",
-    "imageCaption": "Retinopatia: doença ocular afeta um em cada três diabéticos",
-    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
-    "imageAlt": "Retinopatia: doença ocular afeta um em cada três diabéticos",
-    "author": "Paula Laboissière – Repórter da Agência Brasil",
-    "tags": [
-      "Saúde",
-      "retinopatia",
-      "Diabetes",
-      "Política"
-    ],
-    "headline": "Retinopatia: doença ocular afeta um em cada três diabéticos",
-    "lead": "Uma em cada três pessoas com diabetes no Brasil desenvolverá, em algum momento da vida, retinopatia diabética – uma das principais causas de perda visual evitável entre adultos em idade produtiva. Os dados são do Conselho Brasileiro de Oftalmologia (CBO) .",
-    "content": [],
-    "ingestedAt": "28/10/2026 às 14:44"
-  },
-  {
-    "id": "ebc-1707069",
-    "title": "INSS alerta para golpes que usam informação falsa sobre biometria",
-    "summary": "O Instituto Nacional do Seguro Social (INSS) divulgou nota para informar que são falsas informações que circulam na internet e nas redes sociais sobre o bloqueio de benefícios.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/inss-alerta-para-golpes-que-usam-informacao-falsa-sobre-biometria",
-    "publishedAt": "28/10/2026 às 13:32",
-    "category": "Política",
-    "imageUrl": "https://imagens.ebc.com.br/MCBegwIqcunIxkSgEksMPFwkegM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/biometria.jpg?itok=LJ-Fszmv",
-    "imageCaption": "INSS alerta para golpes que usam informação falsa sobre biometria",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "INSS alerta para golpes que usam informação falsa sobre biometria",
-    "author": "Agência Brasil",
-    "tags": [
-      "Geral",
-      "Biometria",
-      "golpe",
-      "INSS",
-      "fake news"
-    ],
-    "headline": "INSS alerta para golpes que usam informação falsa sobre biometria",
-    "lead": "O Instituto Nacional do Seguro Social (INSS) divulgou nota para informar que são falsas informações que circulam na internet e nas redes sociais sobre o bloqueio de benefícios.",
-    "content": [],
-    "ingestedAt": "28/10/2026 às 14:11"
-  },
-  {
-    "id": "camara-1314514-comissao-aprova-transparencia-",
-    "title": "Comissão aprova transparência para valor mínimo em aplicativos de entrega",
-    "summary": "Texto segue para a análise das comissões de Comunicação; e de Constituição e Justiça e de Cidadania.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1314514-comissao-aprova-transparencia-para-valor-minimo-em-aplicativos-de-entrega",
-    "publishedAt": "28/10/2026 às 13:23",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20260204111544250-768x473.jpeg",
-    "imageCaption": "Daniel Agrobom é o relator da proposta",
-    "imageCredit": "Zeca Ribeiro / Câmara dos Deputados",
-    "imageAlt": "Reunião de Instalação e Eleição. Dep. Daniel Agrobom (PL - GO)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "headline": "Comissão aprova transparência para valor mínimo em aplicativos de entrega",
-    "lead": "Texto segue para a análise das comissões de Comunicação; e de Constituição e Justiça e de Cidadania.",
-    "content": [],
-    "ingestedAt": "28/10/2026 às 14:11"
-  },
-  {
-    "id": "ebc-1707066",
-    "title": "Ruy Castro vence prêmio principal do Jabuti pela 2ª vez consecutiva",
-    "summary": "O livro Trincheira tropical: a Segunda Guerra Mundial no Rio , de Ruy Castro, publicado pela Companhia das Letras, venceu a categoria Livro do Ano no Prêmio Jabuti 2026, a principal do evento, pela segunda vez consecutiva.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-10/ruy-castro-vence-premio-principal-do-jabuti-pela-2a-vez-consecutiva",
-    "publishedAt": "28/10/2026 às 13:06",
-    "category": "Política",
-    "imageUrl": "https://imagens.ebc.com.br/psC-3pHaj1GtP1CeRTzepZCai9U=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/28/_int2511-10.jpg?itok=Xi6ZydYA",
-    "imageCaption": "Ruy Castro vence prêmio principal do Jabuti pela 2ª vez consecutiva",
-    "imageCredit": "Camila Boehm - Repórter da Agência Brasil",
-    "imageAlt": "Ruy Castro vence prêmio principal do Jabuti pela 2ª vez consecutiva",
-    "author": "Camila Boehm - Repórter da Agência Brasil",
-    "tags": [
-      "Cultura",
-      "Prêmio Jabuti",
-      "literatura",
-      "Ruy Castro",
-      "escritores"
-    ],
-    "headline": "Ruy Castro vence prêmio principal do Jabuti pela 2ª vez consecutiva",
-    "lead": "O livro Trincheira tropical: a Segunda Guerra Mundial no Rio , de Ruy Castro, publicado pela Companhia das Letras, venceu a categoria Livro do Ano no Prêmio Jabuti 2026, a principal do evento, pela segunda vez consecutiva.",
-    "content": [],
-    "ingestedAt": "28/10/2026 às 14:11"
-  },
-  {
-    "id": "ebc-1707062",
-    "title": "TCU aprova cálculo da alíquota de referência da CBS em 11,3%",
-    "summary": "O Tribunal de Contas da União (TCU) aprovou nesta quarta-feira (28) o cálculo da alíquota de referência da Contribuição sobre Bens e Serviços (CBS) , tributo federal criado pela reforma tributária para substituir contribuições que atualmente são cobradas sobre o consumo –.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/tcu-aprova-calculo-da-aliquota-de-referencia-da-cbs-em-113",
-    "publishedAt": "28/10/2026 às 12:38",
-    "category": "Justiça",
-    "imageUrl": "https://imagens.ebc.com.br/RJSafgWKC69l7pfXPJ-xiUBDZpE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/10/_raf0999_1.jpg?itok=0eXwWw1Q",
-    "imageCaption": "TCU aprova cálculo da alíquota de referência da CBS em 11,3%",
-    "imageCredit": "Pedro Peduzzi - repórter da Agência Brasil",
-    "imageAlt": "TCU aprova cálculo da alíquota de referência da CBS em 11,3%",
-    "author": "Pedro Peduzzi - repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "reforma tributária",
-      "TCU",
-      "CBS",
-      "Justiça"
-    ],
-    "headline": "TCU aprova cálculo da alíquota de referência da CBS em 11,3%",
-    "lead": "O Tribunal de Contas da União (TCU) aprovou nesta quarta-feira (28) o cálculo da alíquota de referência da Contribuição sobre Bens e Serviços (CBS) , tributo federal criado pela reforma tributária para substituir contribuições que atualmente são cobradas sobre o consumo –.",
-    "content": [],
-    "ingestedAt": "28/10/2026 às 13:09"
+    "ingestedAt": "28/10/2026 às 15:18"
   }
 ];
