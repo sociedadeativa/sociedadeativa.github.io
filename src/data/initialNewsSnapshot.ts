@@ -24,7 +24,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Consumo de alimentos cresce após proibição das bets no país, diz Abras",
     "lead": "O desempenho do varejo alimentar apresentou alta de 6,5% no Brasil na semana entre os dias 05 a 11 de outubro de 2026, em relação ao mesmo período no ano anterior.",
     "content": [],
-    "ingestedAt": "28/10/2026 às 15:18"
+    "ingestedAt": "28/10/2026 às 15:29"
   },
   {
     "id": "camara-1314512-comissao-aprova-incentivo-a-st",
@@ -48,7 +48,33 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão aprova incentivo a startups de inclusão, saúde pública e bioeconomia amazônica",
     "lead": "Proposta segue em análise na Câmara dos Deputados.",
     "content": [],
-    "ingestedAt": "28/10/2026 às 15:18"
+    "ingestedAt": "28/10/2026 às 15:29"
+  },
+  {
+    "id": "ebc-1707076",
+    "title": "Médicos lançam guia para evitar recusa de mamografia digital",
+    "summary": "Entidades médicas que atuam na prevenção, no diagnóstico e no tratamento do câncer de mama divulgaram esta semana orientações sobre como fazer o pedido da mamografia digital que, se não for preenchido com cautela, pode ser negado ou interpretado de forma equivocada.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/medicos-lancam-guia-para-evitar-recusa-de-mamografia-digital",
+    "publishedAt": "28/10/2026 às 14:46",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/JKmSUY5W0niXS6JdcM9WFpPUNJ4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/10/01/0d9a1826a.jpg?itok=ZtQCgE9g",
+    "imageCaption": "Médicos lançam guia para evitar recusa de mamografia digital",
+    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
+    "imageAlt": "Médicos lançam guia para evitar recusa de mamografia digital",
+    "author": "Paula Laboissière – Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "saúde",
+      "Saúde da Mulher",
+      "mamografia digital",
+      "Mamografia"
+    ],
+    "headline": "Médicos lançam guia para evitar recusa de mamografia digital",
+    "lead": "Entidades médicas que atuam na prevenção, no diagnóstico e no tratamento do câncer de mama divulgaram esta semana orientações sobre como fazer o pedido da mamografia digital que, se não for preenchido com cautela, pode ser negado ou interpretado de forma equivocada.",
+    "content": [],
+    "ingestedAt": "28/10/2026 às 15:29"
   },
   {
     "id": "ebc-1707078",
@@ -74,7 +100,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Enem: mulheres e pardos lideram inscrições; confira o painel do Inep",
     "lead": "As mulheres representam 63,98% das 5.051. 345 inscrições confirmadas no Exame Nacional do Ensino Médio (Enem) de 2026 . Em números absolutos, elas são 3.232. 013 inscritas. Já os homens correspondem a 36,02%, totalizando 1.819. 332 inscritos.",
     "content": [],
-    "ingestedAt": "28/10/2026 às 15:18"
+    "ingestedAt": "28/10/2026 às 15:29"
   },
   {
     "id": "camara-1314541-lideres-de-partidos-defendem-b",
@@ -98,7 +124,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Líderes de partidos defendem busca da governabilidade após as eleições",
     "lead": "Deputados contrários ao governo prometem oposição responsável e propositiva.",
     "content": [],
-    "ingestedAt": "28/10/2026 às 15:18"
+    "ingestedAt": "28/10/2026 às 15:29"
   },
   {
     "id": "ebc-1707074",
@@ -123,7 +149,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Anvisa suspende venda de linguiça defumada após detecção de bactéria",
     "lead": "A Agência Nacional de Vigilância Sanitária (Anvisa) suspendeu nesta quarta-feira (28) a venda da linguiça de carne suína defumada da marca KF Embutidos. Um laudo de análise microbiológica detectou a presença da bactéria Listeria monocytogenes no Lote 21/08/2026 do produto.",
     "content": [],
-    "ingestedAt": "28/10/2026 às 15:18"
+    "ingestedAt": "28/10/2026 às 15:29"
   },
   {
     "id": "camara-1314516-comissao-aprova-projeto-que-to",
@@ -147,7 +173,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão aprova projeto que torna permanente a política de combate à malária",
     "lead": "A proposta segue em análise na Câmara dos Deputados.",
     "content": [],
-    "ingestedAt": "28/10/2026 às 15:18"
+    "ingestedAt": "28/10/2026 às 15:29"
   },
   {
     "id": "ebc-1707075",
@@ -173,7 +199,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Governo libera R$ 68,6 milhões para combater incêndios e seca no Norte",
     "lead": "O Governo Federal informou nesta quarta-feira (28) que liberou R$ 68,6 milhões para ações de combate a incêndios em estados da Região Norte. Os recursos, enviados para o Amazonas, Pará e Acre, também se destinam ao combate à estiagem e à seca.",
     "content": [],
-    "ingestedAt": "28/10/2026 às 15:18"
+    "ingestedAt": "28/10/2026 às 15:29"
   },
   {
     "id": "camara-1313029-projeto-exige-campanha-informa",
@@ -198,30 +224,5 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "lead": "A proposta está em análise na Câmara dos Deputados.",
     "content": [],
     "ingestedAt": "28/10/2026 às 13:09"
-  },
-  {
-    "id": "ebc-1707073",
-    "title": "Anvisa suspende propaganda enganosa de suplementos alimentares",
-    "summary": "A Agência Nacional de Vigilância Sanitária (Anvisa) suspendeu a propaganda dos suplementos alimentares em gotas Glifit e Glicofit, fabricados pela empresa Vita Nutriom Saúde & Bem Estar Ltda. A decisão foi publicada na Resolução-RE nº4224, de 26 de outubro de 2026 .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/anvisa-suspende-propaganda-enganosa-de-suplementos-alimentares",
-    "publishedAt": "28/10/2026 às 14:01",
-    "category": "Política",
-    "imageUrl": "https://imagens.ebc.com.br/m9lPZ9kjodvEizoA0N_aGsyYSg8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/11-11-2020_sede_anvisa_0.jpg?itok=oPtK5mlM",
-    "imageCaption": "Anvisa suspende propaganda enganosa de suplementos alimentares",
-    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
-    "imageAlt": "Anvisa suspende propaganda enganosa de suplementos alimentares",
-    "author": "Paula Laboissière – Repórter da Agência Brasil",
-    "tags": [
-      "Saúde",
-      "Anvisa",
-      "suplementos alimentares",
-      "Política"
-    ],
-    "headline": "Anvisa suspende propaganda enganosa de suplementos alimentares",
-    "lead": "A Agência Nacional de Vigilância Sanitária (Anvisa) suspendeu a propaganda dos suplementos alimentares em gotas Glifit e Glicofit, fabricados pela empresa Vita Nutriom Saúde & Bem Estar Ltda. A decisão foi publicada na Resolução-RE nº4224, de 26 de outubro de 2026 .",
-    "content": [],
-    "ingestedAt": "28/10/2026 às 15:18"
   }
 ];
