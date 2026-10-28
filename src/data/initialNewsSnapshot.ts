@@ -2,6 +2,30 @@ import { NewsItem } from "../types/news";
 
 export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
   {
+    "id": "camara-1314541-lideres-de-partidos-defendem-b",
+    "title": "Líderes de partidos defendem busca da governabilidade após as eleições",
+    "summary": "Deputados contrários ao governo prometem oposição responsável e propositiva.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1314541-lideres-de-partidos-defendem-busca-da-governabilidade-apos-as-eleicoes",
+    "publishedAt": "28/10/2026 às 14:32",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261013160245431-768x473.jpg",
+    "imageCaption": "Reunião do colégio de líderes",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Reunião de Líderes.",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Eleições 2026",
+      "Brasil"
+    ],
+    "headline": "Líderes de partidos defendem busca da governabilidade após as eleições",
+    "lead": "Deputados contrários ao governo prometem oposição responsável e propositiva.",
+    "content": [],
+    "ingestedAt": "28/10/2026 às 14:44"
+  },
+  {
     "id": "camara-1314516-comissao-aprova-projeto-que-to",
     "title": "Comissão aprova projeto que torna permanente a política de combate à malária",
     "summary": "A proposta segue em análise na Câmara dos Deputados.",
@@ -23,7 +47,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão aprova projeto que torna permanente a política de combate à malária",
     "lead": "A proposta segue em análise na Câmara dos Deputados.",
     "content": [],
-    "ingestedAt": "28/10/2026 às 14:32"
+    "ingestedAt": "28/10/2026 às 14:44"
   },
   {
     "id": "camara-1313029-projeto-exige-campanha-informa",
@@ -50,6 +74,31 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "ingestedAt": "28/10/2026 às 13:09"
   },
   {
+    "id": "ebc-1707073",
+    "title": "Anvisa suspende propaganda enganosa de suplementos alimentares",
+    "summary": "A Agência Nacional de Vigilância Sanitária (Anvisa) suspendeu a propaganda dos suplementos alimentares em gotas Glifit e Glicofit, fabricados pela empresa Vita Nutriom Saúde & Bem Estar Ltda. A decisão foi publicada na Resolução-RE nº4224, de 26 de outubro de 2026 .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/anvisa-suspende-propaganda-enganosa-de-suplementos-alimentares",
+    "publishedAt": "28/10/2026 às 14:01",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/m9lPZ9kjodvEizoA0N_aGsyYSg8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/11-11-2020_sede_anvisa_0.jpg?itok=oPtK5mlM",
+    "imageCaption": "Anvisa suspende propaganda enganosa de suplementos alimentares",
+    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
+    "imageAlt": "Anvisa suspende propaganda enganosa de suplementos alimentares",
+    "author": "Paula Laboissière – Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "Anvisa",
+      "suplementos alimentares",
+      "Política"
+    ],
+    "headline": "Anvisa suspende propaganda enganosa de suplementos alimentares",
+    "lead": "A Agência Nacional de Vigilância Sanitária (Anvisa) suspendeu a propaganda dos suplementos alimentares em gotas Glifit e Glicofit, fabricados pela empresa Vita Nutriom Saúde & Bem Estar Ltda. A decisão foi publicada na Resolução-RE nº4224, de 26 de outubro de 2026 .",
+    "content": [],
+    "ingestedAt": "28/10/2026 às 14:44"
+  },
+  {
     "id": "ebc-1707072",
     "title": "Retinopatia: doença ocular afeta um em cada três diabéticos",
     "summary": "Uma em cada três pessoas com diabetes no Brasil desenvolverá, em algum momento da vida, retinopatia diabética – uma das principais causas de perda visual evitável entre adultos em idade produtiva. Os dados são do Conselho Brasileiro de Oftalmologia (CBO) .",
@@ -72,7 +121,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Retinopatia: doença ocular afeta um em cada três diabéticos",
     "lead": "Uma em cada três pessoas com diabetes no Brasil desenvolverá, em algum momento da vida, retinopatia diabética – uma das principais causas de perda visual evitável entre adultos em idade produtiva. Os dados são do Conselho Brasileiro de Oftalmologia (CBO) .",
     "content": [],
-    "ingestedAt": "28/10/2026 às 14:32"
+    "ingestedAt": "28/10/2026 às 14:44"
   },
   {
     "id": "ebc-1707069",
@@ -175,56 +224,5 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "lead": "O Tribunal de Contas da União (TCU) aprovou nesta quarta-feira (28) o cálculo da alíquota de referência da Contribuição sobre Bens e Serviços (CBS) , tributo federal criado pela reforma tributária para substituir contribuições que atualmente são cobradas sobre o consumo –.",
     "content": [],
     "ingestedAt": "28/10/2026 às 13:09"
-  },
-  {
-    "id": "camara-1314520-motta-quer-votar-sistema-distr",
-    "title": "Motta quer votar sistema distrital misto e regras para redes sociais ainda neste ano",
-    "summary": "Transição para o novo modelo eleitoral seria em 2030; grupo de trabalho vai debater a regulamentação de plataformas digitais.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1314520-motta-quer-votar-sistema-distrital-misto-e-regras-para-redes-sociais-ainda-neste-ano",
-    "publishedAt": "28/10/2026 às 12:16",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/motta1-768x460.png",
-    "imageCaption": "Motta: \"Chegou o momento de enfrentar esse tema [voto distrital]”",
-    "imageCredit": "Reprodução TV Câmara",
-    "imageAlt": "Motta concede entrevista ao lado de presidentes e lideranças dos partidos que integram o bloco formado por União, PP, PSD, Republicanos, MDB, federação PSDB-Cidadania e Podemos",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "headline": "Motta quer votar sistema distrital misto e regras para redes sociais ainda neste ano",
-    "lead": "Transição para o novo modelo eleitoral seria em 2030; grupo de trabalho vai debater a regulamentação de plataformas digitais.",
-    "content": [],
-    "ingestedAt": "28/10/2026 às 13:09"
-  },
-  {
-    "id": "despesas-governo-federal-como-consultar-gastos-publicos",
-    "title": "Despesas do governo federal: como consultar os gastos públicos",
-    "summary": "Veja como consultar despesas do governo federal, entender orçamento, empenhos e pagamentos e verificar os dados públicos em fontes oficiais.",
-    "source": "Redação Sociedade Ativa",
-    "sourceUrl": "https://sociedadeativa.github.io/",
-    "articleUrl": "https://sociedadeativa.github.io/noticias/despesas-governo-federal-como-consultar-gastos-publicos/",
-    "publishedAt": "28/10/2026 às 12:00",
-    "category": "Governo",
-    "imageUrl": "/images/Congresso%20Nacional.jpg",
-    "imageCaption": "Congresso Nacional em Brasília, onde o orçamento federal é aprovado e fiscalizado",
-    "imageCredit": "Acervo Sociedade Ativa",
-    "imageAlt": "Fachada do Congresso Nacional com as cúpulas da Câmara dos Deputados e do Senado Federal em Brasília",
-    "author": "Redação Sociedade Ativa",
-    "tags": [
-      "Governo",
-      "Dados Públicos",
-      "Transparência",
-      "Orçamento",
-      "Economia"
-    ],
-    "readTime": "5 min de leitura",
-    "headline": "Despesas do governo federal: como consultar os gastos públicos",
-    "lead": "Veja como consultar despesas do governo federal, entender orçamento, empenhos e pagamentos e verificar os dados públicos em fontes oficiais.",
-    "content": [],
-    "ingestedAt": "28/10/2026 às 12:00"
   }
 ];

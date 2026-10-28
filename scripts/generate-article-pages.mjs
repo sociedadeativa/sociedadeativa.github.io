@@ -676,6 +676,9 @@ function main() {
   // Injeta o LCP image preload dinâmico na homepage gerada (dist/index.html) com responsive srcset
   injectHomepageLcpPreload(articles, DIST_DIR, leadImageMeta);
 
+  // Sincroniza dados estruturados Schema.org da homepage (WebSite + NewsMediaOrganization com logo)
+  updateHomepageStructuredData(DIST_DIR);
+
   // Gera o sitemap.xml atualizado incluindo seções canônicas e todos os artigos
   generateSitemap(generatedArticles);
 }
@@ -1138,6 +1141,52 @@ export function injectHomepageLcpPreload(articles, distDir = DIST_DIR, leadImage
   fs.writeFileSync(indexHtmlPath, html, 'utf8');
   console.log(`Sucesso: dist/index.html atualizado com LCP responsive image preload: ${preloadHref}`);
   return preloadHref;
+}
+
+export function updateHomepageStructuredData(distDir = DIST_DIR) {
+  const indexHtmlPath = path.join(distDir, 'index.html');
+  if (!fs.existsSync(indexHtmlPath)) return;
+
+  let html = fs.readFileSync(indexHtmlPath, 'utf8');
+
+  const homepageStructuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://sociedadeativa.github.io/#website",
+        "url": "https://sociedadeativa.github.io/",
+        "name": "Sociedade Ativa",
+        "alternateName": "Sociedade Ativa — Política, Eleições e Dados do Brasil",
+        "description": "Portal de jornalismo de dados, informações públicas, política e eleições no Brasil.",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://sociedadeativa.github.io/#organization"
+        }
+      },
+      {
+        "@type": "NewsMediaOrganization",
+        "@id": "https://sociedadeativa.github.io/#organization",
+        "name": "Sociedade Ativa",
+        "url": "https://sociedadeativa.github.io/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://sociedadeativa.github.io/assets/og-share.svg",
+          "width": 1200,
+          "height": 630
+        },
+        "email": "redacao.sociedadeativa@gmail.com"
+      }
+    ]
+  };
+
+  html = html.replace(
+    /<script\s+type=["']application\/ld\+json["']>[\s\S]*?<\/script>/i,
+    `<script type="application/ld+json">\n${JSON.stringify(homepageStructuredData, null, 2)}\n    </script>`
+  );
+
+  fs.writeFileSync(indexHtmlPath, html, 'utf8');
+  console.log('Sucesso: dist/index.html dados estruturados (WebSite + NewsMediaOrganization) sincronizados.');
 }
 
 main();
