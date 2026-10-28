@@ -109,6 +109,38 @@ function escapeParagraphText(str) {
     .replace(/>/g, '&gt;');
 }
 
+function renderStaticParagraph(p) {
+  const isHeading =
+    (p.length < 90 && p.endsWith(':') && !p.includes('http')) ||
+    p.startsWith('Fontes Oficiais Consultadas') ||
+    p.startsWith('Metodologia e Limitações') ||
+    p.startsWith('Constatações e Integridade');
+
+  if (isHeading) {
+    return `<h2 style="font-size:20px;line-height:1.3;font-weight:800;color:#0f172a;margin-top:28px;margin-bottom:12px;padding-top:16px;border-top:1px solid #e2e8f0;font-family:system-ui,-apple-system,sans-serif;">${escapeParagraphText(p)}</h2>`;
+  }
+
+  const isListItem = /^(?:\d+\.|\•|\-)\s+/.test(p);
+  let escaped = escapeParagraphText(p);
+
+  escaped = escaped.replace(/(https?:\/\/[^\s<"']+)/g, (url) => {
+    let cleanUrl = url;
+    let trailing = '';
+    const match = cleanUrl.match(/[.,;)]+$/);
+    if (match) {
+      trailing = match[0];
+      cleanUrl = cleanUrl.slice(0, -trailing.length);
+    }
+    return `<a href="${cleanUrl}" target="_blank" rel="noopener noreferrer" style="color:#1d4ed8;text-decoration:underline;word-break:break-all;font-family:system-ui,-apple-system,sans-serif;">${cleanUrl}</a>${trailing}`;
+  });
+
+  if (isListItem) {
+    return `<div style="background:#f8fafc;padding:12px 16px;border-radius:10px;border:1px solid #e2e8f0;margin-bottom:10px;font-size:14px;line-height:1.6;color:#1e293b;font-family:system-ui,-apple-system,sans-serif;">${escaped}</div>`;
+  }
+
+  return `<p style="font-size:16px;line-height:1.75;color:#1e293b;margin-bottom:18px;">${escaped}</p>`;
+}
+
 function escapeJson(str) {
   if (!str) return '';
   return JSON.stringify(str).slice(1, -1);
@@ -580,7 +612,7 @@ function main() {
               <p style="font-size:16px;line-height:1.6;font-weight:600;color:#334155;margin:0;">${escapeHtml(cleanSummaryText)}</p>
             </div>
             <div style="margin-top:24px;margin-bottom:32px;">
-              ${article.content.map(p => `<p style="font-size:16px;line-height:1.75;color:#1e293b;margin-bottom:18px;">${escapeParagraphText(p)}</p>`).join('')}
+              ${article.content.map(renderStaticParagraph).join('\n')}
             </div>`
                 : `
             <div style="background:#f8fafc;padding:18px;border-radius:12px;border:1px solid #cbd5e1;margin-bottom:24px;">

@@ -291,10 +291,78 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8 shadow-xs">
           {article.content && article.content.length > 0 ? (
             /* Artigos proprietários ou com texto estruturado */
-            <div className="space-y-5 text-sm sm:text-base text-slate-800 leading-relaxed font-serif">
-              {article.content.map((paragraph, idx) => (
-                <p key={idx}>{paragraph}</p>
-              ))}
+            <div className="space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed font-serif">
+              {article.content.map((paragraph, idx) => {
+                const isHeading =
+                  (paragraph.length < 90 && paragraph.endsWith(":") && !paragraph.includes("http")) ||
+                  paragraph.startsWith("Fontes Oficiais Consultadas") ||
+                  paragraph.startsWith("Metodologia e Limitações") ||
+                  paragraph.startsWith("Constatações e Integridade");
+
+                if (isHeading) {
+                  return (
+                    <h2
+                      key={idx}
+                      className="font-heading font-black text-lg sm:text-xl text-slate-900 mt-8 mb-3 pt-4 border-t border-slate-100 flex items-center gap-2 font-sans"
+                    >
+                      <span>{paragraph}</span>
+                    </h2>
+                  );
+                }
+
+                // Parser de links para tornar URLs oficiais clicáveis
+                const renderWithLinks = (text: string) => {
+                  const urlRegex = /(https?:\/\/[^\s]+)/g;
+                  const parts = text.split(urlRegex);
+                  return parts.map((part, pIdx) => {
+                    if (part.match(/^https?:\/\//)) {
+                      let cleanUrl = part;
+                      let trailing = "";
+                      const punctMatch = cleanUrl.match(/[.,;)]+$/);
+                      if (punctMatch) {
+                        trailing = punctMatch[0];
+                        cleanUrl = cleanUrl.slice(0, -trailing.length);
+                      }
+                      return (
+                        <React.Fragment key={pIdx}>
+                          <a
+                            href={cleanUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-700 hover:text-blue-900 underline font-sans font-medium break-all inline-flex items-center gap-1 group/link"
+                          >
+                            <span>{cleanUrl}</span>
+                            <ExternalLink className="w-3.5 h-3.5 inline text-blue-500 group-hover/link:text-blue-800 shrink-0" />
+                          </a>
+                          {trailing}
+                        </React.Fragment>
+                      );
+                    }
+                    return <span key={pIdx}>{part}</span>;
+                  });
+                };
+
+                const isListItem = /^(?:\d+\.|\•|\-)\s+/.test(paragraph);
+                if (isListItem) {
+                  return (
+                    <div
+                      key={idx}
+                      className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 text-xs sm:text-sm text-slate-800 leading-relaxed font-sans flex items-start gap-2.5 my-2.5 shadow-2xs"
+                    >
+                      <span className="text-blue-700 font-bold shrink-0 mt-0.5">•</span>
+                      <div className="flex-1 leading-relaxed">
+                        {renderWithLinks(paragraph.replace(/^(?:\d+\.|\•|\-)\s+/, ""))}
+                      </div>
+                    </div>
+                  );
+                }
+
+                return (
+                  <p key={idx} className="mb-4">
+                    {renderWithLinks(paragraph)}
+                  </p>
+                );
+              })}
             </div>
           ) : (
             /* Despachos oficiais distribuídos por agências públicas parceiras */

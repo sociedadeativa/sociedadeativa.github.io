@@ -630,7 +630,8 @@ function isProtectedSocietyAtivaArticle(item) {
     srcUrl.includes('welligtonbrave.github.io') ||
     artUrl.includes('welligtonbrave.github.io') ||
     id.startsWith('eleicoes-2026-tse-apuracao') ||
-    id.startsWith('eleicoes-2026-mapa-regional')
+    id.startsWith('eleicoes-2026-mapa-regional') ||
+    id.startsWith('despesas-governo-federal')
   );
 }
 

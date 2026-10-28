@@ -194,10 +194,77 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
 
         {/* Conteúdo Completo (quando disponível) ou Transparência de Súmula */}
         {article.content && article.content.length > 0 ? (
-          <div className="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed mb-6 font-serif">
-            {article.content.map((paragraph, idx) => (
-              <p key={idx}>{paragraph}</p>
-            ))}
+          <div className="space-y-3.5 text-xs sm:text-sm text-slate-700 leading-relaxed mb-6 font-serif">
+            {article.content.map((paragraph, idx) => {
+              const isHeading =
+                (paragraph.length < 90 && paragraph.endsWith(":") && !paragraph.includes("http")) ||
+                paragraph.startsWith("Fontes Oficiais Consultadas") ||
+                paragraph.startsWith("Metodologia e Limitações") ||
+                paragraph.startsWith("Constatações e Integridade");
+
+              if (isHeading) {
+                return (
+                  <h3
+                    key={idx}
+                    className="font-heading font-black text-sm sm:text-base text-slate-900 mt-6 mb-2 pt-3 border-t border-slate-100 font-sans"
+                  >
+                    {paragraph}
+                  </h3>
+                );
+              }
+
+              const renderWithLinks = (text: string) => {
+                const urlRegex = /(https?:\/\/[^\s]+)/g;
+                const parts = text.split(urlRegex);
+                return parts.map((part, pIdx) => {
+                  if (part.match(/^https?:\/\//)) {
+                    let cleanUrl = part;
+                    let trailing = "";
+                    const punctMatch = cleanUrl.match(/[.,;)]+$/);
+                    if (punctMatch) {
+                      trailing = punctMatch[0];
+                      cleanUrl = cleanUrl.slice(0, -trailing.length);
+                    }
+                    return (
+                      <React.Fragment key={pIdx}>
+                        <a
+                          href={cleanUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-700 hover:text-blue-900 underline font-sans font-medium break-all inline-flex items-center gap-0.5 group/link"
+                        >
+                          <span>{cleanUrl}</span>
+                          <ExternalLink className="w-3 h-3 inline text-blue-500 group-hover/link:text-blue-800 shrink-0" />
+                        </a>
+                        {trailing}
+                      </React.Fragment>
+                    );
+                  }
+                  return <span key={pIdx}>{part}</span>;
+                });
+              };
+
+              const isListItem = /^(?:\d+\.|\•|\-)\s+/.test(paragraph);
+              if (isListItem) {
+                return (
+                  <div
+                    key={idx}
+                    className="p-3 rounded-lg bg-slate-50 border border-slate-200/80 text-xs text-slate-800 leading-relaxed font-sans flex items-start gap-2 my-2 shadow-2xs"
+                  >
+                    <span className="text-blue-700 font-bold shrink-0">•</span>
+                    <div className="flex-1 leading-relaxed">
+                      {renderWithLinks(paragraph.replace(/^(?:\d+\.|\•|\-)\s+/, ""))}
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <p key={idx} className="mb-3">
+                  {renderWithLinks(paragraph)}
+                </p>
+              );
+            })}
           </div>
         ) : (
           <div className="text-xs text-slate-600 bg-blue-50/60 p-4 rounded-xl border border-blue-200/80 mb-6 leading-relaxed space-y-1.5">
