@@ -113,8 +113,8 @@ for (const dataFile of requiredDataFiles) {
 
         // Validação de integridade de imagens e créditos
         if (item.imageUrl) {
-          if (!item.imageUrl.startsWith('https://')) {
-            console.error(`ERROR: Imagem não é HTTPS no artigo ${item.id}: ${item.imageUrl}`);
+          if (!item.imageUrl.startsWith('https://') && !item.imageUrl.startsWith('/images/')) {
+            console.error(`ERROR: Imagem não é HTTPS nem asset local (/images/...) no artigo ${item.id}: ${item.imageUrl}`);
             process.exit(1);
           }
           if (!item.imageCredit || !item.imageCredit.trim()) {
@@ -617,7 +617,7 @@ if (fs.existsSync('dist/noticias')) {
     // Validação de integridade de imagens e concordância entre HTML, Open Graph, Twitter e JSON-LD
     const isVerifiedImage = Boolean(
       article.imageUrl &&
-      article.imageUrl.startsWith('https://') &&
+      (article.imageUrl.startsWith('https://') || article.imageUrl.startsWith('/images/')) &&
       article.imageCredit &&
       article.imageCredit.trim()
     );

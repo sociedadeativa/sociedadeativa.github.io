@@ -1511,8 +1511,8 @@ async function main() {
 
     // Validação estrita de imagens comprovadas
     if (item.imageUrl) {
-      if (!item.imageUrl.startsWith('https://')) {
-        console.error(`[ERRO DE SEGURANÇA] Imagem não é HTTPS no artigo ${item.id}:`, item.imageUrl);
+      if (!item.imageUrl.startsWith('https://') && !item.imageUrl.startsWith('/images/')) {
+        console.error(`[ERRO DE SEGURANÇA] Imagem não é HTTPS nem asset local (/images/...) no artigo ${item.id}:`, item.imageUrl);
         process.exit(1);
       }
       if (!item.imageCredit || !item.imageCredit.trim()) {

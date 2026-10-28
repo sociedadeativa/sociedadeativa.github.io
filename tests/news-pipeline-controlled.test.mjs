@@ -522,9 +522,9 @@ async function runTests() {
     assert.ok(withImages.length > 20, "At least 20 official articles must carry verified images");
     assert.ok(withoutImages.length > 0, "Articles without photos in source must exist and have undefined imageUrl");
 
-    // Check that every article with image has verified HTTPS and credit
+    // Check that every article with image has verified HTTPS or local asset and credit
     for (const art of withImages) {
-      assert.ok(art.imageUrl.startsWith("https://"), "Image must be HTTPS for article " + art.id);
+      assert.ok(art.imageUrl.startsWith("https://") || art.imageUrl.startsWith("/images/"), "Image must be HTTPS or local asset for article " + art.id);
       assert.ok(isValidImageUrl(art.imageUrl), "Image URL must be valid for article " + art.id);
       assert.ok(art.imageCredit && art.imageCredit.trim().length > 0, "Image must have verified credit for article " + art.id);
     }

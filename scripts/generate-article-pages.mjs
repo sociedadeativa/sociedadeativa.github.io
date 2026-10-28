@@ -404,7 +404,7 @@ function main() {
     const isoModDate = hasGenuineUpdate ? parseDateToIso(article.updatedAt) : isoDate;
     const isVerifiedImage = Boolean(
       article.imageUrl &&
-      article.imageUrl.startsWith('https://') &&
+      (article.imageUrl.startsWith('https://') || article.imageUrl.startsWith('/images/')) &&
       article.imageCredit &&
       article.imageCredit.trim()
     );
