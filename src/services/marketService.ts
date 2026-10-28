@@ -146,27 +146,27 @@ export function normalizeMarketRankings(
   };
 }
 
+import { dedupeInFlightRequest } from "../utils/inFlightRequests";
+
 export interface FetchMarketOptions {
   throwOnError?: boolean;
 }
 
 /**
- * Carrega rankings de mercado com cache-busting rigoroso, verificação de integridade
- * e tratamento transparente de erros e defasagem regulatória da B3.
+ * Carrega rankings de mercado com URLs canônicas estáveis, suporte a revalidação condicional (ETag),
+ * deduplicação de requisições simultâneas em voo e tratamento transparente de erros e defasagem regulatória da B3.
  */
 export async function fetchMarketRankings(
   options: FetchMarketOptions = {}
 ): Promise<B3MarketRankings> {
   const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
   const pathname = typeof window !== "undefined" ? window.location.pathname : "";
-  // Cache buster com timestamp e nonce aleatório para invalidar caches de CDN e navegadores
-  const cacheBuster = `_t=${Date.now()}&_r=${Math.random().toString(36).substring(2, 7)}`;
 
   const candidateUrls: string[] = [];
 
   if (origin) {
     // 1. Caminho absoluto pela origem atual
-    candidateUrls.push(`${origin}/data/marketData.json?${cacheBuster}`);
+    candidateUrls.push(`${origin}/data/marketData.json`);
   }
 
   // 2. Se houver subcaminho (ex: GitHub Pages em repositório de usuário)
@@ -188,57 +188,57 @@ export async function fetchMarketRankings(
     }
     if (segments.length > 0) {
       const subpath = "/" + segments.join("/");
-      candidateUrls.push(`${origin}${subpath}/data/marketData.json?${cacheBuster}`);
+      candidateUrls.push(`${origin}${subpath}/data/marketData.json`);
     }
   }
 
   // 3. Caminhos relativos e raiz
-  candidateUrls.push(`/data/marketData.json?${cacheBuster}`);
-  candidateUrls.push(`./data/marketData.json?${cacheBuster}`);
-  candidateUrls.push(`../data/marketData.json?${cacheBuster}`);
-  candidateUrls.push(`data/marketData.json?${cacheBuster}`);
+  candidateUrls.push(`/data/marketData.json`);
+  candidateUrls.push(`./data/marketData.json`);
+  candidateUrls.push(`../data/marketData.json`);
+  candidateUrls.push(`data/marketData.json`);
 
   // 4. URL canônica em produção como salvaguarda
-  candidateUrls.push(`https://sociedadeativa.github.io/data/marketData.json?${cacheBuster}`);
+  candidateUrls.push(`https://sociedadeativa.github.io/data/marketData.json`);
 
   const uniqueUrls = Array.from(new Set(candidateUrls));
   const errors: string[] = [];
 
   for (const url of uniqueUrls) {
     try {
-      // Uso de headers simples para evitar disparo de preflight CORS (OPTIONS 405) no GitHub Pages
-      const res = await fetch(url, {
-        method: "GET",
-        headers: {
-          Accept: "application/json, text/plain, */*",
-        },
-        cache: "no-store",
+      // Requisição deduplicada em voo com suporte a ETag e validação de corpo JSON
+      const json = await dedupeInFlightRequest(url, async () => {
+        const res = await fetch(url, {
+          method: "GET",
+          headers: {
+            Accept: "application/json, text/plain, */*",
+          },
+          cache: "no-cache",
+        });
+
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status} ${res.statusText}`);
+        }
+
+        const contentType = res.headers.get("content-type") || "";
+        // Descarta páginas HTML de 404 / SPA index
+        if (contentType.includes("text/html")) {
+          throw new Error("Retornou HTML em vez de JSON");
+        }
+
+        const text = await res.text();
+        const trimmed = text.trim();
+        if (!trimmed.startsWith("{")) {
+          throw new Error("Resposta não contém JSON válido");
+        }
+
+        const parsed = JSON.parse(trimmed);
+        if (!parsed || typeof parsed !== "object" || !parsed.ibov) {
+          throw new Error("JSON sem nó 'ibov' requerido");
+        }
+
+        return parsed;
       });
-
-      if (!res.ok) {
-        errors.push(`${url} (HTTP ${res.status} ${res.statusText})`);
-        continue;
-      }
-
-      const contentType = res.headers.get("content-type") || "";
-      // Descarta páginas HTML de 404 / SPA index
-      if (contentType.includes("text/html")) {
-        errors.push(`${url} (Retornou HTML em vez de JSON)`);
-        continue;
-      }
-
-      const text = await res.text();
-      const trimmed = text.trim();
-      if (!trimmed.startsWith("{")) {
-        errors.push(`${url} (Resposta não contém JSON válido)`);
-        continue;
-      }
-
-      const json = JSON.parse(trimmed);
-      if (!json || typeof json !== "object" || !json.ibov) {
-        errors.push(`${url} (JSON sem nó 'ibov' requerido)`);
-        continue;
-      }
 
       // Sincronização real confirmada: grava o carimbo no horário oficial de Brasília
       const clientSyncTimestamp = new Date().toLocaleString("pt-BR", {

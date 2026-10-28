@@ -6,6 +6,7 @@ import {
 } from "../types/economy";
 import { OFFICIAL_ECONOMIC_INDICATORS } from "../data/economyData";
 import { getB3MarketStatus } from "../utils/marketHours";
+import { dedupeInFlightRequest } from "../utils/inFlightRequests";
 
 /**
  * Normaliza e valida um indicador econômico, garantindo integridade de tipos
@@ -170,32 +171,36 @@ export function normalizeEconomicIndicator(raw: any): EconomicIndicator {
 }
 
 /**
- * Carrega a lista de indicadores econômicos com fallback resiliente.
+ * Carrega a lista de indicadores econômicos com URLs canônicas estáveis,
+ * suporte a revalidação condicional (ETag), deduplicação de requisições concorrentes e fallback resiliente.
  */
 export async function fetchEconomicIndicators(): Promise<EconomicIndicator[]> {
   const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
-  const cacheBuster = `_t=${Date.now()}`;
   const candidateUrls = [
-    ...(origin ? [`${origin}/data/economyData.json?${cacheBuster}`, `${origin}/data/economicData.json?${cacheBuster}`] : []),
-    `/data/economyData.json?${cacheBuster}`,
-    `../data/economyData.json?${cacheBuster}`,
-    `./data/economyData.json?${cacheBuster}`,
-    `data/economyData.json?${cacheBuster}`,
-    `/data/economicData.json?${cacheBuster}`,
-    `../data/economicData.json?${cacheBuster}`,
-    `./data/economicData.json?${cacheBuster}`,
-    `data/economicData.json?${cacheBuster}`,
-    `https://sociedadeativa.github.io/data/economyData.json?${cacheBuster}`,
+    ...(origin ? [`${origin}/data/economyData.json`, `${origin}/data/economicData.json`] : []),
+    `/data/economyData.json`,
+    `../data/economyData.json`,
+    `./data/economyData.json`,
+    `data/economyData.json`,
+    `/data/economicData.json`,
+    `../data/economicData.json`,
+    `./data/economicData.json`,
+    `data/economicData.json`,
+    `https://sociedadeativa.github.io/data/economyData.json`,
   ];
 
   for (const url of candidateUrls) {
     try {
-      const res = await fetch(url, {
-        headers: { Accept: "application/json" },
-        cache: "no-cache",
-      });
+      const indicators = await dedupeInFlightRequest(url, async () => {
+        const res = await fetch(url, {
+          headers: { Accept: "application/json" },
+          cache: "no-cache",
+        });
 
-      if (res.ok) {
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
+
         const contentType = res.headers.get("content-type") || "";
         if (contentType.includes("application/json") || contentType.includes("text/json")) {
           const json = await res.json();
@@ -211,6 +216,11 @@ export async function fetchEconomicIndicators(): Promise<EconomicIndicator[]> {
             }
           }
         }
+        throw new Error("Formato de resposta econômico inválido");
+      });
+
+      if (indicators && indicators.length > 0) {
+        return indicators;
       }
     } catch {
       // Tenta próximo caminho

@@ -1,5 +1,5 @@
 import { NewsItem, NewsCategory, NEWS_CATEGORIES, NewsFilterOptions } from "../types/news";
-import { OFFICIAL_NEWS_ARTICLES } from "../data/newsData";
+import { INITIAL_NEWS_SNAPSHOT } from "../data/initialNewsSnapshot";
 
 /**
  * Mapeia categorias legadas ou genéricas para as 8 categorias oficiais do Sociedade Ativa:
@@ -319,21 +319,20 @@ export function sortNewsItems(items: NewsItem[]): NewsItem[] {
 }
 
 /**
- * Busca de notícias com fallback automático para os dados embutidos.
- * Aplica cache-busting para garantir que novas versões de public/data/newsData.json
- * sejam baixadas imediatamente pelo navegador sem ficar presas no cache HTTP do CDN.
+ * Busca de notícias com fallback automático para o snapshot compacto embutido.
+ * Utiliza URLs canônicas estáveis e cache: "no-cache" para permitir revalidação HTTP condicional (ETag / If-None-Match)
+ * sem inflar URLs ou quebrar caches de CDN.
  */
 export async function fetchNewsItems(): Promise<NewsItem[]> {
   const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
-  const cacheBuster = `_t=${Date.now()}`;
   const candidateUrls = [
-    ...(origin ? [`${origin}/data/newsData.json?${cacheBuster}`] : []),
-    `/data/newsData.json?${cacheBuster}`,
-    `../../data/newsData.json?${cacheBuster}`,
-    `../data/newsData.json?${cacheBuster}`,
-    `./data/newsData.json?${cacheBuster}`,
-    `data/newsData.json?${cacheBuster}`,
-    `https://sociedadeativa.github.io/data/newsData.json?${cacheBuster}`,
+    ...(origin ? [`${origin}/data/newsData.json`] : []),
+    `/data/newsData.json`,
+    `../../data/newsData.json`,
+    `../data/newsData.json`,
+    `./data/newsData.json`,
+    `data/newsData.json`,
+    `https://sociedadeativa.github.io/data/newsData.json`,
   ];
 
   for (const url of candidateUrls) {
@@ -366,7 +365,7 @@ export async function fetchNewsItems(): Promise<NewsItem[]> {
     }
   }
 
-  // Fallback garantido para dados estáticos compilados
-  const fallback = OFFICIAL_NEWS_ARTICLES.map((item, idx) => normalizeNewsItem(item, idx));
+  // Fallback garantido para o snapshot compilado ultraleve (9 principais notícias da capa)
+  const fallback = INITIAL_NEWS_SNAPSHOT.map((item, idx) => normalizeNewsItem(item, idx));
   return sortNewsItems(deduplicateNewsItems(fallback));
 }

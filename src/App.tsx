@@ -1,6 +1,6 @@
 import React, { useState, Suspense, lazy } from "react";
 import { DATASET_2026, ElectionDataSet } from "./data/electionData";
-import { OFFICIAL_NEWS_ARTICLES } from "./data/newsData";
+import { INITIAL_NEWS_SNAPSHOT } from "./data/initialNewsSnapshot";
 import { useNews } from "./hooks/useNews";
 import { useEconomy } from "./hooks/useEconomy";
 import { usePortalRoute } from "./hooks/usePortalRoute";
@@ -63,7 +63,7 @@ export default function App() {
   const { currentRoute, articleId, goTo, goToArticle } = usePortalRoute();
 
   // Hooks de Dados (Notícias e Indicadores Econômicos Oficiais)
-  const { articles, loading: isNewsLoading, error: newsError, refreshNews } = useNews({ initialArticles: OFFICIAL_NEWS_ARTICLES });
+  const { articles, loading: isNewsLoading, error: newsError, refreshNews } = useNews({ initialArticles: INITIAL_NEWS_SNAPSHOT });
   const { indicators } = useEconomy();
 
   // Atualização customizada via JSON do TSE
@@ -193,7 +193,7 @@ export default function App() {
             <ArticlePage
               article={
                 articles.find((a) => a.id === articleId) ||
-                OFFICIAL_NEWS_ARTICLES.find((a) => a.id === articleId) || {
+                INITIAL_NEWS_SNAPSHOT.find((a) => a.id === articleId) || {
                   id: articleId || "noticia",
                   title: "Notícia Oficial",
                   summary: "Acompanhe as apurações e dados oficiais no portal Sociedade Ativa.",

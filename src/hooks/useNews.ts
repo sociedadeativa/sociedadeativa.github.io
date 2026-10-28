@@ -13,11 +13,11 @@ interface UseNewsOptions {
 }
 
 export function useNews(options?: UseNewsOptions) {
+  // Inicialização direta com os artigos iniciais (snapshot já ordenado e saneado),
+  // eliminando normalizações, ordenações e deduplicações redundantes durante a montagem inicial.
   const [articles, setArticles] = useState<NewsItem[]>(() => {
     if (options?.initialArticles && options.initialArticles.length > 0) {
-      return sortNewsItems(
-        deduplicateNewsItems(options.initialArticles.map((a, idx) => normalizeNewsItem(a, idx)))
-      );
+      return options.initialArticles;
     }
     return [];
   });
@@ -28,21 +28,18 @@ export function useNews(options?: UseNewsOptions) {
   const [selectedSource, setSelectedSource] = useState<string>("Todas");
   const [activeArticle, setActiveArticle] = useState<NewsItem | null>(null);
 
-  // Sincroniza sempre que a prop initialArticles mudar (ex: após o fetch do App.tsx)
+  // Sincroniza caso a prop initialArticles seja atualizada externamente
   useEffect(() => {
     if (options?.initialArticles && options.initialArticles.length > 0) {
-      const incoming = sortNewsItems(
-        deduplicateNewsItems(options.initialArticles.map((a, idx) => normalizeNewsItem(a, idx)))
-      );
       setArticles((prev) => {
         if (
-          prev.length === incoming.length &&
-          prev[0]?.id === incoming[0]?.id &&
-          prev[0]?.publishedAt === incoming[0]?.publishedAt
+          prev.length === options.initialArticles!.length &&
+          prev[0]?.id === options.initialArticles![0]?.id &&
+          prev[0]?.publishedAt === options.initialArticles![0]?.publishedAt
         ) {
           return prev;
         }
-        return incoming;
+        return options.initialArticles!;
       });
     }
   }, [options?.initialArticles]);

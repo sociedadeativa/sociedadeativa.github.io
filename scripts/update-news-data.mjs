@@ -1531,6 +1531,32 @@ async function main() {
   const tsContent = `import { NewsItem, NewsCategory } from "../types/news";\n\nexport type { NewsItem, NewsCategory };\nexport type NewsArticle = NewsItem;\n\nexport const OFFICIAL_NEWS_ARTICLES: NewsItem[] = ${JSON.stringify(finalDataset, null, 2)};\n`;
   fs.writeFileSync(TS_NEWS_PATH, tsContent, 'utf8');
 
+  // Sincroniza também o snapshot compacto inicial (9 principais notícias da capa sem corpo) para carregamento otimizado
+  const SNAPSHOT_PATH = path.join(rootDir, 'src', 'data', 'initialNewsSnapshot.ts');
+  const top9Snapshot = finalDataset.slice(0, 9).map(item => ({
+    id: item.id,
+    title: item.title,
+    summary: item.summary,
+    source: item.source,
+    sourceUrl: item.sourceUrl,
+    articleUrl: item.articleUrl,
+    publishedAt: item.publishedAt,
+    category: item.category,
+    imageUrl: item.imageUrl,
+    imageCaption: item.imageCaption,
+    imageCredit: item.imageCredit,
+    imageAlt: item.imageAlt,
+    author: item.author,
+    tags: item.tags,
+    readTime: item.readTime,
+    headline: item.title,
+    lead: item.summary,
+    content: [],
+    ingestedAt: item.ingestedAt,
+  }));
+  const snapshotContent = `import { NewsItem } from "../types/news";\n\nexport const INITIAL_NEWS_SNAPSHOT: NewsItem[] = ${JSON.stringify(top9Snapshot, null, 2)};\n`;
+  fs.writeFileSync(SNAPSHOT_PATH, snapshotContent, 'utf8');
+
   // 9. Relatório de Execução Consolidado
   const categoryCount = {};
   for (const item of finalDataset) {

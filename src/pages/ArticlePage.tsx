@@ -4,7 +4,7 @@ import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { getArticleUrl, navigateToArticle } from "../utils/router";
 import { PortalLink } from "../components/PortalLink";
 import { AffiliateSection } from "../components/AffiliateSection";
-import { isValidImageUrl } from "../services/newsService";
+import { isValidImageUrl, fetchNewsItems } from "../services/newsService";
 import {
   Calendar,
   Clock,
@@ -42,17 +42,34 @@ const CATEGORY_STYLES: Record<NewsCategory, { kicker: string; bg: string; border
 };
 
 export const ArticlePage: React.FC<ArticlePageProps> = ({
-  article,
+  article: initialArticle,
   allArticles,
   onNavigateBack,
   onSelectArticle,
 }) => {
+  const [article, setArticle] = useState<NewsItem>(initialArticle);
   const [copied, setCopied] = useState(false);
   const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
+    setArticle(initialArticle);
     setImageError(false);
-  }, [article?.id, article?.imageUrl]);
+
+    // Carrega o conteúdo integral sob demanda caso o artigo seja do snapshot compacto sem corpo de texto
+    if (!initialArticle.content || initialArticle.content.length === 0) {
+      let active = true;
+      fetchNewsItems().then((items) => {
+        if (!active) return;
+        const found = items.find((a) => a.id === initialArticle.id);
+        if (found && found.content && found.content.length > 0) {
+          setArticle(found);
+        }
+      }).catch(() => {});
+      return () => {
+        active = false;
+      };
+    }
+  }, [initialArticle.id, initialArticle.content]);
 
   const catStyle = CATEGORY_STYLES[article.category] || CATEGORY_STYLES["Política"];
   const isSociedadeAtiva =
