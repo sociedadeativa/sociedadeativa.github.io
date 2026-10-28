@@ -9,6 +9,11 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/camara-1313025-projeto-cria-regras-para-prote/
+https://sociedadeativa.github.io/noticias/camara-1312625-projeto-preve-integracao-entre/
+https://sociedadeativa.github.io/noticias/ebc-1707047/
+https://sociedadeativa.github.io/noticias/ebc-1707046/
+https://sociedadeativa.github.io/noticias/ebc-1707042/
 https://sociedadeativa.github.io/noticias/ebc-1707040/
 https://sociedadeativa.github.io/noticias/camara-1314437-camara-pode-votar-hoje-projeto/
 https://sociedadeativa.github.io/noticias/ebc-1707024/
@@ -22,8 +27,8 @@ https://sociedadeativa.github.io/noticias/ebc-1707016/
 https://sociedadeativa.github.io/noticias/ebc-1707014/
 https://sociedadeativa.github.io/noticias/ebc-1707013/
 https://sociedadeativa.github.io/noticias/camara-1314377-camara-aprova-consultas-no-sus/
-https://sociedadeativa.github.io/noticias/ebc-1707012/
 https://sociedadeativa.github.io/noticias/camara-1314372-camara-aprova-mp-que-amplia-al/
+https://sociedadeativa.github.io/noticias/ebc-1707012/
 https://sociedadeativa.github.io/noticias/ebc-1707011/
 https://sociedadeativa.github.io/noticias/camara-1314366-camara-aprova-apoio-financeiro/
 https://sociedadeativa.github.io/noticias/ebc-1707008/
@@ -51,11 +56,6 @@ https://sociedadeativa.github.io/noticias/camara-1313498-projeto-restringe-parti
 https://sociedadeativa.github.io/noticias/ebc-1706955/
 https://sociedadeativa.github.io/noticias/camara-1310596-projeto-aumenta-pena-para-adul/
 https://sociedadeativa.github.io/noticias/camara-1313021-projeto-preve-gps-obrigatorio-/
-https://sociedadeativa.github.io/noticias/ebc-1706948/
-https://sociedadeativa.github.io/noticias/ebc-1706942/
-https://sociedadeativa.github.io/noticias/ebc-1706939/
-https://sociedadeativa.github.io/noticias/ebc-1706937/
-https://sociedadeativa.github.io/noticias/ebc-1706935/
 https://sociedadeativa.github.io/noticias/ibge-998877/
 https://sociedadeativa.github.io/noticias/ibge-48339/
 https://sociedadeativa.github.io/noticias/ibge-48336/
