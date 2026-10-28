@@ -5,6 +5,146 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1707040",
+    "title": "Governo libera R$ 5,2 bilhões para reforçar assistência social e saúde",
+    "summary": "O Ministério do Planejamento e Orçamento autorizou nesta quarta-feira (27) a liberação de crédito suplementar de R$ 5,166 bilhões nos orçamentos fiscal e da Seguridade Social para reforçar despesas de diversos órgãos do Executivo.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-libera-r-52-bilhoes-para-reforcar-assistencia-social-e-saude",
+    "publishedAt": "28/10/2026 às 09:50",
+    "category": "Economia",
+    "ingestedAt": "28/10/2026 às 10:01",
+    "imageUrl": "https://imagens.ebc.com.br/h-kvOOv9RIdbfi2nNT3l3vyfVro=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/04/15/raf08851.jpg?itok=WCHBFiC1",
+    "imageCaption": "Governo libera R$ 5,2 bilhões para reforçar assistência social e saúde",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Governo libera R$ 5,2 bilhões para reforçar assistência social e saúde",
+    "author": "Agência Brasil",
+    "tags": [
+      "Economia",
+      "BPC",
+      "SUS",
+      "medicamentos",
+      "crédito suplementar"
+    ],
+    "content": [
+      "O Ministério do Planejamento e Orçamento autorizou nesta quarta-feira (27) a liberação de crédito suplementar de R$ 5,166 bilhões nos orçamentos fiscal e da Seguridade Social para reforçar despesas de diversos órgãos do Executivo.",
+      "De acordo com a Portaria nº 485/2026 , os recursos serão remanejados por meio da anulação de dotações orçamentárias já existentes.",
+      "A maior parcela do crédito, de R$ 4,726 bilhões, será destinada ao Fundo Nacional de Assistência Social para o pagamento do Benefício de Prestação Continuada (BPC) à pessoa com deficiência e da Renda Mensal Vitalícia (RMV) por invalidez. O valor representa cerca de 90% do montante total autorizado.",
+      "Os maiores destinatários do crédito suplementar são:",
+      "O valor destinado ao Fundo Nacional de Saúde serão usados na assistência farmacêutica do Sistema Único de Saúde (SUS). Os recursos servirão tanto para aquisição e distribuição de medicamentos da atenção básica quanto para o fornecimento de medicamentos de componente especializado em diversos estados.",
+      "Entre as unidades da Federação que receberão os maiores reforços estão:",
+      "Segundo o texto, a abertura do crédito suplementar será viabilizada por meio da anulação de dotações de diversos órgãos e programas federais.",
+      "Entre as principais fontes dos recursos estão valores destinados a subvenções econômicas para operações agropecuárias, transferências do setor energético, despesas de pessoal de diferentes órgãos federais e programas da área de saúde.",
+      "Também foram canceladas dotações relacionadas a aposentadorias e pensões civis da União em universidades federais, institutos federais de educação e hospitais universitários, além de recursos originalmente destinados a benefícios previdenciários, assistência social, defesa nacional e outras ações governamentais."
+    ]
+  },
+  {
+    "id": "camara-1314437-camara-pode-votar-hoje-projeto",
+    "title": "Câmara pode votar hoje projetos sobre proteção às mulheres, segurança em presídios e clima",
+    "summary": "Sessão do Plenário está marcada para as 13h55.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1314437-camara-pode-votar-hoje-projetos-sobre-protecao-as-mulheres-seguranca-em-presidios-e-clima",
+    "publishedAt": "28/10/2026 às 09:29",
+    "category": "Congresso",
+    "ingestedAt": "28/10/2026 às 10:01",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20230213094748801-1-768x512.jpg",
+    "imageCaption": "Plenário da Câmara dos Deputados",
+    "imageCredit": "Depositphotos",
+    "imageAlt": "Congresso Nacional - Brasília - Câmara dos Deputados - Plenário",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Plenário da Câmara dos Deputados",
+      "O Plenário da Câmara dos Deputados reúne-se nesta quarta-feira (28) para analisar propostas sobre proteção às mulheres, segurança em presídios e informações climáticas. A sessão está marcada para as 13h55.",
+      "Confira a íntegra da pauta",
+      "Entre os itens que podem ser votados está o Projeto de Lei 68/25 , da deputada Daiana Santos (PCdoB-RS), que cria medidas específicas de apoio a mulheres que ocupem espaços de poder e sofram violência política de gênero. A relatora é a deputada Natália Bonavides (PT-RN).",
+      "Também nessa temática, está o Projeto de Decreto Legislativo 274/26, do Poder Executivo, que aprova acordo do Mercosul e de Estados associados sobre o reconhecimento mútuo de medidas de proteção às mulheres em situações de violência de gênero. O texto tem a deputada Erika Hilton (Psol-SP) como relatora.",
+      "A pedido do deputado Isnaldo Bulhões Jr. (MDB-AL), pode ser votada a urgência para o Projeto de Lei 5542/26. O texto, do deputado Yury Bruno (MDB-CE), altera a Lei Maria da Penha para estabelecer garantias mínimas à execução da monitoração eletrônica aplicada como medida protetiva de urgência.",
+      "O Plenário também pode votar o Projeto de Lei 5902/23 , do deputado Kim Kataguiri (Missão-SP), que altera o Código Penal para criminalizar o uso de drones no espaço aéreo dos presídios. O relator é o deputado Nikolas Ferreira (PL-MG).",
+      "A pauta inclui ainda o Projeto de Lei 4553/25, da deputada Tabata Amaral (PSB-SP) e outros parlamentares , que cria o Portal Nacional de Informações Estratégicas Socioambientais, Climáticas e Territoriais, denominado Infoclima-Terra-Brasil. A proposta está sob a relatoria da deputada Ana Paula Lima (PT-SC)."
+    ]
+  },
+  {
+    "id": "ebc-1707024",
+    "title": "Chuvas continuam favorecendo região do Matopiba no Nordeste",
+    "summary": "Nesta quarta-feira (28), chove em uma extensa área do Brasil que alcança desde o oeste e sul do Amazonas passando pelo Acre, Rondônia e centro-sul do Pará, também pela região do Maranhão, Tocantins, Piauí e Bahia, chamada de Matopiba, pelo Centro-Oeste do país, até parte.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/chuvas-continuam-favorecendo-regiao-do-matopiba-no-nordeste",
+    "publishedAt": "28/10/2026 às 09:13",
+    "category": "Política",
+    "ingestedAt": "28/10/2026 às 10:01",
+    "imageUrl": "https://imagens.ebc.com.br/DDiG0afHtV4H9k9ihWI80NX4XwM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/06-10-2020_inmet-5.jpg?itok=3EAQM2-t",
+    "imageCaption": "Chuvas continuam favorecendo região do Matopiba no Nordeste",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Chuvas continuam favorecendo região do Matopiba no Nordeste",
+    "author": "Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "meteorologia",
+      "Inmet",
+      "Previsão do Tempo",
+      "Política"
+    ],
+    "content": [
+      "Nesta quarta-feira (28), chove em uma extensa área do Brasil que alcança desde o oeste e sul do Amazonas passando pelo Acre, Rondônia e centro-sul do Pará, também pela região do Maranhão, Tocantins, Piauí e Bahia, chamada de Matopiba, pelo Centro-Oeste do país, até parte do Sudeste.",
+      "O Instituto Nacional de Meteorologia mantém um aviso amarelo de perigo potencial para tempestades em todas essas regiões até o fim do dia.",
+      "No Nordeste do país, chove com trovoadas no centro e sul do Maranhão, em grande parte do Piauí e no noroeste e oeste da Bahia. Nas demais áreas do Maranhão e do Piauí, além do Recôncavo Baiano chove com intensidade, de forma isolada.",
+      "Já no setor oeste do Ceará e de Pernambuco e na região central da Bahia a possibilidade de chuva é menor, mas existe.",
+      "Os termômetros variam nas capitais entre a temperatura mínima de 22 graus Celsius (°C) e a máxima de 32 °C em Recife.",
+      "Na Região Norte, pancadas de chuva e trovoadas isoladas alcançam o leste do Acre, centro e sul do Amazonas, sul do Pará, Tocantins e Rondônia. Também chove de forma isolada nas demais áreas do Amazonas, no sudoeste de Roraima, no centro e oeste do Acre e no noroeste e centro do Pará.",
+      "Entre as capitais a temperatura varia da mínima de 20 °C em Rio Branco até a máxima de 38 °C em Boa Vista.",
+      "No Centro-Oeste brasileiro chove com trovoadas em praticamente toda a região. No extremo sul de Mato Grosso do Sul e na divisa com o Paraná as chuvas terão menos intensidade.",
+      "A temperatura mínima nas capitais será de 18 °C em Brasília e a máxima será de 30 °C.",
+      "Na Região Sudeste, as chuvas se concentram principalmente no oeste de Minas Gerais, Triângulo Mineiro e nas regiões central, oeste e norte de São Paulo. Também há previsão de chuvas isoladas no sul de Minas Gerais e na divisa entre São Paulo e Rio de Janeiro.",
+      "Nas capitais a temperatura mínima registrada em São Paulo é de 16 °C. A máxima será em Belo Horizonte, onde os termômetros chegam a 28 °C.",
+      "No Sul do país, o sol aparece entre muitas nuvens, com possibilidade de chuvas isoladas à tarde no norte, oeste, sudoeste e centro do Paraná, no centro, oeste e litoral sul de Santa Catarina e no nordeste do Rio Grande do Sul.",
+      "Entre as capitais, a temperatura mínima será de 12 °C em Curitiba e a máxima de 23 °C em Porto Alegre."
+    ]
+  },
+  {
+    "id": "ebc-1707023",
+    "title": "STF nega ter ordenado buscas em endereços de Flávio Bolsonaro",
+    "summary": "O Supremo Tribunal Federal (STF) divulgou nesta quarta-feira (28) nota em que nega a existência de operação de busca e apreensão da Polícia Federal (PF) tendo como alvo endereços ligados ao senador Flávio Bolsonaro (PL-RJ), recém-derrotado na eleição para a Presidência.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/stf-nega-ter-ordenado-buscas-em-enderecos-de-flavio-bolsonaro",
+    "publishedAt": "28/10/2026 às 09:08",
+    "category": "Eleições",
+    "ingestedAt": "28/10/2026 às 10:01",
+    "imageUrl": "https://imagens.ebc.com.br/XkwaS4gZP6R4zuuhNB2WYiLMzbI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/12/0d7a1102.jpg.jpg?itok=OrfezRuj",
+    "imageCaption": "STF nega ter ordenado buscas em endereços de Flávio Bolsonaro",
+    "imageCredit": "Felipe Pontes – repórter da Agência Brasil",
+    "imageAlt": "STF nega ter ordenado buscas em endereços de Flávio Bolsonaro",
+    "author": "Felipe Pontes – repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "Flávio Bolsonaro",
+      "Fuga",
+      "stf",
+      "Polícia Federal"
+    ],
+    "content": [
+      "O Supremo Tribunal Federal (STF) divulgou nesta quarta-feira (28) nota em que nega a existência de operação de busca e apreensão da Polícia Federal (PF) tendo como alvo endereços ligados ao senador Flávio Bolsonaro (PL-RJ), recém-derrotado na eleição para a Presidência da República.",
+      "A manifestação do STF foi divulgada após surgirem na imprensa, nesta quarta, notícias de que a PF estaria realizando uma operação na mansão de Flávio no Lago Sul, bairro de alto padrão em Brasília.",
+      "Dois dias após perder as eleições para o presidente Luiz Inácio Lula da Silva, que conseguiu se reeleger com uma margem de mais de 4,4 milhões de votos no segundo turno, Flávio Bolsonaro fugiu do Brasil por via terrestre e embarcou em um jatinho particular com destino aos Estados Unidos.",
+      "A fuga ocorreu depois de o ministro Alexandre de Moraes ter proibido o senador de deixar o país e determinado a apreensão dos passaportes de Flávio. A decisão foi tomada após a PF ter informado a chance concreta de fuga do parlamentar do país, logo após a apuração do resultado da eleição.",
+      "Na segunda (27), dia seguinte ao pleito, Flávio foi abordado por agentes da PF e intimado a entregar seus passaportes (o regular e o diplomático), ao sair da residência de seu pai, o ex-presidente Jair Bolsonaro, que cumpre pena em regime domiciliar por tentativa de golpe de Estado.",
+      "A abordagem foi relatada pelo próprio parlamentar em vídeo publicado nas redes sociais, no qual ele afirmou que cumpriria a decisão judicial e que nunca pensou em deixar o país . Ele disse que enfrentaria as acusações a que responde no STF.",
+      "Na terça (27), porém, Flávio fugiu pela fronteira com a Argentina, violando a proibição de deixar o país.",
+      "A decisão de apreensão do passaporte de Flávio foi tomada por Moraes no âmbito de um inquérito relatado pelo ministro em que o parlamentar é investigado por lavagem de dinheiro e evasão de divisas, junto com o advogado e amigo próximo Willer Tomaz, que também deixou o país rumo aos EUA, ainda antes da eleição.",
+      "Mesmo com a fuga, os inquéritos aos quais Flávio responde no Supremo continuam a tramitar. Além da investigação relatada por Moraes, o parlamentar também é alvo de um inquérito no caso do Banco Master, sob relatoria do ministro André Mendonça.",
+      "Neste caso, ele é investigado por ter pedido ao ex-banqueiro Daniel Vorcaro, antigo dono do Master, o equivalente a R$ 134 milhões, supostamente para financiar a produção do filme Dark Horse , cinebiografia de seu pai.",
+      "A solicitação da quantia foi identificada pela PF em mensagens extraídas do celular apreendido de Vorcaro. O áudio com o pedido de dinheiro foi revelado pelo site The Intercept Brasil .",
+      "Flávio Bolsonaro reconheceu a autoria do áudio e das mensagens trocadas com Vorcaro, mas nega irregularidades no pedido de financiamento, afirmando ter se tratado de uma captação de recursos privados, sem nenhuma ilegalidade."
+    ]
+  },
+  {
     "id": "ebc-1799001",
     "title": "Brasil conquista título no circuito mundial de vôlei de praia",
     "summary": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
@@ -290,40 +430,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
-    "id": "camara-1314372-camara-aprova-mp-que-amplia-al",
-    "title": "Câmara aprova MP que amplia alcance de indenização para servidores em áreas estratégicas de fronteira",
-    "summary": "A medida provisória aumenta o número de carreiras com direito à indenização; texto vai ao Senado.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1314372-camara-aprova-mp-que-amplia-alcance-de-indenizacao-para-servidores-em-areas-estrategicas-de-fronteira",
-    "publishedAt": "27/10/2026 às 21:53",
-    "category": "Congresso",
-    "ingestedAt": "28/10/2026 às 09:12",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261027203916589-768x473.jpg",
-    "imageCaption": "Sessão do Plenário desta terça-feira",
-    "imageCredit": "Bruno Spada/Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Presidente da Câmara dos Deputados, Hugo Motta (REPUBLICANOS - PB)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Bruno Spada/Câmara dos Deputados",
-      "Sessão do Plenário desta terça-feira",
-      "A Câmara dos Deputados aprovou a Medida Provisória 1375/26, que amplia o número de carreiras com direito à indenização paga a servidores que trabalham em localidades estratégicas de fronteira. A proposta, que tem prazo de validade até sexta-feira (30), ainda precisa ser votada no Senado.",
-      "A indenização é destinada a servidores que atuam na prevenção, no controle, na fiscalização e no combate a crimes transfronteiriços. O benefício continuará sendo de R$ 91, valor pago por dia de efetivo trabalho nessas localidades. O texto também valida pagamentos retroativos para certas categorias.",
-      "Os deputados acrescentaram na votação em Plenário desta noite, por meio de projeto de lei de conversão , outras carreiras para receber a indenização além das previstas inicialmente pela MP.",
-      "Segundo o texto aprovado, passam a ter direito à indenização:",
-      "A medida também permite que servidores alcançados pelas emendas constitucionais 79 e 98 exerçam o direito de opção para integrar quadros em extinção da administração pública federal, conforme regras previstas na Lei 15.367/26 .",
-      "A mudança alcança servidores dos antigos territórios federais do Acre, do Amapá, de Roraima e de Rondônia (que hoje são estados) e outros grupos definidos na legislação.",
-      "A medida provisória transforma 254 cargos vagos de agente administrativo do Ministério da Fazenda em 50 cargos vagos de inspetor federal do mercado de capitais, destinados à Comissão de Valores Mobiliários (CVM).",
-      "O governo afirma que a transformação não gera despesas, porque os novos cargos serão compensados financeiramente pelos cargos extintos.",
-      "Saiba mais sobre a tramitação de medidas provisórias"
-    ]
-  },
-  {
     "id": "ebc-1707012",
     "title": "Mega-Sena acumula novamente e prêmio vai a R$ 320 milhões",
     "summary": "O Concurso 3.076 da Mega-Sena, sorteado nesta terça-feira (27), não teve ganhador. O prêmio acumulou novamente e está estimado em R$ 320 milhões para a nova rodada. Os números sorteados são: 06 - 30 - 32 - 38 - 49 - 57.",
@@ -355,6 +461,40 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "As regras para aposta e prêmios não mudam. Os interessados devem apostar até as 20h e os sorteios serão realizados às 21h no horário de Brasília. A aposta simples, de seis números, custa R$ 6.",
       "As apostas na Mega-Sena podem ser feitas nas casas lotéricas de todo o país, no site e no aplicativo Loterias CAIXA e no Internet Banking.",
       "Após a semana especial, a Mega-Sena retomará seu calendário regular de sorteios e abrirá as vendas da Mega da Virada 2026."
+    ]
+  },
+  {
+    "id": "camara-1314372-camara-aprova-mp-que-amplia-al",
+    "title": "Câmara aprova MP que amplia alcance de indenização para servidores em áreas estratégicas de fronteira",
+    "summary": "A medida provisória aumenta o número de carreiras com direito à indenização; texto vai ao Senado.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1314372-camara-aprova-mp-que-amplia-alcance-de-indenizacao-para-servidores-em-areas-estrategicas-de-fronteira",
+    "publishedAt": "27/10/2026 às 21:53",
+    "category": "Congresso",
+    "ingestedAt": "28/10/2026 às 09:12",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261027203916589-768x473.jpg",
+    "imageCaption": "Sessão do Plenário desta terça-feira",
+    "imageCredit": "Bruno Spada/Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Presidente da Câmara dos Deputados, Hugo Motta (REPUBLICANOS - PB)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Bruno Spada/Câmara dos Deputados",
+      "Sessão do Plenário desta terça-feira",
+      "A Câmara dos Deputados aprovou a Medida Provisória 1375/26, que amplia o número de carreiras com direito à indenização paga a servidores que trabalham em localidades estratégicas de fronteira. A proposta, que tem prazo de validade até sexta-feira (30), ainda precisa ser votada no Senado.",
+      "A indenização é destinada a servidores que atuam na prevenção, no controle, na fiscalização e no combate a crimes transfronteiriços. O benefício continuará sendo de R$ 91, valor pago por dia de efetivo trabalho nessas localidades. O texto também valida pagamentos retroativos para certas categorias.",
+      "Os deputados acrescentaram na votação em Plenário desta noite, por meio de projeto de lei de conversão , outras carreiras para receber a indenização além das previstas inicialmente pela MP.",
+      "Segundo o texto aprovado, passam a ter direito à indenização:",
+      "A medida também permite que servidores alcançados pelas emendas constitucionais 79 e 98 exerçam o direito de opção para integrar quadros em extinção da administração pública federal, conforme regras previstas na Lei 15.367/26 .",
+      "A mudança alcança servidores dos antigos territórios federais do Acre, do Amapá, de Roraima e de Rondônia (que hoje são estados) e outros grupos definidos na legislação.",
+      "A medida provisória transforma 254 cargos vagos de agente administrativo do Ministério da Fazenda em 50 cargos vagos de inspetor federal do mercado de capitais, destinados à Comissão de Valores Mobiliários (CVM).",
+      "O governo afirma que a transformação não gera despesas, porque os novos cargos serão compensados financeiramente pelos cargos extintos.",
+      "Saiba mais sobre a tramitação de medidas provisórias"
     ]
   },
   {
@@ -758,7 +898,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ],
     "content": [
       "Páginas na internet de jornais de diversos países repercutiram nesta terça-feira (27) a fuga de Flávio Bolsonaro do Brasil. O embarque escondido para os Estados Unidos, menos de 48 horas após perder as eleições presidenciais, foi noticiado pela agência Reuters .",
-      ">> Flávio responde a dois processos criminais no Supremo Tribunal Federal (STF); saiba mais",
+      "Flávio responde a dois processos criminais no Supremo Tribunal Federal (STF); saiba mais",
       "Um dos primeiros veículos a noticiar a fuga foi o Infobae , da Argentina, que disse haver uma suspeita de que o senador teria embarcado com a família em um jato particular, em Puerto Iguazú, com destino aos Estados Unidos. A versão, porém, não foi confirmada pelo governo da Argentina.",
       "O La Nación , também da Argentina, destaca que fontes próximas ao senador afirmaram que os Estados Unidos estariam diretamente envolvidos na fuga.",
       "O periódico diz ainda que, sob o governo de Donald Trump, o país norte-americano tem se tornado o refúgio do clã Bolsonaro e lembra que Eduardo Bolsonaro, irmão de Flávio, também está nos EUA.",
@@ -1005,7 +1145,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "stf",
       "Flávio Bolsonaro",
       "EUA",
-      "STF"
+      "Fuga"
     ],
     "content": [
       "O senador Flávio Bolsonaro (PL-RJ) vai continuar respondendo a dois processos criminais no Supremo Tribunal Federal (STF) mesmo após deixar o Brasil e fugir para os Estados Unidos.",
@@ -1021,6 +1161,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Apesar de não ter sido eleito para o cargo de presidente da República, Flávio manterá mandato de senador até o dia 1° de fevereiro .",
       "A tendência é que as duas investigações continuem em tramitação no Supremo após o fim do mandato.",
       "De acordo com a atual jurisprudência da Corte, a competência do STF para julgar ex-parlamentares continua após o encerramento do mandato nos casos em que os crimes estiverem ligados à função pública.",
+      "Confira mais informações sobre os inquéritos envolvendo Flávio Bolsonaro na TV Brasil",
       "Nesta terça-feira (27), o investidor e ex-secretário de Turismo do México, Simón Levy, publicou uma postagem nas redes sociais relatando que Flávio Bolsonaro teria chegado aos Estados Unidos , em uma articulação liderada pelo secretário de Estado norte-americano, Marco Rubio. A possível fuga de Flávio, menos de 48 horas após perder as eleições presidenciais, também foi confirmada pela agência de notícias Reuters.",
       "Ontem (26), um dia após a derrota na disputa presidencial, o senador foi proibido de deixar o Brasil e intimado pela PF a entregar todos seus passaportes em 24 horas . O prazo terminou na manhã de hoje, e os documentos não foram entregues, por isso foram cancelados ."
     ]
@@ -1455,137 +1596,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "O deputado federal eleito, atualmente cumprindo mandato de vereador, Lucas Pavanato foi procurado.",
       "A Agência Brasil está aberta a manifestações.",
       "Saiba mais no Repórter Brasil Tarde, da TV Brasil"
-    ]
-  },
-  {
-    "id": "camara-1313222-projeto-muda-regras-para-incor",
-    "title": "Projeto muda regras para incorporação de novas tecnologias no SUS",
-    "summary": "Texto está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1313222-projeto-muda-regras-para-incorporacao-de-novas-tecnologias-no-sus",
-    "publishedAt": "27/10/2026 às 12:24",
-    "category": "Congresso",
-    "ingestedAt": "28/10/2026 às 09:12",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/06/depositphotos-86028332-xl-768x536.jpg",
-    "imageCaption": "Incorporação de procedimentos deverá ser analisada em duas fases",
-    "imageCredit": "Depositphotos",
-    "imageAlt": "Projeto muda regras para incorporação de novas tecnologias no SUS",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Incorporação de procedimentos deverá ser analisada em duas fases",
-      "O Projeto de Lei 1738/26 altera a Lei Orgânica da Saúde para dividir em duas etapas o processo de avaliação e incorporação de novos remédios, produtos e procedimentos no Sistema Único de Saúde (SUS).",
-      "A proposta está em análise na Câmara dos Deputados.",
-      "Hoje, a Comissão Nacional de Incorporação de Tecnologias no SUS (Conitec) realiza de forma simultânea a análise científica e econômica do produto. Pelo texto, essa avaliação passará a ser feita em duas fases: primeiro será analisada a parte científica e clínica (eficácia, efetividade e segurança) e, somente depois dessa etapa, será realizada a avaliação econômica comparativa entre os custos da inovação e as opções já disponíveis na rede pública.",
-      "Durante a fase econômica, o projeto prevê uma etapa formal de negociação financeira entre o Ministério da Saúde e o fabricante ou o detentor da tecnologia. A intenção é permitir o ajuste de preço e de outras condições para melhorar a relação custo-benefício antes da decisão final de oferta aos pacientes no SUS.",
-      "O texto também permite a realização de reuniões de apresentação preliminar antes da entrega do pedido de incorporação do novo remédio ou produto. Esses encontros poderão ser convocados pela Conitec ou solicitados pelo fabricante, contando com a participação de especialistas, sociedades médicas, sociedade civil e Núcleos de Avaliação de Tecnologias em Saúde (NATS).",
-      "Para os autores, deputados Silvia Cristina (PP-RO) e Geraldo Resende (União-MS), a mudança traz mais transparência e racionalidade aos gastos públicos.",
-      "“O faseamento dá maior clareza sobre os principais obstáculos à incorporação das tecnologias avaliadas, permitindo ao requerente ajustar parâmetros econômicos, como preço, para melhorar a relação de custo-efetividade e beneficiar o paciente”, reforçaram em justificativa.",
-      "Se aprovada, a proposta entrará em vigor 180 dias após a publicação da nova lei.",
-      "O projeto tramita em caráter conclusivo e será analisado pelas comissões de Saúde; e de Constituição e Justiça e de Cidadania. Para virar lei, precisa ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
-  },
-  {
-    "id": "ebc-1706931",
-    "title": "Deputado do Rio volta a ser alvo da PF por suspeita de fraudes",
-    "summary": "O deputado federal Marcelo Queiroz (PSDB-RJ) voltou a ser alvo da Polícia Federal , nesta terça-feira (27), na segunda fase da Operação Castratio .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/deputado-do-rio-volta-ser-alvo-da-pf-por-suspeita-de-fraudes",
-    "publishedAt": "27/10/2026 às 11:59",
-    "category": "Justiça",
-    "ingestedAt": "28/10/2026 às 09:12",
-    "imageUrl": "https://imagens.ebc.com.br/-awM0m-amQjSpAHefc6UPijRSvY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/27/whatsapp_image_2026-10-27_at_09.37.16.jpeg?itok=kz1HkqGR",
-    "imageCaption": "Deputado do Rio volta a ser alvo da PF por suspeita de fraudes",
-    "imageCredit": "Cristina Indio do Brasil - Repórter da Agência Brasil",
-    "imageAlt": "Deputado do Rio volta a ser alvo da PF por suspeita de fraudes",
-    "author": "Cristina Indio do Brasil - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Polícia Federal",
-      "Rio de Janeiro",
-      "Marcelo Queiroz"
-    ],
-    "content": [
-      "O deputado federal Marcelo Queiroz (PSDB-RJ) voltou a ser alvo da Polícia Federal , nesta terça-feira (27), na segunda fase da Operação Castratio . Os agentes cumprem cinco mandados de busca e apreensão na capital fluminense e em Niterói, expedidos pelo Supremo Tribunal Federal (STF).",
-      "O objetivo é de desarticular organização criminosa que fraudava contratos na Secretaria de Agricultura, Pecuária e Abastecimento do Rio de Janeiro (Seapa).",
-      "O deputado, que era secretário de Agricultura na época das irregularidades, foi alvo na primeira fase da operação, em maio deste ano.",
-      "A PF apurou irregularidades em contratos feitos pelo governo do Rio de Janeiro que teriam favorecido ilegalmente a empresa Consuvet, criada meses antes de assinar um primeiro contrato com a Seapa, em julho de 2021.",
-      "Entre as irregularidades estão direcionamento, superfaturamento e fraude na licitação. De acordo com a PF, o valor total dos contratos, que têm como objetivo o serviço de castração/esterilização de animais, alcança cerca de R$ 200 milhões.",
-      "A operação de hoje é uma consequência dos materiais recolhidos nessa primeira etapa. Agora, a ação é para apurar a extensão da organização criminosa e suas práticas ilegais.",
-      "Na primeira fase, havia 12 mandados de busca e apreensão no Rio de Janeiro e em São Paulo, autorizados pelo ministro do STF, Flávio Dino. Naquele momento, o deputado teve o celular apreendido.",
-      "Em endereços de outros alvos, a PF confiscou dinheiro vivo, carros e aparelhos eletrônicos.",
-      "A reportagem da Agência Brasil tentou contato com o deputado e com o gabinete dele na Câmara, mas não obteve resposta até a publicação desta matéria."
-    ]
-  },
-  {
-    "id": "ebc-1706913",
-    "title": "Governo vai enviar MP do Imposto Seletivo e renova subvenção ao diesel",
-    "summary": "O ministro da Fazenda, Dario Durigan, afirmou que o governo federal deve enviar ao Congresso Nacional, nos próximos dias, uma Medida Provisória (MP) estabelecendo as alíquotas do chamado Imposto Seletivo (IS).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-enviara-mp-do-imposto-seletivo-e-renova-subvencao-ao-diesel",
-    "publishedAt": "27/10/2026 às 11:33",
-    "category": "Economia",
-    "ingestedAt": "28/10/2026 às 09:12",
-    "imageUrl": "https://imagens.ebc.com.br/ZHwDUBvDuOV9hbQxPzy1u1nv8XY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/05/12/0d9a7467.jpg?itok=DdlnxcKL",
-    "imageCaption": "Governo vai enviar MP do Imposto Seletivo e renova subvenção ao diesel",
-    "imageCredit": "Alex Rodrigues - Repórter da Agência Brasil",
-    "imageAlt": "Governo vai enviar MP do Imposto Seletivo e renova subvenção ao diesel",
-    "author": "Alex Rodrigues - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "ministro da Fazenda",
-      "Dario Durigan",
-      "MP do Imposto Seletivo",
-      "subvenção ao diesel"
-    ],
-    "content": [
-      "O ministro da Fazenda, Dario Durigan, afirmou que o governo federal deve enviar ao Congresso Nacional, nos próximos dias, uma Medida Provisória (MP) estabelecendo as alíquotas do chamado Imposto Seletivo (IS).",
-      "Também conhecido como Imposto do Pecado, o tributo foi aprovado junto com a reforma tributária e será cobrado a partir de 2027, com a justificativa de desestimular o consumo de produtos e atividades consideradas prejudiciais à saúde ou ao meio ambiente , como cigarros, bebidas alcoólicas, refrigerantes, alguns tipos de veículos, além da extração de bens minerais, loterias, apostas e jogos de fantasy sports (jogos online).",
-      "No início do mês, o ministro já tinha antecipado que o governo planejava encaminhar a proposta ao Congresso Nacional logo após o segundo turno das eleições gerais, realizadas no último domingo (25).",
-      "Em entrevista na entrada do ministério, Durigan disse que o governo renovaria a subvenção ao óleo diesel . Quase no mesmo momento, o Ministério do Planejamento e Orçamento confirmou a renovação da subvenção ao combustível, no valor de R$ 2,12 por litro, como forma de conter a alta dos preços. A medida tem validade de um mês, podendo ser renovada ao fim do período."
-    ]
-  },
-  {
-    "id": "ebc-1706911",
-    "title": "Banco Central diz que estabilidade financeira não está em risco",
-    "summary": "O Banco Central (BC) informou nesta terça-feira (27) que \"não vê risco relevante\" para a estabilidade financeira do país, apesar da piora dos indicadores de crédito das famílias.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/banco-central-diz-que-estabilidade-financeira-nao-esta-em-risco",
-    "publishedAt": "27/10/2026 às 11:28",
-    "category": "Economia",
-    "ingestedAt": "28/10/2026 às 09:12",
-    "imageUrl": "https://imagens.ebc.com.br/4P4kLfGygwh7yN8EJAMIaG0PqTM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/20231025_150203.jpg?itok=55thhM0a",
-    "imageCaption": "Banco Central diz que estabilidade financeira não está em risco",
-    "imageCredit": "Pedro Peduzzi - Repórter da Agência Brasil",
-    "imageAlt": "Banco Central diz que estabilidade financeira não está em risco",
-    "author": "Pedro Peduzzi - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "banco central",
-      "sistema financeiro",
-      "inadimplência"
-    ],
-    "content": [
-      "O Banco Central (BC) informou nesta terça-feira (27) que \"não vê risco relevante\" para a estabilidade financeira do país, apesar da piora dos indicadores de crédito das famílias.",
-      "Segundo o Relatório de Estabilidade Financeira referente ao primeiro semestre de 2026, o sistema financeiro continua com níveis confortáveis de capitalização e liquidez, além de capacidade de resistir a cenários adversos.",
-      "O documento mostra que os ativos problemáticos das famílias, indicador que reúne operações com atraso ou sinais de dificuldade de pagamento, aumentaram e atingiram o maior nível desde 2012 na maioria das modalidades de crédito.",
-      "De acordo com o BC, a inadimplência foi o principal fator responsável por esse movimento.",
-      "A autoridade monetária também informou que o comprometimento da renda das famílias com o pagamento de dívidas alcançou o maior nível dos últimos 21 anos.",
-      "As estimativas do banco apontam que a pressão sobre a capacidade de pagamento dos consumidores deve continuar ao longo do segundo semestre.",
-      "Apesar desse cenário, o BC avalia que o Sistema Financeiro Nacional permanece resiliente. As provisões constituídas pelas instituições financeiras seguem compatíveis com as perdas esperadas, enquanto os testes de estresse de capital e de liquidez indicam que os bancos mantêm capacidade de enfrentar cenários econômicos adversos.",
-      "O relatório aponta ainda desaceleração do crédito para famílias e empresas, em linha com os juros elevados e a atividade econômica mais moderada. Segundo o BC, as instituições financeiras também vêm demonstrando maior cautela na concessão de empréstimos.",
-      "Pesquisa feita pela autoridade monetária mostra que 73% das instituições financeiras consultadas estão muito ou totalmente confiantes na resiliência do sistema.",
-      "As principais preocupações apontadas foram o risco fiscal e a possibilidade de aumento da inadimplência em um ambiente de juros elevados por um período prolongado.",
-      "Na avaliação do Banco Central, o aumento do endividamento de famílias e empresas exige cautela adicional na oferta de crédito. O órgão informou que estuda medidas voltadas aos segmentos de maior risco para reduzir situações de superendividamento e fortalecer a sustentabilidade do crédito no país."
     ]
   },
   {

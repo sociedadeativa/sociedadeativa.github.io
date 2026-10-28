@@ -9,6 +9,10 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1707040/
+https://sociedadeativa.github.io/noticias/camara-1314437-camara-pode-votar-hoje-projeto/
+https://sociedadeativa.github.io/noticias/ebc-1707024/
+https://sociedadeativa.github.io/noticias/ebc-1707023/
 https://sociedadeativa.github.io/noticias/ebc-1799001/
 https://sociedadeativa.github.io/noticias/ebc-1707021/
 https://sociedadeativa.github.io/noticias/ebc-1799002/
@@ -18,8 +22,8 @@ https://sociedadeativa.github.io/noticias/ebc-1707016/
 https://sociedadeativa.github.io/noticias/ebc-1707014/
 https://sociedadeativa.github.io/noticias/ebc-1707013/
 https://sociedadeativa.github.io/noticias/camara-1314377-camara-aprova-consultas-no-sus/
-https://sociedadeativa.github.io/noticias/camara-1314372-camara-aprova-mp-que-amplia-al/
 https://sociedadeativa.github.io/noticias/ebc-1707012/
+https://sociedadeativa.github.io/noticias/camara-1314372-camara-aprova-mp-que-amplia-al/
 https://sociedadeativa.github.io/noticias/ebc-1707011/
 https://sociedadeativa.github.io/noticias/camara-1314366-camara-aprova-apoio-financeiro/
 https://sociedadeativa.github.io/noticias/ebc-1707008/
@@ -52,10 +56,6 @@ https://sociedadeativa.github.io/noticias/ebc-1706942/
 https://sociedadeativa.github.io/noticias/ebc-1706939/
 https://sociedadeativa.github.io/noticias/ebc-1706937/
 https://sociedadeativa.github.io/noticias/ebc-1706935/
-https://sociedadeativa.github.io/noticias/camara-1313222-projeto-muda-regras-para-incor/
-https://sociedadeativa.github.io/noticias/ebc-1706931/
-https://sociedadeativa.github.io/noticias/ebc-1706913/
-https://sociedadeativa.github.io/noticias/ebc-1706911/
 https://sociedadeativa.github.io/noticias/ibge-998877/
 https://sociedadeativa.github.io/noticias/ibge-48339/
 https://sociedadeativa.github.io/noticias/ibge-48336/
