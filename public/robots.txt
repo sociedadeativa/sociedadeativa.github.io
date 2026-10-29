@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://sociedadeativa.github.io/sitemap.xml
-Sitemap: https://sociedadeativa.github.io/sitemap.txt
