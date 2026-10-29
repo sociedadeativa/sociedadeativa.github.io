@@ -48,17 +48,17 @@ export const EleicoesPage: React.FC<EleicoesPageProps> = ({
   return (
     <div className="py-8 sm:py-12 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Cabeçalho do Caderno de Eleições */}
+        {/* Cabeçalho do Caderno de Eleições — Arquivo Eleições 2026 */}
         <div className="mb-8 pb-6 border-b border-slate-200">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-700 mb-2">
-            <Vote className="w-4 h-4" />
-            <span>Caderno Especial · Eleições Presidenciais 2026</span>
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-900 mb-2">
+            <Vote className="w-4 h-4 text-blue-700" />
+            <span>Caderno Especial · Arquivo Eleições 2026</span>
           </div>
           <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-950 text-balance">
-            Totalização Oficial do 1º Turno &amp; Disputa do 2º Turno
+            Arquivo Eleições 2026: Totalização Oficial Homologada
           </h1>
           <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-3xl leading-relaxed">
-            Resultados consolidados em 100% das urnas eletrônicas pelo Tribunal Superior Eleitoral (TSE). Análise da votação nominal dos candidatos a presidente, abstenções e parâmetros legais do 2º turno previstos no Artigo 77 da Constituição Federal.
+            Resultados consolidados em 100% das urnas eletrônicas e homologados pelo Tribunal Superior Eleitoral (TSE). Análise da votação nominal dos candidatos a presidente, abstenções e dados históricos do pleito nacional.
           </p>
 
           <div className="flex flex-wrap items-center gap-2 mt-4 text-xs font-semibold">

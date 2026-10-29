@@ -163,8 +163,8 @@ const economiaFiltered = filterNewsItems(fullDataset, { category: "Economia", se
 assert.ok(economiaFiltered.length > 0, "Economia category must return filtered articles");
 assert.ok(economiaFiltered.every(a => a.category === "Economia"), "Filtered articles must match Economia");
 
-const searchFiltered = filterNewsItems(fullDataset, { category: "Todas", searchQuery: "pedágio", source: "Todas" });
-assert.ok(searchFiltered.length > 0, "Search query 'pedágio' must return matching articles");
+const searchFiltered = filterNewsItems(fullDataset, { category: "Todas", searchQuery: "TSE", source: "Todas" });
+assert.ok(searchFiltered.length > 0, "Search query 'TSE' must return matching articles");
 
 console.log("  [PASS] Full 55-article dataset preserves category filtering and search queries.");
 

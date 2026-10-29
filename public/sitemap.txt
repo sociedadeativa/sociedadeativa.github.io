@@ -9,6 +9,7 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1707224/
 https://sociedadeativa.github.io/noticias/ebc-1707219/
 https://sociedadeativa.github.io/noticias/camara-1314736-comissao-aprova-reforco-no-apo/
 https://sociedadeativa.github.io/noticias/ebc-1707210/
@@ -54,7 +55,6 @@ https://sociedadeativa.github.io/noticias/camara-1314230-camara-aprova-acordo-do
 https://sociedadeativa.github.io/noticias/ebc-1707090/
 https://sociedadeativa.github.io/noticias/camara-1313033-projeto-exige-meios-de-escape-/
 https://sociedadeativa.github.io/noticias/camara-1314538-especialistas-divergem-sobre-a/
-https://sociedadeativa.github.io/noticias/camara-1313496-projeto-proibe-cobranca-de-est/
 https://sociedadeativa.github.io/noticias/despesas-governo-federal-como-consultar-gastos-publicos/
 https://sociedadeativa.github.io/noticias/ibge-998877/
 https://sociedadeativa.github.io/noticias/ibge-48339/

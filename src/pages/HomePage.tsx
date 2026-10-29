@@ -10,7 +10,7 @@ import { BolsaSection } from "../components/BolsaSection";
 import { AdBanner } from "../components/AdBanner";
 import { PortalLink } from "../components/PortalLink";
 import { ArrowRight, MapPin, Trophy, Clock } from "lucide-react";
-import { sortNewsItems, deduplicateNewsItems, isValidImageUrl } from "../services/newsService";
+import { sortNewsItems, deduplicateNewsItems } from "../services/newsService";
 
 // Componentes Pesados Abaixo da Dobra (Lazy / Deferred Code-Splitting)
 const BrazilMap = React.lazy(() =>
@@ -50,7 +50,7 @@ const SportsNewsCard: React.FC<{
   return (
     <article
       onClick={() => onOpenArticleDetails(article)}
-      className="group bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between hover:border-emerald-300 hover:shadow-md transition-all duration-200 cursor-pointer"
+      className="group bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between hover:border-slate-300 hover:shadow-md transition-all duration-200 cursor-pointer"
     >
       <div>
         {article.imageUrl && (
@@ -75,31 +75,31 @@ const SportsNewsCard: React.FC<{
         )}
 
         <div className="flex items-center justify-between gap-2 text-xs text-slate-500 mb-2">
-          <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold tracking-wider uppercase border bg-emerald-50/80 border-emerald-200/70 text-slate-900">
+          <span className="font-bold uppercase tracking-wider text-[11px] text-emerald-800">
             {article.category || "Esportes"}
           </span>
-          <span className="flex items-center gap-1 text-[11px]">
-            <Clock className="w-3 h-3 text-slate-400" />
-            <span>{article.publishedAt}</span>
+          <span className="flex items-center gap-1 text-xs text-slate-500">
+            <Clock className="w-3.5 h-3.5 text-slate-400" />
+            <span>{article.publishedAt.split(" às ")[0]}</span>
           </span>
         </div>
 
-        <h3 className="font-heading font-black text-base text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2 leading-snug break-words">
+        <h3 className="font-heading font-black text-lg text-slate-950 group-hover:text-emerald-800 transition-colors line-clamp-2 leading-snug break-words">
           {article.title}
         </h3>
 
-        <p className="text-xs text-slate-600 mt-2 line-clamp-2 leading-relaxed break-words">
+        <p className="text-sm sm:text-base text-slate-700 mt-2 line-clamp-2 leading-relaxed break-words">
           {article.summary}
         </p>
       </div>
 
       <div className="pt-3.5 mt-3.5 border-t border-slate-100 flex items-center justify-between text-xs">
-        <span className="text-[11px] font-medium text-slate-500 truncate max-w-[150px]">
+        <span className="text-xs font-medium text-slate-500 truncate max-w-[150px]">
           {article.source}
         </span>
-        <span className="font-bold text-emerald-700 group-hover:text-emerald-800 flex items-center gap-1">
-          <span>Ler notícia</span>
-          <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+        <span className="font-bold text-emerald-800 group-hover:text-emerald-900 flex items-center gap-1">
+          <span>Leia mais</span>
+          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
         </span>
       </div>
     </article>
@@ -134,7 +134,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   }, [articles]);
 
   return (
-    <div className="space-y-0">
+    <div className="space-y-0 w-full overflow-x-hidden">
       {/* 1. Destaques Editoriais do Portal (Salience Tier 1 & 2 + Radar Cívico) */}
       <FeaturedEditorial
         articles={articles}
@@ -144,7 +144,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         onOpenArticleDetails={onOpenArticleDetails}
       />
 
-      {/* 2. Painel Nacional das Eleições 2026 (Apuração 1º Turno) */}
+      {/* 2. Painel do Arquivo Eleições 2026 (Totalização Oficial Homologada) */}
       <div id="eleicoes-nacional">
         <NationalBanner
           dataset={dataset}
@@ -157,20 +157,20 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* 3. Espaço Publicitário Superior */}
       <AdBanner format="leaderboard" />
 
-      {/* 4. Seção do Mapa Interativo de Votação (Brasil por Estado) */}
+      {/* 4. Seção do Mapa Interativo de Votação (Brasil por Estado — Arquivo Histórico) */}
       <section id="mapa-brasil" className="py-8 sm:py-12 bg-white border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
             <div>
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-700 mb-1.5">
-                <MapPin className="w-3.5 h-3.5" />
-                <span>Geografia Eleitoral · 26 Estados e Distrito Federal</span>
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-900 mb-1.5">
+                <MapPin className="w-3.5 h-3.5 text-blue-700" />
+                <span>Arquivo Eleições 2026 · 26 Estados e Distrito Federal</span>
               </div>
               <h2 className="font-heading text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
                 Mapa Interativo de Votação por Estado
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl leading-relaxed">
-                Navegue pelas unidades da federação para conferir o resultado oficial do 1º turno, margem de vitória, votos nominais e comparecimento eleitoral.
+              <p className="text-sm sm:text-base text-slate-600 mt-1 max-w-2xl leading-relaxed">
+                Consulte os resultados oficiais e homologados pelo Tribunal Superior Eleitoral (TSE) por unidade da federação, incluindo votos nominais, percentuais e comparecimento eleitoral.
               </p>
             </div>
 
@@ -194,7 +194,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
               <PortalLink
                 route="estados"
-                className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-amber-800 hover:text-amber-900 px-3 py-1.5 rounded-xl border border-amber-200 bg-amber-50 hover:bg-amber-100 transition-colors"
+                className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-blue-900 hover:text-blue-950 px-3.5 py-2 rounded-xl border border-blue-200 bg-blue-50 hover:bg-blue-100 transition-colors"
               >
                 <span>Ver página dedicada aos estados</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -255,7 +255,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* 7. Espaço Publicitário In-Feed */}
       <AdBanner format="in-feed" />
 
-      {/* 8. Seção de Notícias e Análises Jornalísticas */}
+      {/* 8. Seção de Notícias e Análises Jornalísticas (com Últimas Notícias e Mais Lidas separadas) */}
       <div id="cobertura-noticias">
         <NewsSection
           articles={articles}
@@ -269,13 +269,13 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
             <div>
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-800 mb-1.5">
-                <Trophy className="w-3.5 h-3.5 text-emerald-600" />
+                <Trophy className="w-3.5 h-3.5 text-emerald-700" />
                 <span>Caderno de Esportes · Cobertura &amp; Modalidades</span>
               </div>
               <h2 className="font-heading text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
                 Esportes &amp; Competições Nacionais
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl leading-relaxed">
+              <p className="text-sm sm:text-base text-slate-600 mt-1 max-w-2xl leading-relaxed">
                 Acompanhe as notícias apuradas do esporte brasileiro pela Agência Brasil e fontes oficiais, com cobertura de modalidades e competições.
               </p>
             </div>
@@ -283,7 +283,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             <div className="flex items-center gap-3">
               <PortalLink
                 route="esportes"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 hover:text-emerald-900 px-3.5 py-2 rounded-xl border border-emerald-200 bg-white hover:bg-emerald-100/70 transition-colors shadow-xs"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 hover:text-emerald-900 px-3.5 py-2 rounded-xl border border-emerald-200 bg-white hover:bg-emerald-50 transition-colors shadow-2xs"
               >
                 <span>Ver caderno completo</span>
                 <ArrowRight className="w-3.5 h-3.5 text-emerald-700" />
@@ -330,7 +330,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
             <PortalLink
               route="esportes"
-              className="shrink-0 text-xs font-bold text-emerald-700 hover:text-emerald-800 hover:underline flex items-center gap-1"
+              className="shrink-0 text-xs font-bold text-emerald-800 hover:text-emerald-900 hover:underline flex items-center gap-1"
             >
               <span>Ir para a Central de Esportes</span>
               <ArrowRight className="w-3 h-3" />

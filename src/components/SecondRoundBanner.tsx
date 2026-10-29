@@ -57,34 +57,17 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
       className="mb-12 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-xl overflow-hidden"
     >
       {/* Top Banner / Cabeçalho do 2º Turno */}
+      {/* Top Banner / Cabeçalho do 2º Turno — Arquivo Eleições 2026 */}
       <div className="bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 p-6 sm:p-8 border-b border-slate-800">
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/40 text-blue-300 text-xs font-bold uppercase tracking-wider">
-            <Radio className="w-3.5 h-3.5 text-blue-400 animate-pulse" />
-            <span>2º Turno Presidencial 2026</span>
+            <CheckCircle2 className="w-3.5 h-3.5 text-blue-400" />
+            <span>Arquivo Eleições 2026 · 2º Turno</span>
           </div>
 
-          <div
-            className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${
-              isFinal
-                ? "bg-emerald-500/20 border border-emerald-400/40 text-emerald-300"
-                : countingStarted
-                ? "bg-blue-500/20 border border-blue-400/40 text-blue-300"
-                : "bg-amber-500/10 border border-amber-400/30 text-amber-300"
-            }`}
-          >
-            {isFinal ? (
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-            ) : (
-              <Clock className="w-3.5 h-3.5 text-amber-400" />
-            )}
-            <span>
-              {isFinal
-                ? "Totalização Definitiva Concluída"
-                : countingStarted
-                ? `Apuração em Andamento (${formatPercentBR(data.countingProgress)})`
-                : "Aguardando Apuração Oficial (25/10/2026)"}
-            </span>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 border border-emerald-400/40 text-emerald-300">
+            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+            <span>Totalização Oficial Homologada pelo TSE</span>
           </div>
         </div>
 
@@ -92,13 +75,11 @@ export const SecondRoundBanner: React.FC<SecondRoundBannerProps> = ({
           id="segundo-turno-titulo"
           className="font-heading text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white mb-3"
         >
-          Apuração e Resultados do 2º Turno Presidencial 2026
+          Arquivo Eleições 2026: Resultados Consolidados do 2º Turno Presidencial
         </h2>
 
         <p className="text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed">
-          {countingStarted
-            ? "Acompanhe os resultados oficiais totalizados pelo Tribunal Superior Eleitoral (TSE) em tempo real para a disputa presidencial do 2º Turno."
-            : "Acompanhe a disputa e consulte a apuração oficial no portal do TSE. A votação ocorre no domingo, 25 de outubro de 2026, das 08h00 às 17h00 (horário de Brasília)."}
+          Consulta aos resultados oficiais totalizados e homologados pelo Tribunal Superior Eleitoral (TSE) para a eleição presidencial de 25 de outubro de 2026.
         </p>
 
         {/* Barra de Progresso Real quando a Apuração Iniciou */}

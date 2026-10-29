@@ -53,18 +53,18 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
   return (
     <section id="dashboard-nacional" className="border-b border-slate-200 bg-white pt-8 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Cabeçalho Editorial com Fonte e Data Oficiais */}
+        {/* Cabeçalho Editorial com Fonte e Data Oficiais — Arquivo Eleições 2026 */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8">
           <div>
             <div className="flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
-              <span className="flex items-center gap-1.5 text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/80">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
-                100,00% das seções totalizadas
+              <span className="flex items-center gap-1.5 text-blue-900 bg-blue-50 px-2.5 py-1 rounded-md border border-blue-200">
+                <CheckCircle2 className="w-3.5 h-3.5 text-blue-700" />
+                Arquivo Eleições 2026 · Resultado Homologado TSE
               </span>
               <span aria-hidden="true" className="text-slate-300">·</span>
               <span className="flex items-center gap-1.5 text-slate-700">
                 <Calendar className="w-3.5 h-3.5 text-slate-400" />
-                1º turno — 4 de outubro de 2026
+                1º Turno (04/10/2026) · 2º Turno (25/10/2026)
               </span>
             </div>
 
@@ -72,21 +72,21 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
               {dataset.title}
             </h2>
             <p className="mt-1.5 text-base sm:text-xl font-heading font-semibold text-slate-600">
-              {dataset.subtitle}
+              Histórico consolidado da apuração oficial e resultados por estado
             </p>
             <p className="mt-2 text-xs sm:text-sm text-slate-500 max-w-3xl leading-relaxed">
-              Totalização oficial homologada pelo Tribunal Superior Eleitoral (TSE). Votação para Presidente da República discriminada por estado e Distrito Federal. Os dois candidatos mais votados disputarão o segundo turno.
+              Acervo de dados oficiais do Tribunal Superior Eleitoral (TSE). Consulta à votação consolidada para Presidente da República discriminada por estado e Distrito Federal, com índices de comparecimento e abstenção homologados.
             </p>
           </div>
 
           {/* Cartão de Identificação da Fonte Oficial */}
-          <div className="flex flex-col items-start lg:items-end text-xs text-slate-600 shrink-0 bg-slate-50 p-4 rounded-xl border border-slate-200/90 shadow-2xs">
+          <div className="flex flex-col items-start lg:items-end text-xs text-slate-600 shrink-0 bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-2xs">
             <div className="flex items-center gap-1.5 font-extrabold text-slate-900 text-sm">
               <ShieldCheck className="w-4 h-4 text-emerald-700 shrink-0" />
               <span>Fonte: Tribunal Superior Eleitoral (TSE)</span>
             </div>
             <span className="text-[11px] text-slate-500 mt-1 font-medium">
-              1º turno — 4 de outubro de 2026
+              Dados oficiais e definitivos homologados
             </span>
             <button
               onClick={onOpenMethodology}
@@ -97,24 +97,24 @@ export const NationalBanner: React.FC<NationalBannerProps> = ({
           </div>
         </div>
 
-        {/* Alerta de Segundo Turno Confirmado */}
-        <div className="mb-8 p-4 sm:p-5 rounded-2xl bg-blue-50/80 border border-blue-200/90 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 shadow-2xs">
+        {/* Painel do Acervo Eleitoral Homologado */}
+        <div className="mb-8 p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 shadow-2xs">
           <div className="flex items-start gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-blue-700 text-white flex items-center justify-center font-heading font-black text-lg shrink-0 mt-0.5 shadow-xs">
-              2º
+            <div className="w-10 h-10 rounded-xl bg-[#0B132B] text-white flex items-center justify-center font-heading font-black text-lg shrink-0 mt-0.5 shadow-xs">
+              TSE
             </div>
             <div>
               <h4 className="font-heading font-extrabold text-slate-900 text-base sm:text-lg">
-                Segundo Turno Confirmado: Flávio Bolsonaro vs. Lula
+                Resultado Oficial Homologado: Flávio Bolsonaro vs. Lula
               </h4>
               <p className="text-xs sm:text-sm text-slate-700 mt-0.5 leading-relaxed">
-                Nenhum dos candidatos alcançou mais de 50% dos votos válidos no 1º turno. Conforme preconiza o Artigo 77 da Constituição Federal, <strong>Flávio Bolsonaro ({formatPercentBR(flavioTotal?.percentage || 47.03)})</strong> e <strong>Lula ({formatPercentBR(lulaTotal?.percentage || 45.16)})</strong> avançam para a votação definitiva no 2º turno.
+                Totalização concluída em 100,00% das seções eleitorais do país e exterior. Conforme preconiza o Artigo 77 da Constituição Federal, <strong>Flávio Bolsonaro ({formatPercentBR(flavioTotal?.percentage || 47.03)})</strong> e <strong>Lula ({formatPercentBR(lulaTotal?.percentage || 45.16)})</strong> disputaram o 2º turno da eleição presidencial.
               </p>
             </div>
           </div>
           <div className="self-start lg:self-center shrink-0">
-            <span className="text-xs uppercase tracking-wider font-extrabold text-blue-900 bg-blue-100/90 px-3 py-1.5 rounded-lg border border-blue-200 whitespace-nowrap">
-              1º Turno Homologado
+            <span className="text-xs uppercase tracking-wider font-extrabold text-slate-800 bg-white px-3 py-1.5 rounded-lg border border-slate-200 whitespace-nowrap">
+              Pleito Concluído · 2026
             </span>
           </div>
         </div>
