@@ -223,7 +223,8 @@ if (!publicRobots.includes(expectedSitemapDirective)) {
   console.error(`ERROR: public/robots.txt não aponta para o sitemap correto (${expectedSitemapDirective})!`);
   process.exit(1);
 }
-
+const sitemapContent = fs.readFileSync('dist/sitemap.xml', 'utf8');
+const publicSitemapContent = fs.readFileSync('public/sitemap.xml', 'utf8');
 
 if (!sitemapContent.startsWith('<?xml version="1.0" encoding="UTF-8"?>')) {
   console.error('ERROR: dist/sitemap.xml deve iniciar com a declaração UTF-8 padrão!');
