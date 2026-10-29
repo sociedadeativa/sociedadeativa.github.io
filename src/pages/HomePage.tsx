@@ -144,107 +144,10 @@ export const HomePage: React.FC<HomePageProps> = ({
         onOpenArticleDetails={onOpenArticleDetails}
       />
 
-      {/* 2. Painel do Arquivo Eleições 2026 (Totalização Oficial Homologada) */}
-      <div id="eleicoes-nacional">
-        <NationalBanner
-          dataset={dataset}
-          onOpenMethodology={onOpenMethodology}
-          selectedCandidateFilter={candidateFilter}
-          onSelectCandidateFilter={onSelectCandidateFilter}
-        />
-      </div>
-
-      {/* 3. Espaço Publicitário Superior */}
+      {/* 2. Espaço Publicitário Superior */}
       <AdBanner format="leaderboard" />
 
-      {/* 4. Seção do Mapa Interativo de Votação (Brasil por Estado — Arquivo Histórico) */}
-      <section id="mapa-brasil" className="py-8 sm:py-12 bg-white border-y border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
-            <div>
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-900 mb-1.5">
-                <MapPin className="w-3.5 h-3.5 text-blue-700" />
-                <span>Arquivo Eleições 2026 · 26 Estados e Distrito Federal</span>
-              </div>
-              <h2 className="font-heading text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
-                Mapa Interativo de Votação por Estado
-              </h2>
-              <p className="text-sm sm:text-base text-slate-600 mt-1 max-w-2xl leading-relaxed">
-                Consulte os resultados oficiais e homologados pelo Tribunal Superior Eleitoral (TSE) por unidade da federação, incluindo votos nominais, percentuais e comparecimento eleitoral.
-              </p>
-            </div>
-
-            <div className="flex items-center gap-3">
-              {activeFilteredCandidate && (
-                <div className="flex items-center gap-2 bg-slate-100 text-slate-800 px-3 py-1.5 rounded-xl border border-slate-200 text-xs">
-                  <span>Filtro ativo:</span>
-                  <strong className="font-extrabold text-slate-900">
-                    {activeFilteredCandidate.popularName}
-                  </strong>
-                  <button
-                    onClick={() => onSelectCandidateFilter(null)}
-                    className="ml-1 min-h-[28px] min-w-[28px] inline-flex items-center justify-center rounded-md text-slate-500 hover:text-slate-900 hover:bg-slate-200 transition-colors font-black cursor-pointer text-sm"
-                    title="Remover filtro"
-                    aria-label="Remover filtro de candidato"
-                  >
-                    &times;
-                  </button>
-                </div>
-              )}
-
-              <PortalLink
-                route="estados"
-                className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-blue-900 hover:text-blue-950 px-3.5 py-2 rounded-xl border border-blue-200 bg-blue-50 hover:bg-blue-100 transition-colors"
-              >
-                <span>Ver página dedicada aos estados</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </PortalLink>
-            </div>
-          </div>
-
-          {/* Componente do Mapa SVG com Controles (Carregamento Sob Demanda) */}
-          <React.Suspense
-            fallback={
-              <div
-                className="w-full aspect-[4/3] sm:aspect-[16/9] bg-slate-100 rounded-2xl border border-slate-200/80 flex flex-col items-center justify-center p-8 animate-pulse text-slate-400"
-                aria-label="Carregando mapa interativo"
-              >
-                <MapPin className="w-8 h-8 mb-2 opacity-50" />
-                <span className="text-xs font-semibold text-slate-500">
-                  Carregando mapa interativo dos 26 estados e Distrito Federal...
-                </span>
-              </div>
-            }
-          >
-            <BrazilMap
-              dataset={dataset}
-              selectedStateUf={selectedStateUf}
-              onSelectState={(uf) => onSelectState(uf)}
-              candidateFilter={candidateFilter}
-              onSelectCandidateFilter={onSelectCandidateFilter}
-            />
-          </React.Suspense>
-        </div>
-      </section>
-
-      {/* 5. Gráficos Comparativos Regionais e Estados Decisivos */}
-      <React.Suspense
-        fallback={
-          <div className="py-12 bg-white border-b border-slate-200 animate-pulse">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="h-8 bg-slate-200 rounded w-1/3 mb-6" />
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="h-64 bg-slate-100 rounded-2xl border border-slate-200" />
-                <div className="h-64 bg-slate-100 rounded-2xl border border-slate-200" />
-              </div>
-            </div>
-          </div>
-        }
-      >
-        <RegionalCharts dataset={dataset} />
-      </React.Suspense>
-
-      {/* 6. Seção de Economia: Indicadores Oficiais IBGE e Banco Central + Bolsa de Valores (B3) */}
+      {/* 3. Seção de Economia: Indicadores Oficiais IBGE e Banco Central + Bolsa de Valores (B3) */}
       <div id="indicadores-economia">
         <EconomySection />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 mb-12">
@@ -252,18 +155,10 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </div>
 
-      {/* 7. Espaço Publicitário In-Feed */}
+      {/* 4. Espaço Publicitário In-Feed */}
       <AdBanner format="in-feed" />
 
-      {/* 8. Seção de Notícias e Análises Jornalísticas (com Últimas Notícias e Mais Lidas separadas) */}
-      <div id="cobertura-noticias">
-        <NewsSection
-          articles={articles}
-          onOpenArticleDetails={onOpenArticleDetails}
-        />
-      </div>
-
-      {/* 9. Preview do Caderno de Esportes */}
+      {/* 5. Preview do Caderno de Esportes */}
       <section id="esportes-preview" className="py-10 sm:py-14 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
@@ -339,7 +234,112 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
-      {/* 10. Tabela Geral de Resultados por Estado (26 Estados + DF) */}
+      {/* 6. Seção de Notícias e Análises Jornalísticas (com Últimas Notícias e Mais Lidas separadas) */}
+      <div id="cobertura-noticias">
+        <NewsSection
+          articles={articles}
+          onOpenArticleDetails={onOpenArticleDetails}
+        />
+      </div>
+
+      {/* 7. Eleições 2026: Painel do Arquivo Nacional (Totalização Oficial Homologada) */}
+      <div id="eleicoes-nacional">
+        <NationalBanner
+          dataset={dataset}
+          onOpenMethodology={onOpenMethodology}
+          selectedCandidateFilter={candidateFilter}
+          onSelectCandidateFilter={onSelectCandidateFilter}
+        />
+      </div>
+
+      {/* 8. Eleições 2026: Seção do Mapa Interativo de Votação (Brasil por Estado — Arquivo Histórico) */}
+      <section id="mapa-brasil" className="py-8 sm:py-12 bg-white border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+            <div>
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-900 mb-1.5">
+                <MapPin className="w-3.5 h-3.5 text-blue-700" />
+                <span>Arquivo Eleições 2026 · 26 Estados e Distrito Federal</span>
+              </div>
+              <h2 className="font-heading text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
+                Mapa Interativo de Votação por Estado
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 mt-1 max-w-2xl leading-relaxed">
+                Consulte os resultados oficiais e homologados pelo Tribunal Superior Eleitoral (TSE) por unidade da federação, incluindo votos nominais, percentuais e comparecimento eleitoral.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              {activeFilteredCandidate && (
+                <div className="flex items-center gap-2 bg-slate-100 text-slate-800 px-3 py-1.5 rounded-xl border border-slate-200 text-xs">
+                  <span>Filtro ativo:</span>
+                  <strong className="font-extrabold text-slate-900">
+                    {activeFilteredCandidate.popularName}
+                  </strong>
+                  <button
+                    onClick={() => onSelectCandidateFilter(null)}
+                    className="ml-1 min-h-[28px] min-w-[28px] inline-flex items-center justify-center rounded-md text-slate-500 hover:text-slate-900 hover:bg-slate-200 transition-colors font-black cursor-pointer text-sm"
+                    title="Remover filtro"
+                    aria-label="Remover filtro de candidato"
+                  >
+                    &times;
+                  </button>
+                </div>
+              )}
+
+              <PortalLink
+                route="estados"
+                className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-blue-900 hover:text-blue-950 px-3.5 py-2 rounded-xl border border-blue-200 bg-blue-50 hover:bg-blue-100 transition-colors"
+              >
+                <span>Ver página dedicada aos estados</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </PortalLink>
+            </div>
+          </div>
+
+          {/* Componente do Mapa SVG com Controles (Carregamento Sob Demanda) */}
+          <React.Suspense
+            fallback={
+              <div
+                className="w-full aspect-[4/3] sm:aspect-[16/9] bg-slate-100 rounded-2xl border border-slate-200/80 flex flex-col items-center justify-center p-8 animate-pulse text-slate-400"
+                aria-label="Carregando mapa interativo"
+              >
+                <MapPin className="w-8 h-8 mb-2 opacity-50" />
+                <span className="text-xs font-semibold text-slate-500">
+                  Carregando mapa interativo dos 26 estados e Distrito Federal...
+                </span>
+              </div>
+            }
+          >
+            <BrazilMap
+              dataset={dataset}
+              selectedStateUf={selectedStateUf}
+              onSelectState={(uf) => onSelectState(uf)}
+              candidateFilter={candidateFilter}
+              onSelectCandidateFilter={onSelectCandidateFilter}
+            />
+          </React.Suspense>
+        </div>
+      </section>
+
+      {/* 9. Eleições 2026: Gráficos Comparativos Regionais e Estados Decisivos */}
+      <React.Suspense
+        fallback={
+          <div className="py-12 bg-white border-b border-slate-200 animate-pulse">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="h-8 bg-slate-200 rounded w-1/3 mb-6" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="h-64 bg-slate-100 rounded-2xl border border-slate-200" />
+                <div className="h-64 bg-slate-100 rounded-2xl border border-slate-200" />
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <RegionalCharts dataset={dataset} />
+      </React.Suspense>
+
+      {/* 10. Eleições 2026: Tabela Geral de Resultados por Estado (26 Estados + DF) */}
       <div id="tabela-apuracao-estados">
         <React.Suspense
           fallback={

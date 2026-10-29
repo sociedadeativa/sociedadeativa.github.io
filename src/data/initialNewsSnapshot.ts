@@ -2,6 +2,54 @@ import { NewsItem } from "../types/news";
 
 export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
   {
+    "id": "ebc-1799001",
+    "title": "Brasil conquista título no circuito mundial de vôlei de praia",
+    "summary": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-conquista-titulo-volei-praia",
+    "publishedAt": "29/10/2026 às 14:52",
+    "category": "Esportes",
+    "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-volei.jpg",
+    "imageCaption": "Brasil conquista título no circuito mundial de vôlei de praia",
+    "imageCredit": "Pedro Ramos/Agência Brasil",
+    "imageAlt": "Brasil conquista título no circuito mundial de vôlei de praia",
+    "author": "Pedro Ramos/Agência Brasil",
+    "tags": [
+      "Vôlei",
+      "Esportes",
+      "Brasil"
+    ],
+    "headline": "Brasil conquista título no circuito mundial de vôlei de praia",
+    "lead": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
+    "content": [],
+    "ingestedAt": "29/10/2026 às 14:57"
+  },
+  {
+    "id": "ebc-1799002",
+    "title": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
+    "summary": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/flamengo-palmeiras-lideranca-brasileirao",
+    "publishedAt": "29/10/2026 às 14:47",
+    "category": "Esportes",
+    "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-futebol.jpg",
+    "imageCaption": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
+    "imageCredit": "Lucas Silva/Agência Brasil",
+    "imageAlt": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
+    "author": "Lucas Silva/Agência Brasil",
+    "tags": [
+      "Futebol",
+      "Brasileirão",
+      "Esportes"
+    ],
+    "headline": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
+    "lead": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
+    "content": [],
+    "ingestedAt": "29/10/2026 às 14:57"
+  },
+  {
     "id": "camara-1314738-comissao-aprova-projeto-para-a",
     "title": "Comissão aprova projeto para ampliar o acesso a remédios de uso contínuo no SUS",
     "summary": "Texto fixa diretrizes para acompanhar preços, garantir estoque e fiscalizar repasse de redução de impostos ao consumidor.",
@@ -23,55 +71,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão aprova projeto para ampliar o acesso a remédios de uso contínuo no SUS",
     "lead": "Texto fixa diretrizes para acompanhar preços, garantir estoque e fiscalizar repasse de redução de impostos ao consumidor.",
     "content": [],
-    "ingestedAt": "29/10/2026 às 14:43"
-  },
-  {
-    "id": "ebc-1799001",
-    "title": "Brasil conquista título no circuito mundial de vôlei de praia",
-    "summary": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-conquista-titulo-volei-praia",
-    "publishedAt": "29/10/2026 às 14:38",
-    "category": "Esportes",
-    "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-volei.jpg",
-    "imageCaption": "Brasil conquista título no circuito mundial de vôlei de praia",
-    "imageCredit": "Pedro Ramos/Agência Brasil",
-    "imageAlt": "Brasil conquista título no circuito mundial de vôlei de praia",
-    "author": "Pedro Ramos/Agência Brasil",
-    "tags": [
-      "Vôlei",
-      "Esportes",
-      "Brasil"
-    ],
-    "headline": "Brasil conquista título no circuito mundial de vôlei de praia",
-    "lead": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
-    "content": [],
-    "ingestedAt": "29/10/2026 às 14:43"
-  },
-  {
-    "id": "ebc-1799002",
-    "title": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
-    "summary": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/flamengo-palmeiras-lideranca-brasileirao",
-    "publishedAt": "29/10/2026 às 14:33",
-    "category": "Esportes",
-    "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-futebol.jpg",
-    "imageCaption": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
-    "imageCredit": "Lucas Silva/Agência Brasil",
-    "imageAlt": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
-    "author": "Lucas Silva/Agência Brasil",
-    "tags": [
-      "Futebol",
-      "Brasileirão",
-      "Esportes"
-    ],
-    "headline": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
-    "lead": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
-    "content": [],
-    "ingestedAt": "29/10/2026 às 14:43"
+    "ingestedAt": "29/10/2026 às 14:57"
   },
   {
     "id": "ebc-1707224",
@@ -121,7 +121,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Na 17ª edição, Festival de Cinema Francês forma olhares no Brasil",
     "lead": "Há 17 edições, o Festival de Cinema Francês aproxima culturas e amplia o acesso do público brasileiro a histórias que revelam diferentes maneiras de ver o mundo. A partir desta quinta-feira (29), a mostra exibe 21 filmes em mais de 50 cidades. A mostra vai até 11 de novembro.",
     "content": [],
-    "ingestedAt": "29/10/2026 às 14:43"
+    "ingestedAt": "29/10/2026 às 14:57"
   },
   {
     "id": "ebc-1707218",
@@ -147,7 +147,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Sob pressão de Trump, Cuba comemora aprovação na ONU contra bloqueio",
     "lead": "Mesmo com o placar mais desfavorável a Cuba em 30 anos, o embaixador do país caribenho no Brasil, Victor Manuel Cairo Palomo, comemorou a aprovação , na Assembleia Geral da Organização das Nações Unidas (ONU), da resolução contra o bloqueio econômico dos Estados Unidos (EUA).",
     "content": [],
-    "ingestedAt": "29/10/2026 às 14:43"
+    "ingestedAt": "29/10/2026 às 14:57"
   },
   {
     "id": "camara-1314736-comissao-aprova-reforco-no-apo",
