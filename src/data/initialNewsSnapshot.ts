@@ -8,7 +8,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-conquista-titulo-volei-praia",
-    "publishedAt": "29/10/2026 às 08:05",
+    "publishedAt": "29/10/2026 às 08:48",
     "category": "Esportes",
     "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-volei.jpg",
     "imageCaption": "Brasil conquista título no circuito mundial de vôlei de praia",
@@ -23,7 +23,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Brasil conquista título no circuito mundial de vôlei de praia",
     "lead": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
     "content": [],
-    "ingestedAt": "29/10/2026 às 08:10"
+    "ingestedAt": "29/10/2026 às 08:53"
   },
   {
     "id": "ebc-1799002",
@@ -32,7 +32,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/flamengo-palmeiras-lideranca-brasileirao",
-    "publishedAt": "29/10/2026 às 08:00",
+    "publishedAt": "29/10/2026 às 08:43",
     "category": "Esportes",
     "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-futebol.jpg",
     "imageCaption": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
@@ -47,7 +47,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
     "lead": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
     "content": [],
-    "ingestedAt": "29/10/2026 às 08:10"
+    "ingestedAt": "29/10/2026 às 08:53"
   },
   {
     "id": "ebc-1707152",
@@ -72,7 +72,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "PF cumpre no Rio novos mandados da Operação Unha e Carne",
     "lead": "Policiais Federais cumprem quatro mandados de busca e apreensão na nona fase da Operação Unha e Carne , nesta quinta-feira (29), na cidade do Rio de Janeiro .",
     "content": [],
-    "ingestedAt": "29/10/2026 às 08:10"
+    "ingestedAt": "29/10/2026 às 08:53"
   },
   {
     "id": "ebc-1707097",
@@ -97,7 +97,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Economistas criticam usar corte de gastos para conter dívida pública",
     "lead": "A trajetória da dívida pública brasileira, que saiu de 71,7% do Produto Interno Bruto (PIB) em 2022 para cerca de 82,9% do PIB em agosto de 2026, vem sendo apontada pelo mercado financeiro e por economistas considerados “liberais” ou “ortodoxos” como o “maior problema”.",
     "content": [],
-    "ingestedAt": "29/10/2026 às 08:10"
+    "ingestedAt": "29/10/2026 às 08:53"
   },
   {
     "id": "ebc-1707147",
@@ -123,7 +123,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Final brasileira garante 15º título do país na Libertadores Feminina",
     "lead": "A 18ª edição da Libertadores Feminina, a terceira com sede em Quito (Equador), terá, pela 15ª vez, um campeão brasileiro. Na noite dessa quarta-feira (28), o Cruzeiro venceu o Olimpia por 1 a 0 no Estádio Casa Blanca e se garantiu na final .",
     "content": [],
-    "ingestedAt": "29/10/2026 às 08:10"
+    "ingestedAt": "29/10/2026 às 08:53"
   },
   {
     "id": "ebc-1707146",
@@ -149,7 +149,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Remo volta a vencer após 12 jogos e complica Botafogo no Brasileirão",
     "lead": "O torcedor do Remo acordou nesta quinta-feira (29) acreditando no milagre. A vitória por 2 a 1 sobre o Botafogo, na noite de ontem (28), manteve o Leão Azul - que estava há 12 jogos sem ganhar pela competição - vivo na luta contra o declínio no Campeonato Brasileiro .",
     "content": [],
-    "ingestedAt": "29/10/2026 às 08:10"
+    "ingestedAt": "29/10/2026 às 08:53"
   },
   {
     "id": "ebc-1707144",
@@ -174,7 +174,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Aposta do Mato Grosso leva prêmio de mais de R$ 324 milhões da Mega",
     "lead": "Uma aposta de Rondonópolis (MT) acertou as seis dezenas do Concurso 3.077 da Mega-Sena, sorteado nesta quarta-feira (28), e faturou prêmio de mias de R$ 324 milhões. Os números sorteados são: 02 - 14 - 18 - 31 - 35 - 40 A quina teve 116 apostas ganhadoras.",
     "content": [],
-    "ingestedAt": "29/10/2026 às 08:10"
+    "ingestedAt": "29/10/2026 às 08:53"
   },
   {
     "id": "ebc-1707143",
@@ -200,7 +200,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Brasileirão: Palmeiras fica no zero com o Santos e Flamengo agradece",
     "lead": "A 33ª rodada do Campeonato Brasileiro teve início nesta quarta-feira (28), com o Clássico da Saudade, entre Santos e Palmeiras, na Vila Belmiro.",
     "content": [],
-    "ingestedAt": "29/10/2026 às 08:10"
+    "ingestedAt": "29/10/2026 às 08:53"
   },
   {
     "id": "ebc-1707138",
@@ -211,16 +211,20 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "articleUrl": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-10/morre-irene-santos-fotografa-e-pesquisadora-da-memoria-negra",
     "publishedAt": "28/10/2026 às 20:55",
     "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/5dTl-LvOV2PVtBjvpLXT-i7rqL8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/29/irene_figueiredo.jpg?itok=7Cr649mB",
+    "imageCaption": "Morre Irene Santos, fotógrafa e pesquisadora da memória negra",
+    "imageCredit": "Iara Balduino – Repórter da Agência Brasil",
+    "imageAlt": "Morre Irene Santos, fotógrafa e pesquisadora da memória negra",
     "author": "Iara Balduino – Repórter da Agência Brasil",
     "tags": [
       "Cultura",
       "Irene Santos",
-      "Obituário",
+      "obituário",
       "Política"
     ],
     "headline": "Morre Irene Santos, fotógrafa e pesquisadora da memória negra",
     "lead": "A fotógrafa, pesquisadora e historiadora Irene de Figueiredo Santos morreu nesta terça-feira (27), aos 78 anos, em Porto Alegre, mesma cidade em que nasceu e onde construiu uma carreira dedicada à imagem, à pesquisa histórica e à valorização da cultura afro-brasileira.",
     "content": [],
-    "ingestedAt": "29/10/2026 às 08:10"
+    "ingestedAt": "29/10/2026 às 08:53"
   }
 ];
