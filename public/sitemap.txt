@@ -9,6 +9,11 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1707342/
+https://sociedadeativa.github.io/noticias/ebc-1707337/
+https://sociedadeativa.github.io/noticias/ebc-1707334/
+https://sociedadeativa.github.io/noticias/ebc-1707331/
+https://sociedadeativa.github.io/noticias/ebc-1707330/
 https://sociedadeativa.github.io/noticias/ebc-1707326/
 https://sociedadeativa.github.io/noticias/ebc-1707325/
 https://sociedadeativa.github.io/noticias/ebc-1707324/
@@ -47,14 +52,9 @@ https://sociedadeativa.github.io/noticias/ebc-1707254/
 https://sociedadeativa.github.io/noticias/ebc-1707251/
 https://sociedadeativa.github.io/noticias/ebc-1707250/
 https://sociedadeativa.github.io/noticias/ebc-1707247/
-https://sociedadeativa.github.io/noticias/ebc-1707243/
-https://sociedadeativa.github.io/noticias/ebc-1707245/
 https://sociedadeativa.github.io/noticias/camara-1314937-comissao-aprova-medidas-para-f/
 https://sociedadeativa.github.io/noticias/camara-1314934-comissao-aprova-politica-nacio/
 https://sociedadeativa.github.io/noticias/camara-1314742-comissao-aprova-acessibilidade/
-https://sociedadeativa.github.io/noticias/ebc-1707241/
-https://sociedadeativa.github.io/noticias/ebc-1707239/
-https://sociedadeativa.github.io/noticias/camara-1314930-comissao-aprova-acessibilidade/
 https://sociedadeativa.github.io/noticias/bcb-21307-inscricoes-para-tres-vagas-do-/
 https://sociedadeativa.github.io/noticias/despesas-governo-federal-como-consultar-gastos-publicos/
 https://sociedadeativa.github.io/noticias/ibge-998877/
