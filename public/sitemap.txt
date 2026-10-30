@@ -9,6 +9,13 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1707313/
+https://sociedadeativa.github.io/noticias/ebc-1707308/
+https://sociedadeativa.github.io/noticias/ebc-1707307/
+https://sociedadeativa.github.io/noticias/ebc-1707304/
+https://sociedadeativa.github.io/noticias/ebc-1707301/
+https://sociedadeativa.github.io/noticias/ebc-1707296/
+https://sociedadeativa.github.io/noticias/ebc-1707297/
 https://sociedadeativa.github.io/noticias/ebc-1707291/
 https://sociedadeativa.github.io/noticias/ebc-1707286/
 https://sociedadeativa.github.io/noticias/ebc-1707287/
@@ -49,13 +56,6 @@ https://sociedadeativa.github.io/noticias/ebc-1707236/
 https://sociedadeativa.github.io/noticias/camara-1314884-comissao-aprova-regras-para-ga/
 https://sociedadeativa.github.io/noticias/ebc-1707232/
 https://sociedadeativa.github.io/noticias/camara-1314744-comissao-aprova-diretrizes-par/
-https://sociedadeativa.github.io/noticias/ebc-1707227/
-https://sociedadeativa.github.io/noticias/camara-1314738-comissao-aprova-projeto-para-a/
-https://sociedadeativa.github.io/noticias/ebc-1707224/
-https://sociedadeativa.github.io/noticias/ebc-1707221/
-https://sociedadeativa.github.io/noticias/ebc-1707218/
-https://sociedadeativa.github.io/noticias/camara-1314736-comissao-aprova-reforco-no-apo/
-https://sociedadeativa.github.io/noticias/ebc-1707219/
 https://sociedadeativa.github.io/noticias/despesas-governo-federal-como-consultar-gastos-publicos/
 https://sociedadeativa.github.io/noticias/ibge-998877/
 https://sociedadeativa.github.io/noticias/ibge-48339/
