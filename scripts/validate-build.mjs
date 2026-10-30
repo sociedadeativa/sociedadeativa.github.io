@@ -569,8 +569,33 @@ if (fs.existsSync('dist/noticias')) {
     // Validação de parágrafos disponíveis: a página estática gerada DEVE renderizar todos os parágrafos legítimos no corpo HTML
     if (article.content && Array.isArray(article.content) && article.content.length > 0) {
       const bodyHtml = html.split('<div id="root">')[1] || html;
+
+      // Extração de texto visível do corpo HTML do artigo (ignora scripts, estilos e tags HTML, decodifica entidades e normaliza espaços)
+      const decodeHtmlEntities = (str) =>
+        str
+          .replace(/&quot;/g, '"')
+          .replace(/&#39;/g, "'")
+          .replace(/&#039;/g, "'")
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+          .replace(/&nbsp;/g, ' ')
+          .replace(/&amp;/g, '&');
+
+      const visibleArticleText = decodeHtmlEntities(
+        bodyHtml
+          .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+          .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+          .replace(/<[^>]+>/g, ' ')
+      )
+        .replace(/\s+/g, ' ')
+        .trim();
+
       for (let i = 0; i < article.content.length; i++) {
-        const paragraph = article.content[i].trim();
+        const rawParagraph = article.content[i];
+        if (!rawParagraph || !rawParagraph.trim()) continue;
+
+        const paragraph = rawParagraph.trim();
+        const normalizedParagraph = decodeHtmlEntities(paragraph).replace(/\s+/g, ' ').trim();
         const pSample = paragraph.slice(0, Math.min(50, paragraph.length));
         const pSampleEscaped = pSample
           .replace(/&/g, '&amp;')
@@ -582,10 +607,9 @@ if (fs.existsSync('dist/noticias')) {
           .replace(/>/g, '&gt;');
 
         const isPresent =
-          bodyHtml.includes(pSample) ||
-          bodyHtml.includes(paragraph) ||
-          bodyHtml.includes(pSampleEscaped) ||
-          bodyHtml.includes(paragraphEscaped);
+          visibleArticleText.includes(normalizedParagraph) ||
+          bodyHtml.includes(paragraphEscaped) ||
+          bodyHtml.includes(pSampleEscaped);
 
         if (!isPresent) {
           console.error(`ERROR: ${articleHtmlPath} omitiu parágrafo de conteúdo ${i + 1}/${article.content.length} no corpo do artigo: "${pSample}..."`);
