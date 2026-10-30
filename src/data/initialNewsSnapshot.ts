@@ -8,7 +8,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-conquista-titulo-volei-praia",
-    "publishedAt": "30/10/2026 às 09:58",
+    "publishedAt": "30/10/2026 às 10:35",
     "category": "Esportes",
     "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-volei.jpg",
     "imageCaption": "Brasil conquista título no circuito mundial de vôlei de praia",
@@ -23,7 +23,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Brasil conquista título no circuito mundial de vôlei de praia",
     "lead": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
     "content": [],
-    "ingestedAt": "30/10/2026 às 10:03"
+    "ingestedAt": "30/10/2026 às 10:40"
   },
   {
     "id": "ebc-1799002",
@@ -32,7 +32,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/flamengo-palmeiras-lideranca-brasileirao",
-    "publishedAt": "30/10/2026 às 09:53",
+    "publishedAt": "30/10/2026 às 10:30",
     "category": "Esportes",
     "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-futebol.jpg",
     "imageCaption": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
@@ -47,7 +47,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
     "lead": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
     "content": [],
-    "ingestedAt": "30/10/2026 às 10:03"
+    "ingestedAt": "30/10/2026 às 10:40"
   },
   {
     "id": "ebc-1707286",
@@ -65,14 +65,40 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "author": "Agência Brasil",
     "tags": [
       "Economia",
-      "desemprego",
+      "Desemprego",
       "IBGE",
       "economia"
     ],
     "headline": "Desemprego de 5,2% no 3° trimestre é o menor para o período desde 2012",
     "lead": "A taxa de desocupação para o terceiro trimestre caiu para 5,2%, a menor já registrada para esse período desde 2012. O desemprego era de 5,4% no segundo trimestre deste ano e de 5,6% no terceiro trimestre de 2025.",
     "content": [],
-    "ingestedAt": "30/10/2026 às 10:03"
+    "ingestedAt": "30/10/2026 às 10:39"
+  },
+  {
+    "id": "ebc-1707287",
+    "title": "Preocupação com bronquiolite e vírus sincicial cresce entre gestantes",
+    "summary": "A percepção sobre o vírus sincicial respiratório (VSR), a bronquiolite e a dinâmica de imunização vem avançando no país desde 2024, segundo pesquisa feita com gestantes em todos os estados.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/preocupacao-com-bronquiolite-e-virus-sincicial-cresce-entre-gestantes",
+    "publishedAt": "30/10/2026 às 09:45",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/dLCT86H4upsD-hhshMuibcGbAgY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/nascer_nas_prisoes_fiocruz-1.jpg?itok=xmmSBOuZ",
+    "imageCaption": "Preocupação com bronquiolite e vírus sincicial cresce entre gestantes",
+    "imageCredit": "Guilherme Jeronymo - Repórter da Agência Brasil",
+    "imageAlt": "Preocupação com bronquiolite e vírus sincicial cresce entre gestantes",
+    "author": "Guilherme Jeronymo - Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "bronquiolite",
+      "vírus sincicial",
+      "gestantes",
+      "Idec"
+    ],
+    "headline": "Preocupação com bronquiolite e vírus sincicial cresce entre gestantes",
+    "lead": "A percepção sobre o vírus sincicial respiratório (VSR), a bronquiolite e a dinâmica de imunização vem avançando no país desde 2024, segundo pesquisa feita com gestantes em todos os estados.",
+    "content": [],
+    "ingestedAt": "30/10/2026 às 10:39"
   },
   {
     "id": "ebc-1707258",
@@ -98,7 +124,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Alunos da Escola de Música de Brasília se apresentam na Rádio MEC",
     "lead": "Em celebração ao Mês das Crianças, o programa Sala de Concerto , da Rádio MEC , leva ao ar uma edição especial diretamente da Escola de Música de Brasília.",
     "content": [],
-    "ingestedAt": "30/10/2026 às 10:03"
+    "ingestedAt": "30/10/2026 às 10:39"
   },
   {
     "id": "ebc-1707278",
@@ -124,7 +150,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Enade 2026: iniciantes devem preencher questionário até 18 de dezembro",
     "lead": "Os participantes do Exame Nacional de Desempenho dos Estudantes (Enade) 2026 devem preencher o Questionário do Ingressante a partir desta sexta-feira (30) até 18 de dezembro.",
     "content": [],
-    "ingestedAt": "30/10/2026 às 10:03"
+    "ingestedAt": "30/10/2026 às 10:39"
   },
   {
     "id": "ebc-1707276",
@@ -150,7 +176,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Chuvas fortes predominam nas regiões Sudeste e Centro-Oeste do país",
     "lead": "Chuvas intensas se concentram no Centro-Oeste e no Sudeste do país nesta sexta-feira (30).",
     "content": [],
-    "ingestedAt": "30/10/2026 às 10:03"
+    "ingestedAt": "30/10/2026 às 10:39"
   },
   {
     "id": "ebc-1707079",
@@ -176,7 +202,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Ato de estudantes da UFF deu pontapé em mobilização por virada de Lula",
     "lead": "\"O abalo e o espanto precisam se transformar em movimento\", dizia o cartaz de estudantes da Universidade Federal Fluminense (UFF) que convocava para um protesto em 5 de outubro, dia seguinte ao primeiro turno das eleições.",
     "content": [],
-    "ingestedAt": "30/10/2026 às 10:03"
+    "ingestedAt": "30/10/2026 às 10:39"
   },
   {
     "id": "ebc-1707091",
@@ -202,32 +228,6 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Série documental Ciência Flutuante estreia na TV Brasil nesta sexta",
     "lead": "O que acontece quando a ciência deixa o laboratório e segue o curso dos rios? Esse é o mote da série documental inédita Ciência Flutuante , que estreia na programação da TV Brasil nesta sexta-feira (30), às 23h.",
     "content": [],
-    "ingestedAt": "30/10/2026 às 10:03"
-  },
-  {
-    "id": "ebc-1707249",
-    "title": "Prêmio TV Brasil Petrobras Para Elas destaca gol mais bonito de 2026",
-    "summary": "Dos 435 gols marcados na edição 2026 do Campeonato Brasileiro Feminino de futebol, três foram selecionados para concorrer como o mais bonito da temporada no Prêmio TV Brasil Petrobras Para Elas. Os finalistas da categoria foram revelados nesta sexta-feira (30).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/premio-tv-brasil-petrobras-para-elas-destaca-gol-mais-bonito-de-2026",
-    "publishedAt": "30/10/2026 às 08:01",
-    "category": "Esportes",
-    "imageUrl": "https://imagens.ebc.com.br/QsDMo32tKqqrnJKxOqXAYaaV5FE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/29/foto-montagem-gol-mais-bonito.png?itok=XksUs6c4",
-    "imageCaption": "Prêmio TV Brasil Petrobras Para Elas destaca gol mais bonito de 2026",
-    "imageCredit": "Lincoln Chaves - Repórter da EBC",
-    "imageAlt": "Prêmio TV Brasil Petrobras Para Elas destaca gol mais bonito de 2026",
-    "author": "Lincoln Chaves - Repórter da EBC",
-    "tags": [
-      "Esportes",
-      "finalistas",
-      "gol mais bonito",
-      "Camila Pini",
-      "Vic Albuquerque"
-    ],
-    "headline": "Prêmio TV Brasil Petrobras Para Elas destaca gol mais bonito de 2026",
-    "lead": "Dos 435 gols marcados na edição 2026 do Campeonato Brasileiro Feminino de futebol, três foram selecionados para concorrer como o mais bonito da temporada no Prêmio TV Brasil Petrobras Para Elas. Os finalistas da categoria foram revelados nesta sexta-feira (30).",
-    "content": [],
-    "ingestedAt": "30/10/2026 às 10:03"
+    "ingestedAt": "30/10/2026 às 10:39"
   }
 ];
