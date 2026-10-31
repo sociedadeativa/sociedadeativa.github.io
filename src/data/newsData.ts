@@ -5,6 +5,138 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1707421",
+    "title": "Sistema Cantareira continuará a operar na faixa de atenção em novembro",
+    "summary": "Após as chuvas dos últimos meses, o volume útil do Sistema Cantareira, principal reservatório de São Paulo, chegou a 51,2% da capacidade na manhã deste sábado (31). É o maior volume alcançado pelo reservatório desde maio de 2025, quando o armazenamento estava em 52,7%.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-10/sistema-cantareira-continuara-operar-na-faixa-de-atencao-em-novembro",
+    "publishedAt": "31/10/2026 às 13:10",
+    "category": "Política",
+    "ingestedAt": "31/10/2026 às 14:05",
+    "imageUrl": "https://imagens.ebc.com.br/mhyuvQV2hMF5_AjWaHyhDFtJXGw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/10/01/0g0a5538_0.jpg?itok=lgBiDqsk",
+    "imageCaption": "Sistema Cantareira continuará a operar na faixa de atenção em novembro",
+    "imageCredit": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "imageAlt": "Sistema Cantareira continuará a operar na faixa de atenção em novembro",
+    "author": "Elaine Patricia Cruz – Repórter da Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "Sistema Cantareira",
+      "São Paulo",
+      "faixa de atenção",
+      "chuvas"
+    ],
+    "content": [
+      "Após as chuvas dos últimos meses, o volume útil do Sistema Cantareira, principal reservatório de São Paulo, chegou a 51,2% da capacidade na manhã deste sábado (31). É o maior volume alcançado pelo reservatório desde maio de 2025, quando o armazenamento estava em 52,7%.",
+      "Apesar do aumento da capacidade, o Cantareira vai continuar operando no sistema de atenção durante o mês de novembro, segundo a Agência Nacional de Águas e Saneamento Básico (ANA) e a Agência de Águas do Estado de São Paulo (SP Águas). A faixa de atenção é estabelecida quando o nível do reservatório fica entre 40% e 60%.",
+      "Neste ano, o Cantareira vinha apresentando nível de armazenamento preocupante, mas com as chuvas recordes de setembro e as de outubro, conseguiu melhorar sua capacidade.",
+      "Quando está na faixa de atenção , a Sabesp - companhia privada que administra o sistema - só pode retirar até 31 metros cúbicos por segundo (m³/s) do reservatório. Em condições de normalidade, a captação pode chegar a 33m³/s.",
+      "A Agência Nacional de Águas e Saneamento Básico (ANA) e a Agência de Águas do Estado de São Paulo (SP Águas) acompanham diariamente os dados de níveis, vazões e armazenamento do reservatório. A medida obedece critérios que foram definidos pela Resolução Conjunta nº 925/2017 , elaborada logo após a crise hídrica no estado paulista nos anos de 2014 e de 2015.",
+      "A resolução estabelece que a captação de água do Sistema Cantareira fosse condicionada ao nível de armazenamento de água do manancial observada no último dia de cada mês.",
+      "Para isso, foram criadas cinco faixas: normal, quando o nível do reservatório é igual ou maior que 60%; atenção, quando é igual ou maior que 40% e menor que 60%; alerta, quando está maior que 30% e menor que 40%; restrição, quando é maior que 20% e menor que 30%; e especial, quando o volume acumulado é menor que 20%. As faixas orientam os limites de retirada de água do sistema.",
+      "O Sistema Cantareira é composto por cinco reservatórios interligados - Jaguari, Jacareí, Cachoeira, Atibainha e Paiva Castro - com volume útil total de 981,56 bilhões de litros. Desde 2018, conta também com a interligação entre a represa Jaguari (no rio Paraíba do Sul) e a represa Atibainha.",
+      "O sistema abastece cerca de metade da população da região metropolitana de São Paulo e, segundo a ANA, contribui ainda para o atendimento dos usos múltiplos da água, com destaque para o abastecimento de Campinas, nas bacias dos rios Piracicaba, Capivari e Jundiaí.",
+      "Embora os reservatórios estejam localizados integralmente em território paulista, parte das águas que os alimentam provém de rios de domínio da União, por terem nascentes e trechos no estado de Minas Gerais, compondo a bacia dos rios Piracicaba, Capivari e Jundiaí."
+    ]
+  },
+  {
+    "id": "ebc-1707338",
+    "title": "Inscrições para Prêmio Desenvolvimento em Jogo terminam neste domingo",
+    "summary": "Termina neste domingo (1º) o prazo para interessados se inscreverem no Prêmio Desenvolvimento em Jogo, promovido pelo Ministério da Integração e do Desenvolvimento Regional.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/inscricoes-para-premio-desenvolvimento-em-jogo-terminam-neste-domingo",
+    "publishedAt": "31/10/2026 às 12:33",
+    "category": "Governo",
+    "ingestedAt": "31/10/2026 às 14:05",
+    "imageUrl": "https://imagens.ebc.com.br/VB2qXoTWPWtOHDyjB8e5cMcLaug=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/raf04143_0.jpg?itok=XAmVDsLh",
+    "imageCaption": "Inscrições para Prêmio Desenvolvimento em Jogo terminam neste domingo",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Inscrições para Prêmio Desenvolvimento em Jogo terminam neste domingo",
+    "author": "Agência Brasil",
+    "tags": [
+      "Geral",
+      "Governo",
+      "Brasil"
+    ],
+    "content": [
+      "Termina neste domingo (1º) o prazo para interessados se inscreverem no Prêmio Desenvolvimento em Jogo, promovido pelo Ministério da Integração e do Desenvolvimento Regional.",
+      "Podem participar docentes, facilitadores e educadores das redes formal e não formal de ensino que utilizam o jogo desenvolvido pela pasta em atividades educativas, projetos de extensão universitária ou oficinas comunitárias.",
+      "Inspirado nas dinâmicas de RPG, o jogo busca estimular debates sobre políticas públicas, redução de desigualdades territoriais e cooperação regional no Brasil. As experiências devem considerar as características e os desafios das localidades em que o jogo foi aplicado.",
+      "RPG vem do inglês Role-Playing Game, ou Jogo de Interpretação de Papéis, na tradução livre em português. É um estilo de jogo em que os participantes assumem o papel de personagens em um universo fictício e constroem uma história de forma colaborativa.",
+      "Mais informações sobre o jogo e o edital do prêmio estão disponíveis na página do Ministério da Integração e do Desenvolvimento Regional .",
+      "A participação no prêmio é gratuita e o cadastro deve ser feito por meio de formulário eletrônico . O resultado final será divulgado em 2 de dezembro.",
+      "Os autores das melhores experiências receberão troféu e certificação institucional emitida pelo ministério. Além disso, os vencedores participarão de uma cerimônia oficial de premiação e de um seminário de intercâmbio de experiências em Brasília, agendado para os dias 2 e 3 de dezembro."
+    ]
+  },
+  {
+    "id": "ebc-1707379",
+    "title": "Vieira encontra Rubio nos EUA após vitória de Lula e fuga de Flávio",
+    "summary": "A reunião de chanceleres do G20 em Atlanta, nos Estados Unidos (EUA), serviu de oportunidade para o primeiro encontro do ministro de relações exteriores do Brasil, Mauro Vieira, com o secretário de Estado dos EUA, Marco Rubio, logo após a reeleição do presidente Luiz Inácio.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/vieira-encontra-rubio-nos-eua-apos-vitoria-de-lula-e-fuga-de-flavio",
+    "publishedAt": "31/10/2026 às 11:48",
+    "category": "Política",
+    "ingestedAt": "31/10/2026 às 14:05",
+    "imageUrl": "https://imagens.ebc.com.br/lWEyxi2m_F4627bEH8ju151xlcw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/10/01/lula8581.jpg?itok=Dc6P-yUh",
+    "imageCaption": "Vieira encontra Rubio nos EUA após vitória de Lula e fuga de Flávio",
+    "imageCredit": "Lucas Pordeus León - Repórter da Agência Brasil",
+    "imageAlt": "Vieira encontra Rubio nos EUA após vitória de Lula e fuga de Flávio",
+    "author": "Lucas Pordeus León - Repórter da Agência Brasil",
+    "tags": [
+      "Política",
+      "Mauro Vieira",
+      "Marco Rubio",
+      "chanceleres",
+      "G20"
+    ],
+    "content": [
+      "A reunião de chanceleres do G20 em Atlanta, nos Estados Unidos (EUA), serviu de oportunidade para o primeiro encontro do ministro de relações exteriores do Brasil, Mauro Vieira, com o secretário de Estado dos EUA, Marco Rubio, logo após a reeleição do presidente Luiz Inácio Lula da Silva e a saída do país do candidato derrotado Flávio Bolsonaro.",
+      "Os dois chefes das diplomacias de Brasil e EUA se encontraram no coquetel de recepção de boas-vindas à reunião de ministros de Relações Exteriores do G20, grupo que reúne as principais economias do planeta, na noite de sexta-feira (30).",
+      "O ministro Vieira e o secretário Rubio conversaram rapidamente e combinaram uma reunião bilateral entre os dois antes da cúpula do G20, marcada para ocorrer nos dias 14 e 15 de dezembro, em Miami, nos EUA.",
+      "Como está na presidência do G20 em 2026, a Casa Branca realiza a reunião de chanceleres em Atlanta entre a sexta-feira (30) e o sábado (31) para debater temas da geopolítica, do mercado de energia e das cadeias de suprimentos globais.",
+      "A conversar de Marco Rúbio e Mauro Vieira ocorre em um contexto diplomaticamente delicado, uma vez que o presidente Donald Trump evitou reconhecer a vitória de Lula nas eleições e deu permissão para Flávio Bolsonaro - que evita reconhecer a derrota - para entrar nos EUA após a Justiça brasileira proibir a saída do senador do país.",
+      "Parlamentares democratas de oposição à Trump enviaram carta à Rubio questionando sobre a suposta ajuda da Casa Branca à viagem de Flávio Bolsonaro até os EUA. O senador deixou o Brasil em meio a investigações contra ele por lavagem de dinheiro, corrupção e evasão de divisas. Flávio nega qualquer irregularidade.",
+      "Durante a sexta-feira (30), Mauro Vieira participou da sessão de abertura do encontro de chanceleres do G20 e teve reuniões bilaterais com ministros de relações exteriores da Índia, Subrahmanyam Jaishankar, do Reino Unido, Ed Miliband, e da Polônia, Radosław Sikorski.",
+      "Os três chanceleres cumprimentaram Vieira pela conclusão do processo eleitoral no Brasil e pela reeleição de Luiz Inácio Lula da Silva, segundo divulgou o Itamaraty em uma rede social.",
+      "“Jaishankar [chanceler indiano] cumprimentou Mauro Vieira pela conclusão do processo eleitoral no Brasil. O indiano pediu transmitir ao Presidente Lula as calorosas congratulações do Primeiro-Ministro Narendra Modi pelo triunfo eleitoral”, escreveu o ministério.",
+      "Derrotado nas urnas no dia 25 de outubro, Flávio deixou o país após a Polícia Federal pedir o confisco do passaporte do parlamentar por entender que ele poderia fugir em função dos processos que enfrenta na Justiça.",
+      "O senador fluminense é investigado sobre o pagamento de R$ 60 milhões feito pelo banqueiro Daniel Vorcaro do Banco Master para supostamente fazer um filme Dark Horse, que conta a história do pai, o ex-presidente Jair Bolsonaro.",
+      "Em outro processo , a PF investiga as relações do político do PL com o advogado Willer Tomaz, dono de bet acusado de lavagem de dinheiro e de envolvimento na fraude do INSS de desvio de aposentadoria e pensões. Willer teve mais de R$ 6 bilhões bloqueados pela Justiça."
+    ]
+  },
+  {
+    "id": "ebc-1707356",
+    "title": "Inmet alerta para chuvas no Norte, Sudeste e Centro-Oeste",
+    "summary": "O Instituto Nacional de Meteorologia (Inmet) divulgou alertas de perigo potencial de chuvas intensas neste sábado (31) em diversos partes do país. O aviso amarelo vale para partes do Sudeste, Norte e Centro-Oeste, além do sul da Bahia.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/inmet-alerta-para-chuvas-no-norte-sudeste-e-centro-oeste",
+    "publishedAt": "31/10/2026 às 11:14",
+    "category": "Política",
+    "ingestedAt": "31/10/2026 às 14:05",
+    "imageUrl": "https://imagens.ebc.com.br/9BCQTP13fHy3EMzWlNn8_QjDdy0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/03/22/temporalrj_19.jpg?itok=RSn-m6e5",
+    "imageCaption": "Inmet alerta para chuvas no Norte, Sudeste e Centro-Oeste",
+    "imageCredit": "Vitor Abdala – Repórter da Agência Brasil",
+    "imageAlt": "Inmet alerta para chuvas no Norte, Sudeste e Centro-Oeste",
+    "author": "Vitor Abdala – Repórter da Agência Brasil",
+    "tags": [
+      "Geral",
+      "meteorologia",
+      "previsão do tempo",
+      "Política"
+    ],
+    "content": [
+      "O Instituto Nacional de Meteorologia (Inmet) divulgou alertas de perigo potencial de chuvas intensas neste sábado (31) em diversos partes do país. O aviso amarelo vale para partes do Sudeste, Norte e Centro-Oeste, além do sul da Bahia.",
+      "A previsão é de chuvas de até 50 milímetros (mm) por dia e ventos intensos, de até 60 quilômetros por hora (km/h).",
+      "No Sudeste, o alerta vale para todo o estado do Espírito Santo e partes do Rio de Janeiro, Minas Gerais e Bahia.",
+      "No Norte e Centro-Oeste, as o aviso indica que fortes podem afetar todo o território dos estados de Rondônia e Acre, além de partes do Amazonas, Pará e Tocantins e Mato Grosso.",
+      "Neste domingo (1º), há alerta de perigo potencial de tempestade para Sul, Sudeste e Centro-Oeste. Além das chuvas e ventos intensos, há possibilidade de granizo em algumas localidades.",
+      "O aviso vale para o Distrito Federal , quase todo o estado do Mato Grosso do Sul, além de partes do Paraná, São Paulo, Minas Gerais e Goiás."
+    ]
+  },
+  {
     "id": "ebc-1707309",
     "title": "Programa oferece cursos gratuitos sobre IA para professores",
     "summary": "Professores da educação básica e do ensino superior poderão participar de cursos gratuitos sobre inteligência artificial (IA), ferramentas digitais e segurança no ambiente online .",
@@ -37,7 +169,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   },
   {
     "id": "ebc-1707353",
-    "title": "Alcolumbre marca votação da PEC da segurança pública para terça-feira",
+    "title": "Alcolumbre marca votação da PEC da Segurança Pública para terça-feira",
     "summary": "O presidente do Senado, Davi Alcolumbre (União-AP), marcou para próxima terça-feira (3) a votação da Proposta de Emenda à Constituição (PEC) 18 de 2025, conhecida como PEC da Segurança Pública.",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
@@ -46,14 +178,14 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "category": "Eleições",
     "ingestedAt": "31/10/2026 às 11:28",
     "imageUrl": "https://imagens.ebc.com.br/5LpP5p9nYcL-v62bia859qB_oJ4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/06/18/0d9a6922.jpg?itok=MnA5xpUn",
-    "imageCaption": "Alcolumbre marca votação da PEC da segurança pública para terça-feira",
+    "imageCaption": "Alcolumbre marca votação da PEC da Segurança Pública para terça-feira",
     "imageCredit": "Lucas Pordeus León - Repórter da Agência Brasil",
-    "imageAlt": "Alcolumbre marca votação da PEC da segurança pública para terça-feira",
+    "imageAlt": "Alcolumbre marca votação da PEC da Segurança Pública para terça-feira",
     "author": "Lucas Pordeus León - Repórter da Agência Brasil",
     "tags": [
       "Política",
       "Alcolumbre",
-      "Votação",
+      "votação",
       "PEC da Segurança Pública",
       "Eleições"
     ],
@@ -1419,38 +1551,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
-    "id": "ebc-1707229",
-    "title": "Receita paga nesta sexta-feira lote da malha fina do Imposto de Renda",
-    "summary": "Cerca de 184 mil contribuintes que caíram na malha fina e regularizaram as pendências com o Fisco acertaram as contas com o Leão. A Receita Federal paga nesta sexta-feira (30) o lote da malha fina de outubro. O lote também contempla restituições residuais de anos anteriores.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/receita-paga-nesta-sexta-feira-lote-da-malha-fina-do-imposto-de-renda",
-    "publishedAt": "30/10/2026 às 07:10",
-    "category": "Economia",
-    "ingestedAt": "30/10/2026 às 11:47",
-    "imageUrl": "https://imagens.ebc.com.br/uKX49-O7c6wbIMzfsIhaLX5OMw8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/24/_mg_6811.jpg?itok=jzzX6lGR",
-    "imageCaption": "Receita paga nesta sexta-feira lote da malha fina do Imposto de Renda",
-    "imageCredit": "Wellton Máximo - Repórter da Agência Brasil",
-    "imageAlt": "Receita paga nesta sexta-feira lote da malha fina do Imposto de Renda",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "Receita Federal",
-      "Imposto de Renda",
-      "malha fina",
-      "fisco"
-    ],
-    "content": [
-      "Cerca de 184 mil contribuintes que caíram na malha fina e regularizaram as pendências com o Fisco acertaram as contas com o Leão. A Receita Federal paga nesta sexta-feira (30) o lote da malha fina de outubro. O lote também contempla restituições residuais de anos anteriores.",
-      "O pagamento será feito ao longo do dia. Ao todo, 184.442 contribuintes recebem R$ 531,6 milhões. Desse total, R$ 293,4 milhões vão para contribuintes com prioridade legal no reembolso.",
-      "As restituições estão distribuídas da seguinte forma:",
-      "Aberta desde o dia 23 , a consulta pode ser feita na página da Receita Federal na internet . Basta o contribuinte clicar em “Meu Imposto de Renda” e, em seguida, no botão “Consultar a Restituição”. Também é possível fazer a consulta no aplicativo da Receita Federal para tablets e smartphones.",
-      "O pagamento será feito na conta ou na chave Pix do tipo CPF informada na declaração do Imposto de Renda. Caso o contribuinte não esteja na lista, deverá entrar no Centro Virtual de Atendimento ao Contribuinte (e-CAC) e tirar o extrato da declaração. Se verificar uma pendência, pode enviar uma declaração retificadora e esperar os próximos lotes da malha fina.",
-      "Se, por algum motivo, a restituição não for depositada na conta informada na declaração, como no caso de conta desativada, os valores ficarão disponíveis para resgate por até um ano no Banco do Brasil. Nesse caso, o cidadão poderá agendar o crédito em qualquer conta bancária em seu nome, por meio do Portal BB ou ligando para a Central de Relacionamento do banco, nos telefones 4004-0001 (capitais), 0800-729-0001 (demais localidades) e 0800-729-0088 (telefone especial exclusivo para deficientes auditivos).",
-      "Caso o contribuinte não resgate o valor de sua restituição depois de um ano, deverá requerer o valor no Portal e-CAC. Ao entrar na página, o cidadão deve acessando o menu “Declarações e Demonstrativos”, clicar em “Meu Imposto de Renda” e, em seguida, no campo \"Solicitar restituição não resgatada na rede bancária\"."
-    ]
-  },
-  {
     "id": "ebc-1707274",
     "title": "TV Brasil transmite SP x Ferroviária, semifinal do Paulista Sub-20",
     "summary": "A TV Brasil exibe nesta sexta-feira (30) o jogo de ida da semifinal entre São Paulo e Ferroviária pelo Paulista F Sub-20 Petrobras. A transmissão na emissora pública da Empresa Brasil de Comunicação (EBC) comaeça às 20h45. A partida ocorre na cidade de Santana do Parnaíba (SP).",
@@ -1484,108 +1584,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "A votação da categoria com voto popular já está aberta, é gratuita e tem votos ilimitados! Acesse ebc.com.br/premiotvbrasilpetrobrasparaelas até 31 de outubro.",
       "Acompanhe a programação da TV Brasil pelo canal aberto, TV por assinatura e parabólica. Sintonize: https://tvbrasil.ebc.com.br/comosintonizar .",
       "Seus programas favoritos estão no TV Brasil Play , pelo site http://tvbrasilplay.com.br ou por aplicativo no smartphone. O app pode ser baixado gratuitamente e está disponível para Android e iOS. Assista também pela WebTV : https://tvbrasil.ebc.com.br/webtv ."
-    ]
-  },
-  {
-    "id": "ebc-1707273",
-    "title": "Mega-Sena não tem ganhador e prêmio sobe para R$ 6 milhões",
-    "summary": "Nenhum apostador acertou as seis dezenas do Concurso 3.078 da Mega-Sena, sorteado nesta quinta-feira (29). O prêmio acumulou novamente e está estimado em R$ 6 milhões para a nova rodada. Os números sorteados são: 05 - 07 - 12 - 29 - 34 - 36 A quina teve 31 apostas ganhadoras.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/mega-sena-nao-tem-ganhador-e-premio-sobe-para-r-6-milhoes",
-    "publishedAt": "29/10/2026 às 22:03",
-    "category": "Economia",
-    "ingestedAt": "30/10/2026 às 06:43",
-    "imageUrl": "https://imagens.ebc.com.br/P7lxcGm8k6UohJ5Os3uzi8kr8QQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/mega_sena_mcajr_abr_2904223680.jpg?itok=vZ2eHAv_",
-    "imageCaption": "Mega-Sena não tem ganhador e prêmio sobe para R$ 6 milhões",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Mega-Sena não tem ganhador e prêmio sobe para R$ 6 milhões",
-    "author": "Agência Brasil",
-    "tags": [
-      "Economia",
-      "Loteria",
-      "Mega-Sena",
-      "Concurso 3078"
-    ],
-    "content": [
-      "Nenhum apostador acertou as seis dezenas do Concurso 3.078 da Mega-Sena, sorteado nesta quinta-feira (29). O prêmio acumulou novamente e está estimado em R$ 6 milhões para a nova rodada.",
-      "Os números sorteados são: 05 - 07 - 12 - 29 - 34 - 36",
-      "A quina teve 31 apostas ganhadoras. Cada uma receberá R$ 20.770,47. A quadra saiu para 2.333 apostas, no valor de R$ 394,27 cada.",
-      "O próximo concurso será nesta sexta-feira (30).",
-      "Durante esta semana, correram sorteios da Mega-Sena. A ação especial teve sorteios (concursos 3075, 3076, 3077, 3078 e 3079) de segunda a sexta-feira, substituindo o calendário regular.",
-      "As regras para aposta e prêmios não mudam. Os interessados devem apostar até as 20h e os sorteios serão realizados às 21h no horário de Brasília. A aposta simples, de seis números, custa R$ 6.",
-      "As apostas na Mega-Sena podem ser feitas nas casas lotéricas de todo o país, no site e no aplicativo Loterias CAIXA e no Internet Banking.",
-      "Após a semana especial, a Mega-Sena retomará seu calendário regular de sorteios e abrirá as vendas da Mega da Virada 2026."
-    ]
-  },
-  {
-    "id": "ebc-1707272",
-    "title": "Fachin devolve relatoria do caso do INSS a Mendonça e mantém Master",
-    "summary": "O presidente do Supremo Tribunal Federal (STF), ministro Edson Fachin, decidiu nesta quinta-feira (29) devolver a relatoria das investigações sobre os descontos ilegais nos benefícios do INSS ao ministro André Mendonça.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/fachin-devolve-relatoria-do-caso-do-inss-mendonca-e-mantem-master",
-    "publishedAt": "29/10/2026 às 21:48",
-    "category": "Justiça",
-    "ingestedAt": "30/10/2026 às 06:43",
-    "imageUrl": "https://imagens.ebc.com.br/YR93avVmMxcrHslwkCO49_BhVhk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/02/02/abertura-stf-mc_abr_30012026-9.jpg?itok=qTwq3VDS",
-    "imageCaption": "Fachin devolve relatoria do caso do INSS a Mendonça e mantém Master",
-    "imageCredit": "André Richter - Repórter da Agência Brasil",
-    "imageAlt": "Fachin devolve relatoria do caso do INSS a Mendonça e mantém Master",
-    "author": "André Richter - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "INSS",
-      "stf",
-      "Banco Master",
-      "Edson Fachin"
-    ],
-    "content": [
-      "O presidente do Supremo Tribunal Federal (STF), ministro Edson Fachin, decidiu nesta quinta-feira (29) devolver a relatoria das investigações sobre os descontos ilegais nos benefícios do INSS ao ministro André Mendonça.",
-      "Na decisão, Fachin entendeu que não há mais motivos para retenção das investigações na presidência do Supremo.",
-      "Em setembro, o caso foi retirado de Mendonça após a guerra de liminares envolvendo o pedido de investigação contra o ministro Alexandre de Moraes, que é citado em mensagens obtidas pela Polícia Federal (PF) no celular do ex-banqueiro Daniel Vorcaro.",
-      "Fachin também decidiu que as investigações que envolvem o Banco Master vão continuam sob sua relatoria temporária pelo prazo de 90 dias, contatos a partir de 12 de setembro.",
-      "No entendimento do presidente, o caso ainda não pode ser distribuído entre os demais ministros porque envolve citações a membros da Corte.",
-      "Os processos do Master também foram retirados de Mendonça no auge da crise interna no Supremo.",
-      "A decisão de Fachin será submetida a referendo do plenário. A data do julgamento ainda não foi definida.",
-      "Enquanto o caso Master permanecer na presidência da Corte, Fachin será responsável por medidas urgentes que eventualmente foram solicitadas pela Polícia Federal (PF) ou a Procuradoria-Geral da República (PGR), como pedidos de revogação de prisões e autorizações de diligências."
-    ]
-  },
-  {
-    "id": "ebc-1707268",
-    "title": "Defesa diz que 657 arquivos do celular de Vorcaro foram modificados",
-    "summary": "A defesa de Daniel Vorcaro entregou nesta quinta-feira (29) ao Supremo Tribunal Federal (STF) uma perícia particular realizada no aparelho celular do ex-banqueiro, que foi apreendido pela Polícia Federal (PF) no dia 17 de novembro de 2025.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/defesa-diz-que-arquivos-do-celular-de-vorcaro-foram-modificados",
-    "publishedAt": "29/10/2026 às 20:38",
-    "category": "Justiça",
-    "ingestedAt": "29/10/2026 às 21:38",
-    "imageUrl": "https://imagens.ebc.com.br/T9os5oCwKA0KZqEFFiRKUGApL3Y=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/13/daniel_vorcaro03.jpg?itok=QYwh2b1H",
-    "imageCaption": "Defesa diz que 657 arquivos do celular de Vorcaro foram modificados",
-    "imageCredit": "André Richter - Repórter da Agência Brasil",
-    "imageAlt": "Defesa diz que 657 arquivos do celular de Vorcaro foram modificados",
-    "author": "André Richter - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Daniel Vorcaro",
-      "BRB",
-      "stf"
-    ],
-    "content": [
-      "A defesa de Daniel Vorcaro entregou nesta quinta-feira (29) ao Supremo Tribunal Federal (STF) uma perícia particular realizada no aparelho celular do ex-banqueiro, que foi apreendido pela Polícia Federal (PF) no dia 17 de novembro de 2025.",
-      "O laudo apresentado concluiu que centenas de arquivos foram criados e modificados após a apreensão do aparelho , que é a principal prova das relações de Vorcaro com políticos e das supostas irregularidades financeiras no Banco Regional de Brasília (BRB).",
-      "De acordo com o documento, 657 arquivos que estavam no celular foram modificados e 436 criados.",
-      "Para os advogados de Vorcaro, a perícia demonstra que não é possível verificar a integralidade do conteúdo do celular apreendido e avaliar o alcance das alterações nos arquivos.",
-      "Diante das conclusões periciais, a defesa pediu ao Supremo que a PF entregue os dados originais do celular para verificação e ressaltou que a soltura do ex-banqueiro é obrigatória após as revelações do laudo particular.",
-      "\"É inconcebível que Daniel Vorcaro esteja custodiado há mais oito meses, com a liberdade restringida há quase um ano, sem que haja contra ele qualquer acusação formal ou perspectiva de processo, o que torna sua soltura urgente, necessária e obrigatória\", afirmou a defesa.",
-      "Segundo o pedido, o registro de modificação, isoladamente, não permite concluir que a alteração tenha sido realizada diretamente por uma pessoa. “Evidencia, contudo, que o estado do arquivo foi alterado enquanto o aparelho se encontrava sob custódia estatal”.",
-      "Vorcaro e mais 14 investigados na Operação Compliance foram indiciados pela PF nesta quarta-feira (28). De acordo como o relatório do indiciamento da Polícia Federal, o ex-banqueiro teve \"participação pessoal, reiterada e diretiva\" nas operações com carteiras de créditos irregulares do Banco Master que causam prejuízos ao BRB.",
-      "\"Na condição de controlador do Banco Master, Vorcaro ocupava o centro decisório da estrutura examinada e era o principal beneficiário econômico das operações destinadas à obtenção de liquidez para a instituição\", concluiu a PF.",
-      "Todos os investigados foram acusados dos crimes de gestão fraudulenta de instituição financeira, organização criminosa e lavagem de dinheiro.",
-      "Após o indiciamento, os advogados do ex-banqueiro negaram que as operações do BRB tenham causado prejuízo ao banco público.",
-      "Na avaliação dos advogados, um ano após o início das investigações, a PF se \"limita a repetir a mesma narrativa\" e não conseguiu avançar nas investigações.",
-      "\"O negócio envolvendo as carteiras da Tirreno não foi concluído. As carteiras foram substituídas por outros ativos, e a troca realizada demonstra que os negócios entre o Banco Master e o BRB geraram resultados positivos para o Banco de Brasília. Nenhuma perícia oficial apurou qualquer prejuízo\", afirmou a defesa."
     ]
   },
   {
