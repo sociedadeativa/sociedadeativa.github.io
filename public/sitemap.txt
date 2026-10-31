@@ -9,6 +9,8 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1707346/
+https://sociedadeativa.github.io/noticias/ebc-1707344/
 https://sociedadeativa.github.io/noticias/ebc-1707342/
 https://sociedadeativa.github.io/noticias/ebc-1707337/
 https://sociedadeativa.github.io/noticias/ebc-1707334/
@@ -50,8 +52,6 @@ https://sociedadeativa.github.io/noticias/ebc-1707262/
 https://sociedadeativa.github.io/noticias/ebc-1707259/
 https://sociedadeativa.github.io/noticias/ebc-1707254/
 https://sociedadeativa.github.io/noticias/ebc-1707251/
-https://sociedadeativa.github.io/noticias/ebc-1707250/
-https://sociedadeativa.github.io/noticias/ebc-1707247/
 https://sociedadeativa.github.io/noticias/camara-1314937-comissao-aprova-medidas-para-f/
 https://sociedadeativa.github.io/noticias/camara-1314934-comissao-aprova-politica-nacio/
 https://sociedadeativa.github.io/noticias/camara-1314742-comissao-aprova-acessibilidade/
