@@ -6,7 +6,7 @@
   "season": "2026",
   "source": "football-data.org (v4 API)",
   "isReal": true,
-  "lastUpdated": "2026-10-31T21:24:59.297Z",
+  "lastUpdated": "2026-11-01T09:32:19.030Z",
   "standings": [
     {
       "position": 1,
@@ -6958,37 +6958,6 @@
       "disclaimer": "Dados Oficiais football-data.org"
     },
     {
-      "id": "footballdata-554942",
-      "fixtureId": 554942,
-      "tournamentId": "brasileirao-a",
-      "tournamentName": "Brasileirão Série A",
-      "phase": "21ª Rodada",
-      "status": "agendado",
-      "homeTeam": {
-        "id": 1772,
-        "name": "Chapecoense",
-        "shortName": "Chapecoense",
-        "logo": "https://crests.football-data.org/1772_large.png",
-        "initials": "CHA",
-        "color": "bg-slate-800 text-white"
-      },
-      "awayTeam": {
-        "id": 1780,
-        "name": "Vasco da Gama",
-        "shortName": "Vasco da Gama",
-        "logo": "https://crests.football-data.org/1780.png",
-        "initials": "VAS",
-        "color": "bg-slate-700 text-white"
-      },
-      "date": "28/07/2026",
-      "time": "21:00",
-      "venue": "Estádio a definir",
-      "city": "Brasil",
-      "broadcast": "Transmissão Oficial",
-      "roundOrLeg": "21ª Rodada",
-      "disclaimer": "Dados Oficiais football-data.org"
-    },
-    {
       "id": "footballdata-554946",
       "fixtureId": 554946,
       "tournamentId": "brasileirao-a",
@@ -11251,11 +11220,12 @@
       "tournamentId": "brasileirao-a",
       "tournamentName": "Brasileirão Série A",
       "phase": "33ª Rodada",
-      "status": "agendado",
+      "status": "encerrado",
       "homeTeam": {
         "id": 4241,
         "name": "Coritiba",
         "shortName": "Coritiba",
+        "score": 2,
         "logo": "https://crests.football-data.org/4241.png",
         "initials": "COR",
         "color": "bg-slate-800 text-white"
@@ -11264,6 +11234,7 @@
         "id": 1782,
         "name": "Vitória",
         "shortName": "Vitória",
+        "score": 0,
         "logo": "https://crests.football-data.org/1782.png",
         "initials": "VIT",
         "color": "bg-slate-700 text-white"
@@ -11615,6 +11586,37 @@
       "city": "Brasil",
       "broadcast": "Transmissão Oficial",
       "roundOrLeg": "35ª Rodada",
+      "disclaimer": "Dados Oficiais football-data.org"
+    },
+    {
+      "id": "footballdata-554942",
+      "fixtureId": 554942,
+      "tournamentId": "brasileirao-a",
+      "tournamentName": "Brasileirão Série A",
+      "phase": "21ª Rodada",
+      "status": "agendado",
+      "homeTeam": {
+        "id": 1772,
+        "name": "Chapecoense",
+        "shortName": "Chapecoense",
+        "logo": "https://crests.football-data.org/1772_large.png",
+        "initials": "CHA",
+        "color": "bg-slate-800 text-white"
+      },
+      "awayTeam": {
+        "id": 1780,
+        "name": "Vasco da Gama",
+        "shortName": "Vasco da Gama",
+        "logo": "https://crests.football-data.org/1780.png",
+        "initials": "VAS",
+        "color": "bg-slate-700 text-white"
+      },
+      "date": "14/11/2026",
+      "time": "20:30",
+      "venue": "Estádio a definir",
+      "city": "Brasil",
+      "broadcast": "Transmissão Oficial",
+      "roundOrLeg": "21ª Rodada",
       "disclaimer": "Dados Oficiais football-data.org"
     },
     {
