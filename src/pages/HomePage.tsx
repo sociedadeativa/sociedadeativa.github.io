@@ -147,26 +147,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* 2. Espaço Publicitário Superior */}
       <AdBanner format="leaderboard" />
 
-      {/* 3. Seção de Notícias e Análises Jornalísticas (com Últimas Notícias e Mais Lidas separadas) */}
-      <div id="cobertura-noticias">
-        <NewsSection
-          articles={articles}
-          onOpenArticleDetails={onOpenArticleDetails}
-        />
-      </div>
-
-      {/* 4. Seção de Economia: Indicadores Oficiais IBGE e Banco Central + Bolsa de Valores (B3) */}
-      <div id="indicadores-economia">
-        <EconomySection />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 mb-12">
-          <BolsaSection />
-        </div>
-      </div>
-
-      {/* 5. Espaço Publicitário In-Feed */}
-      <AdBanner format="in-feed" />
-
-      {/* 6. Preview do Caderno de Esportes */}
+      {/* 3. Preview do Caderno de Esportes (Acima de Últimas Notícias) */}
       <section id="esportes-preview" className="py-10 sm:py-14 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
@@ -241,6 +222,25 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
         </div>
       </section>
+
+      {/* 4. Seção de Notícias e Análises Jornalísticas (Imediatamente após Esportes e acima de Economia) */}
+      <div id="cobertura-noticias">
+        <NewsSection
+          articles={articles}
+          onOpenArticleDetails={onOpenArticleDetails}
+        />
+      </div>
+
+      {/* 5. Seção de Economia: Indicadores Oficiais IBGE e Banco Central + Bolsa de Valores (B3) */}
+      <div id="indicadores-economia">
+        <EconomySection />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 mb-12">
+          <BolsaSection />
+        </div>
+      </div>
+
+      {/* 6. Espaço Publicitário In-Feed */}
+      <AdBanner format="in-feed" />
 
       {/* 7. Eleições 2026: Painel do Arquivo Nacional (Totalização Oficial Homologada) */}
       <div id="eleicoes-nacional">
