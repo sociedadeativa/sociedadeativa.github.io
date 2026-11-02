@@ -12,7 +12,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/lula-garante-que-programas-sociais-serao-mantidos",
     "publishedAt": "01/11/2026 às 18:48",
-    "category": "Política",
+    "category": "Governo",
     "ingestedAt": "01/11/2026 às 19:05",
     "imageUrl": "https://imagens.ebc.com.br/bDzqtQ08f1ckQuo2Md8bK2dTEWY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/25/_int0408.jpg.jpeg?itok=7R16VWZ1",
     "imageCaption": "Lula garante que programas sociais serão mantidos",
@@ -22,7 +22,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Política",
       "Lula",
-      "programas sociais"
+      "programas sociais",
+      "Governo"
     ],
     "content": [
       "O presidente da República Luiz Inácio Lula da Silva garantiu, neste domingo (1º), que não vai extinguir nenhum programa social em seu próximo governo (2027-2030).",
