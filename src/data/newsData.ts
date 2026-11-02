@@ -5,6 +5,143 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1707314",
+    "title": "Impa Tech abre inscrições para graduação em matemática nesta terça",
+    "summary": "O período de inscrição para o curso de graduação em matemática da tecnologia e inovação do Impa Tech começa nesta terça-feira (3).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/impa-tech-abre-inscricoes-para-graduacao-em-matematica-nesta-terca",
+    "publishedAt": "02/11/2026 às 15:38",
+    "category": "Política",
+    "ingestedAt": "02/11/2026 às 16:47",
+    "imageUrl": "https://imagens.ebc.com.br/xREYAabB9sIoi_E_4x-0FWljuUA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/08/19/_d6a6930.jpg?itok=DNmGP7mF",
+    "imageCaption": "Impa Tech abre inscrições para graduação em matemática nesta terça",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Impa Tech abre inscrições para graduação em matemática nesta terça",
+    "author": "Agência Brasil",
+    "tags": [
+      "Educação",
+      "IMPA Tech",
+      "matemática",
+      "Bacharelado",
+      "Política"
+    ],
+    "content": [
+      "O período de inscrição para o curso de graduação em matemática da tecnologia e inovação do Impa Tech começa nesta terça-feira (3).",
+      "Para esta edição serão ofertadas, pela primeira vez, vagas na unidade Impa Tech Nordeste, no Tech Park Piauí, em Teresina, além da unidade Impa Tech Rio, no Rio de Janeiro.",
+      "Ao todo, serão disponibilizadas 150 vagas para 2027, distribuídas entre medalhistas de olimpíadas científicas e estudantes com bom desempenho na prova de matemática do Exame Nacional do Ensino Médio (Enem).",
+      "Para se candidatar, não há restrições de idade, mas é preciso ter concluído o ensino médio.",
+      "As inscrições abrem em 3 de novembro às 9h, no horário de Brasília, no site do Impa Tech , e podem ser feitas até o dia 23 de dezembro, às 12h.",
+      "Além de considerar o desempenho, o processo seletivo terá ainda uma segunda fase, com atividades em grupo e entrevistas individuais (on-line) .",
+      "A publicação da lista com os 360 candidatos selecionados para segunda fase está prevista para 18 de janeiro de 2027.",
+      "Mais detalhes estão disponíveis no edital do processo seletivo, na página do Impa Tech .",
+      "O Impa Tech é voltado a estudantes de todo o país. A instituição oferece bolsa alimentação, auxílio financeiro e alojamento estudantil aos maiores de 18 anos.",
+      "Além disso, os jovens aprovados terão a passagem aérea para o início do ano letivo custeada pelo Instituto.",
+      "O bacharelado de quatro anos é totalmente gratuito, em horário integral e presencial.",
+      "Após um ciclo básico, os alunos escolhem entre as ênfases em matemática; inteligência artificial e ciência de dados; ciência da computação, disponíveis nas duas unidades; e física, oferecida exclusivamente no Rio de Janeiro.",
+      "Fundado em 2024, o Impa Tech é o primeiro programa de graduação do Impa, centro de pesquisa matemática e pós-graduação de renome internacional, com doutorado, mestrado e mestrado profissional.",
+      "O Impa organiza a Olimpíada Brasileira de Matemática das Escolas Públicas (OBMEP), a maior olimpíada científica do mundo em número de participantes."
+    ]
+  },
+  {
+    "id": "ebc-1707526",
+    "title": "ONU ressalta importância de proteger jornalistas e acesso à informação",
+    "summary": "\"Em todo o mundo, jornalistas continuam pagando um preço exorbitante por dizerem a verdade”, o alerta foi feito nesta segunda-feira (2) pelo secretário-geral das Nações Unidas, António Guterres, ao marcar o Dia Internacional pelo Fim da Impunidade dos Crimes Contra Jornalistas.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/onu-ressalta-importancia-de-proteger-jornalistas-e-acesso-informacao",
+    "publishedAt": "02/11/2026 às 15:21",
+    "category": "Política",
+    "ingestedAt": "02/11/2026 às 16:47",
+    "imageUrl": "https://imagens.ebc.com.br/2apqWFlnoqY7LPZRvTJgZmDTfEk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/08/02/2025-07-02t000000z_62489957_mt1nurpho000ez3ohd_rtrmadp_3_krakow-pressbriefing-dziemianowicz-ba.jpg?itok=OET9qV6d",
+    "imageCaption": "ONU ressalta importância de proteger jornalistas e acesso à informação",
+    "imageCredit": "Iara Balduino – repórter da Agência Brasil",
+    "imageAlt": "ONU ressalta importância de proteger jornalistas e acesso à informação",
+    "author": "Iara Balduino – repórter da Agência Brasil",
+    "tags": [
+      "Internacional",
+      "ONU",
+      "António Guterrez",
+      "Fenaj",
+      "FIJ"
+    ],
+    "content": [
+      "\"Em todo o mundo, jornalistas continuam pagando um preço exorbitante por dizerem a verdade”, o alerta foi feito nesta segunda-feira (2) pelo secretário-geral das Nações Unidas, António Guterres, ao marcar o Dia Internacional pelo Fim da Impunidade dos Crimes Contra Jornalistas.",
+      "A data foi criada em homenagem aos franceses Ghislaine Dupont e Claude Verlon, da Rádio França Internacional (RFI), que foram assassinados em 2 de novembro de 2013, no Mali.",
+      "Em 2026, a ONU quer mostrar como as novas tecnologias e armamentos estão transformando os riscos enfrentados por jornalistas, especialmente em zonas de conflito. Muitas das mortes nessas regiões de guerra, ocorreram e ataques com drones, por exemplo.",
+      "Segundo as Nações Unidas, em 2024 e 2025, 189 jornalistas foram assassinados em todo o mundo , o maior número registrado desde o biênio 2014/2015. A maior parte das mortes foi em zonas de conflito.",
+      "A presidente da Federação Nacional dos Jornalistas (Fenaj), Samira de Castro, afirma que é preciso exigir dos governos que investiguem e processem os responsáveis por crimes contra jornalistas e que o assassinato de qualquer jornalista é inaceitável.",
+      "“A campanha da Federação Internacional de Jornalistas (FIJ) este ano pergunta: Quem ordenou o assassinato? Quem Planejou? Quem é o responsável final? Essas são perguntas que não podem ficar sem resposta”, diz."
+    ]
+  },
+  {
+    "id": "ebc-1707524",
+    "title": "Novas regras de atendimento ao consumidor começam a valer hoje",
+    "summary": "A partir desta segunda-feira (2), os canais de atendimento telefônicos e eletrônicos - Serviço de Antendimento ao Consumidor (SAC) - das empresas estão obrigados a funcionar em contato direto com os consumidores.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/novas-regras-de-atendimento-ao-consumidor-comecam-valer-hoje",
+    "publishedAt": "02/11/2026 às 14:37",
+    "category": "Política",
+    "ingestedAt": "02/11/2026 às 16:47",
+    "imageUrl": "https://imagens.ebc.com.br/KDX0pvye8d1pP4ZMJedWoSjgyJQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/05/pzzb3511.jpg?itok=Nk-9ePfE",
+    "imageCaption": "Novas regras de atendimento ao consumidor começam a valer hoje",
+    "imageCredit": "Flávia Albuquerque - Repórter da Agência Brasil",
+    "imageAlt": "Novas regras de atendimento ao consumidor começam a valer hoje",
+    "author": "Flávia Albuquerque - Repórter da Agência Brasil",
+    "tags": [
+      "Geral",
+      "SAC",
+      "atendimento humano",
+      "Política"
+    ],
+    "content": [
+      "A partir desta segunda-feira (2), os canais de atendimento telefônicos e eletrônicos - Serviço de Antendimento ao Consumidor (SAC) - das empresas estão obrigados a funcionar em contato direto com os consumidores.",
+      "O decreto do governo federal com as mudanças foi publicado em 13 de outubro e exige a garantia de atendimento humano tanto por telefone quanto nos canais eletrônicos , das 8h às 20h, todos os dias da semana, inclusive nos finais de semana e feriados.",
+      "A norma define ainda que os fornecedores deverão manter pelo menos um canal eletrônico em funcionamento 24 horas por dia, sete dias, além de prazos para resposta e cancelamento. Entre os canais eletrônicos estão os chats oferecidos em sites ou aplicativos e os serviços de mensagens instantâneas.",
+      "Os novos parâmetros de atendimento valem para aos fornecedores de produtos e serviços regulados governo federal. Entram nessa categoria operadoras de telefonia e de planos de saúde, empresas aéreas, concessionárias de energia e empresas do setor financeiro, como bancos e fintechs.",
+      "As normas incluem as plataformas digitais de intermediação de produtos e serviços, serviços de transporte remunerado privado individual de passageiros e serviços de entrega de produtos ou mercadorias. As empresas terão que apresentar dados à Secretaria Nacional do Consumidor (Senacon).",
+      "O decreto determina atendimento prioritário e adequado às necessidades das pessoas idosas. Os canais de SAC (Sistema de Atendimento ao Consumidor) deverão ainda observar requisitos de acessibilidade para pessoas com deficiência, conforme regras a serem estabelecidas pelos órgãos e entidades reguladores competentes.",
+      "Segundo o decreto, o contato com uma pessoa nos atendimentos telefônicos deve ocorrer em até 20 segundos em pelo menos 80% das demandas atendidas. Nas outras o tempo máximo de espera será de cinco minutos.",
+      "Se a ligação for interrompida acidentalmente antes da conclusão do atendimento, o fornecedor deverá retornar a chamada em até cinco minutos, aproveitar as informações já fornecidas pelo consumidor e informar o número de protocolo anteriormente atribuído, quando houver.",
+      "O consumidor também não poderá ser obrigado a reiniciar o atendimento ou realizar novos contatos para tratar da mesma solicitação e não poderá ser encaminhado para outro canal, exceto quando o atendimento presencial for indispensável à resolução do problema.",
+      "Com atendimento obrigatoriamente gratuito, o encaminhamento para uma pessoa não poderá ser condicionado ao fornecimento prévio de número de contrato, CPF ou outros dados do consumidor. Também está proibida a veiculação de publicidade durante o atendimento e no período de espera.",
+      "“As demandas não urgentes deverão ser respondidas em até sete dias corridos. A resposta deverá ser clara, objetiva, conclusiva e abordar todos os pontos apresentados pelo consumidor. As demandas que envolvam risco relevante ao consumidor terão tratamento prioritário e atendimento imediato, a qualquer tempo. Caberá às agências ou aos órgãos reguladores competentes definir as situações consideradas urgentes”, explica o Senacom.",
+      "Segundo a nova norma, a opção de cancelamento do produto ou do serviço deverá estar disponível em todos os níveis de atendimento do SAC, inclusive no primeiro, tanto nos canais telefônicos quanto nos canais eletrônicos. Todos os meios e canais disponibilizados para a contratação também deverão permitir o cancelamento.",
+      "“Nesses canais, a opção deverá ser oferecida no mesmo menu eletrônico utilizado para contratar ou, quando houver atendimento humano, pela mesma equipe de atendentes responsável pela contratação. O consumidor não poderá ser direcionado a outro menu, atendente ou canal para realizar o cancelamento”, afirma o Senacom.",
+      "O decreto garante ainda ao consumidor acesso gratuito ao histórico de suas demandas. O histórico deverá ser fornecido mediante solicitação em até cinco dias úteis. As gravações das chamadas telefônicas e as mensagens trocadas nos canais de SAC deverão ser mantidas por, no mínimo, 90 dias."
+    ]
+  },
+  {
+    "id": "ebc-1707523",
+    "title": "Duas pessoas morrem em queda de asa-delta em São Conrado, no Rio",
+    "summary": "Duas pessoas morreram nesta segunda-feira (2), depois que uma asa-delta caiu na praia de São Conrado, na zona sul da cidade do Rio de Janeiro. O Corpo de Bombeiros informou que foi acionado para o socorro das vítimas, mas não deu detalhes de como ocorreu o acidente.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/duas-pessoas-morrem-em-queda-de-asa-delta-em-sao-conrado-no-rio",
+    "publishedAt": "02/11/2026 às 14:18",
+    "category": "Política",
+    "ingestedAt": "02/11/2026 às 16:47",
+    "imageUrl": "https://imagens.ebc.com.br/e1MPyjn85WEPyVq8tYNfHxYfdGk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/02/acidente_asa_delta_sao_conrado_1_-731969.jpg?itok=Fm5qpFOB",
+    "imageCaption": "Duas pessoas morrem em queda de asa-delta em São Conrado, no Rio",
+    "imageCredit": "Vitor Abdala - Repórter da Agência Brasil",
+    "imageAlt": "Duas pessoas morrem em queda de asa-delta em São Conrado, no Rio",
+    "author": "Vitor Abdala - Repórter da Agência Brasil",
+    "tags": [
+      "Geral",
+      "asa-delta",
+      "Pedra Bonita",
+      "São Conrado",
+      "Rio de Janeiro"
+    ],
+    "content": [
+      "Duas pessoas morreram nesta segunda-feira (2), depois que uma asa-delta caiu na praia de São Conrado, na zona sul da cidade do Rio de Janeiro. O Corpo de Bombeiros informou que foi acionado para o socorro das vítimas, mas não deu detalhes de como ocorreu o acidente.",
+      "Os dois foram levados para o Hospital Municipal Miguel Couto, em estado grave com parada cardiorrespiratória. Um deles chegou a ser transportado com a ajuda de um helicóptero.",
+      "De acordo com a Secretaria Municipal de Saúde, no entanto, apesar de todos os esforços da equipe médica, as vítimas não resistiram. A identificação delas não foi divulgada.",
+      "A praia de São Conrado funciona como uma pista de pouso para as asas-deltas que partem do alto da Pedra Bonita."
+    ]
+  },
+  {
     "id": "ebc-1707521",
     "title": "Economista de Plano Real acusa BC de causar rombo fiscal via juros",
     "summary": "O artigo de um dos economistas da equipe que elaborou o Plano Real, professor André Lara Resende, tem ganhado destaque nos últimos dias por acusar o Banco Central (BC) de causar desequilíbrio fiscal no Brasil por meio das altas taxas de juros.",
@@ -22,14 +159,13 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Economia",
       "André Lara Resende",
-      "Taxa Selic",
+      "taxa Selic",
       "banco central",
       "juros altos"
     ],
     "content": [
       "O artigo de um dos economistas da equipe que elaborou o Plano Real, professor André Lara Resende, tem ganhado destaque nos últimos dias por acusar o Banco Central (BC) de causar desequilíbrio fiscal no Brasil por meio das altas taxas de juros. O especialista defende novas regras para as despesas e os juros no país.",
       "“Acuso o Banco Central de sustentar, em nome de uma teoria anacrônica, a taxa de juros que é a principal causa do desequilíbrio fiscal que diz combater.”",
-      "Clique aqui e leia a íntegra do texto Eu Acuso: Uma Proposta para Eliminar os Juros Absurdos do ex-diretor do Banco Central e ex-presidente do Banco Nacional de Desenvolvimento Social (BNDES).",
       "Formado pela PUC do Rio de Janeiro, André Lara Resende tem PhD em economia pelo Massachusetts Institute of Technology (MIT), nos Estados Unidos, além de ter atuado em instituições financeiras no Brasil.",
       "O especialista questiona a teoria econômica defendida pelo mercado financeiro e pelo BC para justificar a taxa Selic em 13,75% ao ano. Segundo ranking da Moneyou , o Brasil tem a taxa de juros real mais alta do mundo.",
       "Escrito às vésperas do primeiro turno eleitoral, o artigo de André Lara Resende ainda acusou “todos os que, sabendo que juros absurdos inviabilizam o país, preferem o conforto do consenso ao incômodo da verdade”.",
@@ -48,10 +184,50 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "No artigo, Lara Resende questiona a tese de que o BC não tem alternativa para controlar a inflação além dos juros elevados. Para ele, não há mais uma relação inversa entre desemprego e inflação que sugere que o aumento do desemprego, um dos resultados dos juros altos, reduz a inflação.",
       "“A fragilidade conceitual e empírica deste modelo macro convencional que pauta a política dos BCs é tão flagrante que, apesar de ainda dominante e repetido na mídia como verdade incontestável, passou a ser criticado até mesmo pelos economistas mais conservadores”, diz.",
       "Por outro lado, o economista reconhece que a redução dos juros traz um aumento da inflação, mas sustenta que essa é uma relação de “curto prazo” e transitória.",
+      "Clique aqui e leia a íntegra do texto Eu Acuso: Uma Proposta para Eliminar os Juros Absurdos do ex-diretor do Banco Central e ex-presidente do Banco Nacional de Desenvolvimento Social (BNDES).",
       "O especialista que ajudou a elaborar o Plano Real durante o governo de Fernando Henrique Cardoso (FHC) aponta que não há corte de gastos possível que interrompa o crescimento da dívida em relação ao PIB sem uma redução do juro para “em torno da taxa de crescimento nominal da economia”.",
       "Como proposta, André Lara Resende sugere um novo regime fiscal e monetário para o Brasil com um planejamento de metas fiscais e de juros por um período mais longo, de quarto a cinco anos, a serem anunciadas de forma conjunta.",
       "O especialista acrescenta que a intervenção do BC no mercado de câmbio deve ser necessária para evitar qualquer depreciação mais intensa do real.",
       "“Com reservas internacionais de mais de US$ 350 bilhões, o BC tem munição de sobra para isso”, escreveu."
+    ]
+  },
+  {
+    "id": "ebc-1707525",
+    "title": "Prêmio TV Brasil Petrobras Para Elas destaca ações contra feminicídio",
+    "summary": "O Prêmio TV Brasil Petrobras Para Elas tem como diferencial, em relação a outras premiações esportivas, uma disputa voltada ao combate ao assédio e à violência de gênero.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-11/premio-tv-brasil-petrobras-para-elas-destaca-acoes-contra-feminicidio",
+    "publishedAt": "02/11/2026 às 14:05",
+    "category": "Esportes",
+    "ingestedAt": "02/11/2026 às 16:47",
+    "imageUrl": "https://imagens.ebc.com.br/60uzz7P-ILlWJ3fIUhw9wdP_fz0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/02/foto-montagem-escudos_02.png?itok=HGmFvrVs",
+    "imageCaption": "Prêmio TV Brasil Petrobras Para Elas destaca ações contra feminicídio",
+    "imageCredit": "Lincoln Chaves - Repórter da EBC",
+    "imageAlt": "Prêmio TV Brasil Petrobras Para Elas destaca ações contra feminicídio",
+    "author": "Lincoln Chaves - Repórter da EBC",
+    "tags": [
+      "Esportes",
+      "clubes",
+      "finalistas",
+      "feminicídio",
+      "ações"
+    ],
+    "content": [
+      "O Prêmio TV Brasil Petrobras Para Elas tem como diferencial, em relação a outras premiações esportivas, uma disputa voltada ao combate ao assédio e à violência de gênero. Trata-se da categoria Futebol Feminino Contra o Feminicídio, para reconhecer a atuação dos clubes da elite nacional da modalidade. Os finalistas da edição de 2026, revelados nesta segunda-feira (2), são Bahia, Botafogo e Internacional.",
+      "Segundo o estudo \"Retrato dos Feminicídios no Brasil\", do Fórum Brasileiro de Segurança Pública (FBSP), divulgado em março deste ano, 1.568 mulheres foram mortas em crimes de gênero ao longo de 2025, o que representa um assassinato a cada cinco horas e 36 minutos. O número é 4,7% superior ao registrado em 2024. A maioria das vítimas é negra (62,6%), ocupando principalmente a faixa dos 30 a 39 anos (28,3%).",
+      "Ainda de acordo com a publicação, considerando casos de feminicídio registrados entre 2021 e 2024 (5.729), 66,3% dos crimes aconteceram dentro da própria casa da vítima e mais de 80% foram cometidos pelo parceiro íntimo atual (59,4%) ou antigo (21,3%). Os dados são coletados a partir de boletins de ocorrência junto às Polícias Civis.",
+      "Os times foram selecionados por meio de votação de um júri exclusivamente feminino, que reuniu jornalistas, comunicadoras, personalidades e profissionais que acompanhar a modalidade ou atuam em pautas relacionadas à igualdade de gênero. A composição trouxe mulheres com distintas experiências e pontos de vista para avaliar as diferentes iniciativas pelo olhar esportivo e a relevância social.",
+      "O clube ganhador será conhecido em cerimônia no Museu do Futebol, em São Paulo, no próximo dia 15 de novembro. Os vencedores das demais categorias - Craque da Torcida, Jogadora Revelação, Melhor Treinador(a), Melhor Jogadora, Artilheira, Gol Mais Bonito, Melhor Departamento de Futebol Feminino e Seleção da Temporada - também serão anunciados no evento.",
+      "No início da temporada, o Bahia aderiu à campanha \"Feminicídio Zero\", da Secretaria de Políticas para as Mulheres do governo estadual. Antes do jogo contra o Galícia, na Arena Fonte Nova, em Salvador, pela terceira rodada do Campeonato Baiano masculino, foram exibidas faixas de conscientização e os jogadores do Tricolor entraram em campo com uma camisa roxa idealizada pela campanha. Do lado de fora do estádio, uma unidade móvel ofereceu acolhimento e orientações a respeito de serviços de proteção.",
+      "Já no Brasileirão masculino, o clube lançou uma ação de nome \"Terceiro Tempo\", em parceria com o Fundo de População das Nações Unidas (UNFPA) e a agência Propeg. O intuito foi alertar sobre os aumentos dos casos de agressão de gênero com base no estudo “Futebol e Violência contra a Mulher”, também realizado pelo FBSP. Segundo a pesquisa, em dias de jogo, os registros de ameaças sobem 27,4% e os de lesão corporal decorrente de violência doméstica crescem 28,8%.",
+      "Após a partida diante do Internacional, em 30 de agosto, na Fonte Nova, um grupo de mulheres, formado por influenciadoras, torcedoras, colaboradoras do Bahia e outras convidadas permaneceu na arquibancada leste no estádio. Acima delas, o letreiro mostrou a frase: \"Hoje, ficar no estádio é mais seguro que em casa\".",
+      "O Botafogo conta, desde 2022, com o projeto \"A Hora Delas\", para valorização da presença feminina no futebol. O Estádio Nilton Santos se tornou o primeiro do Rio de Janeiro a ter um posto para receber, durante os jogos, denúncias de assédio e violência de gênero. A ação tem apoio da Delegacia Especializada de Atendimento à Mulher (Deam) e do Juizado Especial Criminal (Jecrim). O clube faz treinamento com os funcionários que atuam nas partidas e as equipes de segurança terceirizadas.",
+      "O nome \"Hora Delas\", inclusive, foi estampado na camisa especial utilizada na partida contra o Remo, na última quarta-feira (28), no Mangueirão em Belém, pelo Brasileirão masculino. O uniforme é alusivo à campanha do Outubro Rosa - de conscientização sobre o câncer de mama - e tem listras verticais rosas e brancas inspiradas na árvore japonesa sakura.",
+      "Uma ação marcante envolvendo o Glorioso ocorreu no jogo diante do Corinthians, na Neo Química Arena, em São Paulo, em 30 de novembro do ano passado, pelo Brasileirão masculino. Os times se uniram para uma iniciativa em que os números nas costas dos atletas foram redesenhados a partir de radiografias reais de mulheres agredidas. Na barra frontal da camisa, a pergunta \"quem matou?\" é acompanhada pelos nomes de mais de 40 vítimas de feminicídio.",
+      "Já o Internacional afirma ser o primeiro clube brasileiro a ter uma sócia mulher: Maria Von Ockel, em 2 de abril de 1918. Em 2025, o Colorado aderiu ao movimento \"Banco Vermelho\", instalando, na área do Beira-Rio, em Porto Alegre, um banco tingido como forma de protesto visual à reflexão, em que os visitantes podem deixar mensagens de apoio e de combate à violência de gênero. A iniciativa tem origem na Itália e simboliza o sangue derramado pelas vítimas de feminicídio, como alerta para quem o avanço dos casos seja detido.",
+      "Em abril deste ano, o Museu do Inter recebeu o evento \"Mulheres na Arquibancada e o Combate ao Feminicídio\", que possibilitou ao público acompanhar relatos de vítimas de assédio e violência de gênero e palestras de especialistas sobre o enfrentamento ao crime. A iniciativa foi promovida pelo núcleo feminino da Guarda Popular, uma das principais torcidas do time gaúcho, com apoio do clube.",
+      "Na decisão do último Campeonato Gaúcho masculino, em 8 de março, Inter e Grêmio foram a campo com mensagens de combate à violência contra a mulher, destacando o número 181, do Disque-Denúncia. Antes de a bola rolar, o telão do Beira-Rio apresentou o simbólico placar de 20 a 0, referente aos registros de feminicídios no Rio Grande do Sul em 2026 até aquele instante. A ação integra a campanha \"Não Maquie, Denuncie\", do governo estadual."
     ]
   },
   {
@@ -97,13 +273,17 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "publishedAt": "02/11/2026 às 13:35",
     "category": "Política",
     "ingestedAt": "02/11/2026 às 14:25",
+    "imageUrl": "https://imagens.ebc.com.br/YJYmqn91zIG6MU1lrHPIcsNzVkU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/02/sem_titulo-3.jpg?itok=UCDn2AIe",
+    "imageCaption": "Forças do Ceará intervêm para garantir água após ameaça de facção",
+    "imageCredit": "Alex Rodrigues - Agência Brasil",
+    "imageAlt": "Forças do Ceará intervêm para garantir água após ameaça de facção",
     "author": "Alex Rodrigues - Agência Brasil",
     "tags": [
       "Geral",
-      "Facções Criminosas",
+      "facções criminosas",
       "Ceará",
       "Banabuiú",
-      "Água"
+      "água"
     ],
     "content": [
       "As forças de segurança do Ceará tiveram que ser mobilizadas para garantir o fornecimento de água mineral para a população de Banabuiú, após criminosos ameaçarem comerciantes locais que, com medo de represálias, suspenderam a venda de garrafões d´água na cidade.",
@@ -1659,167 +1839,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Inauguração do Aeroporto Santos Dumont (90 anos)",
       "Terremoto de 5,1 graus na Escala Richter atinge a cidade de João Câmara, no Rio Grande do Norte (40 anos)",
       "*As datas são selecionadas pela equipe de pesquisadores do Projeto Efemérides, da Gerência de Acervo da Empresa Brasil de Comunicação (EBC) , que traz temas relacionados à cultura, história, ciência e personalidades, sempre ressaltando marcos nacionais e regionais. A Gerência de Acervo também atende aos pedidos de pesquisa do público externo. Basta enviar um e-mail para centraldepesquisas@ebc.com.br ."
-    ]
-  },
-  {
-    "id": "ebc-1707441",
-    "title": "Com virada, Corinthians bate Palmeiras na semi do Paulista F Sub-20",
-    "summary": "O Palmeiras virou, mas o Corinthians virou de volta e venceu o primeiro confronto da semifinal do Campeonato Paulista Feminino Sub-20 Petrobras, neste sábado (31), na Arena Barueri. O duelo, que teve transmissão ao vivo da TV Brasil , terminou com vitória das Brabas por 3 a 2.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/com-virada-corinthians-bate-palmeiras-na-semi-do-paulista-f-sub-20",
-    "publishedAt": "31/10/2026 às 18:38",
-    "category": "Esportes",
-    "ingestedAt": "01/11/2026 às 11:29",
-    "imageUrl": "https://imagens.ebc.com.br/6QsCwqdCKC6HBjTKNlin20jWNbE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/31/com_viradas_corinthians_bate_palmeiras_na_semi_do_paulista_f_sub-20.jpg?itok=0SQ-naUR",
-    "imageCaption": "Com virada, Corinthians bate Palmeiras na semi do Paulista F Sub-20",
-    "imageCredit": "Igor Santos Carneiro – repórter da EBC",
-    "imageAlt": "Com virada, Corinthians bate Palmeiras na semi do Paulista F Sub-20",
-    "author": "Igor Santos Carneiro – repórter da EBC",
-    "tags": [
-      "Esportes",
-      "Futebol Feminino",
-      "Palmeiras",
-      "Corinthians"
-    ],
-    "content": [
-      "O Palmeiras virou, mas o Corinthians virou de volta e venceu o primeiro confronto da semifinal do Campeonato Paulista Feminino Sub-20 Petrobras, neste sábado (31), na Arena Barueri.",
-      "O duelo, que teve transmissão ao vivo da TV Brasil , terminou com vitória das Brabas por 3 a 2. O jogo de volta ocorre no dia 9 de novembro, na casa do Timão.",
-      "O dérbi teve um primeiro tempo agitado. Logo no começo, as Brabas abriram o placar. Após cobrança de escanteio pela direita, a goleira Vitória falhou e não conseguiu interceptar a bola, que foi desviada por Dani Pereira para dentro do gol.",
-      "As Palestrinas não tardaram a igualar. Após bola rebatida, Thaís ajeitou e chutou forte, de fora da área. A bola tocou no travessão e quicou já dentro do gol corintiano.",
-      "Em ritmo frenético, o Palmeiras virou aos 21. Após erro na saída de bola do Corinthians, Ket pegou o rebote de uma finalização defendida por Ana Morganti e marcou.",
-      "Pouco antes do intervalo, novo empate. A zaga alviverde afastou mal uma bola longa e Jordi, de primeira, marcou um golaço encobrindo Vitória.",
-      "Aos 18 da segunda etapa, quando o Palmeiras já tinha uma jogadora a menos (Kerlly foi expulsa), Jordi completou nova virada com seu segundo gol.",
-      "Ela recebeu cruzamento rasteiro pela esquerda e aproveitou que Vitória saiu mal da meta para finalizar para as redes, dando números finais à partida."
-    ]
-  },
-  {
-    "id": "ebc-1707443",
-    "title": "Coritiba derrota Vitória e volta a vencer depois de sete jogos: 2 a 0",
-    "summary": "No jogo que encerrou a 33ª rodada do Campeonato Brasileiro, o Coritiba venceu o Vitória por 2 a 0 , neste sábado (31), no Couto Pereira, ganhando fôlego na briga contra o rebaixamento e se afastando do grupo dos quatro últimos colocados.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/coritiba-derrota-vitoria-e-volta-vencer-depois-de-sete-jogos-2-0",
-    "publishedAt": "31/10/2026 às 18:32",
-    "category": "Esportes",
-    "ingestedAt": "31/10/2026 às 19:03",
-    "imageUrl": "https://imagens.ebc.com.br/ccMiYnW9QYgIYsfn361MB_exukU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/31/coritiba_derrota_vitoria_e_volta_a_vencer_depois_de_sete_jogos_2_a_0.jpg?itok=rTl41JZ3",
-    "imageCaption": "Coritiba derrota Vitória e volta a vencer depois de sete jogos: 2 a 0",
-    "imageCredit": "Igor Santos Carneiro – repórter da EBC",
-    "imageAlt": "Coritiba derrota Vitória e volta a vencer depois de sete jogos: 2 a 0",
-    "author": "Igor Santos Carneiro – repórter da EBC",
-    "tags": [
-      "Esportes",
-      "Futebol",
-      "campeonato brasileiro",
-      "Brasileirão",
-      "Coritiba"
-    ],
-    "content": [
-      "No jogo que encerrou a 33ª rodada do Campeonato Brasileiro, o Coritiba venceu o Vitória por 2 a 0 , neste sábado (31), no Couto Pereira, ganhando fôlego na briga contra o rebaixamento e se afastando do grupo dos quatro últimos colocados.",
-      "A equipe paranaense acumulava sete jogos sem vitória e agora soma 42 pontos, seis a mais do que o primeiro clube dentro do Z-4, o Corinthians. Já o Vitória, que agora vive um breve jejum de quatro jogos sem triunfos, é o 14º, com 38.",
-      "Com dois empates e cinco derrotas nos sete jogos anteriores, o Coxa teve um primeiro tempo nervoso, de várias chances criadas mas não convertidas. Em uma delas, após defesa do goleiro Lucas Arcanjo, a bola bateu na travessão e foi afastada pela defesa praticamente em cima da linha.",
-      "No segundo tempo, a equipe paranaense, comandada de forma interina por Guilherme Bossle após a demissão de Fernando Seabra, enfim conseguiu transformar o domínio em vantagem.",
-      "Aos 13 minutos, Pedro Rocha aproveitou rebote de chute longo de Sebastián Gómez para abrir o placar.",
-      "Dez minutos depois, o gol que assegurou os três pontos veio com Tinga, que estava bem posicionado na pequena área quando Tiago Cóser cabeceou para o meio após cobrança de escanteio.",
-      "O resultado aliviou o drama do Coritiba mas mantém o do Vitória, que ainda não venceu como visitante em todo o Campeonato Brasileiro de 2026.",
-      "Contando com a força da torcida no Barradão, o Rubro-Negro baiano tenta vencer o Fluminense na sexta-feira (5). O Coritiba entra em campo três dias antes, visitando o Internacional no Beira-Rio."
-    ]
-  },
-  {
-    "id": "ebc-1707442",
-    "title": "MTE recebe 4,3 mil denúncias de assédio eleitoral em três dias",
-    "summary": "O Ministério do Trabalho e Emprego (MTE) recebeu aproximadamente 4,3 mil denúncias de assédio eleitoral no ambiente de trabalho apenas nos três primeiros dias de funcionamento de um canal específico para esse tipo de ocorrência.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/mte-recebe-43-mil-denuncias-de-assedio-eleitoral-em-tres-dias",
-    "publishedAt": "31/10/2026 às 18:24",
-    "category": "Eleições",
-    "ingestedAt": "31/10/2026 às 19:03",
-    "imageUrl": "https://imagens.ebc.com.br/z0vsMQe4-aYyWD5534hI1sti6Rs=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/fachada-ministerio_mcamgo_abr_100420231818-11.jpg?itok=4t0Lnv1p",
-    "imageCaption": "MTE recebe 4,3 mil denúncias de assédio eleitoral em três dias",
-    "imageCredit": "Iara Balduino – repórter da Agência Brasil",
-    "imageAlt": "MTE recebe 4,3 mil denúncias de assédio eleitoral em três dias",
-    "author": "Iara Balduino – repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "assédio eleitoral",
-      "Violência política",
-      "eleições 2026",
-      "Eleições"
-    ],
-    "content": [
-      "O Ministério do Trabalho e Emprego (MTE) recebeu aproximadamente 4,3 mil denúncias de assédio eleitoral no ambiente de trabalho apenas nos três primeiros dias de funcionamento de um canal específico para esse tipo de ocorrência.",
-      "O canal começou a funcionar no dia 28 de outubro, depois que diversas denúncias desse tipo de prática começaram a surgir tanto na internet como em órgãos competentes.",
-      "A maior parte dos casos foram no estado de São Paulo (1.325), seguido por Rio de Janeiro (354), Minas Gerais (345), Paraná (268) e Santa Catarina (259). A Região Sudeste concentrou 48,5% das ocorrências.",
-      "Segundo o MTE, as denúncias já estão sendo apuradas.",
-      "Clique aqui e leia mais sobre assédio eleitoral, na Agência Brasil",
-      "Assédio eleitoral é quando um chefe ou superiores hierárquicos pressionam o trabalhador a votar ou deixar de votar em um determinado candidato.",
-      "Demitir um funcionário pela opção política dele também é considerado assédio e, se ficar provado que a dispensa ocorreu por esse motivo, a empresa pode ser obrigada a readmitir o empregado e pagar indenização por danos morais.",
-      "Quem sofrer ou presenciar casos de assédio eleitoral no ambiente de trabalho deve fazer a denúncia nos canais do Ministério do Trabalho e Emprego (MTE) ou do Ministério Público do Trabalho (MPT).",
-      "As denúncias são mantidas em sigilo e encaminhadas aos órgãos competentes."
-    ]
-  },
-  {
-    "id": "ebc-1707440",
-    "title": "Aldeias Guarani Kaiowá vão receber proteção da Força Nacional",
-    "summary": "A presença da Força Nacional deve se estender em Mato Grosso do Sul, e o efetivo deve ser ampliado para garantir a proteção de aldeias indígenas Guarani Kaiowá.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/aldeias-guarani-kaiowa-vao-receber-protecao-da-forca-nacional",
-    "publishedAt": "31/10/2026 às 17:38",
-    "category": "Eleições",
-    "ingestedAt": "31/10/2026 às 19:03",
-    "imageUrl": "https://imagens.ebc.com.br/BgwccJTdF9VJwKe-CBWwcEes3yo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/31/governo_federal_reforca_protecao_de_comunidades_indigenas_em_mato_grosso_do_sul.jpg?itok=uHq_aPmv",
-    "imageCaption": "Aldeias Guarani Kaiowá vão receber proteção da Força Nacional",
-    "imageCredit": "Gabriel Brum – repórter da Rádio Nacional",
-    "imageAlt": "Aldeias Guarani Kaiowá vão receber proteção da Força Nacional",
-    "author": "Gabriel Brum – repórter da Rádio Nacional",
-    "tags": [
-      "Direitos Humanos",
-      "Povos Indígenas",
-      "Violência política",
-      "Guarani Kaiowá",
-      "eleições 2026"
-    ],
-    "content": [
-      "A presença da Força Nacional deve se estender em Mato Grosso do Sul, e o efetivo deve ser ampliado para garantir a proteção de aldeias indígenas Guarani Kaiowá.",
-      "Casos de violência política vêm sendo denunciados na região, depois do segundo turno da eleição, na semana passada, que reelegeu Luiz Inácio Lula da Silva.",
-      "O anúncio de ampliação do efetivo foi feito pelo ministro da Justiça e Segurança Pública, Wellington César Lima e Silva, que visitou aldeias na fronteira com o Paraguai neste sábado (31).",
-      "Segundo o ministro, o programa minuto a minuto informará através de imagem e detecção do tipo de ocorrência e, sempre que possível, já indicando a autoria e materialidade.",
-      "Lima e Silva e os ministros Eloy Terena, dos Povos Indígenas, e Janine Mello, dos Direitos Humanos, visitaram as aldeias Sassoró, no município de Tacuru, e Taquapery, em Coronel Sapucaia, na fronteira com o Paraguai.",
-      "A comitiva foi à região após denúncias de violência contra os indígenas em Mato Grosso do Sul chamarem atenção nas redes sociais depois das eleições. A Articulação dos Povos Indígenas do Brasil (Apib), contabilizou mais de 30 casos.",
-      "A aldeia Sassoró foi alvo de ameaça de envenenamento da água , segundo um áudio que circulou em grupos da cidade de Tacuru. A suspeita é que haja participação de um servidor público do município.",
-      "O ministro dos Povos Indígenas, Eloy Terena, afirmou que a Polícia Federal já ouviu os suspeitos e que o monitoramento da qualidade da água vai ser reforçado. Ele destacou que as denúncias que têm chegado precisam ser apuradas, porque há casos levantados que ocorreram em outros momentos.",
-      "O Ministério dos Direitos Humanos informou que vai colocar o Programa de Proteção à disposição das vítimas desses casos. Mais de 80 indígenas de Mato Grosso do Sul já estão no programa, segundo a pasta."
-    ]
-  },
-  {
-    "id": "ebc-1707437",
-    "title": "Brasil avança às quartas da AmeriCup no basquete masculino 3x3",
-    "summary": "A noite de sexta-feira (30) reservou para a seleção brasileira masculina de basquete 3x3 os dois duelos da fase de grupos da AmeriCup, que está sendo disputada em San Salvador, capital de El Salvador.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-avanca-quartas-da-americup-no-basquete-masculino-3x3",
-    "publishedAt": "31/10/2026 às 17:10",
-    "category": "Esportes",
-    "ingestedAt": "31/10/2026 às 19:03",
-    "imageUrl": "https://imagens.ebc.com.br/7XsfGwjRu2XpL1htqyjdCvpFbSQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/31/brasil_avanca_as_quartas_da_americup_no_basquete_masculino_3x3.jpg?itok=dBJt6z8Q",
-    "imageCaption": "Brasil avança às quartas da AmeriCup no basquete masculino 3x3",
-    "imageCredit": "Igor Santos Carneiro – repórter da EBC",
-    "imageAlt": "Brasil avança às quartas da AmeriCup no basquete masculino 3x3",
-    "author": "Igor Santos Carneiro – repórter da EBC",
-    "tags": [
-      "Esportes",
-      "AmeriCup",
-      "Basquete 3X3"
-    ],
-    "content": [
-      "A noite de sexta-feira (30) reservou para a seleção brasileira masculina de basquete 3x3 os dois duelos da fase de grupos da AmeriCup, que está sendo disputada em San Salvador, capital de El Salvador.",
-      "Com uma vitória diante da Venezuela e uma derrota para Porto Rico, a equipe avançou às quartas de final da competição e tem encontro marcado com a Argentina neste domingo (1°), a partir das 16h30, no horário de Brasília.",
-      "O Brasil - cujo elenco é formado por Léo Branquinho, Leandro Silva, Will Weihermann e André Augusto - bateu a Venezuela por 17 a 16 na estreia.",
-      "No segundo jogo, diante dos portorriquenhos, acabou derrotado por 21 a 13, fechando na segunda posição do grupo B. Já a seleção de Porto Rico terminou líder da chave e vai encarar o Chile nas quartas.",
-      "A competição termina no próprio domingo, com semifinais e a grande final na sequência."
     ]
   },
   {
