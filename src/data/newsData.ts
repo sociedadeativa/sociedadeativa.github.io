@@ -5,8 +5,77 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1707546",
+    "title": "Semana de Educação Midiática terá atividades em todas as regiões",
+    "summary": "Instituições públicas, escolas, universidades e organizações sociais em todo o país participam, de 4 a 10 de novembro, da 4ª Semana Brasileira de Educação Midiática.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/semana-de-educacao-midiatica-tera-atividades-em-todas-regioes",
+    "publishedAt": "03/11/2026 às 07:58",
+    "category": "Governo",
+    "ingestedAt": "03/11/2026 às 09:18",
+    "imageUrl": "https://imagens.ebc.com.br/c82Xsb5yuf2CVq9cHKCPjaUpA08=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/img_5617_2.jpg?itok=h7U_Aw3U",
+    "imageCaption": "Semana de Educação Midiática terá atividades em todas as regiões",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Semana de Educação Midiática terá atividades em todas as regiões",
+    "author": "Agência Brasil",
+    "tags": [
+      "Educação",
+      "educação midiática",
+      "Ministério da Educação",
+      "internet",
+      "Governo"
+    ],
+    "content": [
+      "Instituições públicas, escolas, universidades e organizações sociais em todo o país participam, de 4 a 10 de novembro, da 4ª Semana Brasileira de Educação Midiática.",
+      "Sob o tema “Educação Midiática: integridade da informação para a formação cidadã”, a programação inclui mais de 300 atividades com experiências que conectam o tema às realidades locais e impactam mais de 60 mil pessoas.",
+      "A mobilização inclui debates, formações e experiências educativas para fortalecer o pensamento crítico, a participação democrática e a proteção de direitos no ambiente digital.",
+      "Todas as ações integram o Mapa de Iniciativas, por região. Além das atividades presenciais, a semana terá transmissões ao vivo e outras ações on-line .",
+      "Veja aqui a programação completa e o Mapa de Iniciativas.<<",
+      "A abertura será nesta quarta-feira (4), das 9h às 18h, no Auditório do Ministério das Comunicações, em Brasília, com transmissão pelo canal do Ministério da Educação no YouTube .",
+      "Na quinta-feira (5), a Faculdade de Comunicação da Universidade de Brasília (FAC-UnB) recebe o 2º Encontro Brasileiro da Rede PET Integridade da Informação, com projetos de dez instituições de ensino superior das cinco regiões do país.",
+      "Na sexta-feira (6), a Unidade-Escola de Formação Continuada dos Profissionais da Educação, da Secretaria de Educação do Distrito Federal, promove formação sobre enfrentamento à desinformação, em parceria com o centro francês especializado em educação midiática e informação.",
+      "O encerramento será na próxima terça-feira (10), no Rio de Janeiro, com a mesa “Educação Midiática: histórias, memórias e perspectivas”, o lançamento das Diretrizes de Educação Midiática da Secretaria Municipal de Educação e atividades no Ginásio Educacional Tecnológico Audiovisual, no Jardim Botânico."
+    ]
+  },
+  {
+    "id": "ebc-1707544",
+    "title": "Fies 2: inscrições para vagas remanescentes terminam nesta terça",
+    "summary": "O prazo de inscrição para as vagas remanescentes do Fundo de Financiamento Estudantil (Fies), referentes ao segundo semestre de 2026, termina nesta terça-feira (3). Os estudantes interessados podem se inscrever exclusivamente pelo Portal Único de Acesso ao Ensino Superior .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/fies-2-inscricoes-para-vagas-remanescentes-terminam-nesta-terca",
+    "publishedAt": "03/11/2026 às 07:02",
+    "category": "Política",
+    "ingestedAt": "03/11/2026 às 09:18",
+    "imageUrl": "https://imagens.ebc.com.br/a8KmMXIeSle4Lean__BX8mvRlFM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/07/pzzb7290.jpg?itok=N0F7Q2U7",
+    "imageCaption": "Fies 2: inscrições para vagas remanescentes terminam nesta terça",
+    "imageCredit": "Daniella Almeida - Repórter da Agência Brasil",
+    "imageAlt": "Fies 2: inscrições para vagas remanescentes terminam nesta terça",
+    "author": "Daniella Almeida - Repórter da Agência Brasil",
+    "tags": [
+      "Educação",
+      "Fies 2",
+      "Vagas Remanescentes",
+      "Inscrições",
+      "Estudantes"
+    ],
+    "content": [
+      "O prazo de inscrição para as vagas remanescentes do Fundo de Financiamento Estudantil (Fies), referentes ao segundo semestre de 2026, termina nesta terça-feira (3). Os estudantes interessados podem se inscrever exclusivamente pelo Portal Único de Acesso ao Ensino Superior . Para isso, é preciso fazer login pela conta da plataforma Gov.br.",
+      "O programa oferece financiamento para estudantes que desejam cursar o ensino superior em faculdades privadas bem avaliadas pelo Ministério da Educação (MEC). O Fies cobre as mensalidades do curso e permite que o estudante pague, com condições facilitadas, o valor financiado após a conclusão da graduação.",
+      "Nesta edição, as vagas remanescentes são destinadas exclusivamente à contratação do financiamento no segundo semestre letivo deste ano, sem possibilidade de extensão do prazo.",
+      "Uma das etapas do processo seletivo vai verificar se os candidatos pré-selecionados têm condições de acompanhar as atividades acadêmicas e concluir o semestre com aproveitamento suficiente.",
+      "Para participar, é necessário ter feito o Exame Nacional do Ensino Médio (Enem) a partir de 2010, com média igual ou superior a 450 pontos nas cinco provas de conhecimentos e nota acima de zero na redação. O estudante não pode ter participado do exame como treineiro.",
+      "O candidato também precisa ter renda familiar mensal bruta por pessoa de até três salários mínimos, de acordo com o edital.",
+      "Na parte acadêmica, o candidato pré-selecionado deve ter condições de cumprir a frequência mínima exigida pela instituição privada de ensino superior neste segundo semestre letivo de 2026.",
+      "Ao todo, são 50 mil vagas distribuídas pelo país. O edital reserva 50% dessas vagas remanescentes a candidatos com renda familiar mensal por pessoa de até meio salário mínimo e inscrição atualizada no Cadastro Único para Programas Sociais do governo federal (CadÚnico). Para essa verificação, serão consideradas as informações cadastrais atualizadas até 8 de outubro de 2026.",
+      "Os estudantes pré-selecionados nessa modalidade poderão solicitar financiamento de até 100% dos encargos educacionais, conforme as regras do programa.",
+      "O resultado da chamada única está previsto para 16 de novembro ."
+    ]
+  },
+  {
     "id": "ebc-1707543",
-    "title": "Com gols no 1º tempo, Massa Bruta faz 2 a 1 e iguala os 47 pontos",
+    "title": "Massa Bruta faz 2 a 1 no Santos e iguala os 47 pontos",
     "summary": "Na partida que abriu a 34ª rodada do Campeonato Brasileiro, na noite desta segunda-feira (2), melhor para o Red Bull Bragantino. O Massa Bruta derrotou o Santos por 2 a 1 no Estádio Cícero de Souza Marques, em Bragança Paulista (SP).",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
@@ -15,9 +84,9 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "category": "Esportes",
     "ingestedAt": "03/11/2026 às 06:50",
     "imageUrl": "https://imagens.ebc.com.br/JkUhscKrC5-7tfU0aiCDDFrdfxA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/02/55628455036_845bab6de5_k.jpg?itok=mro9hpjJ",
-    "imageCaption": "Com gols no 1º tempo, Massa Bruta faz 2 a 1 e iguala os 47 pontos",
+    "imageCaption": "Massa Bruta faz 2 a 1 no Santos e iguala os 47 pontos",
     "imageCredit": "Lincoln Chaves - Repórter da EBC",
-    "imageAlt": "Com gols no 1º tempo, Massa Bruta faz 2 a 1 e iguala os 47 pontos",
+    "imageAlt": "Massa Bruta faz 2 a 1 no Santos e iguala os 47 pontos",
     "author": "Lincoln Chaves - Repórter da EBC",
     "tags": [
       "Esportes",
@@ -273,6 +342,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Geral",
       "SAC",
       "atendimento humano",
+      "Multimídia",
       "Política"
     ],
     "content": [
@@ -1090,7 +1160,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Justiça",
       "bets",
       "proibição das bets",
-      "jogos online"
+      "jogos online",
+      "Multimídia"
     ],
     "content": [
       "A pedido da Advocacia-Geral da União (AGU), o ministro Luiz Fux, do Supremo Tribunal Federal (STF), decidiu neste domingo (1°) convocar representantes dos ministérios da Saúde e da Justiça e Segurança Pública para a audiência em que vão ser discutidos os impactos da Medida Provisória nº 1.394/2026 , que proíbe o funcionamento das empresas de apostas online no Brasil, as chamadas bets .",
@@ -1100,6 +1171,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Fux é relator da Ação Direta de Inconstitucionalidade (ADI) 8027 ajuizada pela Associação Nacional de Jogos e Loterias (Anjl), que argumenta que a MP é inconstitucional e pede que o STF suspenda a iniciativa do governo federal de proibir a exploração, oferta, intermediação e publicidade de bets em todo o território nacional.",
       "Foi no âmbito da ADI que o ministro decidiu convocar a audiência pública desta terça-feira. Em seu primeiro despacho , de 26 de outubro, Fux convocou 26 entidades, entre representantes do Poder Executivo, clubes de futebol, organizações esportivas, associações e institutos ligados ao tema.",
       "Na sequência, o ministro publicou uma nova convocatória , incluindo a participação de representantes do Comitê Olímpico do Brasil (COB) e do Ministério dos Esportes.",
+      "Confira mais informações sobre o assunto no Repórter Brasil , da TV Brasil",
       "Foi então que a AGU requereu ao ministro que ampliasse o rol de participantes do evento, por entender que “o total dos atores convocados parece formar um quadro predominantemente integrado por entidades esportivas e representantes de operadoras de apostas”.",
       "Até aquele momento, só os clubes de futebol e os representantes das casas de apostas, que defendem a volta da liberação das bets, totalizavam 17 participantes, dos 26 convocados.",
       "Ao analisar a manifestação da AGU, Fux destacou que, em novembro de 2024, ele próprio conduziu duas audiências públicas durante as quais diferentes entidades contrárias à permissão das bets apontaram as “consequências sociais nocivas da atividade”.",
@@ -1604,79 +1676,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Como os processos de investigação ainda estão em andamento, novas denuncias serão adicionadas ao processo, informou a pasta de Educação.",
       "No informativo, representantes do MEC voltaram a repudiar ainda qualquer tipo de ameaça, ofensa ou discriminação no ambiente estudantil e acadêmico, independentemente de sua motivação.",
       "“A Constituição Federal garante o direito à liberdade de expressão e de pensamento, princípios fundamentais para a consolidação da democracia brasileira”, destaca o informe."
-    ]
-  },
-  {
-    "id": "ebc-1707340",
-    "title": "Prêmio para mulheres cientistas tem inscrição prorrogada até novembro",
-    "summary": "Mulheres estudantes do Ensino Médio e universitárias terão até o dia 15 de novembro para se inscrever no 8º Prêmio Carolina Bori Ciência e Mulher.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/premio-para-mulheres-cientistas-tem-inscricao-prorrogada-ate-novembro",
-    "publishedAt": "01/11/2026 às 11:27",
-    "category": "Política",
-    "ingestedAt": "01/11/2026 às 14:06",
-    "imageUrl": "https://imagens.ebc.com.br/cgvcRZbgWkxG2HufgcdGcbVqIOA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/09/03/meninas_cientistas.jpg?itok=69LnYcDi",
-    "imageCaption": "Prêmio para mulheres cientistas tem inscrição prorrogada até novembro",
-    "imageCredit": "Iara Balduino - Repórter da Agência Brasil",
-    "imageAlt": "Prêmio para mulheres cientistas tem inscrição prorrogada até novembro",
-    "author": "Iara Balduino - Repórter da Agência Brasil",
-    "tags": [
-      "Educação",
-      "SBPC",
-      "Mulheres cientistas",
-      "Prêmio Carolina Bori",
-      "Política"
-    ],
-    "content": [
-      "Mulheres estudantes do Ensino Médio e universitárias terão até o dia 15 de novembro para se inscrever no 8º Prêmio Carolina Bori Ciência e Mulher.",
-      "A premiação, promovida pela Sociedade Brasileira para o Progresso da Ciência (SBPC), tem o objetivo de reconhecer cientistas e jovens pesquisadoras com trabalhos relevantes em suas áreas de conhecimento e incentivar a participação feminina na produção científica. Por isso, o foco se alterna anualmente entre profissionais e estudantes.",
-      "Este ano, a proposta é identificar jovens que, mesmo no início de sua formação, já demonstram curiosidade científica, criatividade, capacidade de investigação e interesse em construir uma trajetória ligada à ciência.",
-      "Podem concorrer estudantes que estejam matriculadas no Ensino Médio ou em cursos de graduação em instituições de ensino brasileiras.",
-      "Para participar, essas meninas devem ter desenvolvido projetos ou atividades de iniciação científica com orientação de professores ou pesquisadores ou se destacado em feiras e olimpíadas científicas, projetos de pesquisa ou ações de divulgação científica.",
-      "A SBPC vai premiar seis mulheres: três do ensino médio e três da graduação. Em cada etapa, será escolhido um projeto de cada uma das seguintes áreas: Humanidades; Ciências Biológicas e da Saúde e Engenharias, Ciências Exatas e Ciências da Terra.",
-      "As vencedoras irão receber uma mentoria exclusiva com pesquisadores reconhecidos e vão apresentar seus trabalhos na 79ª reunião Anual da SBPC prevista para ocorrer em julho de 2027 em João Pessoa (PB) .",
-      "Além disso, as estudantes do ensino médio ganhadoras vão receber um prêmio em dinheiro de R$ 10 mil e as alunas da graduação um valor de R$13 mil.",
-      "Carolina Martuscelli Bori (1924-2004) foi uma psicóloga e pesquisadora brasileira pioneira da ciência e da pesquisa científica no país.",
-      "Também foi a responsável pela introdução da Análise Experimental do Comportamento no Brasil e a primeira mulher a presidir a SBPC, entre os anos de 1986 e 1989.",
-      "As inscrições podem ser feitas até o dia 15 de novembro pelo formulário online.",
-      "O edital com todas as informações pode ser acessado no site da SBPC ."
-    ]
-  },
-  {
-    "id": "ebc-1707447",
-    "title": "Novembro começa com chuvas no Norte, Centro-Oeste e Sudeste",
-    "summary": "Chuvas fazem com que o Amazonas, Rondônia e as regiões Centro-Oeste e Sudeste comecem o mês de novembro com um aviso de perigo potencial para tempestades. A informação foi divulgada pelo Instituto Nacional de Meteorologia (Inmet), neste domingo (1º).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-11/novembro-comeca-com-chuvas-no-norte-centro-oeste-e-sudeste",
-    "publishedAt": "01/11/2026 às 11:01",
-    "category": "Política",
-    "ingestedAt": "01/11/2026 às 14:06",
-    "imageUrl": "https://imagens.ebc.com.br/Rkv1_ouVJ2j3tmP4kxQW2MtDdGI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/15/20200219_183713.jpg?itok=CGXMM0gW",
-    "imageCaption": "Novembro começa com chuvas no Norte, Centro-Oeste e Sudeste",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Novembro começa com chuvas no Norte, Centro-Oeste e Sudeste",
-    "author": "Agência Brasil",
-    "tags": [
-      "Meio Ambiente",
-      "meteorologia",
-      "Inmet",
-      "previsão do tempo",
-      "Política"
-    ],
-    "content": [
-      "Chuvas fazem com que o Amazonas, Rondônia e as regiões Centro-Oeste e Sudeste comecem o mês de novembro com um aviso de perigo potencial para tempestades. A informação foi divulgada pelo Instituto Nacional de Meteorologia (Inmet), neste domingo (1º).",
-      "Na Região Norte, além dos dois estados, áreas do Acre também têm condições para chuvas e trovoadas. No oeste de Roraima, sul do Pará e centro e sul do Tocantins, há ainda possibilidade de chuvas isoladas.",
-      "Entre as capitais, a temperatura mínima será de 23 graus Celsius (°C) em Rio Branco e a máxima chega a 37 °C em Boa Vista.",
-      "Grande parte da Região Centro-Oeste tem previsão de chuva, especialmente os estados de Goiás e de Mato Grosso do Sul onde também pode haver queda de granizo.",
-      "A temperatura mínima nas capitais será de 20 °C em Brasília e a máxima de 34 °C em Cuiabá.",
-      "No Sudeste do país, as chuvas também devem atingir quase toda a região, mas em Minas Gerais e Espírito Santo há condições para tempestades.",
-      "A temperatura mínima, entre as capitais, será de 16 °C em Belo Horizonte e a máxima de 28 °C em Belo Horizonte.",
-      "Na Região Sul chove com trovoadas no norte, noroeste e oeste do Paraná, com possibilidade de granizo no noroeste do estado. Também chove em Santa Catarina e pode chover de forma isolada na Serra Gaúcha.",
-      "A temperatura mínima será de 14 °C em Curitiba e a máxima de 26 °C em Porto Alegre.",
-      "No Nordeste brasileiro, há um aviso de perigo potencial para baixa umidade relativa do ar em quase todo o interior da região, exceto nos estados do Maranhão e Sergipe. Há possibilidade de chuvas isoladas apenas nas regiões sudoeste e oeste da Bahia.",
-      "O mês de novembro começa com temperaturas elevadas na região. Neste domingo, a mínima será de 27 °C em São Luís e a máxima chega a 38 °C em Teresina."
     ]
   },
   {
