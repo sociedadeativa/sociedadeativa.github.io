@@ -5,6 +5,41 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1707543",
+    "title": "Com gols no 1º tempo, Massa Bruta faz 2 a 1 e iguala os 47 pontos",
+    "summary": "Na partida que abriu a 34ª rodada do Campeonato Brasileiro, na noite desta segunda-feira (2), melhor para o Red Bull Bragantino. O Massa Bruta derrotou o Santos por 2 a 1 no Estádio Cícero de Souza Marques, em Bragança Paulista (SP).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-11/com-gols-no-primeiro-tempo-massa-bruta-faz-2-1-e-iguala-os-47-ponto",
+    "publishedAt": "02/11/2026 às 22:21",
+    "category": "Esportes",
+    "ingestedAt": "03/11/2026 às 06:50",
+    "imageUrl": "https://imagens.ebc.com.br/JkUhscKrC5-7tfU0aiCDDFrdfxA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/02/55628455036_845bab6de5_k.jpg?itok=mro9hpjJ",
+    "imageCaption": "Com gols no 1º tempo, Massa Bruta faz 2 a 1 e iguala os 47 pontos",
+    "imageCredit": "Lincoln Chaves - Repórter da EBC",
+    "imageAlt": "Com gols no 1º tempo, Massa Bruta faz 2 a 1 e iguala os 47 pontos",
+    "author": "Lincoln Chaves - Repórter da EBC",
+    "tags": [
+      "Esportes",
+      "campeonato brasileiro",
+      "Brasileirão 2026",
+      "Red Bull Bragantino",
+      "santos"
+    ],
+    "content": [
+      "Na partida que abriu a 34ª rodada do Campeonato Brasileiro, na noite desta segunda-feira (2), melhor para o Red Bull Bragantino. O Massa Bruta derrotou o Santos por 2 a 1 no Estádio Cícero de Souza Marques, em Bragança Paulista (SP).",
+      "O time da casa chegou aos mesmos 47 pontos do Peixe, ultrapassando o rival na classificação, assumindo o oitavo lugar, por ter uma vitória a mais (13 a 12). O Alvinegro Praiano, em nono, pode terminar a rodada a dez pontos da zona de classificação à próxima Libertadores, que engloba os cinco primeiros colocados (G-5).",
+      "O Bragantino não ganhava dois jogos seguidos desde maio. O Santos, por sua vez, chega à terceira partida sem vencer. O atacante Neymar, suspenso, desfalcou a equipe da Vila Belmiro.",
+      "O placar foi alterado logo aos três minutos, em uma infelicidade de Rodinei. O santista se antecipou na marcação do atacante Henry Mosquera, mas acabou escorando de cabeça, para a própria meta, o cruzamento pela direita do também lateral Ryan.",
+      "Bragantino vence Santos na abertura da 34ª rodada do Brasileirão. Foto: : Ari Ferreira/Red Bull Bragantino - Ari Ferreira/Red Bull Bragantino",
+      "O Peixe voltou a balançar as redes - agora, a favor - aos oito, mas o lance foi anulado. O atacante Everton Cebolinha finalizou para o gol o cruzamento de Álvaro Barreal que veio da esquerda. A bola, porém, saiu pela linha de fundo antes que o meia - improvisado na lateral - a alcançasse, levando a árbitra Edina Alves Batista a impugnar a jogada.",
+      "Aos 36, enfim, o Santos tirou o zero do marcador. Após tabelar com o atacante Gabriel, o meia Philippe Coutinho invadiu a área, tirou a marcação do zagueiro Gustavo Marques e fez um golaço, deixando tudo igual.",
+      "A comemoração dos visitantes, porém, durou apenas quatro minutos. Aos 40, Mosquera cruzou pela esquerda e o atacante Wallace Yan, quase na pequena área, mandou para a rede de cabeça, recolocando o Bragantino na frente.",
+      "Na segunda etapa, o Santos se lançou ao ataque e reclamou de um pênalti não marcado de Ryan sobre o atacante Rony, aos 35 minutos. O goleiro Thiago Volpi foi seguro quando necessário e ajudou a garantir os três pontos para o Massa Bruta.",
+      "Os demais jogos da 34ª rodada ocorrem entre terça (3) e sexta-feira (6). Nesta quarta-feira (4), a Rádio Nacional transmite a partida entre Botafogo e Atlético-MG, que se enfrentam no Estádio Nilton Santos, no Rio de Janeiro, às 21h30 (horário de Brasília)."
+    ]
+  },
+  {
     "id": "ebc-1707541",
     "title": "Vitória anuncia demissão do técnico Jair Ventura",
     "summary": "A cinco rodadas para o fim do Campeonato Brasileiro, o Vitória anunciou nesta segunda-feira (2) a demissão do técnico Jair Ventura. A saída do treinador ocorre dois dias após a derrota fora de casa (2 a 0) para o Coritiba, no último sábado (31), pela 33ª rodada.",
@@ -59,7 +94,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Enem 2026",
       "Inep",
       "Enem",
-      "ensino médio"
+      "Ensino Médio"
     ],
     "content": [
       "A primeira prova do Exame Nacional do Ensino Médio (Enem) de 2026 está marcada para o próximo domingo (8) e o Ministério da Educação (MEC) elaborou uma lista para facilitar a preparação dos mais de 5 milhões de inscritos com itens que devem estar prontos antes da data do exame.",
@@ -75,7 +110,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Não deixe a compra para o caminho da prova. Separe mais de uma, teste todas e guarde com o documento e com o Cartão de Confirmação impresso. Leve ainda lanche, água, e medicamentos necessários e um saco simples para lixo.",
       "“Menos objetos, menos decisões: relógio, lápis, borracha, anotações e eletrônicos não podem ficar com você. Tire da bolsa o que não vai usar e siga a orientação do chefe de sala. Escolha uma refeição habitual fácil de abrir e consumir e evite depender de compra perto do local de prova. O lanche e os medicamentos podem ser vistoriados pela equipe de aplicação”, ressalta o MEC.",
       "Clique aqui e leia mais sobre o Enem 2026 na Agência Brasil",
-      "De acordo com o MEC, a última semana antes da prova é o momento de revisar pontos onde há erros recorrentes, fórmulas já usadas, conceitos centrais, repertórios já compreendidos decisões de estratégia .",
+      "De acordo com o MEC, a última semana antes da prova é o momento de revisar pontos onde há erros recorrentes, fórmulas já usadas, conceitos centrais, repertórios já compreendidos e decisões de estratégia .",
       "O ideal é selecionar de três a cinco erros que se repetem, revisar fichas, mapas, fórmulas e flashcards já produzidos.",
       "Na véspera, a revisão deve encerrar mais cedo e se um tema ainda gerar receio, use uma explicação curta e algumas questões representativas, mas se não for possível, é necessário aceitar o limite, que também faz parte de toda a preparação.",
       "“A véspera serve ainda para conferir documentos, caneta, alimentação, rota, horário de saída, separar roupa confortável e adequada ao clima e descansar respeitando o horário que definiu para ter uma boa noite de sono”, destaca o MEC.",
@@ -1642,54 +1677,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "A temperatura mínima será de 14 °C em Curitiba e a máxima de 26 °C em Porto Alegre.",
       "No Nordeste brasileiro, há um aviso de perigo potencial para baixa umidade relativa do ar em quase todo o interior da região, exceto nos estados do Maranhão e Sergipe. Há possibilidade de chuvas isoladas apenas nas regiões sudoeste e oeste da Bahia.",
       "O mês de novembro começa com temperaturas elevadas na região. Neste domingo, a mínima será de 27 °C em São Luís e a máxima chega a 38 °C em Teresina."
-    ]
-  },
-  {
-    "id": "ebc-1707252",
-    "title": "As Aventuras de Tita estreia na programação infantil da TV Brasil",
-    "summary": "A TV Brasil apresenta a animação nacional inédita As Aventuras de Tita a partir desta segunda (2), na faixa de programação infantil TV Brasil Animada , sessão que entra no ar às 7h na emissora pública. O novo desenho com temática ambiental tem dez episódios de sete minutos.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-10/aventuras-de-tita-estreia-na-programacao-infantil-da-tv-brasil",
-    "publishedAt": "01/11/2026 às 10:05",
-    "category": "Política",
-    "ingestedAt": "01/11/2026 às 11:29",
-    "imageUrl": "https://imagens.ebc.com.br/8ie--BWHnZoEFZVc7N68EnRVX2Q=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/29/as-aventuras-de-tita-01-credito-divulgacao-tv-brasil.jpg?itok=lt-PVdMv",
-    "imageCaption": "As Aventuras de Tita estreia na programação infantil da TV Brasil",
-    "imageCredit": "EBC",
-    "imageAlt": "As Aventuras de Tita estreia na programação infantil da TV Brasil",
-    "author": "EBC",
-    "tags": [
-      "Cultura",
-      "TV Brasil",
-      "TV Brasil Animada",
-      "As Aventuras de Tita",
-      "Animação"
-    ],
-    "content": [
-      "A TV Brasil apresenta a animação nacional inédita As Aventuras de Tita a partir desta segunda (2), na faixa de programação infantil TV Brasil Animada , sessão que entra no ar às 7h na emissora pública. O novo desenho com temática ambiental tem dez episódios de sete minutos.",
-      "Em outubro, no Dia das Crianças, a TV Brasil lançou diversas produções para a garotada. O canal incluiu na sessão para a turminha miúda as obras Esse é o Bicho , Lia , Pedro e o Minimundo , Playpolis e Tropa Troco . Os desenhos Júlio e Verne: Os Irmãos Gemiais e Além da Lenda voltaram à telinha.",
-      "As novas atrações da sessão dedicada às crianças abordam assuntos importantes para sensibilizar esse público. Os episódios das histórias mostram, de modo lúdico, questões da natureza, educação financeira e entretenimento sociocultural .",
-      "O desenho inédito em cartaz no canal público acompanha a jovem Tita, uma menina que vive em Curaçá, no norte da Bahia. A protagonista da série tem o poder de falar com os animais e se transformar em ararinha-azul.",
-      "Através da sua sanfona encantada, a garota muda de forma para defender a natureza e toda a sua cultura junto aos Guardiões da Caatinga, grupo composto por seus amigos Dudé, um excêntrico bode, Timbum, um peixe artista, e Cauã, um maracanã pra lá de folgado.",
-      "Com desafios que vão desde poluição de chiclete e desmatamento a mudanças catastróficas de clima, Tita e seus amigos vão viver grandes aventuras para tornar sua região um lugar seguro e divertido para todos.",
-      "Com mais de cinco horas diárias, de segunda a sábado, a partir das 7h, a TV Brasil Animada tem mais de 30 horas semanais no ar. A faixa para a criançada oferece conteúdo de qualidade como as renomadas animações Peixonauta , O Show da Luna! , Diário de Mika e Igarapé Mágico , entre outras obras.",
-      "O aplicativo TV Brasil Play também disponibiliza diversas atrações especiais para a garotada. Com acesso gratuito, o app tem mais de 40 obras, entre filmes, desenhos e produções seriadas para que crianças e adolescentes assistam onde e quando quiserem.",
-      "Na telinha, a programação da faixa TV Brasil Animada tem transmissão para todo o país em sinal de aberto de televisão, através das emissoras que integram a Rede Nacional de Comunicação Pública (RNCP), gerida pela Empresa Brasil de Comunicação ( EBC ).",
-      "A sessão lançada em 2018 oferece recursos de acessibilidade, como audiodescrição, legenda oculta, interpretação em Libras e dublagem. A faixa destaca-se pela ausência de publicidade que incentive o consumismo.",
-      "As produções em cartaz na TV Brasil Animada reforçam valores como a não-violência, a tolerância às diferenças, o cuidado com o meio ambiente e a valorização da cultura nacional, aspectos alinhados às diretrizes da comunicação pública.",
-      "Referência na exibição de programas de qualidade para a garotada, a emissora é uma das principais janelas para atrações educativas, séries e desenhos aclamados pelos telespectadores mirins e seus pais.",
-      "Esses conteúdos contribuem na formação cidadã e incentivam o aprendizado. As obras distribuídas pelo canal divertem a turminha e aguçam a curiosidade com tramas fascinantes adaptadas à idade do público.",
-      "Acompanhe a programação da TV Brasil pelo canal aberto, TV por assinatura e parabólica. Sintonize: https://tvbrasil.ebc.com.br/comosintonizar .",
-      "Seus programas favoritos estão no TV Brasil Play , pelo site http://tvbrasilplay.com.br ou por aplicativo no smartphone . O app pode ser baixado gratuitamente e está disponível para Android e iOS. Assista também pela WebTV: https://tvbrasil.ebc.com.br/webtv .",
-      "TV Brasil Animada – segunda a sábado, das 7h às 12h45, na TV Brasil",
-      "Site – https://tvbrasil.ebc.com.br",
-      "Facebook – https://www.facebook.com/tvbrasil",
-      "Instagram – https://www.instagram.com/tvbrasil",
-      "YouTube – https://www.youtube.com/tvbrasil",
-      "X – https://x.com/TVBrasil",
-      "TikTok – https://www.tiktok.com/@tvbrasil",
-      "TV Brasil Play - http://tvbrasilplay.com.br"
     ]
   },
   {
