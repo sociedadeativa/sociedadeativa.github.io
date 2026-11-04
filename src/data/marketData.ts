@@ -7,7 +7,7 @@ import { B3MarketRankings } from "../types/market";
 export const OFFICIAL_B3_MARKET_DATA: B3MarketRankings = {
   "tradingSession": "03/11/2026",
   "timestamp": "03/11/2026 18:19",
-  "lastSuccessfulUpdate": "03/11/2026, 19:17:18",
+  "lastSuccessfulUpdate": "04/11/2026, 07:56:41",
   "marketStatus": "fechado",
   "marketStatusText": "Mercado Fechado (Último Fechamento Oficial · 03/11/2026)",
   "isDelayed": true,
@@ -103,7 +103,7 @@ export const OFFICIAL_B3_MARKET_DATA: B3MarketRankings = {
       "formattedFinancialVolume": "R$ 1,41 bi",
       "shareVolume": 104015400,
       "tradingSession": "03/11/2026",
-      "timestamp": "03/11/2026 18:05",
+      "timestamp": "03/11/2026 20:21",
       "source": "B3"
     },
     {
