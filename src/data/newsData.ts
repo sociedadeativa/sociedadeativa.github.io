@@ -5,6 +5,43 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1707661",
+    "title": "Rádio Nacional transmite Botafogo X Atlético-MG pelo Brasileirão",
+    "summary": "Neste quarta-feira (4), o Botafogo recebe o Atlético-MG no Estádio Olímpico Nilton Santos, no Rio de Janeiro (RJ), em jogo válido pela 34ª rodada do Brasileirão Masculino.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-11/radio-nacional-transmite-botafogo-x-atletico-mg-pelo-brasileirao",
+    "publishedAt": "04/11/2026 às 06:45",
+    "category": "Esportes",
+    "ingestedAt": "04/11/2026 às 06:52",
+    "imageUrl": "https://imagens.ebc.com.br/svoKb2E6PgNMYkW6DJC7SwscM1I=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/04/radio_nacional_transmite_botafogo_x_atletico-mg_pelo_brasileirao_nesta_quarta_4.jpg?itok=T2fEGk93",
+    "imageCaption": "Rádio Nacional transmite Botafogo X Atlético-MG pelo Brasileirão",
+    "imageCredit": "Rádio Nacional",
+    "imageAlt": "Rádio Nacional transmite Botafogo X Atlético-MG pelo Brasileirão",
+    "author": "Rádio Nacional",
+    "tags": [
+      "Esportes",
+      "Brasileirão",
+      "Botafogo",
+      "Atlético-MG",
+      "Futebol"
+    ],
+    "content": [
+      "Neste quarta-feira (4), o Botafogo recebe o Atlético-MG no Estádio Olímpico Nilton Santos, no Rio de Janeiro (RJ), em jogo válido pela 34ª rodada do Brasileirão Masculino. A Rádio Nacional , emissora da Empresa Brasil de Comunicação ( EBC ), transmite a partida com um pré-jogo especial a partir das 21h15.",
+      "Com 39 pontos conquistados até o momento, o Botafogo figura na 12ª posição da tabela de classificação; tendo perdido por 2 a 1 contra o Remo na quarta-feira passada (28). O Atlético-MG também perdeu a última disputa, por 1 a 0, contra o Cruzeiro, na quinta-feira (29), e está na 7ª colocação.",
+      "A transmissão da Rádio Nacional começa com a faixa Show de Bola Nacional e contará com uma equipe completa para levar ao público todas as emoções do confronto. A narração será de André Luiz Mendes e os comentários ficam com Mário Silva. Por fim, Maurício Costa comanda a reportagem e o plantão da rodada.",
+      "A transmissão da partida entra no ar para parte da rede em AM e OC, além da FM no Rio de Janeiro, no Alto Solimões e parceiros da Rede Nacional de Comunicação Pública (RNCP). A Nacional FM nas demais praças segue com o conteúdo musical. O ouvinte pode ficar ligado nas produções preferidas pelo dial , no app Rádios EBC e no site da emissora. Os áudios ainda estão disponíveis em tempo real por streaming nas duas plataformas.",
+      "O Campeonato Brasileiro é a liga de futebol profissional entre clubes do Brasil, sendo a principal competição futebolística no país. Por meio da disputa, são indicados os representantes brasileiros para a Copa Libertadores da América (junto ao campeão da Copa do Brasil).",
+      "Vinte clubes participam do torneio. No decorrer da temporada, cada time joga duas vezes contra os outros (em um sistema de pontos corridos), uma vez em seu estádio e a outra no de seu adversário, em um total de 38 jogos.",
+      "As equipes recebem três pontos por vitória e um por empate. Os clubes são classificados pelo total de pontos, depois pelo saldo de gols e, em seguida, pelos gols marcados. Em caso de empate entre dois ou mais times, os critérios de desempate são: maior número de vitórias; maior saldo de gols; maior número de gols pró; confronto direto; menor número de cartões vermelhos recebidos e menor número de cartões amarelos.",
+      "Paixão do brasileiro, o futebol é um dos destaques da programação da Rádio Nacional, emissora pública referência em transmissões de partidas no país há décadas. Os jogos das principais competições e as notícias mais importantes têm espaço nas jornadas esportivas diárias.",
+      "Os torcedores podem ficar ligados pelo rádio, site ou streaming para acompanhar as emoções das disputas entre os maiores clubes brasileiros. Antes e depois dos confrontos, o ouvinte se informa sobre a preparação das equipes e a repercussão do placar nas ondas da Nacional . A análise sobre os resultados da rodada ainda ganha janela diária para um rico debate em produções consagradas no radiojornalismo esportivo.",
+      "A equipe da Rádio Nacional reúne craques da crônica esportiva. São produtores, jornalistas e apresentadores que buscam o diferencial da notícia. Além de informar o público nas ondas do rádio, o time também faz bonito na telinha da TV Brasil . Os profissionais fazem o programa Stadium, de segunda a sexta, às 12h30, e de terça a sexta, às 18h30.",
+      "Sempre ao vivo, as tradicionais produções da emissora pública trazem análises e apurações atualizadas. O esporte tem espaço destacado na programação do canal. O telejornal diário Repórter Brasil , às 12h45 e às 19h, também oferece ampla cobertura dos principais resultados do dia.",
+      "A partida também será transmitida pelo canal da Rádio Nacional no YouTube ."
+    ]
+  },
+  {
     "id": "camara-1315539-senado-aprova-pec-da-seguranca",
     "title": "Senado aprova PEC da Segurança sem redução da maioridade penal",
     "summary": "No plenário da Câmara, deputados divergiram em relação à medida.",
@@ -189,6 +226,36 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
+    "id": "ebc-1707635",
+    "title": "Medina vence etapa nas Filipinas e assume vice-liderança da WSL",
+    "summary": "Tricampeão mundial, o brasileiro Gabriel Medina assumiu a vice-liderança do circuito mundial de surfe, a World Surfe League (WSL), ao vencer nesta terça-feira (3) a etapa Cloud 9 nas Filipinas, a penúltima antes da decisão do título em Pipeline, no Havaí.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-11/medina-vence-etapa-nas-filipinas-e-assume-vice-lideranca-da-wsl",
+    "publishedAt": "03/11/2026 às 19:39",
+    "category": "Esportes",
+    "ingestedAt": "03/11/2026 às 21:43",
+    "imageUrl": "https://imagens.ebc.com.br/D3S_WCqRqyKMwBmkakFU7hlfflU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/03/medina_filipinas_etapa_wsl_campeao_2026.png?itok=_jiREC1_",
+    "imageCaption": "Medina vence etapa nas Filipinas e assume vice-liderança da WSL",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Medina vence etapa nas Filipinas e assume vice-liderança da WSL",
+    "author": "Agência Brasil",
+    "tags": [
+      "Esportes",
+      "Gabriel Medina",
+      "WLS",
+      "Filipinas",
+      "vice-liderança"
+    ],
+    "content": [
+      "Tricampeão mundial, o brasileiro Gabriel Medina assumiu a vice-liderança do circuito mundial de surfe, a World Surfe League (WSL), ao vencer nesta terça-feira (3) a etapa Cloud 9 nas Filipinas, a penúltima antes da decisão do título em Pipeline, no Havaí. Na final, Medina levou a melhor sobre o australiano Jack Robinson e levantou o primeiro troféu na temporada, após ser vice três vezes este ano (Margaret River, Fiji e Peniche). O brasileiro venceu com somatório 16.93 contra 14.50 do adversário.",
+      "Além de interromper um jejum de vitórias de quase três anos em etapas da WSL, Medina pulou da quinta para a segunda colocação no ranking, com 53.210 pontos, ficando atrás apenas do atual campeão e líder, o paranaense Yago Dora (54.950). Também seguem com chances matemáticas de conquistar o título mundial em Pipeline o potiguar Ítalo Ferreira (3º colocado, com 49.335 pontos) e o paulista Miguel Pupo (5º, com 45.270). Cercado de brasileiros, o norte-americano Griffin Colapinto (46.195) ocupa a quarta posição.",
+      "Os oitos primeiros colocados no ranking iniciarão a disputa do título mundial em Pipeline, diretamente no round 4. Também participarão da etapa decisiva todos os surfistas (masculino e feminino) que iniciaram a temporada. Diferentemente das etapas anteriores, cuja pontuação máxima era de 10 mil pontos, os vencedores em Pipeline levarão 15 mil pontos. A decisão do título da WSL 2026 ocorrerá entre 8 e 20 de dezembro.",
+      "Em busca do primeiro título na temporada, Medina abriu a bateria com nota 7.50 contra 6.17 de Jack Robinson. Na sequência, o australiano desceu sua segunda onda e obteve 5.00. Inspirado, o tricampeão mundial surfou um tubo incrível e cravou nota 9.43, passando a liderar a bateria. Robinson também deslizou em um tubo, mas acabou caindo e levou 6.27. Em seguida, o australiano se recuperou e conseguiu um 8.23, acirrando ainda mais a disputa. Mas Medina, com a prioridade nos minutos finais, manteve a disputa sob controle, selando a vitória com somatório 16.93 contra 14.50 de Robinson.",
+      "Antes da final contra o australiano, Medina superou o compatriota Yago Dora, após uma disputa eletrizante na semi. O tricampeão mundial saiu na frente, levando de cara nota 8.83 na primeira onda, enquanto o atual campeão e líder da temporada obteve 7.00. Depois Dora passou a liderar a bateria, com nota 6.50 contra 4,17 de Medina. Não demorou muito, Medina retomou o primeiro lugar ao surfar outra ótima onda que lhe valeu 6.93. Nos minutos finais, Dora buscou uma nova virada, sem sucesso. Medina avançou à final ao totalizar 15.76 contra 13.50 de Dora."
+    ]
+  },
+  {
     "id": "ebc-1707648",
     "title": "Câmara de SP arquiva pedido de impeachment contra Ricardo Nunes",
     "summary": "A Comissão Especial da Câmara de Vereadores de São Paulo arquivou o pedido de impeachment contra o prefeito de São Paulo, Ricardo Nunes, por irregularidades no fornecimento de transporte público durante o segundo turno das eleições.",
@@ -219,36 +286,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "De acordo com o relator, Major Palumbo (PP), a denúncia não serve de base para a abertura de um procedimento na Câmara de Vereadores. Palumbo defendeu que o pedido deve ser analisado pela Justiça eleitoral e que os fatos, no dia das eleições, \"ocorreram dentro das normas eleitorais, não demonstrando que o prefeito tenha cometido qualquer infração\".",
       "Além de São Paulo, eleitores de outras cidades, como em Salvador, relataram falta de ônibus para chegar aos locais de votação. Na ocasião, a campanha do candidato Luiz Inácio Lula da Silva denunciou restrição de transporte público em nove estados e solicitou ao Tribunal Superior Eleitoral (TSE) a prorrogação do horário de votação nos locais afetados para até as 19h.",
       "O ministro do Supremo Tribunal Federal (STF), Cristiano Zanin, determinou a prorrogação da votação por mais duas horas, até 19h, nos locais onde as urnas ainda não haviam sendo fechadas. Zanin atendeu pedido da campanha de Lula e também da campanha de Flávio Bolsonaro (PL), que solicitou a ampliação do horário em municípios de São Paulo, Minas Gerais, Paraná, Santa Catarina e Rio Grande do Sul por causa das fortes chuvas."
-    ]
-  },
-  {
-    "id": "ebc-1707635",
-    "title": "Medina vence etapa nas Filipinas e assume vice-liderança da WSL",
-    "summary": "Tricampeão mundial, o brasileiro Gabriel Medina assumiu a vice-liderança do circuito mundial de surfe, a World Surfe League (WSL), ao vencer nesta terça-feira (3) a etapa Cloud 9 nas Filipinas, a penúltima antes da decisão do título em Pipeline, no Havaí.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-11/medina-vence-etapa-nas-filipinas-e-assume-vice-lideranca-da-wsl",
-    "publishedAt": "03/11/2026 às 19:39",
-    "category": "Esportes",
-    "ingestedAt": "03/11/2026 às 21:43",
-    "imageUrl": "https://imagens.ebc.com.br/D3S_WCqRqyKMwBmkakFU7hlfflU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/03/medina_filipinas_etapa_wsl_campeao_2026.png?itok=_jiREC1_",
-    "imageCaption": "Medina vence etapa nas Filipinas e assume vice-liderança da WSL",
-    "imageCredit": "Agência Brasil",
-    "imageAlt": "Medina vence etapa nas Filipinas e assume vice-liderança da WSL",
-    "author": "Agência Brasil",
-    "tags": [
-      "Esportes",
-      "Gabriel Medina",
-      "WLS",
-      "Filipinas",
-      "vice-liderança"
-    ],
-    "content": [
-      "Tricampeão mundial, o brasileiro Gabriel Medina assumiu a vice-liderança do circuito mundial de surfe, a World Surfe League (WSL), ao vencer nesta terça-feira (3) a etapa Cloud 9 nas Filipinas, a penúltima antes da decisão do título em Pipeline, no Havaí. Na final, Medina levou a melhor sobre o australiano Jack Robinson e levantou o primeiro troféu na temporada, após ser vice três vezes este ano (Margaret River, Fiji e Peniche). O brasileiro venceu com somatório 16.93 contra 14.50 do adversário.",
-      "Além de interromper um jejum de vitórias de quase três anos em etapas da WSL, Medina pulou da quinta para a segunda colocação no ranking, com 53.210 pontos, ficando atrás apenas do atual campeão e líder, o paranaense Yago Dora (54.950). Também seguem com chances matemáticas de conquistar o título mundial em Pipeline o potiguar Ítalo Ferreira (3º colocado, com 49.335 pontos) e o paulista Miguel Pupo (5º, com 45.270). Cercado de brasileiros, o norte-americano Griffin Colapinto (46.195) ocupa a quarta posição.",
-      "Os oitos primeiros colocados no ranking iniciarão a disputa do título mundial em Pipeline, diretamente no round 4. Também participarão da etapa decisiva todos os surfistas (masculino e feminino) que iniciaram a temporada. Diferentemente das etapas anteriores, cuja pontuação máxima era de 10 mil pontos, os vencedores em Pipeline levarão 15 mil pontos. A decisão do título da WSL 2026 ocorrerá entre 8 e 20 de dezembro.",
-      "Em busca do primeiro título na temporada, Medina abriu a bateria com nota 7.50 contra 6.17 de Jack Robinson. Na sequência, o australiano desceu sua segunda onda e obteve 5.00. Inspirado, o tricampeão mundial surfou um tubo incrível e cravou nota 9.43, passando a liderar a bateria. Robinson também deslizou em um tubo, mas acabou caindo e levou 6.27. Em seguida, o australiano se recuperou e conseguiu um 8.23, acirrando ainda mais a disputa. Mas Medina, com a prioridade nos minutos finais, manteve a disputa sob controle, selando a vitória com somatório 16.93 contra 14.50 de Robinson.",
-      "Antes da final contra o australiano, Medina superou o compatriota Yago Dora, após uma disputa eletrizante na semi. O tricampeão mundial saiu na frente, levando de cara nota 8.83 na primeira onda, enquanto o atual campeão e líder da temporada obteve 7.00. Depois Dora passou a liderar a bateria, com nota 6.50 contra 4,17 de Medina. Não demorou muito, Medina retomou o primeiro lugar ao surfar outra ótima onda que lhe valeu 6.93. Nos minutos finais, Dora buscou uma nova virada, sem sucesso. Medina avançou à final ao totalizar 15.76 contra 13.50 de Dora."
     ]
   },
   {
@@ -1625,40 +1662,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "O parlamentar argumentou que considerar obrigatória a data de início do vínculo parecia uma exigência excessiva. Além disso, explicou que cobrar a informação sobre o local de trabalho na data da aposentadoria não faria sentido, visto que os professores podem ter exercido a profissão em múltiplas instituições ao longo da carreira.",
       "O projeto tramita, em caráter conclusivo , e será analisado agora pela Comissão de Constituição e Justiça e de Cidadania. Se for aprovado, poderá seguir diretamente para o Senado Federal, sem precisar passar pelo Plenário da Câmara.",
       "Para virar lei, o texto precisa ser aprovado pelos deputados e pelos senadores.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
-  },
-  {
-    "id": "camara-1315082-comissao-aprova-diretrizes-par",
-    "title": "Comissão aprova diretrizes para atender pacientes com condições pós-Covid no SUS",
-    "summary": "Proposta define parâmetros para diagnóstico precoce, tratamento e acompanhamento contínuo; o texto continua em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1315082-comissao-aprova-diretrizes-para-atender-pacientes-com-condicoes-pos-covid-no-sus",
-    "publishedAt": "03/11/2026 às 12:15",
-    "category": "Congresso",
-    "ingestedAt": "03/11/2026 às 14:25",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20261028154525216-768x473.jpg",
-    "imageCaption": "Geraldo Resende inclui a vacinação contra a Covid-19 entre as estratégias de prevenção",
-    "imageCredit": "Thiago Cristino / Câmara dos Deputados",
-    "imageAlt": "Deputado Geraldo Resende fala ao microfone",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Thiago Cristino / Câmara dos Deputados",
-      "Geraldo Resende inclui a vacinação contra a Covid-19 entre as estratégias de prevenção",
-      "A Comissão de Saúde da Câmara dos Deputados aprovou projeto de lei que estabelece diretrizes para a atenção integral a pessoas com condições pós-Covid no Sistema Único de Saúde (SUS). A proposta define parâmetros para diagnóstico precoce, tratamento, reabilitação física e psicológica e acompanhamento contínuo.",
-      "O texto aprovado é a versão do relator ( substitutivo ), deputado Geraldo Resende (União-MS), para o Projeto de Lei 1429/26, do deputado Giovani Cherini (PL-RS).",
-      "O relator fez ajustes para alinhar a iniciativa às normas atuais do Ministério da Saúde .",
-      "“O encerramento da emergência sanitária [de Covid 19] não pode representar o abandono das pessoas que sobreviveram à pandemia, mas que permaneceram com sequelas e limitações”, afirmou Geraldo Resende no parecer aprovado.",
-      "O substitutivo inclui a vacinação contra a Covid-19 entre as medidas preventivas. Haverá ainda incentivo:",
-      "O texto aprovado também assegura prioridade de atendimento a grupos vulneráveis, incluindo crianças, idosos, pessoas com deficiência, populações indígenas, ribeirinhas e trabalhadores da saúde.",
-      "Ainda segundo a proposta, o trabalho será coordenado pela Atenção Primária à Saúde, articulada com atendimentos ambulatoriais, hospitalares e da Rede de Atenção Psicossocial. Poderá haver teleatendimento de forma complementar.",
-      "O projeto ainda será analisado em caráter conclusivo pelas comissões de Finanças e Tributação; e de Constituição e Justiça e de Cidadania. Para virar lei, terá de ser aprovado pela Câmara e pelo Senado.",
       "Saiba mais sobre a tramitação de projetos de lei"
     ]
   },

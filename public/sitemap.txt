@@ -9,13 +9,14 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1707661/
 https://sociedadeativa.github.io/noticias/camara-1315539-senado-aprova-pec-da-seguranca/
 https://sociedadeativa.github.io/noticias/ebc-1707652/
 https://sociedadeativa.github.io/noticias/camara-1315533-hugo-motta-destaca-aprovacao-d/
 https://sociedadeativa.github.io/noticias/ebc-1707647/
 https://sociedadeativa.github.io/noticias/camara-1315488-ministro-garante-absoluta-prio/
-https://sociedadeativa.github.io/noticias/ebc-1707648/
 https://sociedadeativa.github.io/noticias/ebc-1707635/
+https://sociedadeativa.github.io/noticias/ebc-1707648/
 https://sociedadeativa.github.io/noticias/ebc-1707634/
 https://sociedadeativa.github.io/noticias/ebc-1707631/
 https://sociedadeativa.github.io/noticias/camara-1315372-comissao-debate-dispensa-de-la/
@@ -55,7 +56,6 @@ https://sociedadeativa.github.io/noticias/ebc-1707587/
 https://sociedadeativa.github.io/noticias/camara-1315102-comissao-aprova-desconto-na-co/
 https://sociedadeativa.github.io/noticias/ebc-1707571/
 https://sociedadeativa.github.io/noticias/camara-1315095-comissao-aprova-projeto-que-pr/
-https://sociedadeativa.github.io/noticias/camara-1315082-comissao-aprova-diretrizes-par/
 https://sociedadeativa.github.io/noticias/bcb-21307-inscricoes-para-tres-vagas-do-/
 https://sociedadeativa.github.io/noticias/despesas-governo-federal-como-consultar-gastos-publicos/
 https://sociedadeativa.github.io/noticias/ibge-998877/
