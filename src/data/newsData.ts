@@ -5,6 +5,111 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1707685",
+    "title": "Anvisa aprova primeiro medicamento de GLP-1 oral para obesidade",
+    "summary": "A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou, nesta quarta-feira (4), o registro para o medicamento Wegovy (semaglutida) com administração por via oral . O remédio só era disponível no Brasil na forma de solução injetável para administração subcutânea.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/anvisa-aprova-primeiro-medicamento-de-glp-1-oral-para-obesidade",
+    "publishedAt": "04/11/2026 às 10:33",
+    "category": "Política",
+    "ingestedAt": "04/11/2026 às 11:51",
+    "imageUrl": "https://imagens.ebc.com.br/MKBiXJU3q2HwSNDB3Pln1Cw_xzQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/04/adobestock_2019157538_editorial_use_only.jpeg?itok=wndKPuGs",
+    "imageCaption": "Anvisa aprova primeiro medicamento de GLP-1 oral para obesidade",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Anvisa aprova primeiro medicamento de GLP-1 oral para obesidade",
+    "author": "Agência Brasil",
+    "tags": [
+      "Saúde",
+      "Anvisa",
+      "semaglutida",
+      "obesidade",
+      "Wegovy"
+    ],
+    "content": [
+      "A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou, nesta quarta-feira (4), o registro para o medicamento Wegovy (semaglutida) com administração por via oral . O remédio só era disponível no Brasil na forma de solução injetável para administração subcutânea.",
+      "A nova apresentação prevê administração de comprimidos uma vez ao dia, com escalonamento progressivo de dosagem, iniciando com 1,5 miligramas (mg) e avançando para 4 mg e 9 mg, até atingir a dose diária de manutenção recomendada, fixada em 25 mg.",
+      "O medicamento deve ser tomado em jejum, com pequena quantidade de água, aguardando-se pelo menos 30 minutos antes da ingestão de alimentos, bebidas ou outros medicamentos.",
+      "O produto é indicado para o tratamento da obesidade e do sobrepeso (associado a comorbidades) em adultos, como complemento a uma dieta saudável e à prática de atividade física.",
+      "O medicamento é o primeiro agonista do hormônio glucagon tipo 1 (GLP-1) em formato oral aprovado para uso no país.",
+      "Para a agência reguladora, a chegada da nova apresentação traz mais flexibilidade terapêutica aos pacientes e profissionais de saúde, o que inclui a possibilidade de transição entre as formulações oral e subcutânea, quando clinicamente apropriado, de acordo com as orientações aprovadas em bula.",
+      "A aprovação do registro teve como principal sustentação os resultados do estudo clínico pivotal de fase 3, denominado OASIS 4, que avaliou a eficácia da semaglutida oral na dosagem de 25 mg em adultos com obesidade ou sobrepeso associado a comorbidades.",
+      "Durante a pesquisa, que acompanhou os participantes ao longo de 64 semanas, o grupo tratado com a medicação registrou uma perda média de peso corporal superior a 13%. Além do desempenho significativamente superior ao do grupo placebo, o tratamento promoveu melhora em diversos marcadores de saúde cardiometabólica dos pacientes.",
+      "A obesidade é uma doença crônica, progressiva e multifatorial, associada ao aumento do risco de diversas condições clínicas, incluindo diabetes mellitus tipo 2, hipertensão arterial, dislipidemia, doença cardiovascular e apneia obstrutiva do sono."
+    ]
+  },
+  {
+    "id": "ebc-1707682",
+    "title": "Urbanização em favelas quase triplicou e vegetação diminuiu em 40 anos",
+    "summary": "A área urbanizada em favelas e comunidades no Brasil passou de 60,2 mil hectares para 151,7 mil hectares entre os anos de 1985 e 2025. A vegetação existente em cada hectare urbanizado nas comunidades caiu de 0,060 para 0,040 no mesmo período.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-11/urbanizacao-em-favelas-quase-triplicou-e-vegetacao-diminuiu-em-40-anos",
+    "publishedAt": "04/11/2026 às 10:21",
+    "category": "Política",
+    "ingestedAt": "04/11/2026 às 11:51",
+    "imageUrl": "https://imagens.ebc.com.br/2YuK02uW4VvcpslT4ArzFjoT6BY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/12/26/63_0.jpg?itok=HXWTSKSn",
+    "imageCaption": "Urbanização em favelas quase triplicou e vegetação diminuiu em 40 anos",
+    "imageCredit": "Fabíola Sinimbú - Repórter da Agência Brasil",
+    "imageAlt": "Urbanização em favelas quase triplicou e vegetação diminuiu em 40 anos",
+    "author": "Fabíola Sinimbú - Repórter da Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "favelas",
+      "urbanização",
+      "vegetação",
+      "MapBiomas"
+    ],
+    "content": [
+      "A área urbanizada em favelas e comunidades no Brasil passou de 60,2 mil hectares para 151,7 mil hectares entre os anos de 1985 e 2025. A vegetação existente em cada hectare urbanizado nas comunidades caiu de 0,060 para 0,040 no mesmo período.",
+      "Embora as pessoas associem favelas com áreas urbanas, nem todas são caracterizadas dessa forma, por não terem alta concentração de edificação, vias de circulação e infraestrutura.",
+      "Os dados são de um novo recorte da Coleção 11 de mapas anuais de cobertura e uso da terra no Brasil do MapBiomas, divulgado nesta quarta-feira (4). Segundo Júlio Cesar Pedrassoli, coordenador do tema Urbano, o estudo demonstra que o encolhimento das áreas verdes em favelas as torna mais suscetíveis aos eventos climáticos adversos.",
+      "Em 1985, as favelas tinham 43% mais vegetação intraurbana do que as demais áreas urbanas do país. Em 2025, a situação se inverteu e a disponibilidade de vegetação intraurbana nas favelas era 15% menor do que nas demais áreas urbanizadas.",
+      "No período de 40 anos, a vegetação intraurbana nas favelas cresceu apenas 1,7 vezes, enquanto nas áreas urbanizadas fora delas aumentou 2,6 vezes.",
+      "Também cresceram 2,6 vezes as áreas urbanizadas sem vegetação nas favelas, enquanto nas áreas urbanizadas fora das favelas o crescimento de locais sem vegetação foi menor, com aumento de 2,3 vezes",
+      "Em 2025, havia 12,3 mil favelas no país, distribuídas em 651 municípios, sendo que 60,3% da urbanização existente nesses locais surgiram após 1985 e, nesse período de 40 anos, 42,4% pelo menos dobraram de tamanho.",
+      "O crescimento das áreas urbanizadas no território nacional foi de 132% no período, quando passou de 1,9 milhão para 4,4 milhões de hectares, somando mais de 2,5 milhões de hectares. Já a participação das favelas em áreas urbanizadas no país cresceu pouco, passando de 3,2%, em 1985, para 3,4% em 2025.",
+      "Apesar do crescimento das áreas urbanizadas, a vegetação urbana total, que reúne a vegetação intraurbana e a periurbana – localizada nos arredores - diminuiu de 6,5 milhões para 4,1 milhões de hectares, o equivalente a uma redução de 35,9%.",
+      "Com a queda, a área sem vegetação nas regiões urbanizadas do país chegou, em 2025, a 4,24 milhões de hectares.",
+      "O estudo cruza ainda esses dados com a temperatura em áreas urbanizadas, que apontam intensidades média maior nas ilhas de calor em áreas com menos de 10% de cobertura vegetal. Nesses locais, o verão pode ser até 7 °C mais quente que em áreas não urbanizadas com cobertura verde.",
+      "Para Pedrassoli, esse número trazem uma reflexão sobre resiliência climática, soluções baseadas na natureza e qualidade de vida urbana."
+    ]
+  },
+  {
+    "id": "ebc-1707662",
+    "title": "Painel permite analisar mudanças climáticas no Brasil e América Latina",
+    "summary": "O governo federal e a Rede Nacional de Ensino e Pesquisa (RNP) lançaram nessa terça-feira (3) um painel que permite explorar como as mudanças climáticas podem alterar a temperatura e o regime de chuva no Brasil e na América Latina nas próximas décadas.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-11/painel-permite-analisar-mudancas-climaticas-no-brasil-e-america-latina",
+    "publishedAt": "04/11/2026 às 08:48",
+    "category": "Governo",
+    "ingestedAt": "04/11/2026 às 11:51",
+    "imageUrl": "https://imagens.ebc.com.br/UmWixjeOeNBbaiYdEp8IhOsWAIE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/12/27/pint9886.jpg?itok=PRdNtEbh",
+    "imageCaption": "Painel permite analisar mudanças climáticas no Brasil e América Latina",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Painel permite analisar mudanças climáticas no Brasil e América Latina",
+    "author": "Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "mudanças climáticas",
+      "brasil",
+      "América Latina",
+      "plataforma"
+    ],
+    "content": [
+      "O governo federal e a Rede Nacional de Ensino e Pesquisa (RNP) lançaram nessa terça-feira (3) um painel que permite explorar como as mudanças climáticas podem alterar a temperatura e o regime de chuva no Brasil e na América Latina nas próximas décadas.",
+      "A ferramenta integra o AdaptaBrasil, plataforma que reúne indicadores de risco climático para os 5.570 municípios brasileiros, considerando fatores como ameaças climáticas, exposição e vulnerabilidade . Essas informações ajudam a identificar áreas mais suscetíveis aos impactos das mudanças climáticas e a orientar decisões sobre medidas de adaptação. Com o novo painel, a plataforma passa a oferecer também mapas com projeções de mudanças na temperatura e na precipitação sob diferentes níveis de aquecimento global.",
+      "Durante o lançamento, o secretário de Mudança do Clima do Ministério do Meio Ambiente, Aloisio Melo, disse que o governo federal tem trabalhado para tornar a adaptação à mudança do clima uma agenda prioritária, estratégica e transversal.",
+      "Melo explicou que a medida envolve a forma como enfrentamos nossas vulnerabilidades socioeconômicas, que são históricas, mas foram agravadas nesse contexto em que a mudança do clima se materializa, se faz presente e desafia as várias agendas e políticas de desenvolvimento setoriais.”",
+      "O coordenador-geral de Ciência do Clima do Ministério da Ciência, Tecnologia e Inovação (MCTI), Márcio Rojas da Cruz, destacou que o governo federal está disponibilizando, por meio do AdaptaBrasil, informações relevantes no contexto da adaptação.",
+      "O painel reúne indicadores de temperatura e precipitação, incluindo os relacionados a eventos extremos, para quatro níveis de aquecimento global: 1,5°C, 2°C, 3°C e 4°C. Os mapas também permitem comparar as mudanças projetadas em diferentes condições de aquecimento e identificar como elas se distribuem geograficamente.",
+      "De acordo com o gerente de soluções da RNP, Christian Miziara, o painel tem a possibilidade de comparar diferentes níveis de aquecimento global. “Em uma única interface, é possível visualizar indicadores de temperatura e precipitação, considerando os cenários de aquecimento. Isso ajuda a compreender como as ameaças climáticas podem se comportar à medida que a temperatura global aumenta”, disse.",
+      "Para o pesquisador sênior do Instituto Nacional de Pesquisas Espaciais (INPE), Jean Ometto, o novo painel permite à sociedade acessar as projeções climáticas. “As projeções climáticas são um aspecto central, dentro do cálculo de risco, para que possamos planejar. Isso tudo, obviamente, embute uma incerteza, mas a ciência vai buscando justamente trazer a informação mais clara, mais robusta e mais transparente possível para que se possa trabalhar com planejamento”.",
+      "O pesquisador do INPE Gilvan Sampaio fez a apresentação do painel. Ele explicou que a plataforma está em sua primeira versão, tem navegação simples e que o instituto tem trabalhado para que seja possível baixar os dados sobre o clima por área e biomas. “Nós vamos incluir outras variáveis, como umidade relativa, vento, radiação e que são importantes também para os grupos de pesquisa, pesquisadores e para os diversos usuários, inclusive a população, para ter uma informação confiável sobre a mudança do clima”, avaliou."
+    ]
+  },
+  {
     "id": "ebc-1707660",
     "title": "Racismo e desigualdades afetam aprendizagem das crianças, diz estudo",
     "summary": "O racismo impacta as oportunidades de aprendizagem das crianças desde cedo, de acordo com análise feita pela Fundação Maria Cecília Souto Vidigal.",
@@ -82,38 +187,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
-    "id": "camara-1315372-comissao-debate-dispensa-de-la",
-    "title": "Comissão debate dispensa de laudo médico para atendimento de alunos da educação especial",
-    "summary": "Audiência será promovida pela subcomissão que analisa projeto sobre o assunto.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1315372-comissao-debate-dispensa-de-laudo-medico-para-atendimento-de-alunos-da-educacao-especial",
-    "publishedAt": "03/11/2026 às 19:18",
-    "category": "Congresso",
-    "ingestedAt": "03/11/2026 às 21:43",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20230413100609885-768x512.jpg",
-    "imageCaption": "Audiência vai debater alteração na LDB para dispensar exigência de diagnóstico clínico para a educação especial",
-    "imageCredit": "Geovana Albuquerque/Agência Brasília",
-    "imageAlt": "Saúde - geral - pessoa com autismo - autista - GDF tem quatro centros especializados para pessoas com autismo",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Geovana Albuquerque/Agência Brasília",
-      "Audiência vai debater alteração na LDB para dispensar exigência de diagnóstico clínico para a educação especial",
-      "A Comissão de Educação da Câmara dos Deputados realiza, nesta quarta-feira (4), audiência pública para discutir o papel do laudo médico e da avaliação psicopedagógica na identificação das necessidades e no desenvolvimento escolar dos estudantes da educação especial, com foco no Transtorno do Espectro Autista (TEA).",
-      "O debate será realizado no plenário 4, às 16 horas, no âmbito da Subcomissão Especial que acompanha a tramitação do Projeto de Lei 657/25 , de autoria da deputada Soraya Santos (PL-RJ).",
-      "A proposta altera a Lei de Diretrizes e Bases da Educação Nacional (LDB) para dispensar a exigência de diagnóstico clínico ou apresentação de laudo médico como condição para a oferta de atendimento educacional especializado aos estudantes público-alvo da educação especial.",
-      "A audiência pretende discutir como identificar as necessidades específicas dos alunos e quais instrumentos podem orientar professores e equipes pedagógicas na definição de estratégias de ensino e apoios necessários à aprendizagem.",
-      "Laudo e avaliação pedagógica",
-      "Outro ponto da discussão será o conteúdo dos laudos médicos e a possibilidade de incluir orientações que auxiliem os profissionais da educação na compreensão das necessidades dos estudantes. Os participantes também deverão analisar a relação entre diagnóstico clínico, avaliação multidisciplinar e avaliação pedagógica.",
-      "“Uma escola verdadeiramente inclusiva precisa reconhecer que cada estudante tem seu próprio processo de aprendizagem. O diagnóstico pode oferecer informações importantes, mas é fundamental que a escola tenha condições de observar, compreender e responder às necessidades de cada aluno, sem transformar a burocracia em obstáculo ao direito de aprender”, afirma a deputada Soraya Santos."
-    ]
-  },
-  {
     "id": "ebc-1707633",
     "title": "Enem 2026: confira dicas para cuidar do corpo e da mente na reta final",
     "summary": "A cinco dias do Exame Nacional do Ensino Médio (Enem) de 2026, os mais de 5 milhões de inscritos devem se preocupar não apenas com a revisão dos conteúdos para a prova, mas também com rotinas que equilibrem o corpo e a mente para enfrentar a maratona de questões.",
@@ -130,10 +203,10 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "author": "Agência Brasil*",
     "tags": [
       "Educação",
+      "Multimídia",
       "Enem 2026",
       "Enem",
-      "MEC",
-      "Ensino Superior"
+      "MEC"
     ],
     "content": [
       "A cinco dias do Exame Nacional do Ensino Médio (Enem) de 2026, os mais de 5 milhões de inscritos devem se preocupar não apenas com a revisão dos conteúdos para a prova, mas também com rotinas que equilibrem o corpo e a mente para enfrentar a maratona de questões.",
@@ -154,41 +227,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Alessandra recomenda que o candidato não exagere nas horas de estudo às vésperas da prova.",
       "“A melhor forma de estudar nesta reta final é se dedicando àquilo com que se tem mais afinidade ou mais facilidade, no sentido de que o que não foi aprendido até o momento, muito possivelmente não será mais. Não há tempo hábil para isso”, afirma.",
       "*Com informações de Oussama El Ghaouri, da Rádio Nacional , e Viviane Goulart, da Rádio Unitins FM ."
-    ]
-  },
-  {
-    "id": "camara-1315308-comissao-debate-contribuicoes-",
-    "title": "Comissão debate contribuições do Brasil para a COP-31 nesta quarta-feira; participe",
-    "summary": "Conferência sobre Mudança do Clima será realizada de 9 a 20 de novembro, em Antalya, na Turquia.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1315308-comissao-debate-contribuicoes-do-brasil-para-a-cop-31-nesta-quarta-feira-participe",
-    "publishedAt": "03/11/2026 às 16:16",
-    "category": "Congresso",
-    "ingestedAt": "03/11/2026 às 16:44",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2025/11/mg-8742-768x512.jpg",
-    "imageCaption": "A COP-31 vai dar continuidade aos debates de Belém sobre as mudanças climáticas",
-    "imageCredit": "Bruno Peres/Agência Brasil",
-    "imageAlt": "Comissão debate contribuições do Brasil para a COP-31 nesta quarta-feira; participe",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Bruno Peres/Agência Brasil",
-      "A COP-31 vai dar continuidade aos debates de Belém sobre as mudanças climáticas",
-      "A Comissão de Meio Ambiente e Desenvolvimento Sustentável da Câmara dos Deputados realiza, nesta quarta-feira (4), audiência pública para discutir as contribuições do Brasil à 31ª Conferência das Partes da Convenção-Quadro das Nações Unidas sobre Mudança do Clima (COP-31), que será realizada de 9 a 20 de novembro, em Antalya, na Turquia.",
-      "Veja a pauta e envie suas perguntas",
-      "O debate ocorrerá no plenário 12 às 10h30, e atende a pedido do deputado Nilto Tatto (PT-SP).",
-      "A audiência pretende discutir as prioridades da delegação brasileira para a conferência, os principais desafios das negociações climáticas e os compromissos assumidos pelo país após sediar a COP-30, em Belém (PA).",
-      "A reunião também busca avaliar os desdobramentos das decisões aprovadas na conferência anterior e identificar possíveis iniciativas legislativas necessárias para o cumprimento dos compromissos internacionais assumidos pelo Brasil na área ambiental.",
-      "Segundo o parlamentar “é fundamental que o Parlamento acompanhe de perto a atuação brasileira nas negociações climáticas internacionais e conheça as prioridades e os desafios da delegação. Também precisamos garantir espaço para que a sociedade civil contribua com esse processo, trazendo experiências e conhecimentos que fortaleçam a construção das políticas ambientais do país.”",
-      "Participação do Parlamento",
-      "Segundo a justificativa do requerimento, o debate permitirá que o Parlamento acompanhe as prioridades brasileiras na COP-31 e compreenda os desafios para a implementação dos compromissos climáticos.",
-      "O Congresso Nacional aprovou a Convenção-Quadro das Nações Unidas sobre Mudança do Clima, em 1994, e o Acordo de Paris, em 2016. Também é responsável pela aprovação de leis que estruturam a política climática brasileira, como a Política Nacional sobre Mudança do Clima e o Sistema Brasileiro de Comércio de Emissões.",
-      "A COP-31 será a primeira conferência do clima após a edição realizada no Brasil, em 2025, e deverá marcar a continuidade das discussões e dos compromissos firmados em Belém."
     ]
   },
   {
@@ -239,10 +277,10 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "author": "Joseph Ax, Brad Heath e Jason Lange - Repórteres da Reuters*",
     "tags": [
       "Internacional",
+      "Eleição nos EUA",
       "meio de mandato",
       "Donald Trump",
-      "Democratas",
-      "republicanos"
+      "Democratas"
     ],
     "content": [
       "Os democratas assumiram o controle tanto do Senado quanto da Câmara nessa terça-feira (3), obtendo vitórias esmagadoras em redutos republicanos pela primeira vez em gerações. Dezenas de milhões de eleitores enviaram, com isso, uma crítica contundente ao presidente Donald Trump.",
@@ -266,7 +304,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "publishedAt": "04/11/2026 às 07:52",
     "category": "Justiça",
     "ingestedAt": "04/11/2026 às 09:15",
-    "imageUrl": "https://imagens.ebc.com.br/C28pNY_QG0xxSCpw_N2HetxsvXU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/04/refinaria_by_diego_baravelli.jpg?itok=UG0sPbHx",
+    "imageUrl": "https://imagens.ebc.com.br/CvA2KNOWtuN8fTNL4oZP1ZuRmx8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/04/refinaria_by_diego_baravelli_0.jpg?itok=P7UxMo_B",
     "imageCaption": "Refinaria de Manguinhos será avaliada para aproveitamento da estrutura",
     "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
     "imageAlt": "Refinaria de Manguinhos será avaliada para aproveitamento da estrutura",
@@ -275,7 +313,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Justiça",
       "Justiça do Rio",
       "Refinaria de Manguinhos",
-      "combustível",
+      "Combustível",
       "ANP"
     ],
     "content": [
@@ -555,10 +593,10 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "author": "Pedro Rafael Vilela - Repórter da Agência Brasil",
     "tags": [
       "Política",
+      "Multimídia",
+      "Susp",
       "Segurança Pública",
-      "PEC da Segurança Pública",
-      "Maioridade Penal",
-      "Facções"
+      "PEC da Segurança Pública"
     ],
     "content": [
       "O plenário do Senado Federal aprovou na noite desta terça-feira (3), em dois turnos, a Proposta de Emenda à Constituição (PEC) da Segurança Pública, que reorganiza as forças públicas para ampliar o combate ao crime organizado no país.",
@@ -566,6 +604,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "De autoria do Poder Executivo, a PEC da Segurança estabelece penas mais duras e regimes de prisão mais restritos para chefes de facções e milícias e cria um novo pacto federativo entre União, estados e municípios para o enfrentamento ao crime no Brasil.",
       "Essa proposta foi uma das prioridades do atual governo para a área da segurança. O presidente Luiz Inácio Lula da Silva prometeu criar o Ministério da Segurança Pública após aprovação da PEC.",
       "O texto-base da proposta foi aprovado no início de setembro na Comissão de Constituição e Justiça (CCJ) do Senado , e repetiu o mesmo teor do que já havia sido aprovado pela Câmara dos Deputados . Com isso, o texto será promulgado pelo Congresso Nacional.",
+      "Confira mais informações sobre a aprovação no Repórter Brasil , da TV Brasil :",
       "Antes da votação da PEC, os senadores discutiram a inclusão de emendas de plenário que tratavam da redução da maioridade penal de 18 para 16 anos, ou até mesmo para 14 anos .",
       "O relator da PEC, senador Rogério Carvalho (PT-SE), não acolheu as emendas no relatório final, mas recomendou que elas constituíssem propostas autônomas que pudessem tramitar em conjunto e serem votadas posteriormente em separado . Se as emendas fossem votadas e aprovadas, o texto retornaria à Câmara. Por um placar apertado de 38 a 36, o requerimento do relator para separar as emendas em outro projeto foi aprovado.",
       "Segundo Carvalho, há forte divergência doutrinária e política sobre a redução da maioridade penal no país.",
@@ -807,8 +846,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Justiça",
       "bets",
-      "audiência pública",
-      "multimídia",
+      "Audiência Pública",
+      "Multimídia",
       "apostas"
     ],
     "content": [
@@ -818,6 +857,38 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Segundo o ministro, o crime organizado utiliza o sistema de apostas eletrônicas para dar aparência de legalidade ao dinheiro obtido ilegalmente com o tráfico de drogas e outras atividades ilícitas.",
       "A audiência pública foi convocada pelo ministro Luiz Fux , relator dos recursos apresentados ao Supremo pela Associação Nacional de Jogos e Loterias (ANJL) e pelo Instituto Brasileiro de Jogo Responsável (IBJR).",
       "As entidades pediram a derrubada da Medida Provisória (MP) nº 1.394/2026, que proibiu a exploração e a publicidade dos jogos on-line . A medida foi editada em setembro deste ano."
+    ]
+  },
+  {
+    "id": "camara-1315372-comissao-debate-dispensa-de-la",
+    "title": "Comissão debate dispensa de laudo médico para atendimento de alunos da educação especial",
+    "summary": "Audiência será promovida pela subcomissão que analisa projeto sobre o assunto.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1315372-comissao-debate-dispensa-de-laudo-medico-para-atendimento-de-alunos-da-educacao-especial",
+    "publishedAt": "03/11/2026 às 19:18",
+    "category": "Congresso",
+    "ingestedAt": "03/11/2026 às 21:43",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20230413100609885-768x512.jpg",
+    "imageCaption": "Audiência vai debater alteração na LDB para dispensar exigência de diagnóstico clínico para a educação especial",
+    "imageCredit": "Geovana Albuquerque/Agência Brasília",
+    "imageAlt": "Saúde - geral - pessoa com autismo - autista - GDF tem quatro centros especializados para pessoas com autismo",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Geovana Albuquerque/Agência Brasília",
+      "Audiência vai debater alteração na LDB para dispensar exigência de diagnóstico clínico para a educação especial",
+      "A Comissão de Educação da Câmara dos Deputados realiza, nesta quarta-feira (4), audiência pública para discutir o papel do laudo médico e da avaliação psicopedagógica na identificação das necessidades e no desenvolvimento escolar dos estudantes da educação especial, com foco no Transtorno do Espectro Autista (TEA).",
+      "O debate será realizado no plenário 4, às 16 horas, no âmbito da Subcomissão Especial que acompanha a tramitação do Projeto de Lei 657/25 , de autoria da deputada Soraya Santos (PL-RJ).",
+      "A proposta altera a Lei de Diretrizes e Bases da Educação Nacional (LDB) para dispensar a exigência de diagnóstico clínico ou apresentação de laudo médico como condição para a oferta de atendimento educacional especializado aos estudantes público-alvo da educação especial.",
+      "A audiência pretende discutir como identificar as necessidades específicas dos alunos e quais instrumentos podem orientar professores e equipes pedagógicas na definição de estratégias de ensino e apoios necessários à aprendizagem.",
+      "Laudo e avaliação pedagógica",
+      "Outro ponto da discussão será o conteúdo dos laudos médicos e a possibilidade de incluir orientações que auxiliem os profissionais da educação na compreensão das necessidades dos estudantes. Os participantes também deverão analisar a relação entre diagnóstico clínico, avaliação multidisciplinar e avaliação pedagógica.",
+      "“Uma escola verdadeiramente inclusiva precisa reconhecer que cada estudante tem seu próprio processo de aprendizagem. O diagnóstico pode oferecer informações importantes, mas é fundamental que a escola tenha condições de observar, compreender e responder às necessidades de cada aluno, sem transformar a burocracia em obstáculo ao direito de aprender”, afirma a deputada Soraya Santos."
     ]
   },
   {
@@ -927,8 +998,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Justiça",
       "AGU",
       "Jorge Messias",
-      "bets",
-      "proibição de bets"
+      "fim das bets",
+      "bets"
     ],
     "content": [
       "O advogado-geral da União, Jorge Messias, defendeu nesta terça-feira (3) a validade da Medida Provisória 1.394 de 2026, que proibiu o funcionamento das empresas que operam sites de apostas online, as bets.",
@@ -1127,8 +1198,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Justiça",
       "stf",
       "bets",
-      "Esportes",
-      "Futebol"
+      "fim das bets",
+      "Luiz Fux"
     ],
     "content": [
       "Representantes de clubes de futebol afirmaram nesta terça-feira (3), em audiência pública no Supremo Tribunal Federal (STF), que a proibição das apostas de quota fixa compromete receitas previstas em contratos firmados sob a legislação então vigente.",
@@ -1396,6 +1467,41 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
+    "id": "camara-1315308-comissao-debate-contribuicoes-",
+    "title": "Comissão debate contribuições do Brasil para a COP-31 nesta quarta-feira; participe",
+    "summary": "Conferência sobre Mudança do Clima será realizada de 9 a 20 de novembro, em Antalya, na Turquia.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1315308-comissao-debate-contribuicoes-do-brasil-para-a-cop-31-nesta-quarta-feira-participe",
+    "publishedAt": "03/11/2026 às 16:16",
+    "category": "Congresso",
+    "ingestedAt": "03/11/2026 às 16:44",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2025/11/mg-8742-768x512.jpg",
+    "imageCaption": "A COP-31 vai dar continuidade aos debates de Belém sobre as mudanças climáticas",
+    "imageCredit": "Bruno Peres/Agência Brasil",
+    "imageAlt": "Comissão debate contribuições do Brasil para a COP-31 nesta quarta-feira; participe",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Bruno Peres/Agência Brasil",
+      "A COP-31 vai dar continuidade aos debates de Belém sobre as mudanças climáticas",
+      "A Comissão de Meio Ambiente e Desenvolvimento Sustentável da Câmara dos Deputados realiza, nesta quarta-feira (4), audiência pública para discutir as contribuições do Brasil à 31ª Conferência das Partes da Convenção-Quadro das Nações Unidas sobre Mudança do Clima (COP-31), que será realizada de 9 a 20 de novembro, em Antalya, na Turquia.",
+      "Veja a pauta e envie suas perguntas",
+      "O debate ocorrerá no plenário 12 às 10h30, e atende a pedido do deputado Nilto Tatto (PT-SP).",
+      "A audiência pretende discutir as prioridades da delegação brasileira para a conferência, os principais desafios das negociações climáticas e os compromissos assumidos pelo país após sediar a COP-30, em Belém (PA).",
+      "A reunião também busca avaliar os desdobramentos das decisões aprovadas na conferência anterior e identificar possíveis iniciativas legislativas necessárias para o cumprimento dos compromissos internacionais assumidos pelo Brasil na área ambiental.",
+      "Segundo o parlamentar “é fundamental que o Parlamento acompanhe de perto a atuação brasileira nas negociações climáticas internacionais e conheça as prioridades e os desafios da delegação. Também precisamos garantir espaço para que a sociedade civil contribua com esse processo, trazendo experiências e conhecimentos que fortaleçam a construção das políticas ambientais do país.”",
+      "Participação do Parlamento",
+      "Segundo a justificativa do requerimento, o debate permitirá que o Parlamento acompanhe as prioridades brasileiras na COP-31 e compreenda os desafios para a implementação dos compromissos climáticos.",
+      "O Congresso Nacional aprovou a Convenção-Quadro das Nações Unidas sobre Mudança do Clima, em 1994, e o Acordo de Paris, em 2016. Também é responsável pela aprovação de leis que estruturam a política climática brasileira, como a Política Nacional sobre Mudança do Clima e o Sistema Brasileiro de Comércio de Emissões.",
+      "A COP-31 será a primeira conferência do clima após a edição realizada no Brasil, em 2025, e deverá marcar a continuidade das discussões e dos compromissos firmados em Belém."
+    ]
+  },
+  {
     "id": "camara-1315256-comissao-aprova-projeto-que-re",
     "title": "Comissão aprova projeto que retoma isenção de imposto para energia solar",
     "summary": "A proposta segue em análise na Câmara dos Deputados.",
@@ -1585,112 +1691,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "O texto estabelece ainda que, enquanto durar a parceria, o profissional não terá relação de emprego ou de sociedade com o estabelecimento.",
       "Eventual taxa de acesso cobrada do personal trainer deverá ser fixa e mensal, sendo proibida a cobrança por aluno atendido. O valor não poderá exceder a média dos preços das mensalidades individuais praticadas pela academia.",
       "O projeto ainda será analisado em caráter conclusivo pelas comissões de Indústria, Comércio e Serviços; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania. Para virar lei, terá de ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
-  },
-  {
-    "id": "camara-1315167-comissao-aprova-aumento-de-pen",
-    "title": "Comissão aprova aumento de pena para estelionato contra entidades públicas e sociais",
-    "summary": "O projeto segue em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1315167-comissao-aprova-aumento-de-pena-para-estelionato-contra-entidades-publicas-e-sociais",
-    "publishedAt": "03/11/2026 às 15:29",
-    "category": "Congresso",
-    "ingestedAt": "03/11/2026 às 16:44",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20260610115742217-768x473.jpg",
-    "imageCaption": "Daniel Agrobom, relator da proposta",
-    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
-    "imageAlt": "Deputado Daniel Agrobom (PSD-GO) fala no Plenário da Câmara dos Deputados",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Kayo Magalhães / Câmara dos Deputados",
-      "Daniel Agrobom, relator da proposta",
-      "A Comissão de Defesa dos Direitos da Pessoa Idosa da Câmara dos Deputados aprovou projeto de lei que aumenta a pena para o crime de estelionato cometido em detrimento ou por intermédio de entidades de direito público, economia popular, assistência social ou beneficência.",
-      "O texto aprovado é a versão do relator, deputado Daniel Agrobom (PSD-GO), para o Projeto de Lei 1950/26 , do deputado Alfredo Gaspar (PL-AL). Segundo Daniel Agrobom, o substitutivo preserva perfeitamente a intenção do autor.",
-      "O texto aprovado altera o Código Penal para prever que a pena seja aumentada de um terço ao dobro nesses casos. A versão original previa ação penal pública incondicionada para crimes de estelionato contra vítimas maiores de 60 anos.",
-      "Na justificativa, o deputado Alfredo Gaspar disse que o objetivo é combater fraudes que causam prejuízos coletivos. Ele citou como exemplos os descontos indevidos e as fraudes no Instituto Nacional do Seguro Social (INSS).",
-      "O projeto ainda será analisado pela Comissão de Constituição e Justiça e de Cidadania. Depois, será votado pelo Plenário.",
-      "Para virar lei, terá de ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
-  },
-  {
-    "id": "camara-1315150-comissao-de-financas-aprova-re",
-    "title": "Comissão de Finanças aprova regras para repasse de recursos públicos a entidades privadas",
-    "summary": "A Câmara dos Deputados continua discutindo o assunto.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1315150-comissao-de-financas-aprova-regras-para-repasse-de-recursos-publicos-a-entidades-privadas",
-    "publishedAt": "03/11/2026 às 15:29",
-    "category": "Congresso",
-    "ingestedAt": "03/11/2026 às 16:44",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/07/img20260715142917625-768x473.jpg",
-    "imageCaption": "Kim Kataguiri recomendou a aprovação da proposta",
-    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
-    "imageAlt": "Deputado Kim Kataguiri fala ao microfone",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Kayo Magalhães / Câmara dos Deputados",
-      "Kim Kataguiri recomendou a aprovação da proposta",
-      "A Comissão de Finanças e Tributação da Câmara dos Deputados aprovou projeto de lei que condiciona o repasse de recursos federais à comprovação de idoneidade dos dirigentes e de critérios de alternância de poder nas entidades beneficiadas.",
-      "A proposta altera a Lei de Responsabilidade Fiscal (LRF) .",
-      "O texto aprovado é a versão do relator, deputado Kim Kataguiri (Missão-SP), para o Projeto de Lei Complementar (PLP) 242/13 , do ex-deputado Rubens Bueno (PR), e a quatro propostas apensadas . O substitutivo contempla todas as iniciativas.",
-      "“As propostas buscam moralizar os repasses de recursos públicos a entidades de direito privado, estabelecendo exigências que podem contribuir para reduzir riscos de irregularidades e fortalecer a confiança nos investimentos”, disse.",
-      "O texto aprovado proíbe o repasse de verbas e a celebração de convênios e contratos com entidades privadas e de utilidade pública cujos dirigentes incorram nas hipóteses de inelegibilidade previstas na Lei da Ficha Limpa .",
-      "Além disso, limita a recondução dos dirigentes dessas entidades a um período contínuo máximo de 12 anos e exige o respeito ao teto remuneratório do funcionalismo público, equivalente ao salário de ministro do Supremo Tribunal Federal.",
-      "Se as regras forem descumpridas, a transferência dos recursos federais será suspensa imediatamente.",
-      "A proposta ainda será analisada pela Comissão de Constituição e Justiça e de Cidadania. Depois, será votada pelo Plenário.",
-      "Para virar lei, terá de ser aprovada pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei complementar"
-    ]
-  },
-  {
-    "id": "camara-1315177-comissao-aprova-incentivo-fisc",
-    "title": "Comissão aprova incentivo fiscal para projetos culturais e esportivos em cidades pequenas",
-    "summary": "Texto continua em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1315177-comissao-aprova-incentivo-fiscal-para-projetos-culturais-e-esportivos-em-cidades-pequenas",
-    "publishedAt": "03/11/2026 às 15:22",
-    "category": "Congresso",
-    "ingestedAt": "03/11/2026 às 16:44",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20260204170405377-768x474.jpeg",
-    "imageCaption": "Carol Dartora: produção cultural é expressiva fora das metrópoles e necessita de maior apoio",
-    "imageCredit": "Vinicius Loures/Câmara dos Deputados",
-    "imageAlt": "Reunião de Instalação e Eleição. Dep. Carol Dartora (PT - PR)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Vinicius Loures/Câmara dos Deputados",
-      "Carol Dartora: produção cultural é expressiva fora das metrópoles e necessita de maior apoio",
-      "A Comissão de Cultura da Câmara dos Deputados aprovou projeto de lei que altera a legislação federal para estimular a realização de projetos culturais e esportivos em municípios com menos de 50 mil habitantes.",
-      "Os parlamentares acolheram o parecer da relatora, deputada Carol Dartora (PT-PR), pela aprovação do projeto inicial ( PL 4612/24 ) na forma de um texto substitutivo .",
-      "O projeto original, apresentado à Câmara pelo deputado Thiago de Joaldo (Republicanos-SE), estabelece que 5% dos valores doados ou patrocinados a projetos culturais com valor maior que R$ 500 mil sejam destinados a iniciativas em municípios com menos de 50 mil habitantes.",
-      "Para compensar essa reserva, o texto original autoriza que os projetos atingidos captem até 5% adicionais sobre o valor aprovado.",
-      "Na área esportiva, a proposta eleva para 4% o limite de dedução do Imposto de Renda quando o projeto for executado nesses municípios.",
-      "O substitutivo aprovado pela Comissão de Cultura preserva a estrutura central do projeto original, mas inclui a ressalva de que a inclusão dos valores dedutíveis devidos pelos patrocinadores deve observar os limites vigentes de dedução fiscal.",
-      "Conforme explicou Carol Dartora, essa adição garante precisão à norma e evita interpretações incorretas sobre uma eventual ampliação automática do teto de dedução tributária já estabelecido em lei.",
-      "Carol Dartora destacou que a produção cultural brasileira é expressiva fora das metrópoles e necessita de maior apoio.",
-      "“A proposição contribui para corrigir distorções históricas na política de financiamento cultural e cria condições mais concretas para a preservação, a valorização e a divulgação das expressões culturais do interior do país.”",
-      "A proposta original modifica regras da Lei Rouanet e a já revogada Lei de Incentivo ao Esporte .",
-      "Carol Dartora observou, no entanto, que a atualização da legislação modificada poderá ser feita oportunamente pela Comissão de Constituição e Justiça e de Cidadania.",
-      "A proposta, que tramita em caráter conclusivo , já havia sido aprovada na Comissão do Esporte. Após a aprovação na Comissão de Cultura, o projeto será analisado pela Comissão de Finanças e Tributação e, posteriormente, pela Comissão de Constituição e Justiça e de Cidadania.",
-      "Se for aprovado por todas as comissões, poderá seguir para o Senado Federal sem precisar passar pelo Plenário da Câmara. Para virar lei, o texto precisa ser aprovado pelos deputados e pelos senadores.",
       "Saiba mais sobre a tramitação de projetos de lei"
     ]
   },
