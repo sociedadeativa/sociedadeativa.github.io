@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Database, FileText, Search, Menu, X, ChevronRight } from "lucide-react";
 import { ElectionDataSet } from "../data/electionData";
 import { PortalRoute } from "../utils/router";
@@ -24,6 +24,19 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenSearch,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Atalho de teclado Ctrl+K / Cmd+K para abrir busca internamente
+  useEffect(() => {
+    if (!onOpenSearch) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && (e.key === "k" || e.key === "K")) {
+        e.preventDefault();
+        onOpenSearch();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onOpenSearch]);
 
   // Busca indicadores oficiais validados para a barra de cotações
   const ipcaIndicator = indicators.find((i) => i.id === "ipca");
@@ -145,13 +158,10 @@ export const Header: React.FC<HeaderProps> = ({
                   onClick={onOpenSearch}
                   className="min-h-[44px] min-w-[44px] sm:min-w-0 px-3.5 py-2 rounded-xl border border-slate-300 bg-slate-50 hover:bg-slate-100 text-slate-800 transition-all flex items-center justify-center gap-2 font-semibold cursor-pointer active:bg-slate-200 focus-visible:ring-2 focus-visible:ring-blue-700 shadow-2xs"
                   title="Pesquisar notícias, artigos ou indicadores"
-                  aria-label="Buscar no portal"
+                  aria-label="Buscar"
                 >
                   <Search className="w-4 h-4 text-slate-600 shrink-0" />
-                  <span>Buscar no portal</span>
-                  <span className="hidden lg:inline text-[10px] text-slate-500 font-mono bg-white px-1.5 py-0.5 rounded border border-slate-200">
-                    Ctrl+K
-                  </span>
+                  <span>Buscar</span>
                 </button>
               )}
 
