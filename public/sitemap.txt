@@ -9,7 +9,10 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1707892/
 https://sociedadeativa.github.io/noticias/ebc-1707891/
+https://sociedadeativa.github.io/noticias/ebc-1707889/
+https://sociedadeativa.github.io/noticias/ebc-1707886/
 https://sociedadeativa.github.io/noticias/ebc-1707887/
 https://sociedadeativa.github.io/noticias/ebc-1707885/
 https://sociedadeativa.github.io/noticias/ebc-1707884/
@@ -51,10 +54,7 @@ https://sociedadeativa.github.io/noticias/ebc-1707818/
 https://sociedadeativa.github.io/noticias/ebc-1707815/
 https://sociedadeativa.github.io/noticias/camara-1316422-deputados-aprovam-projeto-que-/
 https://sociedadeativa.github.io/noticias/camara-1316363-medida-provisoria-regulamenta-/
-https://sociedadeativa.github.io/noticias/camara-1316407-camara-aprova-projeto-que-reco/
-https://sociedadeativa.github.io/noticias/ebc-1707813/
 https://sociedadeativa.github.io/noticias/bcb-21310-bc-reforca-protecao-ao-consumi/
-https://sociedadeativa.github.io/noticias/camara-1316367-camara-aprova-acoes-de-educaca/
 https://sociedadeativa.github.io/noticias/ebc-1707760/
 https://sociedadeativa.github.io/noticias/bcb-21308-consulta-propoe-mais-transpare/
 https://sociedadeativa.github.io/noticias/bcb-21307-inscricoes-para-tres-vagas-do-/
