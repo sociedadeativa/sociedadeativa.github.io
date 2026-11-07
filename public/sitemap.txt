@@ -9,6 +9,13 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1708024/
+https://sociedadeativa.github.io/noticias/ebc-1708023/
+https://sociedadeativa.github.io/noticias/ebc-1708019/
+https://sociedadeativa.github.io/noticias/ebc-1708007/
+https://sociedadeativa.github.io/noticias/ebc-1708016/
+https://sociedadeativa.github.io/noticias/ebc-1708011/
+https://sociedadeativa.github.io/noticias/ebc-1708008/
 https://sociedadeativa.github.io/noticias/ebc-1708000/
 https://sociedadeativa.github.io/noticias/camara-1316981-nova-lei-condiciona-registro-d/
 https://sociedadeativa.github.io/noticias/ebc-1707997/
@@ -45,13 +52,6 @@ https://sociedadeativa.github.io/noticias/ebc-1707932/
 https://sociedadeativa.github.io/noticias/camara-1316706-comissao-aprova-inclusao-do-vi/
 https://sociedadeativa.github.io/noticias/camara-1316704-projeto-inclui-vinagre-colonia/
 https://sociedadeativa.github.io/noticias/ebc-1707930/
-https://sociedadeativa.github.io/noticias/camara-1316681-comissao-aprova-atendimento-vi/
-https://sociedadeativa.github.io/noticias/camara-1316693-comissao-aprova-uso-do-fundo-s/
-https://sociedadeativa.github.io/noticias/camara-1316238-comissao-debate-atuacao-da-red/
-https://sociedadeativa.github.io/noticias/camara-1316523-comissao-de-saude-discute-prop/
-https://sociedadeativa.github.io/noticias/camara-1316677-comissao-aprova-projeto-que-pr/
-https://sociedadeativa.github.io/noticias/ebc-1707895/
-https://sociedadeativa.github.io/noticias/camara-1316669-comissao-aprova-dispensa-de-cu/
 https://sociedadeativa.github.io/noticias/ebc-1707893/
 https://sociedadeativa.github.io/noticias/ebc-1707878/
 https://sociedadeativa.github.io/noticias/ebc-1707839/
