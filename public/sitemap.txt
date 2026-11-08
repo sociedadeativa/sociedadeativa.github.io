@@ -9,6 +9,8 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1708076/
+https://sociedadeativa.github.io/noticias/ebc-1708056/
 https://sociedadeativa.github.io/noticias/ebc-1708055/
 https://sociedadeativa.github.io/noticias/ebc-1708054/
 https://sociedadeativa.github.io/noticias/ebc-1708022/
@@ -51,8 +53,6 @@ https://sociedadeativa.github.io/noticias/ebc-1708011/
 https://sociedadeativa.github.io/noticias/ebc-1708008/
 https://sociedadeativa.github.io/noticias/ebc-1708000/
 https://sociedadeativa.github.io/noticias/camara-1316981-nova-lei-condiciona-registro-d/
-https://sociedadeativa.github.io/noticias/ebc-1707997/
-https://sociedadeativa.github.io/noticias/ebc-1707995/
 https://sociedadeativa.github.io/noticias/camara-1316835-comissao-aprova-proibicao-de-p/
 https://sociedadeativa.github.io/noticias/camara-1316839-comissao-aprova-politica-nacio/
 https://sociedadeativa.github.io/noticias/bcb-21310-bc-reforca-protecao-ao-consumi/
