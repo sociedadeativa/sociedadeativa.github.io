@@ -9,6 +9,8 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1708051/
+https://sociedadeativa.github.io/noticias/ebc-1708050/
 https://sociedadeativa.github.io/noticias/ebc-1708048/
 https://sociedadeativa.github.io/noticias/ebc-1708047/
 https://sociedadeativa.github.io/noticias/ebc-1707833/
@@ -53,8 +55,6 @@ https://sociedadeativa.github.io/noticias/ebc-1707953/
 https://sociedadeativa.github.io/noticias/ebc-1707958/
 https://sociedadeativa.github.io/noticias/ebc-1707959/
 https://sociedadeativa.github.io/noticias/camara-1316864-comissao-debate-reducao-da-mai/
-https://sociedadeativa.github.io/noticias/camara-1316780-comissao-aprova-garantia-de-in/
-https://sociedadeativa.github.io/noticias/ebc-1707893/
 https://sociedadeativa.github.io/noticias/bcb-21310-bc-reforca-protecao-ao-consumi/
 https://sociedadeativa.github.io/noticias/bcb-21308-consulta-propoe-mais-transpare/
 https://sociedadeativa.github.io/noticias/bcb-21307-inscricoes-para-tres-vagas-do-/

@@ -5,6 +5,71 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1708051",
+    "title": "Grêmio avança à final da Copa do Brasil após empate com Atlético-MG",
+    "summary": "O Grêmio é o primeiro finalista da Copa do Brasil. Jogando em Belo Horizonte, o Tricolor Gaúcho empatou em 1 a 1 com o Atlético-MG na noite deste sábado (7) e garantiu a classificação, pois já vencera o jogo de ida em casa por 2 a 0.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-11/gremio-avanca-final-da-copa-do-brasil-apos-empate-com-atletico-mg",
+    "publishedAt": "07/11/2026 às 21:33",
+    "category": "Esportes",
+    "ingestedAt": "07/11/2026 às 21:52",
+    "imageUrl": "https://imagens.ebc.com.br/GYatuDa02yCF27P54wL2SAm4qUQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/07/carlos_vinicius_gol_gremio_copa_do_brasil_2026.jpg?itok=0Sfxt2mK",
+    "imageCaption": "Grêmio avança à final da Copa do Brasil após empate com Atlético-MG",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Grêmio avança à final da Copa do Brasil após empate com Atlético-MG",
+    "author": "Agência Brasil",
+    "tags": [
+      "Esportes",
+      "Grêmio",
+      "finalista",
+      "Copa do Brasil",
+      "classificado"
+    ],
+    "content": [
+      "O Grêmio é o primeiro finalista da Copa do Brasil. Jogando em Belo Horizonte, o Tricolor Gaúcho empatou em 1 a 1 com o Atlético-MG na noite deste sábado (7) e garantiu a classificação, pois já vencera o jogo de ida em casa por 2 a 0. O Galo abriu o placar com Renan Lodi e no final do primeiro tempo Carlos Vinícius deixou tudo igual na Arena MRV. O empate também teve destaque do goleiro Weverton do Grêmio, que protagonizou defesas incríveis.",
+      "Esta é a 10ª vez que o time gaúcho se classifica à decisão da Copa do Brasil. O adversário na final será conhecido neste domingo (8), após o jogo de volta entre Vasco e Palmeiras, com início às 17 horas (horário de Brasília), no Estádio de São Januário, no Rio de Janeiro. O Verdão ganhou por 1 a 0 a primeira partida da semifinal em São Paulo.",
+      "O primeiro tempo começou em ritmo acelerado. Aos 11 minutos, o Grêmio teve a chance de abrir o placar. Enamorado roubou a bola de Castanõ, partiu em contra-ataque e rolou para Carlos Vinicius chutar forte, mas a bola passou rente à trave esquerda. Daí em diante, a pressão foi toda do Galo.",
+      "Aos 12 minutos, o goleiro Weverton salvou o Tricolor Gaúcho duas vezes: primeiro defendeu um chute forte de Castaño de fora da área e, na sequência, agarrou uma bola perigosa, cabeceada por Vitão. Com mais posse de bola, os mineiros abriram o placar aos 25 minutos. A jogada começou com Bernard, que passou para Renan Lodi, livre de marcação, mandar um bomba da entrada da área, no canto superior esquerdo do gol. O Galo teve chance real de ampliar aos 32 minutos, em chute desferido por Bernard, mas Weverton atento fez ótima defesa.",
+      "O Atlético-MG controlava a partida quando o Grêmio arrancou o empate aos 37 minutos, com Noriega aproveitando um rebote em cobrança de falta e cruzando na medida para Carlos Vinícius. O centroavante cabeceou certeiro no fundo da rede. Tudo igual na Arena MRV. Os mineiros seguiram ameaçando o gol do Grêmio, sem êxito. Terminaram a primeira etapa com 73% de posse de bola e 15 finalizações, conta apenas quatro do time gaúcho.",
+      "Após o intervalo, o técnico do Grêmio Renato Gaúcho trocou o atacante Enamorado pelo volante Dodi e a equipe passou a se defender melhor. Precisando da vitória por dois gols de diferença para definir a classificação nos pênaltis, o Galo foi com tudo para o ataque. Aos 11 minutos, Alan Franco chuta forte e quase desempata para o Galo, mas a bola passa por cima do travessão. Aos 20 minutos, nova chance com Cuello, mas ele chutou em cima de Weverton, que defendeu com segurança.",
+      "O Galo seguiu insistindo e, aos 26 minutos, Fred rolou em profundidade para Renan Lodi sozinho dentro da área. Quando ele foi chutar, o goleiro Weverton foi mais rápido, foi para o abafa e impediu o gol. A partida seguia acirrada quando aos 29 minutos desabou um temporal no estádio. O jogo ficou truncado. Depois, aos 39, o zagueiro Vitão, do Grêmio, cometeu falta ao atingir Braitewaite com pé alto. O árbitro aplicou cartão amarelo, mas após intervenção do VAR, o lance foi revisado e o defensor expulso. Com um a menos em campo, o time mineiro acabou neutralizado e a partida terminou mesmo em 1 a 1."
+    ]
+  },
+  {
+    "id": "ebc-1708050",
+    "title": "Frente fria provoca queda de temperatura e risco de tempestades",
+    "summary": "A passagem de uma frente fria pela região Centro-Sul pode provocar chuvas, trovoadas e ventos fortes na maior parte do país nos próximos dias.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/frente-fria-provoca-queda-de-temperatura-e-risco-de-tempestades",
+    "publishedAt": "07/11/2026 às 18:59",
+    "category": "Política",
+    "ingestedAt": "07/11/2026 às 21:52",
+    "imageUrl": "https://imagens.ebc.com.br/AaMJE7oti-PyIQBu_ym9j4N8DLo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/frio_sao_paulo_1.jpg?itok=vYlJ0gOS",
+    "imageCaption": "Frente fria provoca queda de temperatura e risco de tempestades",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Frente fria provoca queda de temperatura e risco de tempestades",
+    "author": "Agência Brasil",
+    "tags": [
+      "Geral",
+      "clima",
+      "Tempo",
+      "Inmet",
+      "tempestades"
+    ],
+    "content": [
+      "A passagem de uma frente fria pela região Centro-Sul pode provocar chuvas, trovoadas e ventos fortes na maior parte do país nos próximos dias.",
+      "De acordo com a previsão do tempo divulgada pelo Instituto Nacional de Meteorologia (Inmet), a passagem de uma massa de ar frio deve provocar o declínio acentuado das temperaturas na Região Sul, no Centro-Oeste e em parte do Sudeste.",
+      "Neste domingo (8), o Inmet alerta para perigo potencial de tempestades no Rio de Janeiro, em Minas Gerais, no Espírito Santo e nas regiões norte e leste de São Paulo.",
+      "No Sul, a previsão é de temperaturas baixas em toda a região. O Inmet alerta para a possibilidade de ventos costeiros fortes no litoral do Paraná e do Rio Grande do Sul.",
+      "Em Curitiba, a temperatura mínima deve chegar a 10°C. Em Porto Alegre, os termômetros devem ficar entre 15°C e 20°C. Em Florianópolis, a máxima não deve passar dos 21°C.",
+      "O tempo deve permanecer chuvoso no Centro-Oeste, com risco de tempestades e queda de temperatura. Há previsão de granizo no leste e nordeste de Mato Grosso do Sul e no sul de Goiás.",
+      "No Nordeste, o tempo deve permanecer estável, sem chuva e com temperaturas elevadas.",
+      "No Norte, não há previsão de chuva. Em Boa Vista, por exemplo, a temperatura máxima pode chegar a 38°C."
+    ]
+  },
+  {
     "id": "ebc-1708048",
     "title": "Rio de Janeiro registra chuva intensa e rajadas de vento",
     "summary": "O estado do Rio de Janeiro registrou chuvas de moderadas a intensas e rajadas de vento na capital e em diversos municípios neste sábado (7). A previsão é de chuva até o fim da manhã de domingo (8).",
@@ -1735,71 +1800,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "“Precisamos discutir a legislação a partir da realidade enfrentada pela sociedade, sem ignorar as vítimas e os efeitos da atuação de organizações criminosas que recrutam adolescentes. O Congresso tem a responsabilidade de avaliar se os instrumentos jurídicos existentes são suficientes para enfrentar esses desafios”, afirma o deputado.",
       "As contribuições das duas audiências deverão subsidiar os trabalhos da comissão especial na análise da PEC 32/15 e das propostas apensadas . A discussão envolve questões constitucionais, penais e sociais, além dos possíveis reflexos sobre as políticas de segurança pública, a proteção de crianças e adolescentes e a organização do sistema socioeducativo.",
       "Saiba mais sobre a tramitação de propostas de emenda à Constituição"
-    ]
-  },
-  {
-    "id": "camara-1316780-comissao-aprova-garantia-de-in",
-    "title": "Comissão aprova garantia de informações claras sobre atendimento a pessoas com autismo no SUS",
-    "summary": "O projeto continua em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1316780-comissao-aprova-garantia-de-informacoes-claras-sobre-atendimento-a-pessoas-com-autismo-no-sus",
-    "publishedAt": "06/11/2026 às 16:14",
-    "category": "Congresso",
-    "ingestedAt": "06/11/2026 às 16:45",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20261028154525216-1-768x473.jpg",
-    "imageCaption": "Geraldo Resende: \"Queremos contribuir para que a informação se converta em ação\"",
-    "imageCredit": "Thiago Cristino / Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Geraldo Resende (UNIÃO - MS)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Thiago Cristino / Câmara dos Deputados",
-      "Geraldo Resende: \"Queremos contribuir para que a informação se converta em ação\"",
-      "A Comissão de Saúde da Câmara dos Deputados aprovou o Projeto de Lei 2582/26, que garante às pessoas com transtorno do espectro autista (TEA) o acesso a informações claras, atualizadas e acessíveis sobre os serviços de saúde disponíveis para atendimento pelo Sistema Único de Saúde (SUS).",
-      "A proposta altera a Lei 12.764/12 para estabelecer a divulgação de informações sobre protocolos clínicos, diretrizes terapêuticas e linhas de cuidado publicados pelo Ministério da Saúde e pelas secretarias estaduais, distrital e municipais de Saúde.",
-      "O relator, deputado Geraldo Resende (União-MS), apresentou (substitutivo) versão que amplia o alcance da proposta original. O novo texto passa a abranger toda a rede de atenção à saúde, incluindo os serviços de atenção primária e especializada, e não apenas os estabelecimentos especializados. Também também acrescenta a integração das informações aos sistemas digitais já existentes, com a possibilidade de agendamento eletrônico de procedimentos, de reserva de medicamentos para retirada em prazo determinado e de inclusão ou desistência em filas de espera.",
-      "Outra mudança é a previsão de informações sobre o fornecimento de medicamentos de forma geral, enquanto o projeto original destacava apenas os remédios mais frequentemente utilizados por pessoas com TEA.",
-      "“Assim, pretendemos contribuir para que a informação se converta em ação, capaz de produzir resultados concretos em benefício da saúde do cidadão”, afirmou.",
-      "Para cada unidade, deverão ser informados: endereço, horário de atendimento, canais digitais de comunicação, procedimentos oferecidos, documentação necessária e formas de encaminhamento. A proposta também prevê a divulgação da quantidade média de vagas mensais, do tempo estimado de espera para consultas, avaliações, terapias e exames e dos critérios de prioridade.",
-      "Outro ponto previsto no texto é o acesso à posição atualizada do paciente nas filas de espera por serviços ou procedimentos de saúde. As informações deverão ser reunidas em plataforma digital, aplicativo, portais oficiais ou outros meios de comunicação acessíveis à população.",
-      "O projeto tramita em caráter conclusivo e ainda será analisado pelas comissões de Defesa dos Direitos das Pessoas com Deficiência e de Constituição e Justiça e de Cidadania.",
-      "Para virar lei, precisa ser aprovado também pelo Senado Federal.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
-  },
-  {
-    "id": "ebc-1707893",
-    "title": "Receita apreende artigos de futebol falsificados no Porto do Rio",
-    "summary": "Em mais uma ação de fiscalização contra o descaminho, agentes da Receita Federal apreenderam nessa quinta-feira (5) um contêiner com mercadorias contrafeitas - imitação ou cópia do produto original e não declaradas - no Porto do Rio de Janeiro.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/receita-apreende-artigos-de-futebol-falsificados-no-porto-do-rio",
-    "publishedAt": "06/11/2026 às 07:02",
-    "category": "Esportes",
-    "ingestedAt": "06/11/2026 às 09:21",
-    "imageUrl": "https://imagens.ebc.com.br/fnH2qmeN-M1e4CMZruRrh8SrzSY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/24/24.9.2026_-_receita_federal_-_operacao_credito_oculto_-_foto_35-10.jpg?itok=y1QY3vvy",
-    "imageCaption": "Receita apreende artigos de futebol falsificados no Porto do Rio",
-    "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
-    "imageAlt": "Receita apreende artigos de futebol falsificados no Porto do Rio",
-    "author": "Douglas Corrêa - Repórter da Agência Brasil",
-    "tags": [
-      "Geral",
-      "receita",
-      "Apreensão",
-      "artigos de futebol",
-      "Falsificação"
-    ],
-    "content": [
-      "Em mais uma ação de fiscalização contra o descaminho, agentes da Receita Federal apreenderam nessa quinta-feira (5) um contêiner com mercadorias contrafeitas - imitação ou cópia do produto original e não declaradas - no Porto do Rio de Janeiro.",
-      "A carga, proveniente da China, tem peso de aproximadamente 22 toneladas e valor estimado em R$ 9,46 milhões . Entre os produtos identificados estão mais de 91 mil peças, incluindo camisas de times de futebol, tênis e chuteiras que ostentam indevidamente marcas registradas, especialmente Nike e Adidas, caracterizando indícios de falsificação.",
-      "Durante a fiscalização, os servidores constataram que o contêiner havia sido declarado como de artigos de menor valor . As mercadorias inicialmente apresentadas estavam posicionadas na parte frontal da carga. No entanto, ao aprofundar a inspeção, foi identificada quantia significativa de produtos não declarados escondidos no fundo do contêiner.",
-      "A apreensão reforça a atuação da Receita Federal no combate às fraudes aduaneiras, à concorrência desleal e às violações de direitos de propriedade intelectual, além de contribuir para a proteção dos consumidores e do mercado formal.",
-      "A ação integra as atividades da Operação Fronteira Receita Federal 2026, maior iniciativa de vigilância e repressão da Receita Federal em rotas utilizadas para a prática de ilícitos como contrabando, descaminho, tráfico de drogas, armas, fauna e flora e outras fraudes aduaneiras. A operação reúne órgãos de segurança pública, fiscalização e defesa, promovendo o compartilhamento de inteligência e a atuação coordenada no combate ao crime organizado."
     ]
   },
   {
