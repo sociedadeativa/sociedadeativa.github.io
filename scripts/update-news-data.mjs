@@ -43,7 +43,8 @@ export const OFFICIAL_CATEGORIES = [
   'Economia',
   'Brasil',
   'Mundo',
-  'Esportes'
+  'Esportes',
+  'Tecnologia'
 ];
 
 /**
@@ -631,7 +632,8 @@ function isProtectedSocietyAtivaArticle(item) {
     artUrl.includes('welligtonbrave.github.io') ||
     id.startsWith('eleicoes-2026-tse-apuracao') ||
     id.startsWith('eleicoes-2026-mapa-regional') ||
-    id.startsWith('despesas-governo-federal')
+    id.startsWith('despesas-governo-federal') ||
+    id.startsWith('caso-nvidia')
   );
 }
 
