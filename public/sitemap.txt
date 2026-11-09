@@ -9,6 +9,8 @@ https://sociedadeativa.github.io/esportes/
 https://sociedadeativa.github.io/tecnologia/
 https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
+https://sociedadeativa.github.io/noticias/ebc-1708131/
+https://sociedadeativa.github.io/noticias/ebc-1708129/
 https://sociedadeativa.github.io/noticias/ebc-1708127/
 https://sociedadeativa.github.io/noticias/ebc-1708121/
 https://sociedadeativa.github.io/noticias/ebc-1708120/
@@ -50,8 +52,6 @@ https://sociedadeativa.github.io/noticias/ebc-1708034/
 https://sociedadeativa.github.io/noticias/ebc-1707978/
 https://sociedadeativa.github.io/noticias/ebc-1708033/
 https://sociedadeativa.github.io/noticias/ebc-1708032/
-https://sociedadeativa.github.io/noticias/ebc-1708031/
-https://sociedadeativa.github.io/noticias/ebc-1707964/
 https://sociedadeativa.github.io/noticias/camara-1316981-nova-lei-condiciona-registro-d/
 https://sociedadeativa.github.io/noticias/camara-1316835-comissao-aprova-proibicao-de-p/
 https://sociedadeativa.github.io/noticias/camara-1316839-comissao-aprova-politica-nacio/
