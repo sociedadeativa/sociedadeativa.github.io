@@ -52,12 +52,12 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <PortalLink route="politica" className="hover:text-white transition-colors">
-                  Política &amp; Poderes
+                  Política &amp; Eleições
                 </PortalLink>
               </li>
               <li>
-                <PortalLink route="eleicoes" className="hover:text-white transition-colors">
-                  Eleições &amp; Apuração
+                <PortalLink route="entretenimento" className="hover:text-white transition-colors">
+                  Entretenimento &amp; Cultura
                 </PortalLink>
               </li>
               <li>

@@ -306,6 +306,7 @@ function generateSitemap(generatedArticles) {
     { loc: 'https://sociedadeativa.github.io/noticias/', defaultDate: '2026-10-13' },
     { loc: 'https://sociedadeativa.github.io/esportes/', defaultDate: '2026-10-14' },
     { loc: 'https://sociedadeativa.github.io/tecnologia/', defaultDate: '2026-10-21' },
+    { loc: 'https://sociedadeativa.github.io/entretenimento/', defaultDate: '2026-11-09' },
     { loc: 'https://sociedadeativa.github.io/clima/', defaultDate: '2026-10-15' },
     { loc: 'https://sociedadeativa.github.io/sobre/', defaultDate: '2026-10-13' },
   ];
@@ -1001,13 +1002,16 @@ export function prerenderHomepage(articles, distDir = DIST_DIR, leadImageMeta = 
       <div class="border-b border-slate-200 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Navegação editorial principal" class="flex items-center justify-start md:justify-center gap-3 sm:gap-6 lg:gap-8 overflow-x-auto scrollbar-none py-2 text-xs font-bold uppercase tracking-wider text-slate-600">
-            <a href="./#eleicoes" class="py-1.5 hover:text-blue-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Eleições 2026</a>
+            <a href="./#politica" class="py-1.5 hover:text-blue-900 whitespace-nowrap shrink-0 border-b-2 border-transparent">Política</a>
+            <a href="./#governo" class="py-1.5 hover:text-slate-900 whitespace-nowrap shrink-0 border-b-2 border-transparent">Governo</a>
+            <a href="./#congresso" class="py-1.5 hover:text-amber-800 whitespace-nowrap shrink-0 border-b-2 border-transparent">Congresso</a>
+            <a href="./#justica" class="py-1.5 hover:text-purple-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Justiça</a>
             <a href="./#economia" class="py-1.5 hover:text-emerald-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Economia</a>
-            <a href="./#estados" class="py-1.5 hover:text-amber-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Estados</a>
-            <a href="./#dados-publicos" class="py-1.5 hover:text-purple-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Dados Públicos</a>
-            <a href="./#noticias" class="py-1.5 hover:text-slate-950 whitespace-nowrap shrink-0 border-b-2 border-transparent">Notícias</a>
+            <a href="./#estados" class="py-1.5 hover:text-cyan-800 whitespace-nowrap shrink-0 border-b-2 border-transparent">Brasil</a>
             <a href="./#esportes" class="py-1.5 hover:text-emerald-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Esportes</a>
             <a href="./#tecnologia" class="py-1.5 hover:text-indigo-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Tecnologia</a>
+            <a href="./#entretenimento" class="py-1.5 hover:text-rose-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Entretenimento</a>
+            <a href="./#dados-publicos" class="py-1.5 hover:text-purple-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Dados Públicos</a>
             <a href="./#clima" class="py-1.5 hover:text-sky-700 whitespace-nowrap shrink-0 border-b-2 border-transparent">Clima</a>
           </nav>
         </div>
@@ -1020,7 +1024,7 @@ export function prerenderHomepage(articles, distDir = DIST_DIR, leadImageMeta = 
           <div class="flex items-center gap-2 pb-5 mb-6 border-b border-slate-100 overflow-x-auto scrollbar-none text-xs">
             <span class="font-bold uppercase tracking-wider text-slate-500 text-[11px] shrink-0 mr-1">Em Foco:</span>
             <div class="flex items-center gap-2 shrink-0">
-              <a href="./#eleicoes" class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-900 font-semibold hover:bg-blue-100 transition-colors">Apuração Presidencial 2026</a>
+              <a href="./#eleicoes" class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-900 font-semibold hover:bg-blue-100 transition-colors">Eleições 2026: Apuração Presidencial</a>
               <a href="./#economia" class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-900 font-semibold hover:bg-emerald-100 transition-colors">Inflação IPCA &amp; Meta Selic</a>
               <a href="./#noticias" class="px-2.5 py-1 rounded-md bg-red-50 text-red-900 font-semibold hover:bg-red-100 transition-colors">Renovação do Congresso</a>
             </div>

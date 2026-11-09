@@ -39,6 +39,7 @@ const CATEGORY_STYLES: Record<NewsCategory, { kicker: string; bg: string; border
   Mundo: { kicker: "text-slate-700", bg: "bg-slate-50", border: "border-slate-200" },
   Esportes: { kicker: "text-emerald-700", bg: "bg-emerald-50", border: "border-emerald-200" },
   Tecnologia: { kicker: "text-indigo-700", bg: "bg-indigo-50", border: "border-indigo-200" },
+  Entretenimento: { kicker: "text-rose-700", bg: "bg-rose-50", border: "border-rose-200" },
 };
 
 export const ArticlePage: React.FC<ArticlePageProps> = ({
@@ -87,6 +88,7 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
     Mundo: EDITORIAL_IMAGES.congresso,
     Esportes: EDITORIAL_IMAGES.congresso,
     Tecnologia: EDITORIAL_IMAGES.dadosPublicos,
+    Entretenimento: EDITORIAL_IMAGES.congresso,
   };
   const institutionalFallback = categoryFallbackMap[article.category] || EDITORIAL_IMAGES.congresso;
   const hasValidOriginal = Boolean(article.imageUrl && isValidImageUrl(article.imageUrl) && !imageError);

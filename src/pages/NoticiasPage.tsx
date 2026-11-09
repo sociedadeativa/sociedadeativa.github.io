@@ -58,21 +58,21 @@ export const NoticiasPage: React.FC<NoticiasPageProps> = ({
             <span className="text-slate-500">Filtrar por tema:</span>
             <PortalLink
               route="politica"
-              className="px-2.5 py-1 rounded-md bg-red-50 text-red-800 hover:bg-red-100 transition-colors"
-            >
-              Política &amp; Congresso &rarr;
-            </PortalLink>
-            <PortalLink
-              route="eleicoes"
               className="px-2.5 py-1 rounded-md bg-blue-50 text-blue-800 hover:bg-blue-100 transition-colors"
             >
-              Eleições 2026 &rarr;
+              Política &amp; Eleições &rarr;
             </PortalLink>
             <PortalLink
               route="economia"
               className="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-800 hover:bg-emerald-100 transition-colors"
             >
               Economia &amp; Finanças &rarr;
+            </PortalLink>
+            <PortalLink
+              route="entretenimento"
+              className="px-2.5 py-1 rounded-md bg-rose-50 text-rose-800 hover:bg-rose-100 transition-colors"
+            >
+              Entretenimento &rarr;
             </PortalLink>
           </div>
         </div>

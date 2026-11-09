@@ -73,14 +73,13 @@ export const Header: React.FC<HeaderProps> = ({
     }
   }, []);
 
-  // 11 Seções editoriais solicitadas
+  // 11 Seções editoriais na ordem oficial solicitada
   const horizontalNavItems: {
     route: PortalRoute;
     label: string;
     subId?: string;
   }[] = [
     { route: "politica", label: "Política" },
-    { route: "eleicoes", label: "Eleições 2026" },
     { route: "politica", label: "Governo", subId: "governo" },
     { route: "politica", label: "Congresso", subId: "congresso" },
     { route: "politica", label: "Justiça", subId: "justica" },
@@ -88,21 +87,22 @@ export const Header: React.FC<HeaderProps> = ({
     { route: "estados", label: "Brasil" },
     { route: "esportes", label: "Esportes" },
     { route: "tecnologia", label: "Tecnologia" },
+    { route: "entretenimento", label: "Entretenimento" },
     { route: "dados-publicos", label: "Dados Públicos" },
     { route: "clima", label: "Clima" },
   ];
 
   const drawerLinks: { route: PortalRoute; label: string }[] = [
     { route: "home", label: "Início" },
-    { route: "politica", label: "Política" },
-    { route: "eleicoes", label: "Eleições 2026" },
+    { route: "politica", label: "Política & Eleições" },
     { route: "economia", label: "Economia" },
     { route: "estados", label: "Brasil & Estados" },
-    { route: "dados-publicos", label: "Dados Públicos" },
-    { route: "noticias", label: "Últimas Notícias" },
     { route: "esportes", label: "Esportes" },
     { route: "tecnologia", label: "Tecnologia" },
+    { route: "entretenimento", label: "Entretenimento" },
+    { route: "dados-publicos", label: "Dados Públicos" },
     { route: "clima", label: "Clima" },
+    { route: "noticias", label: "Últimas Notícias" },
   ];
 
   return (
@@ -245,12 +245,13 @@ export const Header: React.FC<HeaderProps> = ({
             {horizontalNavItems.map((item, index) => {
               const isActive =
                 currentRoute === item.route &&
-                (item.label !== "Eleições 2026" || currentRoute === "eleicoes");
+                (!item.subId || currentRoute === "politica");
 
               return (
                 <PortalLink
                   key={`${item.route}-${item.label}-${index}`}
                   route={item.route}
+                  hash={item.subId}
                   className={`px-3 py-1.5 rounded-lg transition-all shrink-0 ${
                     isActive
                       ? "bg-[#0B132B] text-white shadow-xs"

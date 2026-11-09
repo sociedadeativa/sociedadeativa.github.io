@@ -1,7 +1,4 @@
-import { NewsItem, NewsCategory } from "../types/news";
-
-export type { NewsItem, NewsCategory };
-export type NewsArticle = NewsItem;
+import { NewsItem } from "../types/news";
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
@@ -289,7 +286,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/meta-nega-ao-tse-distribuicao-enviesada-de-conteudo-em-campanhas",
     "publishedAt": "09/11/2026 às 17:08",
-    "category": "Eleições",
+    "category": "Política",
     "ingestedAt": "09/11/2026 às 18:35",
     "imageUrl": "https://imagens.ebc.com.br/9xoxTaB__8p-t5Y0NiqNl9Kl-LE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/fachada_do_tse0402130395.jpg?itok=KGdjiY90",
     "imageCaption": "Meta nega ao TSE distribuição enviesada de conteúdo em campanhas",
@@ -301,7 +298,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "eleições 2026",
       "TSE",
       "meta",
-      "Eleições"
+      "Eleições",
+      "Política"
     ],
     "content": [
       "A Meta enviou ao Tribunal Superior Eleitoral (TSE) uma manifestação na qual nega as acusações de ter distribuído de forma enviesada conteúdo político na campanha eleitoral deste ano. A manifestação foi protocolada na última sexta-feira (6) nas ações abertas durante o período eleitoral.",
@@ -641,7 +639,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/relator-do-distrital-misto-propoe-voto-unico-para-distrital-e-lista",
     "publishedAt": "09/11/2026 às 14:10",
-    "category": "Eleições",
+    "category": "Política",
     "ingestedAt": "09/11/2026 às 16:32",
     "imageUrl": "https://imagens.ebc.com.br/QwdojAMopZ_NEakNk3RKAomP10E=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/pzzb1951-2.jpg?itok=TofZyC9q",
     "imageCaption": "Relator apresenta diretrizes da proposta de voto distrital misto",
@@ -653,7 +651,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "deputado Domingos Neto",
       "sistema de votação",
       "voto distrital misto",
-      "voto proporcional"
+      "voto proporcional",
+      "Eleições 2026"
     ],
     "content": [
       "O relator da proposta que altera o sistema de votação no Brasil, deputado Domingos Neto (PSD-CE), apresentou, nesta segunda-feira (9), na Associação Comercial de São Paulo, as diretrizes do relatório que substitui o atual modelo proporcional de votação para um sistema de distrital misto.",
@@ -1349,7 +1348,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/lula-busca-conciliacao-e-se-compromete-com-responsabilidade-fiscal",
     "publishedAt": "08/11/2026 às 22:16",
-    "category": "Eleições",
+    "category": "Política",
     "ingestedAt": "09/11/2026 às 01:56",
     "imageUrl": "https://imagens.ebc.com.br/U9CJ6HlaBC2uzGhfrg3s5KH8o50=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/08/captura_de_tela_2026-11-08_as_21.24.24.jpg?itok=dmWGcReR",
     "imageCaption": "Lula se compromete com responsabilidade fiscal e busca conciliação",
@@ -1469,7 +1468,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/movimentacoes-no-senado-antecipam-disputa-pelo-comando-da-casa-em-2027",
     "publishedAt": "08/11/2026 às 20:37",
-    "category": "Eleições",
+    "category": "Política",
     "ingestedAt": "08/11/2026 às 22:09",
     "imageUrl": "https://imagens.ebc.com.br/jNzykdJzg3Poi8TyJ4hVGM6gabU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/06/25/lula8286.jpg?itok=8nUq7Ry1",
     "imageCaption": "Movimentações no Senado antecipam disputa pelo comando da Casa em 2027",
@@ -1847,7 +1846,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://sociedadeativa.github.io/",
     "articleUrl": "https://sociedadeativa.github.io/",
     "publishedAt": "05/10/2026 às 11:15",
-    "category": "Eleições",
+    "category": "Política",
     "ingestedAt": "05/10/2026 às 11:15",
     "author": "Análise de Dados / Sociedade Ativa",
     "tags": [
@@ -1855,7 +1854,9 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "São Paulo",
       "Nordeste",
       "Geopolítica",
-      "Regiões"
+      "Regiões",
+      "Eleições 2026",
+      "Política"
     ],
     "content": [
       "O mapeamento regional dos dados consolidados pelo Tribunal Superior Eleitoral revela uma nítida clivagem geográfica no comportamento do eleitorado brasileiro no primeiro turno das eleições presidenciais de 2026.",
@@ -1873,7 +1874,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://sociedadeativa.github.io/",
     "articleUrl": "https://sociedadeativa.github.io/",
     "publishedAt": "05/10/2026 às 08:30",
-    "category": "Eleições",
+    "category": "Política",
     "ingestedAt": "05/10/2026 às 08:30",
     "updatedAt": "05/10/2026 às 10:15",
     "author": "Redação Sociedade Ativa / Cobertura Especial",
@@ -1882,7 +1883,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Eleições 2026",
       "Segundo Turno",
       "Apuração",
-      "Presidência"
+      "Presidência",
+      "Política"
     ],
     "content": [
       "O Tribunal Superior Eleitoral (TSE) concluiu oficialmente a totalização de 100% das urnas eletrônicas em todo o território nacional e no exterior, confirmando a realização de segundo turno entre os dois candidatos mais votados à Presidência da República.",

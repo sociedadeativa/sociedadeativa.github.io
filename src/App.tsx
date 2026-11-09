@@ -21,6 +21,7 @@ const DadosPublicosPage = lazy(() => import("./pages/DadosPublicosPage").then((m
 const NoticiasPage = lazy(() => import("./pages/NoticiasPage").then((m) => ({ default: m.NoticiasPage })));
 const EsportesPage = lazy(() => import("./pages/EsportesPage").then((m) => ({ default: m.EsportesPage })));
 const TecnologiaPage = lazy(() => import("./pages/TecnologiaPage").then((m) => ({ default: m.TecnologiaPage })));
+const EntretenimentoPage = lazy(() => import("./pages/EntretenimentoPage").then((m) => ({ default: m.EntretenimentoPage })));
 const ClimaPage = lazy(() => import("./pages/ClimaPage").then((m) => ({ default: m.ClimaPage })));
 const SobrePage = lazy(() => import("./pages/SobrePage").then((m) => ({ default: m.SobrePage })));
 const ArticlePage = lazy(() => import("./pages/ArticlePage").then((m) => ({ default: m.ArticlePage })));
@@ -121,11 +122,13 @@ export default function App() {
 
           {currentRoute === "politica" && (
             <PoliticaPage
+              dataset={currentDataset}
               articles={articles}
               isLoading={isNewsLoading}
               error={newsError}
               onRetry={refreshNews}
               onOpenArticleDetails={(art) => goToArticle(art.id)}
+              onOpenMethodology={() => setIsMethodologyOpen(true)}
             />
           )}
 
@@ -188,6 +191,16 @@ export default function App() {
           {currentRoute === "tecnologia" && (
             <TecnologiaPage
               articles={articles}
+              onOpenArticleDetails={(art) => goToArticle(art.id)}
+            />
+          )}
+
+          {currentRoute === "entretenimento" && (
+            <EntretenimentoPage
+              articles={articles}
+              isLoading={isNewsLoading}
+              error={newsError}
+              onRetry={refreshNews}
               onOpenArticleDetails={(art) => goToArticle(art.id)}
             />
           )}

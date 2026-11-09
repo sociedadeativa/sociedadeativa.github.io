@@ -10,6 +10,7 @@ const requiredHtmlFiles = [
   'dist/noticias/index.html',
   'dist/esportes/index.html',
   'dist/tecnologia/index.html',
+  'dist/entretenimento/index.html',
   'dist/clima/index.html',
   'dist/sobre/index.html',
   'dist/404.html',
@@ -162,7 +163,7 @@ for (const dataFile of requiredDataFiles) {
 }
 
 // Replica pastas data/ e assets/candidates/ nos subdiretórios para garantir 200 OK em qualquer tipo de requisição relativa
-const subdirs = ['politica', 'eleicoes', 'economia', 'estados', 'dados-publicos', 'noticias', 'esportes', 'tecnologia', 'clima', 'sobre'];
+const subdirs = ['politica', 'eleicoes', 'economia', 'estados', 'dados-publicos', 'noticias', 'esportes', 'tecnologia', 'entretenimento', 'clima', 'sobre'];
 for (const sub of subdirs) {
   // Replicar data/
   const subDataDir = `dist/${sub}/data`;
@@ -259,6 +260,7 @@ const canonicalPages = [
   'https://sociedadeativa.github.io/noticias/',
   'https://sociedadeativa.github.io/esportes/',
   'https://sociedadeativa.github.io/tecnologia/',
+  'https://sociedadeativa.github.io/entretenimento/',
   'https://sociedadeativa.github.io/clima/',
   'https://sociedadeativa.github.io/sobre/',
 ];

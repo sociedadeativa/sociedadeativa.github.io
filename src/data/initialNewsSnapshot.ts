@@ -8,7 +8,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-conquista-titulo-volei-praia",
-    "publishedAt": "09/11/2026 às 18:19",
+    "publishedAt": "09/11/2026 às 19:18",
     "category": "Esportes",
     "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-volei.jpg",
     "imageCaption": "Brasil conquista título no circuito mundial de vôlei de praia",
@@ -23,7 +23,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Brasil conquista título no circuito mundial de vôlei de praia",
     "lead": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
     "content": [],
-    "ingestedAt": "09/11/2026 às 18:24"
+    "ingestedAt": "09/11/2026 às 19:23"
   },
   {
     "id": "ebc-1799002",
@@ -32,7 +32,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/flamengo-palmeiras-lideranca-brasileirao",
-    "publishedAt": "09/11/2026 às 18:14",
+    "publishedAt": "09/11/2026 às 19:13",
     "category": "Esportes",
     "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-futebol.jpg",
     "imageCaption": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
@@ -47,7 +47,83 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
     "lead": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
     "content": [],
-    "ingestedAt": "09/11/2026 às 18:24"
+    "ingestedAt": "09/11/2026 às 19:23"
+  },
+  {
+    "id": "ebc-1708187",
+    "title": "Caixa apresenta nova identidade visual após quase 30 anos",
+    "summary": "A Caixa Econômica Federal apresentou, nesta segunda-feira (9), sua nova identidade visual, com mudanças no logotipo, na tipografia e nas cores utilizadas pelo banco.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-apresenta-nova-identidade-visual-apos-quase-30-anos",
+    "publishedAt": "09/11/2026 às 19:05",
+    "category": "Economia",
+    "imageUrl": "https://imagens.ebc.com.br/13ijGA76__F6tssgRTkjOj8r-Yg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/09/caixa_novo_logo.jpg?itok=Pxj4Z6kg",
+    "imageCaption": "Caixa apresenta nova identidade visual após quase 30 anos",
+    "imageCredit": "Wellton Máximo – Repórter da Agência Brasil",
+    "imageAlt": "Caixa apresenta nova identidade visual após quase 30 anos",
+    "author": "Wellton Máximo – Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "Caixa",
+      "Logomarca"
+    ],
+    "headline": "Caixa apresenta nova identidade visual após quase 30 anos",
+    "lead": "A Caixa Econômica Federal apresentou, nesta segunda-feira (9), sua nova identidade visual, com mudanças no logotipo, na tipografia e nas cores utilizadas pelo banco.",
+    "content": [],
+    "ingestedAt": "09/11/2026 às 19:23"
+  },
+  {
+    "id": "ebc-1708186",
+    "title": "Classe C: número de famílias sem dinheiro guardado cai de 61% para 29%",
+    "summary": "A parcela de famílias da classe C sem nenhuma reserva financeira caiu de 61% (em 2016) para 29% (neste ano), conforme revelou uma pesquisa divulgada nesta segunda (6) pelo Instituto Locomotiva.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/classe-c-numero-de-familias-sem-dinheiro-guardado-cai-de-61-para-29",
+    "publishedAt": "09/11/2026 às 18:25",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/MH-o6rUVv_IR1ZUan8cSUC65_qk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/10/img_7648_1.jpg?itok=cITabctg",
+    "imageCaption": "Classe C: número de famílias sem dinheiro guardado cai de 61% para 29%",
+    "imageCredit": "Luiz Cláudio Ferreira – Repórter da Agência Brasil",
+    "imageAlt": "Classe C: número de famílias sem dinheiro guardado cai de 61% para 29%",
+    "author": "Luiz Cláudio Ferreira – Repórter da Agência Brasil",
+    "tags": [
+      "Geral",
+      "Educação financeira",
+      "Instituto Locomotiva",
+      "bancarização",
+      "classe C"
+    ],
+    "headline": "Classe C: número de famílias sem dinheiro guardado cai de 61% para 29%",
+    "lead": "A parcela de famílias da classe C sem nenhuma reserva financeira caiu de 61% (em 2016) para 29% (neste ano), conforme revelou uma pesquisa divulgada nesta segunda (6) pelo Instituto Locomotiva.",
+    "content": [],
+    "ingestedAt": "09/11/2026 às 19:23"
+  },
+  {
+    "id": "ebc-1708183",
+    "title": "Correios: campanha já recebeu mais de 100 mil cartas para o papai noel",
+    "summary": "Ainda falta um mês e meio para o Natal, mas o Papai Noel dos Correios já está a todo vapor para garantir o presente de milhares de crianças em todo o Brasil. Em 2025, 305 mil cartas foram adotadas.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/correios-campanha-ja-recebeu-mais-de-100-mil-cartas-para-o-papai-noel",
+    "publishedAt": "09/11/2026 às 17:48",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/W2obWBkwhSp7dKJhFuB6F1zhzJY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/11/01/campanha_natal_05.jpg?itok=SdRS_vxf",
+    "imageCaption": "Correios: campanha já recebeu mais de 100 mil cartas para o papai noel",
+    "imageCredit": "Iara Balduino – repórter da Agência Brasil",
+    "imageAlt": "Correios: campanha já recebeu mais de 100 mil cartas para o papai noel",
+    "author": "Iara Balduino – repórter da Agência Brasil",
+    "tags": [
+      "Geral",
+      "Correios",
+      "Papai Noel dos Correios",
+      "Presente",
+      "Natal"
+    ],
+    "headline": "Correios: campanha já recebeu mais de 100 mil cartas para o papai noel",
+    "lead": "Ainda falta um mês e meio para o Natal, mas o Papai Noel dos Correios já está a todo vapor para garantir o presente de milhares de crianças em todo o Brasil. Em 2025, 305 mil cartas foram adotadas.",
+    "content": [],
+    "ingestedAt": "09/11/2026 às 18:35"
   },
   {
     "id": "ebc-1708182",
@@ -73,7 +149,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "BC passa a divulgar lista de empresas aptas a operar com criptoativos",
     "lead": "A partir desta segunda-feira (9), os cidadãos poderão verificar no Banco Central (BC) quais instituições podem prestar serviços relacionados a ativos virtuais, como criptomoedas.",
     "content": [],
-    "ingestedAt": "09/11/2026 às 18:24"
+    "ingestedAt": "09/11/2026 às 18:35"
   },
   {
     "id": "camara-1296150-cancelada-votacao-de-parecer-s",
@@ -97,7 +173,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Cancelada votação de parecer sobre política nacional para pessoas com autismo",
     "lead": "Votação estava programada para esta terça-feira.",
     "content": [],
-    "ingestedAt": "09/11/2026 às 18:24"
+    "ingestedAt": "09/11/2026 às 18:35"
   },
   {
     "id": "camara-1317308-comissao-aprova-diretrizes-par",
@@ -121,7 +197,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão aprova diretrizes para atendimento integral a mulheres com endometriose no SUS",
     "lead": "Proposta segue em análise na Câmara dos Deputados.",
     "content": [],
-    "ingestedAt": "09/11/2026 às 18:24"
+    "ingestedAt": "09/11/2026 às 18:35"
   },
   {
     "id": "ebc-1708179",
@@ -147,80 +223,6 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "CLDF vota proposta que libera reeleição de membros da Mesa Diretora",
     "lead": "A Câmara Legislativa do Distrito Federal (CLDF) deve votar, nesta terça-feira (10), a proposta que autoriza deputados distritais reeleitos que hoje integram a Mesa Diretora a voltarem a disputar o comando da Casa durante os dois primeiros anos da próxima legislatura (2027-2029).",
     "content": [],
-    "ingestedAt": "09/11/2026 às 18:24"
-  },
-  {
-    "id": "ebc-1708178",
-    "title": "Prefeitura de SP rompe contrato com ONG de produtora de Dark Horse",
-    "summary": "A Prefeitura de São Paulo decidiu encerrar unilateralmente o contrato que havia firmado com o Instituto Conhecer Brasil (ICB), organização não governamental da produtora do filme Dark Horse .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/prefeitura-de-sp-rompe-contrato-com-ong-de-produtora-de-dark-horse",
-    "publishedAt": "09/11/2026 às 17:23",
-    "category": "Justiça",
-    "imageUrl": "https://imagens.ebc.com.br/ki-d5E3yhefkawoOV1JUJ0ijB9c=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/10/karina_ferreira_edit_copy_2.jpg?itok=9-fxpjQj",
-    "imageCaption": "Prefeitura de SP rompe contrato com ONG de produtora de Dark Horse",
-    "imageCredit": "Elaine Patricia Cruz – Repórter da Agência Brasil",
-    "imageAlt": "Prefeitura de SP rompe contrato com ONG de produtora de Dark Horse",
-    "author": "Elaine Patricia Cruz – Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Prefeitura de São Paulo",
-      "São Paulo",
-      "Dark Horse",
-      "Ricardo Nunes"
-    ],
-    "headline": "Prefeitura de SP rompe contrato com ONG de produtora de Dark Horse",
-    "lead": "A Prefeitura de São Paulo decidiu encerrar unilateralmente o contrato que havia firmado com o Instituto Conhecer Brasil (ICB), organização não governamental da produtora do filme Dark Horse .",
-    "content": [],
-    "ingestedAt": "09/11/2026 às 18:24"
-  },
-  {
-    "id": "camara-1317312-comissao-aprova-ampliacao-da-p",
-    "title": "Comissão aprova ampliação da política nacional para pacientes com diabetes tipo 1 no SUS",
-    "summary": "A proposta segue em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1317312-comissao-aprova-ampliacao-da-politica-nacional-para-pacientes-com-diabetes-tipo-1-no-sus",
-    "publishedAt": "09/11/2026 às 17:19",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20261014152602831-768x473.jpg",
-    "imageCaption": "Texto aprovado é o substitutivo do relator, Dr. Zacharias Calil",
-    "imageCredit": "Vinicius Loures / Câmara dos Deputados",
-    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Dr. Zacharias Calil (MDB - GO)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "headline": "Comissão aprova ampliação da política nacional para pacientes com diabetes tipo 1 no SUS",
-    "lead": "A proposta segue em análise na Câmara dos Deputados.",
-    "content": [],
-    "ingestedAt": "09/11/2026 às 18:24"
-  },
-  {
-    "id": "ebc-1708176",
-    "title": "Pix bate recorde e supera 319 milhões de transações em um dia",
-    "summary": "Sistema de transferências instantâneas do Banco Central (BC), o Pix bateu novo recorde na última sexta-feira (6). Pela primeira vez, a modalidade superou a marca de 319 milhões de transações em 24 horas.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/pix-bate-recorde-e-supera-319-milhoes-de-transacoes-em-um-dia",
-    "publishedAt": "09/11/2026 às 17:09",
-    "category": "Economia",
-    "imageUrl": "https://imagens.ebc.com.br/328HEHfiQghIcHv98gPcjr_NLtw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/20/_mg_8269.jpg?itok=setcJQ6y",
-    "imageCaption": "Pix bate recorde e supera 319 milhões de transações em um dia",
-    "imageCredit": "Wellton Máximo – Repórter da Agência Brasil",
-    "imageAlt": "Pix bate recorde e supera 319 milhões de transações em um dia",
-    "author": "Wellton Máximo – Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "PIX",
-      "banco central"
-    ],
-    "headline": "Pix bate recorde e supera 319 milhões de transações em um dia",
-    "lead": "Sistema de transferências instantâneas do Banco Central (BC), o Pix bateu novo recorde na última sexta-feira (6). Pela primeira vez, a modalidade superou a marca de 319 milhões de transações em 24 horas.",
-    "content": [],
-    "ingestedAt": "09/11/2026 às 18:24"
+    "ingestedAt": "09/11/2026 às 18:35"
   }
 ];

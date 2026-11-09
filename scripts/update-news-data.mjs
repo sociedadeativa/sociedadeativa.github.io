@@ -44,7 +44,8 @@ export const OFFICIAL_CATEGORIES = [
   'Brasil',
   'Mundo',
   'Esportes',
-  'Tecnologia'
+  'Tecnologia',
+  'Entretenimento'
 ];
 
 /**
@@ -753,7 +754,7 @@ async function fetchAgenciaBrasil() {
         const fullContent = `${title} ${summary} ${categories.join(' ')}`;
 
         if (section === 'politica') {
-          category = electoralRegex.test(fullContent) ? 'Eleições' : 'Política';
+          category = 'Política';
         } else if (section === 'justica') {
           category = 'Justiça';
         } else if (section === 'economia') {
@@ -762,7 +763,7 @@ async function fetchAgenciaBrasil() {
           category = 'Esportes';
         } else if (section === 'ultimas') {
           if (electoralRegex.test(fullContent)) {
-            category = 'Eleições';
+            category = 'Política';
           } else if (justiceRegex.test(fullContent)) {
             category = 'Justiça';
           } else if (congressRegex.test(fullContent)) {

@@ -1,39 +1,111 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { NewsItem } from "../types/news";
+import { ElectionDataSet } from "../data/electionData";
 import { EDITORIAL_IMAGES } from "../assets/editorialImages";
 import { isValidImageUrl } from "../services/newsService";
 import { NewsCard } from "../components/NewsCard";
 import { PortalLink } from "../components/PortalLink";
 import { AdBanner } from "../components/AdBanner";
-import { Landmark, ArrowRight, ShieldCheck, Scale, FileText, AlertTriangle, RefreshCw, Radio } from "lucide-react";
+import { SecondRoundBanner } from "../components/SecondRoundBanner";
+import { RegionalCharts } from "../components/RegionalCharts";
+import { CandidateResultsView } from "../components/CandidateResultsView";
+import { isElectionArticle } from "../utils/electionNewsFilter";
+import { handleTabKeyDown } from "../utils/a11yTabs";
+import {
+  Landmark,
+  ShieldCheck,
+  Scale,
+  Vote,
+  Building2,
+  AlertTriangle,
+  RefreshCw,
+  BarChart3,
+  Users,
+  CheckCircle2,
+  ChevronRight,
+  ExternalLink,
+} from "lucide-react";
 
 interface PoliticaPageProps {
+  dataset?: ElectionDataSet;
   articles: NewsItem[];
   isLoading?: boolean;
   error?: string | null;
   onRetry?: () => void;
   onOpenArticleDetails: (article: NewsItem) => void;
+  onOpenMethodology?: () => void;
 }
 
+export type PoliticaSubcategory = "todos" | "eleicoes" | "governo" | "congresso" | "justica";
+
 export const PoliticaPage: React.FC<PoliticaPageProps> = ({
+  dataset,
   articles,
   isLoading = false,
   error = null,
   onRetry,
   onOpenArticleDetails,
+  onOpenMethodology,
 }) => {
+  const [activeSubcategory, setActiveSubcategory] = useState<PoliticaSubcategory>("todos");
   const [leadImageError, setLeadImageError] = useState(false);
+  const [showElectionDataTools, setShowElectionDataTools] = useState(false);
 
-  // Filtra matérias do caderno de política, congresso, governo e justiça
-  const politicaArticles = articles.filter((a) =>
-    ["Política", "Congresso", "Governo", "Justiça"].includes(a.category)
-  );
+  // Sincroniza subcategoria com a hash da URL (#eleicoes, #governo, #congresso, #justica)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleHash = () => {
+      const hash = window.location.hash.replace("#", "").toLowerCase();
+      if (hash === "eleicoes" || hash === "eleicao") {
+        setActiveSubcategory("eleicoes");
+      } else if (hash === "governo") {
+        setActiveSubcategory("governo");
+      } else if (hash === "congresso") {
+        setActiveSubcategory("congresso");
+      } else if (hash === "justica") {
+        setActiveSubcategory("justica");
+      }
+    };
+
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, []);
+
+  // Filtra matérias do macro-caderno de política e poderes (incluindo eleições integradas)
+  const allPoliticaArticles = useMemo(() => {
+    if (!Array.isArray(articles)) return [];
+    return articles.filter((a) =>
+      ["Política", "Congresso", "Governo", "Justiça", "Eleições"].includes(a.category) ||
+      isElectionArticle(a)
+    );
+  }, [articles]);
+
+  // Filtra de acordo com a subcategoria ativa
+  const filteredArticles = useMemo(() => {
+    if (activeSubcategory === "eleicoes") {
+      return allPoliticaArticles.filter(isElectionArticle);
+    }
+    if (activeSubcategory === "governo") {
+      return allPoliticaArticles.filter((a) => a.category === "Governo");
+    }
+    if (activeSubcategory === "congresso") {
+      return allPoliticaArticles.filter((a) => a.category === "Congresso");
+    }
+    if (activeSubcategory === "justica") {
+      return allPoliticaArticles.filter((a) => a.category === "Justiça");
+    }
+    return allPoliticaArticles;
+  }, [allPoliticaArticles, activeSubcategory]);
+
+  const politicaArticles = filteredArticles;
 
   const mainArticle =
-    politicaArticles.find((a) => a.id === "congresso-bancadas-eleitas-camara-senado") ||
-    politicaArticles[0];
+    filteredArticles.find((a) => a.id === "congresso-bancadas-eleitas-camara-senado") ||
+    filteredArticles[0];
 
-  const secondaryArticles = politicaArticles.filter((a) => a.id !== mainArticle?.id);
+  const secondaryArticles = filteredArticles.filter((a) => a.id !== mainArticle?.id);
 
   const hasValidMainImage = Boolean(
     mainArticle?.imageUrl && isValidImageUrl(mainArticle.imageUrl) && !leadImageError
@@ -44,6 +116,14 @@ export const PoliticaPage: React.FC<PoliticaPageProps> = ({
     ? (mainArticle.imageCaption || (mainArticle.imageCredit ? `Foto: ${mainArticle.imageCredit}` : mainArticle.title))
     : EDITORIAL_IMAGES.congresso.caption;
 
+  const subcategoryPills: { id: PoliticaSubcategory; label: string; icon: React.ElementType }[] = [
+    { id: "todos", label: "Todos os Poderes", icon: Landmark },
+    { id: "eleicoes", label: "Eleições 2026", icon: Vote },
+    { id: "governo", label: "Governo Federal", icon: Building2 },
+    { id: "congresso", label: "Congresso Nacional", icon: Landmark },
+    { id: "justica", label: "Justiça & STF", icon: Scale },
+  ];
+
   return (
     <div className="py-8 sm:py-12 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,23 +131,29 @@ export const PoliticaPage: React.FC<PoliticaPageProps> = ({
         <div className="mb-8 pb-6 border-b border-slate-200">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-red-700 mb-2">
             <Landmark className="w-4 h-4" />
-            <span>Caderno Especial · Três Poderes &amp; Congresso Nacional</span>
+            <span>Caderno Especial · Política, Poderes &amp; Eleições</span>
           </div>
           <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-950 text-balance">
             Política, Poderes e Atos Oficiais do Brasil
           </h1>
           <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-3xl leading-relaxed">
-            Acompanhe as deliberações do Congresso Nacional, despachos do Poder Executivo, decisões de impacto institucional do Supremo Tribunal Federal (STF) e articulações partidárias.
+            Acompanhe as deliberações do Congresso Nacional, despachos do Poder Executivo, decisões de impacto institucional do Supremo Tribunal Federal (STF), arquivo e totalização das Eleições 2026 pelo TSE.
           </p>
 
           {/* Atalhos Rápidos entre Cadernos */}
           <div className="flex flex-wrap items-center gap-2 mt-4 text-xs font-semibold">
             <span className="text-slate-500">Veja também:</span>
             <PortalLink
-              route="eleicoes"
-              className="px-2.5 py-1 rounded-md bg-blue-50 text-blue-800 hover:bg-blue-100 transition-colors"
+              route="economia"
+              className="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-800 hover:bg-emerald-100 transition-colors"
             >
-              Apuração das Eleições 2026 &rarr;
+              Indicadores Econômicos &rarr;
+            </PortalLink>
+            <PortalLink
+              route="estados"
+              className="px-2.5 py-1 rounded-md bg-amber-50 text-amber-800 hover:bg-amber-100 transition-colors"
+            >
+              Brasil por Estado &rarr;
             </PortalLink>
             <PortalLink
               route="dados-publicos"
@@ -76,13 +162,122 @@ export const PoliticaPage: React.FC<PoliticaPageProps> = ({
               Microdados e Transparência &rarr;
             </PortalLink>
             <PortalLink
-              route="economia"
-              className="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-800 hover:bg-emerald-100 transition-colors"
+              route="entretenimento"
+              className="px-2.5 py-1 rounded-md bg-rose-50 text-rose-800 hover:bg-rose-100 transition-colors"
             >
-              Indicadores Econômicos &rarr;
+              Entretenimento &amp; Cultura &rarr;
             </PortalLink>
           </div>
         </div>
+
+        {/* Barra de Subcategorias Editoriais de Política */}
+        <div className="mb-8 bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+          <div className="flex items-center justify-between gap-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+              <span>Subseções Editoriais</span>
+            </span>
+            <span className="text-xs font-semibold text-slate-500">
+              {filteredArticles.length} {filteredArticles.length === 1 ? "matéria disponível" : "matérias disponíveis"}
+            </span>
+          </div>
+
+          <div
+            role="tablist"
+            aria-label="Subseções de Política e Poderes"
+            onKeyDown={(e) => handleTabKeyDown(e, '[role="tab"]')}
+            className="flex items-center gap-1.5 overflow-x-auto scrollbar-none pt-1 border-t border-slate-100"
+          >
+            {subcategoryPills.map((sub) => {
+              const isSelected = activeSubcategory === sub.id;
+              const Icon = sub.icon;
+              return (
+                <button
+                  key={sub.id}
+                  role="tab"
+                  id={`tab-politica-${sub.id}`}
+                  aria-selected={isSelected}
+                  tabIndex={isSelected ? 0 : -1}
+                  aria-controls="panel-politica-articles"
+                  onClick={() => {
+                    setActiveSubcategory(sub.id);
+                    if (sub.id !== "todos") {
+                      window.location.hash = sub.id;
+                    } else {
+                      window.history.replaceState(null, "", window.location.pathname);
+                    }
+                  }}
+                  className={`min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap cursor-pointer shrink-0 flex items-center gap-1.5 ${
+                    isSelected
+                      ? "bg-[#0B132B] text-white shadow-xs"
+                      : "bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900"
+                  }`}
+                >
+                  <Icon className={`w-3.5 h-3.5 ${isSelected ? "text-blue-300" : "text-slate-500"}`} />
+                  <span>{sub.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* SUBSEÇÃO INTEGRADA DE ELEIÇÕES 2026 (Exibida na aba Eleições 2026 ou destacada em Todos) */}
+        {(activeSubcategory === "eleicoes" || activeSubcategory === "todos") && (
+          <div className="mb-10 space-y-6">
+            {/* Banner Oficial do 2º Turno Homologado TSE */}
+            <SecondRoundBanner />
+
+            {/* Hub de Ferramentas de Dados Eleitorais */}
+            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-2xs">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" aria-hidden="true" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                      Arquivo Eleições 2026 · Banco de Dados Oficial
+                    </span>
+                  </div>
+                  <h3 className="font-heading text-lg font-black text-slate-900">
+                    Totalização Eleitoral Homologada pelo TSE
+                  </h3>
+                  <p className="text-xs text-slate-600">
+                    Votação nominal completa de 100% das seções eleitorais, mapas por estado e comparativos regionais.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-2 shrink-0">
+                  <button
+                    type="button"
+                    onClick={() => setShowElectionDataTools(!showElectionDataTools)}
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-slate-300 bg-slate-50 hover:bg-white text-slate-800 text-xs font-bold transition-colors cursor-pointer"
+                  >
+                    <BarChart3 className="w-4 h-4 text-blue-700" />
+                    <span>{showElectionDataTools ? "Ocultar Ferramentas de Dados" : "Ver Gráficos & Candidatos"}</span>
+                  </button>
+
+                  <PortalLink
+                    route="eleicoes"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-blue-900 hover:bg-blue-800 text-white text-xs font-bold transition-colors cursor-pointer"
+                  >
+                    <span>Página Completa do Pleito</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </PortalLink>
+                </div>
+              </div>
+
+              {/* Ferramentas de Dados Eleitorais Expandíveis */}
+              {showElectionDataTools && dataset && (
+                <div className="pt-6 space-y-6">
+                  <CandidateResultsView
+                    dataset={dataset}
+                    selectedCandidateId={null}
+                    onSelectCandidate={() => {}}
+                  />
+                  <RegionalCharts dataset={dataset} />
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Estado de Carregamento */}
         {isLoading && (
@@ -131,11 +326,11 @@ export const PoliticaPage: React.FC<PoliticaPageProps> = ({
           </div>
         )}
 
-        {/* Estado Vazio */}
-        {!isLoading && !error && politicaArticles.length === 0 && (
+        {/* Estado Vazio para a Subcategoria */}
+        {!isLoading && !error && filteredArticles.length === 0 && (
           <div className="mb-10 p-12 bg-white rounded-3xl border border-slate-200 text-center">
             <p className="font-heading font-bold text-slate-800 text-base">
-              Nenhuma matéria de política disponível no momento.
+              Nenhuma matéria disponível nesta subseção no momento.
             </p>
             <p className="text-xs text-slate-500 mt-1">
               Novas publicações serão integradas conforme atualização dos diários oficiais.
@@ -210,7 +405,7 @@ export const PoliticaPage: React.FC<PoliticaPageProps> = ({
           </div>
         )}
 
-        {/* Bloco de Contexto Institucional: Composição dos Três Poderes */}
+        {/* Bloco de Contexto Institucional: Composição dos Três Poderes & Eleições */}
         <div className="mb-10 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-2xl border border-slate-200">
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-800 mb-2">
@@ -241,7 +436,7 @@ export const PoliticaPage: React.FC<PoliticaPageProps> = ({
           <div className="bg-white p-6 rounded-2xl border border-slate-200">
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-purple-800 mb-2">
               <Scale className="w-4 h-4 text-purple-600" />
-              <span>Poder Judiciário</span>
+              <span>Poder Judiciário &amp; TSE</span>
             </div>
             <h3 className="font-heading text-lg font-bold text-slate-900 mb-1">
               STF &amp; Justiça Eleitoral
@@ -252,14 +447,18 @@ export const PoliticaPage: React.FC<PoliticaPageProps> = ({
           </div>
         </div>
 
-        {/* Grade de Matérias e Análises de Política */}
-        <div className="mb-12">
+        {/* Grade de Matérias da Subcategoria Selecionada */}
+        <div id="panel-politica-articles" className="mb-12">
           <div className="flex items-center justify-between mb-6">
             <h2 className="font-heading text-2xl font-black text-slate-900">
-              Cobertura Política em Andamento
+              {activeSubcategory === "todos" && "Cobertura Política em Andamento"}
+              {activeSubcategory === "eleicoes" && "Arquivo e Cobertura das Eleições 2026"}
+              {activeSubcategory === "governo" && "Atos e Despachos do Governo Federal"}
+              {activeSubcategory === "congresso" && "Pauta do Congresso Nacional"}
+              {activeSubcategory === "justica" && "Decisões da Justiça e Tribunais Superiores"}
             </h2>
             <span className="text-xs font-semibold text-slate-500">
-              {politicaArticles.length} matérias disponíveis
+              {filteredArticles.length} matérias disponíveis
             </span>
           </div>
 

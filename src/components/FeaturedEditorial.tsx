@@ -76,6 +76,7 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
     Mundo: EDITORIAL_IMAGES.congresso,
     Esportes: EDITORIAL_IMAGES.congresso,
     Tecnologia: EDITORIAL_IMAGES.dadosPublicos,
+    Entretenimento: EDITORIAL_IMAGES.congresso,
   };
   const institutionalFallback = categoryFallbackMap[leadArticle?.category || ""] || EDITORIAL_IMAGES.congresso;
 
@@ -104,15 +105,7 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
       colorClass: "text-blue-900 hover:text-blue-950",
       borderClass: "border-blue-900",
       dotClass: "bg-blue-900",
-      description: "Poderes, atos e Congresso",
-    },
-    {
-      label: "Eleições",
-      route: "eleicoes" as const,
-      colorClass: "text-violet-900 hover:text-violet-950",
-      borderClass: "border-violet-700",
-      dotClass: "bg-violet-700",
-      description: "Arquivo e apuração TSE",
+      description: "Poderes, eleições e Congresso",
     },
     {
       label: "Economia",
@@ -125,9 +118,9 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
     {
       label: "Justiça",
       route: "politica" as const,
-      colorClass: "text-rose-950 hover:text-rose-900",
-      borderClass: "border-rose-900",
-      dotClass: "bg-rose-900",
+      colorClass: "text-purple-900 hover:text-purple-950",
+      borderClass: "border-purple-900",
+      dotClass: "bg-purple-900",
       description: "STF, STJ e Tribunais",
     },
     {
@@ -137,6 +130,14 @@ export const FeaturedEditorial: React.FC<FeaturedEditorialProps> = ({
       borderClass: "border-amber-600",
       dotClass: "bg-amber-600",
       description: "Competições e modalidades",
+    },
+    {
+      label: "Entretenimento",
+      route: "entretenimento" as const,
+      colorClass: "text-rose-900 hover:text-rose-950",
+      borderClass: "border-rose-700",
+      dotClass: "bg-rose-700",
+      description: "Cultura, streaming e cinema",
     },
     {
       label: "Dados Públicos",

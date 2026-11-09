@@ -8,6 +8,7 @@ export type PortalRoute =
   | "noticias"
   | "esportes"
   | "tecnologia"
+  | "entretenimento"
   | "clima"
   | "sobre"
   | "artigo";
@@ -142,6 +143,19 @@ export const ROUTE_CONFIGS: Record<PortalRoute, RouteConfig> = {
     badgeText: "text-indigo-800",
     badgeBorder: "border-indigo-200",
   },
+  entretenimento: {
+    route: "entretenimento",
+    path: "/entretenimento/",
+    label: "Entretenimento",
+    title: "Entretenimento & Cultura — Sociedade Ativa | Cinema, Streaming, TV e Música",
+    description:
+      "Cobertura de entretenimento, cultura pop, cinema, séries, streaming, televisão, música e cultura digital no Sociedade Ativa.",
+    categoryTag: "Entretenimento",
+    accentColor: "rose",
+    badgeBg: "bg-rose-50",
+    badgeText: "text-rose-800",
+    badgeBorder: "border-rose-200",
+  },
   clima: {
     route: "clima",
     path: "/clima/",
@@ -269,6 +283,7 @@ export function getRouteFromPath(pathname: string, searchStr?: string): PortalRo
   if (clean.startsWith("noticias")) return "noticias";
   if (clean.startsWith("esportes")) return "esportes";
   if (clean.startsWith("tecnologia")) return "tecnologia";
+  if (clean.startsWith("entretenimento")) return "entretenimento";
   if (clean.startsWith("clima")) return "clima";
   if (clean.startsWith("sobre")) return "sobre";
 

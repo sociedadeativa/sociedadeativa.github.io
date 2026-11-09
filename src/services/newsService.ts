@@ -15,8 +15,11 @@ export function normalizeCategory(cat: string | undefined): NewsCategory {
   }
 
   const lower = trimmed.toLowerCase();
+  if (lower.includes("entreten") || lower.includes("cinema") || lower.includes("filme") || lower.includes("série") || lower.includes("streaming") || lower.includes("música") || lower.includes("musica") || lower.includes("celebridad") || lower.includes("cultura pop")) {
+    return "Entretenimento";
+  }
   if (lower.includes("elei") || lower.includes("tse") || lower.includes("turno") || lower.includes("urna")) {
-    return "Eleições";
+    return "Política";
   }
   if (lower.includes("govern") || lower.includes("presid") || lower.includes("minist")) {
     return "Governo";
