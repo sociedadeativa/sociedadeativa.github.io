@@ -8,7 +8,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-conquista-titulo-volei-praia",
-    "publishedAt": "09/11/2026 às 19:18",
+    "publishedAt": "09/11/2026 às 19:37",
     "category": "Esportes",
     "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-volei.jpg",
     "imageCaption": "Brasil conquista título no circuito mundial de vôlei de praia",
@@ -23,7 +23,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Brasil conquista título no circuito mundial de vôlei de praia",
     "lead": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
     "content": [],
-    "ingestedAt": "09/11/2026 às 19:23"
+    "ingestedAt": "09/11/2026 às 19:42"
   },
   {
     "id": "ebc-1799002",
@@ -32,7 +32,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/flamengo-palmeiras-lideranca-brasileirao",
-    "publishedAt": "09/11/2026 às 19:13",
+    "publishedAt": "09/11/2026 às 19:32",
     "category": "Esportes",
     "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-futebol.jpg",
     "imageCaption": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
@@ -47,7 +47,58 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
     "lead": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
     "content": [],
-    "ingestedAt": "09/11/2026 às 19:23"
+    "ingestedAt": "09/11/2026 às 19:42"
+  },
+  {
+    "id": "ebc-1708193",
+    "title": "Justiça suspende regra que ampliou aceitação de VR e VA em maquininhas",
+    "summary": "A Justiça Federal determinou nesta segunda-feira (9) a suspensão das novas regras editadas pelo governo federal para ampliar a aceitação de cartões de vale-refeição (VR) e vale-alimentação (VA) no comércio. As mudanças tinham começado a valer no último sábado (7) .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/justica-suspende-regra-que-ampliou-aceitacao-de-vr-e-va-em-maquininhas",
+    "publishedAt": "09/11/2026 às 19:28",
+    "category": "Justiça",
+    "imageUrl": "https://imagens.ebc.com.br/q8dE0PyhZs7gra-noiJVhRi_nkc=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/11/12/_d6a9139.jpg?itok=gm3entvL",
+    "imageCaption": "Justiça suspende regra que ampliou aceitação de VR e VA em maquininhas",
+    "imageCredit": "André Richter - repórter da Agência Brasil",
+    "imageAlt": "Justiça suspende regra que ampliou aceitação de VR e VA em maquininhas",
+    "author": "André Richter - repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "Vale-alimentação",
+      "vale-refeição",
+      "Justiça Federal"
+    ],
+    "headline": "Justiça suspende regra que ampliou aceitação de VR e VA em maquininhas",
+    "lead": "A Justiça Federal determinou nesta segunda-feira (9) a suspensão das novas regras editadas pelo governo federal para ampliar a aceitação de cartões de vale-refeição (VR) e vale-alimentação (VA) no comércio. As mudanças tinham começado a valer no último sábado (7) .",
+    "content": [],
+    "ingestedAt": "09/11/2026 às 19:42"
+  },
+  {
+    "id": "ebc-1708191",
+    "title": "Aneel propõe Tarifa Hora Certa para reduzir valor em função do horário",
+    "summary": "Em breve, uma parcela dos consumidores de energia elétrica na baixa tensão será enquadrada em uma nova modalidade tarifária: a Tarifa Hora Certa, em que o valor da energia é calculado em razão do horário.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/aneel-propoe-tarifa-hora-certa-para-reduzir-valor-em-funcao-do-horario",
+    "publishedAt": "09/11/2026 às 19:23",
+    "category": "Economia",
+    "imageUrl": "https://imagens.ebc.com.br/tSE3THQ0yc8FXox56SPI4xuJPUM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/966340-03072015-dsc_9562.jpg?itok=N2AQeDSd",
+    "imageCaption": "Aneel propõe Tarifa Hora Certa para reduzir valor em função do horário",
+    "imageCredit": "Luciano Nascimento – Repórter da Agência Brasil",
+    "imageAlt": "Aneel propõe Tarifa Hora Certa para reduzir valor em função do horário",
+    "author": "Luciano Nascimento – Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "Aneel",
+      "Tarifa Hora Certa",
+      "Consumo de Energia",
+      "Energia Elétrica"
+    ],
+    "headline": "Aneel propõe Tarifa Hora Certa para reduzir valor em função do horário",
+    "lead": "Em breve, uma parcela dos consumidores de energia elétrica na baixa tensão será enquadrada em uma nova modalidade tarifária: a Tarifa Hora Certa, em que o valor da energia é calculado em razão do horário.",
+    "content": [],
+    "ingestedAt": "09/11/2026 às 19:42"
   },
   {
     "id": "ebc-1708187",
@@ -71,7 +122,32 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Caixa apresenta nova identidade visual após quase 30 anos",
     "lead": "A Caixa Econômica Federal apresentou, nesta segunda-feira (9), sua nova identidade visual, com mudanças no logotipo, na tipografia e nas cores utilizadas pelo banco.",
     "content": [],
-    "ingestedAt": "09/11/2026 às 19:23"
+    "ingestedAt": "09/11/2026 às 19:42"
+  },
+  {
+    "id": "ebc-1708189",
+    "title": "Brasil conquista 4 ouros em olimpíada latino-americana de astronomia",
+    "summary": "Quatro estudantes brasileiros, sendo três de Fortaleza e um de São Paulo, conquistaram a medalha de ouro na Olimpíada Latino-Americana de Astronomia e Astronáutica (OLAA). O evento se encerrou nesta segunda-feira (9), em Assunção, no Paraguai. As provas começaram no dia 1º.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/brasil-conquista-4-ouros-em-olimpiada-latino-americana-de-astronomia",
+    "publishedAt": "09/11/2026 às 18:59",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/6D7vsNQRCERc6acfDjN8Lddjex8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/09/whatsapp_image_2026-11-09_at_17.14.48.jpeg?itok=p4nvhZR-",
+    "imageCaption": "Brasil conquista 4 ouros em olimpíada latino-americana de astronomia",
+    "imageCredit": "Luiz Cláudio Ferreira - Repórter da Agência Brasil",
+    "imageAlt": "Brasil conquista 4 ouros em olimpíada latino-americana de astronomia",
+    "author": "Luiz Cláudio Ferreira - Repórter da Agência Brasil",
+    "tags": [
+      "Educação",
+      "Olimpíada de Astronomia",
+      "Olaa",
+      "Política"
+    ],
+    "headline": "Brasil conquista 4 ouros em olimpíada latino-americana de astronomia",
+    "lead": "Quatro estudantes brasileiros, sendo três de Fortaleza e um de São Paulo, conquistaram a medalha de ouro na Olimpíada Latino-Americana de Astronomia e Astronáutica (OLAA). O evento se encerrou nesta segunda-feira (9), em Assunção, no Paraguai. As provas começaram no dia 1º.",
+    "content": [],
+    "ingestedAt": "09/11/2026 às 19:42"
   },
   {
     "id": "ebc-1708186",
@@ -97,7 +173,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Classe C: número de famílias sem dinheiro guardado cai de 61% para 29%",
     "lead": "A parcela de famílias da classe C sem nenhuma reserva financeira caiu de 61% (em 2016) para 29% (neste ano), conforme revelou uma pesquisa divulgada nesta segunda (6) pelo Instituto Locomotiva.",
     "content": [],
-    "ingestedAt": "09/11/2026 às 19:23"
+    "ingestedAt": "09/11/2026 às 19:42"
   },
   {
     "id": "ebc-1708183",
@@ -148,80 +224,6 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     ],
     "headline": "BC passa a divulgar lista de empresas aptas a operar com criptoativos",
     "lead": "A partir desta segunda-feira (9), os cidadãos poderão verificar no Banco Central (BC) quais instituições podem prestar serviços relacionados a ativos virtuais, como criptomoedas.",
-    "content": [],
-    "ingestedAt": "09/11/2026 às 18:35"
-  },
-  {
-    "id": "camara-1296150-cancelada-votacao-de-parecer-s",
-    "title": "Cancelada votação de parecer sobre política nacional para pessoas com autismo",
-    "summary": "Votação estava programada para esta terça-feira.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1296150-cancelada-votacao-de-parecer-sobre-politica-nacional-para-pessoas-com-autismo",
-    "publishedAt": "09/11/2026 às 17:40",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/04/depositphotos-358907248-xl-768x512.jpg",
-    "imageCaption": "O quebra-cabeça colorido é o símbolo do autismo",
-    "imageCredit": "Depositphotos",
-    "imageAlt": "Pessoa segura um coração de quebra-cabeças colorido",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "headline": "Cancelada votação de parecer sobre política nacional para pessoas com autismo",
-    "lead": "Votação estava programada para esta terça-feira.",
-    "content": [],
-    "ingestedAt": "09/11/2026 às 18:35"
-  },
-  {
-    "id": "camara-1317308-comissao-aprova-diretrizes-par",
-    "title": "Comissão aprova diretrizes para atendimento integral a mulheres com endometriose no SUS",
-    "summary": "Proposta segue em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1317308-comissao-aprova-diretrizes-para-atendimento-integral-a-mulheres-com-endometriose-no-sus",
-    "publishedAt": "09/11/2026 às 17:37",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20260812125034990-768x471.jpg",
-    "imageCaption": "Erika Hilton: nova política deve estar alinhada ao programa de saúde menstrual",
-    "imageCredit": "Renato Araújo / Câmara dos Deputados",
-    "imageAlt": "Escolha das agraciadas para o Diploma Mulher-Cidadã Carlota Pereira de Queirós. Dep. Erika Hilton (PSOL - SP)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "headline": "Comissão aprova diretrizes para atendimento integral a mulheres com endometriose no SUS",
-    "lead": "Proposta segue em análise na Câmara dos Deputados.",
-    "content": [],
-    "ingestedAt": "09/11/2026 às 18:35"
-  },
-  {
-    "id": "ebc-1708179",
-    "title": "CLDF vota proposta que libera reeleição de membros da Mesa Diretora",
-    "summary": "A Câmara Legislativa do Distrito Federal (CLDF) deve votar, nesta terça-feira (10), a proposta que autoriza deputados distritais reeleitos que hoje integram a Mesa Diretora a voltarem a disputar o comando da Casa durante os dois primeiros anos da próxima legislatura (2027-2029).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/cldf-vota-proposta-que-libera-reeleicao-de-membros-da-mesa-diretora",
-    "publishedAt": "09/11/2026 às 17:24",
-    "category": "Congresso",
-    "imageUrl": "https://imagens.ebc.com.br/kjym46B0foQ681e-QxUL-BuP6wg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/06/17/1408243cg_4.jpg?itok=zhiTG2fs",
-    "imageCaption": "CLDF vota proposta que libera reeleição de membros da Mesa Diretora",
-    "imageCredit": "Alex Rodrigues – Repórter da Agência Brasil",
-    "imageAlt": "CLDF vota proposta que libera reeleição de membros da Mesa Diretora",
-    "author": "Alex Rodrigues – Repórter da Agência Brasil",
-    "tags": [
-      "Política",
-      "cldf",
-      "Mesa Diretora",
-      "Congresso",
-      "Eleições 2026"
-    ],
-    "headline": "CLDF vota proposta que libera reeleição de membros da Mesa Diretora",
-    "lead": "A Câmara Legislativa do Distrito Federal (CLDF) deve votar, nesta terça-feira (10), a proposta que autoriza deputados distritais reeleitos que hoje integram a Mesa Diretora a voltarem a disputar o comando da Casa durante os dois primeiros anos da próxima legislatura (2027-2029).",
     "content": [],
     "ingestedAt": "09/11/2026 às 18:35"
   }
