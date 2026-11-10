@@ -156,7 +156,7 @@ console.log("  [PASS] Homepage cleanly partitions 1 lead + 3 featured + 5 civic 
 console.log("\n[TEST 5] Full Dataset Parity & Search/Filter Behavior");
 const fullJsonPath = path.join(rootDir, "public", "data", "newsData.json");
 const fullDataset = JSON.parse(fs.readFileSync(fullJsonPath, "utf8"));
-assert.equal(fullDataset.length, 55, "Full dataset must preserve all 55 articles");
+assert.equal(fullDataset.length, 56, "Full dataset must preserve all 56 articles");
 
 // Verify filter behavior on full dataset
 const economiaFiltered = filterNewsItems(fullDataset, { category: "Economia", searchQuery: "", source: "Todas" });

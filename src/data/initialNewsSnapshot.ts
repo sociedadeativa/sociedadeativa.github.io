@@ -8,7 +8,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-conquista-titulo-volei-praia",
-    "publishedAt": "10/11/2026 às 09:27",
+    "publishedAt": "10/11/2026 às 10:47",
     "category": "Esportes",
     "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-volei.jpg",
     "imageCaption": "Brasil conquista título no circuito mundial de vôlei de praia",
@@ -23,7 +23,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Brasil conquista título no circuito mundial de vôlei de praia",
     "lead": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 09:32"
+    "ingestedAt": "10/11/2026 às 10:52"
   },
   {
     "id": "ebc-1799002",
@@ -32,7 +32,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/flamengo-palmeiras-lideranca-brasileirao",
-    "publishedAt": "10/11/2026 às 09:22",
+    "publishedAt": "10/11/2026 às 10:42",
     "category": "Esportes",
     "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-futebol.jpg",
     "imageCaption": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
@@ -47,7 +47,114 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
     "lead": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 09:32"
+    "ingestedAt": "10/11/2026 às 10:52"
+  },
+  {
+    "id": "camara-1317594-comissao-aprova-reforco-a-atua",
+    "title": "Comissão aprova reforço à atuação de agentes de saúde em áreas de difícil acesso",
+    "summary": "Texto segue em análise na Câmara dos Deputados.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1317594-comissao-aprova-reforco-a-atuacao-de-agentes-de-saude-em-areas-de-dificil-acesso",
+    "publishedAt": "10/11/2026 às 09:44",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20260901164638827-768x473.jpg",
+    "imageCaption": "Silvia Cristina é a relatora da proposta",
+    "imageCredit": "Thiago Cristino / Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Silvia Cristina (PP-RO)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "headline": "Comissão aprova reforço à atuação de agentes de saúde em áreas de difícil acesso",
+    "lead": "Texto segue em análise na Câmara dos Deputados.",
+    "content": [],
+    "ingestedAt": "10/11/2026 às 10:52"
+  },
+  {
+    "id": "ebc-1708223",
+    "title": "Governo prorroga até 9 de dezembro desoneração da gasolina e do etanol",
+    "summary": "O governo federal prorrogou até 9 de dezembro de 2026 a desoneração da gasolina e do etanol e manteve, até a mesma data, a subvenção ao etanol. As medidas constam em decreto publicado em edição extra no Diário Oficial da União (DOU).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/governo-prorroga-ate-9-de-dezembro-desoneracao-da-gasolina-e-do-etanol",
+    "publishedAt": "10/11/2026 às 09:33",
+    "category": "Economia",
+    "imageUrl": "https://imagens.ebc.com.br/OKQaC5T9gDhLu3ZuHm0nx1hVfaY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/tmazs_edit_24051807913.jpg?itok=GLjuLaNq",
+    "imageCaption": "Governo prorroga até 9 de dezembro desoneração da gasolina e do etanol",
+    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
+    "imageAlt": "Governo prorroga até 9 de dezembro desoneração da gasolina e do etanol",
+    "author": "Paula Laboissière – Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "gasolina",
+      "Etanol",
+      "Conflito no Oriente Médio"
+    ],
+    "headline": "Governo prorroga até 9 de dezembro desoneração da gasolina e do etanol",
+    "lead": "O governo federal prorrogou até 9 de dezembro de 2026 a desoneração da gasolina e do etanol e manteve, até a mesma data, a subvenção ao etanol. As medidas constam em decreto publicado em edição extra no Diário Oficial da União (DOU).",
+    "content": [],
+    "ingestedAt": "10/11/2026 às 10:52"
+  },
+  {
+    "id": "anthropic-ipo-bilionario-nasdaq-inteligencia-artificial",
+    "title": "Anthropic prepara IPO de US$ 64 bilhões e pode valer US$ 1,4 trilhão",
+    "summary": "Anthropic prepara abertura de capital na Nasdaq com oferta de até US$ 64,35 bilhões. Google, Microsoft e Nvidia participam de investimentos na empresa.",
+    "source": "Redação Sociedade Ativa",
+    "sourceUrl": "https://sociedadeativa.github.io/",
+    "articleUrl": "https://sociedadeativa.github.io/noticias/anthropic-ipo-bilionario-nasdaq-inteligencia-artificial/",
+    "publishedAt": "10/11/2026 às 09:30",
+    "category": "Tecnologia",
+    "imageUrl": "/images/anthropic-ipo-nasdaq.webp",
+    "imageCaption": "Fachada da Bolsa de Valores de Nova York iluminada com projeções de inteligência artificial durante preparativos para abertura de capital",
+    "imageCredit": "Acervo Sociedade Ativa / Divulgação",
+    "imageAlt": "Multidão de jornalistas e fotógrafos em frente à fachada da Bolsa de Valores de Nova York com telão luminoso destacando inteligência artificial em megaprocesso de IPO",
+    "author": "Redação Sociedade Ativa",
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "Inteligência Artificial",
+      "IPO",
+      "Nasdaq",
+      "OpenAI",
+      "Google",
+      "Microsoft",
+      "Nvidia",
+      "Mercado de Tecnologia"
+    ],
+    "readTime": "5 min de leitura",
+    "headline": "Anthropic prepara IPO de US$ 64 bilhões e pode valer US$ 1,4 trilhão",
+    "lead": "Anthropic prepara abertura de capital na Nasdaq com oferta de até US$ 64,35 bilhões. Google, Microsoft e Nvidia participam de investimentos na empresa.",
+    "content": [],
+    "ingestedAt": "10/11/2026 às 09:30"
+  },
+  {
+    "id": "ebc-1708220",
+    "title": "Anvisa proíbe saneante e pó descolorante",
+    "summary": "A Agência Nacional de Vigilância Sanitária (Anvisa) proibiu a fabricação e a venda do produto Supermax percarbonato de sódio, fabricado pela G. A dos Santos-Produtos Químicos.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/anvisa-proibe-saneante-e-po-descolorante",
+    "publishedAt": "10/11/2026 às 09:25",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/m9lPZ9kjodvEizoA0N_aGsyYSg8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/11-11-2020_sede_anvisa_0.jpg?itok=oPtK5mlM",
+    "imageCaption": "Anvisa proíbe saneante e pó descolorante",
+    "imageCredit": "Paula Laboissière - Repórter da Agência Brasil",
+    "imageAlt": "Anvisa proíbe saneante e pó descolorante",
+    "author": "Paula Laboissière - Repórter da Agência Brasil",
+    "tags": [
+      "Saúde",
+      "Anvisa",
+      "Proibição",
+      "descolorante",
+      "saneante"
+    ],
+    "headline": "Anvisa proíbe saneante e pó descolorante",
+    "lead": "A Agência Nacional de Vigilância Sanitária (Anvisa) proibiu a fabricação e a venda do produto Supermax percarbonato de sódio, fabricado pela G. A dos Santos-Produtos Químicos.",
+    "content": [],
+    "ingestedAt": "10/11/2026 às 10:52"
   },
   {
     "id": "camara-1305070-projeto-cria-credencial-digita",
@@ -71,7 +178,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Projeto cria credencial digital no gov.br para comprovar maioridade em sites adultos",
     "lead": "A Câmara dos Deputados discute o assunto.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 09:32"
+    "ingestedAt": "10/11/2026 às 10:52"
   },
   {
     "id": "camara-1317225-comissao-aprova-projeto-de-inc",
@@ -95,7 +202,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão aprova projeto de incentivo à equidade racial e de gênero no SUS",
     "lead": "A proposta segue em análise na Câmara dos Deputados.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 09:32"
+    "ingestedAt": "10/11/2026 às 10:52"
   },
   {
     "id": "ebc-1708217",
@@ -121,107 +228,6 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "PF prende ex-servidor do STJ suspeito de vazar informações sigilosas",
     "lead": "A Polícia Federal (PF) cumpriu nesta terça-feira (10) um mandado de prisão preventiva contra um ex-servidor do Superior Tribunal de Justiça (STJ). A ação faz parte da segunda fase da Operação Linceu.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 09:32"
-  },
-  {
-    "id": "camara-1316864-comissao-especial-debate-reduc",
-    "title": "Comissão especial debate redução da maioridade penal nesta terça-feira",
-    "summary": "Comissão criada para analisar a PEC 32/15 tem audiências públicas marcadas para hoje e para amanhã.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1316864-comissao-especial-debate-reducao-da-maioridade-penal-nesta-terca-feira",
-    "publishedAt": "10/11/2026 às 08:30",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20260812155551574-768x473.jpeg",
-    "imageCaption": "Reunião da comissão especial que analisa a proposta",
-    "imageCredit": "Bruno Spada / Câmara dos Deputados",
-    "imageAlt": "Reunião de Instalação e Eleição de Presidente.",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "headline": "Comissão especial debate redução da maioridade penal nesta terça-feira",
-    "lead": "Comissão criada para analisar a PEC 32/15 tem audiências públicas marcadas para hoje e para amanhã.",
-    "content": [],
-    "ingestedAt": "10/11/2026 às 09:32"
-  },
-  {
-    "id": "ebc-1708211",
-    "title": "Polícia Civil prende homem que fornecia fuzis a traficantes da Rocinha",
-    "summary": "Policiais civis da Divisão de Capturas e Polícia Interestadual (Polinter), em ação conjunta com a Polícia Civil da Bahia, prenderam, nessa segunda-feira (9), Felipe de Souza dos Santos, o Paquito, de 32 anos, no município de Camamu (BA), envolvido no fornecimento de fuzis.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/policia-civil-prende-homem-que-fornecia-fuzis-traficantes-da-rocinha",
-    "publishedAt": "10/11/2026 às 08:28",
-    "category": "Política",
-    "imageUrl": "https://imagens.ebc.com.br/Xws2LXaV14OVu829Cu7YFkNiHqQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/15/anunciado-concurso-para-policia-civil-da-bahia.jpg?itok=10JBVUbe",
-    "imageCaption": "Polícia Civil prende homem que fornecia fuzis a traficantes da Rocinha",
-    "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
-    "imageAlt": "Polícia Civil prende homem que fornecia fuzis a traficantes da Rocinha",
-    "author": "Douglas Corrêa - Repórter da Agência Brasil",
-    "tags": [
-      "Geral",
-      "polícia civil",
-      "prisão",
-      "Bahia",
-      "Fornecimento"
-    ],
-    "headline": "Polícia Civil prende homem que fornecia fuzis a traficantes da Rocinha",
-    "lead": "Policiais civis da Divisão de Capturas e Polícia Interestadual (Polinter), em ação conjunta com a Polícia Civil da Bahia, prenderam, nessa segunda-feira (9), Felipe de Souza dos Santos, o Paquito, de 32 anos, no município de Camamu (BA), envolvido no fornecimento de fuzis.",
-    "content": [],
-    "ingestedAt": "10/11/2026 às 09:32"
-  },
-  {
-    "id": "ebc-1708215",
-    "title": "PF faz ação para recuperar livros raros e outros bens furtados",
-    "summary": "Policiais federais cumprem cinco mandados de busca e apreensão, na manhã desta terça-feira (10), para recuperar livros raros, imagens sacras e outros bens culturais furtados.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/pf-faz-acao-para-recuperar-livros-raros-e-outros-bens-furtados",
-    "publishedAt": "10/11/2026 às 08:16",
-    "category": "Política",
-    "imageUrl": "https://imagens.ebc.com.br/090HlqRH-KXxVIM0GeVptNLbdCk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/raf05240_0.jpg?itok=v_9FKgDM",
-    "imageCaption": "PF faz ação para recuperar livros raros e outros bens furtados",
-    "imageCredit": "Vitor Abdala – Repórter da Agência Brasil",
-    "imageAlt": "PF faz ação para recuperar livros raros e outros bens furtados",
-    "author": "Vitor Abdala – Repórter da Agência Brasil",
-    "tags": [
-      "Geral",
-      "Segurança Pública",
-      "Operação Página Oculta",
-      "Política"
-    ],
-    "headline": "PF faz ação para recuperar livros raros e outros bens furtados",
-    "lead": "Policiais federais cumprem cinco mandados de busca e apreensão, na manhã desta terça-feira (10), para recuperar livros raros, imagens sacras e outros bens culturais furtados.",
-    "content": [],
-    "ingestedAt": "10/11/2026 às 09:32"
-  },
-  {
-    "id": "ebc-1708174",
-    "title": "Mostra na Biblioteca Nacional marca 150 anos da Divisão de Iconografia",
-    "summary": "A exposição Entre tempos: 150 anos de um acervo em movimento comemora um século e meio da Divisão de Iconografia da Biblioteca Nacional por meio de 150 obras, entre fotografias, gravuras, livros de artista e originais de arte, alguns inéditos.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-11/mostra-na-biblioteca-nacional-marca-150-anos-da-divisao-de-iconografia",
-    "publishedAt": "10/11/2026 às 08:12",
-    "category": "Política",
-    "imageUrl": "https://imagens.ebc.com.br/m8GTXizzgilMnXupcjV3xLJxsps=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/09/exposicao_entre_tempos_150_anos_de_um_acervo_em_movimento_biblioteca_nacional_3.jpg?itok=eVF8KX8M",
-    "imageCaption": "Mostra na Biblioteca Nacional marca 150 anos da Divisão de Iconografia",
-    "imageCredit": "Cristina Indio do Brasil - Repórter da Agência Brasil",
-    "imageAlt": "Mostra na Biblioteca Nacional marca 150 anos da Divisão de Iconografia",
-    "author": "Cristina Indio do Brasil - Repórter da Agência Brasil",
-    "tags": [
-      "Cultura",
-      "Biblioteca Nacional",
-      "Divisão de Iconografia",
-      "Artes visuais",
-      "Política"
-    ],
-    "headline": "Mostra na Biblioteca Nacional marca 150 anos da Divisão de Iconografia",
-    "lead": "A exposição Entre tempos: 150 anos de um acervo em movimento comemora um século e meio da Divisão de Iconografia da Biblioteca Nacional por meio de 150 obras, entre fotografias, gravuras, livros de artista e originais de arte, alguns inéditos.",
-    "content": [],
-    "ingestedAt": "10/11/2026 às 09:32"
+    "ingestedAt": "10/11/2026 às 10:52"
   }
 ];

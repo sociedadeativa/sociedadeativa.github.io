@@ -32,7 +32,7 @@ const NEWS_DATA_PATH = path.join(rootDir, 'public', 'data', 'newsData.json');
 
 const FETCH_TIMEOUT_MS = 8000;
 const MAX_SUMMARY_LENGTH = 280;
-const TARGET_RETENTION_LIMIT = 55;
+const TARGET_RETENTION_LIMIT = 56;
 
 export const OFFICIAL_CATEGORIES = [
   'Política',

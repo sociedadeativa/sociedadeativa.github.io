@@ -314,7 +314,7 @@ async function runTests() {
   const newsDataAfterT3 = JSON.parse(fs.readFileSync(NEWS_DATA_FILE, 'utf8'));
   const prevParsed = JSON.parse(initialNewsData);
 
-  assert.strictEqual(newsDataAfterT3.length, 55, 'Article retention limit of 55 was violated!');
+  assert.strictEqual(newsDataAfterT3.length, 56, 'Article retention limit of 56 was violated!');
   for (const item of newsDataAfterT3) {
     assert.ok(item.ingestedAt, `Article ${item.id} missing ingestedAt!`);
     const isIsoOrBrDate = !isNaN(new Date(item.ingestedAt).getTime()) || /^\d{2}\/\d{2}\/\d{4} às \d{2}:\d{2}$/.test(item.ingestedAt);
@@ -325,7 +325,7 @@ async function runTests() {
       assert.strictEqual(item.publishedAt, orig.publishedAt, `publishedAt changed unexpectedly for article ${item.id}!`);
     }
   }
-  console.log('Dataset integrity verified: 55 articles retained, ingestedAt and publishedAt completely preserved.');
+  console.log('Dataset integrity verified: 56 articles retained, ingestedAt and publishedAt completely preserved.');
   passedTests++;
 
   // TEST 4: Partial Failure Reporting
