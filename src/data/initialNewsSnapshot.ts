@@ -2,13 +2,37 @@ import { NewsItem } from "../types/news";
 
 export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
   {
+    "id": "camara-1305070-projeto-cria-credencial-digita",
+    "title": "Projeto cria credencial digital no gov.br para comprovar maioridade em sites adultos",
+    "summary": "A Câmara dos Deputados discute o assunto.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1305070-projeto-cria-credencial-digital-no-gov-br-para-comprovar-maioridade-em-sites-adultos",
+    "publishedAt": "10/11/2026 às 09:09",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/10/img20230913172738736-768x473.jpg",
+    "imageCaption": "Fábio Teruel, autor do projeto",
+    "imageCredit": "Zeca Ribeiro / Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas. Dep. Fábio Teruel (MDB-SP)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "headline": "Projeto cria credencial digital no gov.br para comprovar maioridade em sites adultos",
+    "lead": "A Câmara dos Deputados discute o assunto.",
+    "content": [],
+    "ingestedAt": "10/11/2026 às 09:12"
+  },
+  {
     "id": "ebc-1799001",
     "title": "Brasil conquista título no circuito mundial de vôlei de praia",
     "summary": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-conquista-titulo-volei-praia",
-    "publishedAt": "10/11/2026 às 08:52",
+    "publishedAt": "10/11/2026 às 09:07",
     "category": "Esportes",
     "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-volei.jpg",
     "imageCaption": "Brasil conquista título no circuito mundial de vôlei de praia",
@@ -23,7 +47,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Brasil conquista título no circuito mundial de vôlei de praia",
     "lead": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 08:57"
+    "ingestedAt": "10/11/2026 às 09:12"
   },
   {
     "id": "ebc-1799002",
@@ -32,7 +56,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/flamengo-palmeiras-lideranca-brasileirao",
-    "publishedAt": "10/11/2026 às 08:47",
+    "publishedAt": "10/11/2026 às 09:02",
     "category": "Esportes",
     "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-futebol.jpg",
     "imageCaption": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
@@ -47,7 +71,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
     "lead": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 08:57"
+    "ingestedAt": "10/11/2026 às 09:12"
   },
   {
     "id": "camara-1317225-comissao-aprova-projeto-de-inc",
@@ -71,7 +95,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão aprova projeto de incentivo à equidade racial e de gênero no SUS",
     "lead": "A proposta segue em análise na Câmara dos Deputados.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 08:57"
+    "ingestedAt": "10/11/2026 às 09:12"
   },
   {
     "id": "camara-1316864-comissao-especial-debate-reduc",
@@ -95,7 +119,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão especial debate redução da maioridade penal nesta terça-feira",
     "lead": "Comissão criada para analisar a PEC 32/15 tem audiências públicas marcadas para hoje e para amanhã.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 08:57"
+    "ingestedAt": "10/11/2026 às 09:12"
   },
   {
     "id": "ebc-1708215",
@@ -120,7 +144,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "PF faz ação para recuperar livros raros e outros bens furtados",
     "lead": "Policiais federais cumprem cinco mandados de busca e apreensão, na manhã desta terça-feira (10), para recuperar livros raros, imagens sacras e outros bens culturais furtados.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 08:57"
+    "ingestedAt": "10/11/2026 às 09:12"
   },
   {
     "id": "ebc-1708174",
@@ -146,7 +170,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Mostra na Biblioteca Nacional marca 150 anos da Divisão de Iconografia",
     "lead": "A exposição Entre tempos: 150 anos de um acervo em movimento comemora um século e meio da Divisão de Iconografia da Biblioteca Nacional por meio de 150 obras, entre fotografias, gravuras, livros de artista e originais de arte, alguns inéditos.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 08:57"
+    "ingestedAt": "10/11/2026 às 09:12"
   },
   {
     "id": "ebc-1708213",
@@ -170,7 +194,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Articulação de facções exige resposta coordenada, diz procurador",
     "lead": "O procurador-geral de Justiça do Rio de Janeiro, Antonio José Campos Moreira, alertou nesta segunda-feira (9), durante a abertura da XXIV Reunião Plenária da Estratégia Nacional de Combate à Corrupção e à Lavagem de Dinheiro (ENCCLA), para a crescente articulação.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 08:57"
+    "ingestedAt": "10/11/2026 às 09:12"
   },
   {
     "id": "camara-1317475-conselho-de-comunicacao-estuda",
@@ -194,31 +218,6 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Conselho de Comunicação estuda formas de contribuir para aumentar transparência sobre retirada de conteúdos da internet",
     "lead": "Conselheiros analisaram projeto de lei que obriga plataformas a comunicar o colegiado sobre cada decisão e apontaram dificuldades operacionais para analisar os casos.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 08:57"
-  },
-  {
-    "id": "ebc-1708173",
-    "title": "Gás do Povo libera vale-recarga para 3,1 milhões de famílias",
-    "summary": "A Caixa Econômica Federal libera nesta terça-feira (10) o vale-recarga do programa Gás do Povo para cerca de 3,1 milhões de famílias. A iniciativa do governo federal permite a retirada gratuita de um botijão de gás de cozinha de 13 quilos (GLP) em revendedoras credenciadas .",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/gas-do-povo-libera-vale-recarga-para-31-milhoes-de-familias",
-    "publishedAt": "10/11/2026 às 07:30",
-    "category": "Economia",
-    "imageUrl": "https://imagens.ebc.com.br/8zUyu9cK9eJgvjP3yye2j_pP24M=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/tmcj_0025.jpg?itok=wr_tcsQm",
-    "imageCaption": "Gás do Povo libera vale-recarga para 3,1 milhões de famílias",
-    "imageCredit": "Wellton Máximo - Repórter da Agência Brasil",
-    "imageAlt": "Gás do Povo libera vale-recarga para 3,1 milhões de famílias",
-    "author": "Wellton Máximo - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "Gás do Povo",
-      "Cadastro Único",
-      "Caixa Econômica Federal"
-    ],
-    "headline": "Gás do Povo libera vale-recarga para 3,1 milhões de famílias",
-    "lead": "A Caixa Econômica Federal libera nesta terça-feira (10) o vale-recarga do programa Gás do Povo para cerca de 3,1 milhões de famílias. A iniciativa do governo federal permite a retirada gratuita de um botijão de gás de cozinha de 13 quilos (GLP) em revendedoras credenciadas .",
-    "content": [],
-    "ingestedAt": "10/11/2026 às 08:57"
+    "ingestedAt": "10/11/2026 às 09:12"
   }
 ];

@@ -281,17 +281,19 @@ export function getRouteFromPath(pathname: string, searchStr?: string): PortalRo
     return "artigo";
   }
 
-  // Trata parâmetros de fallback como ?p=/politica/ caso venha de 404.html
+  // Trata parâmetros de fallback como ?p=/politica-de-privacidade/ caso venha de 404.html
   const search = searchStr !== undefined ? searchStr : (typeof window !== "undefined" ? window.location.search : "");
   if (search) {
     const params = new URLSearchParams(search);
     const p = params.get("p");
     if (p) {
-      const cleanParam = p.replace(/^\/+|\/+$/g, "").toLowerCase();
+      const cleanParam = decodeURIComponent(p).replace(/^\/+|\/+$/g, "").toLowerCase();
+      if (cleanParam.startsWith("politica-de-privacidade")) return "politica-de-privacidade";
+      if (cleanParam.startsWith("termos-de-uso")) return "termos-de-uso";
       for (const [key, config] of Object.entries(ROUTE_CONFIGS)) {
         if (key === "artigo") continue;
         const cleanConfig = config.path.replace(/^\/+|\/+$/g, "").toLowerCase();
-        if (cleanConfig && cleanParam.startsWith(cleanConfig)) {
+        if (cleanConfig && (cleanParam === cleanConfig || cleanParam.startsWith(cleanConfig + "/"))) {
           return key as PortalRoute;
         }
       }
@@ -301,7 +303,9 @@ export function getRouteFromPath(pathname: string, searchStr?: string): PortalRo
   const clean = pathname.replace(/^\/+|\/+$/g, "").toLowerCase();
   if (!clean || clean === "index.html") return "home";
 
-  if (clean.startsWith("politica")) return "politica";
+  if (clean.startsWith("politica-de-privacidade")) return "politica-de-privacidade";
+  if (clean.startsWith("termos-de-uso")) return "termos-de-uso";
+  if (clean.startsWith("politica") && !clean.startsWith("politica-de-privacidade")) return "politica";
   if (clean.startsWith("eleicoes")) return "eleicoes";
   if (clean.startsWith("economia")) return "economia";
   if (clean.startsWith("estados")) return "estados";
@@ -312,8 +316,6 @@ export function getRouteFromPath(pathname: string, searchStr?: string): PortalRo
   if (clean.startsWith("entretenimento")) return "entretenimento";
   if (clean.startsWith("clima")) return "clima";
   if (clean.startsWith("sobre")) return "sobre";
-  if (clean.startsWith("termos-de-uso")) return "termos-de-uso";
-  if (clean.startsWith("politica-de-privacidade")) return "politica-de-privacidade";
 
   return "home";
 }
