@@ -2,6 +2,54 @@ import { NewsItem } from "../types/news";
 
 export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
   {
+    "id": "ebc-1799001",
+    "title": "Brasil conquista título no circuito mundial de vôlei de praia",
+    "summary": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-conquista-titulo-volei-praia",
+    "publishedAt": "10/11/2026 às 09:27",
+    "category": "Esportes",
+    "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-volei.jpg",
+    "imageCaption": "Brasil conquista título no circuito mundial de vôlei de praia",
+    "imageCredit": "Pedro Ramos/Agência Brasil",
+    "imageAlt": "Brasil conquista título no circuito mundial de vôlei de praia",
+    "author": "Pedro Ramos/Agência Brasil",
+    "tags": [
+      "Vôlei",
+      "Esportes",
+      "Brasil"
+    ],
+    "headline": "Brasil conquista título no circuito mundial de vôlei de praia",
+    "lead": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
+    "content": [],
+    "ingestedAt": "10/11/2026 às 09:32"
+  },
+  {
+    "id": "ebc-1799002",
+    "title": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
+    "summary": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/flamengo-palmeiras-lideranca-brasileirao",
+    "publishedAt": "10/11/2026 às 09:22",
+    "category": "Esportes",
+    "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-futebol.jpg",
+    "imageCaption": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
+    "imageCredit": "Lucas Silva/Agência Brasil",
+    "imageAlt": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
+    "author": "Lucas Silva/Agência Brasil",
+    "tags": [
+      "Futebol",
+      "Brasileirão",
+      "Esportes"
+    ],
+    "headline": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
+    "lead": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
+    "content": [],
+    "ingestedAt": "10/11/2026 às 09:32"
+  },
+  {
     "id": "camara-1305070-projeto-cria-credencial-digita",
     "title": "Projeto cria credencial digital no gov.br para comprovar maioridade em sites adultos",
     "summary": "A Câmara dos Deputados discute o assunto.",
@@ -23,55 +71,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Projeto cria credencial digital no gov.br para comprovar maioridade em sites adultos",
     "lead": "A Câmara dos Deputados discute o assunto.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 09:12"
-  },
-  {
-    "id": "ebc-1799001",
-    "title": "Brasil conquista título no circuito mundial de vôlei de praia",
-    "summary": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-conquista-titulo-volei-praia",
-    "publishedAt": "10/11/2026 às 09:07",
-    "category": "Esportes",
-    "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-volei.jpg",
-    "imageCaption": "Brasil conquista título no circuito mundial de vôlei de praia",
-    "imageCredit": "Pedro Ramos/Agência Brasil",
-    "imageAlt": "Brasil conquista título no circuito mundial de vôlei de praia",
-    "author": "Pedro Ramos/Agência Brasil",
-    "tags": [
-      "Vôlei",
-      "Esportes",
-      "Brasil"
-    ],
-    "headline": "Brasil conquista título no circuito mundial de vôlei de praia",
-    "lead": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
-    "content": [],
-    "ingestedAt": "10/11/2026 às 09:12"
-  },
-  {
-    "id": "ebc-1799002",
-    "title": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
-    "summary": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/flamengo-palmeiras-lideranca-brasileirao",
-    "publishedAt": "10/11/2026 às 09:02",
-    "category": "Esportes",
-    "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-futebol.jpg",
-    "imageCaption": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
-    "imageCredit": "Lucas Silva/Agência Brasil",
-    "imageAlt": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
-    "author": "Lucas Silva/Agência Brasil",
-    "tags": [
-      "Futebol",
-      "Brasileirão",
-      "Esportes"
-    ],
-    "headline": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
-    "lead": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
-    "content": [],
-    "ingestedAt": "10/11/2026 às 09:12"
+    "ingestedAt": "10/11/2026 às 09:32"
   },
   {
     "id": "camara-1317225-comissao-aprova-projeto-de-inc",
@@ -95,7 +95,33 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão aprova projeto de incentivo à equidade racial e de gênero no SUS",
     "lead": "A proposta segue em análise na Câmara dos Deputados.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 09:12"
+    "ingestedAt": "10/11/2026 às 09:32"
+  },
+  {
+    "id": "ebc-1708217",
+    "title": "PF prende ex-servidor do STJ suspeito de vazar informações sigilosas",
+    "summary": "A Polícia Federal (PF) cumpriu nesta terça-feira (10) um mandado de prisão preventiva contra um ex-servidor do Superior Tribunal de Justiça (STJ). A ação faz parte da segunda fase da Operação Linceu.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/pf-prende-ex-servidor-do-stj-suspeito-de-vazar-informacoes-sigilosas",
+    "publishedAt": "10/11/2026 às 08:31",
+    "category": "Justiça",
+    "imageUrl": "https://imagens.ebc.com.br/FH2NyJg3N_ltYkrSI20JVlRqdrU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/movimentacao-pf_mcamgo_abr_31082023-3.jpg?itok=5pzY7Mnj",
+    "imageCaption": "PF prende ex-servidor do STJ suspeito de vazar informações sigilosas",
+    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
+    "imageAlt": "PF prende ex-servidor do STJ suspeito de vazar informações sigilosas",
+    "author": "Paula Laboissière – Repórter da Agência Brasil",
+    "tags": [
+      "Geral",
+      "Segurança Pública",
+      "Operação Linceu",
+      "STJ",
+      "Mandado de Prisão"
+    ],
+    "headline": "PF prende ex-servidor do STJ suspeito de vazar informações sigilosas",
+    "lead": "A Polícia Federal (PF) cumpriu nesta terça-feira (10) um mandado de prisão preventiva contra um ex-servidor do Superior Tribunal de Justiça (STJ). A ação faz parte da segunda fase da Operação Linceu.",
+    "content": [],
+    "ingestedAt": "10/11/2026 às 09:32"
   },
   {
     "id": "camara-1316864-comissao-especial-debate-reduc",
@@ -119,7 +145,33 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão especial debate redução da maioridade penal nesta terça-feira",
     "lead": "Comissão criada para analisar a PEC 32/15 tem audiências públicas marcadas para hoje e para amanhã.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 09:12"
+    "ingestedAt": "10/11/2026 às 09:32"
+  },
+  {
+    "id": "ebc-1708211",
+    "title": "Polícia Civil prende homem que fornecia fuzis a traficantes da Rocinha",
+    "summary": "Policiais civis da Divisão de Capturas e Polícia Interestadual (Polinter), em ação conjunta com a Polícia Civil da Bahia, prenderam, nessa segunda-feira (9), Felipe de Souza dos Santos, o Paquito, de 32 anos, no município de Camamu (BA), envolvido no fornecimento de fuzis.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/policia-civil-prende-homem-que-fornecia-fuzis-traficantes-da-rocinha",
+    "publishedAt": "10/11/2026 às 08:28",
+    "category": "Política",
+    "imageUrl": "https://imagens.ebc.com.br/Xws2LXaV14OVu829Cu7YFkNiHqQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/09/15/anunciado-concurso-para-policia-civil-da-bahia.jpg?itok=10JBVUbe",
+    "imageCaption": "Polícia Civil prende homem que fornecia fuzis a traficantes da Rocinha",
+    "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
+    "imageAlt": "Polícia Civil prende homem que fornecia fuzis a traficantes da Rocinha",
+    "author": "Douglas Corrêa - Repórter da Agência Brasil",
+    "tags": [
+      "Geral",
+      "polícia civil",
+      "prisão",
+      "Bahia",
+      "Fornecimento"
+    ],
+    "headline": "Polícia Civil prende homem que fornecia fuzis a traficantes da Rocinha",
+    "lead": "Policiais civis da Divisão de Capturas e Polícia Interestadual (Polinter), em ação conjunta com a Polícia Civil da Bahia, prenderam, nessa segunda-feira (9), Felipe de Souza dos Santos, o Paquito, de 32 anos, no município de Camamu (BA), envolvido no fornecimento de fuzis.",
+    "content": [],
+    "ingestedAt": "10/11/2026 às 09:32"
   },
   {
     "id": "ebc-1708215",
@@ -144,7 +196,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "PF faz ação para recuperar livros raros e outros bens furtados",
     "lead": "Policiais federais cumprem cinco mandados de busca e apreensão, na manhã desta terça-feira (10), para recuperar livros raros, imagens sacras e outros bens culturais furtados.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 09:12"
+    "ingestedAt": "10/11/2026 às 09:32"
   },
   {
     "id": "ebc-1708174",
@@ -170,54 +222,6 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Mostra na Biblioteca Nacional marca 150 anos da Divisão de Iconografia",
     "lead": "A exposição Entre tempos: 150 anos de um acervo em movimento comemora um século e meio da Divisão de Iconografia da Biblioteca Nacional por meio de 150 obras, entre fotografias, gravuras, livros de artista e originais de arte, alguns inéditos.",
     "content": [],
-    "ingestedAt": "10/11/2026 às 09:12"
-  },
-  {
-    "id": "ebc-1708213",
-    "title": "Articulação de facções exige resposta coordenada, diz procurador",
-    "summary": "O procurador-geral de Justiça do Rio de Janeiro, Antonio José Campos Moreira, alertou nesta segunda-feira (9), durante a abertura da XXIV Reunião Plenária da Estratégia Nacional de Combate à Corrupção e à Lavagem de Dinheiro (ENCCLA), para a crescente articulação.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/articulacao-de-faccoes-exige-resposta-coordenada-diz-procurador",
-    "publishedAt": "10/11/2026 às 08:02",
-    "category": "Justiça",
-    "imageUrl": "https://imagens.ebc.com.br/OI-4djOYSXxN86sIVSEK12BIZy8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/07/10/54242861050_8f67593918_o-602x400.jpg?itok=7q_tqxt_",
-    "imageCaption": "Articulação de facções exige resposta coordenada, diz procurador",
-    "imageCredit": "Douglas Corrêa – Repórter da Agência Brasil",
-    "imageAlt": "Articulação de facções exige resposta coordenada, diz procurador",
-    "author": "Douglas Corrêa – Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Segurança Pública",
-      "ENCLLA"
-    ],
-    "headline": "Articulação de facções exige resposta coordenada, diz procurador",
-    "lead": "O procurador-geral de Justiça do Rio de Janeiro, Antonio José Campos Moreira, alertou nesta segunda-feira (9), durante a abertura da XXIV Reunião Plenária da Estratégia Nacional de Combate à Corrupção e à Lavagem de Dinheiro (ENCCLA), para a crescente articulação.",
-    "content": [],
-    "ingestedAt": "10/11/2026 às 09:12"
-  },
-  {
-    "id": "camara-1317475-conselho-de-comunicacao-estuda",
-    "title": "Conselho de Comunicação estuda formas de contribuir para aumentar transparência sobre retirada de conteúdos da internet",
-    "summary": "Conselheiros analisaram projeto de lei que obriga plataformas a comunicar o colegiado sobre cada decisão e apontaram dificuldades operacionais para analisar os casos.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1317475-conselho-de-comunicacao-estuda-formas-de-contribuir-para-aumentar-transparencia-sobre-retirada-de-conteudos-da-internet",
-    "publishedAt": "10/11/2026 às 07:52",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/ccs-senado-novembro-768x512.jpg",
-    "imageCaption": "Reunião do Conselho de Comunicação Social (CCS)",
-    "imageCredit": "Carolina Curi/Agência Senado",
-    "imageAlt": "Reunião do Conselho de Comunicação Social",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "headline": "Conselho de Comunicação estuda formas de contribuir para aumentar transparência sobre retirada de conteúdos da internet",
-    "lead": "Conselheiros analisaram projeto de lei que obriga plataformas a comunicar o colegiado sobre cada decisão e apontaram dificuldades operacionais para analisar os casos.",
-    "content": [],
-    "ingestedAt": "10/11/2026 às 09:12"
+    "ingestedAt": "10/11/2026 às 09:32"
   }
 ];

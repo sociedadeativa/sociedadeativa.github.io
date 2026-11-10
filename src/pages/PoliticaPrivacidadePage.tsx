@@ -14,6 +14,7 @@ import {
   ExternalLink,
   ArrowRight,
   EyeOff,
+  ShoppingBag,
 } from "lucide-react";
 
 export const PoliticaPrivacidadePage: React.FC = () => {
@@ -44,7 +45,7 @@ export const PoliticaPrivacidadePage: React.FC = () => {
             Política de Privacidade do Sociedade Ativa
           </h1>
           <p className="text-sm sm:text-base text-slate-600 mt-3 max-w-3xl leading-relaxed">
-            Informações transparentes sobre o tratamento de dados pessoais, uso de cookies e métricas analíticas (GA4), veiculação de publicidade programática (Google AdSense e Google Reader Revenue Manager) e garantia dos direitos dos titulares conforme a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 - LGPD).
+            Informações transparentes sobre o tratamento de dados pessoais, uso de cookies e métricas analíticas (GA4), veiculação de publicidade programática (Google AdSense e Google Reader Revenue Manager), programas de afiliados e garantia dos direitos dos titulares conforme a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 - LGPD).
           </p>
 
           <div className="mt-5 flex flex-wrap items-center gap-3 text-xs text-slate-500">
@@ -139,7 +140,7 @@ export const PoliticaPrivacidadePage: React.FC = () => {
                 3
               </div>
               <h2 className="font-heading text-xl sm:text-2xl font-bold text-slate-900">
-                Cookies e Armazenamento Local (localStorage)
+                Cookies, Armazenamento e Estado da Interface
               </h2>
             </div>
             <p>
@@ -151,8 +152,8 @@ export const PoliticaPrivacidadePage: React.FC = () => {
                 Garantem a navegação segura, carregamento de rotas e entrega das páginas web. Não podem ser desativados nos nossos sistemas sem prejudicar o funcionamento essencial do portal.
               </div>
               <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                <strong className="text-slate-900 block mb-1">Armazenamento Local no Navegador (localStorage):</strong>
-                Utilizado de forma mínima e exclusivamente local pelo cliente para preservar estados de usabilidade — como preferências de visualização de mapas, filtros eleitorais e memorização de modais já fechados pelo leitor. Essas informações permanecem no seu próprio dispositivo e não são transmitidas a servidores proprietários do Sociedade Ativa.
+                <strong className="text-slate-900 block mb-1">Estado da Interface em Memória e Armazenamento Local:</strong>
+                Os estados e preferências de interface dos usuários — tais como alternância entre visualizações de mapas ou tabelas, filtros editoriais e eleitorais ativos, termos de busca e exibição de modais — são mantidos temporariamente na memória de execução da aplicação React durante a sessão ativa de navegação. Esses estados não são armazenados de forma persistente no <code className="text-xs bg-slate-100 px-1 py-0.5 rounded text-slate-800 font-mono">localStorage</code> do navegador, sendo reinicializados ao atualizar a página ou fechar a aba. O portal não utiliza armazenamento local para rastrear leitores, compilar históricos comportamentais ou salvar dados pessoais.
               </div>
               <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
                 <strong className="text-slate-900 block mb-1">Cookies de Terceiros:</strong>
@@ -200,11 +201,11 @@ export const PoliticaPrivacidadePage: React.FC = () => {
                 5
               </div>
               <h2 className="font-heading text-xl sm:text-2xl font-bold text-slate-900">
-                Publicidade Digital e Monetização (Google AdSense &amp; Reader Revenue Manager)
+                Publicidade Digital, Monetização e Programas de Afiliados
               </h2>
             </div>
             <p>
-              A sustentabilidade do Sociedade Ativa como veículo independente apoia-se em soluções de monetização digital fornecidas pelo Google, incluindo a plataforma <strong className="text-slate-900">Google AdSense</strong> (identificador de conta de editor comprovado <code className="text-xs bg-slate-100 px-1.5 py-0.5 rounded text-slate-800 font-mono font-semibold">ca-pub-6825003561232826</code>) e recursos de apoio editorial através do <strong className="text-slate-900">Google Reader Revenue Manager</strong>.
+              A sustentabilidade do Sociedade Ativa como veículo independente apoia-se em soluções de monetização digital fornecidas pelo Google, incluindo a plataforma <strong className="text-slate-900">Google AdSense</strong> (identificador de conta de editor comprovado <code className="text-xs bg-slate-100 px-1.5 py-0.5 rounded text-slate-800 font-mono font-semibold">ca-pub-6825003561232826</code>), recursos de apoio editorial através do <strong className="text-slate-900">Google Reader Revenue Manager</strong> e parcerias em programas de afiliados.
             </p>
             <div className="space-y-3 text-xs sm:text-sm">
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
@@ -243,6 +244,23 @@ export const PoliticaPrivacidadePage: React.FC = () => {
                   >
                     Your Online Choices Brasil <ExternalLink className="w-3 h-3" />
                   </a>.
+                </p>
+              </div>
+              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                <div className="flex items-center gap-2">
+                  <ShoppingBag className="w-4 h-4 text-indigo-700 shrink-0" />
+                  <strong className="text-slate-900 block font-bold">
+                    Programa de Afiliados e Links Externos de Terceiros:
+                  </strong>
+                </div>
+                <p className="text-slate-600">
+                  O Sociedade Ativa participa de programas de afiliados com plataformas de comércio eletrônico, abrangendo <strong className="text-slate-800">Amazon Brasil</strong>, <strong className="text-slate-800">Mercado Livre</strong> e <strong className="text-slate-800">Shopee</strong>.
+                </p>
+                <p className="text-slate-600">
+                  Determinados links externos de produtos indicados em seções temáticas do portal (como no caderno de tecnologia, periféricos e equipamentos recomendados) são links de afiliados. Quando os visitantes realizam compras qualificadas por intermédio desses links, o Sociedade Ativa pode receber uma comissão pela indicação, sem que isso represente qualquer custo adicional ou majoração no preço final cobrado do usuário.
+                </p>
+                <p className="text-slate-600">
+                  Ao clicar em um link de afiliado, o visitante é redirecionado para a plataforma externa correspondente. Essas plataformas de comércio eletrônico terceirizadas processam dados de navegação e utilizam cookies e tecnologias próprias de rastreamento de acordo com suas respectivas políticas de privacidade. O Sociedade Ativa não tem controle sobre as práticas de coleta, tratamento e segurança de dados adotadas por essas plataformas externas.
                 </p>
               </div>
             </div>
