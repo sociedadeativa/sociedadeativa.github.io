@@ -1,8 +1,10 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { NewsItem } from "../types/news";
 import { PortalLink } from "../components/PortalLink";
 import { AffiliateSection } from "../components/AffiliateSection";
-import { sortNewsItems, deduplicateNewsItems } from "../services/newsService";
+import { sortNewsItems, deduplicateNewsItems, isValidImageUrl } from "../services/newsService";
+import { EDITORIAL_IMAGES } from "../assets/editorialImages";
+import { getArticleUrl } from "../utils/router";
 import {
   Cpu,
   ShieldCheck,
@@ -98,6 +100,235 @@ const TECH_TOPICS: TechTopic[] = [
 // RegEx geral para capturar artigos com relevância comprovada em Tecnologia
 const GENERAL_TECH_REGEX =
   /\b(tecnologia|tecnologias|inovação|inovacao|inteligência artificial|inteligencia artificial|\bia\b|algoritmo|cibersegurança|cibernética|cibernetica|segurança digital|computação|computacao|computador|smartphone|celular|internet|banda larga|5g|telecom|dados abertos|transformação digital|pix|sistema digital|automação|automacao|software|hardware|semicondutores|biometria|criptografia|lgpd)\b/i;
+
+interface TechArticleCardProps {
+  article: NewsItem;
+  isLead?: boolean;
+  idx: number;
+  onOpenDetails?: (article: NewsItem) => void;
+}
+
+const TechArticleCard: React.FC<TechArticleCardProps> = ({
+  article,
+  isLead = false,
+  idx,
+  onOpenDetails,
+}) => {
+  const [imageError, setImageError] = useState(false);
+
+  useEffect(() => {
+    setImageError(false);
+  }, [article.id, article.imageUrl]);
+
+  const hasValidOriginal = Boolean(
+    article.imageUrl && isValidImageUrl(article.imageUrl) && !imageError
+  );
+  const imageSrc = hasValidOriginal
+    ? article.imageUrl!
+    : EDITORIAL_IMAGES.dadosPublicos.src;
+  const imageAlt = hasValidOriginal
+    ? article.imageAlt || article.title
+    : EDITORIAL_IMAGES.dadosPublicos.alt;
+  const isUsingFallback = !hasValidOriginal;
+  const articleHref = getArticleUrl(article.id);
+
+  const handleOpen = (e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
+    if (onOpenDetails) onOpenDetails(article);
+  };
+
+  if (isLead) {
+    return (
+      <article className="group bg-slate-50/50 rounded-2xl border border-slate-200/90 p-4 sm:p-6 transition-all duration-200 hover:border-indigo-300 hover:shadow-xs mb-2">
+        {/* Thumbnail Proeminente 16:9 em Destaque */}
+        <div
+          onClick={handleOpen}
+          className="mb-4 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 aspect-[16/9] relative cursor-pointer"
+        >
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            width={800}
+            height={450}
+            className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            referrerPolicy="no-referrer"
+            onError={() => setImageError(true)}
+          />
+          {isUsingFallback ? (
+            <span className="absolute bottom-2 right-2 text-[10px] font-bold text-white bg-slate-950/80 px-2 py-0.5 rounded backdrop-blur-xs">
+              Acervo Oficial
+            </span>
+          ) : (
+            <span className="absolute bottom-2 left-2 text-[10px] font-bold text-white bg-indigo-950/85 px-2 py-0.5 rounded backdrop-blur-xs flex items-center gap-1">
+              <Sparkles className="w-2.5 h-2.5 text-indigo-300" />
+              Destaque de Tecnologia
+            </span>
+          )}
+        </div>
+
+        {/* Metadados Editoriais */}
+        <div className="flex flex-wrap items-center gap-2 mb-2">
+          <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-800 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200">
+            {article.category || "Tecnologia"}
+          </span>
+          <span className="text-[11px] text-slate-500 flex items-center gap-1">
+            <Clock className="w-3 h-3 text-slate-400" />
+            <span>{article.publishedAt}</span>
+          </span>
+          {article.source && (
+            <>
+              <span className="text-slate-300" aria-hidden="true">·</span>
+              <span className="text-[11px] font-semibold text-slate-600">
+                {article.source}
+              </span>
+            </>
+          )}
+        </div>
+
+        {/* Título */}
+        <h3 className="font-heading font-black text-lg sm:text-2xl text-slate-950 group-hover:text-indigo-700 transition-colors leading-snug mb-2">
+          <a
+            href={articleHref}
+            onClick={handleOpen}
+            className="hover:underline"
+          >
+            {article.title}
+          </a>
+        </h3>
+
+        {/* Resumo */}
+        <p className="text-xs sm:text-sm text-slate-600 line-clamp-3 leading-relaxed mb-4">
+          {article.summary}
+        </p>
+
+        {/* Rodapé do Card */}
+        <div className="pt-3 border-t border-slate-200/80 flex flex-wrap items-center justify-between gap-3 text-xs">
+          <div className="flex items-center gap-2 text-slate-500 text-[11px]">
+            <span>
+              <strong>Fonte:</strong> {article.source}
+            </span>
+            {article.articleUrl && (
+              <>
+                <span>&middot;</span>
+                <a
+                  href={article.articleUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-indigo-700 hover:underline font-medium"
+                >
+                  <span>Ver na fonte primária</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </>
+            )}
+          </div>
+
+          <button
+            onClick={handleOpen}
+            className="px-3.5 py-1.5 rounded-lg bg-indigo-700 text-white text-xs font-bold hover:bg-indigo-800 transition-colors cursor-pointer shadow-2xs flex items-center gap-1 shrink-0"
+          >
+            <span>Ler Matéria Completa</span>
+            <ChevronRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      </article>
+    );
+  }
+
+  // Card padrão secundário (layout responsivo com thumbnail 16:9 consistente)
+  return (
+    <article
+      className={`group flex flex-col sm:flex-row gap-4 sm:gap-5 justify-between ${
+        idx > 0 ? "pt-5" : ""
+      }`}
+    >
+      {/* Thumbnail 16:9 responsivo: largura total no mobile, dimensão fixa consistente no tablet/desktop */}
+      <div
+        onClick={handleOpen}
+        className="w-full sm:w-56 md:w-60 lg:w-64 aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 border border-slate-200 relative shrink-0 cursor-pointer"
+      >
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          width={480}
+          height={270}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+          decoding="async"
+          referrerPolicy="no-referrer"
+          onError={() => setImageError(true)}
+        />
+        {isUsingFallback && (
+          <span className="absolute bottom-2 right-2 text-[10px] font-bold text-white bg-slate-950/80 px-2 py-0.5 rounded backdrop-blur-xs">
+            Acervo Oficial
+          </span>
+        )}
+      </div>
+
+      {/* Conteúdo Editorial */}
+      <div className="flex-1 min-w-0 flex flex-col justify-between">
+        <div>
+          <div className="flex flex-wrap items-center gap-2 mb-1.5">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-800 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200">
+              {article.category || "Tecnologia"}
+            </span>
+            <span className="text-[11px] text-slate-500 flex items-center gap-1">
+              <Clock className="w-3 h-3 text-slate-500" />
+              <span>{article.publishedAt}</span>
+            </span>
+          </div>
+
+          <h3 className="font-heading font-black text-base sm:text-lg text-slate-900 group-hover:text-indigo-700 transition-colors leading-snug">
+            <a
+              href={articleHref}
+              onClick={handleOpen}
+              className="text-left cursor-pointer hover:underline"
+            >
+              {article.title}
+            </a>
+          </h3>
+
+          <p className="text-xs sm:text-sm text-slate-600 mt-1.5 line-clamp-2 sm:line-clamp-3 leading-relaxed">
+            {article.summary}
+          </p>
+
+          <div className="text-[11px] text-slate-500 mt-2.5 flex flex-wrap items-center gap-2 pt-1 border-t border-slate-50">
+            <span>
+              <strong>Fonte:</strong> {article.source}
+            </span>
+            {article.articleUrl && (
+              <>
+                <span>&middot;</span>
+                <a
+                  href={article.articleUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-indigo-700 hover:underline font-medium"
+                >
+                  <span>Ver na fonte primária</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </>
+            )}
+          </div>
+        </div>
+
+        <div className="pt-2 flex items-center justify-end">
+          <button
+            onClick={handleOpen}
+            className="px-3 py-1.5 rounded-lg bg-indigo-700 text-white text-xs font-bold hover:bg-indigo-800 transition-colors cursor-pointer shadow-2xs flex items-center gap-1"
+          >
+            <span>Ler Matéria Completa</span>
+            <ChevronRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      </div>
+    </article>
+  );
+};
 
 export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
   articles = [],
@@ -328,69 +559,17 @@ export const TecnologiaPage: React.FC<TecnologiaPageProps> = ({
                 </span>
               </div>
 
-              {/* Lista de Artigos Genuínos */}
+              {/* Lista de Artigos Genuínos com Miniaturas 16:9 e Hierarquia Editorial */}
               {displayedArticles.length > 0 ? (
                 <div className="space-y-4 divide-y divide-slate-100">
                   {displayedArticles.map((art, idx) => (
-                    <article
+                    <TechArticleCard
                       key={art.id}
-                      className={`flex flex-col justify-between gap-3 ${idx > 0 ? "pt-4" : ""}`}
-                    >
-                      <div>
-                        <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-800 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200">
-                            {art.category || "Tecnologia"}
-                          </span>
-                          <span className="text-[11px] text-slate-500 flex items-center gap-1">
-                            <Clock className="w-3 h-3 text-slate-500" />
-                            <span>{art.publishedAt}</span>
-                          </span>
-                        </div>
-
-                        <h3 className="font-heading font-black text-base sm:text-lg text-slate-900 hover:text-indigo-700 transition-colors">
-                          <button
-                            onClick={() => onOpenArticleDetails && onOpenArticleDetails(art)}
-                            className="text-left cursor-pointer hover:underline"
-                          >
-                            {art.title}
-                          </button>
-                        </h3>
-
-                        <p className="text-xs sm:text-sm text-slate-600 mt-1.5 line-clamp-2 sm:line-clamp-3 leading-relaxed">
-                          {art.summary}
-                        </p>
-
-                        <div className="text-[11px] text-slate-500 mt-2.5 flex flex-wrap items-center gap-2 pt-1 border-t border-slate-50">
-                          <span>
-                            <strong>Fonte:</strong> {art.source}
-                          </span>
-                          {art.articleUrl && (
-                            <>
-                              <span>&middot;</span>
-                              <a
-                                href={art.articleUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 text-indigo-700 hover:underline font-medium"
-                              >
-                                <span>Ver na fonte primária</span>
-                                <ExternalLink className="w-3 h-3" />
-                              </a>
-                            </>
-                          )}
-                        </div>
-                      </div>
-
-                      <div className="pt-1 flex items-center justify-end">
-                        <button
-                          onClick={() => onOpenArticleDetails && onOpenArticleDetails(art)}
-                          className="px-3 py-1.5 rounded-lg bg-indigo-700 text-white text-xs font-bold hover:bg-indigo-800 transition-colors cursor-pointer shadow-2xs flex items-center gap-1"
-                        >
-                          <span>Ler Matéria Completa</span>
-                          <ChevronRight className="w-3.5 h-3.5" />
-                        </button>
-                      </div>
-                    </article>
+                      article={art}
+                      isLead={idx === 0}
+                      idx={idx}
+                      onOpenDetails={onOpenArticleDetails}
+                    />
                   ))}
                 </div>
               ) : (

@@ -2,6 +2,54 @@ import { NewsItem } from "../types/news";
 
 export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
   {
+    "id": "camara-1311952-projeto-institui-politica-de-p",
+    "title": "Projeto institui política de proteção dos trabalhadores conhecidos como chapas",
+    "summary": "Texto em análise na Câmara prevê cadastro voluntário, cursos de qualificação e regras mínimas de higiene e segurança para autônomos que atuam na movimentação de cargas.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1311952-projeto-institui-politica-de-protecao-dos-trabalhadores-conhecidos-como-chapas",
+    "publishedAt": "10/11/2026 às 11:02",
+    "category": "Congresso",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2025/08/deputado-marcos-tavares-01-768x513.jpeg",
+    "imageCaption": "Tavares: muitos estão em situação de invisibilidade institucional, informalidade e vulnerabilidade econômica",
+    "imageCredit": "Divulgação",
+    "imageAlt": "Deputado Marcos Tavares (PDT-RJ) fala em comissão da Câmara dos Deputados",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "headline": "Projeto institui política de proteção dos trabalhadores conhecidos como chapas",
+    "lead": "Texto em análise na Câmara prevê cadastro voluntário, cursos de qualificação e regras mínimas de higiene e segurança para autônomos que atuam na movimentação de cargas.",
+    "content": [],
+    "ingestedAt": "10/11/2026 às 11:13"
+  },
+  {
+    "id": "bcb-21313-novas-regras-reforcam-seguranc",
+    "title": "Novas regras reforçam segurança e ampliam uso do Open Finance por clientes pessoas jurídicas",
+    "summary": "Norma dá mais clareza aos contratos de parceria para compartilhamento de dados. Consentimento será específico para cada entidade parceira e terá mais transparência.",
+    "source": "Banco Central",
+    "sourceUrl": "https://www.bcb.gov.br",
+    "articleUrl": "https://www.bcb.gov.br/detalhenoticia/21313/nota",
+    "publishedAt": "10/11/2026 às 10:54",
+    "category": "Economia",
+    "imageUrl": "https://www.bcb.gov.br/content/home/noticias-img/thumbnail/open_finance_escuro.png",
+    "imageCaption": "Novas regras reforçam segurança e ampliam uso do Open Finance por clientes pessoas jurídicas",
+    "imageCredit": "Banco Central do Brasil",
+    "imageAlt": "Novas regras reforçam segurança e ampliam uso do Open Finance por clientes pessoas jurídicas",
+    "author": "Banco Central do Brasil",
+    "tags": [
+      "Banco Central",
+      "Economia",
+      "Política Monetária"
+    ],
+    "headline": "Novas regras reforçam segurança e ampliam uso do Open Finance por clientes pessoas jurídicas",
+    "lead": "Norma dá mais clareza aos contratos de parceria para compartilhamento de dados. Consentimento será específico para cada entidade parceira e terá mais transparência.",
+    "content": [],
+    "ingestedAt": "10/11/2026 às 11:13"
+  },
+  {
     "id": "ebc-1799001",
     "title": "Brasil conquista título no circuito mundial de vôlei de praia",
     "summary": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
@@ -177,56 +225,6 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     ],
     "headline": "Projeto cria credencial digital no gov.br para comprovar maioridade em sites adultos",
     "lead": "A Câmara dos Deputados discute o assunto.",
-    "content": [],
-    "ingestedAt": "10/11/2026 às 10:52"
-  },
-  {
-    "id": "camara-1317225-comissao-aprova-projeto-de-inc",
-    "title": "Comissão aprova projeto de incentivo à equidade racial e de gênero no SUS",
-    "summary": "A proposta segue em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1317225-comissao-aprova-projeto-de-incentivo-a-equidade-racial-e-de-genero-no-sus",
-    "publishedAt": "10/11/2026 às 08:38",
-    "category": "Congresso",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20260408163953131-768x473.jpg",
-    "imageCaption": "Rogéria Santos recomendou a aprovação, com mudanças",
-    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
-    "imageAlt": "Deputada Rogéria Santos (Republicanos-BA) fala no Plenário da Câmara dos Deputados",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "headline": "Comissão aprova projeto de incentivo à equidade racial e de gênero no SUS",
-    "lead": "A proposta segue em análise na Câmara dos Deputados.",
-    "content": [],
-    "ingestedAt": "10/11/2026 às 10:52"
-  },
-  {
-    "id": "ebc-1708217",
-    "title": "PF prende ex-servidor do STJ suspeito de vazar informações sigilosas",
-    "summary": "A Polícia Federal (PF) cumpriu nesta terça-feira (10) um mandado de prisão preventiva contra um ex-servidor do Superior Tribunal de Justiça (STJ). A ação faz parte da segunda fase da Operação Linceu.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/pf-prende-ex-servidor-do-stj-suspeito-de-vazar-informacoes-sigilosas",
-    "publishedAt": "10/11/2026 às 08:31",
-    "category": "Justiça",
-    "imageUrl": "https://imagens.ebc.com.br/FH2NyJg3N_ltYkrSI20JVlRqdrU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/movimentacao-pf_mcamgo_abr_31082023-3.jpg?itok=5pzY7Mnj",
-    "imageCaption": "PF prende ex-servidor do STJ suspeito de vazar informações sigilosas",
-    "imageCredit": "Paula Laboissière – Repórter da Agência Brasil",
-    "imageAlt": "PF prende ex-servidor do STJ suspeito de vazar informações sigilosas",
-    "author": "Paula Laboissière – Repórter da Agência Brasil",
-    "tags": [
-      "Geral",
-      "Segurança Pública",
-      "Operação Linceu",
-      "STJ",
-      "Mandado de Prisão"
-    ],
-    "headline": "PF prende ex-servidor do STJ suspeito de vazar informações sigilosas",
-    "lead": "A Polícia Federal (PF) cumpriu nesta terça-feira (10) um mandado de prisão preventiva contra um ex-servidor do Superior Tribunal de Justiça (STJ). A ação faz parte da segunda fase da Operação Linceu.",
     "content": [],
     "ingestedAt": "10/11/2026 às 10:52"
   }

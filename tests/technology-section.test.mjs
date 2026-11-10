@@ -191,6 +191,68 @@ assert.ok(!techMatches.some((a) => a.id === "art-4"), "art-4 (Futebol) NÃO deve
 
 console.log("  ✓ Filtros de palavras-chave e categorias isolam artigos de tecnologia sem falso-positivos em futebol.");
 
+// 8. Validação de Renderização de Miniaturas (Thumbnails 16:9) no Caderno de Tecnologia
+console.log("\nTeste 8: Validação de miniaturas de artigos nos cards de tecnologia...");
+const techPagePath = path.join(rootDir, "src", "pages", "TecnologiaPage.tsx");
+const techPageContent = fs.readFileSync(techPagePath, "utf8");
+
+assert.ok(
+  techPageContent.includes("TechArticleCard"),
+  "TecnologiaPage deve implementar TechArticleCard para renderização editorial consistente"
+);
+assert.ok(
+  techPageContent.includes("aspect-[16/9]"),
+  "Cards de tecnologia devem preservar proporção de aspecto 16:9 para thumbnails"
+);
+assert.ok(
+  techPageContent.includes("loading=\"lazy\""),
+  "Cards secundários devem utilizar carregamento sob demanda (loading='lazy')"
+);
+assert.ok(
+  techPageContent.includes("decoding=\"async\""),
+  "Imagens de artigos devem usar decodificação assíncrona (decoding='async')"
+);
+assert.ok(
+  techPageContent.includes("onError="),
+  "Cards de artigos de tecnologia devem implementar fallback gracioso em caso de falha de imagem"
+);
+assert.ok(
+  techPageContent.includes("EDITORIAL_IMAGES.dadosPublicos"),
+  "Fallback institucional oficial deve apontar para acervo de dados públicos verificado"
+);
+console.log("  ✓ TecnologiaPage renderiza miniaturas 16:9 com alt text, lazy loading e fallback seguro.");
+
+// 9. Validação do Ativo de Imagem e Metadados do Artigo da Anthropic
+console.log("\nTeste 9: Validação da imagem de destaque do artigo da Anthropic (IPO Nasdaq)...");
+const newsDataJsonPath = path.join(rootDir, "public", "data", "newsData.json");
+const newsData = JSON.parse(fs.readFileSync(newsDataJsonPath, "utf8"));
+const anthropicArticle = newsData.find(
+  (a) => a.id === "anthropic-ipo-bilionario-nasdaq-inteligencia-artificial"
+);
+
+assert.ok(anthropicArticle, "Artigo da Anthropic deve existir no acervo editorial");
+assert.strictEqual(
+  anthropicArticle.imageUrl,
+  "/images/anthropic-ipo-nasdaq.webp",
+  "Artigo da Anthropic deve apontar para /images/anthropic-ipo-nasdaq.webp"
+);
+assert.ok(
+  anthropicArticle.imageAlt && anthropicArticle.imageAlt.length > 20,
+  "Artigo da Anthropic deve possuir texto alternativo (alt) descritivo em português"
+);
+
+const anthropicAssetPath = path.join(rootDir, "public", "images", "anthropic-ipo-nasdaq.webp");
+assert.ok(
+  fs.existsSync(anthropicAssetPath),
+  "Arquivo físico public/images/anthropic-ipo-nasdaq.webp deve existir no disco"
+);
+const assetStat = fs.statSync(anthropicAssetPath);
+assert.ok(
+  assetStat.size > 50000,
+  "Arquivo public/images/anthropic-ipo-nasdaq.webp deve ser uma imagem válida e íntegra"
+);
+console.log("  ✓ Imagem do artigo Anthropic (/images/anthropic-ipo-nasdaq.webp) verificada e íntegra no disco.");
+
 console.log("\n===========================================================================");
 console.log("TODOS OS TESTES FOCADOS DA SEÇÃO DE TECNOLOGIA PASSARAM COM SUCESSO!");
 console.log("===========================================================================\n");
