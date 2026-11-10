@@ -11,6 +11,13 @@ import { RegionalCharts } from "../components/RegionalCharts";
 import { CandidateResultsView } from "../components/CandidateResultsView";
 import { isElectionArticle } from "../utils/electionNewsFilter";
 import { handleTabKeyDown } from "../utils/a11yTabs";
+
+const BrazilMap = React.lazy(() =>
+  import("../components/BrazilMap").then((m) => ({ default: m.BrazilMap }))
+);
+const StateTable = React.lazy(() =>
+  import("../components/StateTable").then((m) => ({ default: m.StateTable }))
+);
 import {
   Landmark,
   ShieldCheck,
@@ -272,7 +279,23 @@ export const PoliticaPage: React.FC<PoliticaPageProps> = ({
                     selectedCandidateId={null}
                     onSelectCandidate={() => {}}
                   />
+                  <React.Suspense fallback={<div className="h-64 bg-slate-50 rounded-2xl animate-pulse" />}>
+                    <BrazilMap
+                      dataset={dataset}
+                      selectedStateUf={null}
+                      candidateFilter={null}
+                      onSelectState={() => {}}
+                      onSelectCandidateFilter={() => {}}
+                    />
+                  </React.Suspense>
                   <RegionalCharts dataset={dataset} />
+                  <React.Suspense fallback={<div className="h-64 bg-slate-50 rounded-2xl animate-pulse" />}>
+                    <StateTable
+                      dataset={dataset}
+                      selectedStateUf={null}
+                      onSelectState={() => {}}
+                    />
+                  </React.Suspense>
                 </div>
               )}
             </div>

@@ -31,6 +31,8 @@ export default defineConfig(() => {
           entretenimento: resolve(rootDir, 'entretenimento/index.html'),
           clima: resolve(rootDir, 'clima/index.html'),
           sobre: resolve(rootDir, 'sobre/index.html'),
+          termosDeUso: resolve(rootDir, 'termos-de-uso/index.html'),
+          politicaPrivacidade: resolve(rootDir, 'politica-de-privacidade/index.html'),
           notFound: resolve(rootDir, '404.html'),
         },
         output: {

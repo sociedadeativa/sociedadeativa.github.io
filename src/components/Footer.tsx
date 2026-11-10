@@ -168,6 +168,16 @@ export const Footer: React.FC<FooterProps> = ({
             </h3>
             <ul className="space-y-2 text-slate-400 text-xs">
               <li>
+                <PortalLink route="termos-de-uso" className="hover:text-white transition-colors">
+                  Termos de Uso
+                </PortalLink>
+              </li>
+              <li>
+                <PortalLink route="politica-de-privacidade" className="hover:text-white transition-colors">
+                  Política de Privacidade (LGPD)
+                </PortalLink>
+              </li>
+              <li className="pt-1">
                 <span className="block text-slate-300 font-semibold">Contato Editorial:</span>
                 <a
                   href="mailto:redacao.sociedadeativa@gmail.com"
@@ -176,7 +186,7 @@ export const Footer: React.FC<FooterProps> = ({
                   redacao.sociedadeativa@gmail.com
                 </a>
               </li>
-              <li className="pt-2">
+              <li className="pt-1">
                 <span className="block text-slate-300 font-semibold">Auditoria Pública:</span>
                 <span className="text-slate-400">Dados abertos com total rastreabilidade governamental.</span>
               </li>
@@ -203,6 +213,14 @@ export const Footer: React.FC<FooterProps> = ({
 
           <div className="flex flex-wrap items-center gap-3">
             <span>Fontes Oficiais: TSE · IBGE · BCB · EBC · Agência Câmara · Agência Senado · STF</span>
+            <span className="text-slate-700 hidden sm:inline" aria-hidden="true">·</span>
+            <PortalLink route="termos-de-uso" className="hover:text-white underline underline-offset-2">
+              Termos de Uso
+            </PortalLink>
+            <span className="text-slate-700 hidden sm:inline" aria-hidden="true">·</span>
+            <PortalLink route="politica-de-privacidade" className="hover:text-white underline underline-offset-2">
+              Política de Privacidade
+            </PortalLink>
             <span className="text-slate-700 hidden sm:inline" aria-hidden="true">·</span>
             <PortalLink route="sobre" className="hover:text-white underline underline-offset-2">
               Política de Transparência

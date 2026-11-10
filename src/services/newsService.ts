@@ -45,6 +45,9 @@ export function normalizeCategory(cat: string | undefined): NewsCategory {
   if (lower.includes("tecnolog") || lower.includes("ciênc") || lower.includes("inova")) {
     return "Tecnologia";
   }
+  if (lower.includes("entreten") || lower.includes("cultur") || lower.includes("cinema") || lower.includes("série") || lower.includes("streaming") || lower.includes("músic")) {
+    return "Entretenimento";
+  }
   if (lower.includes("polít") || lower.includes("polit")) {
     return "Política";
   }

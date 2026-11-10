@@ -11,6 +11,8 @@ export type PortalRoute =
   | "entretenimento"
   | "clima"
   | "sobre"
+  | "termos-de-uso"
+  | "politica-de-privacidade"
   | "artigo";
 
 export interface RouteConfig {
@@ -181,6 +183,30 @@ export const ROUTE_CONFIGS: Record<PortalRoute, RouteConfig> = {
     badgeText: "text-slate-800",
     badgeBorder: "border-slate-200",
   },
+  "termos-de-uso": {
+    route: "termos-de-uso",
+    path: "/termos-de-uso/",
+    label: "Termos de Uso",
+    title: "Termos de Uso — Sociedade Ativa | Regras de Utilização e Transparência",
+    description:
+      "Termos de uso e diretrizes do portal Sociedade Ativa: finalidade editorial cívica, regras de uso aceitável, propriedade intelectual e fontes públicas de dados.",
+    accentColor: "slate",
+    badgeBg: "bg-slate-100",
+    badgeText: "text-slate-800",
+    badgeBorder: "border-slate-200",
+  },
+  "politica-de-privacidade": {
+    route: "politica-de-privacidade",
+    path: "/politica-de-privacidade/",
+    label: "Política de Privacidade",
+    title: "Política de Privacidade — Sociedade Ativa | Conformidade LGPD e Transparência",
+    description:
+      "Política de privacidade e proteção de dados do portal Sociedade Ativa segundo a LGPD (Lei 13.709/2018): cookies, métricas GA4, monetização AdSense e direitos dos titulares.",
+    accentColor: "blue",
+    badgeBg: "bg-blue-50",
+    badgeText: "text-blue-800",
+    badgeBorder: "border-blue-200",
+  },
   artigo: {
     route: "artigo",
     path: "/noticias/",
@@ -286,6 +312,8 @@ export function getRouteFromPath(pathname: string, searchStr?: string): PortalRo
   if (clean.startsWith("entretenimento")) return "entretenimento";
   if (clean.startsWith("clima")) return "clima";
   if (clean.startsWith("sobre")) return "sobre";
+  if (clean.startsWith("termos-de-uso")) return "termos-de-uso";
+  if (clean.startsWith("politica-de-privacidade")) return "politica-de-privacidade";
 
   return "home";
 }

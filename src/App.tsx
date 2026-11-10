@@ -24,6 +24,8 @@ const TecnologiaPage = lazy(() => import("./pages/TecnologiaPage").then((m) => (
 const EntretenimentoPage = lazy(() => import("./pages/EntretenimentoPage").then((m) => ({ default: m.EntretenimentoPage })));
 const ClimaPage = lazy(() => import("./pages/ClimaPage").then((m) => ({ default: m.ClimaPage })));
 const SobrePage = lazy(() => import("./pages/SobrePage").then((m) => ({ default: m.SobrePage })));
+const TermosDeUsoPage = lazy(() => import("./pages/TermosDeUsoPage").then((m) => ({ default: m.TermosDeUsoPage })));
+const PoliticaPrivacidadePage = lazy(() => import("./pages/PoliticaPrivacidadePage").then((m) => ({ default: m.PoliticaPrivacidadePage })));
 const ArticlePage = lazy(() => import("./pages/ArticlePage").then((m) => ({ default: m.ArticlePage })));
 
 // Modais e Painéis Carregados Sob Demanda (On-Demand)
@@ -239,6 +241,10 @@ export default function App() {
               onOpenMethodology={() => setIsMethodologyOpen(true)}
             />
           )}
+
+          {currentRoute === "termos-de-uso" && <TermosDeUsoPage />}
+
+          {currentRoute === "politica-de-privacidade" && <PoliticaPrivacidadePage />}
         </Suspense>
       </main>
 

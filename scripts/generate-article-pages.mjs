@@ -309,6 +309,8 @@ function generateSitemap(generatedArticles) {
     { loc: 'https://sociedadeativa.github.io/entretenimento/', defaultDate: '2026-11-09' },
     { loc: 'https://sociedadeativa.github.io/clima/', defaultDate: '2026-10-15' },
     { loc: 'https://sociedadeativa.github.io/sobre/', defaultDate: '2026-10-13' },
+    { loc: 'https://sociedadeativa.github.io/termos-de-uso/', defaultDate: '2026-11-10' },
+    { loc: 'https://sociedadeativa.github.io/politica-de-privacidade/', defaultDate: '2026-11-10' },
   ];
 
   // Preserva os valores de lastmod definidos nas seções principais a partir de public/sitemap.xml
