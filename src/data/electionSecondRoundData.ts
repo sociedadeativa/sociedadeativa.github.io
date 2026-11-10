@@ -135,5 +135,5 @@ export const SECOND_ROUND_DATA: SecondRoundTotalization = {
     }
   ],
   "statusLabel": "Totalização concluída",
-  "lastUpdated": "2026-11-09T22:11:48.727Z"
+  "lastUpdated": "2026-11-10T19:33:40.259Z"
 };
