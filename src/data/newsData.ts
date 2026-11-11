@@ -5,6 +5,76 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1708339",
+    "title": "Petrobras tem lucro de R$ 39,8 bilhões no 3º trimestre, alta de 21,5%",
+    "summary": "A Petrobras atingiu lucro líquido de R$ 39,8 bilhões no 3º trimestre de 2026, que corresponde a alta de 21,5% na comparação com o mesmo período do ano passado.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/petrobras-tem-lucro-de-r-398-bilhoes-alta-de-215",
+    "publishedAt": "10/11/2026 às 21:37",
+    "category": "Economia",
+    "ingestedAt": "10/11/2026 às 22:25",
+    "imageUrl": "https://imagens.ebc.com.br/bWH05MrbClUkFQeDjIT6HRzAc3E=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/07/14/plataforma_da_petrobras_que_reforcara_o_pre-sal_deixa_singapura04.jpg?itok=gpWgfAA-",
+    "imageCaption": "Petrobras tem lucro de R$ 39,8 bilhões no 3º trimestre, alta de 21,5%",
+    "imageCredit": "Douglas Corrêa - Repórter da Agência Brasil",
+    "imageAlt": "Petrobras tem lucro de R$ 39,8 bilhões no 3º trimestre, alta de 21,5%",
+    "author": "Douglas Corrêa - Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "Petrobras",
+      "petróleo",
+      "lucro"
+    ],
+    "content": [
+      "A Petrobras atingiu lucro líquido de R$ 39,8 bilhões no 3º trimestre de 2026, que corresponde a alta de 21,5% na comparação com o mesmo período do ano passado. O balanço divulgado pela companhia nesta terça-feira (10) informa que o fluxo de caixa operacional (FCO) alcançou R$ 61,8 bilhões (US$ 12 bilhões), um crescimento de 15% em doze meses.",
+      "Em 2026, a Petrobras bateu recorde trimestral na produção de óleo por três vezes, de forma sequencial. Além disso,11 plataformas foram autorizadas a produzir, com segurança, acima da capacidade original sem investimento extra nas unidades de produção.",
+      "As vendas de derivados no mercado interno alcançaram 1.854 milhões de barris de petróleo por dia (mbpd) no trimestre, o maior volume desde o terceiro trimestre de 2021 e o melhor resultado com o atual parque de refino. Foi registrado também recorde trimestral na produção de diesel, de 769 mbpd. Já a produção total de derivados atingiu 1.873 mbpd no período.",
+      "No terceiro trimestre, o montante de investimento chegou a R$ 33 bilhões (US$ 6,4 bilhões), sendo R$ 27,5 bilhões no segmento de exploração e produção, que resultou em construção de plataformas e interligações de poços.",
+      "Foram aprovados para o período R$ 15,3 bilhões em dividendos e juros sobre capital próprio, que serão distribuídos entre acionistas privados e públicos.",
+      "Os dividendos serão pagos em duas parcelas: a primeira, em 22 de fevereiro de 2027, e, a segunda, em 22 de março de 2027."
+    ]
+  },
+  {
+    "id": "camara-1318193-camara-aprova-projeto-que-ampl",
+    "title": "Câmara aprova projeto que amplia acesso ao crédito imobiliário do Programa Habite Seguro para profissionais ameaçados",
+    "summary": "A matéria será enviada ao Senado.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1318193-camara-aprova-projeto-que-amplia-acesso-ao-credito-imobiliario-do-programa-habite-seguro-para-profissionais-ameacados",
+    "publishedAt": "10/11/2026 às 21:27",
+    "category": "Congresso",
+    "ingestedAt": "10/11/2026 às 22:25",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20261110195321560-768x473.jpg",
+    "imageCaption": "Rodrigo da Zaeli, relator da proposta",
+    "imageCredit": "Bruno Spada / Câmara dos Deputados",
+    "imageAlt": "Discussão e votação de propostas legislativas. Dep. Rodrigo da Zaeli (PL - MT)",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Bruno Spada / Câmara dos Deputados",
+      "Rodrigo da Zaeli, relator da proposta",
+      "A Câmara dos Deputados aprovou projeto de lei que reformula o programa Habite Seguro de financiamento de imóveis para profissionais de segurança pública.",
+      "A matéria será enviada ao Senado.",
+      "De autoria do deputado Capitão Alden (PL-BA), o Projeto de Lei 4480/25 foi aprovado com substitutivo do deputado Rodrigo da Zaeli (PL-MT), que permite o financiamento com subsídio de um segundo imóvel em certas situações, inclusive para reforma ou construção. Por outro lado, nem todo profissional inativo poderá recorrer ao programa.",
+      "As subvenções poderão ser cumulativas com as de outros programas habitacionais e o recebimento de mais de uma por beneficiário do Habite Seguro será possível para:",
+      "Nos contratos de financiamento de reforma da moradia própria, a subvenção ocorrerá por meio do reembolso do pagamento da parcela de quitação do contrato.",
+      "Para o profissional que já possua um imóvel, situação que normalmente impede o acesso ao programa, o texto aprovado permite o financiamento àquele, na ativa ou inativo, que comprove ameaça contra sua vida ou integridade física ou de membro de sua família que com more com ele, desde que a ameça, cumulativamente:",
+      "Depois de cessada a ameaça, o profissional deverá regressar ao imóvel que já possuía e colocar o imóvel comprado ou construído com recursos do programa à disposição do Habite Seguro para a transferência a novos beneficiários.",
+      "A localização desse imóvel devolvido ao programa será resguardada por sigilo para proteger o beneficiário.",
+      "Segundo o texto, a subvenção econômica poderá ofertada a beneficiários que não se enquadrem nas faixas de renda do programa Minha Cada, Minha Vida, à qual o Habite Seguro passa a ser vinculado.",
+      "Para isso, o interessado deverá ter renda mensal superior em até 50% a mais da maior faixa de renda urbana aplicável ao Minha Casa, Minha Vida.",
+      "Entretanto, em outro trecho do texto, o relator especifica que o enquadramento no Habite Seguro não estará condicionado a limite máximo de remuneração mensal, com garantia de condições diferenciadas de crédito imobiliário previstas na lei.",
+      "O substitutivo aprovado permite ao Fundo Nacional de Segurança Pública (FNSP) atuar como fundo garantidor de créditos concedidos por cooperativas de crédito e instituições financeiras privadas que atuarem como agentes financeiros do programa Habite Seguro.",
+      "Outra fonte de recursos poderá vir de emendas parlamentares destinadas a ação orçamentária específica do Ministério da Justiça e Segurança Pública, que estarão sujeitas ao mesmo regime de execução, monitoramento, prestação de contas e controle aplicável aos demais recursos empregados no programa, sem prejuízo das regras específicas da legislação orçamentária e financeira.",
+      "Como subsído complementar, o programa poderá ofertar valores específicos segundo as faixas existentes do programa Minha Casa, Minha Vida:",
+      "No entanto, esses valores não geram direito subjetivo ao interessado, além de serem condicionados à disponibilidade orçamentária."
+    ]
+  },
+  {
     "id": "ebc-1708332",
     "title": "Relator defende redução da maioridade penal com prisões separadas",
     "summary": "O deputado federal Mendonça Filho (PL-PE), relator da Proposta de Emenda Constitucional (PEC) sobre a redução da maioridade penal, afirmou nesta terça-feira (10) que defende a punição criminal a partir dos 16 anos, mas que os adolescentes deverão cumprir pena em instituições.",
@@ -12,7 +82,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/relator-defende-reducao-da-maioridade-penal-com-prisoes-separadas",
     "publishedAt": "10/11/2026 às 20:46",
-    "category": "Política",
+    "category": "Justiça",
     "ingestedAt": "10/11/2026 às 20:55",
     "imageUrl": "https://imagens.ebc.com.br/PbgmnnydjL4hPUvgYm-30ujHjQU=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/10/sem_titulo-6.jpg?itok=8BQ4_Ib2",
     "imageCaption": "Relator defende redução da maioridade penal com prisões separadas",
@@ -22,7 +92,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "tags": [
       "Política",
       "Congresso Nacional",
-      "Ministério da Justiça"
+      "Ministério da Justiça",
+      "Justiça"
     ],
     "content": [
       "O deputado federal Mendonça Filho (PL-PE), relator da Proposta de Emenda Constitucional (PEC) sobre a redução da maioridade penal, afirmou nesta terça-feira (10) que defende a punição criminal a partir dos 16 anos, mas que os adolescentes deverão cumprir pena em instituições separadas dos adultos.",
@@ -213,7 +284,7 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/lula-e-presidente-da-turquia-se-reunem-e-falam-de-comercio-bilateral",
     "publishedAt": "10/11/2026 às 20:24",
-    "category": "Política",
+    "category": "Governo",
     "ingestedAt": "10/11/2026 às 20:55",
     "imageUrl": "https://imagens.ebc.com.br/-_3EkhmJrgEUvVi10yTPPBS07XI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/10/55645049863_51e977c6a5_o.jpg?itok=pK1zsIer",
     "imageCaption": "Lula e presidente da Turquia se reúnem e falam de comércio bilateral",
@@ -224,7 +295,8 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Política",
       "Lula",
       "Turquia",
-      "Relações Internacionais"
+      "Relações Internacionais",
+      "Governo"
     ],
     "content": [
       "Em visita à Turquia para participar da 31ª Conferência sobre Mudança do Clima (COP31) a partir de amanhã (11), o presidente Luiz Inácio Lula da Silva, se encontrou com o presidente Recep Tayyip Erdogan.",
@@ -1590,71 +1662,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Por outro lado, economistas críticos a essa proposta destacam que, como são os juros altos os maiores responsáveis pelo aumento da dívida, deve-se buscar uma política alternativa que contribua para a redução dos juros praticados pelo Banco Central (BC).",
       "Os juros elevados são a principal causa do aumento da dívida pública , segundo dados do BC. Nos últimos doze meses, os juros consumiram mais de R$ 1,1 trilhão do orçamento público, o que representa 8,9% do PIB brasileiro.",
       "Em declarações recentes, o presidente Luiz Inácio Lula da Silva tem sinalizado que o governo vai defender a responsabilidade fiscal sem prejudicar benefícios e programas sociais."
-    ]
-  },
-  {
-    "id": "ebc-1708265",
-    "title": "Especialistas alertam para risco de reinfecção da dengue",
-    "summary": "O dia 21 de novembro marca o Dia Nacional de Combate à Dengue e com a proximidade da data e do início do verão, período de maior proliferação do mosquito transmissor da doença, o Aedes aegypti , e de aumento dos casos, especialistas reforçam que quem já teve a doença corre.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/especialistas-alertam-pessoas-que-ja-tiveram-dengue-pela-2a-vez",
-    "publishedAt": "10/11/2026 às 14:00",
-    "category": "Política",
-    "ingestedAt": "10/11/2026 às 15:46",
-    "imageUrl": "https://imagens.ebc.com.br/G0euWoKl_1mLizoWaWv4kMUDZmg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/08/26/adobestock_1837032436.jpeg?itok=aUfjQ-Tt",
-    "imageCaption": "Especialistas alertam para risco de reinfecção da dengue",
-    "imageCredit": "Flávia Albuquerque - Repórter da Agência Brasil",
-    "imageAlt": "Especialistas alertam para risco de reinfecção da dengue",
-    "author": "Flávia Albuquerque - Repórter da Agência Brasil",
-    "tags": [
-      "Saúde",
-      "morte",
-      "vírus",
-      "Política"
-    ],
-    "content": [
-      "O dia 21 de novembro marca o Dia Nacional de Combate à Dengue e com a proximidade da data e do início do verão, período de maior proliferação do mosquito transmissor da doença, o Aedes aegypti , e de aumento dos casos, especialistas reforçam que quem já teve a doença corre risco de desenvolver as formas graves em uma nova infecção com um sorotipo diferente, mesmo que tenham anticorpos da primeira vez.",
-      "Segundo médicos do Hospital Sírio-Libanês, isso acontece porque os anticorpos produzidos no primeiro episódio nem sempre conseguem neutralizar o novo agente e, em determinadas circunstâncias, ajudam a acelerar a progressão da infecção. O nome do fenômeno biológico que explica porque o segundo episódio costuma ser mais perigoso é Aumento Dependente de Anticorpos, conhecido pela sigla ADE (do inglês Antibody-Dependent Enhancement).",
-      "“O vírus da dengue possui quatro tipos, denominados DENV-1, DENV-2, DENV-3 e DENV-4. Quem contrai um deles desenvolve proteção duradoura contra aquele mesmo tipo, mas continua suscetível aos demais\", afirmou a médica infectologista Carla Kobayashi. De acordo com ela, nesses casos os anticorpos produzidos pelo corpo na primeira exposição até reconhecem um sorotipo diferente, mas não conseguem combatê-lo de maneira eficaz.",
-      "Segundo levantamento do Instituto Todos pela Saúde (ITpS), o Brasil registrou mais de 374 mil casos de dengue e 371 mortes entre janeiro e outubro de 2026. Em 2025, foram contabilizados 1.841 óbitos, uma queda de 70,6% em relação às 6.270 mortes registradas em 2024, ano marcado por uma epidemia histórica.",
-      "Carla aleta para o fato de que o sorotipo 3 (DENV-3), que permaneceu pouco frequente no Brasil durante anos, o que é motivo de preocupação. O monitoramento do ITpS revela que a participação desse sorotipo entre os casos analisados passou de pelo menos 14% em 2025 para 30% em 2026.",
-      "Infectologista destaca que a dengue é uma doença endêmica no Brasil, por isso uma parcela considerável da população já foi exposta aos tipos 1 e 2, desenvolvendo uma resposta imunológica. Porém esse não é o caso do tipo 3, o que redobra a necessidade de prevenção neste ano, incluindo a vacinação tanto para quem já teve dengue como para quem nunca foi infectado.",
-      "A dengue grave provoca complicações que comprometem o funcionamento do organismo, como hemorragias intensas, perda de líquidos dos vasos sanguíneos, queda acentuada da pressão arterial e danos a órgãos como fígado, coração e cérebro. Em situações mais críticas, o paciente pode entrar em choque circulatório, com risco de morte. Segundo dados do Ministério da Saúde, em 2025 o Brasil registrou 35.749 casos de dengue grave ou com sinais de alarme.",
-      "O coordenador do Serviço de Infectologia do Sírio-Libanês, Alexandre Cunha, explica que o agravamento do quadro pode começar quando a febre diminui, normalmente entre o terceiro e o sétimo dia após os sinais da infecção. É nessa fase em que o paciente precisa de maior atenção, com acompanhamento mais cuidadoso.",
-      "Não há medicamento específico para o combate ao vírus e o tratamento se resume a estabilizar o paciente e evitar que o quadro evolua para choque ou falência de órgãos, com uma das principais medidas sendo a reposição de líquidos por via intravenosa, para restabelecer a circulação sanguínea.",
-      "A automedicação é proibida porque remédios como a aspirina (ácido acetilsalicílico) e anti-inflamatórios, como ibuprofeno, diclofenaco e nimesulida podem piorar a hemorragia. O mais indicado para aliviar febre e dores são o paracetamol e a dipirona, porém sempre com orientação médica e nas doses recomendadas."
-    ]
-  },
-  {
-    "id": "ebc-1708257",
-    "title": "Justiça Federal desiste de R$ 209 mi extra para pagar penduricalhos",
-    "summary": "O presidente do Conselho da Justiça Federal (CJF), ministro Luís Felipe Salomão, que também preside o Superior Tribunal de Justiça (STJ), desistiu formalmente, nesta terça-feira (10), de solicitar crédito extra de R$ 208,9 milhões com o objetivo de pagar penduricalhos - como.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/justica-federal-desiste-de-r-209-mi-extra-para-pagar-penduricalhos",
-    "publishedAt": "10/11/2026 às 13:55",
-    "category": "Justiça",
-    "ingestedAt": "10/11/2026 às 15:46",
-    "imageUrl": "https://imagens.ebc.com.br/5uTRNKnoWOW3GeKHDPbZMKSufB8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/luiz_felipe_salomao.jpg?itok=1RTaL-cU",
-    "imageCaption": "Justiça Federal desiste de R$ 209 mi extra para pagar penduricalhos",
-    "imageCredit": "Felipe Pontes - Repórter da Agência Brasil",
-    "imageAlt": "Justiça Federal desiste de R$ 209 mi extra para pagar penduricalhos",
-    "author": "Felipe Pontes - Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "Justiça Federal",
-      "Brasil"
-    ],
-    "content": [
-      "O presidente do Conselho da Justiça Federal (CJF), ministro Luís Felipe Salomão, que também preside o Superior Tribunal de Justiça (STJ), desistiu formalmente, nesta terça-feira (10), de solicitar crédito extra de R$ 208,9 milhões com o objetivo de pagar penduricalhos - como são conhecidas as verbas indenizatórias e outras gratificações que se somam aos vencimentos dos juízes.",
-      "Em ofício enviado à Advocacia-Geral da União (AGU), Salomão informou não haver mais a necessidade de suplementação orçamentária, devido ao surgimento de novas receitas que permitem ao Judiciário fazer os pagamentos com verbas próprias.",
-      "A desistência ocorre após repercutir na imprensa o pedido por mais recursos feito pelo Judiciário e pelo Ministério Público da União (MPU) que, por sua vez, disse precisar de mais R$ 324 milhões para o pagamento dos penduricalhos. Somadas, as solicitações de recursos chegavam a R$ 533 milhões.",
-      "A solicitação de suplementação orçamentária foi alvo de pedido de esclarecimentos feito pela AGU junto ao Supremo Tribunal Federal (STF), no âmbito de três ações diretas de inconstitucionalidade (ADIs) que tratam do pagamento de penduricalhos a juízes e membros do Ministério Público.",
-      "De acordo com a AGU, a falta de recursos poderia comprometer, por exemplo, o pagamento da parcela de valorização por tempo de antiguidade na carreira (PVTAC), equivalente à soma de 5% do salário de juízes e promotores a cada cinco anos de trabalho, limitada a 35% do salário.",
-      "Diante da falta de previsão orçamentária, a AGU pediu que o Supremo decida qual procedimento deverá ser adotado para cumprir a decisão da Corte que autorizou o pagamento do benefício.",
-      "No dia 25 de março deste ano, por unanimidade, os ministros decidiram que as indenizações adicionais, gratificações e auxílios deverão ser limitados a 35% do valor do salário dos integrantes da Corte, que tem o teto como referência e é equivalente a R$ 46,3 mil.",
-      "Contudo, a soma do salário e benefícios ainda pode chegar a R$ 78,8 mil mensais para quem recebe o adicional tempo de serviço, benefício que foi mantido pelo STF. O adicional prevê o acréscimo de 5% ao salário por ano trabalhado e pode ser somado a outros penduricalhos."
     ]
   },
   {

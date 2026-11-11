@@ -12,6 +12,8 @@ https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
 https://sociedadeativa.github.io/termos-de-uso/
 https://sociedadeativa.github.io/politica-de-privacidade/
+https://sociedadeativa.github.io/noticias/ebc-1708339/
+https://sociedadeativa.github.io/noticias/camara-1318193-camara-aprova-projeto-que-ampl/
 https://sociedadeativa.github.io/noticias/ebc-1708332/
 https://sociedadeativa.github.io/noticias/camara-1318101-camara-entrega-premio-paulo-gu/
 https://sociedadeativa.github.io/noticias/camara-1318105-medida-provisoria-cria-fundo-g/
@@ -54,8 +56,6 @@ https://sociedadeativa.github.io/noticias/ebc-1708271/
 https://sociedadeativa.github.io/noticias/ebc-1708270/
 https://sociedadeativa.github.io/noticias/camara-1312036-projeto-acaba-com-o-fator-prev/
 https://sociedadeativa.github.io/noticias/ebc-1708268/
-https://sociedadeativa.github.io/noticias/ebc-1708265/
-https://sociedadeativa.github.io/noticias/ebc-1708257/
 https://sociedadeativa.github.io/noticias/bcb-21313-novas-regras-reforcam-seguranc/
 https://sociedadeativa.github.io/noticias/ebc-1799001/
 https://sociedadeativa.github.io/noticias/anthropic-ipo-bilionario-nasdaq-inteligencia-artificial/
