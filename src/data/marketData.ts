@@ -7,7 +7,7 @@ import { B3MarketRankings } from "../types/market";
 export const OFFICIAL_B3_MARKET_DATA: B3MarketRankings = {
   "tradingSession": "10/11/2026",
   "timestamp": "10/11/2026 18:18",
-  "lastSuccessfulUpdate": "10/11/2026, 21:45:04",
+  "lastSuccessfulUpdate": "10/11/2026, 22:25:36",
   "marketStatus": "fechado",
   "marketStatusText": "Mercado Fechado (Último Fechamento Oficial · 10/11/2026)",
   "isDelayed": true,
