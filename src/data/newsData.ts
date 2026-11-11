@@ -5,6 +5,41 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1708341",
+    "title": "TSE multa Meta em R$ 7,5 milhões por descumprir decisão nas eleições",
+    "summary": "Por unanimidade, o Tribunal Superior Eleitoral (TSE) decidiu nesta terça-feira (10) multar a Meta em R$ 7,5 milhões por entregar informações incompletas sobre as acusações de distribuir conteúdo político enviesado na campanha eleitoral deste ano.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/tse-multa-meta-em-r-75-milhoes-por-descumprir-decisao-nas-eleicoes",
+    "publishedAt": "10/11/2026 às 22:56",
+    "category": "Justiça",
+    "ingestedAt": "11/11/2026 às 02:00",
+    "author": "André Richter - Repórter da Agência Brasil",
+    "tags": [
+      "Justiça",
+      "TSE",
+      "Meta",
+      "Eleições",
+      "Eleições 2026"
+    ],
+    "content": [
+      "Por unanimidade, o Tribunal Superior Eleitoral (TSE) decidiu nesta terça-feira (10) multar a Meta em R$ 7,5 milhões por entregar informações incompletas sobre as acusações de distribuir conteúdo político enviesado na campanha eleitoral deste ano.",
+      "A decisão foi motivada por uma representação protocolada pela coligação Brasil Pronto Pra Mais, que apoiou a reeleição do presidente Luiz Inácio Lula da Silva.",
+      "O jurídico da campanha acusou a Meta, que opera as redes sociais Facebook, Instagram e WhatsApp, de dar tratamento diferenciado para restringir o alcance de conteúdos de Lula e favorecer a campanha de Flávio Bolsonaro (PL).",
+      "O advogado Angelo Longo Ferraro citou diversas irregularidades que teriam sido cometidas pela Meta, como anúncios pagos com recursos do exterior, publicação de publicidade negativa com uso de inteligência artificial e retirada de recomendações de postagens favoráveis a Lula .",
+      "Durante o julgamento, prevaleceu o voto do relator, ministro Marco Aurélio Belizze.",
+      "O ministro disse que determinou 17 medidas de prestação de esclarecimentos à Meta durante as eleições, mas a empresa prestou informações incompletas sobre as falhas apontadas, fato que dificultou a checagem da veracidade das alegações.",
+      "\"As informações careceram de transparência, pois parte delas foi apresentada em língua estrangeira, em dados agregados e declarações genéricas\", afirmou.",
+      "O entendimento foi seguido pelos ministros Sergio Kukina, Estela Aranha, Nauê Bernardo, André Mendonça, Dias Toffoli e o presidente, Kassio Nunes Marques.",
+      "A multa não encerra o processo sobre o caso. O TSE vai continuar investigando se a Meta favoreceu candidaturas. Não há prazo para julgamento definitivo.",
+      "Organizações da sociedade civil anunciaram ter enviado uma carta ao presidente Lula solicitando que o governo adote medidas para regulação das plataformas, como por exemplo, regras para remoção e suspensão de conteúdos e contas.",
+      "A defesa da Meta se manifestou durante o julgamento e disse que são \"falsas e infundadas\" as acusações de que a empresa favoreceu candidatos.",
+      "“Não há prova de qualquer atuação não paritária da Meta”, afirmou a defesa.",
+      "Em documento encaminhado ao TSE antes do julgamento, a empresa negou as acusações de ter distribuído conteúdo político enviesado.",
+      "Segundo a Meta, seus relatórios de monitoramento demonstram que os levantamentos de terceiros que apontaram o suposto direcionamento das redes não levaram em conta a diferença nas estratégias digitais das campanhas e as visualizações repetidas de vídeos."
+    ]
+  },
+  {
     "id": "ebc-1708339",
     "title": "Petrobras tem lucro de R$ 39,8 bilhões no 3º trimestre, alta de 21,5%",
     "summary": "A Petrobras atingiu lucro líquido de R$ 39,8 bilhões no 3º trimestre de 2026, que corresponde a alta de 21,5% na comparação com o mesmo período do ano passado.",
@@ -32,6 +67,35 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "No terceiro trimestre, o montante de investimento chegou a R$ 33 bilhões (US$ 6,4 bilhões), sendo R$ 27,5 bilhões no segmento de exploração e produção, que resultou em construção de plataformas e interligações de poços.",
       "Foram aprovados para o período R$ 15,3 bilhões em dividendos e juros sobre capital próprio, que serão distribuídos entre acionistas privados e públicos.",
       "Os dividendos serão pagos em duas parcelas: a primeira, em 22 de fevereiro de 2027, e, a segunda, em 22 de março de 2027."
+    ]
+  },
+  {
+    "id": "ebc-1708338",
+    "title": "Bolão de Iturama (MG) leva R$ 3,2 milhões na Mega-Sena",
+    "summary": "Uma aposta de Iturama (MG) acertou as seis dezenas do Concurso 3.084 da Mega-Sena, realizado nesta terça-feira (10). O bolão, de 15 cotas apostou sete dezenas e receberá o total de R$ 3.287. 949,90.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/bolao-de-iturama-mg-leva-r-32-milhoes-na-mega-sena",
+    "publishedAt": "10/11/2026 às 21:36",
+    "category": "Política",
+    "ingestedAt": "11/11/2026 às 02:00",
+    "imageUrl": "https://imagens.ebc.com.br/e4pIesKyiUX4A7IgysSBbCbqD78=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/megasenadsc_5279.jpg?itok=lSuFssEI",
+    "imageCaption": "Bolão de Iturama (MG) leva R$ 3,2 milhões na Mega-Sena",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Bolão de Iturama (MG) leva R$ 3,2 milhões na Mega-Sena",
+    "author": "Agência Brasil",
+    "tags": [
+      "Geral",
+      "Mega-Sena",
+      "Loterias",
+      "Caixa",
+      "Política"
+    ],
+    "content": [
+      "Uma aposta de Iturama (MG) acertou as seis dezenas do Concurso 3.084 da Mega-Sena, realizado nesta terça-feira (10). O bolão, de 15 cotas apostou sete dezenas e receberá o total de R$ 3.287.949,90.",
+      "Os números sorteados são: 06 - 14 - 22 - 30 - 31 - 37",
+      "Para o próximo concurso, a estimativa de prêmio é de R$ 20 milhões. As apostas podem ser feitas até as 20h (horário de Brasília) de quinta-feira (12), em qualquer lotérica do país ou pela internet, no site ou aplicativo da Caixa.",
+      "A aposta simples, com seis dezenas, custa R$ 6."
     ]
   },
   {
@@ -72,6 +136,40 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Outra fonte de recursos poderá vir de emendas parlamentares destinadas a ação orçamentária específica do Ministério da Justiça e Segurança Pública, que estarão sujeitas ao mesmo regime de execução, monitoramento, prestação de contas e controle aplicável aos demais recursos empregados no programa, sem prejuízo das regras específicas da legislação orçamentária e financeira.",
       "Como subsído complementar, o programa poderá ofertar valores específicos segundo as faixas existentes do programa Minha Casa, Minha Vida:",
       "No entanto, esses valores não geram direito subjetivo ao interessado, além de serem condicionados à disponibilidade orçamentária."
+    ]
+  },
+  {
+    "id": "camara-1318101-camara-entrega-premio-paulo-gu",
+    "title": "Câmara entrega Prêmio Paulo Gustavo a comediantes pela contribuição à cultura brasileira",
+    "summary": "Premiação reconhece a contribuição de artistas e instituições que se expressam pela comédia e celebram o humor como resistência.",
+    "source": "Agência Câmara",
+    "sourceUrl": "https://www.camara.leg.br",
+    "articleUrl": "https://www.camara.leg.br/noticias/1318101-camara-entrega-premio-paulo-gustavo-a-comediantes-pela-contribuicao-a-cultura-brasileira",
+    "publishedAt": "10/11/2026 às 20:46",
+    "category": "Congresso",
+    "ingestedAt": "10/11/2026 às 20:55",
+    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20261110173429876-768x473.jpg",
+    "imageCaption": "Esta foi a sexta edição do Prêmio Paulo Gustavo",
+    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
+    "imageAlt": "Entrega do Prêmio Paulo Gustavo do Humor e da Comédia 2026.",
+    "author": "Agência Câmara de Notícias",
+    "tags": [
+      "Congresso",
+      "Brasil",
+      "Notícias"
+    ],
+    "content": [
+      "Kayo Magalhães / Câmara dos Deputados",
+      "Esta foi a sexta edição do Prêmio Paulo Gustavo",
+      "“Valorizar o humor é valorizar pessoas que têm uma missão muito importante: fazer o Brasil rir. E convenhamos que não é pouca coisa, especialmente nos tempos em que estamos vivendo. Fazer rir já é um talento, fazer rir o brasileiro é quase um serviço de utilidade pública”, disse a ministra da Cultura, Margareth Menezes, na entrega do Prêmio Paulo Gustavo do Humor e da Comédia 2026 na Câmara dos Deputados. Desde 2021, quando foi criada, a premiação reconhece a contribuição de cinco artistas ou instituições para a cultura brasileira que se expressam por meio da comédia.",
+      "Neste ano, o primeiro a receber o prêmio foi Fábio Porchat, um dos criadores do Porta dos Fundos, que também está envolvido em vários outros projetos, como o \"Que história é essa, Porchat?\", no canal GNT. O ator e comediante se emocionou ao lembrar um pouco da trajetória com o amigo Paulo Gustavo, com quem estudou na Casa de Cultura de Laranjeiras, onde se formaram e estrearam juntos em 2005.",
+      "Ao agradecer o reconhecimento, ele afirmou que rir é um ato de resistência. “A comédia não vai ser apagada, ao contrário: a comédia vai apontar o dedo para todos esses que gostam de viajar de jatinho, que gostam de usar dinheiro de aposentado para fazer suruba, que gostam de fugir do país e fazer intriga lá fora, que gostam de prejudicar a nossa pátria e a nossa família. Se eles deram adeus à pátria, à família, a comédia está aqui para dizer para a pátria e a família: ‘Vamos rir dessa gente’”.",
+      "A indicação de Fábio Porchat ao prêmio foi feita pelos deputados Tarcísio Motta (RJ) e Fernanda Melchionna (RS), ambos do Psol. Os dois parlamentares ressaltaram que a comédia é uma forma de ironia que permite debochar do poder. Como sustenta Tarcísio Motta, é um humor que não traz ou reforça preconceitos.",
+      "“Cruzar numa mesma história Paulo Gustavo e Fábio Porchat diz muito sobre o nosso tempo e sobre a necessidade de entender o humor como forma de resistência, um humor que ri na cara do poder, que nos traz nossas próprias contradições, que nos faz pensar nas misérias da nossa própria vida com alguma graça, e nos faz entender que nada deve ser natural e impossível de mudar, porque, se é possível rir das coisas que nos parecem mais estranhas no mundo, é possível também transformá-las.”",
+      "Outra comediante premiada foi Clarice Falcão, que não compareceu à solenidade porque está no exterior. Ao falar sobre ela, a deputada Jandira Feghali (PCdoB-RJ), que indicou seu nome para o prêmio, afirmou que sempre indica mulheres, porque historicamente elas foram negligenciadas no humor.",
+      "“A Clarice é exemplar nisso, porque ela mistura a sátira musical com os textos com uma irreverência incrível. Também é colega do Paulo, do Fábio, dessas pessoas todas que têm feito a gente sorrir de um outro jeito, com uma outra inteligência, com um humor diferenciado”, afirmou.",
+      "O Prêmio Paulo Gustavo do Humor e da Comédia é entregue anualmente pela Segunda-Secretaria da Câmara dos Deputados e pela Comissão de Cultura. Como explicou Jandira Feghali, que criou a premiação, esta foi uma forma de homenagear o ator e humorista, que morreu de covid-19 em 2021, aos 42 anos.",
+      "Neste ano também receberam o prêmio Carol Delgado, humorista e criadora de conteúdo gaúcha, indicada pela deputada Denise Pessôa (PT-RS); o grupo de comediantes mulheres de Salvador Clube Dazminina, por indicação da deputada Lídice da Mata (PSB-BA); e o ator e humorista Marcus Majella, que também se formou junto com Porchat e Paulo Gustavo na Casa de Artes de Laranjeiras. Ele foi indicado pelo deputado Dr. Daniel Soranz (PSD-RJ). Assim como Clarice Falcão, ele não pôde comparecer à premiação porque está fora do país."
     ]
   },
   {
@@ -118,40 +216,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "\"Nós sabemos que há uma possibilidade de qualquer alteração da maioridade penal ser revista pelo STF pelo entendimento possível de que ela é uma cláusula pétrea. A gente sabe que tem entendimento dos dois lados, mas é um risco que se correria nesse sentido\", apontou.",
       "O deputado Mendonça Filho ainda afirmou que concorda com a possibilidade da PEC da redução da maioridade penal, se for aprovada no Congresso, seja submetida a um referendo popular , daqui a dois anos, durante as eleições municipais, para que a própria sociedade decida sobre o tema.",
       "\"Se o Parlamento quiser um respaldo popular, eu não tenho nenhuma objeção de submeter esse texto a um referendo popular a ser realizado em 2028. Se for a vontade da comissão especial, da maioria da Casa e do presidente da Câmara, deputado Hugo Motta, nós colocaremos um dispositivo para que passe a ter validade depois de referendada pela população brasileira em 2028. Acho que seria a legitimação ainda maior para que esse debate possa ter aval popular da maioria do povo brasileiro\", disse."
-    ]
-  },
-  {
-    "id": "camara-1318101-camara-entrega-premio-paulo-gu",
-    "title": "Câmara entrega Prêmio Paulo Gustavo a comediantes pela contribuição à cultura brasileira",
-    "summary": "Premiação reconhece a contribuição de artistas e instituições que se expressam pela comédia e celebram o humor como resistência.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1318101-camara-entrega-premio-paulo-gustavo-a-comediantes-pela-contribuicao-a-cultura-brasileira",
-    "publishedAt": "10/11/2026 às 20:46",
-    "category": "Congresso",
-    "ingestedAt": "10/11/2026 às 20:55",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20261110173429876-768x473.jpg",
-    "imageCaption": "Esta foi a sexta edição do Prêmio Paulo Gustavo",
-    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
-    "imageAlt": "Entrega do Prêmio Paulo Gustavo do Humor e da Comédia 2026.",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Kayo Magalhães / Câmara dos Deputados",
-      "Esta foi a sexta edição do Prêmio Paulo Gustavo",
-      "“Valorizar o humor é valorizar pessoas que têm uma missão muito importante: fazer o Brasil rir. E convenhamos que não é pouca coisa, especialmente nos tempos em que estamos vivendo. Fazer rir já é um talento, fazer rir o brasileiro é quase um serviço de utilidade pública”, disse a ministra da Cultura, Margareth Menezes, na entrega do Prêmio Paulo Gustavo do Humor e da Comédia 2026 na Câmara dos Deputados. Desde 2021, quando foi criada, a premiação reconhece a contribuição de cinco artistas ou instituições para a cultura brasileira que se expressam por meio da comédia.",
-      "Neste ano, o primeiro a receber o prêmio foi Fábio Porchat, um dos criadores do Porta dos Fundos, que também está envolvido em vários outros projetos, como o \"Que história é essa, Porchat?\", no canal GNT. O ator e comediante se emocionou ao lembrar um pouco da trajetória com o amigo Paulo Gustavo, com quem estudou na Casa de Cultura de Laranjeiras, onde se formaram e estrearam juntos em 2005.",
-      "Ao agradecer o reconhecimento, ele afirmou que rir é um ato de resistência. “A comédia não vai ser apagada, ao contrário: a comédia vai apontar o dedo para todos esses que gostam de viajar de jatinho, que gostam de usar dinheiro de aposentado para fazer suruba, que gostam de fugir do país e fazer intriga lá fora, que gostam de prejudicar a nossa pátria e a nossa família. Se eles deram adeus à pátria, à família, a comédia está aqui para dizer para a pátria e a família: ‘Vamos rir dessa gente’”.",
-      "A indicação de Fábio Porchat ao prêmio foi feita pelos deputados Tarcísio Motta (RJ) e Fernanda Melchionna (RS), ambos do Psol. Os dois parlamentares ressaltaram que a comédia é uma forma de ironia que permite debochar do poder. Como sustenta Tarcísio Motta, é um humor que não traz ou reforça preconceitos.",
-      "“Cruzar numa mesma história Paulo Gustavo e Fábio Porchat diz muito sobre o nosso tempo e sobre a necessidade de entender o humor como forma de resistência, um humor que ri na cara do poder, que nos traz nossas próprias contradições, que nos faz pensar nas misérias da nossa própria vida com alguma graça, e nos faz entender que nada deve ser natural e impossível de mudar, porque, se é possível rir das coisas que nos parecem mais estranhas no mundo, é possível também transformá-las.”",
-      "Outra comediante premiada foi Clarice Falcão, que não compareceu à solenidade porque está no exterior. Ao falar sobre ela, a deputada Jandira Feghali (PCdoB-RJ), que indicou seu nome para o prêmio, afirmou que sempre indica mulheres, porque historicamente elas foram negligenciadas no humor.",
-      "“A Clarice é exemplar nisso, porque ela mistura a sátira musical com os textos com uma irreverência incrível. Também é colega do Paulo, do Fábio, dessas pessoas todas que têm feito a gente sorrir de um outro jeito, com uma outra inteligência, com um humor diferenciado”, afirmou.",
-      "O Prêmio Paulo Gustavo do Humor e da Comédia é entregue anualmente pela Segunda-Secretaria da Câmara dos Deputados e pela Comissão de Cultura. Como explicou Jandira Feghali, que criou a premiação, esta foi uma forma de homenagear o ator e humorista, que morreu de covid-19 em 2021, aos 42 anos.",
-      "Neste ano também receberam o prêmio Carol Delgado, humorista e criadora de conteúdo gaúcha, indicada pela deputada Denise Pessôa (PT-RS); o grupo de comediantes mulheres de Salvador Clube Dazminina, por indicação da deputada Lídice da Mata (PSB-BA); e o ator e humorista Marcus Majella, que também se formou junto com Porchat e Paulo Gustavo na Casa de Artes de Laranjeiras. Ele foi indicado pelo deputado Dr. Daniel Soranz (PSD-RJ). Assim como Clarice Falcão, ele não pôde comparecer à premiação porque está fora do país."
     ]
   },
   {
@@ -1584,84 +1648,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "A redução do desmatamento na Amazônia e do Cerrado e a economia de R$ 1,16 trilhão com esses esforços de preservação ambiental devem ser mencionados pelo presidente.",
       "Além disso, a matriz energética brasileira chegou a 49,5% de fontes renováveis em 2025, segundo dados do Balanço Energético Nacional (BEN). A média global é de 14,5%. Já em relação à matriz elétrica, o Brasil supera os 80% de fontes renováveis, com destaque para usinas hidrelétricas, com 51,2% de geração.",
       "Lula também deverá apontar a redução de 9% na emissão líquida de CO2 em gases do efeito estufa e trazer dados sobre os esforços do Brasil para cumprir as metas da Contribuição Nacionalmente Determinada (NDC na sigla em inglês). A NDC define a redução de emissões de gases do efeito estufa de 59% até 67%, em 2035."
-    ]
-  },
-  {
-    "id": "camara-1312036-projeto-acaba-com-o-fator-prev",
-    "title": "Projeto acaba com o fator previdenciário no cálculo da aposentadoria",
-    "summary": "A proposta está em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1312036-projeto-acaba-com-o-fator-previdenciario-no-calculo-da-aposentadoria",
-    "publishedAt": "10/11/2026 às 14:17",
-    "category": "Congresso",
-    "ingestedAt": "10/11/2026 às 15:46",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20260602150555141-768x473.jpg",
-    "imageCaption": "Heloísa Helena: o fator previdenciário reduziu substancialmente o valor dos benefícios",
-    "imageCredit": "Kayo Magalhães / Câmara dos Deputados",
-    "imageAlt": "Deputada Heloísa Helena (REDE-RJ) fala no Plenário da Câmara dos Deputados",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Kayo Magalhães / Câmara dos Deputados",
-      "Heloísa Helena: o fator previdenciário reduziu substancialmente o valor dos benefícios",
-      "O Projeto de Lei 3027/26 acaba com a a aplicação do fator previdenciário no cálculo das aposentadorias pagas pelo Instituto Nacional do Seguro Social (INSS). O objetivo é evitar a redução do valor dos benefícios.",
-      "A proposta está em análise na Câmara dos Deputados.",
-      "O texto revoga parte da legislação que criou o mecanismo ( Lei 8.213/91 ). Atualmente, o fator previdenciário funciona como um redutor que vincula o valor da aposentadoria à idade, à expectativa de vida e ao tempo de contribuição do segurado.",
-      "De acordo com a proposta, as aposentadorias por tempo de contribuição e as programadas passam a ser calculadas exclusivamente com base na média aritmética simples dos salários de contribuição.",
-      "O projeto mantém as regras de transição em vigor, mas proíbe o uso de qualquer mecanismo que reduza o valor do benefício.",
-      "O texto também preserva os direitos adquiridos e garante ao segurado a possibilidade de optar pela regra mais vantajosa no momento de pedir a aposentadoria.",
-      "Caso vire lei, o Poder Executivo terá 90 dias para regulamentar a norma e adaptar os sistemas do Instituto Nacional do Seguro Social (INSS).",
-      "Para a autora, deputada Heloisa Helena (Rede-RJ), atualmente na suplência, o fator previdenciário penaliza quem entra cedo no mercado de trabalho, os segurados de menor renda e os trabalhadores submetidos a atividades penosas.",
-      "\"O fator previdenciário reduziu substancialmente o valor dos benefícios, muitas vezes em percentuais superiores a 40%, comprometendo a dignidade do trabalhador quando mais necessita de proteção\", afirmou a deputada.",
-      "O projeto será analisado, em caráter conclusivo , pelas comissões de Previdência, Assistência Social, Infância, Adolescência e Família; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania.",
-      "Para virar lei, precisa ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
-  },
-  {
-    "id": "ebc-1708268",
-    "title": "Movimentos sociais denunciam proposta do mercado de corte de gastos",
-    "summary": "Movimentos sociais e sindicais publicaram um manifesto criticando a proposta do mercado financeiro de corte de gastos como forma de equilibrar as contas públicas. As entidades pedem uma política fiscal que “garanta direitos, enfrente privilégios e distribua riqueza”.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/movimentos-sociais-denunciam-proposta-do-mercado-de-corte-de-gastos",
-    "publishedAt": "10/11/2026 às 14:10",
-    "category": "Economia",
-    "ingestedAt": "10/11/2026 às 15:46",
-    "imageUrl": "https://imagens.ebc.com.br/_FJxFLi6KD6mvgOUUEgSnuYQMQM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/economia_1609210416_0.jpg?itok=NJPzWyCD",
-    "imageCaption": "Movimentos sociais denunciam proposta do mercado de corte de gastos",
-    "imageCredit": "Lucas Pordeus León – Repórter da Agência Brasil",
-    "imageAlt": "Movimentos sociais denunciam proposta do mercado de corte de gastos",
-    "author": "Lucas Pordeus León – Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "Dívida Pública",
-      "Corte de Gastos",
-      "Investimento",
-      "Confecom"
-    ],
-    "content": [
-      "Movimentos sociais e sindicais publicaram um manifesto criticando a proposta do mercado financeiro de corte de gastos como forma de equilibrar as contas públicas. As entidades pedem uma política fiscal que “garanta direitos, enfrente privilégios e distribua riqueza”.",
-      "“No dia seguinte à eleição [26 de outubro], o mercado financeiro voltou a pressionar pela adoção de medidas de ajuste fiscal que colocam os cortes de gastos e investimentos no centro das decisões econômicas. Vale lembrar que essa foi uma proposta derrotada nas urnas”, diz o documento.",
-      "A Carta Aberta à Sociedade Brasileira é assinada por quase 100 entidades da sociedade civil e defende a reforma do atual arcabouço fiscal, que limita os gastos da União, para atender às “demandas expressas nas urnas, e não às dos mercados financeiros”.",
-      "As organizações destacam a mobilização social que contribuiu para reeleição do presidente Luiz Inácio Lula da Silva e denunciam as “supostas motivações técnicas” por trás da proposta de corte de gastos da União.",
-      "O documento defende, entre outros pontos, a valorização dos servidores públicos e a preservação dos pisos do financiamento da saúde e da educação públicas , além da manutenção da vinculação da aposentadoria e benefícios sociais ao reajuste do salário-mínimo.",
-      "O manifesto é assinado pelas seis principais centrais sindicais do país, como a Central Única dos Trabalhadores (CUT), além de movimentos com o dos Sem Terra (MST), Sem Teto (MTST) e de estudantes, como a União Nacional dos Estudantes (UNE).",
-      "Também subscreveram o documento, entre outros, o Conselho Federal de Economia (Confecon), a Associação Brasileira de Pesquisadores em História Econômica (ABPHE), a Associação Nacional dos Cursos de Graduação em Ciências Econômicas do Brasil (Ange) e a Sociedade Brasileira de Economia Política (SEP).",
-      "As entidades defendem uma política fiscal capaz de fortalecer a economia, promover investimentos e assegurar o equilíbrio das contas públicas, “mas sem terrorismo”.",
-      "A carta argumenta que é possível equilibrar as contas por meio do crescimento econômico, redução de juros e maior “justiça tributária para que quem concentra mais renda e patrimônio contribua proporcionalmente mais para o financiamento do Estado”.",
-      "As organizações sindicais, sociais e de especialistas lembram que são os juros elevados o principal responsável pelo aumento da dívida pública, pedindo medidas para reduzir os juros reais cobrados no Brasil, que são os maiores do mundo .",
-      "As entidades ainda defendem que a responsabilidade fiscal não é sinônimo de retirada de direitos, \"precarização\" dos serviços públicos e que não pode contribuir para a concentração de riqueza.",
-      "“Não é razoável transferir o peso do ajuste para trabalhadores e trabalhadoras, aposentados e aposentadas e para a população que mais depende dos serviços públicos, sem enfrentar os privilégios e as distorções que persistem no sistema econômico e tributário brasileiro”, afirmam as organizações brasileiras.",
-      "Com a reeleição do presidente Luiz Inácio Lula da Silva, agentes do mercado financeiro tem cobrado por um corte de gastos como forma de estabilizar a dívida pública, que saiu de 71,7% do Produto Interno Bruto (PIB) em 2022 para cerca de 82,9% do PIB em agosto de 2026.",
-      "Por outro lado, economistas críticos a essa proposta destacam que, como são os juros altos os maiores responsáveis pelo aumento da dívida, deve-se buscar uma política alternativa que contribua para a redução dos juros praticados pelo Banco Central (BC).",
-      "Os juros elevados são a principal causa do aumento da dívida pública , segundo dados do BC. Nos últimos doze meses, os juros consumiram mais de R$ 1,1 trilhão do orçamento público, o que representa 8,9% do PIB brasileiro.",
-      "Em declarações recentes, o presidente Luiz Inácio Lula da Silva tem sinalizado que o governo vai defender a responsabilidade fiscal sem prejudicar benefícios e programas sociais."
     ]
   },
   {
