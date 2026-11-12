@@ -5,6 +5,51 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1708515",
+    "title": "Lucro do BB cai 66,5% no 3º trimestre com inadimplência do agro",
+    "summary": "Pressionado pelo aumento da inadimplência, principalmente do agronegócio, o Banco do Brasil (BB) registrou lucro líquido ajustado de R$ 1,27 bilhão no terceiro trimestre de 2026, queda de 66,5% em relação ao mesmo período do ano passado.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/lucro-do-bb-cai-665-no-3o-trimestre-com-inadimplencia-do-agro",
+    "publishedAt": "11/11/2026 às 22:20",
+    "category": "Economia",
+    "ingestedAt": "11/11/2026 às 23:26",
+    "imageUrl": "https://imagens.ebc.com.br/jctx1mYZsPDACZrPSnA-lRFnjGw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/banco-do-brasil_mcamgo_abr_280620211818-3.jpg?itok=NdMGnh8l",
+    "imageCaption": "Lucro do BB cai 66,5% no 3º trimestre com inadimplência do agro",
+    "imageCredit": "Wellton Máximo – Repórter da Agência Brasil",
+    "imageAlt": "Lucro do BB cai 66,5% no 3º trimestre com inadimplência do agro",
+    "author": "Wellton Máximo – Repórter da Agência Brasil",
+    "tags": [
+      "Economia",
+      "banco do brasil",
+      "lucro"
+    ],
+    "content": [
+      "Pressionado pelo aumento da inadimplência, principalmente do agronegócio, o Banco do Brasil (BB) registrou lucro líquido ajustado de R$ 1,27 bilhão no terceiro trimestre de 2026, queda de 66,5% em relação ao mesmo período do ano passado.",
+      "Com esse cenário, a instituição reduziu pela metade a projeção de lucro para o ano e elevou a estimativa de despesas com perdas em operações de crédito.",
+      "\"O aumento reflete principalmente a continuidade da elevação da inadimplência em parte da carteira de agronegócios e reforços pontuais em empresas do segmento atacado\", afirmou o banco.",
+      "O principal fator por trás da queda do lucro foi o aumento do custo do crédito, indicador que reúne provisões para possíveis calotes, descontos concedidos em renegociações e valores recuperados de dívidas antigas.",
+      "No terceiro trimestre, essa despesa somou R$ 21,2 bilhões, alta de 18,4% em relação ao mesmo período de 2025 .",
+      "Segundo o banco, a inadimplência ficou concentrada em parte da carteira do agronegócio, especialmente entre produtores de médio e grande porte de soja, milho e pecuária, principalmente no Centro-Oeste.",
+      "A inadimplência geral , considerando operações com pagamentos atrasados há mais de 90 dias, chegou a 6,08% em setembro, contra 4,51% um ano antes .",
+      "Entre os principais segmentos, os índices foram:",
+      "A carteira de crédito expandida encerrou setembro em R$ 1,3 trilhão, crescimento de 2,2% em 12 meses, mas recuo de 0,5% na comparação com junho.",
+      "Com o aumento das perdas com empréstimos, o Banco do Brasil revisou suas projeções financeiras para 2026.",
+      "A estimativa de lucro líquido ajustado caiu de R$ 18 bilhões a R$ 22 bilhões para uma faixa entre R$ 9 bilhões e R$ 11 bilhões .",
+      "A previsão para o custo do crédito subiu de R$ 65 bilhões a R$ 70 bilhões para R$ 80 bilhões a R$ 83 bilhões.",
+      "O banco também reduziu a expectativa de crescimento da carteira de crédito, que passou de uma expansão entre 0,5% e 4,5% para uma variação entre estabilidade e queda de 2%.",
+      "Outro indicador que apresentou retração foi a margem financeira bruta, que mede a diferença entre as receitas obtidas com juros e as despesas de captação. O resultado ficou em R$ 26 bilhões, recuo de 1,5% em 12 meses.",
+      "O Banco do Brasil informou que destinará apenas 25% do lucro à distribuição de dividendos em 2026 , percentual mínimo obrigatório.",
+      "Os juros sobre capital próprio (JCP) referentes ao terceiro trimestre somaram R$ 197 milhões, equivalentes a R$ 0,04 por ação. O valor representa uma redução de aproximadamente 52% em relação ao mesmo período de 2025.",
+      "O banco também anunciou mudanças na política de distribuição:",
+      "Outro indicador acompanhado pelo mercado é o índice de Basileia , que mede a capacidade de um banco de suportar perdas financeiras sem comprometer sua estabilidade.",
+      "Na prática, ele compara o capital disponível da instituição com os riscos de suas operações, como empréstimos e financiamentos. Quanto maior o índice, maior tende a ser a capacidade do banco de absorver eventuais prejuízos.",
+      "O índice do Banco do Brasil encerrou setembro em 13,45%, abaixo dos 14,81% registrados um ano antes .",
+      "O índice de capital principal, que considera os recursos de maior qualidade para absorver perdas, ficou em 10,80%, ante 11,16% em setembro de 2025.",
+      "A rentabilidade sobre o patrimônio líquido (ROE), que mede o retorno gerado sobre o capital dos acionistas, também recuou: passou de 8,4% para 2,8% na comparação anual."
+    ]
+  },
+  {
     "id": "ebc-1708511",
     "title": "BNDES recebe selo Diamante de transparência pública pela quarta vez",
     "summary": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) recebeu, pela quarta vez consecutiva, o selo Diamante do Radar Nacional da Transparência Pública. Neste ano, a instituição alcançou 100% de pontuação na avaliação, resultado inédito entre os órgãos federais.",
@@ -1497,45 +1542,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Pelo texto, as polícias penais são órgãos permanentes e estratégicos, responsáveis pela segurança de estabelecimentos penais, pela custódia de pessoas privadas de liberdade e pela produção de inteligência policial penal.",
       "A proposta prevê ainda a participação na Rede Nacional de Altos Estudos em Segurança Pública (Renaesp).",
       "O projeto ainda será analisado, em caráter conclusivo , pela Comissão de Constituição e Justiça e de Cidadania. Para virar lei, precisa ser aprovado pela Câmara e pelo Senado.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
-  },
-  {
-    "id": "camara-1318363-comissao-aprova-uso-de-recurso",
-    "title": "Comissão aprova uso de recursos do BNDES para financiar energia renovável na agricultura familiar",
-    "summary": "Proposta continua em análise na Câmara dos Deputados.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1318363-comissao-aprova-uso-de-recursos-do-bndes-para-financiar-energia-renovavel-na-agricultura-familiar",
-    "publishedAt": "11/11/2026 às 14:10",
-    "category": "Congresso",
-    "ingestedAt": "11/11/2026 às 15:50",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20260414171205420-768x473.jpg",
-    "imageCaption": "Deputado Fernando Mineiro, relator do projeto de lei",
-    "imageCredit": "Vinicius Loures / Câmara dos Deputados",
-    "imageAlt": "Seminário de Construção do Plano de Trabalho e Agenda Legislativa. Dep. Fernando Mineiro (PT - RN)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Vinicius Loures / Câmara dos Deputados",
-      "Deputado Fernando Mineiro, relator do projeto de lei",
-      "A Comissão de Meio Ambiente e Desenvolvimento Sustentável da Câmara dos Deputados aprovou proposta que viabiliza o uso de recursos do Banco Nacional de Desenvolvimento Econômico e Social (BNDES) para financiar projetos de energia renovável na agricultura familiar.",
-      "Pelo texto, o BNDES fica autorizado a aplicar até 2% dos recursos repassados pelo Fundo de Amparo ao Trabalhador (FAT) nessas operações.",
-      "Fundos do clima e do meio ambiente",
-      "Além disso, o projeto insere a agricultura familiar conectada à assistência técnica no rol de ações financiáveis pelo Fundo Nacional sobre Mudança do Clima (FNMC) e pelo Fundo Nacional do Meio Ambiente (FNMA).",
-      "Na prática, isso garante que o agricultor familiar tenha o apoio de especialistas para elaborar o projeto exigido pelos bancos e instalar o sistema.",
-      "Mudanças no texto original",
-      "O texto aprovado é o substitutivo do relator, deputado Fernando Mineiro (PT-RN), ao Projeto de Lei 1286/25 , do deputado Zé Neto (PT-BA).",
-      "\"A iniciativa favorece a transição energética justa e inclusiva, beneficiando populações vulneráveis e articulando descarbonização e desenvolvimento rural num mesmo instrumento\", argumentou o relator.",
-      "Pelo texto aprovado, o financiamento abrange as fontes de energia solar, eólica, de biomassa e aproveitamentos hidroenergéticos.",
-      "A medida também proíbe a sobreposição de financiamentos com linhas de crédito operadas no setor e determina a priorização do Programa Nacional de Fortalecimento da Agricultura Familiar (Pronaf).",
-      "Fernando Mineiro citou dados do Tribunal de Contas da União (TCU), de 2019, mostrando que uma parcela dos recursos do Pronaf não chega à agricultura familiar: de R$ 30 bilhões previstos anualmente, apenas cerca de R$ 22 bilhões são contratados.",
-      "O restante deixa de ser acessado porque os produtores esbarram no desconhecimento das linhas de crédito, nas exigências dos bancos e na dificuldade de elaborar os projetos.",
-      "O projeto tramita em caráter conclusivo e ainda precisa ser analisado pelas comissões de Agricultura, Pecuária, Abastecimento e Desenvolvimento Rural; de Finanças e Tributação; e de Constituição e Justiça e de Cidadania. Para virar lei, precisa ser aprovado pela Câmara e pelo Senado.",
       "Saiba mais sobre a tramitação de projetos de lei"
     ]
   },

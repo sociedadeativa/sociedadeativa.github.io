@@ -12,6 +12,7 @@ https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
 https://sociedadeativa.github.io/termos-de-uso/
 https://sociedadeativa.github.io/politica-de-privacidade/
+https://sociedadeativa.github.io/noticias/ebc-1708515/
 https://sociedadeativa.github.io/noticias/ebc-1708511/
 https://sociedadeativa.github.io/noticias/camara-1318796-camara-aprova-criacao-da-polit/
 https://sociedadeativa.github.io/noticias/ebc-1708509/
@@ -54,7 +55,6 @@ https://sociedadeativa.github.io/noticias/camara-1318414-comissao-aprova-diretri
 https://sociedadeativa.github.io/noticias/camara-1318402-comissao-aprova-dez-projetos-q/
 https://sociedadeativa.github.io/noticias/camara-1318361-comissao-aprova-horario-especi/
 https://sociedadeativa.github.io/noticias/camara-1318372-comissao-aprova-inclusao-expre/
-https://sociedadeativa.github.io/noticias/camara-1318363-comissao-aprova-uso-de-recurso/
 https://sociedadeativa.github.io/noticias/ebc-1708322/
 https://sociedadeativa.github.io/noticias/ebc-1708291/
 https://sociedadeativa.github.io/noticias/bcb-21313-novas-regras-reforcam-seguranc/
