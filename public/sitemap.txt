@@ -12,6 +12,10 @@ https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
 https://sociedadeativa.github.io/termos-de-uso/
 https://sociedadeativa.github.io/politica-de-privacidade/
+https://sociedadeativa.github.io/noticias/ebc-1708717/
+https://sociedadeativa.github.io/noticias/camara-1319323-comissao-aprova-projeto-que-pr/
+https://sociedadeativa.github.io/noticias/ebc-1708713/
+https://sociedadeativa.github.io/noticias/ebc-1708712/
 https://sociedadeativa.github.io/noticias/camara-1319262-comissao-aprova-aumento-de-pen/
 https://sociedadeativa.github.io/noticias/ebc-1708708/
 https://sociedadeativa.github.io/noticias/camara-1319243-comissao-aprova-proposta-para-/
@@ -22,9 +26,9 @@ https://sociedadeativa.github.io/noticias/ebc-1708702/
 https://sociedadeativa.github.io/noticias/ebc-1708700/
 https://sociedadeativa.github.io/noticias/ebc-1708698/
 https://sociedadeativa.github.io/noticias/ebc-1708697/
+https://sociedadeativa.github.io/noticias/camara-1319232-comissao-aprova-isencao-de-imp/
 https://sociedadeativa.github.io/noticias/ebc-1708695/
 https://sociedadeativa.github.io/noticias/ebc-1708692/
-https://sociedadeativa.github.io/noticias/camara-1319232-comissao-aprova-isencao-de-imp/
 https://sociedadeativa.github.io/noticias/camara-1319298-comissao-aprova-proibicao-de-c/
 https://sociedadeativa.github.io/noticias/camara-1319280-comissao-aprova-projeto-que-in/
 https://sociedadeativa.github.io/noticias/ebc-1708685/
@@ -35,8 +39,8 @@ https://sociedadeativa.github.io/noticias/ebc-1708681/
 https://sociedadeativa.github.io/noticias/camara-1319228-comissao-aprova-inclusao-facul/
 https://sociedadeativa.github.io/noticias/ebc-1708679/
 https://sociedadeativa.github.io/noticias/camara-1319226-comissao-aprova-prioridade-jud/
-https://sociedadeativa.github.io/noticias/camara-1306020-projeto-amplia-definicao-de-te/
 https://sociedadeativa.github.io/noticias/ebc-1708627/
+https://sociedadeativa.github.io/noticias/camara-1306020-projeto-amplia-definicao-de-te/
 https://sociedadeativa.github.io/noticias/ebc-1708657/
 https://sociedadeativa.github.io/noticias/ebc-1708655/
 https://sociedadeativa.github.io/noticias/ebc-1708654/
@@ -53,10 +57,6 @@ https://sociedadeativa.github.io/noticias/ebc-1708620/
 https://sociedadeativa.github.io/noticias/camara-1314167-projeto-cria-fundo-para-agricu/
 https://sociedadeativa.github.io/noticias/ebc-1708605/
 https://sociedadeativa.github.io/noticias/camara-1310241-projeto-cria-auxilio-financeir/
-https://sociedadeativa.github.io/noticias/ebc-1708599/
-https://sociedadeativa.github.io/noticias/camara-1310560-projeto-institui-politica-naci/
-https://sociedadeativa.github.io/noticias/ebc-1708598/
-https://sociedadeativa.github.io/noticias/camara-1318861-comissao-aprova-adaptacao-de-m/
 https://sociedadeativa.github.io/noticias/bcb-21313-novas-regras-reforcam-seguranc/
 https://sociedadeativa.github.io/noticias/anthropic-ipo-bilionario-nasdaq-inteligencia-artificial/
 https://sociedadeativa.github.io/noticias/caso-nvidia-seguranca-chips-inteligencia-artificial/
