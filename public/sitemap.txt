@@ -12,6 +12,9 @@ https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
 https://sociedadeativa.github.io/termos-de-uso/
 https://sociedadeativa.github.io/politica-de-privacidade/
+https://sociedadeativa.github.io/noticias/ebc-1708774/
+https://sociedadeativa.github.io/noticias/ebc-1708772/
+https://sociedadeativa.github.io/noticias/ebc-1708771/
 https://sociedadeativa.github.io/noticias/ebc-1708770/
 https://sociedadeativa.github.io/noticias/ebc-1708763/
 https://sociedadeativa.github.io/noticias/ebc-1708760/
@@ -53,10 +56,7 @@ https://sociedadeativa.github.io/noticias/camara-1319230-comissao-da-camara-apro
 https://sociedadeativa.github.io/noticias/ebc-1708682/
 https://sociedadeativa.github.io/noticias/ebc-1708681/
 https://sociedadeativa.github.io/noticias/camara-1319228-comissao-aprova-inclusao-facul/
-https://sociedadeativa.github.io/noticias/ebc-1708679/
-https://sociedadeativa.github.io/noticias/camara-1319226-comissao-aprova-prioridade-jud/
 https://sociedadeativa.github.io/noticias/ebc-1708627/
-https://sociedadeativa.github.io/noticias/ebc-1708620/
 https://sociedadeativa.github.io/noticias/bcb-21313-novas-regras-reforcam-seguranc/
 https://sociedadeativa.github.io/noticias/anthropic-ipo-bilionario-nasdaq-inteligencia-artificial/
 https://sociedadeativa.github.io/noticias/caso-nvidia-seguranca-chips-inteligencia-artificial/
