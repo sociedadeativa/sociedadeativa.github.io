@@ -12,6 +12,13 @@ https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
 https://sociedadeativa.github.io/termos-de-uso/
 https://sociedadeativa.github.io/politica-de-privacidade/
+https://sociedadeativa.github.io/noticias/ebc-1708793/
+https://sociedadeativa.github.io/noticias/ebc-1708781/
+https://sociedadeativa.github.io/noticias/ebc-1708738/
+https://sociedadeativa.github.io/noticias/ebc-1708775/
+https://sociedadeativa.github.io/noticias/ebc-1708767/
+https://sociedadeativa.github.io/noticias/ebc-1708486/
+https://sociedadeativa.github.io/noticias/ebc-1708755/
 https://sociedadeativa.github.io/noticias/ebc-1708774/
 https://sociedadeativa.github.io/noticias/ebc-1708772/
 https://sociedadeativa.github.io/noticias/ebc-1708771/
@@ -50,13 +57,6 @@ https://sociedadeativa.github.io/noticias/ebc-1708695/
 https://sociedadeativa.github.io/noticias/ebc-1708692/
 https://sociedadeativa.github.io/noticias/camara-1319298-comissao-aprova-proibicao-de-c/
 https://sociedadeativa.github.io/noticias/camara-1319280-comissao-aprova-projeto-que-in/
-https://sociedadeativa.github.io/noticias/ebc-1708685/
-https://sociedadeativa.github.io/noticias/camara-1319264-comissao-aprova-instalacao-obr/
-https://sociedadeativa.github.io/noticias/camara-1319230-comissao-da-camara-aprova-uso-/
-https://sociedadeativa.github.io/noticias/ebc-1708682/
-https://sociedadeativa.github.io/noticias/ebc-1708681/
-https://sociedadeativa.github.io/noticias/camara-1319228-comissao-aprova-inclusao-facul/
-https://sociedadeativa.github.io/noticias/ebc-1708627/
 https://sociedadeativa.github.io/noticias/bcb-21313-novas-regras-reforcam-seguranc/
 https://sociedadeativa.github.io/noticias/anthropic-ipo-bilionario-nasdaq-inteligencia-artificial/
 https://sociedadeativa.github.io/noticias/caso-nvidia-seguranca-chips-inteligencia-artificial/
