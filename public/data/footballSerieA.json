@@ -6,7 +6,7 @@
   "season": "2026",
   "source": "football-data.org (v4 API)",
   "isReal": true,
-  "lastUpdated": "2026-11-15T00:40:06.096Z",
+  "lastUpdated": "2026-11-15T16:01:53.839Z",
   "standings": [
     {
       "position": 1,
@@ -210,9 +210,9 @@
       "won": 12,
       "drawn": 8,
       "lost": 14,
-      "goalsFor": 44,
+      "goalsFor": 45,
       "goalsAgainst": 50,
-      "goalDiff": -6,
+      "goalDiff": -5,
       "percentage": "43.1%",
       "form": [],
       "zone": "sulamericana"
@@ -382,8 +382,8 @@
       "drawn": 9,
       "lost": 21,
       "goalsFor": 33,
-      "goalsAgainst": 69,
-      "goalDiff": -36,
+      "goalsAgainst": 70,
+      "goalDiff": -37,
       "percentage": "20.6%",
       "form": [],
       "zone": "rebaixamento"
@@ -11616,8 +11616,7 @@
       "tournamentId": "brasileirao-a",
       "tournamentName": "Brasileirão Série A",
       "phase": "21ª Rodada",
-      "status": "ao_vivo",
-      "minute": "Ao vivo",
+      "status": "encerrado",
       "homeTeam": {
         "id": 1772,
         "name": "Chapecoense",
@@ -11631,7 +11630,7 @@
         "id": 1780,
         "name": "Vasco da Gama",
         "shortName": "Vasco da Gama",
-        "score": 1,
+        "score": 2,
         "logo": "https://crests.football-data.org/1780.png",
         "initials": "VAS",
         "color": "bg-slate-700 text-white"
