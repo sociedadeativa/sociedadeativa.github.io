@@ -43,6 +43,77 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
+    "id": "ebc-1708816",
+    "title": "Brasil e Filipinas assinam acordos sobre agro e livre concorrência",
+    "summary": "Brasil e Filipinas assinaram, neste sábado (14), em Manila, dois acordos para facilitar o comércio agrícola e fortalecer o combate a práticas anticoncorrenciais entre os dois países.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/brasil-e-filipinas-assinam-acordos-sobre-agro-e-livre-concorrencia",
+    "publishedAt": "14/11/2026 às 18:53",
+    "category": "Política",
+    "ingestedAt": "15/11/2026 às 02:08",
+    "imageUrl": "https://imagens.ebc.com.br/2YVwqN4jprXSV5Cb2jTVxmmh9_8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/14/55651844601_faebd07eec_o.jpg?itok=P9BNGhkT",
+    "imageCaption": "Brasil e Filipinas assinam acordos sobre agro e livre concorrência",
+    "imageCredit": "Alex Rodrigues – Repórter da Agência Brasil",
+    "imageAlt": "Brasil e Filipinas assinam acordos sobre agro e livre concorrência",
+    "author": "Alex Rodrigues – Repórter da Agência Brasil",
+    "tags": [
+      "Internacional",
+      "Diplomacia",
+      "brasil",
+      "Filipinas",
+      "Asean"
+    ],
+    "content": [
+      "Brasil e Filipinas assinaram, neste sábado (14), em Manila, dois acordos para facilitar o comércio agrícola e fortalecer o combate a práticas anticoncorrenciais entre os dois países.",
+      "Os dois memorandos de entendimento foram firmados durante a visita oficial do presidente Luiz Inácio Lula da Silva ao país asiático, após reunião com o presidente filipino, Ferdinand Marcos Júnior.",
+      "Nos últimos anos, Brasil e Filipinas vêm aprofundando a agenda de cooperação bilateral. Em 2026, foi anunciada a assistência técnica para o fortalecimento da indústria canavieira filipina.",
+      "Os dois países também buscam estabelecer novas parcerias em pesquisas agropecuárias. Os negócios entre Brasil e Filipinas movimentam, atualmente, cerca de US$ 3 bilhões.",
+      "O presidente Lula viajou para as Filipinas a fim de participar, a convite de Ferdinand Marcos Júnior, da Cúpula da Associação de Nações do Sudeste Asiático (Asean).",
+      "O mandatário brasileiro também participa do Fórum Empresarial Brasil-Filipinas, no qual serão abordados temas relacionados ao comércio bilateral e a parcerias internacionais.",
+      "Segundo o Gabinete de Segurança Institucional (GSI) da Presidência da República, um memorando de entendimento é um instrumento jurídico prévio, de cunho político, para alinhar objetivos e definir os termos iniciais de uma negociação."
+    ]
+  },
+  {
+    "id": "ebc-1708815",
+    "title": "Falha aérea nos EUA cancela sete voos e atrasa outros 14 no Brasil",
+    "summary": "Sete dos 29 voos programados para partir do Brasil com destino aos Estados Unidos entre o fim da tarde desta sexta-feira (13) e as 14h deste sábado (14) tiveram que ser cancelados devido à interrupção do tráfego aéreo em território estadunidense .",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/falha-aerea-nos-eua-cancela-sete-voos-e-atrasa-outros-14-no-brasil",
+    "publishedAt": "14/11/2026 às 18:43",
+    "category": "Política",
+    "ingestedAt": "15/11/2026 às 02:08",
+    "imageUrl": "https://imagens.ebc.com.br/MAlsnjJJQhf3cWpxNnF19E8k88w=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/10/20/img_2051-5.jpg?itok=54o7JBRs",
+    "imageCaption": "Falha aérea nos EUA cancela sete voos e atrasa outros 14 no Brasil",
+    "imageCredit": "Alex Rodrigues – Repórter da Agência Brasil",
+    "imageAlt": "Falha aérea nos EUA cancela sete voos e atrasa outros 14 no Brasil",
+    "author": "Alex Rodrigues – Repórter da Agência Brasil",
+    "tags": [
+      "Geral",
+      "Anac",
+      "Voos",
+      "Cancelamento",
+      "Tráfego Aéreo"
+    ],
+    "content": [
+      "Sete dos 29 voos programados para partir do Brasil com destino aos Estados Unidos entre o fim da tarde desta sexta-feira (13) e as 14h deste sábado (14) tiveram que ser cancelados devido à interrupção do tráfego aéreo em território estadunidense .",
+      "Segundo a Agência Nacional de Aviação Civil (Anac), outros 14 voos partiram com atraso durante o mesmo período.",
+      "Os problemas em território brasileiro são reflexos da falha de comunicação que afetou os centros de controle de tráfego aéreo dos EUA pouco antes das 15h54 (horário da Costa Leste estadunidense; 17h54 em Brasília) de ontem, forçando a Administração Federal de Aviação (FAA, do inglês Federal Aviation Administration) a suspender todas as decolagens no país.",
+      "Segundo o secretário de Transportes dos Estados Unidos, Sean Duffy, a falha de comunicação parece ter sido causada por imperícia ou imprudência de uma empresa privada contratada para prestar serviços à FAA, a L3Harris, cujos funcionários estavam realizando um serviço sensível, em uma região remota do país, quando os problemas começaram.",
+      "A FAA suspendeu a proibição de decolagens em quase todos os Estados Unidos ainda na noite desta sexta-feira. Mas como milhares de voos já haviam sido cancelados e outros tantos afetados, a proibição segue gerando consequências neste sábado.",
+      "De acordo com a FAA, mais de 16 mil voos foram cancelados só nos Estados Unidos, nos últimos dois dias.",
+      "No Brasil, a Anac orientou os passageiros com viagem programada a consultar a companhia aérea para confirmar a situação do voo antes de se deslocarem ao aeroporto.",
+      "As empresas aéreas devem comunicar imediatamente os atrasos, os cancelamentos e as interrupções do serviço. Em caso de atraso, devem manter os passageiros frequentemente informados sobre a previsão de partida.",
+      "A empresa aérea deve oferecer assistência material grátis, conforme o tempo de espera no aeroporto - contado a partir do início do atraso, cancelamento ou interrupção do serviço.",
+      "Quando o tempo de espera superar duas horas, a companhia aérea deve oferecer gratuitamente alimentação adequada, por meio de crédito para alimentação, refeição ou solução equivalente.",
+      "Em caso de atraso superior a quatro horas, cancelamento ou interrupção do serviço, a empresa deve oferecer, à escolha do passageiro, reacomodação em outro voo, reembolso integral ou execução do serviço por outra modalidade de transporte, conforme o caso.",
+      "A reacomodação é gratuita e deve ocorrer, em voo próprio ou de outra empresa aérea, na primeira oportunidade, ou seja, em um voo cuja data e horário sejam os mais próximos do voo atrasado, cancelado ou interrompido.",
+      "Caso a oferta não seja conveniente, o passageiro pode optar por um voo da própria empresa, em data e horário a sua escolha, dentro do prazo de validade restante da passagem.",
+      "Caso não haja solução, o passageiro pode registrar uma reclamação na plataforma Anac Passageiro ."
+    ]
+  },
+  {
     "id": "ebc-1708814",
     "title": "Circuito Cultural começa no Rio com celebração da Consciência Negra",
     "summary": "A relação entre arte, meio ambiente, sociedade e cidade vai ser o foco dos artistas que participarão das exposições incluídas na programação do Circuito Cultural Instituto 12 – Conexões Criativas.",
@@ -1575,73 +1646,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "O sistema de alerta e prevenção inclui ainda 165 sirenes instaladas em 104 comunidades, além de protocolos de interdição de 19 vias em situações de risco relacionadas a chuvas, ventos e marés.",
       "O Centro de Operações e Resiliência do Rio, por sua vez, monitora o clima na cidade com 16 estações meteorológicas, 116 pluviômetros, dois radares meteorológicos e 21 sensores de nível dos rios.",
       "O acompanhamento de áreas com risco de deslizamentos também é realizado em parceria com a Agência Espacial Norte-Americana (Nasa)."
-    ]
-  },
-  {
-    "id": "camara-1319243-comissao-aprova-proposta-para-",
-    "title": "Comissão aprova proposta para integrar moradia, comércio e serviços nos bairros",
-    "summary": "Texto continua em análise na Câmara.",
-    "source": "Agência Câmara",
-    "sourceUrl": "https://www.camara.leg.br",
-    "articleUrl": "https://www.camara.leg.br/noticias/1319243-comissao-aprova-proposta-para-integrar-moradia-comercio-e-servicos-nos-bairros",
-    "publishedAt": "13/11/2026 às 13:19",
-    "category": "Congresso",
-    "ingestedAt": "13/11/2026 às 13:58",
-    "imageUrl": "https://www.camara.leg.br/midias/image/2026/11/img20231025171351082-1-768x473.jpg",
-    "imageCaption": "Duda Ramos é o relator da proposta",
-    "imageCredit": "Renato Araujo/Câmara dos Deputados",
-    "imageAlt": "Audiência Pública - Problemas e soluções no transporte aéreo de passageiros. Dep. Duda Ramos (MDB-RR)",
-    "author": "Agência Câmara de Notícias",
-    "tags": [
-      "Congresso",
-      "Brasil",
-      "Notícias"
-    ],
-    "content": [
-      "Renato Araujo/Câmara dos Deputados",
-      "Duda Ramos é o relator da proposta",
-      "A Comissão de Desenvolvimento Urbano da Câmara dos Deputados aprovou projeto de lei para incluir no Estatuto da Cidade a diretriz de promoção de bairros integrados. A medida estabelece, como diretriz geral da política urbana, a integração entre moradia, serviços públicos, equipamentos comunitários, comércio e oportunidades econômicas.",
-      "O texto aprovado foi a nova redação ( substitutivo ) elaborada pelo relator, deputado Duda Ramos (Pode-RR) , ao projeto original (PL 2675/24) da deputada Yandra Moura (União-SE).",
-      "Na proposta inicial, a intenção era instituir o \"Programa Bairro + Perto\", com detalhamento de áreas de intervenção urbana – como construção de ciclovias, creches e incentivos a feiras livres –, além de prever a descentralização de serviços essenciais para um raio de até dois quilômetros das residências.",
-      "A versão aprovada simplifica a proposta e foca na alteração da legislação, em vez de criar um programa federal específico.",
-      "Duda Ramos explicou que a legislação federal não deve detalhar regras de execução local. “Especificações edilícias e de ocupação do solo fazem parte da legislação municipal ou distrital”, destacou.",
-      "A proposta tramita em caráter conclusivo e segue para análise da Comissão de Constituição e Justiça e de Cidadania. Se for aprovada, poderá seguir para o Senado Federal, sem precisar passar pelo Plenário da Câmara.",
-      "Para virar lei, o texto precisa ser aprovado pelos deputados e pelos senadores.",
-      "Saiba mais sobre a tramitação de projetos de lei"
-    ]
-  },
-  {
-    "id": "ebc-1708705",
-    "title": "Ministro da Justiça defende enfraquecimento econômico de facções",
-    "summary": "O ministro da Justiça e Segurança Pública, Wellington César e Silva, defendeu como estratégia para combater o crime organizado o enfraquecimento econômico de facções criminosas.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/ministro-da-justica-defende-enfraquecimento-economico-de-faccoes",
-    "publishedAt": "13/11/2026 às 13:08",
-    "category": "Justiça",
-    "ingestedAt": "13/11/2026 às 13:58",
-    "imageUrl": "https://imagens.ebc.com.br/8U70yQxIZ-vp1igDxOPU5jqHP_Y=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/13/55648804577_6715d03dd2_o.jpg?itok=bxB805Z8",
-    "imageCaption": "Ministro da Justiça defende enfraquecimento econômico de facções",
-    "imageCredit": "Douglas Corrêa – Repórter da Agência Brasil",
-    "imageAlt": "Ministro da Justiça defende enfraquecimento econômico de facções",
-    "author": "Douglas Corrêa – Repórter da Agência Brasil",
-    "tags": [
-      "Justiça",
-      "crime organizado",
-      "facções criminosas",
-      "segurança pública",
-      "Wellington César e Silva"
-    ],
-    "content": [
-      "O ministro da Justiça e Segurança Pública, Wellington César e Silva, defendeu como estratégia para combater o crime organizado o enfraquecimento econômico de facções criminosas.",
-      "O ministro se pronunciou durante o encerramento da 24ª Reunião Plenária da Estratégia Nacional de Combate à Corrupção e à Lavagem de Dinheiro, nesta quinta-feira (112), no Rio de Janeiro.",
-      "Segundo ele, o enfrentamento ao crime organizado exige não apenas a responsabilização criminal de seus integrantes, mas também a identificação e o bloqueio das estruturas financeiras que sustentam suas atividades.",
-      "Já o procurador-geral de Justiça do Rio de Janeiro (PGJ), Antonio José Campos Moreira, destacou a necessidade de enfraquecer o poder econômico das organizações criminosas e ampliar a integração entre União, estados e municípios.",
-      "O procurador explicou que a investigação patrimonial e a recuperação de ativos devem ocupar posição central nas estratégias de enfrentamento ao crime organizado, especialmente diante do poder financeiro das facções e de sua atuação para além das fronteiras estaduais e nacionais.",
-      "“A criminalidade não tem fronteiras. É local, interestadual e transnacional. O Estado tem que se organizar, tem que se integrar. A asfixia financeira deve ser o principal instrumento de combate à criminalidade organizada, porque permite diminuir o poder econômico dessas organizações e sua capacidade de corrupção ”, afirmou Antonio Campos Moreira.",
-      "O governador em exercício do Rio de Janeiro, desembargador Ricardo Couto abordou os desafios impostos pela disputa territorial entre facções criminosas e a necessidade de garantir a presença do Estado nas comunidades.",
-      "A 24ª Reunião Plenária contou com representantes de instituições públicas e privadas para avaliar as ações desenvolvidas em 2026 e definir prioridades para o enfrentamento à corrupção e à lavagem de dinheiro em 2027.",
-      "Coordenada pela Secretaria Nacional de Justiça, a estratégia promove a articulação entre órgãos dos três poderes e de diferentes esferas de governo."
     ]
   },
   {

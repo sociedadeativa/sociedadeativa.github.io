@@ -13,6 +13,8 @@ https://sociedadeativa.github.io/sobre/
 https://sociedadeativa.github.io/termos-de-uso/
 https://sociedadeativa.github.io/politica-de-privacidade/
 https://sociedadeativa.github.io/noticias/ebc-1708817/
+https://sociedadeativa.github.io/noticias/ebc-1708816/
+https://sociedadeativa.github.io/noticias/ebc-1708815/
 https://sociedadeativa.github.io/noticias/ebc-1708814/
 https://sociedadeativa.github.io/noticias/ebc-1708813/
 https://sociedadeativa.github.io/noticias/ebc-1708806/
@@ -55,8 +57,6 @@ https://sociedadeativa.github.io/noticias/ebc-1708713/
 https://sociedadeativa.github.io/noticias/ebc-1708712/
 https://sociedadeativa.github.io/noticias/camara-1319262-comissao-aprova-aumento-de-pen/
 https://sociedadeativa.github.io/noticias/ebc-1708708/
-https://sociedadeativa.github.io/noticias/camara-1319243-comissao-aprova-proposta-para-/
-https://sociedadeativa.github.io/noticias/ebc-1708705/
 https://sociedadeativa.github.io/noticias/bcb-21313-novas-regras-reforcam-seguranc/
 https://sociedadeativa.github.io/noticias/anthropic-ipo-bilionario-nasdaq-inteligencia-artificial/
 https://sociedadeativa.github.io/noticias/caso-nvidia-seguranca-chips-inteligencia-artificial/
