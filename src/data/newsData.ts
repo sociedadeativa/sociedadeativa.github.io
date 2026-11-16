@@ -5,6 +5,46 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1708882",
+    "title": "Gabarito do Enem sai na quarta-feira, e resultado em 18 de janeiro",
+    "summary": "O gabarito oficial do Exame Nacional do Ensino Médio (Enem) de 2026 será publicado na próxima quarta-feira (18).",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/gabarito-do-enem-sai-na-quarta-feira-e-resultado-em-18-de-janeiro",
+    "publishedAt": "15/11/2026 às 20:43",
+    "category": "Governo",
+    "ingestedAt": "15/11/2026 às 22:19",
+    "imageUrl": "https://imagens.ebc.com.br/l2RRpfV151XRFvvtHfUSfspeE3k=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/15/pzzb0368.jpg?itok=LEDw1kPP",
+    "imageCaption": "Gabarito do Enem sai na quarta-feira, e resultado em 18 de janeiro",
+    "imageCredit": "Lucas Pordeus León - repórter da Agência Brasil",
+    "imageAlt": "Gabarito do Enem sai na quarta-feira, e resultado em 18 de janeiro",
+    "author": "Lucas Pordeus León - repórter da Agência Brasil",
+    "tags": [
+      "Educação",
+      "Enem",
+      "Enem 2026",
+      "MEC",
+      "Ministério da Educação"
+    ],
+    "content": [
+      "O gabarito oficial do Exame Nacional do Ensino Médio (Enem) de 2026 será publicado na próxima quarta-feira (18). Já o resultado do exame está previsto para ser divulgado pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) no dia 18 de janeiro de 2027 .",
+      "O segundo dia da aplicação da prova do Enem de 2026 terminou sem intercorrências graves neste domingo (15). Foi um “imenso sucesso”, avaliou o ministro da Educação, Leonardo Barchini. A prova contou com 90 questões de matemática e ciências da natureza.",
+      "“Tivemos um dia realmente de muita tranquilidade na aplicação do Enem, como deve ser, e parabenizo os funcionários do Inep”, destacou Barchini na coletiva de imprensa após a aplicação das provas.",
+      "O ministro da Educação ainda comentou a repercussão do comentário que fez durante visita do vice-presidente Geraldo Alckmin, neste domingo, quando Barchini mostrou o painel de monitoramento de “ataques hackers” aos portais do Inep.",
+      "“Todos os sites do governo federal sofrem constantemente esse tipo de ataque, que são detectados e há um escudo, todo um mecanismo de segurança cibernética que previne esse tipo de tentativa. E não foi diferente dessa vez. Não houve nenhuma intercorrência grave com relação a isso”, explicou.",
+      "O percentual de ausentes neste segundo dia de prova chegou a 36%, maior que o registrado em 2025, quando 32% dos estudantes faltaram o segundo dia . Nos últimos quatro anos, a ausência do segundo dia do Enem ficou entre 30% e 32%.",
+      "O ministro da Educação explicou que o aumento era esperado, porque houve um crescimento no número de inscrições ─ de 4,8 milhões, em 2025, para 5,0 milhões, em 2026.",
+      "Além disso, houve maior participação dos estudantes que concluem o ensino básico na rede pública , que bateu recorde neste ano, o que se deu, entre outros motivos, devido à inscrição automática.",
+      "“Já esperávamos um aumento na abstenção. Está dentro daquilo que a gente esperava, justamente por induzir nesta edição a inscrição dos concluintes da rede pública”, explicou o ministro Barchini.",
+      "Entre as intercorrências registradas, o ministro citou os 1,6 mil casos de estudantes eliminados durante a prova por violar alguma das regras da aplicação do Enem . “Nada muito grave que tenha nos chamado atenção”, comentou Leonardo Barchini.",
+      "Além disso, foram registradas quedas de energia em 11 locais de aplicação, sendo quatro em Minas Gerais (três em João Monlevade e um em Salinas), três na Bahia (um em Salvador e dois em Santo Estêvão), dois no Paraná (um em Curitiba e um em Arapongas), um no Maranhão (Cururupu) e um no Piauí (Regeneração).",
+      "As provas do segundo dia do Enem foram aplicadas em 1,9 mil municípios, com 14,8 mil locais de prova e 184 mil salas de aula utilizadas para o exame . Os alunos afetados pela falta de energia poderão participar da reaplicação, prevista para os dias 15 e 16 de dezembro.",
+      "O Enem é a principal porta de entrada para o ensino superior no Brasil. Por meio dele, são ocupadas 1,5 milhão de vagas em cursos de graduação em todo o país.",
+      "Os participantes que não puderam fazer as provas por problemas logísticos ou por doenças infectocontagiosas previstas no edital poderão solicitar a reaplicação do Enem mediante apresentação da documentação exigida.",
+      "As solicitações deverão ser feitas entre 16 e 20 de novembro, exclusivamente pela Página do Participante. A reaplicação ocorrerá nos dias 15 e 16 de dezembro."
+    ]
+  },
+  {
     "id": "ebc-1708881",
     "title": "Clubes, Ministério e FPF repudiam agressões em final Sub-20 feminina",
     "summary": "Horas após o término da decisão do Campeonato Paulista F Sub-20 Petrobras, que teve vitória da Ferroviária sobre o Corinthians, por 2 a 0 , os dois clubes e a Federação Paulista de Futebol (FPF) se manifestaram sobre a briga generalizada que aconteceu aos 31 minutos do segundo.",
@@ -1617,47 +1657,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Lançado em 2007, o Cena Musical é um programa da TV Brasil dedicado à exibição de performances inéditas da música brasileira.",
       "Desde 2017, os shows são gravados no Espaço Cultural BNDES, no Rio de Janeiro. A atração apresenta artistas de diferentes gêneros musicais e busca valorizar a diversidade da produção nacional. Os episódios também incluem depoimentos dos convidados e registros dos bastidores das gravações.",
       "TV Brasil na internet e nas redes sociais"
-    ]
-  },
-  {
-    "id": "ebc-1708590",
-    "title": "Rádio MEC exibe neste domingo programa inédito da série de Ruy Castro",
-    "summary": "A Rádio MEC leva ao ar neste domingo (15), às 22h, o terceiro episódio inédito da série original Grandes Compositores da Broadway, apresentada pelo jornalista e escritor Ruy Castro.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-11/radio-mec-exibe-neste-domingo-programa-inedito-da-serie-de-ruy-castro",
-    "publishedAt": "14/11/2026 às 13:40",
-    "category": "Política",
-    "ingestedAt": "14/11/2026 às 19:53",
-    "imageUrl": "https://imagens.ebc.com.br/c8XTmu8ZwQox8sN_JSu1W-T4LmE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/02/06/serie-a-musica-do-carnaval-estreia-na-radio-mec-com-ruy-castro-03-credito-tania-rego-agencia-brasil.jpg?itok=Q1l9mKK6",
-    "imageCaption": "Rádio MEC exibe neste domingo programa inédito da série de Ruy Castro",
-    "imageCredit": "Rádio MEC",
-    "imageAlt": "Rádio MEC exibe neste domingo programa inédito da série de Ruy Castro",
-    "author": "Rádio MEC",
-    "tags": [
-      "Cultura",
-      "Ruy Castro",
-      "Rádio MEC",
-      "Irving Berlin",
-      "Política"
-    ],
-    "content": [
-      "A Rádio MEC leva ao ar neste domingo (15), às 22h, o terceiro episódio inédito da série original Grandes Compositores da Broadway, apresentada pelo jornalista e escritor Ruy Castro. O programa, que esta semana destaca o compositor e letrista norte-americano Irving Berlin, também é transmitido pela Rádio Nacional nas segundas-feiras, às 22h.",
-      "A série é uma produção de Ruy Castro, Heloisa Seixas e Julia Romeu. A cada episódio, o apresentador explora o trabalho de um compositor de uma Broadway eufórica, considerada o principal patamar da música nos Estados Unidos.",
-      "Durante o programa deste domingo, Ruy Castro revela toda a criatividade de Irving Berlin. “Sua fabulosa intuição musical era uma usina de ideias e melodias”, destaca o jornalista.",
-      "Em seis décadas de carreira, Irving Berlin compôs mais de 1.500 canções, produzidas para a Broadway ou para Hollywood. Inúmeras delas se tornaram clássicos da música norte-americana.",
-      "Ao longo da atração da Rádio MEC, os ouvintes conferem um vasto repertório composto por Berlin: “There’s no business like showbusiness”, “A pretty girl is like a melody”, “Soft lights and sweet music”, “Let’s have another cup of coffee/ I say spinach” (medley), “Heat wave”, “Eastern Parade”, “Supper time”, “Harlem on my mind”, “They say it’s wonderful”, “I got lost in his arms”, “Beautiful faces (need beautiful clothes)”, “Wild about you”, “It’ll come to you” e “Anything you can do (I can do better)”.",
-      "A série original Grandes compositores da Broadway, apresentada pelo jornalista Ruy Castro, aborda uma época em que, nos shows da Broadway, a música valia muito mais que os efeitos especiais. Um tempo em que os músicos faziam canções tão memoráveis que até hoje ainda são tocadas - algumas, quase cem anos depois de terem sido criadas.",
-      "Entre os renomados compositores que ganham destaque nesta produção original de Ruy Castro, Heloisa Seixas e Julia Romeu estão Cole Porter, George e Ira Gershwin, Irvin Berlin, Jerome Kern, Vincent Youmans, Burton Lane e Jule Styne.",
-      "O jornalista e escritor Ruy Castro começou sua trajetória profissional como repórter em 1967, no Rio de Janeiro, e atuou nos principais veículos da imprensa carioca e paulistana. Em 1988, ele passou a se dedicar aos livros e fez sua estreia como escritor em 1990, com o lançamento de \"Chega de saudade: a história e as histórias da bossa nova\".",
-      "É autor de biografias de Nelson Rodrigues, Garrincha e Carmen Miranda, reconstituições históricas sobre a bossa nova, o samba-canção e o Rio de Janeiro dos anos 1920, além de romances e obras sobre cinema e literatura.",
-      "Em 2021, Ruy Castro conquistou reconhecimento com o prêmio Machado de Assis, da Academia Brasileira de Letras (ABL). No ano seguinte, foi eleito para ocupar a cadeira 13 da ABL. Atualmente, também escreve artigos para jornais.",
-      "Conhecida de norte a sul do país como \"A Rádio de Música Clássica do Brasil\", a Rádio MEC é consagrada pelo público por sua vocação direcionada à música de concerto. A tradicional estação dedica 80% de sua programação à música clássica e leva ao ar compositores brasileiros e internacionais de todos os tempos.",
-      "A Rádio MEC oferece aos ouvintes a experiência de acompanhar repertórios segmentados, composições originais e produções qualificadas. Ainda há espaço também para faixas de jazz e música popular brasileira, combinação que garante a conquista de novos públicos e agrada a audiência cativa.",
-      "Os ouvintes têm participação garantida e podem colaborar com sugestões para a programação da Rádio MEC. O público pode interagir pelas redes sociais e pelo WhatsApp. Para isso, basta que os interessados enviem mensagens de texto para o número (21) 99710-0537.",
-      "Série Grandes compositores da Broadway - domingo, dia 15/11, às 22h, na Rádio MEC, e segunda-feira, dia 16/11, às 22h, na Rádio Nacional",
-      "Rádio MEC na internet e nas redes sociais",
-      "WhatsApp: (21) 99710-0537"
     ]
   },
   {

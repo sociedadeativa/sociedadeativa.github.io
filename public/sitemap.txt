@@ -12,6 +12,7 @@ https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
 https://sociedadeativa.github.io/termos-de-uso/
 https://sociedadeativa.github.io/politica-de-privacidade/
+https://sociedadeativa.github.io/noticias/ebc-1708882/
 https://sociedadeativa.github.io/noticias/ebc-1708881/
 https://sociedadeativa.github.io/noticias/ebc-1708880/
 https://sociedadeativa.github.io/noticias/ebc-1708879/
@@ -53,7 +54,6 @@ https://sociedadeativa.github.io/noticias/ebc-1708810/
 https://sociedadeativa.github.io/noticias/ebc-1708803/
 https://sociedadeativa.github.io/noticias/ebc-1708804/
 https://sociedadeativa.github.io/noticias/ebc-1708693/
-https://sociedadeativa.github.io/noticias/ebc-1708590/
 https://sociedadeativa.github.io/noticias/camara-1319435-comissao-aprova-criacao-de-dat/
 https://sociedadeativa.github.io/noticias/camara-1319429-comissao-aprova-proposta-que-t/
 https://sociedadeativa.github.io/noticias/camara-1319294-comissao-aprova-proposta-para-/
