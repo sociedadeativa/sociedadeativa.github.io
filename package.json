@@ -9,7 +9,6 @@
     "generate-articles": "node scripts/generate-article-pages.mjs",
     "update-economy": "node scripts/update-economic-data.mjs",
     "update-news": "node scripts/update-news-data.mjs",
-    "update-election": "node scripts/update-election-second-round-data.mjs",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",

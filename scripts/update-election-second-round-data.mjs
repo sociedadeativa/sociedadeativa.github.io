@@ -1,13 +1,9 @@
-import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
-
-export const ELEC_CONFIG_URL = 'https://resultados.tse.jus.br/oficial/comum/config/ele-c.json';
-export const EA20_SECOND_ROUND_URL = 'https://resultados.tse.jus.br/oficial/ele2026/6258/dados/br/br-c0001-e006258-u.json';
 
 export const JSON_OUTPUT_PATH = path.join(rootDir, 'public', 'data', 'electionSecondRoundData.json');
 export const TS_OUTPUT_PATH = path.join(rootDir, 'src', 'data', 'electionSecondRoundData.ts');
@@ -260,187 +256,24 @@ export function validateAndParseEA20(ea20Json) {
 }
 
 /**
- * Realiza fetch com timeout defensivo de 8 segundos.
- */
-async function fetchWithTimeout(url, options = {}, timeoutMs = 8000) {
-  const controller = new AbortController();
-  const id = setTimeout(() => controller.abort(), timeoutMs);
-  try {
-    const res = await fetch(url, {
-      ...options,
-      signal: controller.signal,
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'User-Agent': 'SociedadeAtiva-Bot/2.0 (DivulgacaoOficial2026; +https://sociedadeativa.org)',
-        ...(options.headers || {})
-      }
-    });
-    return res;
-  } finally {
-    clearTimeout(id);
-  }
-}
-
-/**
- * Execução orquestrada com fallback defensivo.
+ * Atualização oficial do 2º turno desativada.
+ * Nenhuma chamada de API ao TSE é realizada e os arquivos consolidados existentes
+ * (public/data/electionSecondRoundData.json e src/data/electionSecondRoundData.ts)
+ * são preservados integralmente.
  */
 export async function updateElectionSecondRoundData() {
-  console.log('='.repeat(75));
-  console.log('SOCIEDADE ATIVA — PIPELINE OFICIAL 2º TURNO ELEIÇÕES 2026 (TSE)');
-  console.log('='.repeat(75));
-
-  // 1. Carrega dados prévios se existirem para proteção em caso de indisponibilidade
-  let previousDataset = null;
-  if (fs.existsSync(JSON_OUTPUT_PATH)) {
-    try {
-      const raw = fs.readFileSync(JSON_OUTPUT_PATH, 'utf8');
-      previousDataset = JSON.parse(raw);
-      console.log(`[Cache/Fallback] Dataset prévio carregado com sucesso (${previousDataset.candidates?.length} candidatos).`);
-    } catch (e) {
-      console.warn(`[Aviso] Falha ao ler dataset prévio existente: ${e.message}`);
-    }
-  }
-
-  try {
-    // 2. Consulta e validação do catálogo oficial ele-c.json
-    console.log(`\n[Passo 1/3] Consultando configuração oficial em: ${ELEC_CONFIG_URL}`);
-    const configRes = await fetchWithTimeout(ELEC_CONFIG_URL);
-    if (!configRes.ok) {
-      throw new Error(`HTTP ${configRes.status} ao consultar ele-c.json`);
-    }
-
-    const configContentType = configRes.headers.get('content-type') || '';
-    if (!configContentType.includes('application/json')) {
-      throw new Error(`Content-Type inesperado para ele-c.json: ${configContentType}`);
-    }
-
-    const configJson = await configRes.json();
-    const configValidation = validateElecConfig(configJson);
-    console.log(`  ✓ Catálogo validado com sucesso: Pleito ${configValidation.pleito}, Eleição ${configValidation.eleicao}, Data ${configValidation.data}.`);
-
-    // 3. Consulta e validação do arquivo EA20 de resultado unificado
-    console.log(`\n[Passo 2/3] Consultando resultado oficial EA20 em: ${EA20_SECOND_ROUND_URL}`);
-    const ea20Res = await fetchWithTimeout(EA20_SECOND_ROUND_URL);
-    if (!ea20Res.ok) {
-      throw new Error(`HTTP ${ea20Res.status} ao consultar br-c0001-e006258-u.json`);
-    }
-
-    const ea20ContentType = ea20Res.headers.get('content-type') || '';
-    if (!ea20ContentType.includes('application/json')) {
-      throw new Error(`Content-Type inesperado para EA20: ${ea20ContentType}`);
-    }
-
-    const ea20Json = await ea20Res.json();
-    const parsedData = validateAndParseEA20(ea20Json);
-
-    console.log(`  ✓ Payload EA20 validado com sucesso!`);
-    console.log(`    - Status: ${parsedData.statusLabel}`);
-    console.log(`    - Seções apuradas: ${parsedData.sectionsCounted} de ${parsedData.sectionsTotal} (${parsedData.countingProgress.toFixed(2)}%)`);
-    console.log(`    - Eleitorado apto: ${parsedData.electorateTotal.toLocaleString('pt-BR')}`);
-    console.log(`    - Candidatos oficiais habilitados:`);
-    for (const c of parsedData.candidates) {
-      console.log(`      * [Nº ${c.ballotNumber}] ${c.popularName} (${c.party}) — Votos: ${c.votes.toLocaleString('pt-BR')} (${c.percentage.toFixed(2)}%)`);
-    }
-
-    // 4. Gravação atômica e segura dos arquivos de produção
-    console.log(`\n[Passo 3/3] Gravando arquivos dedicados do 2º turno...`);
-    fs.mkdirSync(path.dirname(JSON_OUTPUT_PATH), { recursive: true });
-    fs.writeFileSync(JSON_OUTPUT_PATH, JSON.stringify(parsedData, null, 2) + '\n', 'utf8');
-    console.log(`  ✓ Gravado: ${path.relative(rootDir, JSON_OUTPUT_PATH)}`);
-
-    const tsContent = `// Dataset Oficial do 2º Turno da Eleição Presidencial de 2026 (TSE)
-// Gerado automaticamente pelo pipeline oficial (scripts/update-election-second-round-data.mjs).
-// NÃO MODIFIQUE MANUALMENTE ESTE ARQUIVO.
-
-export interface SecondRoundCandidate {
-  ballotNumber: number;
-  candidateId: string;
-  name: string;
-  popularName: string;
-  party: string;
-  coalition: string;
-  viceName: string;
-  vicePopularName: string;
-  viceParty: string;
-  seq: number;
-  votes: number;
-  percentage: number;
-  elected: boolean;
-  situation: string;
-  color: string;
-  colorMuted: string;
-  photoUrl: string;
-  photoAttribution: string;
-  photoSourceUrl: string;
-  tseSourceUrl: string;
+  console.log('[Desativado] A atualização oficial de dados do 2º turno está desativada.');
+  console.log('[Preservado] Os dados históricos e estruturais existentes foram mantidos sem alterações.');
+  return {
+    success: false,
+    disabled: true,
+    preserved: true,
+    error: 'Update Official 2nd Round Election Data feature is disabled.'
+  };
 }
 
-export interface SecondRoundTotalization {
-  electionCode: string;
-  round: number;
-  environment: string;
-  scope: string;
-  officeCode: string;
-  officeName: string;
-  generatedDate: string;
-  generatedTime: string;
-  totalizationDate: string;
-  totalizationTime: string;
-  isFinal: boolean;
-  countingStarted: boolean;
-  countingProgress: number;
-  sectionsTotal: number;
-  sectionsCounted: number;
-  sectionsRemaining: number;
-  electorateTotal: number;
-  turnout: number;
-  turnoutPercentage: number;
-  abstention: number;
-  abstentionPercentage: number;
-  validVotes: number;
-  validVotesPercentage: number;
-  blankVotes: number;
-  blankVotesPercentage: number;
-  nullVotes: number;
-  nullVotesPercentage: number;
-  totalVotes: number;
-  candidates: SecondRoundCandidate[];
-  statusLabel: string;
-  lastUpdated: string;
-}
-
-export const SECOND_ROUND_DATA: SecondRoundTotalization = ${JSON.stringify(parsedData, null, 2)};
-`;
-
-    fs.mkdirSync(path.dirname(TS_OUTPUT_PATH), { recursive: true });
-    fs.writeFileSync(TS_OUTPUT_PATH, tsContent, 'utf8');
-    console.log(`  ✓ Gravado: ${path.relative(rootDir, TS_OUTPUT_PATH)}`);
-
-    console.log('='.repeat(75));
-    console.log('Atualização do 2º Turno concluída com 100% de integridade.');
-    console.log('='.repeat(75));
-    return { success: true, data: parsedData };
-  } catch (error) {
-    console.error(`\n[ERRO NA ATUALIZAÇÃO DO 2º TURNO]: ${error.message}`);
-    if (previousDataset) {
-      console.warn('[Defesa Ativa] Mantendo dataset anterior íntegro sem sobrescrita.');
-      return { success: false, preserved: true, error: error.message };
-    } else {
-      console.error('[Falha Crítica] Nenhum dataset anterior disponível para preservação.');
-      throw error;
-    }
-  }
-}
-
-// Execução se chamado diretamente via CLI
+// Execução via CLI encerrada imediatamente sem chamadas externas ou sobrescrita
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  try {
-    const result = await updateElectionSecondRoundData();
-    if (!result || result.success === false) {
-      process.exit(1);
-    }
-  } catch (err) {
-    console.error('Falha fatal de execução:', err);
-    process.exit(1);
-  }
+  await updateElectionSecondRoundData();
+  process.exit(0);
 }

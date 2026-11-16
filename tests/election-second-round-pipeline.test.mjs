@@ -301,43 +301,50 @@ console.log('\n[TEST 4] Rejeição estrita de inconsistências, simulações e I
 }
 
 // ----------------------------------------------------------------------------
-// TEST 5: Resiliência a Falhas de Rede e Não-Sobrescrita de Dados Válidos
+// TEST 5: Desativação Estrita do Updater, Zero Chamadas de API e Preservação
 // ----------------------------------------------------------------------------
-console.log('\n[TEST 5] Defesa ativa contra falhas de rede e preservação do dataset');
+console.log('\n[TEST 5] Verificação da desativação da atualização do 2º turno e preservação dos dados');
 {
-  // Certifica que os arquivos de dados existem antes do teste de falha
   assert.ok(fs.existsSync(JSON_OUTPUT_PATH), 'public/data/electionSecondRoundData.json deve existir');
-  const initialContent = fs.readFileSync(JSON_OUTPUT_PATH, 'utf8');
+  assert.ok(fs.existsSync(TS_OUTPUT_PATH), 'src/data/electionSecondRoundData.ts deve existir');
+  const initialJsonContent = fs.readFileSync(JSON_OUTPUT_PATH, 'utf8');
+  const initialTsContent = fs.readFileSync(TS_OUTPUT_PATH, 'utf8');
 
-  // Simula queda de rede injetando falha no global.fetch
+  // Garante que global.fetch NÃO seja chamado ao invocar a função desativada
+  let fetchCalled = false;
   const originalFetch = global.fetch;
   global.fetch = async () => {
-    throw new Error('Falha simulada de conectividade (Network timeout)');
+    fetchCalled = true;
+    throw new Error('fetch não deveria ser invocado quando o recurso está desativado');
   };
 
   try {
     const result = await updateElectionSecondRoundData();
-    assert.strictEqual(result.success, false, 'Execução durante falha deve indicar success=false');
-    assert.strictEqual(result.preserved, true, 'Execução durante falha deve indicar preserved=true');
+    assert.strictEqual(fetchCalled, false, 'Nenhuma chamada de API (fetch) deve ocorrer com o recurso desativado');
+    assert.strictEqual(result.success, false, 'Execução desativada deve indicar success=false');
+    assert.strictEqual(result.disabled, true, 'Execução desativada deve indicar disabled=true');
+    assert.strictEqual(result.preserved, true, 'Execução desativada deve indicar preserved=true');
 
-    // Confirma que o arquivo não foi corrompido nem sobrescrito
-    const contentAfterFailure = fs.readFileSync(JSON_OUTPUT_PATH, 'utf8');
-    assert.strictEqual(contentAfterFailure, initialContent, 'O arquivo em disco não pode ser alterado durante falha');
-    console.log('  [PASS] 1. Falha de rede capturada e tratada com preservação estrita do dataset existente.');
+    // Confirma que os arquivos em disco não foram alterados
+    assert.strictEqual(fs.readFileSync(JSON_OUTPUT_PATH, 'utf8'), initialJsonContent, 'electionSecondRoundData.json deve permanecer inalterado');
+    assert.strictEqual(fs.readFileSync(TS_OUTPUT_PATH, 'utf8'), initialTsContent, 'electionSecondRoundData.ts deve permanecer inalterado');
+    console.log('  [PASS] 1. Função updateElectionSecondRoundData está desativada, sem chamadas de API e preservando dados existentes.');
 
-    // Confirma que a invocação via CLI encerra com código 1 em caso de falha preservada
+    // Confirma que a invocação via CLI também é no-op seguro sem fetch nem sobrescrita
     const scriptPath = path.resolve(rootDir, 'scripts', 'update-election-second-round-data.mjs');
     const cliRes = spawnSync(
       process.execPath,
       [
         '--import',
-        'data:text/javascript,globalThis.fetch=()=>Promise.reject(new Error("Falha simulada de conectividade"));',
+        'data:text/javascript,globalThis.fetch=()=>{throw new Error("fetch proibido");};',
         scriptPath
       ],
       { encoding: 'utf8' }
     );
-    assert.strictEqual(cliRes.status, 1, 'Invocação CLI deve encerrar com código de saída 1 quando houver falha');
-    console.log('  [PASS] 2. Ponto de entrada CLI encerra com status 1 sob falha de rede preservando dataset.');
+    assert.strictEqual(cliRes.status, 0, 'Invocação CLI desativada deve encerrar de forma segura com status 0');
+    assert.strictEqual(fs.readFileSync(JSON_OUTPUT_PATH, 'utf8'), initialJsonContent, 'CLI desativada não pode alterar JSON existente');
+    assert.strictEqual(fs.readFileSync(TS_OUTPUT_PATH, 'utf8'), initialTsContent, 'CLI desativada não pode alterar TS existente');
+    console.log('  [PASS] 2. Execução CLI encerra de forma segura sem chamadas de rede ou alteração de arquivos.');
   } finally {
     global.fetch = originalFetch;
   }
@@ -345,9 +352,9 @@ console.log('\n[TEST 5] Defesa ativa contra falhas de rede e preservação do da
 }
 
 // ----------------------------------------------------------------------------
-// TEST 6: Isolamento Estrito em Relação ao 1º Turno e Outros Workflows
+// TEST 6: Desativação do Workflow/NPM Script e Isolamento do 1º Turno
 // ----------------------------------------------------------------------------
-console.log('\n[TEST 6] Isolamento em relação aos arquivos do 1º turno e pipelines existentes');
+console.log('\n[TEST 6] Isolamento do 1º turno e desativação de gatilhos automáticos do 2º turno');
 {
   // Confirma existência inalterada de electionData.ts e electionData.json
   const firstRoundTs = path.join(rootDir, 'src', 'data', 'electionData.ts');
@@ -360,12 +367,23 @@ console.log('\n[TEST 6] Isolamento em relação aos arquivos do 1º turno e pipe
   assert.ok(tsRaw.includes('October 4, 2026'), 'electionData.ts deve conter dados do 1º turno (04/10/2026)');
   assert.ok(tsRaw.includes('DATASET_2026'), 'electionData.ts deve exportar DATASET_2026');
 
+  // Confirma que workflow do 2º turno não possui cron schedule nem execução ativa
+  const electionWorkflowPath = path.join(rootDir, '.github', 'workflows', 'update-election-data.yml');
+  const electionWorkflow = fs.readFileSync(electionWorkflowPath, 'utf8');
+  assert.ok(!/^\s*schedule\s*:/m.test(electionWorkflow), 'Workflow do 2º turno não deve conter schedule/cron ativo');
+  assert.ok(/^\s*if:\s*false\b/m.test(electionWorkflow), 'Job do workflow do 2º turno deve estar desativado com if: false');
+
+  // Confirma que script npm update-election foi removido do package.json
+  const pkgJson = JSON.parse(fs.readFileSync(path.join(rootDir, 'package.json'), 'utf8'));
+  assert.strictEqual(pkgJson.scripts?.['update-election'], undefined, 'Script npm update-election deve estar removido');
+
   // Confirma que workflows de notícias e economia não foram alterados
   assert.ok(fs.existsSync(path.join(rootDir, '.github', 'workflows', 'update-news-data.yml')));
   assert.ok(fs.existsSync(path.join(rootDir, '.github', 'workflows', 'update-economic-data.yml')));
 
   console.log('  [PASS] 1. Arquivos do 1º turno intactos e independentes.');
-  console.log('  [PASS] 2. Pipelines de notícias e economia preservados.');
+  console.log('  [PASS] 2. Workflow agendado e script npm do 2º turno confirmados como desativados.');
+  console.log('  [PASS] 3. Pipelines de notícias e economia preservados.');
   passed++;
 }
 
