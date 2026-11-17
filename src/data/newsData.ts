@@ -5,6 +5,44 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1709121",
+    "title": "Famílias de 14 vítimas da ditadura têm nova certidão de óbito no RS",
+    "summary": "“Para nós, familiares, isso é uma grande conquista”, disse, nesta segunda-feira (16), a ativista Suzana Lisboa.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-11/familias-de-14-vitimas-da-ditadura-tem-nova-certidao-de-obito-no-rs",
+    "publishedAt": "16/11/2026 às 21:03",
+    "category": "Política",
+    "ingestedAt": "17/11/2026 às 03:52",
+    "imageUrl": "https://imagens.ebc.com.br/ffkvgpqJj2zkANJt1k9nhJIJ38s=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/16/evento_rs_-_divulgacao_mpf_0.jpg?itok=2I3z1HZv",
+    "imageCaption": "Famílias de 14 vítimas da ditadura têm nova certidão de óbito no RS",
+    "imageCredit": "Luiz Claudio Ferreira - repórter da Agência Brasil",
+    "imageAlt": "Famílias de 14 vítimas da ditadura têm nova certidão de óbito no RS",
+    "author": "Luiz Claudio Ferreira - repórter da Agência Brasil",
+    "tags": [
+      "Direitos Humanos",
+      "Ditadura Militar",
+      "Certidão de Óbito",
+      "Política"
+    ],
+    "content": [
+      "“Para nós, familiares, isso é uma grande conquista”, disse, nesta segunda-feira (16), a ativista Suzana Lisboa. As mãos que erguiam a foto do marido, o catarinense Luiz Eurico Tejera Lisboa, assassinado em 1972, aos 24 anos de idade, receberam, em evento em Porto Alegre (RS), o que ela chamou de conquista, uma certidão de óbito corrigida.",
+      "Foi a nona reunião de entrega da certidão, a primeira na Região Sul . O documento aponta que a morte foi violenta, causada pelo Estado brasileiro no “contexto da perseguição sistemática” a quem foi dissidente do regime ditatorial instaurado em 1964. Além da família de Luiz Eurico, outras 13 famílias receberam o documento.",
+      "Ao receber o papel, Suzana pediu que o governo brasileiro mantenha as buscas pelos corpos desaparecidos e que o tema ganhe ainda mais visibilidade na área da educação.",
+      "O evento coordenado pelo Ministério dos Direitos Humanos e da Cidadania e pelo Ministério Público Federal entregou documentação também para os familiares de Ary Abreu Lima da Rosa, Avelmar Moreira de Barros, Celso Gilberto de Oliveira, Darcy José dos Santos Mariante, João Batista Rita, Luiz Renato Pires de Almeida, Manoel Custódio Martins, Alfeu de Alcântara Monteiro, Cilon Cunha Brum, Frederico Eduardo Mayr, João Carlos Haas Sobrinho, Onofre Ilha Dornelles e Rui Osvaldo Aguiar Pfützenreuter.",
+      "O procurador da República, Enrico Rodrigues de Freitas, disse que retificar certidões é uma afirmação de verdade histórica daquelas pessoas que morreram enfrentando a ditadura militar . “É também uma forma de o Estado brasileiro se desculpar com essas pessoas e com seus familiares”.",
+      "Ele contextualizou, inclusive, que o Ministério Público, antes da Constituição de 1988, durante a ditadura, também participou, “como algoz e dando legitimidade” aos processos judiciais que davam legitimidade à ditadura.",
+      "O procurador afirmou que há atualmente uma busca para construir um centro de memória em um casarão que ficou conhecido como “Dopinho”, em Porto Alegre. O espaço ficou conhecido como lugar de tortura.",
+      "Ele argumentou que a herança do período ditatorial não ficou só no passado, mas também no dia a dia contra cidadãos. “Os atos de tortura e de morte não cessaram com a redemocratização”.",
+      "A secretária-executiva do Ministério dos Direitos Humanos, Carolina Dias, disse que o ato é simbólico, mas importante para a reparação das “violências que sofreram tanto os seus familiares como vocês por perderem essas pessoas”. Ela substituiu a ministra no evento.",
+      "O presidente do Movimento de Justiça e Direitos Humanos, Jair Krischke, considerou histórico o momento em que o Brasil, mesmo que tardiamente, reconheceu que agentes do Estado cometeram crimes de leis da humanidade.",
+      "As certidões trazem o local da morte, delegacias, penitenciárias, bases militares, DOPs, DOI-CODs, centros clandestinos de tortura. A presidente da Comissão Especial sobre Mortos e Desaparecidos Políticos, Eugênia Gonzaga, afirmou que os familiares não recebem apenas um documento, mas uma homenagem.",
+      "O reconhecimento emocionou os dois filhos do ferroviário gaúcho Onofre Ilha Dornelles, assassinado aos 46 anos de idade. Em 1964, eles tinham 17 e 14 anos na época.",
+      "Os filhos recordam que Dornelles queria somente melhorar as condições de trabalho da categoria, mas, devido às torturas, sofreu um infarto quando ainda estava preso.",
+      "Ele foi libertado, mas morreu em Santa Maria (RS) por causa das graves lesões decorrentes da prisão."
+    ]
+  },
+  {
     "id": "ebc-1709117",
     "title": "Brasil assina na COP31 pacto global por IA sustentável e empregos",
     "summary": "O Brasil aderiu, nesta segunda-feira (16), durante a COP31, em Antália, na Turquia, a um compromisso internacional para promover o desenvolvimento sustentável da inteligência artificial (IA).",
@@ -1672,46 +1710,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "Notícia",
       "Brasil",
       "Estatísticas"
-    ]
-  },
-  {
-    "id": "ebc-1708882",
-    "title": "Gabarito do Enem sai na quarta-feira, e resultado em 18 de janeiro",
-    "summary": "O gabarito oficial do Exame Nacional do Ensino Médio (Enem) de 2026 será publicado na próxima quarta-feira (18).",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/gabarito-do-enem-sai-na-quarta-feira-e-resultado-em-18-de-janeiro",
-    "publishedAt": "15/11/2026 às 20:43",
-    "category": "Governo",
-    "ingestedAt": "15/11/2026 às 22:19",
-    "imageUrl": "https://imagens.ebc.com.br/l2RRpfV151XRFvvtHfUSfspeE3k=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/15/pzzb0368.jpg?itok=LEDw1kPP",
-    "imageCaption": "Gabarito do Enem sai na quarta-feira, e resultado em 18 de janeiro",
-    "imageCredit": "Lucas Pordeus León - repórter da Agência Brasil",
-    "imageAlt": "Gabarito do Enem sai na quarta-feira, e resultado em 18 de janeiro",
-    "author": "Lucas Pordeus León - repórter da Agência Brasil",
-    "tags": [
-      "Educação",
-      "Enem",
-      "Enem 2026",
-      "MEC",
-      "Ministério da Educação"
-    ],
-    "content": [
-      "O gabarito oficial do Exame Nacional do Ensino Médio (Enem) de 2026 será publicado na próxima quarta-feira (18). Já o resultado do exame está previsto para ser divulgado pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) no dia 18 de janeiro de 2027 .",
-      "O segundo dia da aplicação da prova do Enem de 2026 terminou sem intercorrências graves neste domingo (15). Foi um “imenso sucesso”, avaliou o ministro da Educação, Leonardo Barchini. A prova contou com 90 questões de matemática e ciências da natureza.",
-      "“Tivemos um dia realmente de muita tranquilidade na aplicação do Enem, como deve ser, e parabenizo os funcionários do Inep”, destacou Barchini na coletiva de imprensa após a aplicação das provas.",
-      "O ministro da Educação ainda comentou a repercussão do comentário que fez durante visita do vice-presidente Geraldo Alckmin, neste domingo, quando Barchini mostrou o painel de monitoramento de “ataques hackers” aos portais do Inep.",
-      "“Todos os sites do governo federal sofrem constantemente esse tipo de ataque, que são detectados e há um escudo, todo um mecanismo de segurança cibernética que previne esse tipo de tentativa. E não foi diferente dessa vez. Não houve nenhuma intercorrência grave com relação a isso”, explicou.",
-      "O percentual de ausentes neste segundo dia de prova chegou a 36%, maior que o registrado em 2025, quando 32% dos estudantes faltaram o segundo dia . Nos últimos quatro anos, a ausência do segundo dia do Enem ficou entre 30% e 32%.",
-      "O ministro da Educação explicou que o aumento era esperado, porque houve um crescimento no número de inscrições ─ de 4,8 milhões, em 2025, para 5,0 milhões, em 2026.",
-      "Além disso, houve maior participação dos estudantes que concluem o ensino básico na rede pública , que bateu recorde neste ano, o que se deu, entre outros motivos, devido à inscrição automática.",
-      "“Já esperávamos um aumento na abstenção. Está dentro daquilo que a gente esperava, justamente por induzir nesta edição a inscrição dos concluintes da rede pública”, explicou o ministro Barchini.",
-      "Entre as intercorrências registradas, o ministro citou os 1,6 mil casos de estudantes eliminados durante a prova por violar alguma das regras da aplicação do Enem . “Nada muito grave que tenha nos chamado atenção”, comentou Leonardo Barchini.",
-      "Além disso, foram registradas quedas de energia em 11 locais de aplicação, sendo quatro em Minas Gerais (três em João Monlevade e um em Salinas), três na Bahia (um em Salvador e dois em Santo Estêvão), dois no Paraná (um em Curitiba e um em Arapongas), um no Maranhão (Cururupu) e um no Piauí (Regeneração).",
-      "As provas do segundo dia do Enem foram aplicadas em 1,9 mil municípios, com 14,8 mil locais de prova e 184 mil salas de aula utilizadas para o exame . Os alunos afetados pela falta de energia poderão participar da reaplicação, prevista para os dias 15 e 16 de dezembro.",
-      "O Enem é a principal porta de entrada para o ensino superior no Brasil. Por meio dele, são ocupadas 1,5 milhão de vagas em cursos de graduação em todo o país.",
-      "Os participantes que não puderam fazer as provas por problemas logísticos ou por doenças infectocontagiosas previstas no edital poderão solicitar a reaplicação do Enem mediante apresentação da documentação exigida.",
-      "As solicitações deverão ser feitas entre 16 e 20 de novembro, exclusivamente pela Página do Participante. A reaplicação ocorrerá nos dias 15 e 16 de dezembro."
     ]
   },
   {

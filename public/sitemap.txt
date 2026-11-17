@@ -12,6 +12,7 @@ https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
 https://sociedadeativa.github.io/termos-de-uso/
 https://sociedadeativa.github.io/politica-de-privacidade/
+https://sociedadeativa.github.io/noticias/ebc-1709121/
 https://sociedadeativa.github.io/noticias/ebc-1709117/
 https://sociedadeativa.github.io/noticias/ebc-1709118/
 https://sociedadeativa.github.io/noticias/ebc-1709115/
@@ -57,7 +58,6 @@ https://sociedadeativa.github.io/noticias/ebc-1708893/
 https://sociedadeativa.github.io/noticias/ebc-1708895/
 https://sociedadeativa.github.io/noticias/ebc-1708892/
 https://sociedadeativa.github.io/noticias/ibge-48647/
-https://sociedadeativa.github.io/noticias/ebc-1708882/
 https://sociedadeativa.github.io/noticias/ebc-1708881/
 https://sociedadeativa.github.io/noticias/ebc-1708880/
 https://sociedadeativa.github.io/noticias/ibge-48635/
