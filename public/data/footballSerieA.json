@@ -6,7 +6,7 @@
   "season": "2026",
   "source": "football-data.org (v4 API)",
   "isReal": true,
-  "lastUpdated": "2026-11-19T02:12:37.099Z",
+  "lastUpdated": "2026-11-19T17:55:54.489Z",
   "standings": [
     {
       "position": 1,
@@ -11781,8 +11781,7 @@
       "tournamentId": "brasileirao-a",
       "tournamentName": "Brasileirão Série A",
       "phase": "35ª Rodada",
-      "status": "ao_vivo",
-      "minute": "Ao vivo",
+      "status": "encerrado",
       "homeTeam": {
         "id": 1779,
         "name": "Corinthians",
@@ -11815,8 +11814,7 @@
       "tournamentId": "brasileirao-a",
       "tournamentName": "Brasileirão Série A",
       "phase": "35ª Rodada",
-      "status": "ao_vivo",
-      "minute": "Ao vivo",
+      "status": "encerrado",
       "homeTeam": {
         "id": 1767,
         "name": "Grêmio",
