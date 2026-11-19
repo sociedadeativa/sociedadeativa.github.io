@@ -12,6 +12,7 @@ https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
 https://sociedadeativa.github.io/termos-de-uso/
 https://sociedadeativa.github.io/politica-de-privacidade/
+https://sociedadeativa.github.io/noticias/ebc-1709349/
 https://sociedadeativa.github.io/noticias/camara-1320935-proposta-de-ajuste-fiscal-entr/
 https://sociedadeativa.github.io/noticias/camara-1320884-audiencia-aponta-abandono-e-ne/
 https://sociedadeativa.github.io/noticias/camara-1320869-especialistas-apresentam-alert/
@@ -53,7 +54,6 @@ https://sociedadeativa.github.io/noticias/camara-1313158-projeto-acaba-com-a-obr
 https://sociedadeativa.github.io/noticias/ebc-1709269/
 https://sociedadeativa.github.io/noticias/ebc-1709268/
 https://sociedadeativa.github.io/noticias/camara-1313141-projeto-institui-em-lei-o-sist/
-https://sociedadeativa.github.io/noticias/ebc-1709267/
 https://sociedadeativa.github.io/noticias/ibge-48656/
 https://sociedadeativa.github.io/noticias/ibge-48658/
 https://sociedadeativa.github.io/noticias/ibge-48657/
