@@ -12,7 +12,12 @@ https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
 https://sociedadeativa.github.io/termos-de-uso/
 https://sociedadeativa.github.io/politica-de-privacidade/
+https://sociedadeativa.github.io/noticias/ebc-1709518/
+https://sociedadeativa.github.io/noticias/ebc-1709516/
+https://sociedadeativa.github.io/noticias/ebc-1709515/
 https://sociedadeativa.github.io/noticias/ebc-1709514/
+https://sociedadeativa.github.io/noticias/ebc-1709513/
+https://sociedadeativa.github.io/noticias/ebc-1709503/
 https://sociedadeativa.github.io/noticias/ebc-1709512/
 https://sociedadeativa.github.io/noticias/ebc-1709504/
 https://sociedadeativa.github.io/noticias/ebc-1709505/
@@ -52,14 +57,9 @@ https://sociedadeativa.github.io/noticias/camara-1321146-comissao-aprova-propost
 https://sociedadeativa.github.io/noticias/camara-1320986-comissao-debate-participacao-d/
 https://sociedadeativa.github.io/noticias/ebc-1709441/
 https://sociedadeativa.github.io/noticias/ebc-1709435/
-https://sociedadeativa.github.io/noticias/camara-1321144-comissao-aprova-medidas-contra/
-https://sociedadeativa.github.io/noticias/camara-1320979-comissao-de-saude-debate-roubo/
-https://sociedadeativa.github.io/noticias/camara-1321181-comissao-aprova-medida-para-ga/
-https://sociedadeativa.github.io/noticias/camara-1321149-comissao-aprova-regras-de-prev/
 https://sociedadeativa.github.io/noticias/ibge-48695/
 https://sociedadeativa.github.io/noticias/ibge-48694/
 https://sociedadeativa.github.io/noticias/ibge-48680/
-https://sociedadeativa.github.io/noticias/ebc-1709237/
 https://sociedadeativa.github.io/noticias/bcb-21320-pix-celebra-6-anos-como-motor-/
 https://sociedadeativa.github.io/noticias/bcb-21313-novas-regras-reforcam-seguranc/
 https://sociedadeativa.github.io/noticias/anthropic-ipo-bilionario-nasdaq-inteligencia-artificial/
