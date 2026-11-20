@@ -12,6 +12,8 @@ https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
 https://sociedadeativa.github.io/termos-de-uso/
 https://sociedadeativa.github.io/politica-de-privacidade/
+https://sociedadeativa.github.io/noticias/ebc-1709492/
+https://sociedadeativa.github.io/noticias/ebc-1709490/
 https://sociedadeativa.github.io/noticias/ebc-1709488/
 https://sociedadeativa.github.io/noticias/ebc-1709486/
 https://sociedadeativa.github.io/noticias/ebc-1709485/
@@ -53,9 +55,7 @@ https://sociedadeativa.github.io/noticias/ebc-1709398/
 https://sociedadeativa.github.io/noticias/camara-1320999-comissao-aprova-projeto-que-ob/
 https://sociedadeativa.github.io/noticias/camara-1321038-projeto-obriga-empresas-de-seg/
 https://sociedadeativa.github.io/noticias/ebc-1709408/
-https://sociedadeativa.github.io/noticias/camara-1321063-comissao-convoca-ministro-para/
 https://sociedadeativa.github.io/noticias/ibge-48695/
-https://sociedadeativa.github.io/noticias/ebc-1709400/
 https://sociedadeativa.github.io/noticias/ibge-48694/
 https://sociedadeativa.github.io/noticias/ibge-48680/
 https://sociedadeativa.github.io/noticias/ebc-1709237/
