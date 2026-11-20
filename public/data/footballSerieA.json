@@ -6,7 +6,7 @@
   "season": "2026",
   "source": "football-data.org (v4 API)",
   "isReal": true,
-  "lastUpdated": "2026-11-20T01:59:36.270Z",
+  "lastUpdated": "2026-11-20T17:28:45.389Z",
   "standings": [
     {
       "position": 1,
@@ -11913,8 +11913,7 @@
       "tournamentId": "brasileirao-a",
       "tournamentName": "Brasileirão Série A",
       "phase": "35ª Rodada",
-      "status": "ao_vivo",
-      "minute": "Ao vivo",
+      "status": "encerrado",
       "homeTeam": {
         "id": 1776,
         "name": "São Paulo",
