@@ -5,6 +5,38 @@ export type NewsArticle = NewsItem;
 
 export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
   {
+    "id": "ebc-1709579",
+    "title": "Portugal estreia com vitória de virada na Copa do Mundo de vela no RJ",
+    "summary": "Portugal, Estônia, Lituânia e Uruguai venceram a estreia na primeira fase da Copa do Mundo de vela na Baía de Guanabara, no Rio de Janeiro. Primeira competição internacional de vela desde os Jogos Rio 2016, a SSL Gold Cup (nome do Mundial em inglês) reúne equipes de 40 países.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-11/portugal-estreia-com-vitoria-de-virada-na-copa-do-mundo-de-vela-no-rj",
+    "publishedAt": "20/11/2026 às 22:02",
+    "category": "Esportes",
+    "ingestedAt": "20/11/2026 às 23:43",
+    "imageUrl": "https://imagens.ebc.com.br/f6LhETK7jyffrMIGWPtgCDx__lE=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/20/copa_do_mundo_de_vela_2026_rj.jpg?itok=49boM5Xc",
+    "imageCaption": "Portugal estreia com vitória de virada na Copa do Mundo de vela no RJ",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Portugal estreia com vitória de virada na Copa do Mundo de vela no RJ",
+    "author": "Agência Brasil",
+    "tags": [
+      "Esportes",
+      "copa do mundo de vela",
+      "40 países",
+      "seleção brasileira",
+      "Oitavas de Final"
+    ],
+    "content": [
+      "Portugal, Estônia, Lituânia e Uruguai venceram a estreia na primeira fase da Copa do Mundo de vela na Baía de Guanabara, no Rio de Janeiro. Primeira competição internacional de vela desde os Jogos Rio 2016, a SSL Gold Cup (nome do Mundial em inglês) reúne equipes de 40 países. A seleção brasileira estreará direto nas oitavas de final, em 2 de dezembro. Entre os 10 velejadores do time canarinho está o multimedalhista olímpico Robert Scheidt (dois ouros, duas pratas e um bronze).",
+      "As primeiras regatas começaram na última quinta-feira (19), com 16 seleções. Uma das estreias mais emocionantes foi a de Portugal, pelo Grupo A, que reúne ainda Ucrânia, Colômbia, e Antígua e Barbuda. A equipe ucraniana liderou boa parte da prova, mas na reta final o time português conhecido pelo apelido de Navigators, assumiu a dianteira e cruzou a linha de chegada em 37min17s, com apenas 17 segundos de vantagem sobre os ucranianos. Antígua e Barbuda e Colômbia chegaram em terceiro e quarto lugares, respectivamente.",
+      "Na disputa do Grupo B, os lituanos, conhecidos como Ambers, sofreram com falha de comunicação no início da regata, e viram os taitianos despontarem em primeiro lugar. Próximo do fim, os Ambers aproveitaram uma faixa de vento mais forte aos pés do Pão de Açúcar para alcançar a liderança e selar a vitória em 38min00s. A Grécia terminou em segundo, o Taiti em terceiro e a Coreia do Sul em quarto.",
+      "A seleção da Estônia levou a melhor na estreia do Grupo C, mesmo enfrentando problemas no início da regata. Conhecidos pelo apelido de Icebreakers, os estonianos venceram a prova em 37min16s. A Malásia encerrou na segunda posição, seguida por Cuba em terceiro e Seychelles em quarto.",
+      "No Grupo D, os uruguaios ditaram o ritmo da regata e cruzaram a linha de chegada em om folga em 39min53s. A seleção de Omã terminou em segundo, seguida por Mianmar e Singapura.",
+      "Todas as seleções contam com 10 velejadores que competem em embarcações idênticas da classe SSL47, com cerca de 14,3 metros de comprimento. A primeira fase (classificatória) vai até domingo (22), com um total de quatro regatas. Os dois primeiro colocados em cada chave se classificam à fase 1/16 avos de final, prevista para o período de 26 a 29 de novembro.",
+      "As oitavas de final – fase da estreia da seleção brasileira - , estão programadas para ocorrer de 2 a 5 de dezembro. As quartas ocorrerão de 7 a 10 de dezembro, as semifinais no dia 12 de dezembro e a grande final no domingo As quartas acontecem de 7 a 10 de dezembro, as semifinais no sábado (12) e a disputa do título mundial no domingo (13)."
+    ]
+  },
+  {
     "id": "ebc-1709573",
     "title": "PF diz que não há conversas de Mendonça com Vorcaro",
     "summary": "A Polícia Federal (PF) informou ao Supremo Tribunal Federal (STF) que não foram encontrados registros de conversas entre o ex-banqueiro Daniel Vorcaro e o ministro André Mendonça.",
@@ -1737,60 +1769,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "“Mais de dez anos depois da sua aprovação, o desafio principal é passar do reconhecimento para uma aplicação efetiva: garantir autonomia e capacidade de decidir, combater o etarismo na sociedade e no trabalho, promover educação, desenvolver sistemas integrais de cuidado, facilitar a inclusão digital e o acesso às novas tecnologias e reconhecer a contribuição econômica, social e cultural das pessoas idosas.”",
       "O secretário nacional dos Direitos da Pessoa Idosa do Ministério dos Direitos Humanos e da Cidadania, Alexandre da Silva, afirmou que quase 17% da população brasileira tem 60 anos ou mais. Esse contingente corresponde a quase 30 milhões de pessoas.",
       "Segundo o secretário, o envelhecimento ocorre de maneira diferente entre os diversos grupos da população, como pessoas negras, mulheres, indígenas e pessoas LGBTQIA+. Por isso, seriam necessárias políticas públicas específicas para cada segmento."
-    ]
-  },
-  {
-    "id": "ebc-1709448",
-    "title": "Veja como será o cálculo da hora extra com a escala de trabalho 5x2",
-    "summary": "O ministro do Trabalho e Emprego, Luiz Marinho, explicou, nesta quinta-feira (19), que a gradual redução da jornada semanal de trabalho e a garantia de dois dias de descanso remunerado vão elevar o valor da hora trabalhada, aumentando o custo das horas extras, mesmo que sem.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/veja-como-sera-o-calculo-da-hora-extra-com-escala-de-trabalho-5x2",
-    "publishedAt": "19/11/2026 às 16:39",
-    "category": "Economia",
-    "ingestedAt": "19/11/2026 às 22:04",
-    "imageUrl": "https://imagens.ebc.com.br/HlCX8HWzUm54tPGD11vY5Gz3QtY=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/914029-defesa%20civil%20_0489.jpg?itok=V-_ZKtXV",
-    "imageCaption": "Veja como será o cálculo da hora extra com a escala de trabalho 5x2",
-    "imageCredit": "Alex Rodrigues - Repórter da Agência Brasil",
-    "imageAlt": "Veja como será o cálculo da hora extra com a escala de trabalho 5x2",
-    "author": "Alex Rodrigues - Repórter da Agência Brasil",
-    "tags": [
-      "Economia",
-      "fim da escala 6x1",
-      "Luiz Marinho",
-      "Hora Extra",
-      "Escala de Trabalho"
-    ],
-    "content": [
-      "O ministro do Trabalho e Emprego, Luiz Marinho, explicou, nesta quinta-feira (19), que a gradual redução da jornada semanal de trabalho e a garantia de dois dias de descanso remunerado vão elevar o valor da hora trabalhada, aumentando o custo das horas extras, mesmo que sem alterar os valores dos salários fixos mensais.",
-      "Segundo Marinho, o decreto que regulamenta a nova escala de trabalho altera o cálculo usado para definir quanto vale cada hora de serviço.",
-      "Com o decreto assinado hoje pelo presidente Luiz Inácio Lula da Silva, a escala passará a ser de cinco dias de jornada semanal por dois dias de descanso e haverá redução do atual limite semanal de 44 horas para 42 horas a partir de dezembro e para 40 horas, a partir de dezembro de 2027.",
-      "Como o trabalhador receberá o mesmo salário por uma carga horária mensal menor, o valor de referência da hora sobe. Consequentemente, eleva o custo das horas extras e de outros adicionais trabalhistas.",
-      "Segundo ele, as empresas que preferirem evitar o impacto financeiro deverão contratar mais pessoal.",
-      "“É só não convocar hora extra, substituindo-a por contratações”, disse Marinho durante a cerimônia de assinatura, pelo presidente da República, Luiz Inácio Lula da Silva, do decreto que regulamenta a nova jornada de trabalho.",
-      "Em decisão liminar na semana passada, o ministro Flávio Dino, do Supremo Tribunal Federal (STF), permitiu a realização de jornadas de trabalho superiores a 8h diárias durante a fase de transição da escala 5x2 .",
-      "Com a decisão, os empregadores estão autorizados a distribuir as 42h semanais, durante o período de um ano de transição, entre os cinco dias de trabalho, o que resulta em jornadas diárias de até 8h24. Dessa maneira, os 24 minutos extra jornada diários não darão direito ao recebimento de hora extra.",
-      "Durante o evento, Marinho ainda buscou tranquilizar empregadores e consumidores, garantindo que o fim da escala 6x1 não significa o fechamento de estabelecimentos comerciais, restaurantes, hospitais ou indústrias aos sábados e domingos.",
-      "Segundo Marinho, o decreto não restringe o funcionamento das atividades econômicas — inclusive daquelas que operam 24 horas por dia, durante todo o ano —, mas exige a reorganização das escalas de revezamento para assegurar as duas folgas semanais a cada funcionário.",
-      "“Haveremos de orientar a atividade econômica que precisar trabalhar 365 dias por ano, 24 horas por dia, encaixando as escalas para dar conta da atividade. Além disso, a negociação coletiva poderá organizar a distribuição dos repousos ao longo do mês, respeitando duas folgas semanais e o descanso mínimo assegurado pela Constituição Federal”, assegurou Marinho.",
-      "O ministro destacou que a legislação aprovada estabelece flexibilidade para as empresas que, por suas características, não têm como garantir a seus empregados duas folgas em uma só semana.",
-      "“Esta, contudo, não é a regra geral, que é de duas folgas semanais”, disse Marinho, ressaltando que os acordos e convenções coletivas vigentes permanecem válidos, e que só as cláusulas incompatíveis com os novos limites de jornada e de descanso perderão o efeito a partir de 16 de dezembro.",
-      "Segundo Marinho, o decreto assinado nesta quinta-feira preserva os pisos salariais das categorias e alcança os trabalhadores urbanos, rurais e, no que couber, os avulsos. Ele ainda destacou que quem já trabalha 40 horas semanais ou menos, distribuídas por seis dias de trabalho e um de folga, também passará a ter direito garantido aos dois dias de repouso semanal remunerado.",
-      "“A redução da jornada e a ampliação do descanso são direitos distintos e ambos precisam ser respeitados”, declarou Marinho, destacando que, em nenhum caso, pode haver redução salarial.",
-      "O decreto também estabelece regras para os regimes especiais de trabalho. A escala 12x36, utilizada em hospitais, serviços de vigilância, entre outras atividades, por exemplo, não será extinta, mas deverá observar os novos limites de jornada e os ajustes e compensações necessários, mediante acordos e negociações coletivas.",
-      "O mesmo vale para os turnos ininterruptos de revezamento em atividades como transporte, aviação, trabalho marítimo e setor petrolífero, que terão regulamentações complementares.",
-      "Na próxima semana, o Ministério do Trabalho e Emprego vai publicar uma portaria complementar e um guia de perguntas e respostas, detalhando as novas regras e tirando dúvidas de patrões e empregados. Segundo Marinho, equipes de relações e de inspeção do trabalho do ministério, estarão à disposição para orientar e fiscalizar o cumprimento da nova jornada em todo o país.",
-      "“Estamos construindo uma transição responsável, com diálogo, segurança jurídica e respeito às atividades econômicas, mas sem abrir mão do essencial: menos horas de trabalho, mais horas de descanso, mais convivência familiar e sem corte salarial”, concluiu Marinho.",
-      "1. Novo divisor e cálculo da hora extra",
-      "O divisor salarial cai de 220 para 210 (em dezembro de 2026) e para 200 (em dezembro de 2027), elevando o valor de referência da hora trabalhada e encarecendo o custo das horas extras.",
-      "2. Redução da jornada sem corte salarial",
-      "Cai de 44h para 42h semanais em 16/12/2026 e para 40h em dezembro de 2027, mantendo salários e pisos. Garante dois dias de folga mesmo para quem já trabalha até 40h na escala 6x1.",
-      "3. Funcionamento do comércio e serviços",
-      "Estabelecimentos seguem abrindo aos fins de semana e 24h por dia mediante revezamento. Onde não for possível dar duas folgas na mesma semana, acordo coletivo pode distribuir as oito folgas no mês.",
-      "4. Acordos e convenções coletivas",
-      "Continuam válidos, perdendo efeito a partir de 16/12/2026 apenas as cláusulas antigas incompatíveis com os novos limites de jornada e de descanso semanal.",
-      "5. Regimes especiais e escala 12x36",
-      "A escala 12x36 (hospitais e vigilância) não acaba, mas será ajustada por negociação coletiva. Transporte, aviação, trabalho marítimo e setor petrolífero terão regulamentação complementar."
     ]
   },
   {

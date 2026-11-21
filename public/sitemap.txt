@@ -12,6 +12,7 @@ https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
 https://sociedadeativa.github.io/termos-de-uso/
 https://sociedadeativa.github.io/politica-de-privacidade/
+https://sociedadeativa.github.io/noticias/ebc-1709579/
 https://sociedadeativa.github.io/noticias/ebc-1709573/
 https://sociedadeativa.github.io/noticias/ebc-1709572/
 https://sociedadeativa.github.io/noticias/ebc-1709570/
@@ -56,7 +57,6 @@ https://sociedadeativa.github.io/noticias/camara-1321363-comissao-aprova-criacao
 https://sociedadeativa.github.io/noticias/ebc-1709458/
 https://sociedadeativa.github.io/noticias/ebc-1709457/
 https://sociedadeativa.github.io/noticias/camara-1321321-participantes-de-audiencia-def/
-https://sociedadeativa.github.io/noticias/ebc-1709448/
 https://sociedadeativa.github.io/noticias/ibge-48695/
 https://sociedadeativa.github.io/noticias/ibge-48694/
 https://sociedadeativa.github.io/noticias/ibge-48680/
