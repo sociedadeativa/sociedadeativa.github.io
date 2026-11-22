@@ -51,6 +51,38 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
     ]
   },
   {
+    "id": "ebc-1709611",
+    "title": "Sobe para 4 o número de mortos em Tupanciretã, no Sul",
+    "summary": "Morreu neste sábado (21) a quarta vítima da tempestade que devastou a cidade de Tupanciretã , no Rio Grande do Sul, na madrugada desta sexta-feira (20). A vítima é um homem que estava internado no Hospital Universitário de Santa Maria.",
+    "source": "Agência Brasil",
+    "sourceUrl": "https://agenciabrasil.ebc.com.br",
+    "articleUrl": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-11/sobe-para-4-o-numero-de-mortos-em-tupancireta-no-sul",
+    "publishedAt": "21/11/2026 às 19:39",
+    "category": "Política",
+    "ingestedAt": "22/11/2026 às 02:27",
+    "imageUrl": "https://imagens.ebc.com.br/L36cWhuShjHZOXT1LMwLcVlA0_Q=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/20/saveclip.app_922292756_18653668591024728_6422918954471549980_n.jpg?itok=q0bnLxOD",
+    "imageCaption": "Sobe para 4 o número de mortos em Tupanciretã, no Sul",
+    "imageCredit": "Agência Brasil",
+    "imageAlt": "Sobe para 4 o número de mortos em Tupanciretã, no Sul",
+    "author": "Agência Brasil",
+    "tags": [
+      "Meio Ambiente",
+      "Rio Grande do Sul",
+      "Tempestade",
+      "Tupanciretã",
+      "Sul"
+    ],
+    "content": [
+      "Morreu neste sábado (21) a quarta vítima da tempestade que devastou a cidade de Tupanciretã , no Rio Grande do Sul, na madrugada desta sexta-feira (20). A vítima é um homem que estava internado no Hospital Universitário de Santa Maria.",
+      "Os outros três mortos são um homem de 59 anos, outro homem de 84 anos e uma mulher de 85 anos.",
+      "O município de Tupanciretã, que tem 20 mil habitantes e fica na região central do estado, foi atingido na madrugada de sexta por uma microexplosão. Chuva forte, granizo e ventanias devastaram a cidade e destruíram cerca de 8 mil casas. Além das três mortes iniciais, também 60 pessoas ficaram feridas, segundo a Defesa Civil. 15 mil pessoas foram atingidas no município.",
+      "Tupanciretã foi a cidade que mais sofreu, mas a tempestade também atingiu outros 33 municípios . A Defesa Civil registrou dezenas de ocorrências, todas de danos materiais. Em todos esses lugares houve destelhamento de casas e de estabelecimentos, quedas de árvores e postes, obstrução de ruas e falta de energia e água.",
+      "Ao todo, as autoridades contabilizam mais de 20 mil pessoas afetadas nessas cidades gaúchas.",
+      "Diante de todos os estragos, o governador Eduardo Leite determinou a mobilização da Defesa Civil, do Corpo de Bombeiros e da Brigada Militar. Também autorizou a liberação imediata de R$ 2 milhões para auxílio emergencial.",
+      "O governo federal também determinou o deslocamento de uma equipe do Grupo de Apoio a Desastres da Defesa Civil Nacional para Tupanciretã. O ministro da Integração e do Desenvolvimento Regional, Waldez Góes, foi neste sábado para a cidade gaúcha, onde fez, junto com sua comitiva, uma visita técnica às áreas mais atingidas e ainda se reuniu com autoridades locais para estudar ações que possam ser tomadas pelo governo federal."
+    ]
+  },
+  {
     "id": "ebc-1709610",
     "title": "Deputada Talíria Petrone é ameaçada de morte e violência sexual",
     "summary": "A deputada federal Talíria Petrone (Psol- RJ) recebeu ameaça de morte às vésperas do Dia da Consciência Negra , lembrado nessa sexta sexta-feira (20).",
@@ -1553,59 +1585,6 @@ export const OFFICIAL_NEWS_ARTICLES: NewsItem[] = [
       "De acordo com relatório de indiciamentos, o ex-banqueiro teve \"participação pessoal, reiterada e diretiva\" nas operações com carteiras de créditos irregulares do Banco Master que causam prejuízos ao BRB.",
       "Após a conclusão parcial das investigações, a defesa do ex-banqueiro criticou o indiciamento promovido pela PF e disse que a corporação se \"limita a repetir a mesma narrativa\" e não conseguiu avançar nas investigações.",
       "\"O negócio envolvendo as carteiras da Tirreno (empresa de fachada) não foi concluído. As carteiras foram substituídas por outros ativos, e a troca realizada demonstra que os negócios entre o Banco Master e o BRB geraram resultados positivos para o Banco de Brasília. Nenhuma perícia oficial apurou qualquer prejuízo\", afirmou a defesa."
-    ]
-  },
-  {
-    "id": "ebc-1709513",
-    "title": "Maranhão: professores usam filmes e comida para educação antirracista",
-    "summary": "No Dia da Consciência Negra, comemorado em 20 de novembro, os caminhos das ações de educação antirracista e de valorização da herança africana e afrobrasileira se encontram nas ações de professores do Maranhão.",
-    "source": "Agência Brasil",
-    "sourceUrl": "https://agenciabrasil.ebc.com.br",
-    "articleUrl": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/maranhao-professores-usam-filmes-e-comida-para-educacao-antirracista",
-    "publishedAt": "20/11/2026 às 14:07",
-    "category": "Política",
-    "ingestedAt": "20/11/2026 às 16:13",
-    "imageUrl": "https://imagens.ebc.com.br/zGWCy7rUciMT42-OMFcxFY6JSbg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/20/iandejara.jpeg?itok=aMZsEqZs",
-    "imageCaption": "Maranhão: professores usam filmes e comida para educação antirracista",
-    "imageCredit": "Luciano Nascimento - Repórter da Agência Brasil",
-    "imageAlt": "Maranhão: professores usam filmes e comida para educação antirracista",
-    "author": "Luciano Nascimento - Repórter da Agência Brasil",
-    "tags": [
-      "Educação",
-      "Consciência Negra",
-      "Educação Antirracista",
-      "Bacabal",
-      "Itinga do Maranhão"
-    ],
-    "content": [
-      "No Dia da Consciência Negra, comemorado em 20 de novembro, os caminhos das ações de educação antirracista e de valorização da herança africana e afrobrasileira se encontram nas ações de professores do Maranhão.",
-      "Nos municípios de Bacabal e de Itinga do Maranhão os educadores desenvolvem projetos escolares que valorizam a cultura negra por meio de curtas-metragens e de receitas que valorizam a contribuição africana.",
-      "Os projetos contribuem para a aplicação da Lei 10.639/2003, que tornou obrigatório o ensino da história e da cultura africana e afro-brasileira nas escolas.",
-      "Em Bacabal, a professora de matemática Iandejara Galvão (foto de destaque) resolveu unir duas paixões: a culinária e o ato de ensinar para levar os alunos a uma viagem de aprendizado recheada de sabores e descobertas.",
-      "Natural de Bacabal, Iandejara leciona a estudantes do 3º ano do ensino médio do Centro de Ensino Juarez Gomes. Nas aulas ela apresenta o legado da cultura africana nos alimentos, pratos e a cultura em torno do universo gastronômico.",
-      "“A nossa alimentação tem essas influências negras, que são reflexos da nossa origem, do processo de colonização. E aí a gente faz esse gancho e faz perguntas do tipo: de onde veio a feijoada? Como é que os ingredientes fazem parte do nosso cotidiano e às vezes a gente nem sabe de onde é que vem”, disse a professora à Agência Brasil .",
-      "A professora de matemática conta que resolveu aprofundar o debate sobre racismo depois de observar situações de preconceito e bullyng na escola.",
-      "“A gente percebe que temos muitos alunos que sofrem preconceito através de piadas, de apelidos, algumas exclusões, críticas sobre o cabelo”, disse. “Então, por eles sofrerem esse tipo de situação dentro de sala de aula, nós fazemos essas abordagens, durante todo o ano, não só no período de Consciência Negra. A gente vai trabalhando continuamente durante todo o ano essa questão racial”, completou.",
-      "Mas se engana quem pensa que o trabalho desenvolvido por Iandejara se resumiu a mostrar a origem de determinados alimentos e receitas. Durante a pandemia de covid-19, a professora resolveu cursar gastronomia na Universidade Estadual do Maranhão (UEMA). Foi então que surgiu a ideia de aplicar esse aprendizado em sala de aula.",
-      "“Dentro do próprio curso a gente estudava essa questão das influências na gastronomia na nossa alimentação. Por que não trazer essa temática para dentro do nosso projeto de Consciência Negra? A partir de então, todo ano trabalho com os alunos essa questão da gastronomia e a influência dela no nosso cotidiano”, explicou.",
-      "Segundo a professora, o uso da gastronomia no debate das questões raciais é facilitado pelo fato de o alimento trazer uma bagagem sensorial e afetiva.",
-      "O primeiro passo do processo é a pesquisa. Por meio dela os estudantes são incentivados a buscar semelhanças e diferenças entre alimentos e receitas consumidos em países da África, a exemplo de Angola.",
-      "“Tem essa coisa, vamos dizer assim de hierarquia gastronômica, que fala muito que a culinária europeia é colocada como alta gastronomia. Que exige técnicas formalizadas, enquanto os pratos de matriz africana são vistos como comida de rua, como comida exótica, são meio que assim desmerecidos, por virem de povos escravizados. Então tem essa discriminação”, relatou.",
-      "Na sequência, os estudantes vão pesquisar se os ingredientes que compõem determinada receita podem ser encontrados na cidade onde vivem. A opção, por uma questão prática, fica com as receitas em que os ingredientes podem ser facilmente encontrados.",
-      "Este ano, os estudantes prepararam um prato chamado Muamba de Angola, prato tradicional do país africano que leva entre outros ingredientes azeite de dendê, quiabo, amendoim e galinha. O prato é tradicionalmente acompanhado de funge, uma espécie de fubá de milho.",
-      "O preparo coletivo das receitas é feito na cozinha da escola. Ao final, os alimentos são compartilhados com a comunidade escolar.",
-      "“Em Bacabal, a gente não tem costume de comer frango com quiabo e, muito menos, o azeite de dendê. O azeite de dendê a gente já usa só para fazer uma moqueca, o vatapá, mas não é inserido no nosso dia a dia como um óleo de cozinha. Então eles acham bem interessante”, disse.",
-      "Já o professor de língua portuguesa José Wilson, do Centro de Ensino José Neves de Oliveira, em Itinga do Maranhão, utiliza produções audiovisuais para apresentar personalidades negras brasileiras.",
-      "Natural de Altamira do Maranhão, o professor disse que sentiu a necessidade de aprofundar a temática racial na sala de aula para conscientizar os estudantes de que o debate sobre o racismo deveria acontecver ao longo do ano e não apenas no mês de novembro.",
-      "“Lembrei aos alunos que o racismo existe não apenas referente à nossa cor ou raça, mas existe também o racismo linguístico, em que, às vezes, nem percebemos que estamos sendo ofendidos devido à nossa forma de falar ou de nos expressar”, disse José Wilson à Agência Brasi l.",
-      "O educador disse que a ideia de utilizar o recurso do audiovisual surgiu a partir de conversas na sala sobre a temática para o mês de novembro. Essa foi uma oportunidade para orientar os estudantes a respeito das várias formas de preconceito.",
-      "Entre as obras apresentadas, uma delas o curta-metragem Paçoca, dirigido por Marçal Vianna. Lançado em 2024, o filme acompanha Pedrinho, único aluno negro em uma escola de elite da Baixada Fluminense, no Rio de Janeiro.",
-      "José Wilson disse que o filme foi importante para trazer à tona o debate sobre racismo, política e democracia.",
-      "“Outra obra foi a música Identidade , de Jorge Aragão. Os primeiros versos - ‘Elevador é quase um templo/Exemplo pra minar teu sono’ - denunciam a segregação espacial cotidiana no Brasil, onde pessoas negras são frequentemente direcionadas ao elevador de serviço ou presumidas como subalternas”, continuou.",
-      "Os estudantes receberam a abordagem proposta de maneira suave, com o desenvolvimento de questionamentos ao longo do processo e levando a discussão para fora do ambiente escolar, com familiares e amigos.",
-      "“Já tivemos duas rodas de conversa [com familiares dos estudantes] nas quais eles expressaram seus pontos de vista e experiências vividas por eles ou por pessoas que conhecem”, disse José Wilson.",
-      "O professor ressaltou a importância de aprofundar o ensino da história e da cultura africana e afro-brasileira nas escolas para a construção de uma sociedade mais igualitária e menos racista.",
-      "“De forma clara e objetiva, para que nossos estudantes possam ter a oportunidade de apontar seus ideais e desejos de ter uma profissão, independentemente da sua cor ou condição financeira, podendo assim frequentar qualquer ambiente sem distinção de suas origens”, finalizou."
     ]
   },
   {
