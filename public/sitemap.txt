@@ -12,7 +12,10 @@ https://sociedadeativa.github.io/clima/
 https://sociedadeativa.github.io/sobre/
 https://sociedadeativa.github.io/termos-de-uso/
 https://sociedadeativa.github.io/politica-de-privacidade/
+https://sociedadeativa.github.io/noticias/ebc-1709628/
+https://sociedadeativa.github.io/noticias/ebc-1709627/
 https://sociedadeativa.github.io/noticias/ebc-1709622/
+https://sociedadeativa.github.io/noticias/ebc-1709623/
 https://sociedadeativa.github.io/noticias/ebc-1709621/
 https://sociedadeativa.github.io/noticias/ebc-1709619/
 https://sociedadeativa.github.io/noticias/ebc-1709617/
@@ -51,9 +54,6 @@ https://sociedadeativa.github.io/noticias/ebc-1709580/
 https://sociedadeativa.github.io/noticias/ebc-1709332/
 https://sociedadeativa.github.io/noticias/ebc-1709579/
 https://sociedadeativa.github.io/noticias/ebc-1709573/
-https://sociedadeativa.github.io/noticias/ebc-1709572/
-https://sociedadeativa.github.io/noticias/ebc-1709570/
-https://sociedadeativa.github.io/noticias/ebc-1709568/
 https://sociedadeativa.github.io/noticias/camara-1321312-comissao-aprova-proposta-de-po/
 https://sociedadeativa.github.io/noticias/camara-1321382-comissao-aprova-proposta-que-p/
 https://sociedadeativa.github.io/noticias/camara-1321375-camara-dos-deputados-reconhece/
