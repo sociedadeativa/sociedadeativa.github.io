@@ -253,6 +253,45 @@ assert.ok(
 );
 console.log("  ✓ Imagem do artigo Anthropic (/images/anthropic-ipo-nasdaq.webp) verificada e íntegra no disco.");
 
+// 10. Validação do Artigo sobre Figurinhas com Som do WhatsApp e sua Imagem de Capa
+console.log("\nTeste 10: Validação do artigo de figurinhas com som no WhatsApp...");
+const whatsappArticle = newsData.find(
+  (a) => a.id === "whatsapp-figurinhas-com-som-sem-borda-branca"
+);
+
+assert.ok(whatsappArticle, "Artigo sobre figurinhas do WhatsApp deve existir no acervo editorial");
+assert.strictEqual(whatsappArticle.category, "Tecnologia", "Artigo deve pertencer à categoria Tecnologia");
+assert.strictEqual(
+  whatsappArticle.articleUrl,
+  "https://sociedadeativa.github.io/noticias/whatsapp-figurinhas-com-som-sem-borda-branca/",
+  "Artigo deve possuir URL canônica correta"
+);
+assert.strictEqual(
+  whatsappArticle.imageUrl,
+  "/images/whatsapp-figurinhas-com-som.webp",
+  "Artigo deve apontar para /images/whatsapp-figurinhas-com-som.webp"
+);
+assert.ok(
+  whatsappArticle.imageAlt && whatsappArticle.imageAlt.length > 20,
+  "Artigo deve possuir texto alternativo (alt) descritivo em português"
+);
+assert.ok(
+  Array.isArray(whatsappArticle.content) && whatsappArticle.content.length >= 45,
+  "Artigo deve preservar todo o conteúdo editorial completo"
+);
+
+const whatsappAssetPath = path.join(rootDir, "public", "images", "whatsapp-figurinhas-com-som.webp");
+assert.ok(
+  fs.existsSync(whatsappAssetPath),
+  "Arquivo físico public/images/whatsapp-figurinhas-com-som.webp deve existir no disco"
+);
+const whatsappStat = fs.statSync(whatsappAssetPath);
+assert.ok(
+  whatsappStat.size > 15000,
+  "Arquivo public/images/whatsapp-figurinhas-com-som.webp deve ser uma imagem WebP válida e íntegra"
+);
+console.log("  ✓ Artigo e imagem de capa (/images/whatsapp-figurinhas-com-som.webp) verificados com sucesso.");
+
 console.log("\n===========================================================================");
 console.log("TODOS OS TESTES FOCADOS DA SEÇÃO DE TECNOLOGIA PASSARAM COM SUCESSO!");
 console.log("===========================================================================\n");
