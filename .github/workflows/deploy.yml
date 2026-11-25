@@ -40,9 +40,9 @@ jobs:
           ref: ${{ inputs.ref || github.ref_name || 'main' }}
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       - name: Install Dependencies
@@ -71,10 +71,10 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           name: github-pages
-          path: './dist'
+          path: 'dist'
 
   deploy:
     name: Deploy to GitHub Pages
