@@ -8,7 +8,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/brasil-conquista-titulo-volei-praia",
-    "publishedAt": "25/11/2026 às 14:20",
+    "publishedAt": "25/11/2026 às 14:29",
     "category": "Esportes",
     "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-volei.jpg",
     "imageCaption": "Brasil conquista título no circuito mundial de vôlei de praia",
@@ -23,7 +23,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Brasil conquista título no circuito mundial de vôlei de praia",
     "lead": "Dupla brasileira supera adversários na grande final e garante título internacional histórico para o país.",
     "content": [],
-    "ingestedAt": "25/11/2026 às 14:25"
+    "ingestedAt": "25/11/2026 às 14:34"
   },
   {
     "id": "ebc-1799002",
@@ -32,7 +32,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "source": "Agência Brasil",
     "sourceUrl": "https://agenciabrasil.ebc.com.br",
     "articleUrl": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/flamengo-palmeiras-lideranca-brasileirao",
-    "publishedAt": "25/11/2026 às 14:15",
+    "publishedAt": "25/11/2026 às 14:24",
     "category": "Esportes",
     "imageUrl": "https://imagens.ebc.com.br/1170x700/smart/foto-futebol.jpg",
     "imageCaption": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
@@ -47,7 +47,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Flamengo e Palmeiras disputam liderança do Campeonato Brasileiro",
     "lead": "Equipes se enfrentam neste fim de semana em partida decisiva pela ponta da tabela da Série A do futebol nacional.",
     "content": [],
-    "ingestedAt": "25/11/2026 às 14:25"
+    "ingestedAt": "25/11/2026 às 14:34"
   },
   {
     "id": "camara-1322841-comissao-aprova-projeto-que-es",
@@ -71,7 +71,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão aprova projeto que esclarece crime de corrupção de criança e adolescente",
     "lead": "O texto segue em análise na Câmara dos Deputados.",
     "content": [],
-    "ingestedAt": "25/11/2026 às 14:25"
+    "ingestedAt": "25/11/2026 às 14:34"
   },
   {
     "id": "ebc-1710118",
@@ -97,7 +97,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "CCJ do Senado aprova PEC sobre papel da União no financiamento do DF",
     "lead": "A Comissão de Constituição e Justiça (CCJ) do Senado aprovou, nesta quarta-feira (25), proposta de emenda à Constituição (PEC) que altera o artigo que define a responsabilidade da União no financiamento da segurança e de outros serviços públicos do Distrito Federal (DF).",
     "content": [],
-    "ingestedAt": "25/11/2026 às 14:25"
+    "ingestedAt": "25/11/2026 às 14:34"
   },
   {
     "id": "camara-1322791-comissao-aprova-proposta-que-c",
@@ -121,7 +121,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão aprova proposta que concede gratuidade em ingressos para crianças menores de 3 anos",
     "lead": "Proposta segue em tramitação na Câmara.",
     "content": [],
-    "ingestedAt": "25/11/2026 às 14:25"
+    "ingestedAt": "25/11/2026 às 14:34"
   },
   {
     "id": "ebc-1710116",
@@ -147,7 +147,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Anvisa determina apreensão de suplementos alimentares",
     "lead": "A Agência Nacional de Vigilância Sanitária (Anvisa) determinou a apreensão de todos os suplementos alimentares à venda na empresa Vinicius Morais Advisor Empresarial Ltda.",
     "content": [],
-    "ingestedAt": "25/11/2026 às 14:25"
+    "ingestedAt": "25/11/2026 às 14:34"
   },
   {
     "id": "camara-1322747-seminario-debate-papel-da-educ",
@@ -171,7 +171,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Seminário debate papel da educação ambiental no enfrentamento de emergências climáticas; participe",
     "lead": "O evento será interativo; envie suas perguntas.",
     "content": [],
-    "ingestedAt": "25/11/2026 às 14:25"
+    "ingestedAt": "25/11/2026 às 14:34"
   },
   {
     "id": "camara-1322775-comissao-de-constituicao-e-jus",
@@ -195,7 +195,7 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão de Constituição e Justiça aprova prazo de validade para autorização de viagem internacional de crianças",
     "lead": "Projeto de lei ainda será analisado pelo Senado.",
     "content": [],
-    "ingestedAt": "25/11/2026 às 14:25"
+    "ingestedAt": "25/11/2026 às 14:34"
   },
   {
     "id": "camara-1322759-comissao-aprova-politica-nacio",
@@ -219,6 +219,6 @@ export const INITIAL_NEWS_SNAPSHOT: NewsItem[] = [
     "headline": "Comissão aprova política nacional para apoiar produções audiovisuais",
     "lead": "O projeto poderá seguir para o Senado, a menos que haja recurso para votação pelo Plenário da Câmara.",
     "content": [],
-    "ingestedAt": "25/11/2026 às 14:25"
+    "ingestedAt": "25/11/2026 às 14:34"
   }
 ];

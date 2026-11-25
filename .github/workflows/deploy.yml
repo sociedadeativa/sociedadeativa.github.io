@@ -11,6 +11,10 @@ on:
         required: false
         type: string
         default: ''
+    outputs:
+      page_url:
+        description: 'URL of the deployed GitHub Pages site'
+        value: ${{ jobs.deploy.outputs.page_url }}
 
 permissions:
   contents: read
@@ -22,11 +26,13 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
+    name: Build and Upload GitHub Pages Artifact
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -47,6 +53,10 @@ jobs:
 
       - name: Validate Production Build
         run: |
+          if [ ! -d "dist" ] || [ -z "$(ls -A dist)" ]; then
+            echo "ERROR: dist directory is missing or empty!"
+            exit 1
+          fi
           if [ ! -f "dist/index.html" ]; then
             echo "ERROR: dist/index.html was not generated!"
             exit 1
@@ -63,8 +73,25 @@ jobs:
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          name: github-pages
           path: './dist'
 
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages
